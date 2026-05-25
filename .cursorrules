@@ -1,0 +1,48 @@
+# Regole progetto Sentieri VdA — lette automaticamente da Cursor
+
+Sei un assistente che lavora a un sito editoriale bilingue (IT/EN) sui sentieri della Valle d'Aosta. Leggi sempre `README.md` e `CLAUDE.md` per il contesto completo.
+
+## Stack tassativo
+
+- Next.js 14 App Router + TypeScript + Tailwind + Framer Motion
+- next-intl per i18n (IT/EN)
+- MapLibre GL JS per mappe (no Mapbox, no Google Maps)
+- Lucide-react per icone
+- Recharts per profili altimetrici
+
+Non sostituire con altre librerie senza chiedere conferma all'utente prima.
+
+## Regole tassative
+
+1. **Server Components di default**. Aggiungi `"use client"` solo dove serve (mappe, animazioni, filtri, form).
+2. **Mai inventare dati sui sentieri**. Per popolare `src/data/trails.json` usa solo fonti ufficiali (Catasto Sentieri VdA `catastosentieri.regione.vda.it`, OSM Overpass, Parco Gran Paradiso). Se un dato non lo trovi verificato, lascia il campo a `null` e segnalalo. Le descrizioni testuali vanno SEMPRE riscritte in proprio: mai copiare da lovevda.it o altri siti (copyright).
+3. **Bilingue strict**: ogni stringa visibile passa da `next-intl`. Schede sentiero hanno `name_it`/`name_en`, `description_it`/`description_en`.
+4. **Mai hard-code di chiavi API**. Usa `.env.local`. Variabili pubbliche con prefisso `NEXT_PUBLIC_`.
+5. **Performance**: ogni immagine via `next/image` con dimensioni esplicite. `priority` solo sull'hero.
+6. **SEO**: ogni pagina dinamica esporta `generateMetadata` con title/description/OG/hreflang. Schede sentiero esportano JSON-LD.
+7. **Accessibilità**: contrasto WCAG AA, focus visibili, alt sulle immagini, mai div con onClick.
+
+## Estetica (importante)
+
+- Direzione editorial alpino. **NON** verde forestale + Comic Sans. **NON** gradiente viola tech-bro.
+- Palette: nero `#0A0A0A`, neve `#FAFAF7`, ghiaccio `#5BC0EB`, oro alpino `#D4A574`. Tutto già in CSS variables in `globals.css`.
+- Font display Fraunces (serif), body Geist (sans).
+- Foto sempre full-bleed. Mappe sempre dominanti nelle pagine sentiero.
+- Motion misurato, mai gratuito.
+
+## Convenzioni dati
+
+Schema `Trail` in `src/lib/types.ts`. Validazione Zod.
+
+Difficoltà scala CAI:
+- `T` Turistico — `E` Escursionistico — `EE` Esperti — `EEA` Esperti con attrezzatura — `A` Alpinistico
+
+## Pubblicità
+
+Slot in `src/components/AdSlot.tsx`. Posizioni: `header-billboard`, `sidebar-sticky`, `in-content-mid`, `footer-leaderboard`, `affiliate-refuge`. In dev mostrano placeholder, in prod caricano AdSense via `NEXT_PUBLIC_ADSENSE_CLIENT`.
+
+## Comportamento
+
+L'utente non è uno sviluppatore esperto. Spiega sempre cosa stai facendo prima di farlo. Lavora a piccoli passi. Mostra il risultato. Chiedi conferma prima di passare al prossimo. Non scrivere mai 500 righe senza confermare la direzione.
+
+Quando l'utente chiede qualcosa di vago ("aggiungi una sezione rifugi") fai domande chiarificatrici prima di iniziare.

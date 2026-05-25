@@ -1,0 +1,68 @@
+{
+  "Site": {
+    "name": "Sentieri VdA",
+    "tagline": "I sentieri della Valle d'Aosta, raccontati come meritano."
+  },
+  "Nav": {
+    "trails": "Sentieri",
+    "alteVie": "Alte Vie",
+    "refuges": "Rifugi e bivacchi",
+    "floraFauna": "Flora e fauna",
+    "parks": "Parchi",
+    "blog": "Diario",
+    "about": "Chi siamo"
+  },
+  "Home": {
+    "heroEyebrow": "Catasto regionale ufficiale · 5.000 km di rete",
+    "heroTitle": "Camminare tra i giganti.",
+    "heroSubtitle": "Dalla Becca di Nona al Cervino, dal Tor des Géants al rifugio dimenticato di valle. Sentieri, dati, fotografia.",
+    "heroCtaPrimary": "Esplora i sentieri",
+    "heroCtaSecondary": "Le Alte Vie",
+    "featuredEyebrow": "In evidenza",
+    "featuredTitle": "Tappe da fare almeno una volta",
+    "exploreMapTitle": "Tutta la regione, in una mappa",
+    "exploreMapDescription": "Filtra per difficoltà, durata, dislivello. Scarica il GPX. Vai."
+  },
+  "Trails": {
+    "title": "Sentieri della Valle d'Aosta",
+    "filterDifficulty": "Difficoltà",
+    "filterLength": "Lunghezza",
+    "filterDuration": "Durata",
+    "filterElevation": "Dislivello",
+    "filterValley": "Valle",
+    "all": "Tutti",
+    "noResults": "Nessun sentiero trovato",
+    "details": {
+      "distance": "Distanza",
+      "elevationGain": "Dislivello +",
+      "elevationLoss": "Dislivello −",
+      "duration": "Durata",
+      "difficulty": "Difficoltà",
+      "start": "Partenza",
+      "end": "Arrivo",
+      "season": "Stagione consigliata",
+      "downloadGpx": "Scarica GPX",
+      "altimetricProfile": "Profilo altimetrico",
+      "description": "Descrizione",
+      "flora": "Flora lungo il sentiero",
+      "fauna": "Fauna osservabile",
+      "refugesNearby": "Rifugi e bivacchi",
+      "source": "Fonte dati"
+    }
+  },
+  "Difficulty": {
+    "T": "Turistico",
+    "E": "Escursionistico",
+    "EE": "Escursionisti esperti",
+    "EEA": "Esperti con attrezzatura",
+    "A": "Alpinistico"
+  },
+  "Footer": {
+    "credits": "Dati sentieri © Regione Autonoma Valle d'Aosta — Catasto Sentieri (open data). © OpenStreetMap contributors. © MapTiler.",
+    "disclaimer": "Le informazioni sono divulgative. Verifica condizioni meteo e nivologiche prima di partire. La sicurezza è responsabilità di chi cammina.",
+    "newsletter": "Iscriviti alla newsletter",
+    "newsletterPlaceholder": "la-tua@email.it",
+    "newsletterCta": "Iscriviti",
+    "rights": "Tutti i diritti riservati."
+  }
+}

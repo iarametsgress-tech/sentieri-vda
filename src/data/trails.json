@@ -1,0 +1,1252 @@
+[
+  {
+    "slug": "alta-via-1-tappa-1-donnas-perloz",
+    "name_it": "Alta Via 1 — Tappa 1: Donnas → Perloz",
+    "name_en": "High Route 1 — Stage 1: Donnas → Perloz",
+    "shortDescription_it": "L'inizio dell'Alta Via dei Giganti, dal fondovalle ai prati di Perloz tra borghi walser e castagneti.",
+    "shortDescription_en": "The start of the High Route of the Giants, from the valley floor up to Perloz meadows through Walser villages and chestnut groves.",
+    "description_it": "La prima tappa dell'Alta Via 1 della Valle d'Aosta parte da Donnas, a 322 metri, attraversa i vigneti terrazzati di Pont-Saint-Martin e risale verso Perloz. Una giornata di transizione, perfetta per acclimatarsi prima delle quote più alte. Da non perdere il borgo di Perloz e i suoi forni comunitari.",
+    "description_en": "Stage one of the AV1 starts in Donnas at 322 m, climbs through the terraced vineyards of Pont-Saint-Martin and up to Perloz. A gentle warm-up day before the higher elevations come. Take time to explore Perloz village and its communal ovens.",
+    "distance_km": 12.5,
+    "elevation_gain_m": 950,
+    "elevation_loss_m": 100,
+    "duration_hours": 5,
+    "difficulty": "E",
+    "season": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Donnas",
+      "coords": {
+        "lat": 45.6033,
+        "lng": 7.7728
+      },
+      "elevation_m": 322
+    },
+    "end": {
+      "name": "Perloz",
+      "coords": {
+        "lat": 45.6322,
+        "lng": 7.8019
+      },
+      "elevation_m": 1148
+    },
+    "valley": "Bassa Valle",
+    "municipalities": [
+      "Donnas",
+      "Pont-Saint-Martin",
+      "Perloz"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Donnas_dal_bec_di_nona_color.jpg/1600px-Donnas_dal_bec_di_nona_color.jpg",
+    "gallery": [],
+    "refuges": [],
+    "flora": [
+      "castagno",
+      "vite"
+    ],
+    "fauna": [
+      "aquila-reale",
+      "camoscio"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "low-elevation"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione Autonoma VdA",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "tour-rifugio-bonatti",
+    "name_it": "Anello del Rifugio Bonatti",
+    "name_en": "Rifugio Bonatti loop",
+    "shortDescription_it": "Sentiero balcone sulla Val Ferret di fronte al Monte Bianco. Forse la vista più bella d'Italia.",
+    "shortDescription_en": "Balcony trail along Val Ferret facing the Mont Blanc massif. Quite possibly Italy's finest panorama.",
+    "description_it": "Dal parcheggio di Lavachey si sale al Rifugio Bonatti (2025 m) lungo il sentiero del TMB. Il panorama sulle Grandes Jorasses, il Dente del Gigante e il Mont Dolent toglie il fiato. Discesa per Pra Sec o ritorno per la stessa via. Adatto anche a famiglie con bambini abituati al cammino.",
+    "description_en": "From Lavachey car park the trail climbs to Rifugio Bonatti (2025 m) along the Tour du Mont Blanc route. The view onto Grandes Jorasses, Dent du Géant and Mont Dolent is staggering. Descend via Pra Sec or return the same way. Family-friendly for kids used to walking.",
+    "distance_km": 9.2,
+    "elevation_gain_m": 620,
+    "elevation_loss_m": 620,
+    "duration_hours": 4,
+    "difficulty": "E",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Lavachey",
+      "coords": {
+        "lat": 45.8722,
+        "lng": 7.0419
+      },
+      "elevation_m": 1642
+    },
+    "end": {
+      "name": "Lavachey",
+      "coords": {
+        "lat": 45.8722,
+        "lng": 7.0419
+      },
+      "elevation_m": 1642
+    },
+    "valley": "Val Ferret",
+    "municipalities": [
+      "Courmayeur"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Rifugio_Walter_Bonatti_Refuge.jpg/1600px-Rifugio_Walter_Bonatti_Refuge.jpg",
+    "gallery": [],
+    "refuges": [
+      "rifugio-bonatti"
+    ],
+    "flora": [
+      "rododendro",
+      "stella-alpina"
+    ],
+    "fauna": [
+      "stambecco",
+      "marmotta",
+      "gipeto"
+    ],
+    "tags": [
+      "mont-blanc",
+      "family-friendly",
+      "loop",
+      "tmb"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione Autonoma VdA",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "lago-djouan-cogne",
+    "name_it": "Lago Djouan dal Valnontey",
+    "name_en": "Lake Djouan from Valnontey",
+    "shortDescription_it": "Dal cuore del Parco Gran Paradiso a un lago alpino circondato da stambecchi. Tappa classica.",
+    "shortDescription_en": "From the heart of Gran Paradiso National Park to an alpine lake surrounded by ibex. A classic.",
+    "description_it": "Dal villaggio di Valnontey (1666 m), un sentiero ben segnalato risale i pascoli del Lauson fino al Lago Djouan a 2515 m. La probabilità di avvistare stambecchi è altissima soprattutto al mattino presto. Tappa molto frequentata in agosto: partire prima delle 8.",
+    "description_en": "From Valnontey village (1666 m), a well-marked trail climbs the Lauson pastures up to Lake Djouan at 2515 m. Ibex sightings are very likely, especially early morning. Crowded in August — start before 8 AM.",
+    "distance_km": 11,
+    "elevation_gain_m": 850,
+    "elevation_loss_m": 850,
+    "duration_hours": 5.5,
+    "difficulty": "E",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Valnontey",
+      "coords": {
+        "lat": 45.5797,
+        "lng": 7.3458
+      },
+      "elevation_m": 1666
+    },
+    "end": {
+      "name": "Valnontey",
+      "coords": {
+        "lat": 45.5797,
+        "lng": 7.3458
+      },
+      "elevation_m": 1666
+    },
+    "valley": "Val di Cogne",
+    "municipalities": [
+      "Cogne"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/The_Gran_Paradiso_from_the_Pian_di_Nivolet_%285567208979%29.jpg/1600px-The_Gran_Paradiso_from_the_Pian_di_Nivolet_%285567208979%29.jpg",
+    "gallery": [],
+    "refuges": [
+      "rifugio-vittorio-sella"
+    ],
+    "flora": [
+      "stella-alpina",
+      "genepi"
+    ],
+    "fauna": [
+      "stambecco",
+      "camoscio",
+      "marmotta",
+      "aquila-reale"
+    ],
+    "tags": [
+      "gran-paradiso",
+      "lake",
+      "wildlife"
+    ],
+    "source": {
+      "name": "Parco Nazionale Gran Paradiso",
+      "url": "https://www.pngp.it/",
+      "license": "Open data"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-2-perloz-rifugio-coda",
+    "name_it": "Alta Via 1 — Tappa 2: Perloz → Rifugio Coda",
+    "name_en": "High Route 1 — Stage 2: Perloz → Rifugio Coda",
+    "shortDescription_it": "Dalla collina di Perloz si sale attraverso i boschi di Lillianes fino alla soglia della Riserva Naturale di Mont Mars, dove il Rifugio Coda a 2280 m apre il panorama sull'alta valle.",
+    "shortDescription_en": "From Perloz hill the trail climbs through Lillianes forest and into the Mont Mars Nature Reserve, where Rifugio Coda at 2280 m opens the view to the high valley.",
+    "description_it": "La seconda tappa dell'Alta Via 1 lascia il borgo di Perloz scendendo brevemente verso il fondovalle di Lillianes, poi imbocca il lungo versante che risale verso la Riserva Naturale Regionale di Mont Mars. Il percorso sale deciso attraverso boschi misti di betulle, larici e pini silvestri dove il frastuono della strada statale scompare rapidamente, sostituito dal canto dell'acqua nei torrenti laterali. Man mano che si guadagna quota la vegetazione si dirada e si apre su pascoli d'alta quota punteggiati di laghetti glaciali color smeraldo — i famosi laghi del Mont Mars, meta di pellegrinaggi estivi da secoli. Il Rifugio Coda, a 2280 metri nel cuore della riserva, è gestito dalla sezione CAI di Pont-Saint-Martin e offre vitto e alloggio in un ambiente ancora autentico, lontano dal turismo di massa. Attorno al rifugio, all'inizio di luglio, si tiene la tradizionale processione alpina del Mont Mars, cerimonia che unisce devozione religiosa e memoria contadina walser. La tappa non presenta difficoltà tecniche ma richiede un dislivello in salita costante e sostenuto: partire di buon mattino permette di godere della luce radente sulle cime orientali e di arrivare al rifugio con largo anticipo.",
+    "description_en": "Stage two of High Route 1 begins with a brief descent from Perloz toward Lillianes before committing to a long, sustained climb into the Regional Nature Reserve of Mont Mars. The path winds upward through mixed woodland — birch, larch and Scots pine — where road noise fades quickly and the sound of side-streams takes over. As altitude accumulates the forest opens onto high pastures scattered with emerald glacial tarns, the celebrated Mont Mars lakes that have drawn pilgrims and walkers for centuries. Rifugio Coda, at 2280 metres in the heart of the reserve, is run by the CAI section of Pont-Saint-Martin and offers a genuine mountain-hut experience well away from mainstream tourism. Every year in early July the surrounding meadows host the traditional alpine procession of Mont Mars, a ceremony weaving together religious devotion and the pastoral memory of Walser communities. The stage involves no technical difficulty but demands steady, unrelenting ascent: an early departure allows walkers to enjoy the raking morning light on the eastern peaks and to arrive at the hut with comfortable time to spare before evening.",
+    "distance_km": 11,
+    "elevation_gain_m": 1150,
+    "elevation_loss_m": 80,
+    "duration_hours": 5.5,
+    "difficulty": "E",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Perloz",
+      "coords": {
+        "lat": 45.6322,
+        "lng": 7.8019
+      },
+      "elevation_m": 1148
+    },
+    "end": {
+      "name": "Rifugio Coda",
+      "coords": {
+        "lat": 45.6399,
+        "lng": 7.8985
+      },
+      "elevation_m": 2280
+    },
+    "valley": "Bassa Valle — Mont Mars",
+    "municipalities": [
+      "Perloz",
+      "Lillianes"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/R%C3%A9serve_naturelle_du_Mont_Mars_01.png/1600px-R%C3%A9serve_naturelle_du_Mont_Mars_01.png",
+    "gallery": [],
+    "refuges": [
+      "rifugio-coda"
+    ],
+    "flora": [
+      "betulla",
+      "larice",
+      "stella-alpina"
+    ],
+    "fauna": [
+      "camoscio",
+      "aquila-reale",
+      "marmotta"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "mont-mars",
+      "rifugio"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + lovevda.it",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-3-rifugio-coda-rifugio-barma",
+    "name_it": "Alta Via 1 — Tappa 3: Rifugio Coda → Rifugio Barma",
+    "name_en": "High Route 1 — Stage 3: Rifugio Coda → Rifugio Barma",
+    "shortDescription_it": "Alta traversata tra Mont Mars e i Laghi della Barma: un sentiero sospeso tra cielo e valle che collega i due rifugi storici dell'Alta Via in un paesaggio di torbiere e rocce glaciali.",
+    "shortDescription_en": "A high-level traverse between Mont Mars and the Barma Lakes: a skyline path linking two historic huts across a landscape of peat bogs, glacial slabs and end-of-summer bilberry.",
+    "description_it": "Lasciato il Rifugio Coda, la terza tappa affronta un lungo traverso d'alta quota che si mantiene costantemente sopra i duemila metri. Il sentiero segue il bordo della Riserva di Mont Mars verso oriente, attraversando zone umide alpine — torbiere, canneti e distese di cotone delle nevi — habitat raro e protetto dalle direttive europee. La traccia sale e scende seguendo l'ondulato profilo del crinale: niente di tecnico, ma un costante lavoro di gambe che sorprende chi si aspetta una tappa di trasferimento. Il punto culminante è il Col Lasoney, affacciato sulla Valle del Lys, dove nelle giornate terse il Monte Rosa appare nella sua interezza. La discesa ai Laghi della Barma regala uno dei paesaggi più raccolti dell'Alta Via: bacini glaciali specchiati in un anfiteatro di rocce levigate, circondati da mirtilli selvatici rossi di fine estate. Il Rifugio Barma (2191 m), nella conca dei laghi, è una piccola struttura a gestione familiare che offre una cucina locale fedele alle tradizioni della Valle di Gaby. Sera ideale per ascoltare storie di cacciatori e allevatori d'alpeggio.",
+    "description_en": "Leaving Rifugio Coda, stage three follows a high-level traverse that holds above two thousand metres for most of its length. The trail tracks east along the edge of the Mont Mars Reserve, crossing alpine wetlands — blanket bogs, sedge meadows and patches of cotton grass — a fragile habitat protected under European biodiversity directives. The path rises and falls with the ridge's undulating profile: nothing technical, but a sustained leg workout that catches walkers off-guard if they expect a simple transfer stage. The day's high point is Col Lasoney, which opens northwest to the full length of the Lys valley and, on clear days, frames Monte Rosa from base to summit. The descent to the Barma Lakes delivers one of the Alta Via's most intimate landscapes: glacially carved basins reflecting the sky, rimmed by smooth granite slabs and end-of-summer bilberry red. Rifugio Barma (2191 m) sits at the lake's edge, a small family-run hut with a kitchen rooted in the cooking traditions of the Gaby valley. It is the ideal place to stop and hear stories from the mountain farmers and hunters who still frequent these pastures.",
+    "distance_km": 9,
+    "elevation_gain_m": 320,
+    "elevation_loss_m": 410,
+    "duration_hours": 4,
+    "difficulty": "E",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Rifugio Coda",
+      "coords": {
+        "lat": 45.6399,
+        "lng": 7.8985
+      },
+      "elevation_m": 2280
+    },
+    "end": {
+      "name": "Rifugio Barma",
+      "coords": {
+        "lat": 45.6614,
+        "lng": 7.9241
+      },
+      "elevation_m": 2191
+    },
+    "valley": "Mont Mars — Valle di Gaby",
+    "municipalities": [
+      "Lillianes",
+      "Gaby"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Lac_de_Barme_02.png/1600px-Lac_de_Barme_02.png",
+    "gallery": [],
+    "refuges": [
+      "rifugio-coda",
+      "rifugio-barma"
+    ],
+    "flora": [
+      "mirtillo",
+      "cotone-delle-nevi",
+      "stella-alpina"
+    ],
+    "fauna": [
+      "camoscio",
+      "marmotta",
+      "aquila-reale"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "mont-mars",
+      "laghi"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + gressoneymonterosa.it (km stimati, non verificati da 2 fonti indipendenti)",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-4-rifugio-barma-niel",
+    "name_it": "Alta Via 1 — Tappa 4: Rifugio Barma → Niel",
+    "name_en": "High Route 1 — Stage 4: Rifugio Barma → Niel",
+    "shortDescription_it": "Dal Rifugio Barma si scende verso Niel, l'insediamento walser più remoto di Gaby: un borgo sospeso nel tempo dove le case in pietra scura custodiscono una cultura alpina secolare.",
+    "shortDescription_en": "From Barma Hut the trail descends to Niel, Gaby's most remote Walser hamlet: a village frozen in time where dark-stone houses preserve centuries of alpine culture.",
+    "description_it": "Dalla conca dei Laghi della Barma, la quarta tappa inizia con un breve tratto in quota prima di affrontare la discesa verso Niel, insediamento walser del comune di Gaby. Il percorso scavalca il Colle della Vecchia — una dorsale di roccia levigata con una piccola piramide di pietra che indica il confine con il Piemonte — poi si immerge in un bosco rado di conifere dove il sentiero si fa più ripido e il rumore di un torrente laterale accompagna la discesa. Niel è un gioiello nascosto: una decina di case walser in pietra e larice, alcune di origine medievale, che si aggrappano al pendio sopra il fondovalle di Gaby. La Gruba Relais, punto di arrivo ufficiale della tappa, è un piccolo albergo ricavato da un fienile restaurato che offre l'ospitalità rurale più autentica dell'intero percorso. Da Gaby è possibile scendere al fondovalle con il pullman regionale e interrompere l'Alta Via se necessario. La tappa è breve rispetto alle altre, ma la discesa sostenuta richiede calzature con buon grip e attenzione alle ginocchia.",
+    "description_en": "From the Barma Lakes basin, stage four begins with a brief high-altitude stretch before committing to a long descent toward Niel, a Walser hamlet in the municipality of Gaby. The path crosses Col della Vecchia — a smooth rocky ridge marked by a small stone pyramid indicating the border with Piedmont — then drops into a sparse conifer forest where the gradient steepens and the sound of a lateral stream escorts walkers downhill. Niel is a hidden gem: a handful of stone and larch Walser houses, some dating back centuries, clinging to the slope above the Gaby valley floor. La Gruba Relais, the stage's official endpoint, is a small hotel converted from a restored barn offering the most authentic rural hospitality on the entire route. From Gaby a regional bus descends to the main valley, providing an exit option for those who need to interrupt the Alta Via. The stage is short relative to others, but sustained descent demands well-gripping footwear and mindful attention to the knees.",
+    "distance_km": 10,
+    "elevation_gain_m": 180,
+    "elevation_loss_m": 980,
+    "duration_hours": 4,
+    "difficulty": "E",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Rifugio Barma",
+      "coords": {
+        "lat": 45.6614,
+        "lng": 7.9241
+      },
+      "elevation_m": 2191
+    },
+    "end": {
+      "name": "Niel",
+      "coords": {
+        "lat": 45.669,
+        "lng": 7.912
+      },
+      "elevation_m": 1388
+    },
+    "valley": "Valle di Gaby",
+    "municipalities": [
+      "Gaby"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/R%C3%A9serve_naturelle_du_Mont_Mars_03.png/1600px-R%C3%A9serve_naturelle_du_Mont_Mars_03.png",
+    "gallery": [],
+    "refuges": [],
+    "flora": [
+      "pino-silvestre",
+      "mirtillo",
+      "larice"
+    ],
+    "fauna": [
+      "camoscio",
+      "aquila-reale"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "walser",
+      "discesa"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + gressoneymonterosa.it (km stimati, non verificati da 2 fonti indipendenti)",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-5-niel-gressoney-saint-jean",
+    "name_it": "Alta Via 1 — Tappa 5: Niel → Gressoney-Saint-Jean",
+    "name_en": "High Route 1 — Stage 5: Niel → Gressoney-Saint-Jean",
+    "shortDescription_it": "La tappa più lunga della sequenza: 18 km di traversata solitaria lungo i crinali sopra la Valle del Lys, con vista sul Monte Rosa, prima di scendere alla Gressoney walser.",
+    "shortDescription_en": "The longest stage in this sequence: 18 km of solitary ridge walking above the Lys valley with Monte Rosa views, ending in the Walser town of Gressoney-Saint-Jean.",
+    "description_it": "La quinta tappa è la più lunga e solitaria di questa sequenza: 18 chilometri di traversata aerea sopra la Valle del Lys che collegano il piccolo borgo walser di Niel alla cittadina di Gressoney-Saint-Jean. Il percorso guadagna rapidamente quota lasciandosi alle spalle la vegetazione arborea per entrare in un paesaggio di pascoli, pietraie e creste esposte. Lungo la traversata si attraversano diversi alpeggi estivi ancora attivi — piccole costruzioni in pietra dove i malgari producono fontina DOP tra giugno e settembre — e si incontrano le sorgenti del torrente Lys, che nasce da un costone appena sotto la cresta. Il Monte Rosa accompagna la marcia per gran parte della giornata, prima come sagoma lontana a nord-est, poi sempre più vicino e imponente man mano che si avanza verso Gressoney. La difficoltà EE è giustificata dai lunghi tratti esposti al sole e dal dislivello totale elevato, non da passi tecnici. Gressoney-Saint-Jean (1385 m) offre tutti i servizi necessari per una sosta di recupero: hotel, ristoranti, supermercati, farmacia e collegamento bus per Pont-Saint-Martin.",
+    "description_en": "Stage five is the longest and most solitary of this sequence: 18 kilometres of airborne traverse above the Lys valley linking the tiny Walser hamlet of Niel to the town of Gressoney-Saint-Jean. The path gains elevation quickly, leaving behind tree cover to enter a landscape of pastures, scree fields and exposed ridges. Along the traverse walkers pass several still-active summer farms — small stone structures where mountain farmers produce DOP Fontina cheese between June and September — and cross the headwaters of the Lys torrent, born from a rocky buttress just below the crest. Monte Rosa accompanies the walk for most of the day: a distant silhouette to the northeast at first, then progressively closer and more overwhelming as the route advances toward Gressoney. The EE rating reflects sustained sun exposure and cumulative elevation rather than any technical passage. Gressoney-Saint-Jean (1385 m) provides everything needed for a genuine rest day: hotels, restaurants, a supermarket, pharmacy and bus connections to Pont-Saint-Martin.",
+    "distance_km": 18.2,
+    "elevation_gain_m": 1380,
+    "elevation_loss_m": 1380,
+    "duration_hours": 7.5,
+    "difficulty": "EE",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Niel",
+      "coords": {
+        "lat": 45.669,
+        "lng": 7.912
+      },
+      "elevation_m": 1388
+    },
+    "end": {
+      "name": "Gressoney-Saint-Jean",
+      "coords": {
+        "lat": 45.7858,
+        "lng": 7.8296
+      },
+      "elevation_m": 1385
+    },
+    "valley": "Valle di Gressoney",
+    "municipalities": [
+      "Gaby",
+      "Issime",
+      "Gressoney-la-Trinité",
+      "Gressoney-Saint-Jean"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/0003_Il_massiccio_del_Monte_Rosa.jpg/1600px-0003_Il_massiccio_del_Monte_Rosa.jpg",
+    "gallery": [],
+    "refuges": [
+      "rifugio-alpenzu-grande"
+    ],
+    "flora": [
+      "rododendro",
+      "genepi",
+      "stella-alpina"
+    ],
+    "fauna": [
+      "stambecco",
+      "camoscio",
+      "marmotta",
+      "aquila-reale"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "monte-rosa",
+      "walser"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + AllTrails (18.2 km, 7h22 verificati)",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-6-gressoney-saint-jean-rifugio-vieux-crest",
+    "name_it": "Alta Via 1 — Tappa 6: Gressoney-Saint-Jean → Rifugio Vieux Crest",
+    "name_en": "High Route 1 — Stage 6: Gressoney-Saint-Jean → Rifugio Vieux Crest",
+    "shortDescription_it": "La traversata del Col Pinter a 2777 m è il cuore di questa tappa: un valico selvaggio tra due valli alpine dove il Monte Rosa occupa l'intero orizzonte orientale.",
+    "shortDescription_en": "Crossing Col Pinter at 2777 m is the highlight of this stage: a wild pass between two alpine valleys where Monte Rosa dominates the entire eastern horizon.",
+    "description_it": "La sesta tappa dell'Alta Via 1 è tra le più iconiche dell'intero percorso: sale da Gressoney-Saint-Jean verso il Col Pinter a 2777 metri — il valico che separa la Valle di Gressoney dalla Valle d'Ayas — attraverso pascoli d'alta quota dove gli stambecchi sono avvistamenti comuni nelle prime ore del mattino. Il Col Pinter è un balcone naturale eccezionale: a est la piramide di ghiaccio del Monte Rosa, a ovest il Cervino, e in giorni eccezionalmente tersi si intravvede anche il Monte Bianco. La discesa verso il Rifugio Vieux Crest (2417 m) avviene su un sentiero ben segnalato che attraversa il circo glaciale di Crest, già in Valle d'Ayas, con vista sull'intero versante della Becca di Nona. Il Rifugio Vieux Crest, punto di sosta classico dell'AV1, è dotato di dormitorio e servizi completi e si trova a breve distanza dalla telecabina di Champoluc che permette il rientro a valle in caso di necessità. La tappa richiede buona preparazione atletica per il dislivello positivo significativo, ma le difficoltà tecniche sono contenute lungo tutto il percorso.",
+    "description_en": "Stage six of High Route 1 ranks among the most iconic of the entire route: it climbs from Gressoney-Saint-Jean to Col Pinter at 2777 metres — the pass dividing the Gressoney valley from the Ayas valley — across high meadows where ibex sightings are common in the early morning hours. Col Pinter is an exceptional natural balcony: Monte Rosa's icy pyramid fills the eastern sky, the Matterhorn rises to the west, and on exceptionally clear days the white dome of Mont Blanc appears on the horizon. The descent to Rifugio Vieux Crest (2417 m) follows a well-marked trail across the Crest glacial cirque, already in the Ayas valley, with views of the full Becca di Nona ridge above Champoluc. Rifugio Vieux Crest, a classic AV1 overnight stop, offers dormitory accommodation and full mountain-hut services; it stands close to the Champoluc cable car which provides a valley-return option in case of emergency or changing weather. The stage demands solid aerobic fitness for the sustained positive elevation gain, but technical difficulty remains low throughout.",
+    "distance_km": 12.7,
+    "elevation_gain_m": 1427,
+    "elevation_loss_m": 395,
+    "duration_hours": 6.5,
+    "difficulty": "EE",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Gressoney-Saint-Jean",
+      "coords": {
+        "lat": 45.7858,
+        "lng": 7.8296
+      },
+      "elevation_m": 1385
+    },
+    "end": {
+      "name": "Rifugio Vieux Crest",
+      "coords": {
+        "lat": 45.8328,
+        "lng": 7.7145
+      },
+      "elevation_m": 2417
+    },
+    "valley": "Valle di Gressoney — Valle d'Ayas",
+    "municipalities": [
+      "Gressoney-Saint-Jean",
+      "Ayas"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Valle_di_Gressoney_15.jpg/1600px-Valle_di_Gressoney_15.jpg",
+    "gallery": [],
+    "refuges": [
+      "rifugio-vieux-crest"
+    ],
+    "flora": [
+      "rododendro",
+      "stella-alpina",
+      "genepi"
+    ],
+    "fauna": [
+      "stambecco",
+      "camoscio",
+      "marmotta"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "monte-rosa",
+      "col-pinter",
+      "valle-ayas"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + AllTrails (12.7 km, +1427 m verificati)",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-7-rifugio-vieux-crest-rifugio-grand-tournalin",
+    "name_it": "Alta Via 1 — Tappa 7: Rifugio Vieux Crest → Rifugio Grand Tournalin",
+    "name_en": "High Route 1 — Stage 7: Rifugio Vieux Crest → Rifugio Grand Tournalin",
+    "shortDescription_it": "Dalle creste sopra Champoluc al Rifugio Grand Tournalin con il Cervino sempre in vista: alta montagna con ampi panorami sulla Valle d'Ayas e le sue costruzioni pastorali.",
+    "shortDescription_en": "From the ridges above Champoluc to Rifugio Grand Tournalin with the Matterhorn always in view: high-mountain terrain with sweeping panoramas over the Ayas valley and its pastoral landscape.",
+    "description_it": "La settima tappa è una delle più ricche di contrasti dell'intera Alta Via 1: lasciato il Rifugio Vieux Crest, il percorso scende nel vallone di Résy prima di risalire deciso verso i colli sopra Champoluc, con la piramide del Cervino che compare sempre più nitida oltre il crinale. La Valle d'Ayas si apre su un paesaggio di alpeggi d'alta quota dove le costruzioni in pietra a secco — fienili, stalle, tabià — testimoniano una secolare economia pastorale tuttora viva. Il sentiero attraversa pascoli dove le mucche valdostane pascolano libere in estate, sfiora le frazioni di Frachey e risale verso il Colle di Roisetta (2679 m), uno dei punti panoramici più ampi della tappa. La discesa finale e la risalita portano al Rifugio Grand Tournalin (2535 m), punto di sosta classico dell'AV1 con terrazza affacciata direttamente sul Cervino. La classificazione EE non riflette difficoltà tecniche ma il dislivello positivo sostenuto e i tratti su pietraia che richiedono attenzione. Il rifugio offre pernottamento con mezza pensione: prenotare con anticipo in luglio e agosto quando il flusso dell'AV1 è al suo massimo.",
+    "description_en": "Stage seven is one of the most varied on the entire Alta Via 1: leaving Rifugio Vieux Crest, the trail descends into the Résy valley before climbing steadily across the ridges above Champoluc, with the Matterhorn's profile sharpening on the horizon as altitude increases. The Ayas valley unfolds across a landscape of high-altitude summer farms where dry-stone buildings — barns, stalls, tabià shelters — bear witness to a centuries-old pastoral economy that remains active today. The path crosses high pastures where Valdostana cattle graze freely through summer, skirts the hamlet of Frachey and climbs toward Col Roisetta (2679 m), one of the widest viewpoints of the stage. The final descent and reascent lead to Rifugio Grand Tournalin (2535 m), a classic AV1 overnight stop with a terrace offering direct views of the Matterhorn. The EE rating reflects sustained elevation gain and scree sections demanding careful footwork rather than any technical passage. The hut provides half-board accommodation: reservations are strongly advised in July and August when AV1 hiker traffic peaks.",
+    "distance_km": 11.6,
+    "elevation_gain_m": 1162,
+    "elevation_loss_m": 1044,
+    "duration_hours": 5.5,
+    "difficulty": "EE",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Rifugio Vieux Crest",
+      "coords": {
+        "lat": 45.8328,
+        "lng": 7.7145
+      },
+      "elevation_m": 2417
+    },
+    "end": {
+      "name": "Rifugio Grand Tournalin",
+      "coords": {
+        "lat": 45.8921,
+        "lng": 7.7318
+      },
+      "elevation_m": 2535
+    },
+    "valley": "Valle d'Ayas",
+    "municipalities": [
+      "Ayas"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/PanoramaMatter.jpg/1600px-PanoramaMatter.jpg",
+    "gallery": [],
+    "refuges": [
+      "rifugio-vieux-crest",
+      "rifugio-grand-tournalin"
+    ],
+    "flora": [
+      "rododendro",
+      "stella-alpina",
+      "genepi"
+    ],
+    "fauna": [
+      "stambecco",
+      "camoscio",
+      "marmotta"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "valle-ayas",
+      "cervino"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + AllTrails (11.6 km, +1162 m verificati)",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-8-rifugio-grand-tournalin-valtournenche",
+    "name_it": "Alta Via 1 — Tappa 8: Rifugio Grand Tournalin → Valtournenche",
+    "name_en": "High Route 1 — Stage 8: Rifugio Grand Tournalin → Valtournenche",
+    "shortDescription_it": "La grande discesa: dal Rifugio Grand Tournalin si scende di oltre mille metri fino al fondovalle di Valtournenche, passando per il panoramico pianoro di Cheneil con vista sul Cervino.",
+    "shortDescription_en": "The great descent: from Rifugio Grand Tournalin losing over a thousand metres to the valley floor of Valtournenche, passing through the scenic plateau of Cheneil with Matterhorn views.",
+    "description_it": "L'ottava tappa è la più lunga discesa della sequenza centrale dell'Alta Via 1: dal Rifugio Grand Tournalin a 2535 metri si scende di oltre mille metri fino al fondovalle di Valtournenche, capoluogo dell'omonima valle che ospita la stazione sciistica di Breuil-Cervinia. Il primo tratto di discesa è ripido su terreno misto, con viste sul Cervino che accompagnano quasi ogni passo. Man mano che si perde quota il paesaggio cambia radicalmente: alle pietraie e ai pascoli alpini si sostituiscono boschi di larice e abete rosso, torrenti rumorosi e cappelle votive di pietra. Il sentiero raggiunge il pianoro di Cheneil — un piccolo altopiano con un balcone panoramico straordinario sul fondovalle — prima di scendere definitivamente a Valtournenche (1520 m). Il paese offre tutti i servizi necessari: supermercati, farmacia, ristoranti e alberghi. La difficoltà è classificata E poiché il dislivello è quasi interamente in discesa e non ci sono tratti tecnici. I bastoncini telescopici sono consigliati soprattutto nel tratto iniziale per proteggere le ginocchia. Da Valtournenche è possibile prendere la funivia per Cervinia.",
+    "description_en": "Stage eight is the longest descent in the central sequence of Alta Via 1: from Rifugio Grand Tournalin at 2535 metres the trail drops over a thousand metres to the valley floor of Valtournenche, the main village of the valley that hosts the Breuil-Cervinia ski resort above. The first descent section is steep on mixed terrain, with the Matterhorn accompanying almost every step. As altitude decreases the landscape shifts markedly: alpine scree and high pastures give way to larch and Norway spruce forest, rushing streams and roadside stone chapels. The trail reaches the plateau of Cheneil — a small highland with a spectacular balcony view over the entire valley — before the final descent to Valtournenche (1520 m). The village offers all necessary services: supermarkets, pharmacy, restaurants and hotels. The difficulty is rated E since the elevation change is almost entirely downhill with no technical sections. Trekking poles are strongly recommended, particularly on the initial steep stretch, to protect the knees. From Valtournenche a cable car ascends to Cervinia and the Swiss border at Plateau Rosà.",
+    "distance_km": 8.7,
+    "elevation_gain_m": 309,
+    "elevation_loss_m": 1317,
+    "duration_hours": 4.5,
+    "difficulty": "E",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Rifugio Grand Tournalin",
+      "coords": {
+        "lat": 45.8921,
+        "lng": 7.7318
+      },
+      "elevation_m": 2535
+    },
+    "end": {
+      "name": "Valtournenche",
+      "coords": {
+        "lat": 45.871,
+        "lng": 7.6213
+      },
+      "elevation_m": 1520
+    },
+    "valley": "Valtournenche",
+    "municipalities": [
+      "Ayas",
+      "Valtournenche"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Lac_Bleu_-_panoramio.jpg",
+    "gallery": [],
+    "refuges": [
+      "rifugio-grand-tournalin"
+    ],
+    "flora": [
+      "larice",
+      "rododendro",
+      "mirtillo"
+    ],
+    "fauna": [
+      "camoscio",
+      "aquila-reale",
+      "marmotta"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "valtournenche",
+      "cervino"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + AllTrails (8.7 km verificati) + thealps.com",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-9-valtournenche-rifugio-barmasse",
+    "name_it": "Alta Via 1 — Tappa 9: Valtournenche → Rifugio Jean Barmasse",
+    "name_en": "High Route 1 — Stage 9: Valtournenche → Rifugio Jean Barmasse",
+    "shortDescription_it": "La tappa più corta dell'AV1: 4.7 km di salita decisa da Valtournenche al Rifugio Jean Barmasse sulle rive del Lago di Cignana, preparazione alla tappa più impegnativa del percorso.",
+    "shortDescription_en": "The shortest stage on the entire AV1: 4.7 km of sustained climbing from Valtournenche to Rifugio Jean Barmasse on the shores of Lago di Cignana, in preparation for the hardest day ahead.",
+    "description_it": "La nona tappa è la più corta dell'intera Alta Via 1 ma non meno impegnativa in termini di pendenza: in meno di cinque chilometri il percorso guadagna oltre 650 metri di quota, risalendo dal centro di Valtournenche al Rifugio Jean Barmasse sulle rive del Lago di Cignana. La tappa inizia attraversando il torrente Marmore e risalendo verso il villaggio di Valmartin, dove il sentiero entra in un bosco di conifere e comincia a salire deciso su traccia ben segnalata. Le costruzioni idroelettriche della diga segnalano la prossimità del lago artificiale, uno specchio d'acqua turchese che riflette le creste della Valtournenche. Il Rifugio Jean Barmasse (2157 m), sul bordo del bacino, è il punto di partenza per la tappa più impegnativa di tutta l'Alta Via 1 il giorno successivo. La brevità della tappa è intenzionale nel disegno originale dell'AV1: consente di riposare e accumulare energie per la lunga traversata verso il Rifugio Cuney. Molti escursionisti considerano di combinare la T9 con la T10, ma questa scelta è sconsigliata a meno di avere una forma fisica eccezionale e di partire presto.",
+    "description_en": "Stage nine is the shortest of the entire Alta Via 1 but no less demanding in gradient: in fewer than five kilometres the trail climbs over 650 metres, rising from the centre of Valtournenche to Rifugio Jean Barmasse on the shore of Lago di Cignana. The stage begins by crossing the Marmore torrent and climbing toward the hamlet of Valmartin, where the path enters a conifer forest and begins a sustained, well-marked ascent. The hydroelectric infrastructure of the dam signals proximity to the artificial lake, a turquoise mirror reflecting the Valtournenche ridgelines. Rifugio Jean Barmasse (2157 m), positioned on the edge of the reservoir, serves as the launchpad for the most demanding stage of the entire Alta Via the following morning. The brevity of this stage is deliberate in the original AV1 design: it allows for genuine rest and energy accumulation before the long traverse toward Rifugio Cuney. Many walkers consider combining stage nine with stage ten, but this is strongly discouraged unless fitness levels are exceptional and an early departure is guaranteed.",
+    "distance_km": 4.7,
+    "elevation_gain_m": 682,
+    "elevation_loss_m": 25,
+    "duration_hours": 2.5,
+    "difficulty": "E",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Valtournenche",
+      "coords": {
+        "lat": 45.871,
+        "lng": 7.6213
+      },
+      "elevation_m": 1520
+    },
+    "end": {
+      "name": "Rifugio Jean Barmasse",
+      "coords": {
+        "lat": 45.9005,
+        "lng": 7.5982
+      },
+      "elevation_m": 2157
+    },
+    "valley": "Valtournenche",
+    "municipalities": [
+      "Valtournenche"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Lago_di_Cignana.jpg/1600px-Lago_di_Cignana.jpg",
+    "gallery": [],
+    "refuges": [
+      "rifugio-jean-barmasse"
+    ],
+    "flora": [
+      "stella-alpina",
+      "genepi",
+      "rododendro"
+    ],
+    "fauna": [
+      "camoscio",
+      "marmotta",
+      "aquila-reale"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "valtournenche",
+      "lago-cignana"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + AllTrails (4.7 km, 2h25 verificati) + thealps.com",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-10-rifugio-barmasse-rifugio-cuney",
+    "name_it": "Alta Via 1 — Tappa 10: Rifugio Jean Barmasse → Rifugio Oratorio di Cuney",
+    "name_en": "High Route 1 — Stage 10: Rifugio Jean Barmasse → Rifugio Oratorio di Cuney",
+    "shortDescription_it": "Il cuore selvaggio dell'Alta Via: 17 km tra Fenêtre de Tsan, Col Terray e il Rifugio Oratorio di Cuney, con Cervino e Grand Combin a dominare un orizzonte di colli oltre i 2700 m.",
+    "shortDescription_en": "The wild heart of the Alta Via: 17 km across Fenêtre de Tsan, Col Terray and on to Rifugio Oratorio di Cuney, with Matterhorn and Grand Combin dominating a horizon of 2700-metre passes.",
+    "description_it": "La decima tappa è l'anima selvaggia dell'Alta Via 1: 17 chilometri di alta montagna tra la Valtournenche e la Val Saint-Barthélemy, attraversando tre colli sopra i 2700 metri in una successione di paesaggi grandiosi e silenziosi. Dal Rifugio Barmasse il sentiero sale alla Fenêtre d'Ersa (2290 m), poi scende brevemente prima di risalire alla Fenêtre de Tsan (2736 m) — uno dei valichi più belli dell'AV1, con vista sul Cervino a est e sul Grand Combin a ovest. La discesa verso il Lago di Tsan e la successiva risalita al Col Terray (2775 m) completano il trittico dei colli, prima dell'ultima lunga discesa che porta al Rifugio Oratorio di Cuney (2652 m). Il rifugio è affiancato al Santuario di Cuney, la cappella mariana più alta d'Europa con il suo altare di origine medievale, e ospita ogni anno in agosto una messa alpina che attira centinaia di fedeli. La tappa richiede partenza mattutina, scorte d'acqua adeguate — pochi rifornimenti lungo l'alta traversata — e attenzione meteorologica costante, poiché i crinali esposti offrono scarso riparo dai temporali estivi.",
+    "description_en": "Stage ten is the wild heart of Alta Via 1: 17 kilometres of high mountain terrain between Valtournenche and Val Saint-Barthélemy, crossing three passes above 2700 metres in a succession of vast, silent landscapes. From Rifugio Barmasse the trail climbs to Fenêtre d'Ersa (2290 m), descends briefly before rising to Fenêtre de Tsan (2736 m) — one of the AV1's finest cols, with the Matterhorn to the east and Grand Combin to the west — then continues to Col Terray (2775 m) to complete the pass trilogy. A final long descent leads to Rifugio Oratorio di Cuney (2652 m), one of the most atmospheric overnight stops on the entire route. The hut stands beside the Sanctuary of Cuney, the highest Marian chapel in Europe, whose medieval altar has witnessed centuries of alpine devotion; every August a high mountain mass draws hundreds of the faithful. The stage demands an early start, adequate water supplies — very few sources along the high traverse — and constant weather awareness, as the exposed ridgelines offer little shelter from afternoon thunderstorms.",
+    "distance_km": 17.1,
+    "elevation_gain_m": 1397,
+    "elevation_loss_m": 902,
+    "duration_hours": 7,
+    "difficulty": "EE",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Rifugio Jean Barmasse",
+      "coords": {
+        "lat": 45.9005,
+        "lng": 7.5982
+      },
+      "elevation_m": 2157
+    },
+    "end": {
+      "name": "Rifugio Oratorio di Cuney",
+      "coords": {
+        "lat": 45.8225,
+        "lng": 7.4988
+      },
+      "elevation_m": 2652
+    },
+    "valley": "Valtournenche — Val Saint-Barthélemy",
+    "municipalities": [
+      "Valtournenche",
+      "Torgnon"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Matterhorn_-_Breuil-Cervinia.jpg/1200px-Matterhorn_-_Breuil-Cervinia.jpg",
+    "gallery": [],
+    "refuges": [
+      "rifugio-jean-barmasse",
+      "rifugio-oratorio-di-cuney"
+    ],
+    "flora": [
+      "stella-alpina",
+      "genepi",
+      "cotone-delle-nevi"
+    ],
+    "fauna": [
+      "stambecco",
+      "camoscio",
+      "aquila-reale"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "fenetre-de-tsan",
+      "col-terray",
+      "santuario-cuney"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + AllTrails (17.1 km verificati) + hikr.org",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-11-rifugio-cuney-oyace",
+    "name_it": "Alta Via 1 — Tappa 11: Rifugio Oratorio di Cuney → Oyace",
+    "name_en": "High Route 1 — Stage 11: Rifugio Oratorio di Cuney → Oyace",
+    "shortDescription_it": "Dal Santuario di Cuney alla Valpelline: lunga discesa su creste esposte con brevi tratti attrezzati verso il piccolo borgo di Oyace, nel cuore della valle più selvaggia della Valle d'Aosta.",
+    "shortDescription_en": "From the Sanctuary of Cuney to the Valpelline: a long descent over exposed ridges with short scramble sections, ending at Oyace in the heart of the Aosta Valley's most untouched valley.",
+    "description_it": "L'undicesima tappa porta l'AV1 dalla quota più alta della sezione centrale — il Rifugio Oratorio di Cuney a 2652 m — fino al fondovalle della Valpelline, scendendo a Oyace attraverso un paesaggio di creste esposte e pascoli solitari. Pur con un dislivello in salita contenuto (504 m), la tappa è classificata EE per la presenza di brevi tratti attrezzati su roccia esposta e per la lunghezza complessiva che si somma alla stanchezza accumulata. Il percorso affronta il Col Chaleby (2653 m) e poi il Col de Vessonaz (2793 m) — la quota più alta di questa tappa — prima della lunga discesa verso Oyace che perde quasi 1400 metri in una serie di tornanti su terreno misto. La Valpelline è una delle valli più selvagge e meno frequentate della Valle d'Aosta: nessun comprensorio sciistico, poche strutture turistiche, molti alpeggi ancora attivi. Oyace (1397 m) è un piccolo comune con servizi essenziali e collegamento di trasporto pubblico verso Aosta. La tappa è lunga e fisicamente impegnativa: conviene partire entro le 7 per arrivare a Oyace nel primo pomeriggio e affrontare le sezioni su roccia con le energie fresche del mattino.",
+    "description_en": "Stage eleven brings the Alta Via 1 down from the high central section — Rifugio Oratorio di Cuney at 2652 m — to the Valpelline valley floor at Oyace, crossing exposed ridges and solitary pastures in a long descent losing nearly 1400 metres. Despite a modest positive gain of just 504 m, the stage earns its EE rating from short sections of scrambling on exposed rock and from the cumulative physical demand added to already-tired legs. The route tackles Col Chaleby (2653 m) and Col de Vessonaz (2793 m) — the stage's highest point — before the lengthy descent to Oyace unwinds on mixed terrain through sustained switchbacks. The Valpelline is one of the least visited and most untouched valleys in the Aosta region: no ski resorts, minimal tourist infrastructure, many active summer farms. Oyace (1397 m) is a small village with basic services and a regional bus connection to Aosta. An early departure before 7 AM is advised to reach Oyace in early afternoon and tackle the scramble sections with fresh energy.",
+    "distance_km": 15,
+    "elevation_gain_m": 504,
+    "elevation_loss_m": 1759,
+    "duration_hours": 5.5,
+    "difficulty": "EE",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Rifugio Oratorio di Cuney",
+      "coords": {
+        "lat": 45.8225,
+        "lng": 7.4988
+      },
+      "elevation_m": 2652
+    },
+    "end": {
+      "name": "Oyace",
+      "coords": {
+        "lat": 45.7856,
+        "lng": 7.4622
+      },
+      "elevation_m": 1397
+    },
+    "valley": "Valpelline",
+    "municipalities": [
+      "Antey-Saint-André",
+      "Oyace"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Panorama_di_Valpelline_2.JPG/1600px-Panorama_di_Valpelline_2.JPG",
+    "gallery": [],
+    "refuges": [
+      "rifugio-oratorio-di-cuney"
+    ],
+    "flora": [
+      "rododendro",
+      "stella-alpina",
+      "mirtillo"
+    ],
+    "fauna": [
+      "camoscio",
+      "aquila-reale",
+      "stambecco"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "valpelline",
+      "col-vessonaz"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + AllTrails (15.0 km verificati, tratti attrezzati segnalati)",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-12-oyace-ollomont",
+    "name_it": "Alta Via 1 — Tappa 12: Oyace → Ollomont via Col Brison",
+    "name_en": "High Route 1 — Stage 12: Oyace → Ollomont via Col Brison",
+    "shortDescription_it": "La Valpelline selvaggia: Oyace e Ollomont sono quasi alla stessa quota ma il Col Brison a 2520 m impone oltre 1100 m di salita con vista sul Mont Vélan e il Grand Combin.",
+    "shortDescription_en": "The wild Valpelline: Oyace and Ollomont sit at nearly the same elevation, but Col Brison at 2520 m demands over 1100 m of climbing with views to Mont Vélan and Grand Combin on the Swiss border.",
+    "description_it": "La dodicesima tappa attraversa la Valpelline da Oyace a Ollomont risalendo oltre il Col Brison (2520 m), in una delle tappe più fisicamente impegnative per la proporzione tra dislivello e distanza. Il percorso lascia il centro di Oyace, scende brevemente al torrente Buthier e poi sale senza tregua attraverso un bosco di conifere fino all'alpeggio di Sucheaz (1993 m), dove la vegetazione si apre su pascoli d'alta quota. La salita continua verso il Col Brison con una serie di tornanti su terreno solido, fino al valico dove si apre improvvisamente la vista sul Mont Vélan (3734 m) e sul Grand Combin, con il versante svizzero del Gran San Bernardo visibile in lontananza. La discesa verso Ollomont è anch'essa significativa: oltre 1100 m su un sentiero ben tracciato che attraversa l'alpeggio della Beria prima di scendere nei boschi del fondovalle. Ollomont (1393 m) è un piccolo borgo della Valpelline con un campanile romanico e una tradizione casearia secolare: sosta ideale per assaggiare il formaggio locale e rifornirsi per le ultime tre tappe verso Courmayeur.",
+    "description_en": "Stage twelve crosses the Valpelline from Oyace to Ollomont, climbing over Col Brison (2520 m) in one of the physically most demanding stages for the ratio of elevation gain to distance. The route leaves Oyace centre, drops briefly to the Buthier torrent and then climbs relentlessly through a conifer forest to the summer farm of Sucheaz (1993 m), where the trees give way to high pastures. The ascent continues toward Col Brison through solid, well-maintained switchbacks, reaching the pass where Mont Vélan (3734 m) and Grand Combin suddenly appear on the skyline with the Swiss side of the Grand Saint-Bernard valley visible on the horizon. The descent to Ollomont is equally significant: over 1100 metres on a clear path crossing the Beria alp before dropping into the valley-floor forest. Ollomont (1393 m) is a small Valpelline village with a Romanesque bell tower and a centuries-old cheesemaking tradition: an ideal stop to taste local dairy produce and resupply before the final three stages to Courmayeur.",
+    "distance_km": 12.4,
+    "elevation_gain_m": 1145,
+    "elevation_loss_m": 1155,
+    "duration_hours": 5.5,
+    "difficulty": "EE",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Oyace",
+      "coords": {
+        "lat": 45.7856,
+        "lng": 7.4622
+      },
+      "elevation_m": 1397
+    },
+    "end": {
+      "name": "Ollomont",
+      "coords": {
+        "lat": 45.7275,
+        "lng": 7.385
+      },
+      "elevation_m": 1393
+    },
+    "valley": "Valpelline",
+    "municipalities": [
+      "Oyace",
+      "Bionaz",
+      "Ollomont"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Panorama_Valpelline_1.JPG/1600px-Panorama_Valpelline_1.JPG",
+    "gallery": [],
+    "refuges": [],
+    "flora": [
+      "larice",
+      "pino-silvestre",
+      "stella-alpina"
+    ],
+    "fauna": [
+      "camoscio",
+      "marmotta",
+      "aquila-reale"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "valpelline",
+      "col-brison",
+      "mont-velan"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + AllTrails (12.4 km verificati) + thealps.com + vasentiero.org",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-13-ollomont-rifugio-champillon",
+    "name_it": "Alta Via 1 — Tappa 13: Ollomont → Rifugio Champillon",
+    "name_en": "High Route 1 — Stage 13: Ollomont → Rifugio Champillon",
+    "shortDescription_it": "Da Ollomont al Rifugio Champillon nella Conca di By: 1000 m di dislivello in salita attraverso boschi e alpeggi verso uno dei rifugi più originali dell'AV1, con sauna e yurta.",
+    "shortDescription_en": "From Ollomont to Rifugio Champillon in the Conca di By: 1000 m of climbing through forests and summer farms to one of the AV1's most distinctive huts, complete with mountain sauna and yurt.",
+    "description_it": "La tredicesima tappa è la prima della serie finale che conduce l'AV1 verso il massiccio del Monte Bianco: da Ollomont si sale per oltre 1000 metri fino al Rifugio Champillon nella Conca di By, uno dei paesaggi più integri di tutta la Valle d'Aosta. Il percorso parte dalla frazione di Rey, attraversa un bosco di larici e pini silvestri con tratti piuttosto ripidi, raggiunge gli alpeggi di Prumayes (1621 m) e continua su traccia ben segnalata verso le praterie di Champillon. La piccola cappella di Notre-Dame-des-Neiges, a quota 2300 m circa, è il simbolo spirituale di questo tratto e merita una sosta silenziosa. Il Rifugio Champillon (2465 m), nella Conca di By ai piedi del Col Champillon, è una struttura fuori dall'ordinario: sauna con vista sulle Alpi, yurta nel prato, atmosfera giovane e informale. Si dorme in dormitorio o sotto le stelle in tenda nel prato circostante, a seconda della preferenza e della stagione. La tappa è breve in chilometri ma il dislivello positivo sostenuto e quasi privo di tratti pianeggianti richiede gambe allenate e un ritmo regolare.",
+    "description_en": "Stage thirteen is the first of the final sequence steering the Alta Via 1 toward the Mont Blanc massif: from Ollomont the trail climbs over 1000 metres to Rifugio Champillon in the Conca di By, one of the most unspoiled landscapes in the entire Aosta Valley. The route departs from the hamlet of Rey, threads through a larch and Scots pine forest on quite steep sections, reaches the summer farms of Prumayes (1621 m) and continues on a well-marked path toward the Champillon meadows. The small chapel of Notre-Dame-des-Neiges at approximately 2300 m is the spiritual landmark of this stretch and deserves a quiet stop. Rifugio Champillon (2465 m), in the Conca di By at the foot of Col Champillon, is a distinctive hut: a sauna with Alpine views, a yurt on the lawn, and a young, informal atmosphere. Dormitory accommodation and wild camping in the surrounding meadow are both available depending on preference and season. The stage is short in kilometres but the unrelenting positive elevation — with almost no flat sections — demands trained legs and a steady rhythm.",
+    "distance_km": 9.5,
+    "elevation_gain_m": 1070,
+    "elevation_loss_m": 40,
+    "duration_hours": 3.5,
+    "difficulty": "E",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Ollomont",
+      "coords": {
+        "lat": 45.7275,
+        "lng": 7.385
+      },
+      "elevation_m": 1393
+    },
+    "end": {
+      "name": "Rifugio Champillon",
+      "coords": {
+        "lat": 45.7028,
+        "lng": 7.2988
+      },
+      "elevation_m": 2465
+    },
+    "valley": "Valpelline — Conca di By",
+    "municipalities": [
+      "Ollomont"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Col_de_Champillon.jpg/1200px-Col_de_Champillon.jpg",
+    "gallery": [],
+    "refuges": [
+      "rifugio-champillon"
+    ],
+    "flora": [
+      "stella-alpina",
+      "genepi",
+      "rododendro"
+    ],
+    "fauna": [
+      "stambecco",
+      "camoscio",
+      "aquila-reale"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "conca-di-by",
+      "col-champillon"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + thealps.com + gulliver.it (km stimati, non verificati da GPS indipendente)",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-14-rifugio-champillon-saint-rhemy",
+    "name_it": "Alta Via 1 — Tappa 14: Rifugio Champillon → Saint-Rhémy-en-Bosses",
+    "name_en": "High Route 1 — Stage 14: Rifugio Champillon → Saint-Rhémy-en-Bosses",
+    "shortDescription_it": "Dal Col Champillon (2709 m) con panorama dal Monte Bianco al Gran Paradiso, lunga discesa verso Saint-Rhémy-en-Bosses nell'alta valle storica del Gran San Bernardo.",
+    "shortDescription_en": "Over Col Champillon (2709 m) with panoramic views from Mont Blanc to Gran Paradiso, followed by a long descent to Saint-Rhémy-en-Bosses in the historic upper Grand Saint-Bernard valley.",
+    "description_it": "La quattordicesima tappa porta l'Alta Via 1 dal Rifugio Champillon all'alta valle del Gran San Bernardo, una delle grandi vie storiche di comunicazione tra Italia e Svizzera. Dal rifugio si sale brevemente fino al Col Champillon (2709 m), un ampio valico erboso da cui la vista spazia in modo eccezionale: il Monte Bianco a ovest, il Gran Paradiso a est, il Grand Combin a nord. La discesa verso Saint-Rhémy-en-Bosses è lunga — oltre 1100 m di dislivello — ma sempre su sentiero solido e ben segnalato, attraversando pascoli d'alta quota prima di scendere in un bosco misto e raggiungere il fondovalle. Saint-Rhémy-en-Bosses (1600 m) è un borgo tranquillo sull'autostrada storica del Gran San Bernardo, con servizi completi e una piccola area museale dedicata al Colle e ai celebri cani San Bernardo. Per chi ha energie residue è possibile una breve deviazione fino al Colle del Gran San Bernardo (2473 m) per visitare l'ospizio che da secoli accoglie i viandanti. La tappa è classificata E in assenza di difficoltà tecniche.",
+    "description_en": "Stage fourteen carries the Alta Via 1 from Rifugio Champillon to the upper Grand Saint-Bernard valley, one of the great historic communication routes between Italy and Switzerland. From the hut a short final climb reaches Col Champillon (2709 m), a broad grassy pass from which the panorama sweeps exceptionally: Mont Blanc to the west, Gran Paradiso to the east, Grand Combin to the north. The descent to Saint-Rhémy-en-Bosses is long — over 1100 metres — but follows a solid, well-signed path throughout, crossing high pastures before dropping through mixed forest to the valley floor. Saint-Rhémy-en-Bosses (1600 m) is a quiet village on the historic Great Saint Bernard road, with full services and a small museum dedicated to the pass and its famous Saint Bernard dogs. Walkers with remaining energy can make a short detour to Col du Grand Saint-Bernard (2473 m) and visit the hospice that has welcomed travellers for centuries. The stage is rated E with no technical difficulties.",
+    "distance_km": 14,
+    "elevation_gain_m": 522,
+    "elevation_loss_m": 1324,
+    "duration_hours": 5.5,
+    "difficulty": "E",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Rifugio Champillon",
+      "coords": {
+        "lat": 45.7028,
+        "lng": 7.2988
+      },
+      "elevation_m": 2465
+    },
+    "end": {
+      "name": "Saint-Rhémy-en-Bosses",
+      "coords": {
+        "lat": 45.6758,
+        "lng": 7.1678
+      },
+      "elevation_m": 1600
+    },
+    "valley": "Valle del Gran San Bernardo",
+    "municipalities": [
+      "Ollomont",
+      "Saint-Rhémy-en-Bosses"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Grand_St_Bernard.jpg/1600px-Grand_St_Bernard.jpg",
+    "gallery": [],
+    "refuges": [
+      "rifugio-champillon"
+    ],
+    "flora": [
+      "stella-alpina",
+      "genepi",
+      "rododendro"
+    ],
+    "fauna": [
+      "camoscio",
+      "aquila-reale",
+      "marmotta"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "gran-san-bernardo",
+      "col-champillon"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + thealps.com (D+/D− verificati)",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-15-saint-rhemy-rifugio-frassati",
+    "name_it": "Alta Via 1 — Tappa 15: Saint-Rhémy-en-Bosses → Rifugio Frassati",
+    "name_en": "High Route 1 — Stage 15: Saint-Rhémy-en-Bosses → Rifugio Frassati",
+    "shortDescription_it": "Salita regolare nella Conca di Merdeux verso il Rifugio Frassati a 2540 m, ultimo punto di sosta prima del Col Malatrà (2925 m), il valico più alto di tutta l'Alta Via 1.",
+    "shortDescription_en": "A steady climb through the Merdeux basin to Rifugio Frassati at 2540 m, the last overnight stop before tackling Col Malatrà (2925 m), the highest pass on the entire Alta Via 1.",
+    "description_it": "La quindicesima tappa sale da Saint-Rhémy-en-Bosses verso il Rifugio Pier Giorgio Frassati, il punto di sosta che precede la salita al Col Malatrà, il valico più alto dell'intera Alta Via 1. Il percorso risale la Conca di Merdeux su un sentiero che attraversa prati curati, bordi di torrente e macchie di ontano, con il profilo del Petit Saint-Bernard visibile verso ovest. Il dislivello positivo di 905 m si distribuisce in modo regolare su tutta la distanza, rendendo la tappa più lunga che acuta. Il Rifugio Pier Giorgio Frassati (2540 m) è dedicato al giovane alpinista torinese beatificato da Papa Giovanni Paolo II nel 1990, noto come l'uomo delle beatitudini per la sua vita di servizio e passione per la montagna. Il rifugio offre pernottamento e vitto in un ambiente moderno e accogliente. Il pernottamento qui è strategicamente essenziale: la salita al Col Malatrà (2925 m) e la lunga discesa in Val Ferret del giorno successivo richiedono la partenza più mattutina di tutta l'Alta Via.",
+    "description_en": "Stage fifteen climbs from Saint-Rhémy-en-Bosses toward Rifugio Pier Giorgio Frassati, the overnight stop immediately below the ascent to Col Malatrà, the highest pass on the entire Alta Via 1. The route rises through the Merdeux basin on a path that crosses well-maintained meadows, streamside vegetation and open slopes, with the outline of Petit Saint-Bernard visible to the west. The 905 m of positive elevation is distributed evenly across the distance, making this a stage of duration rather than acute difficulty. Rifugio Pier Giorgio Frassati (2540 m) is dedicated to the young Turinese mountaineer beatified by Pope John Paul II in 1990, known as the man of the beatitudes for his life of service and love of the mountains. The hut provides comfortable accommodation with meals in a modern, welcoming setting. An overnight here is strategically essential: the ascent to Col Malatrà (2925 m) and the long descent into Val Ferret the following morning demand the earliest departure of the entire route.",
+    "distance_km": 10,
+    "elevation_gain_m": 905,
+    "elevation_loss_m": 20,
+    "duration_hours": 4,
+    "difficulty": "E",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Saint-Rhémy-en-Bosses",
+      "coords": {
+        "lat": 45.6758,
+        "lng": 7.1678
+      },
+      "elevation_m": 1600
+    },
+    "end": {
+      "name": "Rifugio Pier Giorgio Frassati",
+      "coords": {
+        "lat": 45.696,
+        "lng": 7.1025
+      },
+      "elevation_m": 2540
+    },
+    "valley": "Valle del Gran San Bernardo",
+    "municipalities": [
+      "Saint-Rhémy-en-Bosses",
+      "Etroubles"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Lac_du_Great_St_Bernard_Pass%2C_2010_August.JPG/1600px-Lac_du_Great_St_Bernard_Pass%2C_2010_August.JPG",
+    "gallery": [],
+    "refuges": [
+      "rifugio-frassati"
+    ],
+    "flora": [
+      "stella-alpina",
+      "rododendro",
+      "mirtillo"
+    ],
+    "fauna": [
+      "camoscio",
+      "marmotta",
+      "aquila-reale"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "gran-san-bernardo",
+      "col-malatra"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + thealps.com (D+ verificato) — km stimati",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti",
+    "name_it": "Alta Via 1 — Tappa 16: Rifugio Frassati → Rifugio Bonatti via Col Malatrà",
+    "name_en": "High Route 1 — Stage 16: Rifugio Frassati → Rifugio Bonatti via Col Malatrà",
+    "shortDescription_it": "Il Col Malatrà a 2925 m è il tetto dell'Alta Via 1: dalla cresta panoramica sul Monte Bianco si scende nella Val Ferret fino al leggendario Rifugio Walter Bonatti.",
+    "shortDescription_en": "Col Malatrà at 2925 m is the rooftop of Alta Via 1: from the panoramic crest above Mont Blanc the trail descends into Val Ferret to the legendary Rifugio Walter Bonatti.",
+    "description_it": "La sedicesima tappa è la più alpinistica dell'intera Alta Via 1: sale al Col Malatrà a 2925 metri — il punto più alto di tutto il percorso — e scende nella Val Ferret al Rifugio Walter Bonatti. Dal Rifugio Frassati il sentiero risale la Conca di Merdeux su terreno via via più roccioso e aperto, con tratti su pietraia compatta che richiedono attenzione. La croce del Col Malatrà appare come un traguardo tanto atteso: a questa quota il panorama è assoluto, con il Monte Bianco a nord-ovest nella sua piena imponenza, il Grand Combin a est e le cime del Gran Paradiso all'orizzonte. La discesa verso la Val Ferret è lunga su terreno a tratti scivoloso — erba bagnata al mattino — e richiede di mantenersi sul sentiero segnalato. Il Rifugio Walter Bonatti (2025 m) è il rifugio più celebre dell'Alta Via 1, reso famoso anche dalla vicinanza con il Tour du Mont Blanc, e offre una vista sul Monte Bianco senza paragoni. La prenotazione con settimane di anticipo è indispensabile in alta stagione.",
+    "description_en": "Stage sixteen is the most alpine stretch of the entire Alta Via 1: it climbs to Col Malatrà at 2925 metres — the highest point of the whole route — and descends into Val Ferret to Rifugio Walter Bonatti. From Rifugio Frassati the path rises through the Merdeux basin on progressively rockier and more open terrain, with sections of compact scree demanding careful footwork. The cross at Col Malatrà is a long-awaited landmark: at this altitude the panorama is absolute, with Mont Blanc rising in full majesty to the northwest, Grand Combin to the east and the Gran Paradiso summits on the distant horizon. The descent toward Val Ferret is long and occasionally slippery — dew-wet grass early in the morning — so staying on the marked trail is essential. Rifugio Walter Bonatti (2025 m) is the most celebrated overnight stop on the entire Alta Via 1, made famous through its proximity to the Tour du Mont Blanc, offering an unrivalled view of Mont Blanc. Reservations weeks in advance are indispensable during peak season.",
+    "distance_km": 10,
+    "elevation_gain_m": 430,
+    "elevation_loss_m": 900,
+    "duration_hours": 4,
+    "difficulty": "EE",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Rifugio Pier Giorgio Frassati",
+      "coords": {
+        "lat": 45.696,
+        "lng": 7.1025
+      },
+      "elevation_m": 2540
+    },
+    "end": {
+      "name": "Rifugio Walter Bonatti",
+      "coords": {
+        "lat": 45.8789,
+        "lng": 7.0331
+      },
+      "elevation_m": 2025
+    },
+    "valley": "Val Ferret",
+    "municipalities": [
+      "Etroubles",
+      "Courmayeur"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Mont_Blanc_and_Grandes_Jorasses_-_Vallone_di_Malatr%C3%A0%2C_Courmayeur%2C_Aosta%2C_Italy_-_August_8%2C_2016.jpg/1600px-Mont_Blanc_and_Grandes_Jorasses_-_Vallone_di_Malatr%C3%A0%2C_Courmayeur%2C_Aosta%2C_Italy_-_August_8%2C_2016.jpg",
+    "gallery": [],
+    "refuges": [
+      "rifugio-bonatti"
+    ],
+    "flora": [
+      "stella-alpina",
+      "genepi",
+      "rododendro"
+    ],
+    "fauna": [
+      "stambecco",
+      "camoscio",
+      "aquila-reale"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "col-malatra",
+      "val-ferret",
+      "monte-bianco"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + thealps.com — km stimati, D+/D− da GPS traces",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  },
+  {
+    "slug": "alta-via-1-tappa-17-rifugio-bonatti-courmayeur",
+    "name_it": "Alta Via 1 — Tappa 17: Rifugio Bonatti → Courmayeur",
+    "name_en": "High Route 1 — Stage 17: Rifugio Bonatti → Courmayeur",
+    "shortDescription_it": "L'ultima tappa dell'AV1: il sentiero balcone della Val Ferret con Monte Bianco e Grandes Jorasses sempre in vista fino all'arrivo a Courmayeur, capitale alpinistica italiana.",
+    "shortDescription_en": "The final AV1 stage: the Val Ferret balcony trail with Mont Blanc and Grandes Jorasses always in sight, ending at Courmayeur, Italy's alpine capital.",
+    "description_it": "La diciassettesima e ultima tappa dell'Alta Via 1 è un lungo e festoso cammino di discesa verso Courmayeur lungo il sentiero balcone della Val Ferret, con il Monte Bianco come compagno costante di marcia. Dal Rifugio Bonatti il percorso attraversa la testata della valle verso il Rifugio Bertone (2048 m), su un sentiero che segue il bordo del bosco con viste continue sulle Grandes Jorasses, sul Ghiacciaio del Miage e sulla cresta del Monte Bianco. La discesa finale al Rifugio Bertone e poi a Courmayeur avviene su un sentiero ripido nel bosco, che sbuca in città tra i giardini del centro storico. Courmayeur (1224 m) è una delle capitali alpinistiche italiane, con una sezione del Club Alpino Italiano tra le più antiche, un museo alpino dedicato alla storia delle prime ascensioni e una via principale animata da negozi outdoor e ristoranti con fonduta. Tagliare questo traguardo dopo 17 tappe e oltre 190 km di cammino è un'emozione genuina: molti escursionisti celebrano l'arrivo con un brindisi sulle terrazze affacciate sull'eterno bianco del massiccio che li ha accompagnati.",
+    "description_en": "Stage seventeen, the final leg of Alta Via 1, is a long and celebratory descent to Courmayeur along the Val Ferret balcony trail, with Mont Blanc as a constant companion throughout. From Rifugio Bonatti the path crosses the valley head toward Rifugio Bertone (2048 m) along a trail following the forest edge with unbroken views onto Grandes Jorasses, Miage Glacier and the Mont Blanc crest. The final descent from Bertone to Courmayeur drops steeply through forest, emerging into town among the gardens of the historic centre. Courmayeur (1224 m) is one of Italy's alpine capitals, home to one of the country's oldest sections of the Club Alpino Italiano, an alpine museum dedicated to the history of early ascents and a vibrant main street lined with outdoor shops and restaurants serving fonduta. Completing this final stage after 17 stages and over 190 km of walking is a genuinely moving experience: many hikers mark the arrival with a toast on terraces overlooking the eternal white of the massif that accompanied every step of the journey.",
+    "distance_km": 12.1,
+    "elevation_gain_m": 300,
+    "elevation_loss_m": 1101,
+    "duration_hours": 3.5,
+    "difficulty": "E",
+    "season": [
+      "summer",
+      "autumn"
+    ],
+    "start": {
+      "name": "Rifugio Walter Bonatti",
+      "coords": {
+        "lat": 45.8789,
+        "lng": 7.0331
+      },
+      "elevation_m": 2025
+    },
+    "end": {
+      "name": "Courmayeur",
+      "coords": {
+        "lat": 45.7975,
+        "lng": 6.9794
+      },
+      "elevation_m": 1224
+    },
+    "valley": "Val Ferret",
+    "municipalities": [
+      "Courmayeur"
+    ],
+    "hero_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Grandes_Jorasses_-_Val_Ferret%2C_Courmayeur%2C_Aosta%2C_Italy_-_August_8%2C_2016.jpg/1600px-Grandes_Jorasses_-_Val_Ferret%2C_Courmayeur%2C_Aosta%2C_Italy_-_August_8%2C_2016.jpg",
+    "gallery": [],
+    "refuges": [
+      "rifugio-bonatti",
+      "rifugio-bertone"
+    ],
+    "flora": [
+      "rododendro",
+      "stella-alpina",
+      "mirtillo"
+    ],
+    "fauna": [
+      "stambecco",
+      "marmotta",
+      "aquila-reale"
+    ],
+    "tags": [
+      "alta-via-1",
+      "long-distance",
+      "val-ferret",
+      "monte-bianco",
+      "courmayeur"
+    ],
+    "source": {
+      "name": "Catasto Sentieri Regione VdA + AllTrails (12.1 km verificati)",
+      "url": "https://catastosentieri.regione.vda.it/",
+      "license": "Open data — DGR 899/2014"
+    },
+    "updated_at": "2026-05-25"
+  }
+]

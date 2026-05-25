@@ -1,0 +1,68 @@
+{
+  "Site": {
+    "name": "Sentieri VdA",
+    "tagline": "The trails of Aosta Valley, told as they deserve."
+  },
+  "Nav": {
+    "trails": "Trails",
+    "alteVie": "High Routes",
+    "refuges": "Refuges & bivouacs",
+    "floraFauna": "Flora & fauna",
+    "parks": "Parks",
+    "blog": "Journal",
+    "about": "About"
+  },
+  "Home": {
+    "heroEyebrow": "Official regional registry · 5,000 km of waymarked routes",
+    "heroTitle": "Walking among giants.",
+    "heroSubtitle": "From Becca di Nona to the Matterhorn, from the Tor des Géants to forgotten valley refuges. Trails, data, photography.",
+    "heroCtaPrimary": "Explore trails",
+    "heroCtaSecondary": "The High Routes",
+    "featuredEyebrow": "Featured",
+    "featuredTitle": "Stages worth doing at least once",
+    "exploreMapTitle": "The whole region, on one map",
+    "exploreMapDescription": "Filter by difficulty, duration, elevation. Download the GPX. Go."
+  },
+  "Trails": {
+    "title": "Trails of the Aosta Valley",
+    "filterDifficulty": "Difficulty",
+    "filterLength": "Length",
+    "filterDuration": "Duration",
+    "filterElevation": "Elevation gain",
+    "filterValley": "Valley",
+    "all": "All",
+    "noResults": "No trails found",
+    "details": {
+      "distance": "Distance",
+      "elevationGain": "Ascent",
+      "elevationLoss": "Descent",
+      "duration": "Duration",
+      "difficulty": "Difficulty",
+      "start": "Start",
+      "end": "Finish",
+      "season": "Best season",
+      "downloadGpx": "Download GPX",
+      "altimetricProfile": "Elevation profile",
+      "description": "Description",
+      "flora": "Flora along the trail",
+      "fauna": "Wildlife to spot",
+      "refugesNearby": "Refuges & bivouacs",
+      "source": "Data source"
+    }
+  },
+  "Difficulty": {
+    "T": "Tourist",
+    "E": "Hiker",
+    "EE": "Experienced hiker",
+    "EEA": "Equipped hiker (via ferrata)",
+    "A": "Mountaineering"
+  },
+  "Footer": {
+    "credits": "Trail data © Aosta Valley Autonomous Region — Catasto Sentieri (open data). © OpenStreetMap contributors. © MapTiler.",
+    "disclaimer": "Information is for guidance only. Check weather and snow conditions before setting out. Safety is the hiker's responsibility.",
+    "newsletter": "Subscribe to the newsletter",
+    "newsletterPlaceholder": "your@email.com",
+    "newsletterCta": "Subscribe",
+    "rights": "All rights reserved."
+  }
+}

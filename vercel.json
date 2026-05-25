@@ -1,0 +1,9 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "regions": ["fra1"],
+  "redirects": [
+    { "source": "/", "destination": "/it", "permanent": false }
+  ]
+}
