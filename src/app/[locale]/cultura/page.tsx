@@ -37,7 +37,7 @@ export default async function CulturaPage({
       <section className="relative min-h-[55vh] overflow-hidden lg:min-h-[62vh]">
         <div className="absolute inset-0">
           <Image
-            src="/trails/donnas.jpg"
+            src="/cultura/walser-titsch.jpg"
             alt=""
             fill
             priority

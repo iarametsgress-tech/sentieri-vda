@@ -62,6 +62,9 @@ export const EnvironmentSectionSchema = z.object({
   highlights_it: z.array(z.string()).optional(),
   highlights_en: z.array(z.string()).optional(),
   stats: z.array(EnvironmentStatSchema).optional(),
+  image: z.string().optional(),
+  image_alt_it: z.string().optional(),
+  image_alt_en: z.string().optional(),
 });
 
 export type EnvironmentSection = z.infer<typeof EnvironmentSectionSchema>;

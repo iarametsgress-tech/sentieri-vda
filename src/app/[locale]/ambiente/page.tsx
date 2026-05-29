@@ -49,7 +49,7 @@ export default async function AmbientePage({
   return (
     <div>
       <CinematicHero
-        image="/species/stambecco-bg.jpg"
+        image="/species/aquila-reale-bg.jpg"
         videoSrc={AMBIENTE_HERO_VIDEO}
         eyebrow={t('heroEyebrow')}
         title={t('heroTitle')}

@@ -32,10 +32,9 @@ export const TOUR_HERO_IMAGES: Record<TourId, string> = {
   tmb: '/trails/monte-bianco.jpg',
   'monte-rosa': '/trails/monte-rosa.jpg',
   cervino: '/trails/cervino.jpg',
-  'gran-paradiso': '/trails/gran-paradiso.jpg',
-  rutor:
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ghiacciaio_del_Rutor%2C_Valsavarenche%2C_Valle_d%27Aosta%2C_Italia.jpg/1280px-Ghiacciaio_del_Rutor%2C_Valsavarenche%2C_Valle_d%27Aosta%2C_Italia.jpg',
-  'gran-combin': '/trails/valpelline.jpg',
+  'gran-paradiso': '/trails/tour-gran-paradiso-tappa-4-eaux-rousses-rifugio-vittorio-sella.jpg',
+  rutor: '/trails/tour-rutor-tappa-2-rifugio-deffeyes-lago-rutor.jpg',
+  'gran-combin': '/trails/tour-gran-combin-tappa-3-col-gran-san-bernardo-combin-tsessione.jpg',
 };
 
 export const TOUR_ACCENTS: Record<

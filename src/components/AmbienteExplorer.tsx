@@ -40,7 +40,6 @@ import {
 } from '@/lib/environment';
 import FloraFaunaExplorer from './FloraFaunaExplorer';
 import CounterStat from './CounterStat';
-import FloraFaunaScrollStory, { type StoryScene } from './FloraFaunaScrollStory';
 
 const SECTIONS: {
   id: AmbienteSectionId;
@@ -54,23 +53,6 @@ const SECTIONS: {
 
 type PeakFilter = 'all' | '4000' | 'trails';
 
-/** Specie con foto -bg dedicata, ordinate per fascia altitudinale (fondovalle → alta quota). */
-const STORY_SPECIES_IDS = [
-  'vite',
-  'castagno',
-  'betulla',
-  'pino-silvestre',
-  'larice',
-  'mirtillo',
-  'rododendro',
-  'cotone-delle-nevi',
-  'marmotta',
-  'camoscio',
-  'stella-alpina',
-  'genepi',
-  'aquila-reale',
-  'gipeto',
-];
 
 interface AmbienteExplorerProps {
   locale: string;
@@ -151,36 +133,52 @@ function EnvironmentBlock({
   index: number;
 }) {
   const highlights = getSectionHighlights(section, locale);
+  const hasImage = Boolean(section.image);
+  const imageAlt = locale === 'it' ? (section.image_alt_it ?? '') : (section.image_alt_en ?? '');
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.45, delay: index * 0.06 }}
-      className="rounded-2xl border border-white/8 bg-white/[0.02] p-6 lg:p-8 hover:border-white/14 transition-colors"
+      className="rounded-2xl border border-white/8 bg-white/[0.02] overflow-hidden hover:border-white/14 transition-colors"
     >
-      <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-alpenglow mb-2">
-        {getSectionEyebrow(section, locale)}
-      </p>
-      <h3 className="font-display text-xl lg:text-2xl tracking-tight text-snow mb-4">
-        {getSectionTitle(section, locale)}
-      </h3>
-      <p className="text-snow/70 leading-relaxed text-[15px] mb-5">
-        {getSectionBody(section, locale)}
-      </p>
-      {highlights.length > 0 ? (
-        <ul className="space-y-2">
-          {highlights.map((h) => (
-            <li
-              key={h}
-              className="flex items-start gap-2 text-sm text-snow/60 leading-snug"
-            >
-              <ChevronRight size={14} className="text-ice shrink-0 mt-0.5" />
-              {h}
-            </li>
-          ))}
-        </ul>
-      ) : null}
+      {hasImage && (
+        <div className="relative w-full aspect-[16/7] overflow-hidden">
+          <Image
+            src={section.image!}
+            alt={imageAlt}
+            fill
+            className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
+        </div>
+      )}
+      <div className="p-6 lg:p-8">
+        <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-alpenglow mb-2">
+          {getSectionEyebrow(section, locale)}
+        </p>
+        <h3 className="font-display text-xl lg:text-2xl tracking-tight text-snow mb-4">
+          {getSectionTitle(section, locale)}
+        </h3>
+        <p className="text-snow/70 leading-relaxed text-[15px] mb-5">
+          {getSectionBody(section, locale)}
+        </p>
+        {highlights.length > 0 ? (
+          <ul className="space-y-2">
+            {highlights.map((h) => (
+              <li
+                key={h}
+                className="flex items-start gap-2 text-sm text-snow/60 leading-snug"
+              >
+                <ChevronRight size={14} className="text-ice shrink-0 mt-0.5" />
+                {h}
+              </li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
     </motion.article>
   );
 }
@@ -401,33 +399,6 @@ export default function AmbienteExplorer({
   );
   const sourcesLabel = isIT ? 'Fonti' : 'Sources';
 
-  const storyScenes = useMemo<StoryScene[]>(() => {
-    const all = [...flora, ...fauna];
-    return STORY_SPECIES_IDS.map((id) => {
-      const s = all.find((sp) => sp.id === id);
-      if (!s) return null;
-      return {
-        id: s.id,
-        image: `/species/${s.id}-bg.jpg`,
-        name: isIT ? s.name_it : s.name_en,
-        scientific: s.scientific,
-        kind: s.kind,
-        altMin: s.altitude.min,
-        altMax: s.altitude.max,
-        text: isIT ? s.profile.overview_it : s.profile.overview_en,
-      };
-    }).filter((scene): scene is StoryScene => scene !== null);
-  }, [flora, fauna, isIT]);
-
-  const storyLabels = {
-    eyebrow: labels.storyEyebrow,
-    title: labels.storyTitle,
-    subtitle: labels.storySubtitle,
-    altitudeLabel: labels.storyAltitudeLabel,
-    scrollHint: labels.storyScrollHint,
-    flora: labels.storyFlora,
-    fauna: labels.storyFauna,
-  };
 
   const scrollTo = useCallback((id: AmbienteSectionId) => {
     const el = document.getElementById(id);
@@ -524,12 +495,22 @@ export default function AmbienteExplorer({
         />
       </nav>
 
-      {/* Flora & Fauna — scroll-story cinematic + catalogo */}
+      {/* Flora & Fauna — catalogo interattivo con foto */}
       <section id="flora-fauna" className="scroll-mt-36 border-b border-white/5">
-        {storyScenes.length > 0 ? (
-          <FloraFaunaScrollStory scenes={storyScenes} labels={storyLabels} />
-        ) : null}
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24">
+          <ScrollReveal className="mb-10 max-w-2xl">
+            <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.3em] text-alpenglow">
+              {labels.storyEyebrow}
+            </p>
+            <h2 className="font-display text-display-md tracking-tighter mb-4">
+              {isIT ? 'Flora e Fauna' : 'Flora & Fauna'}
+            </h2>
+            <p className="text-snow/60 leading-relaxed">
+              {isIT
+                ? `${fauna.length} specie animali e ${flora.length} vegetali catalogate con schede naturalistiche, areali e fotografie.`
+                : `${fauna.length} animal and ${flora.length} plant species catalogued with naturalist profiles, ranges and photographs.`}
+            </p>
+          </ScrollReveal>
           <FloraFaunaExplorer flora={flora} fauna={fauna} locale={locale} />
         </div>
       </section>

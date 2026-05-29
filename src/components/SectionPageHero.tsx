@@ -15,31 +15,37 @@ export const SECTION_HERO_IMAGES: Record<
   { src: string; altIt: string; altEn: string }
 > = {
   sentieri: {
-    src: '/trails/gran-paradiso.jpg',
-    altIt: 'Sentieri nel Parco Nazionale del Gran Paradiso',
-    altEn: 'Trails in Gran Paradiso National Park',
+    // Escursionista sul sentiero — tappa AV2 in alta quota
+    src: '/trails/alta-via-2-tappa-8-eaux-rousses-rifugio-vittorio-sella.jpg',
+    altIt: 'Sentiero di alta quota in Valle d\'Aosta verso il Rifugio Vittorio Sella',
+    altEn: 'High-altitude trail in Aosta Valley towards Rifugio Vittorio Sella',
   },
   rifugi: {
-    src: '/refuges/rifugio-bonatti.jpg',
-    altIt: 'Rifugio Bonatti sul Tour del Monte Bianco',
-    altEn: 'Rifugio Bonatti on the Tour du Mont Blanc',
+    // Rifugio in quota — diverso dal precedente hero dei rifugi
+    src: '/refuges/rifugio-vittorio-sella-2.jpg',
+    altIt: 'Rifugio Vittorio Sella nel Parco del Gran Paradiso',
+    altEn: 'Rifugio Vittorio Sella in Gran Paradiso National Park',
   },
   tour: {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Grandes_Jorasses_-_Val_Ferret%2C_Courmayeur%2C_Aosta%2C_Italy_-_August_8%2C_2016.jpg/1280px-Grandes_Jorasses_-_Val_Ferret%2C_Courmayeur%2C_Aosta%2C_Italy_-_August_8%2C_2016.jpg',
-    altIt: 'Grandes Jorasses viste dalla Val Ferret, Courmayeur',
-    altEn: 'Grandes Jorasses from Val Ferret, Courmayeur',
+    // Tour del Monte Bianco — tappa iconica con rifugio Bonatti
+    src: '/trails/tour-mont-blanc-tappa-2-rifugio-bertone-rifugio-bonatti.jpg',
+    altIt: 'Tour del Monte Bianco — tappa verso il Rifugio Bonatti',
+    altEn: 'Tour du Mont Blanc — stage towards Rifugio Bonatti',
   },
   'flora-fauna': {
-    src: '/species/camoscio.jpg',
-    altIt: 'Camoscio alpino in Valle d\'Aosta',
-    altEn: 'Alpine chamois in Aosta Valley',
+    // Stambecco alpino — simbolo della fauna valdostana
+    src: '/species/stambecco.jpg',
+    altIt: 'Stambecco alpino sulle creste della Valle d\'Aosta',
+    altEn: 'Alpine ibex on the ridges of Aosta Valley',
   },
   about: {
-    src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Mont_Blanc_from_Val_Ferret_2.jpg/1280px-Mont_Blanc_from_Val_Ferret_2.jpg',
-    altIt: 'Monte Bianco dalla Val Ferret',
-    altEn: 'Mont Blanc from Val Ferret',
+    // Panorama Monte Bianco dall'alta via
+    src: '/trails/alta-via-1-tappa-17-rifugio-bonatti-courmayeur.jpg',
+    altIt: 'Monte Bianco visto dall\'Alta Via — tappa finale verso Courmayeur',
+    altEn: 'Mont Blanc seen from the High Route — final stage to Courmayeur',
   },
   'alte-vie': {
+    // Alta Via 1 in quota — panorama Grandes Jorasses
     src: '/trails/alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti.jpg',
     altIt: 'Alta Via 1 — Val Ferret e Grandes Jorasses',
     altEn: 'High Route 1 — Val Ferret and Grandes Jorasses',
