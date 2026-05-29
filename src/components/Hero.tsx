@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { ArrowUpRight, ChevronDown } from 'lucide-react';
@@ -34,12 +35,13 @@ export default function Hero() {
         style={{ y: imageY }}
         className="absolute inset-0 scale-110 origin-center"
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={HERO_IMAGE}
           alt="Monte Bianco visto dalla Val Ferret, Courmayeur"
-          className="h-full w-full object-cover"
-          fetchPriority="high"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
       </motion.div>
 

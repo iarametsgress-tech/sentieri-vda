@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
+import Image from 'next/image';
 import {
   motion,
   useScroll,
@@ -70,14 +71,14 @@ function SceneBackground({
   return (
     <motion.div style={{ opacity }} className="absolute inset-0">
       <motion.div style={{ scale }} className="absolute inset-0">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={scene.image}
           alt=""
-          className="h-full w-full object-cover"
-          loading={index < 2 ? 'eager' : 'lazy'}
-          decoding="async"
-          fetchPriority={index === 0 ? 'high' : 'low'}
+          fill
+          priority={index === 0}
+          sizes="100vw"
+          className="object-cover"
+          unoptimized={scene.image.startsWith('http')}
         />
       </motion.div>
     </motion.div>

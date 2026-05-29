@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
 import { useRef, useState } from 'react';
+import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
 
 /**
@@ -48,13 +49,13 @@ export default function CinematicHero({
   return (
     <section ref={ref} className={`relative w-full overflow-hidden ${heightClass}`}>
       <motion.div style={{ y: imageY }} className="absolute inset-0 scale-110 origin-center">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={image}
           alt=""
-          className="h-full w-full object-cover"
-          fetchPriority={priority ? 'high' : 'auto'}
-          loading={priority ? 'eager' : 'lazy'}
+          fill
+          priority={priority}
+          sizes="100vw"
+          className="object-cover"
         />
         {videoSrc && !reduce ? (
           <video
