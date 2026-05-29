@@ -12,6 +12,15 @@ interface MarkerPoint {
   type: 'start' | 'end';
 }
 
+export interface RouteHighlight {
+  id: string;
+  geojson: GeoJSON.FeatureCollection;
+  lineColor: string;
+  label: string;
+  href: string;
+  labelCoords: [number, number];
+}
+
 interface MapViewProps {
   center?: [number, number];
   zoom?: number;
@@ -19,7 +28,9 @@ interface MapViewProps {
   showOfficialTrails?: boolean;
   terrain3D?: boolean;
   markers?: MarkerPoint[];
+  routeHighlights?: RouteHighlight[];
   className?: string;
+  lineColor?: string;
 }
 
 function createMarkerEl(type: 'start' | 'end', label: string, elevation: number): HTMLElement {
@@ -66,6 +77,54 @@ function createMarkerEl(type: 'start' | 'end', label: string, elevation: number)
   return wrapper;
 }
 
+function createRouteLabelEl(label: string, href: string, color: string): HTMLElement {
+  const link = document.createElement('a');
+  link.href = href;
+  link.style.cssText = `
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 14px; border-radius: 999px;
+    background: rgba(10,10,10,0.92); border: 1px solid rgba(255,255,255,0.18);
+    color: #FAFAF7; font-family: monospace; font-size: 11px;
+    font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+    backdrop-filter: blur(8px);
+    transform: translateZ(0);
+    pointer-events: auto;
+  `;
+  const dot = document.createElement('span');
+  dot.style.cssText = `width:8px;height:8px;border-radius:50%;background:${color};flex-shrink:0;`;
+  link.appendChild(dot);
+  link.appendChild(document.createTextNode(label));
+  link.addEventListener('mouseenter', () => {
+    link.style.borderColor = color;
+    link.style.background = 'rgba(10,10,10,0.96)';
+  });
+  link.addEventListener('mouseleave', () => {
+    link.style.borderColor = 'rgba(255,255,255,0.18)';
+    link.style.background = 'rgba(10,10,10,0.92)';
+  });
+  link.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+  return link;
+}
+
+function extendBoundsFromGeoJSON(
+  bounds: maplibregl.LngLatBounds,
+  geojson: GeoJSON.FeatureCollection
+) {
+  geojson.features.forEach((f) => {
+    if (f.geometry.type === 'LineString') {
+      (f.geometry.coordinates as [number, number][]).forEach((c) => bounds.extend(c));
+    } else if (f.geometry.type === 'MultiLineString') {
+      f.geometry.coordinates.forEach((line) =>
+        (line as [number, number][]).forEach((c) => bounds.extend(c))
+      );
+    }
+  });
+}
+
 export default function MapView({
   center = VDA_CENTER,
   zoom = 9,
@@ -73,7 +132,9 @@ export default function MapView({
   showOfficialTrails = true,
   terrain3D = false,
   markers,
+  routeHighlights,
   className = 'w-full h-[500px]',
+  lineColor = '#D4A574',
 }: MapViewProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
@@ -157,7 +218,7 @@ export default function MapView({
         });
       }
 
-      // GeoJSON traccia
+      // GeoJSON traccia singola
       if (geojson) {
         map.addSource('trail-geojson', { type: 'geojson', data: geojson });
         map.addLayer({
@@ -172,20 +233,79 @@ export default function MapView({
           type: 'line',
           source: 'trail-geojson',
           layout: { 'line-cap': 'round', 'line-join': 'round' },
-          paint: { 'line-color': '#D4A574', 'line-width': 3.5 },
+          paint: { 'line-color': lineColor, 'line-width': 3.5 },
         });
-        const bounds = new maplibregl.LngLatBounds();
-        geojson.features.forEach((f) => {
-          if (f.geometry.type === 'LineString') {
-            (f.geometry.coordinates as [number, number][]).forEach((c) => bounds.extend(c));
-          }
-        });
-        if (!bounds.isEmpty()) map.fitBounds(bounds, { padding: 60, duration: 0 });
       }
 
-      // Start/end markers
-      if (markers?.length) {
-        markers.forEach((m) => {
+      // Alte Vie / percorsi evidenziati
+      const fitBounds = new maplibregl.LngLatBounds();
+      if (routeHighlights?.length) {
+        routeHighlights.forEach((route) => {
+          const sourceId = `route-${route.id}`;
+          map.addSource(sourceId, { type: 'geojson', data: route.geojson });
+          map.addLayer({
+            id: `${sourceId}-casing`,
+            type: 'line',
+            source: sourceId,
+            layout: { 'line-cap': 'round', 'line-join': 'round' },
+            paint: { 'line-color': '#0A0A0A', 'line-width': 5 },
+          });
+          map.addLayer({
+            id: `${sourceId}-line`,
+            type: 'line',
+            source: sourceId,
+            layout: { 'line-cap': 'round', 'line-join': 'round' },
+            paint: { 'line-color': route.lineColor, 'line-width': 3 },
+          });
+          extendBoundsFromGeoJSON(fitBounds, route.geojson);
+
+          const labelEl = createRouteLabelEl(route.label, route.href, route.lineColor);
+          new maplibregl.Marker({
+            element: labelEl,
+            anchor: 'center',
+            pitchAlignment: 'map',
+            rotationAlignment: 'map',
+          })
+            .setLngLat(route.labelCoords)
+            .addTo(map);
+        });
+      }
+
+      if (geojson) {
+        extendBoundsFromGeoJSON(fitBounds, geojson);
+      }
+
+      if (!fitBounds.isEmpty()) {
+        map.fitBounds(fitBounds, { padding: 70, duration: 0, maxZoom: 10 });
+      }
+
+      // Start/end markers — allineati alla traccia se presente
+      const markerPoints = markers?.length ? [...markers] : [];
+      if (geojson) {
+        const lineCoords: [number, number][] = [];
+        geojson.features.forEach((f) => {
+          if (f.geometry.type === 'LineString') {
+            (f.geometry.coordinates as [number, number][]).forEach((c) =>
+              lineCoords.push([c[0], c[1]])
+            );
+          } else if (f.geometry.type === 'MultiLineString') {
+            f.geometry.coordinates.forEach((line) =>
+              (line as [number, number][]).forEach((c) => lineCoords.push([c[0], c[1]]))
+            );
+          }
+        });
+        if (lineCoords.length >= 2 && markerPoints.length >= 2) {
+          const first = lineCoords[0];
+          const last = lineCoords[lineCoords.length - 1];
+          const startM = markerPoints.find((m) => m.type === 'start');
+          const endM = markerPoints.find((m) => m.type === 'end');
+          if (startM) startM.coords = first;
+          if (endM) endM.coords = last;
+        }
+      }
+
+      if (markerPoints.length) {
+        markerPoints.forEach((m) => {
           const el = createMarkerEl(m.type, m.label, m.elevation);
           new maplibregl.Marker({ element: el, anchor: 'bottom' })
             .setLngLat(m.coords)
@@ -193,9 +313,9 @@ export default function MapView({
         });
 
         // If no geojson, fit to markers
-        if (!geojson && markers.length >= 2) {
+        if (!geojson && markerPoints.length >= 2) {
           const bounds = new maplibregl.LngLatBounds();
-          markers.forEach((m) => bounds.extend(m.coords));
+          markerPoints.forEach((m) => bounds.extend(m.coords));
           map.fitBounds(bounds, { padding: 80, duration: 0, maxZoom: 13 });
         }
       }

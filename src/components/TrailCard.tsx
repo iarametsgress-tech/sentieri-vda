@@ -1,62 +1,125 @@
 'use client';
 
 import { Link } from '@/i18n/routing';
-import { useLocale, useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { TrendingUp, Clock, Mountain } from 'lucide-react';
+import { useLocale } from 'next-intl';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { useRef } from 'react';
+import { TrendingUp, Clock, Mountain, ArrowUpRight } from 'lucide-react';
 import type { Trail } from '@/lib/types';
+import { getTrailLocalizedName, getTrailLocalizedShortDesc } from '@/lib/stage-utils';
 import DifficultyBadge from './DifficultyBadge';
 
-export default function TrailCard({ trail, index = 0 }: { trail: Trail; index?: number }) {
+export default function TrailCard({
+  trail,
+  index = 0,
+}: {
+  trail: Trail;
+  index?: number;
+}) {
   const locale = useLocale();
-  const t = useTranslations('Trails.details');
+  const cardRef = useRef<HTMLDivElement>(null);
+  const name = getTrailLocalizedName(trail, locale);
+  const desc = getTrailLocalizedShortDesc(trail, locale);
+  const cardImage = trail.image || trail.hero_image;
 
-  const name = locale === 'it' ? trail.name_it : trail.name_en;
-  const desc = locale === 'it' ? trail.shortDescription_it : trail.shortDescription_en;
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const rotateX = useSpring(useTransform(y, [-0.5, 0.5], [3, -3]), {
+    stiffness: 300,
+    damping: 30,
+  });
+  const rotateY = useSpring(useTransform(x, [-0.5, 0.5], [-3, 3]), {
+    stiffness: 300,
+    damping: 30,
+  });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = cardRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    x.set((e.clientX - rect.left) / rect.width - 0.5);
+    y.set((e.clientY - rect.top) / rect.height - 0.5);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 30 }}
+      ref={cardRef}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.6, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-      className="group"
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{
+        duration: 0.7,
+        delay: index * 0.06,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="group cursor-pointer"
     >
       <Link href={`/sentieri/${trail.slug}`} className="block">
-        <div className="relative aspect-[4/5] overflow-hidden bg-slate-900 mb-5">
+        <div className="relative mb-5 aspect-[4/5] overflow-hidden rounded-sm bg-slate-900">
+          <motion.div
+            initial={{ scaleY: 1 }}
+            whileInView={{ scaleY: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.8,
+              delay: index * 0.06 + 0.15,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="absolute inset-0 z-10 origin-top bg-ink"
+          />
+
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={trail.hero_image}
+            src={cardImage}
             alt={name}
-            className="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.06]"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
-          <div className="absolute top-4 left-4">
+
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/20 to-transparent" />
+
+          <div className="absolute left-4 top-4 z-20">
             <DifficultyBadge difficulty={trail.difficulty} />
           </div>
-          <div className="absolute bottom-4 left-4 right-4">
-            <p className="font-mono text-xs uppercase tracking-widest text-alpenglow/90">
+
+          <div className="absolute bottom-4 left-4 right-4 z-20">
+            <p className="text-on-image-sm font-mono text-[10px] uppercase tracking-[0.3em] text-alpenglow">
               {trail.valley}
             </p>
           </div>
+
+          <div
+            className="absolute right-4 top-4 z-20 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-snow/10 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
+          >
+            <ArrowUpRight size={14} className="text-snow" />
+          </div>
         </div>
 
-        <h3 className="font-display text-2xl lg:text-3xl leading-tight text-snow tracking-editorial mb-3 group-hover:text-alpenglow transition-colors">
+        <h3 className="mb-3 font-display text-2xl leading-tight tracking-editorial text-snow transition-colors duration-300 group-hover:text-alpenglow lg:text-[1.7rem]">
           {name}
         </h3>
 
-        <p className="text-snow/60 text-sm leading-relaxed mb-5 line-clamp-2">{desc}</p>
+        <p className="mb-5 line-clamp-2 text-sm leading-relaxed text-snow/55">
+          {desc}
+        </p>
 
-        <div className="flex items-center gap-5 text-xs text-snow/50 tabular border-t border-white/5 pt-4">
+        <div className="flex items-center gap-5 border-t border-white/[0.07] pt-4 text-xs tabular text-snow/45">
           <span className="flex items-center gap-1.5">
-            <TrendingUp size={13} />
+            <TrendingUp size={12} />
             {trail.distance_km.toFixed(1)} km
           </span>
           <span className="flex items-center gap-1.5">
-            <Mountain size={13} />+{trail.elevation_gain_m} m
+            <Mountain size={12} />+{trail.elevation_gain_m} m
           </span>
           <span className="flex items-center gap-1.5">
-            <Clock size={13} />
+            <Clock size={12} />
             {trail.duration_hours} h
           </span>
         </div>

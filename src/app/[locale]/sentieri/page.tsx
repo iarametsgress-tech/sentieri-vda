@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { getAllTrails } from '@/lib/trails';
 import TrailsExplorer from '@/components/TrailsExplorer';
+import SectionPageHero from '@/components/SectionPageHero';
 import AdSlot from '@/components/AdSlot';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -12,24 +13,31 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default async function TrailsPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ locale: string }>;
+  searchParams: Promise<{ tag?: string }>;
 }) {
   const { locale } = await params;
+  const { tag } = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations('Trails');
   const trails = getAllTrails();
 
   return (
-    <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-28">
-      <h1 className="font-display text-display-lg tracking-tighter mb-4">{t('title')}</h1>
-      <p className="text-snow/60 max-w-2xl mb-12">
-        {trails.length} {locale === 'it' ? 'sentieri verificati su fonti ufficiali' : 'trails verified from official sources'}.
-      </p>
+    <div>
+      <SectionPageHero
+        eyebrow={t('heroEyebrow')}
+        title={t('title')}
+        subtitle={t('heroSubtitle', { count: trails.length })}
+        section="sentieri"
+        locale={locale}
+      />
 
-      <AdSlot slot="header-billboard" className="mb-12" />
-
-      <TrailsExplorer trails={trails} />
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 pb-20 lg:pb-28">
+        <AdSlot slot="header-billboard" className="mb-12" />
+        <TrailsExplorer trails={trails} initialTag={tag} />
+      </div>
     </div>
   );
 }

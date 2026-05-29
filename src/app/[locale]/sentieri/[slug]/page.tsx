@@ -2,11 +2,31 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { getAllTrails, getTrailBySlug, getAdjacentAV1Stages } from '@/lib/trails';
+import { getAllTrails, getTrailBySlug, getAdjacentAV1Stages, getAdjacentAV2Stages, getAdjacentTourStages } from '@/lib/trails';
 import MapView from '@/components/MapView';
 import DifficultyBadge from '@/components/DifficultyBadge';
 import ElevationProfile from '@/components/ElevationProfile';
+import TrailScienceSections, { TrailFitnessBar } from '@/components/TrailScienceSections';
+import {
+  TrailFloraFaunaLinks,
+  TrailRefugeLinks,
+  TrailRefugesSection,
+  TrailValleyLink,
+  TrailMunicipalityLinks,
+} from '@/components/TrailRelatedLinks';
+import TrailStickyBar, { TRAIL_HERO_SENTINEL_ID } from '@/components/TrailStickyBar';
+import LinkedText from '@/components/LinkedText';
 import AdSlot from '@/components/AdSlot';
+import { SITE_URL } from '@/lib/config';
+import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
+import type { Trail } from '@/lib/types';
+import {
+  getTrailLocalizedName,
+  getTrailLocalizedShortDesc,
+  getTrailLocalizedDescription,
+} from '@/lib/stage-utils';
+import { extractRefugeSlugsFromTrail } from '@/lib/refuges';
+import { loadTrailGeoJSON, getGpxPublicPath, gpxFileExists } from '@/lib/gpx';
 import {
   Download,
   MapPin,
@@ -32,8 +52,8 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const trail = getTrailBySlug(slug);
   if (!trail) return {};
-  const name = locale === 'it' ? trail.name_it : trail.name_en;
-  const desc = locale === 'it' ? trail.shortDescription_it : trail.shortDescription_en;
+  const name = getTrailLocalizedName(trail, locale);
+  const desc = getTrailLocalizedShortDesc(trail, locale);
   return {
     title: name,
     description: desc,
@@ -45,7 +65,7 @@ export async function generateMetadata({
     },
     alternates: {
       canonical: `/${locale}/sentieri/${slug}`,
-      languages: { it: `/it/sentieri/${slug}`, en: `/en/sentieri/${slug}` },
+      languages: localeAlternatesAbsolute(`/sentieri/${slug}`),
     },
   };
 }
@@ -62,16 +82,30 @@ export default async function TrailDetail({
   if (!trail) notFound();
 
   const t = await getTranslations('Trails.details');
-  const name = locale === 'it' ? trail.name_it : trail.name_en;
-  const description = locale === 'it' ? trail.description_it : trail.description_en;
+  const name = getTrailLocalizedName(trail, locale);
+  const description = getTrailLocalizedDescription(trail, locale);
+  const refugeSlugs = extractRefugeSlugsFromTrail(trail);
 
-  const { prev, next } = getAdjacentAV1Stages(slug);
   const isAV1 = trail.tags.includes('alta-via-1');
+  const isAV2 = trail.tags.includes('alta-via-2');
+  const tourTag = trail.tags.find((tag) => tag.startsWith('tour-') && tag !== 'tour');
+  const stageNav = isAV1
+    ? getAdjacentAV1Stages(slug)
+    : isAV2
+      ? getAdjacentAV2Stages(slug)
+      : tourTag
+        ? getAdjacentTourStages(slug, tourTag)
+        : { prev: null, next: null };
+  const { prev, next } = stageNav;
+  const isStageRoute = isAV1 || isAV2 || Boolean(tourTag);
+  const iconicImage = trail.image || trail.hero_image;
+  const gpxPath = trail.gpx_path ?? (gpxFileExists(slug) ? getGpxPublicPath(slug) : null);
+  const trailGeoJSON = loadTrailGeoJSON(slug);
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TouristAttraction',
-    '@id': `https://sentierivda.it/${locale}/sentieri/${trail.slug}`,
+    '@id': `${SITE_URL}/${locale}/sentieri/${trail.slug}`,
     name,
     description,
     image: trail.hero_image,
@@ -105,29 +139,29 @@ export default async function TrailDetail({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* ── Hero ──────────────────────────────────────────── */}
-      <div className="relative h-[70svh] min-h-[480px] overflow-hidden grain">
-        <Image
-          src={trail.hero_image}
-          alt={name}
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-          unoptimized={trail.hero_image.startsWith('http')}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
+      <TrailStickyBar
+        name={name}
+        difficulty={trail.difficulty}
+        distanceKm={trail.distance_km}
+        elevationGainM={trail.elevation_gain_m}
+        durationHours={trail.duration_hours}
+        gpxPath={gpxPath}
+        labels={{
+          downloadGpx: t('downloadGpx'),
+        }}
+      />
 
-        {/* AV1 stage navigation overlay */}
-        {isAV1 && (prev || next) && (
-          <div className="absolute top-6 left-0 right-0 flex justify-between px-6 lg:px-10 pointer-events-none">
+      {/* ── Header compatto + immagine iconica ─────────────── */}
+      <header className="max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-8 lg:pt-28">
+        {isStageRoute && (prev || next) && (
+          <div className="flex justify-between items-center mb-8 gap-4">
             {prev ? (
               <Link
                 href={`/${locale}/sentieri/${prev.slug}`}
-                className="pointer-events-auto flex items-center gap-2 bg-ink/70 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 text-xs font-mono uppercase tracking-widest text-snow/80 hover:bg-ink hover:text-snow transition-all"
+                className="inline-flex items-center gap-2 bg-white/[0.04] border border-white/10 rounded-full px-4 py-2 text-xs font-mono uppercase tracking-widest text-snow/70 hover:text-snow hover:bg-white/[0.07] transition-all"
               >
                 <ArrowLeft size={13} />
-                {locale === 'it' ? 'Tappa prec.' : 'Prev stage'}
+                {t('prevStageShort')}
               </Link>
             ) : (
               <div />
@@ -135,31 +169,47 @@ export default async function TrailDetail({
             {next && (
               <Link
                 href={`/${locale}/sentieri/${next.slug}`}
-                className="pointer-events-auto flex items-center gap-2 bg-ink/70 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 text-xs font-mono uppercase tracking-widest text-snow/80 hover:bg-ink hover:text-snow transition-all"
+                className="inline-flex items-center gap-2 bg-white/[0.04] border border-white/10 rounded-full px-4 py-2 text-xs font-mono uppercase tracking-widest text-snow/70 hover:text-snow hover:bg-white/[0.07] transition-all"
               >
-                {locale === 'it' ? 'Tappa succ.' : 'Next stage'}
+                {t('nextStageShort')}
                 <ArrowRight size={13} />
               </Link>
             )}
           </div>
         )}
 
-        <div className="absolute bottom-0 left-0 right-0 max-w-7xl mx-auto px-6 lg:px-10 pb-12">
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-alpenglow mb-3">
-            {trail.valley}
-          </p>
-          <h1 className="font-display text-display-lg tracking-tighter mb-5 max-w-4xl">
-            {name}
-          </h1>
-          <div className="flex items-center gap-3 flex-wrap">
-            <DifficultyBadge difficulty={trail.difficulty} full />
-            <span className="font-mono text-xs text-snow/50 tracking-widest uppercase flex items-center gap-1.5">
-              <Calendar size={11} />
-              {trail.season.join(' · ')}
-            </span>
-          </div>
+        <p className="font-mono text-xs uppercase tracking-[0.3em] text-alpenglow mb-3">
+          <TrailValleyLink label={trail.valley} locale={locale} />
+        </p>
+        <h1 className="font-display text-display-lg tracking-tighter mb-5 max-w-4xl">
+          {name}
+        </h1>
+        <div className="flex items-center gap-3 flex-wrap mb-10">
+          <DifficultyBadge difficulty={trail.difficulty} full />
+          <span className="font-mono text-xs text-snow/50 tracking-widest uppercase flex items-center gap-1.5">
+            <Calendar size={11} />
+            {trail.season.join(' · ')}
+          </span>
         </div>
-      </div>
+
+        {/* Immagine iconica grande sotto il titolo */}
+        <div className="relative w-full aspect-[21/9] max-h-[520px] overflow-hidden rounded-2xl border border-white/10 bg-ink grain">
+          <Image
+            src={iconicImage}
+            alt={name}
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            unoptimized={
+              iconicImage.startsWith('http') ||
+              iconicImage.endsWith('.png')
+            }
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent pointer-events-none" />
+        </div>
+        <div id={TRAIL_HERO_SENTINEL_ID} className="h-0 w-full" aria-hidden />
+      </header>
 
       {/* ── Main layout ───────────────────────────────────── */}
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -168,27 +218,38 @@ export default async function TrailDetail({
         <div className="lg:col-span-2 space-y-14">
 
           {/* Quick stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 border-y border-white/5 py-8">
-            <Stat
-              icon={<TrendingUp size={15} />}
-              label={t('distance')}
-              value={`${trail.distance_km} km`}
-            />
-            <Stat
-              icon={<Mountain size={15} />}
-              label={t('elevationGain')}
-              value={`+${trail.elevation_gain_m} m`}
-              accent="ice"
-            />
-            <Stat
-              icon={<TrendingDown size={15} />}
-              label={t('elevationLoss')}
-              value={`−${trail.elevation_loss_m} m`}
-            />
-            <Stat
-              icon={<Clock size={15} />}
-              label={t('duration')}
-              value={`${trail.duration_hours} h`}
+          <div className="border-y border-white/5 py-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+              <Stat
+                icon={<TrendingUp size={15} />}
+                label={t('distance')}
+                value={`${trail.distance_km} km`}
+              />
+              <Stat
+                icon={<Mountain size={15} />}
+                label={t('elevationGain')}
+                value={`+${trail.elevation_gain_m} m`}
+                accent="ice"
+              />
+              <Stat
+                icon={<TrendingDown size={15} />}
+                label={t('elevationLoss')}
+                value={`−${trail.elevation_loss_m} m`}
+              />
+              <Stat
+                icon={<Clock size={15} />}
+                label={t('duration')}
+                value={`${trail.duration_hours} h`}
+              />
+            </div>
+            <TrailFitnessBar
+              fitnessLevel={trail.fitness_level}
+              fitnessLabel={t('fitnessLevel')}
+              caloriesText={
+                trail.calories_estimate != null
+                  ? t('caloriesEstimate', { n: trail.calories_estimate })
+                  : undefined
+              }
             />
           </div>
 
@@ -210,9 +271,21 @@ export default async function TrailDetail({
             </div>
           </section>
 
-          {/* Map */}
+          {/* Map + GPX */}
           <section>
-            <SectionLabel>{locale === 'it' ? 'Mappa 3D' : '3D Map'}</SectionLabel>
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-4">
+              <SectionLabel>{t('mapAndRoute')}</SectionLabel>
+              {gpxPath && (
+                <a
+                  href={gpxPath}
+                  download={`${trail.slug}.gpx`}
+                  className="inline-flex items-center gap-2 bg-alpenglow text-ink px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity shrink-0"
+                >
+                  <Download size={14} />
+                  {t('downloadGpx')}
+                </a>
+              )}
+            </div>
             <div className="rounded-2xl overflow-hidden border border-white/5">
               <MapView
                 className="w-full h-[520px]"
@@ -221,21 +294,21 @@ export default async function TrailDetail({
                   (trail.start.coords.lat + trail.end.coords.lat) / 2,
                 ]}
                 zoom={12}
-                showOfficialTrails
+                showOfficialTrails={!trailGeoJSON}
                 terrain3D
+                geojson={trailGeoJSON ?? undefined}
                 markers={mapMarkers}
               />
             </div>
-            {trail.gpx_url && (
-              <a
-                href={trail.gpx_url}
-                download
-                className="mt-4 inline-flex items-center gap-2 bg-alpenglow text-ink px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
-              >
-                <Download size={14} />
-                {t('downloadGpx')}
-              </a>
-            )}
+            {gpxPath ? (
+              <p className="mt-3 text-xs text-snow/40 font-mono">
+                {isAV1 || isAV2 ? t('gpxNoteAlteVia') : t('gpxNoteGeneric')}
+              </p>
+            ) : trail.is_transfer_stage ? (
+              <p className="mt-3 text-xs text-snow/40 font-mono">
+                {t('transferStageNote')}
+              </p>
+            ) : null}
           </section>
 
           {/* Description */}
@@ -243,21 +316,48 @@ export default async function TrailDetail({
             <SectionLabel>{t('description')}</SectionLabel>
             <div className="text-snow/75 leading-[1.85] font-light text-[1.05rem] space-y-5">
               {description.split('\n').map((p, i) => (
-                <p key={i}>{p}</p>
+                <p key={i}>
+                  <LinkedText text={p} locale={locale} />
+                </p>
               ))}
             </div>
           </section>
+
+          <TrailScienceSections
+            trail={trail}
+            locale={locale}
+            labels={{
+              waypoints: t('waypoints'),
+              geology: t('geology'),
+              geologyEyebrow: t('geologyEyebrow'),
+              transport: t('transport'),
+              parking: t('parking'),
+              warnings: t('warnings'),
+              nearbyPeaks: t('nearbyPeaks'),
+              culturalNotes: t('culturalNotes'),
+              waterSources: t('waterSources'),
+            }}
+          />
 
           <AdSlot slot="in-content-mid" />
 
           {/* Start & End cards */}
           <section>
-            <SectionLabel>{locale === 'it' ? 'Partenza e arrivo' : 'Start & end'}</SectionLabel>
+            <SectionLabel>{t('startEnd')}</SectionLabel>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <PointCard label={t('start')} name={trail.start.name} elevation={trail.start.elevation_m} type="start" />
               <PointCard label={t('end')} name={trail.end.name} elevation={trail.end.elevation_m} type="end" />
             </div>
           </section>
+
+          {refugeSlugs.length > 0 && (
+            <TrailRefugesSection
+              trail={trail}
+              slugs={refugeSlugs}
+              locale={locale}
+              label={t('refugesNearby')}
+            />
+          )}
 
           {/* Flora / Fauna */}
           {(trail.flora.length > 0 || trail.fauna.length > 0) && (
@@ -265,49 +365,33 @@ export default async function TrailDetail({
               {trail.flora.length > 0 && (
                 <div>
                   <SectionLabel>{t('flora')}</SectionLabel>
-                  <ul className="flex flex-wrap gap-2">
-                    {trail.flora.map((f) => (
-                      <li
-                        key={f}
-                        className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-sm text-snow/75 capitalize"
-                      >
-                        {f.replace(/-/g, ' ')}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    <TrailFloraFaunaLinks slugs={trail.flora} />
+                  </div>
                 </div>
               )}
               {trail.fauna.length > 0 && (
                 <div>
                   <SectionLabel>{t('fauna')}</SectionLabel>
-                  <ul className="flex flex-wrap gap-2">
-                    {trail.fauna.map((f) => (
-                      <li
-                        key={f}
-                        className="px-3 py-1.5 bg-white/5 border border-white/10 rounded-full text-sm text-snow/75 capitalize"
-                      >
-                        {f.replace(/-/g, ' ')}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    <TrailFloraFaunaLinks slugs={trail.fauna} />
+                  </div>
                 </div>
               )}
             </section>
           )}
 
-          {/* AV1 prev/next block */}
-          {isAV1 && (prev || next) && (
+          {/* Stage prev/next block */}
+          {isStageRoute && (prev || next) && (
             <section>
-              <SectionLabel>
-                {locale === 'it' ? 'Tappe adiacenti' : 'Adjacent stages'}
-              </SectionLabel>
+              <SectionLabel>{t('adjacentStages')}</SectionLabel>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {prev && (
                   <StageNavCard
                     trail={prev}
                     locale={locale}
                     direction="prev"
-                    label={locale === 'it' ? 'Tappa precedente' : 'Previous stage'}
+                    label={t('previousStage')}
                   />
                 )}
                 {next && (
@@ -315,7 +399,7 @@ export default async function TrailDetail({
                     trail={next}
                     locale={locale}
                     direction="next"
-                    label={locale === 'it' ? 'Tappa successiva' : 'Next stage'}
+                    label={t('nextStage')}
                   />
                 )}
               </div>
@@ -343,22 +427,27 @@ export default async function TrailDetail({
             {/* Quick info card */}
             <div className="bg-white/[0.03] border border-white/5 rounded-2xl p-6 space-y-4">
               <p className="font-mono text-xs uppercase tracking-widest text-snow/40 mb-1">
-                {locale === 'it' ? 'Info rapide' : 'Quick info'}
+                {t('quickInfo')}
               </p>
-              <InfoRow label={locale === 'it' ? 'Valle' : 'Valley'} value={trail.valley} />
-              <InfoRow
-                label={locale === 'it' ? 'Comuni' : 'Municipalities'}
-                value={trail.municipalities.join(', ')}
-              />
+              <InfoRowLinked label={t('valley')}>
+                <TrailValleyLink label={trail.valley} locale={locale} />
+              </InfoRowLinked>
+              <InfoRowLinked label={t('municipalities')}>
+                <TrailMunicipalityLinks names={trail.municipalities} locale={locale} />
+              </InfoRowLinked>
               <InfoRow
                 label={t('difficulty')}
                 value={trail.difficulty}
               />
-              {trail.refuges.length > 0 && (
-                <InfoRow
-                  label={locale === 'it' ? 'Rifugi' : 'Refuges'}
-                  value={trail.refuges.length.toString()}
-                />
+              {refugeSlugs.length > 0 && (
+                <div className="border-b border-white/5 pb-3">
+                  <p className="text-snow/40 font-mono text-xs uppercase tracking-widest mb-2">
+                    {t('refugesNearby')}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    <TrailRefugeLinks slugs={refugeSlugs} locale={locale} />
+                  </div>
+                </div>
               )}
             </div>
 
@@ -430,6 +519,23 @@ function PointCard({
   );
 }
 
+function InfoRowLinked({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex justify-between items-start gap-3 text-sm border-b border-white/5 pb-3 last:border-0 last:pb-0">
+      <span className="text-snow/40 font-mono text-xs uppercase tracking-widest shrink-0">
+        {label}
+      </span>
+      <span className="text-snow/80 text-right leading-tight">{children}</span>
+    </div>
+  );
+}
+
 function InfoRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex justify-between items-start gap-3 text-sm border-b border-white/5 pb-3 last:border-0 last:pb-0">
@@ -447,12 +553,12 @@ function StageNavCard({
   direction,
   label,
 }: {
-  trail: { slug: string; name_it: string; name_en: string; distance_km: number; difficulty: string };
+  trail: Pick<Trail, 'slug' | 'name_it' | 'name_en' | 'name_fr' | 'name_de' | 'distance_km' | 'difficulty'>;
   locale: string;
   direction: 'prev' | 'next';
   label: string;
 }) {
-  const name = locale === 'it' ? trail.name_it : trail.name_en;
+  const name = getTrailLocalizedName(trail as Trail, locale);
   return (
     <Link
       href={`/${locale}/sentieri/${trail.slug}`}

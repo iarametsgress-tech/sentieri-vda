@@ -34,19 +34,21 @@ export default function Footer() {
 
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-snow/40 mb-4">
-            Esplora
+            {t('explore')}
           </p>
           <ul className="space-y-2 text-sm">
             <li><Link href="/sentieri" className="text-snow/70 hover:text-snow">{tNav('trails')}</Link></li>
             <li><Link href="/alte-vie" className="text-snow/70 hover:text-snow">{tNav('alteVie')}</Link></li>
+            <li><Link href="/tour" className="text-snow/70 hover:text-snow">{tNav('tours')}</Link></li>
             <li><Link href="/rifugi" className="text-snow/70 hover:text-snow">{tNav('refuges')}</Link></li>
-            <li><Link href="/flora-fauna" className="text-snow/70 hover:text-snow">{tNav('floraFauna')}</Link></li>
+            <li><Link href="/ambiente" className="text-snow/70 hover:text-snow">{tNav('ambiente')}</Link></li>
+            <li><Link href="/cultura" className="text-snow/70 hover:text-snow">{tNav('cultura')}</Link></li>
           </ul>
         </div>
 
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-snow/40 mb-4">
-            Info
+            {t('info')}
           </p>
           <ul className="space-y-2 text-sm">
             <li><Link href="/about" className="text-snow/70 hover:text-snow">{tNav('about')}</Link></li>

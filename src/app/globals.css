@@ -17,6 +17,13 @@ html {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -52,4 +59,124 @@ body {
 }
 .maplibregl-ctrl-attrib a {
   color: rgb(var(--ice)) !important;
+}
+
+/* Respect reduced motion — extended */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Custom scrollbar — sottile e dark */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 165, 116, 0.3);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 165, 116, 0.6);
+}
+
+/* Link underline progressivo */
+.link-underline {
+  background-image: linear-gradient(rgb(var(--alpenglow)), rgb(var(--alpenglow)));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
+}
+.link-underline:hover {
+  background-size: 100% 1px;
+}
+
+/* Testo leggibile sopra foto — ombre stratificate */
+.text-on-image-title {
+  text-shadow:
+    0 2px 28px rgba(0, 0, 0, 0.9),
+    0 1px 4px rgba(0, 0, 0, 0.85),
+    0 0 1px rgba(0, 0, 0, 1);
+}
+
+.text-on-image-body {
+  text-shadow:
+    0 1px 16px rgba(0, 0, 0, 0.85),
+    0 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+.text-on-image-eyebrow {
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+.text-on-image-muted {
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+}
+
+.text-on-image-sm {
+  text-shadow:
+    0 1px 8px rgba(0, 0, 0, 0.85),
+    0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* Prose editoriale alpino — pagine di approfondimento (montagne, cultura) */
+.prose-alpine {
+  color: rgb(var(--snow) / 0.78);
+  line-height: 1.75;
+  font-size: 1.0625rem;
+}
+.prose-alpine p {
+  margin-bottom: 1.4em;
+}
+.prose-alpine h2,
+.prose-alpine h3 {
+  font-family: Fraunces, Georgia, serif;
+  color: rgb(var(--snow));
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+.prose-alpine h2 {
+  margin-top: 2.2em;
+  margin-bottom: 0.7em;
+}
+.prose-alpine h3 {
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+}
+.prose-alpine a {
+  color: rgb(var(--alpenglow));
+  text-decoration: none;
+  background-image: linear-gradient(rgb(var(--alpenglow) / 0.5), rgb(var(--alpenglow) / 0.5));
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: color 0.25s ease, background-size 0.25s ease;
+}
+.prose-alpine a:hover {
+  color: rgb(var(--snow));
+}
+.prose-alpine strong {
+  color: rgb(var(--snow));
+  font-weight: 600;
+}
+.prose-alpine ul,
+.prose-alpine ol {
+  margin: 1.3em 0;
+  padding-left: 0;
+}
+.prose-alpine blockquote {
+  border-left: 2px solid rgb(var(--ice) / 0.5);
+  padding-left: 1.1em;
+  margin: 1.6em 0;
+  font-style: italic;
+  color: rgb(var(--snow) / 0.65);
 }

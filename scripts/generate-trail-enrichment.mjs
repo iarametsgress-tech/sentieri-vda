@@ -1,0 +1,577 @@
+/**
+ * Generates src/data/trail-enrichment.json — enrichment data keyed by trail slug.
+ * Run: node scripts/generate-trail-enrichment.mjs
+ */
+import fs from 'node:fs';
+import path from 'node:path';
+
+const OUT = path.resolve('src/data/trail-enrichment.json');
+
+/** @type {Record<string, object>} */
+const data = {
+  'alta-via-1-tappa-1-donnas-perloz': {
+    mobile_coverage: 'good',
+    best_months: [4, 5, 6, 7, 8, 9, 10],
+    fitness_level: 2,
+    waypoints: [
+      { name: 'Donnas', elevation_m: 322, distance_from_start_km: 0, type: 'bivio', note_it: 'Partenza dal centro storico, stazione ferroviaria Trenitalia', note_en: 'Start from the historic centre, Trenitalia railway station' },
+      { name: 'Pont-Saint-Martin', elevation_m: 345, distance_from_start_km: 3.5, type: 'panorama', note_it: 'Attraversamento dei vigneti terrazzati della bassa valle', note_en: 'Crossing the terraced vineyards of the lower valley' },
+      { name: 'Perloz', elevation_m: 1148, distance_from_start_km: 12.5, type: 'bivio', note_it: 'Arrivo tappa, borgo walser con forni comunitari', note_en: 'Stage finish, Walser village with communal ovens' },
+    ],
+    geology_it:
+      'La tappa attraversa il margine meridionale della Zona Pennidica, dove affiorano micascisti e gneiss occhiadini del basamento cristallino ercinico (~300 Ma) nelle fasce altimetriche superiori. Sotto quota 800 m dominano calcari e calcischisti mesozoici del Pennidico inferiore, spesso coperti da depositi eluvio-colluviali. I versanti terrazzati di Donnas e Pont-Saint-Martin mostrano paleosuoli su rocce calcaree con segni di erosione differenziale post-glaciale. Lungo la Dora Baltea si osservano terrazzi fluviali würmiani con ciottoli sub-rotondi di gneiss e marmo. Le moraine del Pleistocene recente sono poco visibili ma documentate nei fondovalle. La transizione litologica verso Perloz segnala l ingresso nel dominio metamorfico austroalpino di Mont Mars, con affioramenti di scisti a mica e quarziti.',
+    geology_en:
+      'This stage crosses the southern margin of the Penninic Zone, where micaschists and augen gneiss of the Hercynian crystalline basement (~300 Ma) outcrop on upper slopes. Below 800 m, Mesozoic limestones and calcschists of the lower Penninic stack dominate, often masked by eluvial-colluvial cover. The terraced slopes of Donnas and Pont-Saint-Martin display paleosols on carbonate bedrock with post-glacial differential erosion. Along the Dora Baltea, Würmian fluvial terraces carry sub-rounded pebbles of gneiss and marble. Pleistocene moraines are sparse in the valley floor but documented on regional maps. The lithological transition toward Perloz marks entry into the Austroalpine metamorphic domain of Mont Mars, with mica schists and quartzites.',
+    water_sources_it: 'Fontanelle e bar a Donnas e Pont-Saint-Martin. Sorgenti intermittenti sopra i 700 m; riempire le borracce a Perloz.',
+    water_sources_en: 'Fountains and bars in Donnas and Pont-Saint-Martin. Intermittent springs above 700 m; refill bottles in Perloz.',
+    transport_it: 'Trenitalia: stazione Donnas (linea Torino–Aosta). Autobus VITA sulla SS26 verso Pont-Saint-Martin. Da Aosta, collegamenti regionali VITA per il fondovalle.',
+    transport_en: 'Trenitalia: Donnas station (Turin–Aosta line). VITA buses on SS26 toward Pont-Saint-Martin. From Aosta, regional VITA services serve the valley floor.',
+    parking: 'Parcheggio gratuito presso la stazione di Donnas e area comunale a Perloz (limitata).',
+    warnings_it: ['Tratti esposti al sole nelle ore centrali estive', 'Sentiero occasionalmente fangoso dopo piogge'],
+    warnings_en: ['Sections exposed to midday sun in summer', 'Trail occasionally muddy after rain'],
+    nearby_peaks: [
+      { name: 'Mont Mars', elevation_m: 2600, distance_km: 4.5 },
+      { name: 'Mont Barbeston', elevation_m: 2992, distance_km: 8.0 },
+    ],
+    cultural_notes_it: 'Donnas conserva un anfiteatro romano e resti di un castello medievale. Perloz è un borgo walser insediato dal XIII secolo da coloni del Valais. Forni comunitari e terrazzamenti viticoli testimoniano economia contadina secolare.',
+    cultural_notes_en: 'Donnas preserves a Roman amphitheatre and medieval castle ruins. Perloz is a Walser village settled from the 13th century by colonists from Valais. Communal ovens and vineyard terraces bear witness to centuries of rural economy.',
+    calories_estimate: 2200,
+  },
+
+  'alta-via-1-tappa-2-perloz-rifugio-coda': {
+    mobile_coverage: 'partial',
+    best_months: [6, 7, 8, 9],
+    fitness_level: 3,
+    waypoints: [
+      { name: 'Perloz', elevation_m: 1148, distance_from_start_km: 0, type: 'bivio', note_it: 'Partenza tappa, ultimo bar prima della riserva', note_en: 'Stage start, last bar before the nature reserve' },
+      { name: 'Lillianes', elevation_m: 565, distance_from_start_km: 2.5, type: 'fonte-acqua', note_it: 'Breve discesa al fondovalle, sorgenti vicino al torrente', note_en: 'Brief descent to valley floor, springs near the stream' },
+      { name: 'Mont Mars', elevation_m: 2600, distance_from_start_km: 8.5, type: 'panorama', note_it: 'Cresta panoramica con laghetti glaciali smeraldo', note_en: 'Panoramic ridge with emerald glacial tarns' },
+      { name: 'Rifugio Coda', elevation_m: 2280, distance_from_start_km: 11, type: 'rifugio', note_it: 'Arrivo tappa, gestito CAI Pont-Saint-Martin', note_en: 'Stage finish, run by CAI Pont-Saint-Martin' },
+    ],
+    geology_it:
+      'Il versante di Mont Mars appartiene al dominio austroalpino, con affioramenti di gneiss occhiadini e micascisti a granato tipici del basamento metamorfico della Zona Sesia-Lanzo. I laghetti glaciali dell alpeggio occupano circhi modellati dal ghiacciaio würmiano, con morene laterali ben conservate e depositi proglaciali di sabbie e ghiaie. Sopra i 1800 m compaiono affioramenti di quarziti e filladi a mica con bande di pegmatiti quartzo-feldspatici. Le torbiere alpine lungo il sentiero segnalano depositi lacustri post-glaciali su substrato impermeabile. Ophioliti del Pennidico (serpentiniti e basalti) sono visibili solo in lontananza verso la valle del Lys. L erosione differenziale ha creato gole profonde nei micascisti, con massi erratici di gneiss sulle moraine terminali.',
+    geology_en:
+      'The Mont Mars slope belongs to the Austroalpine domain, with outcrops of augen gneiss and garnet micaschists typical of the Sesia-Lanzo metamorphic basement. Glacial tarns on the summer pastures occupy cirques carved by the Würm glacier, with well-preserved lateral moraines and proglacial sand-gravel deposits. Above 1800 m, quartzites and mica phyllites appear with bands of quartz-feldspar pegmatites. Alpine bogs along the trail indicate post-glacial lacustrine deposits on impermeable substrate. Penninic ophiolites (serpentinites and basalts) are visible only distantly toward the Lys valley. Differential erosion has cut deep gorges in micaschists, with erratic gneiss boulders on terminal moraines.',
+    water_sources_it: 'Sorgenti affidabili a Lillianes e lungo i torrenti sotto i 1500 m. Al Rifugio Coda acqua potabile; pochi punti intermedi oltre quota 1800 m.',
+    water_sources_en: 'Reliable springs at Lillianes and along streams below 1500 m. Potable water at Rifugio Coda; few intermediate points above 1800 m.',
+    transport_it: 'Accesso a Perloz via strada comunale da Pont-Saint-Martin. Autobus VITA per Pont-Saint-Martin con coincidenze limitate verso i borghi sopraelevati.',
+    transport_en: 'Access to Perloz via municipal road from Pont-Saint-Martin. VITA buses to Pont-Saint-Martin with limited connections to upland villages.',
+    parking: 'Parcheggio limitato a Perloz centro; evitare di lasciare auto su strada comunale stretta.',
+    warnings_it: ['Dislivello costante e sostenuto per tutta la tappa', 'Neve residua possibile fino a metà giugno sopra i 2000 m'],
+    warnings_en: ['Sustained, relentless ascent throughout the stage', 'Residual snow possible until mid-June above 2000 m'],
+    nearby_peaks: [
+      { name: 'Mont Mars', elevation_m: 2600, distance_km: 1.2 },
+      { name: 'Mont Nery', elevation_m: 3075, distance_km: 6.0 },
+    ],
+    cultural_notes_it: 'La Riserva Naturale Regionale di Mont Mars tutela ecosistemi alpini e laghi glaciali. A inizio luglio si svolge la processione alpina del Mont Mars, tradizione che unisce devozione e memoria pastorale walser.',
+    cultural_notes_en: 'The Mont Mars Regional Nature Reserve protects alpine ecosystems and glacial lakes. In early July the Mont Mars alpine procession takes place, blending devotion and Walser pastoral memory.',
+    calories_estimate: 2800,
+  },
+
+  'alta-via-1-tappa-3-rifugio-coda-rifugio-barma': {
+    mobile_coverage: 'partial',
+    best_months: [6, 7, 8, 9],
+    fitness_level: 3,
+    waypoints: [
+      { name: 'Rifugio Coda', elevation_m: 2280, distance_from_start_km: 0, type: 'rifugio', note_it: 'Partenza tappa, acqua e vitto disponibili', note_en: 'Stage start, water and meals available' },
+      { name: 'Col Lasoney', elevation_m: 2450, distance_from_start_km: 5.5, type: 'col', note_it: 'Quota massima tappa, vista sul Monte Rosa e Valle del Lys', note_en: 'Stage high point, views of Monte Rosa and Lys valley' },
+      { name: 'Laghi della Barma', elevation_m: 2100, distance_from_start_km: 7.5, type: 'lago', note_it: 'Bacini glaciali con marmitte e rocce levigate', note_en: 'Glacial basins with potholes and polished rock' },
+      { name: 'Rifugio Barma', elevation_m: 2191, distance_from_start_km: 9, type: 'rifugio', note_it: 'Arrivo tappa, gestione familiare sulle rive del lago', note_en: 'Stage finish, family-run hut on the lakeshore' },
+    ],
+    geology_it:
+      'La traversata mantiene il contatto tra il basamento metamorfico austroalpino e le coperture pennidiche, con affioramenti di micascisti a granato, gneiss occhiadini e filladi chloritiche lungo il crinale. Il Col Lasoney mostra rocce fortemente deformate con lineazioni di scorrimento e pieghe isoclinali tipiche della fase alpina. I Laghi della Barma occupano circhi glaciali würmiani con morene ricostruite e depositi lacustri di argille e limi. Le rocce levigate e le marmitte da fusione attestano l azione erosiva del ghiacciaio del Lys. Torbiere e zone umide alpine si sviluppano su depositi glaciali impermeabilizzati da argille di decantazione. In lontananza, verso Gressoney, affiorano le calcescisti e i marmi del Pennidico inferiore.',
+    geology_en:
+      'The traverse follows the contact between the Austroalpine metamorphic basement and Penninic cover, with garnet micaschists, augen gneiss and chloritic phyllites along the ridge. Col Lasoney displays strongly deformed rocks with shear lineations and isoclinal folds typical of the Alpine orogeny. The Barma Lakes occupy Würmian glacial cirques with rebuilt moraines and lacustrine clay-silt deposits. Polished rock and meltwater potholes attest to Lys glacier erosion. Alpine bogs and wetlands develop on glacial deposits sealed by decantation clays. Distantly toward Gressoney, calcschists and marbles of the lower Penninic stack outcrop.',
+    water_sources_it: 'Acqua al Rifugio Coda e Barma. Sorgenti non sempre segnalate lungo il traverso; non contare sui laghi per consumo.',
+    water_sources_en: 'Water at Rifugio Coda and Barma. Springs not always marked along the traverse; do not rely on lakes for drinking.',
+    transport_it: 'Accesso solo a piedi da Perloz (tappa precedente) o da Gaby via sentieri CAI. Nessun collegamento stradale diretto ai rifugi.',
+    transport_en: 'Foot access only from Perloz (previous stage) or from Gaby via CAI trails. No direct road access to the huts.',
+    parking: 'Non applicabile: tappa point-to-point tra rifugi.',
+    warnings_it: ['Traverso esposto in caso di temporali', 'Tratti su torbiere: restare sul sentiero segnalato'],
+    warnings_en: ['Exposed traverse in thunderstorms', 'Bog sections: stay on the marked trail'],
+    nearby_peaks: [
+      { name: 'Mont Nery', elevation_m: 3075, distance_km: 5.5 },
+      { name: 'Monte Rosa', elevation_m: 4634, distance_km: 12.0 },
+    ],
+    cultural_notes_it: 'I Laghi della Barma sono legati alla transumanza verso gli alpeggi di Gaby. Il rifugio conserva tradizioni casearie locali e la memoria dei malgari che ancora frequentano questi pascoli.',
+    cultural_notes_en: 'The Barma Lakes are linked to transhumance toward Gaby summer farms. The hut preserves local dairy traditions and the memory of mountain farmers who still use these pastures.',
+    calories_estimate: 2400,
+  },
+
+  'alta-via-1-tappa-4-rifugio-barma-niel': {
+    mobile_coverage: 'partial',
+    best_months: [6, 7, 8, 9, 10],
+    fitness_level: 3,
+    waypoints: [
+      { name: 'Rifugio Barma', elevation_m: 2191, distance_from_start_km: 0, type: 'rifugio', note_it: 'Partenza tappa', note_en: 'Stage start' },
+      { name: 'Col della Vecchia', elevation_m: 2280, distance_from_start_km: 4.5, type: 'col', note_it: 'Quota massima, piramide di pietra al confine con il Piemonte', note_en: 'High point, stone pyramid on the Piedmont border' },
+      { name: 'Niel', elevation_m: 1388, distance_from_start_km: 10, type: 'bivio', note_it: 'Arrivo tappa, borgo walser con La Gruba Relais', note_en: 'Stage finish, Walser hamlet with La Gruba Relais' },
+    ],
+    geology_it:
+      'La discesa da Barma attraversa il versante orientale del massiccio di Mont Mars, con micascisti e gneiss occhiadini del basamento austroalpino che affiorano lungo il Col della Vecchia. Sotto quota 1800 m il substrato è mascherato da depositi colluviali e morene würmiane con blocchi erratici di gneiss e quarzite. Il versante boscoso verso Niel mostra paleosuoli su micascisti decomposti e terrazzi fluviali del torrente Gaby. La piramide di pietra al Col della Vecchia segna un confine geologico e amministrativo tra Valle d Aosta e Piemonte. Depositi eluviali ricchi di mica e quarzo segnalano intensa alterazione chimica sui versanti esposti a sud. I calcari mesozoici del Pennidico inferiore affiorano solo nel fondovalle di Gaby.',
+    geology_en:
+      'The descent from Barma crosses the eastern slope of Mont Mars, with micaschists and augen gneiss of the Austroalpine basement outcropping along Col della Vecchia. Below 1800 m the substrate is masked by colluvial deposits and Würmian moraines with erratic blocks of gneiss and quartzite. The forested slope toward Niel shows paleosols on decomposed micaschists and fluvial terraces of the Gaby stream. The stone pyramid at Col della Vecchia marks a geological and administrative boundary between Aosta Valley and Piedmont. Eluvial deposits rich in mica and quartz indicate intense chemical weathering on south-facing slopes. Mesozoic limestones of the lower Penninic stack outcrop only in the Gaby valley floor.',
+    water_sources_it: 'Acqua al Rifugio Barma. Sorgenti nel bosco sotto il Col della Vecchia. Bar e fontana a Niel/La Gruba.',
+    water_sources_en: 'Water at Rifugio Barma. Springs in the forest below Col della Vecchia. Bar and fountain at Niel/La Gruba.',
+    transport_it: 'Autobus VITA da Gaby verso il fondovalle e Pont-Saint-Martin. Da Niel, collegamenti limitati verso Gressoney.',
+    transport_en: 'VITA bus from Gaby to the valley floor and Pont-Saint-Martin. From Niel, limited connections toward Gressoney.',
+    parking: 'Parcheggio a Gaby centro; accesso a Niel solo a piedi o taxi locale su prenotazione.',
+    warnings_it: ['Discesa sostenuta: proteggere le ginocchia', 'Sentiero scivoloso su foglie bagnate in autunno'],
+    warnings_en: ['Sustained descent: protect your knees', 'Slippery trail on wet leaves in autumn'],
+    nearby_peaks: [
+      { name: 'Mont Mars', elevation_m: 2600, distance_km: 3.0 },
+      { name: 'Mont Nery', elevation_m: 3075, distance_km: 7.0 },
+    ],
+    cultural_notes_it: 'Niel è uno degli insediamenti walser più remoti della Valle di Gaby, con case in pietra e larice di origine medievale. La Gruba Relais è un fienile restaurato simbolo dell ospitalità rurale valdostana.',
+    cultural_notes_en: 'Niel is one of the most remote Walser settlements in the Gaby valley, with medieval stone and larch houses. La Gruba Relais, a restored barn, symbolises Valdostan rural hospitality.',
+    calories_estimate: 2300,
+  },
+
+  'alta-via-1-tappa-5-niel-gressoney-saint-jean': {
+    mobile_coverage: 'partial',
+    best_months: [6, 7, 8, 9],
+    fitness_level: 4,
+    waypoints: [
+      { name: 'Niel', elevation_m: 1388, distance_from_start_km: 0, type: 'rifugio', note_it: 'Borgo walser di Gaby, ultimo punto con bar/rifornimento acqua', note_en: 'Walser hamlet of Gaby, last point with bar/water resupply' },
+      { name: 'Alpe Tournalin', elevation_m: 2200, distance_from_start_km: 6, type: 'panorama', note_it: 'Vista completa sul Monte Rosa', note_en: 'Full view of Monte Rosa' },
+      { name: 'Col di Nannaz', elevation_m: 2773, distance_from_start_km: 11, type: 'col', note_it: 'Quota massima tappa, croce in ferro', note_en: 'Stage high point, iron cross' },
+      { name: 'Gressoney-Saint-Jean', elevation_m: 1385, distance_from_start_km: 18.2, type: 'rifugio', note_it: 'Arrivo tappa, centro walser con tutti i servizi', note_en: 'Stage finish, Walser town with full services' },
+    ],
+    geology_it:
+      'La lunga traversata segue il contatto tra il basamento metamorfico austroalpino e le coperture pennidiche del Monte Rosa, con micascisti a granato, gneiss occhiadini e filladi chloritiche lungo le creste sopra i 2200 m. Il Col di Nannaz affiora su quarziti e micascisti intensamente piegati con lineazioni di estensione alpina. Sotto quota 2000 m compaiono depositi glaciali würmiani del ghiacciaio del Lys: morene laterali, drumlins e terrazzi fluvio-glaciali nel fondovalle di Gressoney. Massi erratici di granito del Monte Rosa e di gneiss del basamento testimoniano il trasporto glaciali pluri-chilometrico. Le sorgenti del Lys nascono da rocce impermeabili del Pennidico con circolazione idrogeologica fratturata. Ophioliti e calcescisti pennidici affiorano nelle valli laterali verso Issime.',
+    geology_en:
+      'The long traverse follows the contact between the Austroalpine metamorphic basement and Monte Rosa Penninic cover, with garnet micaschists, augen gneiss and chloritic phyllites along ridges above 2200 m. Col di Nannaz sits on intensely folded quartzites and micaschists with Alpine extension lineations. Below 2000 m, Würmian glacial deposits of the Lys glacier appear: lateral moraines, drumlins and fluvio-glacial terraces in the Gressoney valley floor. Erratic blocks of Monte Rosa granite and basement gneiss testify to multi-kilometre glacial transport. Lys headwaters emerge from impermeable Penninic rocks with fractured hydrogeology. Penninic ophiolites and calcschists outcrop in side valleys toward Issime.',
+    water_sources_it: 'Ultimo rifornimento affidabile a Niel. Sorgenti del Lys sotto la cresta; portare almeno 2 litri per la traversata alta.',
+    water_sources_en: 'Last reliable resupply at Niel. Lys headwaters below the crest; carry at least 2 litres for the high traverse.',
+    transport_it: 'Autobus VITA per Gressoney-Saint-Jean da Pont-Saint-Martin e dal fondovalle. Trenitalia fino a Pont-Saint-Martin con coincidenza bus.',
+    transport_en: 'VITA bus to Gressoney-Saint-Jean from Pont-Saint-Martin and the valley floor. Trenitalia to Pont-Saint-Martin with bus connection.',
+    parking: 'Parcheggi a Gressoney-Saint-Jean centro; accesso a Niel solo via sentiero AV1.',
+    warnings_it: ['Tappa lunga e solitaria: partire all alba', 'Tratti esposti al sole e al vento sopra i 2500 m', 'Neve possibile fino a luglio sul Col di Nannaz'],
+    warnings_en: ['Long, solitary stage: start at dawn', 'Sections exposed to sun and wind above 2500 m', 'Snow possible until July on Col di Nannaz'],
+    nearby_peaks: [
+      { name: 'Monte Rosa', elevation_m: 4634, distance_km: 8.0 },
+      { name: 'Lyskamm', elevation_m: 4527, distance_km: 10.0 },
+    ],
+    cultural_notes_it: 'Gressoney-Saint-Jean è cuore della cultura walser (titsch), con museo walser e tradizione casearia DOP Fontina. Gli alpeggi lungo la traversata producono formaggio estivo secondo metodi secolari.',
+    cultural_notes_en: 'Gressoney-Saint-Jean is the heart of Walser culture (titsch), with a Walser museum and DOP Fontina cheese tradition. Summer farms along the traverse produce cheese by centuries-old methods.',
+    calories_estimate: 4200,
+  },
+
+  'alta-via-1-tappa-6-gressoney-saint-jean-rifugio-vieux-crest': {
+    mobile_coverage: 'partial',
+    best_months: [6, 7, 8, 9],
+    fitness_level: 4,
+    waypoints: [
+      { name: 'Gressoney-Saint-Jean', elevation_m: 1385, distance_from_start_km: 0, type: 'bivio', note_it: 'Partenza tappa, ultimi servizi urbani', note_en: 'Stage start, last urban services' },
+      { name: 'Col Pinter', elevation_m: 2777, distance_from_start_km: 8.5, type: 'col', note_it: 'Quota massima, balcone su Monte Rosa e Cervino', note_en: 'High point, balcony over Monte Rosa and Matterhorn' },
+      { name: 'Rifugio Vieux Crest', elevation_m: 2417, distance_from_start_km: 12.7, type: 'rifugio', note_it: 'Arrivo tappa, Valle d Ayas', note_en: 'Stage finish, Ayas valley' },
+    ],
+    geology_it:
+      'La salita verso il Col Pinter attraversa il basamento metamorfico austroalpino con gneiss occhiadini, micascisti e quarziti del massiccio del Monte Rosa. Il valico si apre su rocce fortemente deformate con pieghe simmetriche e zone di migmatite. Il circone glaciale di Crest conserva morene würmiane ricostruite e depositi proglaciali. La discesa in Valle d Ayas attraversa filladi chloritiche e scisti a mica con affioramenti di graniti deformati. Depositi glaciali del ghiacciaio del Lys e del ghiacciaio di Ayas hanno modellato valli sospese e terrazzi abbandonati. In lontananza, verso Champoluc, affiorano calcescisti e marmi del Pennidico inferiore con ophioliti (serpentiniti) nelle frazioni più basse.',
+    geology_en:
+      'The climb to Col Pinter crosses the Austroalpine metamorphic basement with augen gneiss, micaschists and quartzites of the Monte Rosa massif. The pass opens onto strongly deformed rocks with symmetric folds and migmatite zones. The Crest glacial cirque preserves rebuilt Würmian moraines and proglacial deposits. The descent into Ayas valley crosses chloritic phyllites and mica schists with deformed granite outcrops. Glacial deposits of the Lys and Ayas glaciers shaped hanging valleys and abandoned terraces. Distantly toward Champoluc, calcschists and marbles of the lower Penninic stack outcrop with ophiolites (serpentinites) on lower slopes.',
+    water_sources_it: 'Rifornimento a Gressoney-Saint-Jean. Sorgenti sporadiche sopra i 2000 m. Acqua potabile al Rifugio Vieux Crest.',
+    water_sources_en: 'Resupply in Gressoney-Saint-Jean. Sporadic springs above 2000 m. Potable water at Rifugio Vieux Crest.',
+    transport_it: 'Autobus VITA per Gressoney-Saint-Jean. Funivia Champoluc–Crest in caso di emergenza dal rifugio.',
+    transport_en: 'VITA bus to Gressoney-Saint-Jean. Champoluc–Crest cable car for emergency descent from the hut.',
+    parking: 'Parcheggi pubblici a Gressoney-Saint-Jean centro e stazione funivia Weissmatten.',
+    warnings_it: ['Stambecchi frequenti al mattino: mantenere distanza', 'Neve e ghiaccio possibili sul Col Pinter fino a luglio'],
+    warnings_en: ['Ibex common in the morning: keep your distance', 'Snow and ice possible on Col Pinter until July'],
+    nearby_peaks: [
+      { name: 'Monte Rosa', elevation_m: 4634, distance_km: 6.0 },
+      { name: 'Cervino', elevation_m: 4478, distance_km: 15.0 },
+    ],
+    cultural_notes_it: 'Gressoney è patria della cultura walser e della Fontina DOP. Il Col Pinter è valico storico tra la Valle del Lys e la Valle d Ayas, percorsa da pastori e contrabbandieri per secoli.',
+    cultural_notes_en: 'Gressoney is home to Walser culture and DOP Fontina cheese. Col Pinter is a historic pass between the Lys and Ayas valleys, used by shepherds and smugglers for centuries.',
+    calories_estimate: 3800,
+  },
+
+  'alta-via-1-tappa-7-rifugio-vieux-crest-rifugio-grand-tournalin': {
+    mobile_coverage: 'partial',
+    best_months: [6, 7, 8, 9],
+    fitness_level: 4,
+    waypoints: [
+      { name: 'Rifugio Vieux Crest', elevation_m: 2417, distance_from_start_km: 0, type: 'rifugio', note_it: 'Partenza tappa', note_en: 'Stage start' },
+      { name: 'Col Roisetta', elevation_m: 2679, distance_from_start_km: 7.5, type: 'col', note_it: 'Quota massima, panorama ampio su Ayas e Cervino', note_en: 'High point, wide panorama over Ayas and Matterhorn' },
+      { name: 'Rifugio Grand Tournalin', elevation_m: 2535, distance_from_start_km: 11.6, type: 'rifugio', note_it: 'Arrivo tappa, terrazza sul Cervino', note_en: 'Stage finish, terrace facing the Matterhorn' },
+    ],
+    geology_it:
+      'La tappa attraversa il dominio austroalpino della Valle d Ayas con micascisti, gneiss occhiadini e filladi a mica che affiorano lungo le creste sopra Champoluc. Il Col Roisetta mostra rocce metamorfiche con bande di quarzo e granato, testimonianza di metamorfismo Barroviano. I pascoli di Frachey si sviluppano su depositi glaciali würmiani con morene ricostruite e depositi eolici post-glaciali. Verso il Tournalin compaiono quarziti e gneiss debolmente foliati con affioramenti di pegmatiti. Il versante orientale del Cervino (Matterhorn) è costituito da gneiss del Pennidico e calcescisti con ophioliti nella valle di Valtournenche. Depositi colluviali e crepacci attivi segnalano instabilità sui versanti ripidi sotto quota 2400 m.',
+    geology_en:
+      'The stage crosses the Austroalpine domain of Ayas valley with micaschists, augen gneiss and mica phyllites along ridges above Champoluc. Col Roisetta displays metamorphic rocks with quartz and garnet bands, evidence of Barrovian metamorphism. Frachey pastures develop on Würmian glacial deposits with rebuilt moraines and post-glacial aeolian deposits. Toward Tournalin, quartzites and weakly foliated gneiss appear with pegmatite outcrops. The eastern Matterhorn slope consists of Penninic gneiss and calcschists with ophiolites in Valtournenche valley. Colluvial deposits and active gullies indicate slope instability below 2400 m.',
+    water_sources_it: 'Acqua al Rifugio Vieux Crest e Grand Tournalin. Fonti vicino a Frachey in estate.',
+    water_sources_en: 'Water at Rifugio Vieux Crest and Grand Tournalin. Sources near Frachey in summer.',
+    transport_it: 'Funivia Champoluc–Crest per accesso alternativo. Autobus VITA per Champoluc da Verrès/Aosta.',
+    transport_en: 'Champoluc–Crest cable car for alternative access. VITA bus to Champoluc from Verrès/Aosta.',
+    parking: 'Parcheggi a Champoluc e St-Jacques; tappa point-to-point tra rifugi.',
+    warnings_it: ['Tratti su pietraia richiedono attenzione', 'Prenotare il rifugio Grand Tournalin in alta stagione'],
+    warnings_en: ['Scree sections require careful footing', 'Book Rifugio Grand Tournalin in peak season'],
+    nearby_peaks: [
+      { name: 'Cervino', elevation_m: 4478, distance_km: 5.0 },
+      { name: 'Becca di Nona', elevation_m: 3142, distance_km: 4.0 },
+    ],
+    cultural_notes_it: 'Le costruzioni in pietra a secco (tabià, fienili) della Valle d Ayas testimoniano economia pastorale attiva. Frachey è punto di partenza della funivia verso il Cervino.',
+    cultural_notes_en: 'Dry-stone buildings (tabià, barns) of Ayas valley testify to an active pastoral economy. Frachey is the departure point for the Matterhorn cable car.',
+    calories_estimate: 3400,
+  },
+
+  'alta-via-1-tappa-8-rifugio-grand-tournalin-valtournenche': {
+    mobile_coverage: 'good',
+    best_months: [6, 7, 8, 9, 10],
+    fitness_level: 3,
+    waypoints: [
+      { name: 'Rifugio Grand Tournalin', elevation_m: 2535, distance_from_start_km: 0, type: 'rifugio', note_it: 'Partenza tappa', note_en: 'Stage start' },
+      { name: 'Cheneil', elevation_m: 2000, distance_from_start_km: 5.5, type: 'panorama', note_it: 'Pianoro panoramico sul Cervino e fondovalle', note_en: 'Panoramic plateau over Matterhorn and valley floor' },
+      { name: 'Valtournenche', elevation_m: 1520, distance_from_start_km: 8.7, type: 'bivio', note_it: 'Arrivo tappa, servizi completi', note_en: 'Stage finish, full services' },
+    ],
+    geology_it:
+      'La discesa dal Tournalin attraversa il versante orientale del massiccio del Cervino, costituito da gneiss del Pennidico e calcescisti con bande di quarzo e mica. Cheneil si affaccia su depositi glaciali würmiani del ghiacciaio di Valtournenche con morene terminali e terrazzi fluvio-glaciali. Sotto quota 2000 m compaiono affioramenti di ophioliti (serpentiniti e metabasalti) tipici del Pennidico superiore. Il fondovalle di Valtournenche mostra depositi alluvionali recenti del torrente Marmore con ciottoli di gneiss, calcare e serpentinite. I versanti boscosi presentano paleosuoli su depositi glaciali decomposti. La diga del Lago di Cignana (tappa successiva) sfrutta un bacino naturale su morene würmiane ricostruite.',
+    geology_en:
+      'The descent from Tournalin crosses the eastern slope of the Matterhorn massif, composed of Penninic gneiss and calcschists with quartz and mica bands. Cheneil overlooks Würmian glacial deposits of the Valtournenche glacier with terminal moraines and fluvio-glacial terraces. Below 2000 m, ophiolite outcrops (serpentinites and metabasalts) typical of the upper Penninic stack appear. The Valtournenche valley floor shows recent alluvial deposits of the Marmore stream with pebbles of gneiss, limestone and serpentinite. Forested slopes display paleosols on decomposed glacial deposits. The Cignana dam (next stage) uses a natural basin on rebuilt Würmian moraines.',
+    water_sources_it: 'Acqua al rifugio e a Valtournenche centro. Sorgenti nel bosco durante la discesa.',
+    water_sources_en: 'Water at the hut and Valtournenche centre. Springs in the forest during descent.',
+    transport_it: 'Autobus VITA per Valtournenche e Cervinia. Funivia Valtournenche–Cervinia per collegamento rapido.',
+    transport_en: 'VITA bus to Valtournenche and Cervinia. Valtournenche–Cervinia cable car for quick connection.',
+    parking: 'Parcheggi a Valtournenche centro e area funivia.',
+    warnings_it: ['Discesa ripida: bastoncini consigliati', 'Erba bagnata al mattino sui tratti erbosi'],
+    warnings_en: ['Steep descent: trekking poles recommended', 'Dew-wet grass on grassy sections in the morning'],
+    nearby_peaks: [
+      { name: 'Cervino', elevation_m: 4478, distance_km: 3.5 },
+      { name: 'Grand Tournalin', elevation_m: 3379, distance_km: 2.0 },
+    ],
+    cultural_notes_it: 'Valtournenche è la capitale storica della valle del Cervino, con cappelle votive e tradizione alpinistica legata alle prime ascensioni del Monte Cervino.',
+    cultural_notes_en: 'Valtournenche is the historic capital of the Matterhorn valley, with roadside chapels and mountaineering tradition linked to early Matterhorn ascents.',
+    calories_estimate: 2600,
+  },
+
+  'alta-via-1-tappa-9-valtournenche-rifugio-barmasse': {
+    mobile_coverage: 'partial',
+    best_months: [6, 7, 8, 9],
+    fitness_level: 2,
+    waypoints: [
+      { name: 'Valtournenche', elevation_m: 1520, distance_from_start_km: 0, type: 'bivio', note_it: 'Partenza tappa dal centro paese', note_en: 'Stage start from village centre' },
+      { name: 'Lago di Cignana', elevation_m: 2140, distance_from_start_km: 4.0, type: 'lago', note_it: 'Bacino artificiale turchese sotto la diga', note_en: 'Turquoise artificial basin below the dam' },
+      { name: 'Rifugio Jean Barmasse', elevation_m: 2157, distance_from_start_km: 4.7, type: 'rifugio', note_it: 'Arrivo tappa, base per la T10', note_en: 'Stage finish, base camp for stage 10' },
+    ],
+    geology_it:
+      'La breve salita risale il versante occidentale della Valtournenche su calcescisti e micascisti del Pennidico con affioramenti di serpentiniti e metabasalti (ophioliti). Il Lago di Cignana occupa un bacino naturale modellato su morene würmiane del ghiacciaio di Valtournenche, poi artificialmente sbarrato per produzione idroelettrica. Le rocce intorno al lago mostrano striature glaciali e marmitte da fusione. Sopra la diga affiorano gneiss occhiadini del basamento austroalpino con bande di quarzo e feldspato. Depositi colluviali e frane storiche segnalano instabilità sui versanti sotto Valmartin. I boschi di conifere crescono su depositi glaciali decomposti con suoli acidi ricchi di humus.',
+    geology_en:
+      'The short climb ascends the western Valtournenche slope on Penninic calcschists and micaschists with serpentinite and metabasalt (ophiolite) outcrops. Lake Cignana occupies a natural basin shaped on Würmian moraines of the Valtournenche glacier, then artificially dammed for hydroelectric production. Rocks around the lake show glacial striations and meltwater potholes. Above the dam, augen gneiss of the Austroalpine basement outcrops with quartz and feldspar bands. Colluvial deposits and historic landslides indicate slope instability below Valmartin. Conifer forests grow on decomposed glacial deposits with acid humus-rich soils.',
+    water_sources_it: 'Rifornimento a Valtournenche. Acqua potabile al Rifugio Barmasse.',
+    water_sources_en: 'Resupply in Valtournenche. Potable water at Rifugio Barmasse.',
+    transport_it: 'Autobus VITA per Valtournenche. Accesso sentiero da piazza centrale.',
+    transport_en: 'VITA bus to Valtournenche. Trail access from the central square.',
+    parking: 'Parcheggio a Valtournenche centro, vicino al punto di partenza sentiero.',
+    warnings_it: ['Pendenza sostenuta in pochi chilometri', 'Non combinare con T10 senza ottima forma fisica'],
+    warnings_en: ['Sustained gradient in few kilometres', 'Do not combine with stage 10 without excellent fitness'],
+    nearby_peaks: [
+      { name: 'Cervino', elevation_m: 4478, distance_km: 6.0 },
+      { name: 'Grand Tournalin', elevation_m: 3379, distance_km: 5.0 },
+    ],
+    cultural_notes_it: 'La diga del Lago di Cignana è parte della rete idroelettrica valdostana. Il rifugio Barmasse è punto strategico dell AV1 prima della traversata più dura verso Cuney.',
+    cultural_notes_en: 'The Cignana dam is part of the Valdostan hydroelectric network. Barmasse hut is a strategic AV1 stop before the hardest traverse toward Cuney.',
+    calories_estimate: 1800,
+  },
+
+  'alta-via-1-tappa-10-rifugio-barmasse-rifugio-cuney': {
+    mobile_coverage: 'none',
+    best_months: [7, 8, 9],
+    fitness_level: 5,
+    waypoints: [
+      { name: 'Rifugio Jean Barmasse', elevation_m: 2157, distance_from_start_km: 0, type: 'rifugio', note_it: 'Partenza tappa, ultima acqua affidabile', note_en: 'Stage start, last reliable water' },
+      { name: 'Fenêtre de Tsan', elevation_m: 2736, distance_from_start_km: 8.5, type: 'col', note_it: 'Valico panoramico tra Cervino e Grand Combin', note_en: 'Panoramic pass between Matterhorn and Grand Combin' },
+      { name: 'Col Terray', elevation_m: 2775, distance_from_start_km: 12.0, type: 'col', note_it: 'Quota massima tappa', note_en: 'Stage high point' },
+      { name: 'Rifugio Oratorio di Cuney', elevation_m: 2652, distance_from_start_km: 17.1, type: 'rifugio', note_it: 'Arrivo tappa, accanto al Santuario mariano', note_en: 'Stage finish, beside the Marian sanctuary' },
+    ],
+    geology_it:
+      'La traversata attraversa il cuore del Pennidico con calcescisti, micascisti e ophioliti (serpentiniti, gabbro metamorfico, metabasalti) affioranti lungo la Fenêtre de Tsan e il Col Terray. Queste rocce oceaniche, rimaste dal Tetide alpino, contrastano con i gneiss occhiadini austroalpini sulle creste limitrofe. I colli sopra i 2700 m mostrano depositi periglaciali con pietraie attive e soliflussione. Il versante di Val Saint-Barthélemy presenta morene würmiane del ghiacciaio di Tsan con laghetti glaciali e depositi lacustri. Massi erratici di serpentinite e gneiss segnalano trasporto glaciali pluri-chilometrico. La discesa verso Cuney attraversa quarziti e filladi con affioramenti di calcari dolomitici del Pennidico inferiore.',
+    geology_en:
+      'The traverse crosses the Penninic core with calcschists, micaschists and ophiolites (serpentinites, metamorphic gabbro, metabasalts) outcropping along Fenêtre de Tsan and Col Terray. These oceanic rocks, relics of the Alpine Tethys, contrast with Austroalpine augen gneiss on neighbouring ridges. Passes above 2700 m show periglacial deposits with active scree and solifluction. The Val Saint-Barthélemy slope displays Würmian moraines of the Tsan glacier with glacial tarns and lacustrine deposits. Erratic blocks of serpentinite and gneiss indicate multi-kilometre glacial transport. The descent toward Cuney crosses quartzites and phyllites with dolomitic limestone outcrops of the lower Penninic stack.',
+    water_sources_it: 'Portare minimo 2,5 litri. Nessuna fonte affidabile tra Barmasse e Cuney. Acqua al rifugio Cuney.',
+    water_sources_en: 'Carry at least 2.5 litres. No reliable sources between Barmasse and Cuney. Water at Cuney hut.',
+    transport_it: 'Nessun accesso stradale ai colli. Rientro d emergenza via Torgnon o Valtournenche.',
+    transport_en: 'No road access to the cols. Emergency descent via Torgnon or Valtournenche.',
+    parking: 'Non applicabile: tappa point-to-point tra rifugi.',
+    warnings_it: ['Tappa più impegnativa dell AV1: partire all alba', 'Temporali estivi pericolosi sui crinali esposti', 'Neve possibile fino a agosto sui valichi'],
+    warnings_en: ['Most demanding AV1 stage: start at dawn', 'Summer thunderstorms dangerous on exposed ridges', 'Snow possible until August on passes'],
+    nearby_peaks: [
+      { name: 'Cervino', elevation_m: 4478, distance_km: 4.0 },
+      { name: 'Grand Combin', elevation_m: 4314, distance_km: 8.0 },
+    ],
+    cultural_notes_it: 'Il Santuario di Cuney, cappella mariana più alta d Europa, ospita ogni agosto la messa alpina. L altare medievale testimonia secoli di devozione montana.',
+    cultural_notes_en: 'The Sanctuary of Cuney, Europe highest Marian chapel, hosts an alpine mass each August. Its medieval altar witnesses centuries of mountain devotion.',
+    calories_estimate: 4500,
+  },
+
+  'alta-via-1-tappa-11-rifugio-cuney-oyace': {
+    mobile_coverage: 'none',
+    best_months: [7, 8, 9],
+    fitness_level: 4,
+    waypoints: [
+      { name: 'Rifugio Oratorio di Cuney', elevation_m: 2652, distance_from_start_km: 0, type: 'rifugio', note_it: 'Partenza tappa', note_en: 'Stage start' },
+      { name: 'Col de Vessonaz', elevation_m: 2793, distance_from_start_km: 6.5, type: 'col', note_it: 'Quota massima tappa, brevi tratti attrezzati', note_en: 'Stage high point, short equipped sections' },
+      { name: 'Oyace', elevation_m: 1397, distance_from_start_km: 15, type: 'bivio', note_it: 'Arrivo tappa, Valpelline', note_en: 'Stage finish, Valpelline' },
+    ],
+    geology_it:
+      'La discesa verso Oyace attraversa il Pennidico con calcescisti, micascisti e ophioliti (serpentiniti e metabasalti) lungo il Col de Vessonaz. Le rocce oceaniche mostrano alterazione idrotermale con minerali fibrosi da evitare. Il versante della Valpelline presenta depositi glaciali würmiani del ghiacciaio di By con morene ricostruite e terrazzi fluvio-glaciali. Sotto quota 2000 m affiorano gneiss occhiadini austroalpini con bande di quarzo e filladi chloritiche. Depositi colluviali e frane attive segnalano instabilità sui versanti ripidi. Il fondovalle di Oyace si sviluppa su depositi alluvionali del torrente Buthier con ciottoli di gneiss, serpentinite e calcare.',
+    geology_en:
+      'The descent toward Oyace crosses the Penninic stack with calcschists, micaschists and ophiolites (serpentinites and metabasalts) along Col de Vessonaz. Oceanic rocks show hydrothermal alteration with fibrous minerals to avoid. The Valpelline slope displays Würmian glacial deposits of the By glacier with rebuilt moraines and fluvio-glacial terraces. Below 2000 m, Austroalpine augen gneiss outcrops with quartz bands and chloritic phyllites. Colluvial deposits and active landslides indicate instability on steep slopes. The Oyace valley floor develops on alluvial deposits of the Buthier stream with pebbles of gneiss, serpentinite and limestone.',
+    water_sources_it: 'Acqua al rifugio Cuney. Portare scorte per la traversata alta. Fontana a Oyace centro.',
+    water_sources_en: 'Water at Cuney hut. Carry supplies for the high traverse. Fountain in Oyace centre.',
+    transport_it: 'Autobus VITA per Oyace da Aosta via Valpelline (orari limitati).',
+    transport_en: 'VITA bus to Oyace from Aosta via Valpelline (limited schedule).',
+    parking: 'Parcheggio a Oyace centro per accesso alternativo.',
+    warnings_it: ['Tratti attrezzati su roccia esposta: guanti consigliati', 'Lunga discesa dopo il col: partire presto', 'Rinnovare il controllo meteo prima del Col Vessonaz'],
+    warnings_en: ['Equipped sections on exposed rock: gloves advised', 'Long descent after the pass: start early', 'Check weather again before Col Vessonaz'],
+    nearby_peaks: [
+      { name: 'Mont Vélan', elevation_m: 3734, distance_km: 6.0 },
+      { name: 'Grand Combin', elevation_m: 4314, distance_km: 10.0 },
+    ],
+    cultural_notes_it: 'Oyace è uno dei comuni più piccoli della Valpelline, con tradizione casearia e alpeggi attivi. La valle è tra le meno antropizzate della regione.',
+    cultural_notes_en: 'Oyace is one of the smallest municipalities in Valpelline, with dairy tradition and active summer farms. The valley is among the least developed in the region.',
+    calories_estimate: 3900,
+  },
+
+  'alta-via-1-tappa-12-oyace-ollomont': {
+    mobile_coverage: 'partial',
+    best_months: [7, 8, 9],
+    fitness_level: 4,
+    waypoints: [
+      { name: 'Oyace', elevation_m: 1397, distance_from_start_km: 0, type: 'bivio', note_it: 'Partenza tappa', note_en: 'Stage start' },
+      { name: 'Col Brison', elevation_m: 2520, distance_from_start_km: 6.5, type: 'col', note_it: 'Quota massima, vista su Mont Vélan e Grand Combin', note_en: 'High point, views of Mont Vélan and Grand Combin' },
+      { name: 'Ollomont', elevation_m: 1393, distance_from_start_km: 12.4, type: 'bivio', note_it: 'Arrivo tappa, campanile romanico', note_en: 'Stage finish, Romanesque bell tower' },
+    ],
+    geology_it:
+      'La salita al Col Brison attraversa il basamento metamorfico austroalpino con gneiss occhiadini, micascisti e quarziti del massiccio del Mont Vélan. Il valico affiora su rocce intensamente deformate con pieghe simmetriche e zone di migmatite. I versanti della Valpelline mostrano depositi glaciali würmiani con morene laterali e depositi proglaciali. L alpeggio di Sucheaz si sviluppa su morene decomposte con suoli grassi adatti al pascolo. La discesa verso Ollomont attraversa filladi chloritiche e scisti a mica con affioramenti di graniti deformati. Ophioliti pennidiche (serpentiniti) affiorano nel fondovalle verso Bionaz. Depositi periglaciali con pietraie attive segnalano instabilità sui versanti sopra quota 2200 m.',
+    geology_en:
+      'The climb to Col Brison crosses the Austroalpine metamorphic basement with augen gneiss, micaschists and quartzites of the Mont Vélan massif. The pass outcrops on intensely deformed rocks with symmetric folds and migmatite zones. Valpelline slopes display Würmian glacial deposits with lateral moraines and proglacial sediments. Sucheaz summer farm develops on decomposed moraines with fertile pasture soils. The descent toward Ollomont crosses chloritic phyllites and mica schists with deformed granite outcrops. Penninic ophiolites (serpentinites) outcrop in the valley floor toward Bionaz. Periglacial deposits with active scree indicate instability on slopes above 2200 m.',
+    water_sources_it: 'Fontana a Oyace. Sorgenti a Sucheaz in estate. Bar a Ollomont.',
+    water_sources_en: 'Fountain in Oyace. Springs at Sucheaz in summer. Bar in Ollomont.',
+    transport_it: 'Autobus VITA per Oyace e Ollomont da Aosta via Valpelline.',
+    transport_en: 'VITA bus to Oyace and Ollomont from Aosta via Valpelline.',
+    parking: 'Parcheggi a Oyace e Ollomont centro.',
+    warnings_it: ['Dislivello elevato rispetto alla distanza', 'Neve residua possibile a giugno sul Col Brison'],
+    warnings_en: ['High elevation gain relative to distance', 'Residual snow possible in June on Col Brison'],
+    nearby_peaks: [
+      { name: 'Mont Vélan', elevation_m: 3734, distance_km: 4.0 },
+      { name: 'Grand Combin', elevation_m: 4314, distance_km: 8.0 },
+    ],
+    cultural_notes_it: 'Ollomont conserva un campanile romanico e tradizione casearia secolare. La Valpelline è terra di transumanza e produzione di formaggi d alpeggio.',
+    cultural_notes_en: 'Ollomont preserves a Romanesque bell tower and centuries-old cheesemaking tradition. Valpelline is land of transhumance and alpine cheese production.',
+    calories_estimate: 3600,
+  },
+
+  'alta-via-1-tappa-13-ollomont-rifugio-champillon': {
+    mobile_coverage: 'partial',
+    best_months: [6, 7, 8, 9],
+    fitness_level: 3,
+    waypoints: [
+      { name: 'Ollomont', elevation_m: 1393, distance_from_start_km: 0, type: 'bivio', note_it: 'Partenza da frazione Rey', note_en: 'Start from Rey hamlet' },
+      { name: 'Notre-Dame-des-Neiges', elevation_m: 2300, distance_from_start_km: 6.5, type: 'panorama', note_it: 'Cappella votiva a quota 2300 m', note_en: 'Votive chapel at 2300 m' },
+      { name: 'Rifugio Champillon', elevation_m: 2465, distance_from_start_km: 9.5, type: 'rifugio', note_it: 'Arrivo tappa, Conca di By', note_en: 'Stage finish, Conca di By' },
+    ],
+    geology_it:
+      'La salita nella Conca di By attraversa gneiss occhiadini e micascisti del basamento austroalpino con bande di quarzo e granato. La cappella Notre-Dame-des-Neiges si erge su depositi glaciali würmiani con morene ricostruite e depositi lacustri. Sopra quota 2200 m affiorano quarziti e filladi chloritiche con pegmatiti quartzo-feldspatici. Il Rifugio Champillon si trova su un pianoro modellato da depositi periglaciali con pietraie e soliflussione attiva. Verso il Col Champillon (tappa successiva) compaiono calcescisti e marmi del Pennidico inferiore. Depositi colluviali e frane storiche segnalano instabilità sui versanti boscosi sotto Prumayes.',
+    geology_en:
+      'The climb into Conca di By crosses augen gneiss and micaschists of the Austroalpine basement with quartz and garnet bands. Notre-Dame-des-Neiges chapel stands on Würmian glacial deposits with rebuilt moraines and lacustrine sediments. Above 2200 m, quartzites and chloritic phyllites appear with quartz-feldspar pegmatites. Rifugio Champillon sits on a plateau shaped by periglacial deposits with scree and active solifluction. Toward Col Champillon (next stage), calcschists and marbles of the lower Penninic stack appear. Colluvial deposits and historic landslides indicate instability on forested slopes below Prumayes.',
+    water_sources_it: 'Fontana a Ollomont. Sorgenti a Prumayes. Acqua al Rifugio Champillon.',
+    water_sources_en: 'Fountain in Ollomont. Springs at Prumayes. Water at Rifugio Champillon.',
+    transport_it: 'Autobus VITA per Ollomont da Aosta. Accesso sentiero da frazione Rey.',
+    transport_en: 'VITA bus to Ollomont from Aosta. Trail access from Rey hamlet.',
+    parking: 'Parcheggio a Ollomont/Rey, limitato.',
+    warnings_it: ['Salita sostenuta quasi priva di tratti piani', 'Prenotare il rifugio in luglio-agosto'],
+    warnings_en: ['Sustained climb with almost no flat sections', 'Book the hut in July–August'],
+    nearby_peaks: [
+      { name: 'Mont Vélan', elevation_m: 3734, distance_km: 5.0 },
+      { name: 'Grand Combin', elevation_m: 4314, distance_km: 7.0 },
+    ],
+    cultural_notes_it: 'La Conca di By è paesaggio pastorale intatto con alpeggi attivi. Il rifugio Champillon è noto per la sua yurta e sauna con vista alpina.',
+    cultural_notes_en: 'Conca di By is an intact pastoral landscape with active summer farms. Rifugio Champillon is known for its yurt and alpine-view sauna.',
+    calories_estimate: 3000,
+  },
+
+  'alta-via-1-tappa-14-rifugio-champillon-saint-rhemy': {
+    mobile_coverage: 'partial',
+    best_months: [6, 7, 8, 9, 10],
+    fitness_level: 3,
+    waypoints: [
+      { name: 'Rifugio Champillon', elevation_m: 2465, distance_from_start_km: 0, type: 'rifugio', note_it: 'Partenza tappa', note_en: 'Stage start' },
+      { name: 'Col Champillon', elevation_m: 2709, distance_from_start_km: 3.5, type: 'col', note_it: 'Quota massima, panorama Monte Bianco–Gran Paradiso', note_en: 'High point, Mont Blanc–Gran Paradiso panorama' },
+      { name: 'Saint-Rhémy-en-Bosses', elevation_m: 1600, distance_from_start_km: 14, type: 'bivio', note_it: 'Arrivo tappa, valle del Gran San Bernardo', note_en: 'Stage finish, Great Saint Bernard valley' },
+    ],
+    geology_it:
+      'Il Col Champillon si apre su gneiss occhiadini e micascisti austroalpini con affioramenti di quarziti e filladi a mica. La discesa verso Saint-Rhémy attraversa depositi glaciali würmiani del ghiacciaio di By con morene terminali e terrazzi fluvio-glaciali. Sotto quota 2200 m compaiono calcescisti e marmi del Pennidico inferiore con bande di quarzo e calcite. Il fondovalle del Gran San Bernardo mostra depositi alluvionali del torrente Artanavaz con ciottoli di gneiss, marmo e calcare. I versanti boscosi presentano paleosuoli su depositi glaciali decomposti. Verso ovest, in lontananza, affiorano le unità ultrabasiche del Pennidico (ophioliti) nella Valpelline.',
+    geology_en:
+      'Col Champillon opens onto Austroalpine augen gneiss and micaschists with quartzite and mica phyllite outcrops. The descent toward Saint-Rhémy crosses Würmian glacial deposits of the By glacier with terminal moraines and fluvio-glacial terraces. Below 2200 m, calcschists and marbles of the lower Penninic stack appear with quartz and calcite bands. The Great Saint Bernard valley floor shows alluvial deposits of the Artanavaz stream with pebbles of gneiss, marble and limestone. Forested slopes display paleosols on decomposed glacial deposits. Distantly to the west, ultrabasic Penninic units (ophiolites) outcrop in Valpelline.',
+    water_sources_it: 'Acqua al rifugio. Sorgenti durante la discesa. Servizi a Saint-Rhémy.',
+    water_sources_en: 'Water at the hut. Springs during descent. Services in Saint-Rhémy.',
+    transport_it: 'Autobus VITA per Saint-Rhémy da Aosta. Strada del Gran San Bernardo accessibile in estate.',
+    transport_en: 'VITA bus to Saint-Rhémy from Aosta. Great Saint Bernard road accessible in summer.',
+    parking: 'Parcheggi a Saint-Rhémy centro e area museale del Colle.',
+    warnings_it: ['Lunga discesa: bastoncini utili', 'Deviazione al Colle del Gran San Bernardo richiede tempo extra'],
+    warnings_en: ['Long descent: poles useful', 'Detour to Great Saint Bernard Pass requires extra time'],
+    nearby_peaks: [
+      { name: 'Monte Bianco', elevation_m: 4808, distance_km: 12.0 },
+      { name: 'Gran Paradiso', elevation_m: 4061, distance_km: 15.0 },
+    ],
+    cultural_notes_it: 'Saint-Rhémy-en-Bosses sorge sull antica via del Gran San Bernardo, percorsa da romani e pellegrini. Il museo locale documenta la storia dell ospizio e dei cani San Bernardo.',
+    cultural_notes_en: 'Saint-Rhémy-en-Bosses stands on the ancient Great Saint Bernard route, used by Romans and pilgrims. The local museum documents the hospice and Saint Bernard dogs history.',
+    calories_estimate: 3200,
+  },
+
+  'alta-via-1-tappa-15-saint-rhemy-rifugio-frassati': {
+    mobile_coverage: 'partial',
+    best_months: [6, 7, 8, 9],
+    fitness_level: 3,
+    waypoints: [
+      { name: 'Saint-Rhémy-en-Bosses', elevation_m: 1600, distance_from_start_km: 0, type: 'bivio', note_it: 'Partenza tappa, ultimi servizi', note_en: 'Stage start, last services' },
+      { name: 'Conca di Merdeux', elevation_m: 2100, distance_from_start_km: 5.5, type: 'panorama', note_it: 'Bacino pastorale con vista sul Petit Saint-Bernard', note_en: 'Pastoral basin with Petit Saint-Bernard views' },
+      { name: 'Rifugio Pier Giorgio Frassati', elevation_m: 2540, distance_from_start_km: 10, type: 'rifugio', note_it: 'Arrivo tappa, base per il Col Malatrà', note_en: 'Stage finish, base for Col Malatrà' },
+    ],
+    geology_it:
+      'La salita nella Conca di Merdeux attraversa calcescisti e micascisti del Pennidico con affioramenti di marmi e quarziti. Il basamento austroalpino affiora sopra quota 2200 m con gneiss occhiadini e filladi chloritiche. Depositi glaciali würmiani modellano il bacino con morene ricostruite e depositi lacustri. I versanti presentano depositi colluviali e frane attive su substrato calcareo decomposto. Verso il Petit Saint-Bernard, in lontananza, affiorano le unità metamorfiche del Massiccio del Monte Bianco. I pascoli si sviluppano su suoli profondi da morene decomposte ricchi di materia organica.',
+    geology_en:
+      'The climb into Merdeux basin crosses Penninic calcschists and micaschists with marble and quartzite outcrops. The Austroalpine basement outcrops above 2200 m with augen gneiss and chloritic phyllites. Würmian glacial deposits shape the basin with rebuilt moraines and lacustrine sediments. Slopes display colluvial deposits and active landslides on decomposed carbonate substrate. Distantly toward Petit Saint-Bernard, Mont Blanc massif metamorphic units outcrop. Pastures develop on deep soils from decomposed moraines rich in organic matter.',
+    water_sources_it: 'Servizi a Saint-Rhémy. Sorgenti in Conca di Merdeux. Acqua al Rifugio Frassati.',
+    water_sources_en: 'Services in Saint-Rhémy. Springs in Merdeux basin. Water at Rifugio Frassati.',
+    transport_it: 'Autobus VITA per Saint-Rhémy da Aosta. Collegamento estivo verso Etroubles.',
+    transport_en: 'VITA bus to Saint-Rhémy from Aosta. Summer connection toward Etroubles.',
+    parking: 'Parcheggio a Saint-Rhémy centro.',
+    warnings_it: ['Pernottamento essenziale prima del Col Malatrà', 'Neve possibile fino a luglio sopra quota 2400 m'],
+    warnings_en: ['Overnight essential before Col Malatrà', 'Snow possible until July above 2400 m'],
+    nearby_peaks: [
+      { name: 'Monte Bianco', elevation_m: 4808, distance_km: 8.0 },
+      { name: 'Grand Combin', elevation_m: 4314, distance_km: 10.0 },
+    ],
+    cultural_notes_it: 'Il Rifugio Frassati è dedicato al beato Pier Giorgio Frassati, giovane alpinista torinese. La conca è ancora percorsa da transumanza verso gli alpeggi estivi.',
+    cultural_notes_en: 'Rifugio Frassati is dedicated to Blessed Pier Giorgio Frassati, a young Turinese mountaineer. The basin is still used for transhumance to summer pastures.',
+    calories_estimate: 2900,
+  },
+
+  'alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti': {
+    mobile_coverage: 'none',
+    best_months: [7, 8, 9],
+    fitness_level: 4,
+    waypoints: [
+      { name: 'Rifugio Pier Giorgio Frassati', elevation_m: 2540, distance_from_start_km: 0, type: 'rifugio', note_it: 'Partenza tappa, partire all alba', note_en: 'Stage start, leave at dawn' },
+      { name: 'Col Malatrà', elevation_m: 2925, distance_from_start_km: 5.5, type: 'col', note_it: 'Quota massima di tutta l AV1, croce panoramica', note_en: 'Highest point on entire AV1, panoramic cross' },
+      { name: 'Rifugio Walter Bonatti', elevation_m: 2025, distance_from_start_km: 10, type: 'rifugio', note_it: 'Arrivo tappa, vista sul Monte Bianco', note_en: 'Stage finish, Mont Blanc view' },
+    ],
+    geology_it:
+      'Il Col Malatrà è il tetto geologico dell AV1, su gneiss occhiadini e micascisti del basamento austroalpino con bande di quarzo e migmatiti. La salita attraversa calcescisti pennidici e filladi chloritiche con affioramenti di graniti deformati. La discesa in Val Ferret attraversa depositi glaciali würmiani del ghiacciaio del Miage con morene laterali e depositi proglaciali. Massi erratici di gneiss e granito testimoniano il trasporto glaciali. I versanti del Vallone di Malatrà mostrano frane attive e depositi periglaciali con pietraie. Sotto quota 2200 m compaiono affioramenti di calcare dolomitico e scisti del Pennidico inferiore con ophioliti nelle valli laterali.',
+    geology_en:
+      'Col Malatrà is the geological rooftop of the AV1, on augen gneiss and micaschists of the Austroalpine basement with quartz bands and migmatites. The ascent crosses Penninic calcschists and chloritic phyllites with deformed granite outcrops. The descent into Val Ferret traverses Würmian glacial deposits of the Miage glacier with lateral moraines and proglacial sediments. Erratic blocks of gneiss and granite testify to glacial transport. Malatrà valley slopes show active landslides and periglacial scree deposits. Below 2200 m, dolomitic limestone and schist outcrops of the lower Penninic stack appear with ophiolites in side valleys.',
+    water_sources_it: 'Acqua al Rifugio Frassati. Portare scorte per la salita al col. Acqua al Rifugio Bonatti.',
+    water_sources_en: 'Water at Rifugio Frassati. Carry supplies for the pass climb. Water at Rifugio Bonatti.',
+    transport_it: 'Accesso solo a piedi. Rientro d emergenza via Val Ferret o Petit Saint-Bernard.',
+    transport_en: 'Foot access only. Emergency descent via Val Ferret or Petit Saint-Bernard.',
+    parking: 'Non applicabile: tappa point-to-point tra rifugi.',
+    warnings_it: ['Quota massima AV1: verificare meteo e neve', 'Discesa lunga su erba bagnata al mattino', 'Prenotare Bonatti con settimane di anticipo'],
+    warnings_en: ['AV1 highest point: check weather and snow', 'Long descent on dew-wet grass in the morning', 'Book Bonatti weeks in advance'],
+    nearby_peaks: [
+      { name: 'Monte Bianco', elevation_m: 4808, distance_km: 5.0 },
+      { name: 'Grandes Jorasses', elevation_m: 4208, distance_km: 4.0 },
+    ],
+    cultural_notes_it: 'Il Rifugio Walter Bonatti è dedicato al grande esploratore italiano. La Val Ferret è valle storica del Tour du Mont Blanc e delle prime ascensioni alpine.',
+    cultural_notes_en: 'Rifugio Walter Bonatti is dedicated to the great Italian explorer. Val Ferret is a historic valley of the Tour du Mont Blanc and early alpine ascents.',
+    calories_estimate: 3100,
+  },
+
+  'alta-via-1-tappa-17-rifugio-bonatti-courmayeur': {
+    mobile_coverage: 'good',
+    best_months: [6, 7, 8, 9, 10],
+    fitness_level: 2,
+    waypoints: [
+      { name: 'Rifugio Walter Bonatti', elevation_m: 2025, distance_from_start_km: 0, type: 'rifugio', note_it: 'Partenza tappa, ultima notte AV1', note_en: 'Stage start, last AV1 night' },
+      { name: 'Rifugio Bertone', elevation_m: 2048, distance_from_start_km: 6.5, type: 'rifugio', note_it: 'Rifugio intermedio con terrazza panoramica', note_en: 'Intermediate hut with panoramic terrace' },
+      { name: 'Courmayeur', elevation_m: 1224, distance_from_start_km: 12.1, type: 'bivio', note_it: 'Arrivo AV1, capitale alpinistica', note_en: 'AV1 finish, alpine capital' },
+    ],
+    geology_it:
+      'La discesa lungo la Val Ferret attraversa gneiss e calcescisti del Massiccio del Monte Bianco con affioramenti di graniti deformati e filladi a mica. Il sentiero balcone segue un fronte morenico würmiano del ghiacciaio del Miage con depositi proglaciali e terrazzi abbandonati. Sotto quota 1800 m compaiono depositi alluvionali del torrente Ferret con ciottoli di gneiss, granito e calcare. I versanti boscosi presentano paleosuoli su morene decomposte con suoli acidi adatti a larice e rododendro. Il ghiacciaio del Miage, visibile dal sentiero, è uno dei più monitorati delle Alpi per il ritiro glaciologico. Affioramenti di marmo e calcescisti pennidici segnalano la copertura sedimentaria del massiccio.',
+    geology_en:
+      'The descent along Val Ferret crosses gneiss and calcschists of the Mont Blanc massif with deformed granite and mica phyllite outcrops. The balcony trail follows a Würmian moraine front of the Miage glacier with proglacial deposits and abandoned terraces. Below 1800 m, alluvial deposits of the Ferret stream appear with pebbles of gneiss, granite and limestone. Forested slopes display paleosols on decomposed moraines with acid soils suited to larch and rhododendron. The Miage glacier, visible from the trail, is among the most monitored in the Alps for glaciological retreat. Marble and calcschist outcrops indicate the massif sedimentary cover.',
+    water_sources_it: 'Acqua ai rifugi Bonatti e Bertone. Fontanelle a Courmayeur centro.',
+    water_sources_en: 'Water at Bonatti and Bertone huts. Fountains in Courmayeur centre.',
+    transport_it: 'Autobus VITA e Savda per Courmayeur da Aosta. Collegamenti estivi Val Ferret.',
+    transport_en: 'VITA and Savda buses to Courmayeur from Aosta. Summer Val Ferret connections.',
+    parking: 'Parcheggi a Courmayeur centro e La Palud (funivia Monte Bianco).',
+    warnings_it: ['Discesa ripida nel bosco finale', 'Alta affluenza turistica a Courmayeur in agosto'],
+    warnings_en: ['Steep descent in the final forest section', 'High tourist traffic in Courmayeur in August'],
+    nearby_peaks: [
+      { name: 'Monte Bianco', elevation_m: 4808, distance_km: 3.0 },
+      { name: 'Grandes Jorasses', elevation_m: 4208, distance_km: 2.5 },
+    ],
+    cultural_notes_it: 'Courmayeur è capitale alpinistica con sezione CAI storica e museo alpino. Completare l AV1 dopo 17 tappe e oltre 190 km è traguardo celebrato sulle terrazze del centro.',
+    cultural_notes_en: 'Courmayeur is an alpine capital with a historic CAI section and alpine museum. Completing the AV1 after 17 stages and over 190 km is celebrated on the centre terraces.',
+    calories_estimate: 2500,
+  },
+
+  'tour-rifugio-bonatti': {
+    mobile_coverage: 'partial',
+    best_months: [6, 7, 8, 9, 10],
+    fitness_level: 2,
+    waypoints: [
+      { name: 'Lavachey', elevation_m: 1642, distance_from_start_km: 0, type: 'bivio', note_it: 'Partenza anello, parcheggio Val Ferret', note_en: 'Loop start, Val Ferret parking' },
+      { name: 'Rifugio Walter Bonatti', elevation_m: 2025, distance_from_start_km: 4.6, type: 'rifugio', note_it: 'Punto panoramico sul Monte Bianco e Grandes Jorasses', note_en: 'Viewpoint over Mont Blanc and Grandes Jorasses' },
+      { name: 'Lavachey', elevation_m: 1642, distance_from_start_km: 9.2, type: 'bivio', note_it: 'Arrivo anello', note_en: 'Loop finish' },
+    ],
+    geology_it:
+      'L anello percorre il versante orientale del Massiccio del Monte Bianco su gneiss e calcescisti con affioramenti di graniti deformati. Il sentiero del TMB segue depositi glaciali würmiani del ghiacciaio del Miage con morene laterali ben visibili. Sotto quota 1900 m dominano depositi alluvionali del torrente Ferret e paleosuoli su morene decomposte. I versanti boscosi mostrano suoli acidi con larice e rododendro. Il ghiacciaio del Miage, fronte glaciologico monitorato, mostra ritiro evidente con laghi proglaciali e depositi lacustri recenti. Affioramenti di marmo e calcare dolomitico segnalano la copertura sedimentaria del massiccio.',
+    geology_en:
+      'The loop crosses the eastern Mont Blanc massif slope on gneiss and calcschists with deformed granite outcrops. The TMB trail follows Würmian glacial deposits of the Miage glacier with clearly visible lateral moraines. Below 1900 m, Ferret stream alluvial deposits and paleosols on decomposed moraines dominate. Forested slopes show acid soils with larch and rhododendron. The Miage glacier, a monitored glaciological front, shows evident retreat with proglacial lakes and recent lacustrine deposits. Marble and dolomitic limestone outcrops indicate the massif sedimentary cover.',
+    water_sources_it: 'Acqua al Rifugio Bonatti. Portare borraccia da Lavachey per la salita.',
+    water_sources_en: 'Water at Rifugio Bonatti. Carry a bottle from Lavachey for the climb.',
+    transport_it: 'Autobus estivo Savda per Val Ferret da Courmayeur. Taxi locale su prenotazione.',
+    transport_en: 'Summer Savda bus to Val Ferret from Courmayeur. Local taxi by reservation.',
+    parking: 'Parcheggio a pagamento a Lavachey, punto di partenza anello.',
+    warnings_it: ['Sentiero affollato in agosto', 'Discesa alternativa via Pra Sec più ripida'],
+    warnings_en: ['Crowded trail in August', 'Alternative descent via Pra Sec is steeper'],
+    nearby_peaks: [
+      { name: 'Monte Bianco', elevation_m: 4808, distance_km: 3.5 },
+      { name: 'Grandes Jorasses', elevation_m: 4208, distance_km: 2.0 },
+    ],
+    cultural_notes_it: 'Il sentiero segue il Tour du Mont Blanc, grande via di pellegrinaggio alpino. Il rifugio Bonatti celebra Walter Bonatti, pioniere dell esplorazione alpina italiana.',
+    cultural_notes_en: 'The trail follows the Tour du Mont Blanc, a major alpine pilgrimage route. Rifugio Bonatti celebrates Walter Bonatti, pioneer of Italian alpine exploration.',
+    calories_estimate: 2100,
+  },
+
+  'lago-djouan-cogne': {
+    mobile_coverage: 'partial',
+    best_months: [6, 7, 8, 9],
+    fitness_level: 3,
+    waypoints: [
+      { name: 'Valnontey', elevation_m: 1666, distance_from_start_km: 0, type: 'bivio', note_it: 'Partenza dal Parco Gran Paradiso, parcheggio Lauson', note_en: 'Start from Gran Paradiso Park, Lauson parking' },
+      { name: 'Alpe Lauson', elevation_m: 2100, distance_from_start_km: 5.5, type: 'panorama', note_it: 'Pascoli con frequenti avvistamenti di stambecchi', note_en: 'Pastures with frequent ibex sightings' },
+      { name: 'Lago Djouan', elevation_m: 2515, distance_from_start_km: 11, type: 'lago', note_it: 'Arrivo, lago alpino sotto la Becca di Moncorvé', note_en: 'Finish, alpine lake below Becca di Moncorvé' },
+    ],
+    geology_it:
+      'Il sentiero risale il versante meridionale del Gran Paradiso su calcescisti e micascisti del Pennidico con affioramenti di gneiss occhiadini del basamento austroalpino sopra quota 2200 m. I pascoli del Lauson si sviluppano su depositi glaciali würmiani con morene ricostruite e depositi lacustri. Il Lago Djouan occupa un circone modellato dal ghiacciaio würmiano con morene terminali e depositi proglaciali. Le rocce intorno al lago mostrano striature glaciali e marmitte da fusione. Affioramenti di granito del Gran Paradiso (Dora-Maira unit) compaiono nelle vicinanze della Becca di Moncorvé. Depositi periglaciali con pietraie attive segnalano instabilità sui versanti sopra quota 2400 m.',
+    geology_en:
+      'The trail climbs the southern Gran Paradiso slope on Penninic calcschists and micaschists with augen gneiss outcrops of the Austroalpine basement above 2200 m. Lauson pastures develop on Würmian glacial deposits with rebuilt moraines and lacustrine sediments. Lake Djouan occupies a cirque carved by the Würm glacier with terminal moraines and proglacial deposits. Rocks around the lake show glacial striations and meltwater potholes. Gran Paradiso granite (Dora-Maira unit) outcrops appear near Becca di Moncorvé. Periglacial scree deposits indicate instability on slopes above 2400 m.',
+    water_sources_it: 'Fontana a Valnontey. Sorgenti a Lauson in estate. Non bere dall acqua del lago.',
+    water_sources_en: 'Fountain in Valnontey. Springs at Lauson in summer. Do not drink lake water.',
+    transport_it: 'Autobus VITA per Cogne da Aosta con coincidenza per Valnontey in alta stagione.',
+    transport_en: 'VITA bus to Cogne from Aosta with Valnontey connection in peak season.',
+    parking: 'Parcheggio Lauson a Valnontey (area del Parco Nazionale Gran Paradiso).',
+    warnings_it: ['Partire prima delle 8 in agosto per evitare affollamento', 'Non avvicinare gli stambecchi (distanza minima 30 m)', 'Temporali pomeridiani frequenti in estate'],
+    warnings_en: ['Start before 8 AM in August to avoid crowds', 'Do not approach ibex (minimum 30 m distance)', 'Afternoon thunderstorms common in summer'],
+    nearby_peaks: [
+      { name: 'Gran Paradiso', elevation_m: 4061, distance_km: 5.0 },
+      { name: 'Becca di Moncorvé', elevation_m: 2822, distance_km: 1.5 },
+    ],
+    cultural_notes_it: 'Valnontey è porta sud del Parco Nazionale Gran Paradiso, istituito nel 1922. Il lago è meta classica di osservazione dello stambecco, simbolo del parco.',
+    cultural_notes_en: 'Valnontey is the southern gateway to Gran Paradiso National Park, established in 1922. The lake is a classic ibex-watching destination, symbol of the park.',
+    calories_estimate: 2700,
+  },
+};
+
+const slugs = Object.keys(data);
+if (slugs.length !== 19) {
+  console.error('Expected 19 trails, got', slugs.length);
+  process.exit(1);
+}
+
+fs.writeFileSync(OUT, JSON.stringify(data, null, 2) + '\n', 'utf8');
+const stat = fs.statSync(OUT);
+console.log('Written:', slugs.length, 'trails to', OUT);
+console.log('Byte size:', stat.size);

@@ -1,0 +1,23 @@
+[
+  {
+    "file": "traditions.json",
+    "id": "coumba-freida",
+    "query": "Désarpa Vallée d'Aoste",
+    "status": "no-match"
+  },
+  {
+    "file": "traditions.json",
+    "id": "transhumance",
+    "query": "Désarpa Vallée d'Aoste",
+    "status": "no-match"
+  },
+  {
+    "file": "food-wine.json",
+    "id": "donnas-picotendro",
+    "query": "Donnas Vallée d'Aoste vigne",
+    "status": "ok",
+    "title": "File:Otre Museo della vite e del vino di Donnas 02.jpg",
+    "credit": "Patafisik (CC BY-SA 4.0)",
+    "source": "https://commons.wikimedia.org/wiki/File:Otre_Museo_della_vite_e_del_vino_di_Donnas_02.jpg"
+  }
+]

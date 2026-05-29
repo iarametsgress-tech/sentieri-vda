@@ -5,10 +5,22 @@ import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import AdSenseScript from '@/components/AdSenseScript';
+import { SITE_URL } from '@/lib/config';
+import {
+  localeAlternates,
+  localeAlternatesAbsolute,
+  localeOpenGraph,
+  localeSiteMeta,
+} from '@/lib/metadata-languages';
 import '../globals.css';
+
+const PageTransition = dynamic(() => import('@/components/PageTransition'), {
+  ssr: false,
+});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -20,28 +32,21 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const isIT = locale === 'it';
+  const meta = localeSiteMeta(locale);
   return {
-    metadataBase: new URL('https://sentierivda.it'),
+    metadataBase: new URL(SITE_URL),
     title: {
-      default: isIT
-        ? "Sentieri Valle d'Aosta — Trekking, Alte Vie, Rifugi"
-        : "Aosta Valley Trails — Hiking, High Routes, Refuges",
+      default: meta.title,
       template: '%s — Sentieri VdA',
     },
-    description: isIT
-      ? "I sentieri della Valle d'Aosta raccontati con dati ufficiali, mappe interattive, fotografia. Alte Vie, Gran Paradiso, Monte Bianco, Cervino."
-      : "The trails of the Aosta Valley with official data, interactive maps, photography. High Routes, Gran Paradiso, Mont Blanc, Matterhorn.",
+    description: meta.description,
     alternates: {
       canonical: `/${locale}`,
-      languages: {
-        it: '/it',
-        en: '/en',
-      },
+      languages: localeAlternates(''),
     },
     openGraph: {
       type: 'website',
-      locale: isIT ? 'it_IT' : 'en_US',
+      locale: localeOpenGraph(locale),
       siteName: 'Sentieri VdA',
     },
   };
@@ -68,7 +73,9 @@ export default async function LocaleLayout({
       <body className="bg-ink text-snow min-h-screen flex flex-col antialiased">
         <NextIntlClientProvider messages={messages}>
           <Navbar locale={locale} />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1">
+            <PageTransition>{children}</PageTransition>
+          </main>
           <Footer />
         </NextIntlClientProvider>
         <AdSenseScript />

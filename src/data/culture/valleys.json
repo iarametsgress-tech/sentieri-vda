@@ -1,0 +1,791 @@
+[
+  {
+    "id": "val-ferret",
+    "name_it": "Val Ferret",
+    "name_en": "Val Ferret",
+    "name_fr": "Val Ferret",
+    "name_de": "Val Ferret",
+    "eyebrow_it": "Balcone sul Monte Bianco",
+    "eyebrow_en": "Balcony on Mont Blanc",
+    "eyebrow_fr": "Balcon sur le Mont Blanc",
+    "eyebrow_de": "Balkon am Mont Blanc",
+    "description_it": "La Val Ferret si apre verso ovest da Courmayeur come un anfiteatro verde di larici e prati, con il massiccio del Monte Bianco che domina l'orizzonte. È la valle del Tour du Mont Blanc italiano: rifugi storici, pascoli d'alta quota e sentieri che guardano direttamente sulle Grandes Jorasses. In autunno i larici tingono il paesaggio d'oro; in estate i pastori riportano le mandrie sui pianori di Lavachey e Arnouva.",
+    "description_en": "Val Ferret opens west from Courmayeur as a green amphitheatre of larch and meadow, with the Mont Blanc massif filling the horizon. This is the Italian side of the Tour du Mont Blanc: historic huts, high pastures and trails that stare straight at the Grandes Jorasses. Larches turn the landscape gold in autumn; in summer shepherds bring herds back to the Lavachey and Arnouva plateaus.",
+    "description_fr": "Le Val Ferret s'ouvre vers l'ouest depuis Courmayeur comme un amphithéâtre vert de mélèzes et de prairies, avec le massif du Mont Blanc dominant l'horizon. C'est la vallée italienne du Tour du Mont Blanc : refuges historiques, alpages d'altitude et sentiers qui regardent directement les Grandes Jorasses. En automne les mélèzes teignent le paysage d'or ; en été les bergers ramènent les troupeaux sur les plateaux de Lavachey et d'Arnouva.",
+    "description_de": "Das Val Ferret öffnet sich westlich von Courmayeur als grünes Amphitheater aus Lärchen und Wiesen, mit dem Mont-Blanc-Massiv am Horizont. Dies ist die italienische Seite des Tour du Mont Blanc: historische Hütten, Hochalmen und Wege mit direktem Blick auf die Grandes Jorasses. Im Herbst färben die Lärchen die Landschaft golden; im Sommer treiben Hirten die Herden auf die Hochebenen von Lavachey und Arnouva.",
+    "image": "/cultura/val-ferret.jpg",
+    "towns": [
+      {
+        "id": "courmayeur",
+        "name_it": "Courmayeur",
+        "name_en": "Courmayeur",
+        "name_fr": "Courmayeur",
+        "name_de": "Courmayeur",
+        "description_it": "Capoluogo alpino ai piedi del Monte Bianco, Courmayeur unisce tradizione montanara e vocazione internazionale. Il centro storico, le terme e la funivia del Skyway ne fanno la porta d'accesso naturale alla Val Ferret e alla Val Veny.",
+        "description_en": "Alpine capital at the foot of Mont Blanc, Courmayeur blends mountaineering tradition with an international outlook. Its historic centre, spa and Skyway cable car make it the natural gateway to Val Ferret and Val Veny.",
+        "description_fr": "Capitale alpine au pied du Mont Blanc, Courmayeur allie tradition montagnarde et vocation internationale. Le centre historique, les thermes et le téléphérique du Skyway en font la porte d'accès naturelle au Val Ferret et au Val Veny.",
+        "description_de": "Die alpine Hauptstadt am Fuß des Mont Blanc verbindet Bergsteigertraditionen mit internationalem Flair. Das historische Zentrum, das Thermalbad und die Skyway-Gondelbahn machen es zum natürlichen Tor zum Val Ferret und Val Veny.",
+        "official_url": "https://www.comune.courmayeur.ao.it/"
+      },
+      {
+        "id": "la-salle",
+        "name_it": "La Salle",
+        "name_en": "La Salle",
+        "name_fr": "La Salle",
+        "name_de": "La Salle",
+        "description_it": "Comune di fondovalle tra vigneti e castagneti, La Salle custodisce borghi come Le Pont e Chaffardon, punti di partenza per escursioni verso i terrazzamenti vitati e le mulattiere che salgono verso la Val Veny.",
+        "description_en": "A valley-floor municipality among vineyards and chestnut woods, La Salle preserves hamlets like Le Pont and Chaffardon — starting points for walks through terraced vineyards and old mule tracks climbing toward Val Veny.",
+        "description_fr": "Commune de fond de vallée entre vignes et châtaigneraies, La Salle conserve des hameaux comme Le Pont et Chaffardon, points de départ pour des excursions à travers les vignes en terrasses et les chemins muletiers qui montent vers le Val Veny.",
+        "description_de": "Eine Talgemeinde zwischen Weinbergen und Kastanienwäldern bewahrt Weiler wie Le Pont und Chaffardon — Ausgangspunkte für Wanderungen durch terrassierte Weinberge und alte Saumwege zum Val Veny.",
+        "official_url": "https://www.comune.lasalle.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Val Ferret"
+    ],
+    "official_url": "https://www.regione.vda.it/turismo",
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
+    "image_credit": "Giorgio Galeotti (CC BY 4.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Vallone_del_Malatr%C3%A0_-_Val_Ferret,_Courmayeur,_Aosta,_Italia_05_-_8_Agosto,_2016.jpg"
+  },
+  {
+    "id": "val-veny",
+    "name_it": "Val Veny",
+    "name_en": "Val Veny",
+    "name_fr": "Val Veny",
+    "name_de": "Val Veny",
+    "eyebrow_it": "Fronte meridionale del Monte Bianco",
+    "eyebrow_en": "Southern face of Mont Blanc",
+    "eyebrow_fr": "Versant méridional du Mont Blanc",
+    "eyebrow_de": "Südseite des Mont Blanc",
+    "description_it": "La Val Veny è la valle selvaggia del Monte Bianco: ghiacciai, morene e laghi glaciali come il Lac de Miage, con il profilo del Monte Bianco che si specchia nelle acque fredde. Meno frequentata della Ferret, offre un'atmosfera più austera e alpinistica, con il Rifugio Elisabetta e i sentieri verso il Col de la Seigne. La fauna — camoscio, stambecco, aquila reale — è qui particolarmente visibile.",
+    "description_en": "Val Veny is Mont Blanc's wild valley: glaciers, moraines and glacial lakes such as Lac de Miage, with the Mont Blanc profile mirrored in cold water. Less busy than Ferret, it feels more austere and mountaineering-oriented, with Rifugio Elisabetta and routes toward Col de la Seigne. Wildlife — chamois, ibex, golden eagle — is especially visible here.",
+    "description_fr": "Le Val Veny est la vallée sauvage du Mont Blanc : glaciers, moraines et lacs glaciaires comme le Lac de Miage, avec le profil du Mont Blanc qui se reflète dans les eaux froides. Moins fréquentée que la Ferret, elle offre une atmosphère plus austère et alpiniste, avec le Rifugio Elisabetta et les sentiers vers le Col de la Seigne. La faune — chamois, bouquetin, aigle royal — y est particulièrement visible.",
+    "description_de": "Das Val Veny ist das wilde Tal des Mont Blanc: Gletscher, Moränen und Gletscherseen wie der Lac de Miage, mit dem Mont-Blanc-Profil, das sich im kalten Wasser spiegelt. Weniger frequentiert als die Ferret, wirkt es strenger und alpinistischer, mit dem Rifugio Elisabetta und Wegen zum Col de la Seigne. Wildtiere — Gämse, Steinbock, Steinadler — sind hier besonders gut zu beobachten.",
+    "image": "/trails/monte-bianco.jpg",
+    "towns": [
+      {
+        "id": "courmayeur",
+        "name_it": "Courmayeur",
+        "name_en": "Courmayeur",
+        "name_fr": "Courmayeur",
+        "name_de": "Courmayeur",
+        "description_it": "Da Courmayeur si raggiunge la Val Veny per la strada del Monte Bianco, che risale fino a La Visaille. Il comune gestisce l'accesso ai sentieri del versante italiano del massiccio più alto d'Europa.",
+        "description_en": "From Courmayeur the Val Veny road climbs to La Visaille at the foot of the glaciers. The municipality manages access to trails on the Italian side of Europe's highest massif.",
+        "description_fr": "Depuis Courmayeur on rejoint le Val Veny par la route du Mont Blanc, qui monte jusqu'à La Visaille. La commune gère l'accès aux sentiers du versant italien du plus haut massif d'Europe.",
+        "description_de": "Von Courmayeur aus führt die Mont-Blanc-Straße bis nach La Visaille am Gletscherfuß. Die Gemeinde verwaltet den Zugang zu den Wegen auf der italienischen Seite des höchsten Massivs Europas.",
+        "official_url": "https://www.comune.courmayeur.ao.it/"
+      },
+      {
+        "id": "la-salle",
+        "name_it": "La Salle",
+        "name_en": "La Salle",
+        "name_fr": "La Salle",
+        "name_de": "La Salle",
+        "description_it": "I frazionamenti di La Salle si affacciano sul fondovalle della Dora Baltea, a breve distanza dal bivio per la Val Veny. Castagneti secolari e piccoli borghi conservano l'economia rurale della bassa montagna courmayeurana.",
+        "description_en": "La Salle's hamlets lie on the Dora Baltea valley floor, a short drive from the turn-off to Val Veny. Ancient chestnut groves and small villages preserve the rural economy of Courmayeur's lower mountains.",
+        "description_fr": "Les hameaux de La Salle surplombent le fond de vallée de la Doire Baltée, à courte distance du carrefour pour le Val Veny. Châtaigneraies séculaires et petits bourgs conservent l'économie rurale de la basse montagne de Courmayeur.",
+        "description_de": "Die Weiler von La Salle liegen auf dem Dora-Baltea-Talboden, nur wenige Kilometer vom Abzweig ins Val Veny entfernt. Jahrhundertealte Kastanienwälder und kleine Dörfer bewahren die Landwirtschaft des unteren Courmayeur-Gebirges.",
+        "official_url": "https://www.comune.lasalle.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Val Veny"
+    ],
+    "official_url": "https://www.regione.vda.it/turismo",
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+  },
+  {
+    "id": "valtournenche",
+    "name_it": "Valtournenche",
+    "name_en": "Valtournenche",
+    "name_fr": "Valtournenche",
+    "name_de": "Valtournenche",
+    "eyebrow_it": "Versante valdostano del Cervino",
+    "eyebrow_en": "Valdostan side of the Matterhorn",
+    "eyebrow_fr": "Versant valdôtain du Cervin",
+    "eyebrow_de": "Valdostanische Seite des Matterhorns",
+    "description_it": "Valtournenche è la valle del Cervino sul versante italiano: un profilo iconico che accompagna ogni passeggiata dal fondovalle fino ai ghiacciai del Breuil. Il paesaggio alterna boschi di larice, alpeggi e viste sulle pareti nord del massiccio. La comunità locale ha radici profonde nella pastorizia e nell'alpinismo, con rifugi storici come il Barmasse e il Grand Tournalin.",
+    "description_en": "Valtournenche is the Italian-side Matterhorn valley: an iconic silhouette on every walk from the valley floor up to Breuil's glaciers. The landscape shifts from larch forest to alpine pasture and views onto the massif's north faces. The local community has deep roots in pastoralism and mountaineering, with historic huts such as Barmasse and Grand Tournalin.",
+    "description_fr": "Valtournenche est la vallée italienne du Cervin : une silhouette iconique qui accompagne chaque promenade du fond de vallée jusqu'aux glaciers du Breuil. Le paysage alterne forêt de mélèzes, alpages et vues sur les faces nord du massif. La communauté locale a des racines profondes dans le pastoralisme et l'alpinisme, avec des refuges historiques comme le Barmasse et le Grand Tournalin.",
+    "description_de": "Valtournenche ist das Tal auf der italienischen Seite des Matterhorns: eine ikonische Silhouette auf jedem Weg vom Talboden bis zu den Gletschern von Breuil. Die Landschaft wechselt zwischen Lärchenwald, Alpweiden und Blicken auf die Nordwände des Massivs. Die lokale Gemeinschaft hat tiefe Wurzeln im Hirtentum und Bergsteigen, mit historischen Hütten wie dem Barmasse und dem Grand Tournalin.",
+    "image": "/trails/alta-via-1-tappa-8-rifugio-grand-tournalin-valtournenche.jpg",
+    "towns": [
+      {
+        "id": "valtournenche",
+        "name_it": "Valtournenche",
+        "name_en": "Valtournenche",
+        "name_fr": "Valtournenche",
+        "name_de": "Valtournenche",
+        "description_it": "Comune che dà il nome all'intera valle, Valtournenche si estende dal fondovalle fino al Breuil-Cervinia. Chiese romaniche, frazioni walser e la tradizione del Cervino ne definiscono l'identità.",
+        "description_en": "The municipality that gives its name to the whole valley, Valtournenche stretches from the valley floor to Breuil-Cervinia. Romanesque churches, Walser hamlets and Matterhorn tradition define its identity.",
+        "description_fr": "Commune qui donne son nom à toute la vallée, Valtournenche s'étend du fond de vallée jusqu'au Breuil-Cervinia. Églises romanes, hameaux walser et tradition du Cervin en définissent l'identité.",
+        "description_de": "Die Gemeinde, die der gesamten Talschaft ihren Namen gibt, erstreckt sich vom Talboden bis nach Breuil-Cervinia. Romanische Kirchen, Walser-Weiler und die Matterhorn-Tradition prägen ihre Identität.",
+        "official_url": "https://www.comune.valtournenche.ao.it/"
+      },
+      {
+        "id": "torgnon",
+        "name_it": "Torgnon",
+        "name_en": "Torgnon",
+        "name_fr": "Torgnon",
+        "name_de": "Torgnon",
+        "description_it": "Borgo soleggiato su un terrazzo a mezzacosta, Torgnon affaccia sulla valle con panorami aperti sul Cervino e sul Monte Rosa. Viticoltura di montagna e turismo rurale caratterizzano questo comune dell'area anteyana.",
+        "description_en": "A sunny village on a mid-slope terrace, Torgnon looks across the valley with open views of the Matterhorn and Monte Rosa. Mountain viticulture and rural tourism characterise this municipality in the Antey area.",
+        "description_fr": "Village ensoleillé sur un tertre à mi-pente, Torgnon offre des panoramas ouverts sur le Cervin et le Mont Rose. La viticulture de montagne et le tourisme rural caractérisent cette commune de la zone d'Antey.",
+        "description_de": "Ein sonniges Dorf auf einem Hansterrasse, Torgnon blickt mit offener Aussicht auf Matterhorn und Monte Rosa über das Tal. Bergweinbau und Landtourismus prägen diese Gemeinde im Antey-Gebiet.",
+        "official_url": "https://www.comune.torgnon.ao.it/"
+      },
+      {
+        "id": "antey-saint-andre",
+        "name_it": "Antey-Saint-André",
+        "name_en": "Antey-Saint-André",
+        "name_fr": "Antey-Saint-André",
+        "name_de": "Antey-Saint-André",
+        "description_it": "Antey-Saint-André è il comune di fondovalle che collega Valtournenche alla Val d'Ayas. Il suo territorio include la Val Saint-Barthélemy, area protetta nota per la flora e i sentieri verso i colli di confine.",
+        "description_en": "Antey-Saint-André is the valley-floor municipality linking Valtournenche to Val d'Ayas. Its territory includes Val Saint-Barthélemy, a protected area known for flora and trails toward border cols.",
+        "description_fr": "Antey-Saint-André est la commune de fond de vallée qui relie Valtournenche à la Val d'Ayas. Son territoire comprend la Val Saint-Barthélemy, zone protégée connue pour sa flore et ses sentiers vers les cols frontières.",
+        "description_de": "Antey-Saint-André ist die Talgemeinde, die Valtournenche mit dem Val d'Ayas verbindet. Ihr Gebiet umfasst das Val Saint-Barthélemy, ein Schutzgebiet, das für seine Flora und Wege zu den Grenzpässen bekannt ist.",
+        "official_url": "https://www.comune.antey-saint-andre.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Valtournenche",
+      "Valtournenche — Val Saint-Barthélemy"
+    ],
+    "official_url": "https://www.regione.vda.it/turismo",
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+  },
+  {
+    "id": "valle-del-lys",
+    "name_it": "Valle del Lys",
+    "name_en": "Lys Valley",
+    "name_fr": "Vallée du Lys",
+    "name_de": "Lys-Tal",
+    "eyebrow_it": "Cuore walser del Monte Rosa",
+    "eyebrow_en": "Walser heart of Monte Rosa",
+    "eyebrow_fr": "Cœur walser du Mont Rose",
+    "eyebrow_de": "Walser-Herz des Monte Rosa",
+    "description_it": "La Valle del Lys è il bacino valdostano del Monte Rosa, dove la cultura walser — lingua titsch, architettura in legno e pietra, transumanza — è ancora viva. Da Gressoney-Saint-Jean la valle risale tra ghiacciai, pascoli e rifugi fino al Colle del Teodulo. La Fontina DOP e i prodotti caseari degli alpeggi sono parte integrante del paesaggio culturale.",
+    "description_en": "The Lys Valley is the Valdostan basin of Monte Rosa, where Walser culture — titsch language, timber-and-stone architecture, transhumance — remains alive. From Gressoney-Saint-Jean the valley climbs through glaciers, pastures and huts to Colle del Teodulo. DOP Fontina and alpine-dairy products are integral to the cultural landscape.",
+    "description_fr": "La Vallée du Lys est le bassin valdôtain du Mont Rose, où la culture walser — langue titsch, architecture en bois et pierre, transhumance — reste vivante. De Gressoney-Saint-Jean, la vallée monte à travers glaciers, alpages et refuges jusqu'au Colle del Teodulo. La Fontina AOP et les produits laitiers des alpages font partie intégrante du paysage culturel.",
+    "description_de": "Das Lys-Tal ist das Valdostanische Becken des Monte Rosa, wo die Walser-Kultur — Titsch-Sprache, Holz-Stein-Architektur, Almwirtschaft — lebendig bleibt. Von Gressoney-Saint-Jean steigt das Tal durch Gletscher, Almen und Hütten bis zum Colle del Teodulo auf. g.U.-Fontina und Almmilchprodukte sind integraler Bestandteil der Kulturlandschaft.",
+    "image": "/trails/gressoney.jpg",
+    "towns": [
+      {
+        "id": "gressoney-saint-jean",
+        "name_it": "Gressoney-Saint-Jean",
+        "name_en": "Gressoney-Saint-Jean",
+        "name_fr": "Gressoney-Saint-Jean",
+        "name_de": "Gressoney-Saint-Jean",
+        "description_it": "Capoluogo walser della valle, Gressoney-Saint-Jean ospita il Museo Walser e la maison de la Fontine. Il paese è punto di partenza per il Tour del Monte Rosa e per le ascensioni verso il Colle del Teodulo.",
+        "description_en": "Walser capital of the valley, Gressoney-Saint-Jean hosts the Walser Museum and the Fontina house. The village is a starting point for the Monte Rosa Tour and climbs toward Colle del Teodulo.",
+        "description_fr": "Capitale walser de la vallée, Gressoney-Saint-Jean accueille le Musée Walser et la maison de la Fontine. Le village est le point de départ du Tour du Mont Rose et des ascensions vers le Colle del Teodulo.",
+        "description_de": "Die Walser-Hauptstadt des Tals beherbergt das Walser Museum und das Fontina-Haus. Das Dorf ist Ausgangspunkt für die Monte-Rosa-Runde und Besteigungen zum Colle del Teodulo.",
+        "official_url": "https://www.comune.gressoneysaintjean.ao.it/"
+      },
+      {
+        "id": "gressoney-la-trinite",
+        "name_it": "Gressoney-La-Trinité",
+        "name_en": "Gressoney-La-Trinité",
+        "name_fr": "Gressoney-La-Trinité",
+        "name_de": "Gressoney-La-Trinité",
+        "description_it": "Salendo verso quota, Gressoney-La-Trinité è il comune dell'alta valle, con alpeggi attivi e accesso ai ghiacciai del Lys. L'architettura walser e i sentieri verso il Rifugio Gabiet ne fanno un centro escursionistico di riferimento.",
+        "description_en": "Higher up the valley, Gressoney-La-Trinité is the upper-valley municipality, with active alpine pastures and access to Lys glaciers. Walser architecture and trails to Rifugio Gabiet make it a key hiking hub.",
+        "description_fr": "Plus haut dans la vallée, Gressoney-La-Trinité est la commune de la haute vallée, avec des alpages actifs et l'accès aux glaciers du Lys. L'architecture walser et les sentiers vers le Rifugio Gabiet en font un centre de randonnée de référence.",
+        "description_de": "Weiter oben im Tal liegt Gressoney-La-Trinité, die Obertal-Gemeinde mit aktiven Almen und Zugang zu den Lys-Gletschern. Walser-Architektur und Wege zum Rifugio Gabiet machen es zu einem wichtigen Wanderzentrum.",
+        "official_url": "https://www.comune.gressoneylatrinite.ao.it/"
+      },
+      {
+        "id": "issime",
+        "name_it": "Issime",
+        "name_en": "Issime",
+        "name_fr": "Issime",
+        "name_de": "Issime",
+        "description_it": "Issime conserva una delle comunità walser più autentiche della Valle d'Aosta, con la chiesa di Saint-Gilles e tradizioni linguistiche ancora praticate. Il paese si affaccia sulla valle del Lys da un terrazzo panoramico.",
+        "description_en": "Issime preserves one of the most authentic Walser communities in Valle d'Aosta, with the church of Saint-Gilles and linguistic traditions still in use. The village overlooks the Lys valley from a panoramic terrace.",
+        "description_fr": "Issime conserve l'une des communautés walser les plus authentiques de la Vallée d'Aoste, avec l'église Saint-Gilles et des traditions linguistiques encore pratiquées. Le village domine la vallée du Lys depuis une terrasse panoramique.",
+        "description_de": "Issime bewahrt eine der authentischsten Walser-Gemeinschaften des Aostatals, mit der Kirche Saint-Gilles und noch lebendigen Sprachtraditionen. Das Dorf überblickt das Lys-Tal von einer Aussichtsterrasse.",
+        "official_url": "https://www.comune.issime.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Valle del Lys",
+      "Valle di Gressoney"
+    ],
+    "official_url": "https://www.regione.vda.it/turismo",
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+  },
+  {
+    "id": "valle-d-ayas",
+    "name_it": "Valle d'Ayas",
+    "name_en": "Ayas Valley",
+    "name_fr": "Val d'Ayas",
+    "name_de": "Val d'Ayas",
+    "eyebrow_it": "Tra Monte Rosa e antichi passi",
+    "eyebrow_en": "Between Monte Rosa and ancient passes",
+    "eyebrow_fr": "Entre Mont Rose et anciens cols",
+    "eyebrow_de": "Zwischen Monte Rosa und alten Pässen",
+    "description_it": "La Valle d'Ayas si dirama a nord da Brusson verso Champoluc e i passi che collegavano la valle al Vallese. Paesaggio di larici, baite walser e creste panoramiche, è attraversata dall'Alta Via 1 e da sentieri verso il Col Pinter. L'economia combina turismo estivo, sci e produzione casearia di montagna.",
+    "description_en": "Val d'Ayas branches north from Brusson toward Champoluc and passes that once linked the valley to Valais. A landscape of larch, Walser chalets and panoramic ridges, it is crossed by Alta Via 1 and trails toward Col Pinter. The economy blends summer tourism, skiing and mountain dairy production.",
+    "description_fr": "Le Val d'Ayas se déroule vers le nord depuis Brusson jusqu'à Champoluc et les cols qui reliaient autrefois la vallée au Valais. Paysage de mélèzes, chalets walser et crêtes panoramiques, il est traversé par l'Alta Via 1 et des sentiers vers le Col Pinter. L'économie combine tourisme estival, ski et production laitière de montagne.",
+    "description_de": "Das Val d'Ayas zweigt nördlich von Brusson ab nach Champoluc und zu Pässen, die das Tal einst mit dem Wallis verbanden. Eine Landschaft aus Lärchen, Walser-Hütten und Panoramakämmen, durchquert von der Alta Via 1 und Wegen zum Col Pinter. Die Wirtschaft verbindet Sommertourismus, Skifahren und Bergmilchwirtschaft.",
+    "image": "/trails/tour-monte-rosa-tappa-3-valtournenche-champoluc.jpg",
+    "towns": [
+      {
+        "id": "ayas",
+        "name_it": "Ayas",
+        "name_en": "Ayas",
+        "name_fr": "Ayas",
+        "name_de": "Ayas",
+        "description_it": "Comune dell'alta valle con frazioni come Champoluc e Frachey, Ayas è base per escursioni verso il Monte Rosa e il Colle del Teodulo. Rifugi, piste e sentieri si intrecciano in un territorio di confine storico.",
+        "description_en": "Upper-valley municipality with hamlets such as Champoluc and Frachey, Ayas is a base for hikes toward Monte Rosa and Colle del Teodulo. Huts, ski runs and trails intertwine in a historic border territory.",
+        "description_fr": "Commune de la haute vallée avec des hameaux comme Champoluc et Frachey, Ayas est une base pour les randonnées vers le Mont Rose et le Colle del Teodulo. Refuges, pistes et sentiers s'entrelacent dans un territoire de frontière historique.",
+        "description_de": "Die Gemeinde im Obertal mit Weilern wie Champoluc und Frachey ist Ausgangspunkt für Wanderungen zum Monte Rosa und Colle del Teodulo. Hütten, Skipisten und Wanderwege verbinden sich in einem historischen Grenzgebiet.",
+        "official_url": "https://www.comune.ayas.ao.it/"
+      },
+      {
+        "id": "brusson",
+        "name_it": "Brusson",
+        "name_en": "Brusson",
+        "name_fr": "Brusson",
+        "name_de": "Brusson",
+        "description_it": "Brusson è il comune di fondovalle della Val d'Ayas, noto per i suoi laghi artificiali e per la lavorazione del rame. Da qui partono i sentieri verso Estoul e il Col Pinter, passo storico tra Ayas e Gressoney.",
+        "description_en": "Brusson is the valley-floor municipality of Val d'Ayas, known for its reservoir lakes and copper-working heritage. Trails from here lead to Estoul and Col Pinter, a historic pass between Ayas and Gressoney.",
+        "description_fr": "Brusson est la commune de fond de vallée du Val d'Ayas, connue pour ses lacs de retenue et sa tradition de travail du cuivre. Les sentiers partent d'ici vers Estoul et le Col Pinter, col historique entre Ayas et Gressoney.",
+        "description_de": "Brusson ist die Talgemeinde des Val d'Ayas, bekannt für seine Stauseen und das Kupferhandwerk. Von hier führen Wege nach Estoul und zum Col Pinter, einem historischen Pass zwischen Ayas und Gressoney.",
+        "official_url": "https://www.comune.brusson.ao.it/"
+      },
+      {
+        "id": "champoluc",
+        "name_it": "Champoluc",
+        "name_en": "Champoluc",
+        "name_fr": "Champoluc",
+        "name_de": "Champoluc",
+        "description_it": "Frazione di Ayas e stazione turistica dell'alta valle, Champoluc è punto di partenza per il Tour del Monte Rosa e per ascensioni verso il Colle del Teodulo. L'architettura walser e i rifugi di montagna definiscono il paesaggio.",
+        "description_en": "A hamlet of Ayas and the upper valley's resort centre, Champoluc is a starting point for the Monte Rosa Tour and climbs toward Colle del Teodulo. Walser architecture and mountain huts define the landscape.",
+        "description_fr": "Hameau d'Ayas et station touristique de la haute vallée, Champoluc est le point de départ du Tour du Mont Rose et des ascensions vers le Colle del Teodulo. L'architecture walser et les refuges de montagne définissent le paysage.",
+        "description_de": "Ein Weiler von Ayas und Touristenort des Obertals, Champoluc ist Ausgangspunkt für die Monte-Rosa-Runde und Besteigungen zum Colle del Teodulo. Walser-Architektur und Berghütten prägen die Landschaft.",
+        "official_url": "https://www.comune.ayas.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Valle d'Ayas",
+      "Valle di Gressoney — Valle d'Ayas"
+    ],
+    "official_url": "https://www.regione.vda.it/turismo",
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+  },
+  {
+    "id": "valpelline",
+    "name_it": "Valpelline",
+    "name_en": "Valpelline",
+    "name_fr": "Valpelline",
+    "name_de": "Valpelline",
+    "eyebrow_it": "Alta valle del Gran Combin",
+    "eyebrow_en": "Upper valley of Gran Combin",
+    "eyebrow_fr": "Haute vallée du Grand Combin",
+    "eyebrow_de": "Oberes Tal des Gran Combin",
+    "description_it": "La Valpelline è la valle dell'alta Val d'Aosta occidentale, dominata dal Gran Combin e dal ghiacciaio di By. Paesaggio austero di gneiss e morene, con borghi come Ollomont e Oyace che conservano l'architettura walser. L'Alta Via 1 attraversa la valle da nord a sud, collegando rifugi storici e passi alpini.",
+    "description_en": "Valpelline is the upper western Valle d'Aosta, dominated by Gran Combin and the By glacier. An austere landscape of gneiss and moraine, with villages like Ollomont and Oyace preserving Walser architecture. Alta Via 1 crosses the valley north to south, linking historic huts and alpine passes.",
+    "description_fr": "La Valpelline est la haute vallée occidentale de la Vallée d'Aoste, dominée par le Grand Combin et le glacier de By. Paysage austère de gneiss et de moraines, avec des villages comme Ollomont et Oyace qui conservent l'architecture walser. L'Alta Via 1 traverse la vallée du nord au sud, reliant refuges historiques et cols alpins.",
+    "description_de": "Die Valpelline ist das obere westliche Aostatal, dominiert vom Gran Combin und dem By-Gletscher. Eine strenge Landschaft aus Gneis und Moränen, mit Dörfern wie Ollomont und Oyace, die die Walser-Architektur bewahren. Die Alta Via 1 durchquert das Tal von Nord nach Süd und verbindet historische Hütten mit Alpenpässen.",
+    "image": "/trails/valpelline.jpg",
+    "towns": [
+      {
+        "id": "ollomont",
+        "name_it": "Ollomont",
+        "name_en": "Ollomont",
+        "name_fr": "Ollomont",
+        "name_de": "Ollomont",
+        "description_it": "Ollomont è il comune più settentrionale della Valpelline, con baite walser e accesso al Tour del Gran Combin. Il paese è tappa dell'Alta Via 1 e porta verso il Rifugio Prarayer e il Colle del Gran San Bernardo.",
+        "description_en": "Ollomont is the northernmost municipality of Valpelline, with Walser chalets and access to the Gran Combin Tour. The village is an Alta Via 1 stage and gateway to Rifugio Prarayer and Colle del Gran San Bernardo.",
+        "description_fr": "Ollomont est la commune la plus septentrionale de la Valpelline, avec des chalets walser et l'accès au Tour du Grand Combin. Le village est une étape de l'Alta Via 1 et la porte vers le Rifugio Prarayer et le Col du Grand-Saint-Bernard.",
+        "description_de": "Ollomont ist die nördlichste Gemeinde der Valpelline, mit Walser-Hütten und Zugang zur Gran-Combin-Runde. Das Dorf ist eine Etappe der Alta Via 1 und Tor zum Rifugio Prarayer und Colle del Gran San Bernardo.",
+        "official_url": "https://www.comune.ollomont.ao.it/"
+      },
+      {
+        "id": "oyace",
+        "name_it": "Oyace",
+        "name_en": "Oyace",
+        "name_fr": "Oyace",
+        "name_de": "Oyace",
+        "description_it": "Oyace sorge su un terrazzo soleggiato con vista sul Gran Combin. Il borgo walser conserva case in pietra scura e sentieri verso il Rifugio Cuney e la Conca di By, cuore dell'alpinismo valpellinentino.",
+        "description_en": "Oyace sits on a sunny terrace with views of Gran Combin. The Walser village preserves dark-stone houses and trails toward Rifugio Cuney and Conca di By, heart of Valpelline mountaineering.",
+        "description_fr": "Oyace se dresse sur un tertre ensoleillé avec vue sur le Grand Combin. Le village walser conserve des maisons en pierre sombre et des sentiers vers le Rifugio Cuney et la Conca di By, cœur de l'alpinisme de Valpelline.",
+        "description_de": "Oyace liegt auf einem sonnigen Hang mit Blick auf den Gran Combin. Das Walser-Dorf bewahrt dunkle Steinhäuser und Wege zum Rifugio Cuney und zur Conca di By, dem Herz des Valpelline-Bergsteigens.",
+        "official_url": "https://www.comune.oyace.ao.it/"
+      },
+      {
+        "id": "bionaz",
+        "name_it": "Bionaz",
+        "name_en": "Bionaz",
+        "name_fr": "Bionaz",
+        "name_de": "Bionaz",
+        "description_it": "Bionaz è il comune di fondovalle della Valpelline, con frazioni come Place-Moulin e la diga di Buthier. Da qui si accede alla Valpelline superiore e ai sentieri verso il ghiacciaio di By.",
+        "description_en": "Bionaz is the valley-floor municipality of Valpelline, with hamlets such as Place-Moulin and the Buthier dam. From here you reach upper Valpelline and trails toward the By glacier.",
+        "description_fr": "Bionaz est la commune de fond de vallée de la Valpelline, avec des hameaux comme Place-Moulin et le barrage de Buthier. De là, on accède à la haute Valpelline et aux sentiers vers le glacier de By.",
+        "description_de": "Bionaz ist die Talgemeinde der Valpelline, mit Weilern wie Place-Moulin und dem Buthier-Staudamm. Von hier erreicht man die obere Valpelline und die Wege zum By-Gletscher.",
+        "official_url": "https://www.comune.bionaz.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Valpelline",
+      "Valpelline — Conca di By"
+    ],
+    "official_url": "https://www.regione.vda.it/turismo",
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+  },
+  {
+    "id": "val-di-cogne",
+    "name_it": "Val di Cogne",
+    "name_en": "Cogne Valley",
+    "name_fr": "Val de Cogne",
+    "name_de": "Cogne-Tal",
+    "eyebrow_it": "Regno del Gran Paradiso",
+    "eyebrow_en": "Realm of Gran Paradiso",
+    "eyebrow_fr": "Royaume du Grand Paradis",
+    "eyebrow_de": "Reich des Gran Paradiso",
+    "description_it": "La Val di Cogne è la valle del Parco Nazionale del Gran Paradiso, un ecosistema protetto dove lo stambecco e la marmotta sono simboli viventi. Cogne, perla di montagna, apre su prati, boschi e sentieri verso i laghi del parco — Djouan, Loie, Grauson. L'Alta Via 2 attraversa la valle, collegando rifugi e paesaggi di alta montagna.",
+    "description_en": "Val di Cogne is the valley of Gran Paradiso National Park, a protected ecosystem where ibex and marmot are living symbols. Cogne, a mountain pearl, opens onto meadows, forests and trails toward the park's lakes — Djouan, Loie, Grauson. Alta Via 2 crosses the valley, linking huts and high-mountain landscapes.",
+    "description_fr": "Le Val de Cogne est la vallée du Parc National du Grand Paradis, un écosystème protégé où le bouquetin et la marmotte sont des symboles vivants. Cogne, perle de montagne, ouvre sur des prairies, des forêts et des sentiers vers les lacs du parc — Djouan, Loie, Grauson. L'Alta Via 2 traverse la vallée, reliant refuges et paysages de haute montagne.",
+    "description_de": "Das Cogne-Tal ist das Tal des Nationalparks Gran Paradiso, ein geschütztes Ökosystem, in dem Steinbock und Murmeltier lebende Symbole sind. Cogne, die Bergperle, öffnet sich auf Wiesen, Wälder und Wege zu den Parkseen — Djouan, Loie, Grauson. Die Alta Via 2 durchquert das Tal und verbindet Hütten und Hochgebirgslandschaften.",
+    "image": "/trails/gran-paradiso.jpg",
+    "towns": [
+      {
+        "id": "cogne",
+        "name_it": "Cogne",
+        "name_en": "Cogne",
+        "name_fr": "Cogne",
+        "name_de": "Cogne",
+        "description_it": "Cogne è il capoluogo della valle e porta del Parco Nazionale del Gran Paradiso. Il centro storico, le frazioni walser e i sentieri verso Valnontey ne fanno una delle mete escursionistiche più amate della regione.",
+        "description_en": "Cogne is the valley capital and gateway to Gran Paradiso National Park. Its historic centre, Walser hamlets and trails toward Valnontey make it one of the region's most beloved hiking destinations.",
+        "description_fr": "Cogne est le chef-lieu de la vallée et la porte du Parc National du Grand Paradis. Le centre historique, les hameaux walser et les sentiers vers Valnontey en font l'une des destinations de randonnée les plus aimées de la région.",
+        "description_de": "Cogne ist die Talhauptstadt und das Tor zum Nationalpark Gran Paradiso. Das historische Zentrum, Walser-Weiler und Wege nach Valnontey machen es zu einem der beliebtesten Wanderziele der Region.",
+        "official_url": "https://www.comune.cogne.ao.it/"
+      },
+      {
+        "id": "valnontey",
+        "name_it": "Valnontey",
+        "name_en": "Valnontey",
+        "name_fr": "Valnontey",
+        "name_de": "Valnontey",
+        "description_it": "Valnontey è la frazione di Cogne alla testata della valle, punto di partenza per il Tour del Gran Paradiso e per escursioni verso il Lago Djouan. Alpeggi attivi e fauna protetta caratterizzano questo angolo di parco.",
+        "description_en": "Valnontey is Cogne's hamlet at the head of the valley, starting point for the Gran Paradiso Tour and hikes toward Lago Djouan. Active alpine pastures and protected wildlife characterise this corner of the park.",
+        "description_fr": "Valnontey est le hameau de Cogne au fond de la vallée, point de départ du Tour du Grand Paradis et des excursions vers le Lago Djouan. Alpages actifs et faune protégée caractérisent ce coin de parc.",
+        "description_de": "Valnontey ist Cognes Weiler am Talende, Ausgangspunkt für die Gran-Paradiso-Runde und Wanderungen zum Lago Djouan. Aktive Almen und geschützte Tierwelt prägen diese Ecke des Parks.",
+        "official_url": "https://www.comune.cogne.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Val di Cogne"
+    ],
+    "official_url": "https://www.parcogranparadiso.it/",
+    "source": "Parco Nazionale del Gran Paradiso — Ente di gestione"
+  },
+  {
+    "id": "valsavarenche",
+    "name_it": "Valsavarenche",
+    "name_en": "Valsavarenche",
+    "name_fr": "Valsavarenche",
+    "name_de": "Valsavarenche",
+    "eyebrow_it": "Valle selvaggia del Gran Paradiso",
+    "eyebrow_en": "Wild valley of Gran Paradiso",
+    "eyebrow_fr": "Vallée sauvage du Grand Paradis",
+    "eyebrow_de": "Wildes Tal des Gran Paradiso",
+    "description_it": "La Valsavarenche è la valle più selvaggia del versante valdostano del Gran Paradiso: un cul-de-sac di gneiss e ghiacciai dove lo stambecco regna indisturbato. Il villaggio di Valsavarenche e le frazioni di Eaux Rousses e Pont sono base per ascensioni al Gran Paradiso e al Rifugio Vittorio Sella.",
+    "description_en": "Valsavarenche is the wildest valley on the Valdostan side of Gran Paradiso: a gneiss-and-glacier cul-de-sac where ibex reign undisturbed. The village of Valsavarenche and hamlets of Eaux Rousses and Pont are bases for climbs to Gran Paradiso and Rifugio Vittorio Sella.",
+    "description_fr": "La Valsavarenche est la vallée la plus sauvage du versant valdôtain du Grand Paradis : un cul-de-sac de gneiss et de glaciers où le bouquetin règne sans être dérangé. Le village de Valsavarenche et les hameaux d'Eaux Rousses et de Pont sont des bases pour les ascensions au Grand Paradis et au Rifugio Vittorio Sella.",
+    "description_de": "Die Valsavarenche ist das wildeste Tal auf der Valdostanischen Seite des Gran Paradiso: eine Gneis-und-Gletscher-Sackgasse, in der Steinböcke ungestört regieren. Das Dorf Valsavarenche und die Weiler Eaux Rousses und Pont sind Basislager für Besteigungen des Gran Paradiso und des Rifugio Vittorio Sella.",
+    "image": "/trails/tour-gran-paradiso-tappa-1-cogne-valnontey.jpg",
+    "towns": [
+      {
+        "id": "valsavarenche",
+        "name_it": "Valsavarenche",
+        "name_en": "Valsavarenche",
+        "name_fr": "Valsavarenche",
+        "name_de": "Valsavarenche",
+        "description_it": "Unico comune dell'omonima valle, Valsavarenche vive in simbiosi con il Parco Nazionale del Gran Paradiso. L'economia si basa su turismo escursionistico, alpeggi e la tradizione dell'alpinismo paradisiano.",
+        "description_en": "The sole municipality of its namesake valley, Valsavarenche lives in symbiosis with Gran Paradiso National Park. The economy rests on hiking tourism, alpine pastures and the tradition of Paradiso mountaineering.",
+        "description_fr": "Seule commune de la vallée éponyme, Valsavarenche vit en symbiose avec le Parc National du Grand Paradis. L'économie repose sur le tourisme de randonnée, les alpages et la tradition de l'alpinisme du Grand Paradis.",
+        "description_de": "Die einzige Gemeinde des gleichnamigen Tals lebt in Symbiose mit dem Nationalpark Gran Paradiso. Die Wirtschaft basiert auf Wandertourismus, Almen und der Tradition des Paradiso-Bergsteigens.",
+        "official_url": "https://www.comune.valsavarenche.ao.it/"
+      },
+      {
+        "id": "eaux-rousses",
+        "name_it": "Eaux Rousses",
+        "name_en": "Eaux Rousses",
+        "name_fr": "Eaux Rousses",
+        "name_de": "Eaux Rousses",
+        "description_it": "Frazione di Valsavarenche all'imbocco della valle, Eaux Rousses è punto di transito tra Cogne e la valle del Rhêmes. Alpeggi e sentieri verso il Colle del Nivolet ne fanno un crocevia escursionistico.",
+        "description_en": "A Valsavarenche hamlet at the valley mouth, Eaux Rousses is a crossroads between Cogne and Val di Rhêmes. Alpine pastures and trails toward Colle del Nivolet make it a hiking junction.",
+        "description_fr": "Hameau de Valsavarenche à l'entrée de la vallée, Eaux Rousses est un carrefour entre Cogne et la Val di Rhêmes. Alpages et sentiers vers le Colle del Nivolet en font une jonction de randonnée.",
+        "description_de": "Ein Weiler von Valsavarenche am Taleingang, Eaux Rousses ist ein Kreuzungspunkt zwischen Cogne und dem Val di Rhêmes. Almen und Wege zum Colle del Nivolet machen es zu einem Wanderknotenpunkt.",
+        "official_url": "https://www.comune.valsavarenche.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Valsavarenche"
+    ],
+    "official_url": "https://www.parcogranparadiso.it/",
+    "source": "Parco Nazionale del Gran Paradiso — Ente di gestione"
+  },
+  {
+    "id": "valgrisenche",
+    "name_it": "Valgrisenche",
+    "name_en": "Valgrisenche",
+    "name_fr": "Valgrisenche",
+    "name_de": "Valgrisenche",
+    "eyebrow_it": "Valle della diga e del ghiaccio",
+    "eyebrow_en": "Valley of dam and ice",
+    "eyebrow_fr": "Vallée du barrage et des glaces",
+    "eyebrow_de": "Tal des Staudamms und der Gletscher",
+    "description_it": "La Valgrisenche è una valle laterale della Dora Baltea, nota per la grande diga idroelettrica e per i ghiacciai che alimentano la produzione di energia. Il paesaggio alterna boschi di larice, alpeggi e viste sul Becca di Viou. Meno turistica delle valli limitrofe, offre un'esperienza autentica di montagna valdostana.",
+    "description_en": "Valgrisenche is a side valley of the Dora Baltea, known for its large hydroelectric dam and the glaciers that feed power production. The landscape alternates larch forest, alpine pasture and views of Becca di Viou. Less touristy than neighbouring valleys, it offers an authentic Valdostan mountain experience.",
+    "description_fr": "La Valgrisenche est une vallée latérale de la Doire Baltée, connue pour son grand barrage hydroélectrique et les glaciers qui alimentent la production d'énergie. Le paysage alterne forêt de mélèzes, alpages et vues sur la Becca di Viou. Moins touristique que les vallées voisines, elle offre une expérience authentique de montagne valdôtaine.",
+    "description_de": "Die Valgrisenche ist ein Seitental der Dora Baltea, bekannt für seinen großen Wasserkraftdamm und die Gletscher, die die Energieproduktion speisen. Die Landschaft wechselt zwischen Lärchenwald, Alpweiden und Ausblicken auf die Becca di Viou. Weniger touristisch als die Nachbartäler, bietet sie ein authentisches Valdostanisches Bergerlebnis.",
+    "image": "/cultura/valgrisenche.jpg",
+    "towns": [
+      {
+        "id": "valgrisenche",
+        "name_it": "Valgrisenche",
+        "name_en": "Valgrisenche",
+        "name_fr": "Valgrisenche",
+        "name_de": "Valgrisenche",
+        "description_it": "Comune unico dell'omonima valle, Valgrisenche conserva tradizioni di pastorizia e artigianato del legno. La diga e i sentieri verso i ghiacciai attirano escursionisti e alpinisti in cerca di ambienti meno affollati.",
+        "description_en": "The sole municipality of its namesake valley, Valgrisenche preserves pastoral traditions and woodcraft. The dam and trails toward the glaciers attract hikers and climbers seeking less crowded terrain.",
+        "description_fr": "Commune unique de la vallée éponyme, Valgrisenche conserve des traditions pastorales et l'artisanat du bois. Le barrage et les sentiers vers les glaciers attirent randonneurs et alpinistes en quête de terrains moins fréquentés.",
+        "description_de": "Die einzige Gemeinde des gleichnamigen Tals bewahrt Hirtentraditionen und Holzhandwerk. Der Staudamm und Wege zu den Gletschern ziehen Wanderer und Kletterer an, die weniger überlaufene Gebiete suchen.",
+        "official_url": "https://www.comune.valgrisenche.ao.it/"
+      },
+      {
+        "id": "bonne",
+        "name_it": "Bonne",
+        "name_en": "Bonne",
+        "name_fr": "Bonne",
+        "name_de": "Bonne",
+        "description_it": "Bonne è la frazione principale di Valgrisenche, situata poco sotto la diga. Da qui partono i sentieri verso gli alpeggi e i ghiacciai della valle, in un contesto di alta montagna accessibile.",
+        "description_en": "Bonne is Valgrisenche's main hamlet, situated just below the dam. Trails from here lead to the valley's alpine pastures and glaciers in an accessible high-mountain setting.",
+        "description_fr": "Bonne est le hameau principal de Valgrisenche, situé juste en dessous du barrage. Les sentiers de là mènent aux alpages et aux glaciers de la vallée dans un cadre de haute montagne accessible.",
+        "description_de": "Bonne ist der Hauptweiler von Valgrisenche, gelegen kurz unterhalb des Staudamms. Von hier führen Wege zu den Almen und Gletschern des Tals in einem zugänglichen Hochgebirgsumfeld.",
+        "official_url": "https://www.comune.valgrisenche.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Valgrisenche"
+    ],
+    "official_url": "https://www.regione.vda.it/turismo",
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
+    "image_credit": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר (CC BY-SA 4.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:ValgrisencheValleAug312024_02.jpg"
+  },
+  {
+    "id": "val-di-rhemes",
+    "name_it": "Val di Rhêmes",
+    "name_en": "Val di Rhêmes",
+    "name_fr": "Val di Rhêmes",
+    "name_de": "Val di Rhêmes",
+    "eyebrow_it": "Valle dei piccoli paradisi",
+    "eyebrow_en": "Valley of small paradises",
+    "eyebrow_fr": "Vallée des petits paradis",
+    "eyebrow_de": "Tal der kleinen Paradiese",
+    "description_it": "La Val di Rhêmes è una valle laterale del Gran Paradiso, definita «valle dei piccoli paradisi» per la bellezza dei suoi paesaggi e la ricchezza naturalistica. Rhêmes-Notre-Dame e Rhêmes-Saint-Georges conservano architettura tradizionale e sentieri verso il Colle del Nivolet. L'Alta Via 2 attraversa la valle, collegando rifugi e alpeggi.",
+    "description_en": "Val di Rhêmes is a Gran Paradiso side valley, called the «valley of small paradises» for its landscape beauty and natural richness. Rhêmes-Notre-Dame and Rhêmes-Saint-Georges preserve traditional architecture and trails toward Colle del Nivolet. Alta Via 2 crosses the valley, linking huts and alpine pastures.",
+    "description_fr": "Le Val di Rhêmes est une vallée latérale du Grand Paradis, appelée « vallée des petits paradis » pour la beauté de ses paysages et sa richesse naturelle. Rhêmes-Notre-Dame et Rhêmes-Saint-Georges conservent une architecture traditionnelle et des sentiers vers le Colle del Nivolet. L'Alta Via 2 traverse la vallée, reliant refuges et alpages.",
+    "description_de": "Das Val di Rhêmes ist ein Seitental des Gran Paradiso, als «Tal der kleinen Paradiese» für seine Landschaftsschönheit und Naturreichtum bekannt. Rhêmes-Notre-Dame und Rhêmes-Saint-Georges bewahren traditionelle Architektur und Wege zum Colle del Nivolet. Die Alta Via 2 durchquert das Tal und verbindet Hütten und Almen.",
+    "image": "/cultura/val-di-rhemes.jpg",
+    "towns": [
+      {
+        "id": "rhemes-notre-dame",
+        "name_it": "Rhêmes-Notre-Dame",
+        "name_en": "Rhêmes-Notre-Dame",
+        "name_fr": "Rhêmes-Notre-Dame",
+        "name_de": "Rhêmes-Notre-Dame",
+        "description_it": "Rhêmes-Notre-Dame è il comune più alto della valle, con accesso al Parco Nazionale del Gran Paradiso. Il Rifugio Chalet de l'Épée e i sentieri verso Eaux Rousses ne fanno un centro escursionistico di riferimento.",
+        "description_en": "Rhêmes-Notre-Dame is the uppermost municipality of the valley, with access to Gran Paradiso National Park. Rifugio Chalet de l'Épée and trails toward Eaux Rousses make it a key hiking centre.",
+        "description_fr": "Rhêmes-Notre-Dame est la commune la plus haute de la vallée, avec accès au Parc National du Grand Paradis. Le Rifugio Chalet de l'Épée et les sentiers vers Eaux Rousses en font un centre de randonnée de référence.",
+        "description_de": "Rhêmes-Notre-Dame ist die höchste Gemeinde des Tals mit Zugang zum Nationalpark Gran Paradiso. Das Rifugio Chalet de l'Épée und Wege nach Eaux Rousses machen es zu einem wichtigen Wanderzentrum.",
+        "official_url": "https://www.comune.rhemes-notre-dame.ao.it/"
+      },
+      {
+        "id": "rhemes-saint-georges",
+        "name_it": "Rhêmes-Saint-Georges",
+        "name_en": "Rhêmes-Saint-Georges",
+        "name_fr": "Rhêmes-Saint-Georges",
+        "name_de": "Rhêmes-Saint-Georges",
+        "description_it": "Comune di fondovalle della Val di Rhêmes, Rhêmes-Saint-Georges è la porta d'accesso alla valle. Chiese romaniche e frazioni disseminate lungo la strada verso Notre-Dame caratterizzano il territorio.",
+        "description_en": "Val di Rhêmes' valley-floor municipality, Rhêmes-Saint-Georges is the gateway to the valley. Romanesque churches and hamlets scattered along the road to Notre-Dame characterise the area.",
+        "description_fr": "Commune de fond de vallée du Val di Rhêmes, Rhêmes-Saint-Georges est la porte d'accès à la vallée. Églises romanes et hameaux dispersés le long de la route vers Notre-Dame caractérisent le territoire.",
+        "description_de": "Die Talgemeinde des Val di Rhêmes, Rhêmes-Saint-Georges, ist das Tor zur Talschaft. Romanische Kirchen und entlang der Straße nach Notre-Dame verstreute Weiler prägen das Gebiet.",
+        "official_url": "https://www.comune.rhemes-saint-georges.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Val di Rhêmes"
+    ],
+    "official_url": "https://www.parcogranparadiso.it/",
+    "source": "Parco Nazionale del Gran Paradiso — Ente di gestione",
+    "image_credit": "Rinina25 Twice25 (CC BY-SA 2.5)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Valle_d%27Aosta-Rh%C3%AAmes-Notre-Dame-DSCF6811.JPG"
+  },
+  {
+    "id": "la-thuile",
+    "name_it": "La Thuile",
+    "name_en": "La Thuile",
+    "name_fr": "La Thuile",
+    "name_de": "La Thuile",
+    "eyebrow_it": "Confine italiano con la Savoia",
+    "eyebrow_en": "Italian border with Savoie",
+    "eyebrow_fr": "Frontière italienne avec la Savoie",
+    "eyebrow_de": "Italienische Grenze zur Savoie",
+    "description_it": "La Thuile è la valle del confine con la Francia, attraversata dal Colle del Piccolo San Bernardo. Paesaggio di larici, laghi glaciali — Rutor, Verney — e rifugi storici come Deffeyes e Elisabetta. L'Alta Via 2 e il Tour du Rutor attraversano un territorio dove storia di confine e montagna si intrecciano.",
+    "description_en": "La Thuile is the border valley with France, crossed by Colle del Piccolo San Bernardo. A landscape of larch, glacial lakes — Rutor, Verney — and historic huts such as Deffeyes and Elisabetta. Alta Via 2 and the Rutor Tour cross a territory where border history and mountain life intertwine.",
+    "description_fr": "La Thuile est la vallée frontalière avec la France, traversée par le Petit-Saint-Bernard. Paysage de mélèzes, lacs glaciaires — Rutor, Verney — et refuges historiques comme Deffeyes et Elisabetta. L'Alta Via 2 et le Tour du Rutor traversent un territoire où histoire frontalière et vie de montagne s'entrecroisent.",
+    "description_de": "La Thuile ist das Grenztal zu Frankreich, gequert vom Kleinen Sankt Bernhard. Eine Landschaft aus Lärchen, Gletscherseen — Rutor, Verney — und historischen Hütten wie Deffeyes und Elisabetta. Die Alta Via 2 und die Rutor-Runde durchqueren ein Gebiet, wo Grenzgeschichte und Bergalltag sich verflechten.",
+    "image": "/trails/tour-rutor-tappa-1-la-thuile-rifugio-deffeyes.jpg",
+    "towns": [
+      {
+        "id": "la-thuile",
+        "name_it": "La Thuile",
+        "name_en": "La Thuile",
+        "name_fr": "La Thuile",
+        "name_de": "La Thuile",
+        "description_it": "La Thuile è comune e stazione turistica dell'alta valle, con accesso al Colle del Piccolo San Bernardo e ai laghi del Rutor. Sci, escursionismo e storia del confine definiscono l'identità del paese.",
+        "description_en": "La Thuile is both municipality and upper-valley resort, with access to Colle del Piccolo San Bernardo and the Rutor lakes. Skiing, hiking and border history define the village's identity.",
+        "description_fr": "La Thuile est à la fois commune et station touristique de la haute vallée, avec accès au Petit-Saint-Bernard et aux lacs du Rutor. Ski, randonnée et histoire frontalière définissent l'identité du village.",
+        "description_de": "La Thuile ist Gemeinde und Touristenort des Obertals, mit Zugang zum Kleinen Sankt Bernhard und den Rutor-Seen. Skifahren, Wandern und Grenzgeschichte prägen die Identität des Dorfes.",
+        "official_url": "https://www.comune.lathuile.ao.it/"
+      },
+      {
+        "id": "bussy-les-dames",
+        "name_it": "Bussy-les-Dames",
+        "name_en": "Bussy-les-Dames",
+        "name_fr": "Bussy-les-Dames",
+        "name_de": "Bussy-les-Dames",
+        "description_it": "Frazione di La Thuile ai margini della foresta, Bussy-les-Dames è punto di partenza per sentieri verso il Colle del Piccolo San Bernardo e i laghi del Rutor.",
+        "description_en": "A La Thuile hamlet at the forest edge, Bussy-les-Dames is a starting point for trails toward Colle del Piccolo San Bernardo and the Rutor lakes.",
+        "description_fr": "Hameau de La Thuile en lisière de forêt, Bussy-les-Dames est un point de départ pour les sentiers vers le Petit-Saint-Bernard et les lacs du Rutor.",
+        "description_de": "Ein Weiler von La Thuile am Waldrand, Bussy-les-Dames ist Ausgangspunkt für Wege zum Kleinen Sankt Bernhard und den Rutor-Seen.",
+        "official_url": "https://www.comune.lathuile.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "La Thuile"
+    ],
+    "official_url": "https://www.regione.vda.it/turismo",
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+  },
+  {
+    "id": "bassa-valle",
+    "name_it": "Bassa Valle",
+    "name_en": "Lower Valley",
+    "name_fr": "Basse Vallée",
+    "name_de": "Untertal",
+    "eyebrow_it": "Vigneti, castagni e borghi walser",
+    "eyebrow_en": "Vineyards, chestnuts and Walser villages",
+    "eyebrow_fr": "Vignobles, châtaigniers et villages walser",
+    "eyebrow_de": "Weinberge, Kastanien und Walser-Dörfer",
+    "description_it": "La Bassa Valle è il tratto valdostano della Dora Baltea dal confine piemontese fino ad Aosta: vigneti terrazzati, castagneti e borghi walser come Perloz e Donnas. Il clima più mite permette viticoltura e coltivazioni di fondovalle. L'Alta Via 1 e l'Alta Via 2 partono o transitano da qui, collegando la pianura alpina alle valli altre.",
+    "description_en": "The Lower Valley is the Valdostan stretch of the Dora Baltea from the Piedmont border to Aosta: terraced vineyards, chestnut groves and Walser villages like Perloz and Donnas. A milder climate allows viticulture and valley-floor cultivation. Alta Via 1 and Alta Via 2 start or pass through here, linking the alpine plain to the upper valleys.",
+    "description_fr": "La Basse Vallée est le tronçon valdôtain de la Doire Baltée depuis la frontière piémontaise jusqu'à Aoste : vignes en terrasses, châtaigneraies et villages walser comme Perloz et Donnas. Le climat plus doux permet la viticulture et les cultures de fond de vallée. L'Alta Via 1 et l'Alta Via 2 partent ou transitent d'ici, reliant la plaine alpine aux hautes vallées.",
+    "description_de": "Das Untertal ist der Valdostanische Abschnitt der Dora Baltea von der piemontesischen Grenze bis nach Aosta: terrassierte Weinberge, Kastanienwälder und Walser-Dörfer wie Perloz und Donnas. Ein milderes Klima erlaubt Weinbau und Talbodenlandwirtschaft. Die Alta Via 1 und Alta Via 2 beginnen oder verlaufen hier und verbinden die Alpenebene mit den oberen Tälern.",
+    "image": "/trails/donnas.jpg",
+    "towns": [
+      {
+        "id": "donnas",
+        "name_it": "Donnas",
+        "name_en": "Donnas",
+        "name_fr": "Donnas",
+        "name_de": "Donnas",
+        "description_it": "Donnas è famosa per i vigneti terrazzati e il vino Picotendro DOC. Il borgo medievale e la porta d'accesso all'Alta Via 1 ne fanno una tappa culturale e enogastronomica della Bassa Valle.",
+        "description_en": "Donnas is famous for terraced vineyards and Picotendro DOC wine. Its medieval village and gateway to Alta Via 1 make it a cultural and gastronomic stop in the Lower Valley.",
+        "description_fr": "Donnas est célèbre pour ses vignes en terrasses et le vin Picotendro DOC. Le bourg médiéval et la porte d'accès à l'Alta Via 1 en font une étape culturelle et gastronomique de la Basse Vallée.",
+        "description_de": "Donnas ist berühmt für seine Terrassenweinberge und den Picotendro-DOC-Wein. Das mittelalterliche Dorf und das Eingangstor zur Alta Via 1 machen es zu einer kulturellen und kulinarischen Station im Untertal.",
+        "official_url": "https://www.comune.donnas.ao.it/"
+      },
+      {
+        "id": "pont-saint-martin",
+        "name_it": "Pont-Saint-Martin",
+        "name_en": "Pont-Saint-Martin",
+        "name_fr": "Pont-Saint-Martin",
+        "name_de": "Pont-Saint-Martin",
+        "description_it": "Pont-Saint-Martin segna il confine tra Piemonte e Valle d'Aosta con il suo ponte romano. Il comune è porta d'ingresso regionale e base per escursioni verso i terrazzamenti vitati e i castagneti.",
+        "description_en": "Pont-Saint-Martin marks the Piedmont–Valle d'Aosta border with its Roman bridge. The municipality is the regional gateway and a base for walks through terraced vineyards and chestnut woods.",
+        "description_fr": "Pont-Saint-Martin marque la frontière entre le Piémont et la Vallée d'Aoste avec son pont romain. La commune est la porte d'entrée régionale et une base pour les excursions à travers les vignes en terrasses et les châtaigneraies.",
+        "description_de": "Pont-Saint-Martin markiert die Grenze zwischen dem Piemont und dem Aostatal mit seiner römischen Brücke. Die Gemeinde ist das regionale Eingangstor und Ausgangspunkt für Wanderungen durch Terrassenweinberge und Kastanienwälder.",
+        "official_url": "https://www.comune.pont-saint-martin.ao.it/"
+      },
+      {
+        "id": "perloz",
+        "name_it": "Perloz",
+        "name_en": "Perloz",
+        "name_fr": "Perloz",
+        "name_de": "Perloz",
+        "description_it": "Perloz è un borgo walser arroccato sui terrazzamenti della Bassa Valle, con forni comunitari e architettura tradizionale. Tappa dell'Alta Via 1, offre panorami sul fondovalle e sui vigneti di Donnas.",
+        "description_en": "Perloz is a Walser village perched on Lower Valley terraces, with communal ovens and traditional architecture. An Alta Via 1 stage, it offers views over the valley floor and Donnas vineyards.",
+        "description_fr": "Perloz est un village walser perché sur les terrasses de la Basse Vallée, avec des fours communautaires et une architecture traditionnelle. Étape de l'Alta Via 1, il offre des panoramas sur le fond de vallée et les vignes de Donnas.",
+        "description_de": "Perloz ist ein Walser-Dorf auf den Terrassen des Untertals, mit Gemeinschaftsöfen und traditioneller Architektur. Eine Etappe der Alta Via 1, bietet es Ausblicke über den Talboden und die Weinberge von Donnas.",
+        "official_url": "https://www.comune.perloz.ao.it/"
+      },
+      {
+        "id": "aosta",
+        "name_it": "Aosta",
+        "name_en": "Aosta",
+        "name_fr": "Aoste",
+        "name_de": "Aosta",
+        "description_it": "Capoluogo regionale, Aosta conserva mura romane, il Criptoportico e una vita culturale vivace. La città è crocevia verso tutte le valli laterali e sede della Fiera di Sant'Orso.",
+        "description_en": "Regional capital, Aosta preserves Roman walls, the Cryptoporticus and a lively cultural scene. The city is a crossroads to all side valleys and home to the Sant'Orso Fair.",
+        "description_fr": "Capitale régionale, Aoste conserve des remparts romains, le Cryptoportique et une vie culturelle animée. La ville est un carrefour vers toutes les vallées latérales et accueille la Foire de Saint-Ours.",
+        "description_de": "Die Regionshauptstadt bewahrt römische Stadtmauern, den Kryptoportikus und ein lebendiges Kulturleben. Die Stadt ist Kreuzungspunkt zu allen Seitentälern und Heimat der Sankt-Ursus-Messe.",
+        "official_url": "https://www.comune.aosta.it/"
+      }
+    ],
+    "trail_labels": [
+      "Bassa Valle",
+      "Bassa Valle — Mont Mars"
+    ],
+    "official_url": "https://www.regione.vda.it/turismo",
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+  },
+  {
+    "id": "valle-gran-san-bernardo",
+    "name_it": "Valle del Gran San Bernardo",
+    "name_en": "Great St Bernard Valley",
+    "name_fr": "Vallée du Grand-Saint-Bernard",
+    "name_de": "Großer-Sankt-Bernhard-Tal",
+    "eyebrow_it": "Antico passo alpino",
+    "eyebrow_en": "Ancient alpine pass",
+    "eyebrow_fr": "Ancien col alpin",
+    "eyebrow_de": "Uralter Alpenpass",
+    "description_it": "La Valle del Gran San Bernardo collega la Valle d'Aosta alla Svizzera attraverso uno dei passi più antichi delle Alpi. Saint-Rhémy-en-Bosses e Etroubles conservano tradizioni di transito, oreficeria e produzione del Jambon de Bosses DOP. L'Alta Via 1 attraversa la valle verso il Rifugio Frassati e il Colle del Gran San Bernardo.",
+    "description_en": "The Great St Bernard Valley links Valle d'Aosta to Switzerland through one of the Alps' oldest passes. Saint-Rhémy-en-Bosses and Etroubles preserve transit traditions, goldsmithing and DOP Jambon de Bosses production. Alta Via 1 crosses the valley toward Rifugio Frassati and Colle del Gran San Bernardo.",
+    "description_fr": "La Vallée du Grand-Saint-Bernard relie la Vallée d'Aoste à la Suisse à travers l'un des cols les plus anciens des Alpes. Saint-Rhémy-en-Bosses et Etroubles conservent des traditions de transit, d'orfèvrerie et de production du Jambon de Bosses AOP. L'Alta Via 1 traverse la vallée vers le Rifugio Frassati et le Col du Grand-Saint-Bernard.",
+    "description_de": "Das Große-Sankt-Bernhard-Tal verbindet das Aostatal über einen der ältesten Pässe der Alpen mit der Schweiz. Saint-Rhémy-en-Bosses und Etroubles bewahren Transittraditionen, Goldschmiedehandwerk und die Produktion des g.U.-Jambon de Bosses. Die Alta Via 1 durchquert das Tal zum Rifugio Frassati und zum Großen Sankt Bernhard.",
+    "image": "/trails/grand-saint-bernard.jpg",
+    "towns": [
+      {
+        "id": "saint-rhemy-en-bosses",
+        "name_it": "Saint-Rhémy-en-Bosses",
+        "name_en": "Saint-Rhémy-en-Bosses",
+        "name_fr": "Saint-Rhémy-en-Bosses",
+        "name_de": "Saint-Rhémy-en-Bosses",
+        "description_it": "Saint-Rhémy-en-Bosses è il comune del Jambon de Bosses DOP e dell'ospitalità storica del Gran San Bernardo. Alpeggi, rifugi e sentieri verso il passo ne fanno un crocevia escursionistico e gastronomico.",
+        "description_en": "Saint-Rhémy-en-Bosses is the municipality of DOP Jambon de Bosses and the historic hospitality of Great St Bernard. Alpine pastures, huts and trails toward the pass make it a hiking and gastronomic crossroads.",
+        "description_fr": "Saint-Rhémy-en-Bosses est la commune du Jambon de Bosses AOP et de la tradition d'hospitalité du Grand-Saint-Bernard. Alpages, refuges et sentiers vers le col en font un carrefour de randonnée et de gastronomie.",
+        "description_de": "Saint-Rhémy-en-Bosses ist die Gemeinde des g.U.-Jambon de Bosses und der historischen Gastfreundschaft des Großen Sankt Bernhards. Almen, Hütten und Wege zum Pass machen es zu einem Wander- und Gastronomiekreuzpunkt.",
+        "official_url": "https://www.comune.saintrhemyenbosses.ao.it/"
+      },
+      {
+        "id": "etroubles",
+        "name_it": "Etroubles",
+        "name_en": "Etroubles",
+        "name_fr": "Etroubles",
+        "name_de": "Etroubles",
+        "description_it": "Etroubles è un borgo di fondovalle con museo a cielo aperto e tradizione di oreficeria. Da qui si risale verso Saint-Rhémy e il Colle del Gran San Bernardo, lungo l'antica via del passo.",
+        "description_en": "Etroubles is a valley-floor village with an open-air museum and goldsmithing tradition. From here you climb toward Saint-Rhémy and Colle del Gran San Bernardo along the ancient pass route.",
+        "description_fr": "Etroubles est un village de fond de vallée avec un musée à ciel ouvert et une tradition d'orfèvrerie. De là on monte vers Saint-Rhémy et le Col du Grand-Saint-Bernard, le long de l'ancienne voie du col.",
+        "description_de": "Etroubles ist ein Talbodendorf mit einem Freilichtmuseum und Goldschmiedetradition. Von hier steigt man nach Saint-Rhémy und zum Großen Sankt Bernhard entlang der alten Passroute auf.",
+        "official_url": "https://www.comune.etroubles.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Valle del Gran San Bernardo"
+    ],
+    "official_url": "https://www.regione.vda.it/turismo",
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+  },
+  {
+    "id": "champorcher",
+    "name_it": "Champorcher",
+    "name_en": "Champorcher",
+    "name_fr": "Champorcher",
+    "name_de": "Champorcher",
+    "eyebrow_it": "Valle verde della Bassa Valle",
+    "eyebrow_en": "Green valley of the Lower Valley",
+    "eyebrow_fr": "Vallée verte de la Basse Vallée",
+    "eyebrow_de": "Grünes Seitental des Untertals",
+    "description_it": "Champorcher è una valle laterale della Bassa Valle, verde e boscosa, che risale verso il Colle di Champorcher e il Crest Damon. Meno conosciuta delle valli principali, offre sentieri tranquilli, rifugi come Dondena e un'atmosfera di montagna autentica. L'Alta Via 2 conclude qui il suo percorso valdostano.",
+    "description_en": "Champorcher is a green, wooded side valley of the Lower Valley, climbing toward Colle di Champorcher and Crest Damon. Less known than the main valleys, it offers quiet trails, huts such as Dondena and an authentic mountain atmosphere. Alta Via 2 ends its Valdostan route here.",
+    "description_fr": "Champorcher est une vallée latérale verdoyante et boisée de la Basse Vallée, qui monte vers le Colle di Champorcher et le Crest Damon. Moins connue que les grandes vallées, elle offre des sentiers tranquilles, des refuges comme le Dondena et une atmosphère de montagne authentique. L'Alta Via 2 termine ici son parcours valdôtain.",
+    "description_de": "Champorcher ist ein grünes, bewaldetes Seitental des Untertals, das zum Colle di Champorcher und Crest Damon aufsteigt. Weniger bekannt als die Haupttäler, bietet es ruhige Wege, Hütten wie das Dondena und eine authentische Bergstimmung. Die Alta Via 2 beendet hier ihren Valdostanischen Verlauf.",
+    "image": "/trails/alta-via-2-tappa-12-rifugio-dondena-champorcher.jpg",
+    "towns": [
+      {
+        "id": "champorcher",
+        "name_it": "Champorcher",
+        "name_en": "Champorcher",
+        "name_fr": "Champorcher",
+        "name_de": "Champorcher",
+        "description_it": "Champorcher è comune unico dell'omonima valle, con frazioni come Chardonney e Mollere. Sci, escursionismo e produzione caseira caratterizzano questo angolo della Bassa Valle.",
+        "description_en": "Champorcher is the sole municipality of its namesake valley, with hamlets such as Chardonney and Mollere. Skiing, hiking and dairy production characterise this corner of the Lower Valley.",
+        "description_fr": "Champorcher est la seule commune de la vallée éponyme, avec des hameaux comme Chardonney et Mollere. Ski, randonnée et production fromagère caractérisent ce coin de la Basse Vallée.",
+        "description_de": "Champorcher ist die einzige Gemeinde des gleichnamigen Tals mit Weilern wie Chardonney und Mollere. Skifahren, Wandern und Käseproduktion prägen diese Ecke des Untertals.",
+        "official_url": "https://www.comune.champorcher.ao.it/"
+      },
+      {
+        "id": "dondena",
+        "name_it": "Dondena",
+        "name_en": "Dondena",
+        "name_fr": "Dondena",
+        "name_de": "Dondena",
+        "description_it": "Dondena è la frazione più alta di Champorcher, base per il Rifugio Dondena e per ascensioni verso il Crest Damon. Alpeggi e boschi di larice definiscono il paesaggio.",
+        "description_en": "Dondena is Champorcher's highest hamlet, base for Rifugio Dondena and climbs toward Crest Damon. Alpine pastures and larch forest define the landscape.",
+        "description_fr": "Dondena est le hameau le plus haut de Champorcher, base pour le Rifugio Dondena et les ascensions vers le Crest Damon. Alpages et forêts de mélèzes définissent le paysage.",
+        "description_de": "Dondena ist der höchste Weiler von Champorcher, Basislager für das Rifugio Dondena und Besteigungen zum Crest Damon. Almen und Lärchenwälder prägen die Landschaft.",
+        "official_url": "https://www.comune.champorcher.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Champorcher"
+    ],
+    "official_url": "https://www.regione.vda.it/turismo",
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+  },
+  {
+    "id": "val-di-gaby",
+    "name_it": "Valle di Gaby",
+    "name_en": "Gaby Valley",
+    "name_fr": "Vallée de Gaby",
+    "name_de": "Gaby-Tal",
+    "eyebrow_it": "Walser nascosta del Monte Rosa",
+    "eyebrow_en": "Hidden Walser valley of Monte Rosa",
+    "eyebrow_fr": "Vallée walser cachée du Mont Rose",
+    "eyebrow_de": "Verborgenes Walser-Tal des Monte Rosa",
+    "description_it": "La Valle di Gaby è una valle laterale della Val d'Ayas, stretta e walser, con il borgo di Niel come gioiello architettonico. Case in pietra scura, stretti terrazzamenti e tradizioni di pastorizia conservano un'atmosfera di tempi passati. L'Alta Via 1 scende da Gressoney verso Niel e il Rifugio Barma.",
+    "description_en": "Val di Gaby is a narrow Walser side valley of Val d'Ayas, with the village of Niel as an architectural gem. Dark-stone houses, tight terraces and pastoral traditions preserve an atmosphere of times past. Alta Via 1 descends from Gressoney toward Niel and Rifugio Barma.",
+    "description_fr": "La Vallée de Gaby est une vallée latérale étroite et walser du Val d'Ayas, avec le village de Niel comme joyau architectural. Maisons en pierre sombre, petites terrasses et traditions pastorales conservent une atmosphère d'autrefois. L'Alta Via 1 descend de Gressoney vers Niel et le Rifugio Barma.",
+    "description_de": "Das Gaby-Tal ist ein schmales Walser-Seitental des Val d'Ayas mit dem Dorf Niel als architektonischem Juwel. Dunkle Steinhäuser, enge Terrassen und Hirtentraditionen bewahren eine Atmosphäre vergangener Zeiten. Die Alta Via 1 steigt von Gressoney nach Niel und zum Rifugio Barma ab.",
+    "image": "/trails/alta-via-1-tappa-4-rifugio-barma-niel.jpg",
+    "towns": [
+      {
+        "id": "gaby",
+        "name_it": "Gaby",
+        "name_en": "Gaby",
+        "name_fr": "Gaby",
+        "name_de": "Gaby",
+        "description_it": "Gaby è il comune della valle, con frazioni come Niel e Lignana. Architettura walser, alpeggi e sentieri verso il Colle del Pinter ne fanno una meta per chi cerca autenticità lontano dalle rotte più battute.",
+        "description_en": "Gaby is the valley municipality, with hamlets such as Niel and Lignana. Walser architecture, alpine pastures and trails toward Colle del Pinter make it a destination for those seeking authenticity off the beaten path.",
+        "description_fr": "Gaby est la commune de la vallée, avec des hameaux comme Niel et Lignana. Architecture walser, alpages et sentiers vers le Col du Pinter en font une destination pour ceux qui recherchent l'authenticité loin des sentiers battus.",
+        "description_de": "Gaby ist die Talgemeinde mit Weilern wie Niel und Lignana. Walser-Architektur, Almen und Wege zum Col Pinter machen es zu einem Ziel für Authentizitätssuchende abseits der ausgetretenen Pfade.",
+        "official_url": "https://www.comune.gaby.ao.it/"
+      },
+      {
+        "id": "niel",
+        "name_it": "Niel",
+        "name_en": "Niel",
+        "name_fr": "Niel",
+        "name_de": "Niel",
+        "description_it": "Niel è il borgo walser più remoto della valle, con case in pietra scura e un'atmosfera sospesa nel tempo. Tappa dell'Alta Via 1, è raggiungibile dal Rifugio Barma lungo un sentiero panoramico.",
+        "description_en": "Niel is the valley's most remote Walser village, with dark-stone houses and a time-suspended atmosphere. An Alta Via 1 stage, it is reachable from Rifugio Barma along a scenic trail.",
+        "description_fr": "Niel est le village walser le plus reculé de la vallée, avec des maisons en pierre sombre et une atmosphère suspendue dans le temps. Étape de l'Alta Via 1, il est accessible depuis le Rifugio Barma le long d'un sentier panoramique.",
+        "description_de": "Niel ist das abgelegenste Walser-Dorf des Tals, mit dunklen Steinhäusern und einer zeitlosen Atmosphäre. Eine Etappe der Alta Via 1, ist es vom Rifugio Barma aus auf einem Panoramaweg erreichbar.",
+        "official_url": "https://www.comune.gaby.ao.it/"
+      }
+    ],
+    "trail_labels": [
+      "Valle di Gaby",
+      "Mont Mars — Valle di Gaby"
+    ],
+    "official_url": "https://www.regione.vda.it/turismo",
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+  }
+]

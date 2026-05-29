@@ -1,0 +1,100 @@
+[
+  {
+    "id": "dora-baltea",
+    "title_it": "La Dora Baltea e i bacini idrografici",
+    "title_en": "Dora Baltea and river basins",
+    "eyebrow_it": "Rete idrografica",
+    "eyebrow_en": "Hydrographic network",
+    "body_it": "La Dora Baltea nasce dal confluente della Buthier e della Dora di Valgrisenche, raccoglie le acque di tutte le valli valdostane principali e sfocia nel Po. I suoi affluenti — Marmore, Lys, Doire baltée, Savara, Grand Eyvia — definiscono bacini con regimi nivo-glaciali: portate minime invernali, picchi primaverili da disgelo e piene estive da temporali.",
+    "body_en": "The Dora Baltea rises from the confluence of the Buthier and Dora di Valgrisenche, collects water from all main Valdostan valleys and flows into the Po. Its tributaries — Marmore, Lys, Doire baltée, Savara, Grand Eyvia — define basins with nivo-glacial regimes: minimum winter flow, spring melt peaks and summer storm floods.",
+    "highlights_it": [
+      "Bacino idrografico interamente in territorio alpino",
+      "Centrali idroelettriche a valle (edificato extra-VdA)",
+      "Qualità dell'acqua generalmente eccellente in alta quota"
+    ],
+    "highlights_en": [
+      "Catchment entirely in alpine territory",
+      "Downstream hydroelectric plants (outside VdA)",
+      "Generally excellent water quality at high altitude"
+    ],
+    "stats": [
+      {
+        "value": 168,
+        "suffix": " km",
+        "label_it": "Lunghezza della Dora Baltea",
+        "label_en": "Length of the Dora Baltea",
+        "source": "Dati idrografici · 168,3 km"
+      },
+      {
+        "value": 184,
+        "label_it": "Ghiacciai censiti in Valle d'Aosta",
+        "label_en": "Catalogued glaciers in Aosta Valley",
+        "source": "Catasto ghiacciai Regione VdA · Fondazione Montagna Sicura (2020)"
+      },
+      {
+        "value": 120,
+        "suffix": " km²",
+        "label_it": "Superficie glaciale regionale",
+        "label_en": "Regional glacier surface",
+        "source": "Catasto ghiacciai Regione VdA · Fondazione Montagna Sicura"
+      }
+    ]
+  },
+  {
+    "id": "glaciers",
+    "title_it": "Ghiacciai valdostani",
+    "title_en": "Valdostan glaciers",
+    "eyebrow_it": "Criosfera",
+    "eyebrow_en": "Cryosphere",
+    "body_it": "I ghiacciai valdostani appartengono ai massicci del Monte Bianco (Miage, Brenva), Monte Rosa (Lys, Indren), Gran Paradiso, Rutor e Grand Combin. Monitorati da Regione e CNR, mostrano ritiro medio di decine di metri all'anno in quota. Per l'escursionista sono fonti di approvvigionamento idrico estivo, indicatori climatici e zone a rischio seracchi e crepacci.",
+    "body_en": "Valdostan glaciers belong to the Mont Blanc (Miage, Brenva), Monte Rosa (Lys, Indren), Gran Paradiso, Rutor and Grand Combin massifs. Monitored by the Region and CNR, they show average retreat of tens of metres per year in altitude. For hikers they are summer water sources, climate indicators and zones of serac and crevasse risk.",
+    "highlights_it": [
+      "Ghiacciaio del Rutor: tra i più studiati per ritiro recente",
+      "Ghiacciaio del Miage: lago proglaciale e morene attive",
+      "Ghiacciai indiani del Rosa accessibili da Gressoney"
+    ],
+    "highlights_en": [
+      "Rutor Glacier: among the most studied for recent retreat",
+      "Miage Glacier: proglacial lake and active moraines",
+      "Rosa 'indian' glaciers accessible from Gressoney"
+    ]
+  },
+  {
+    "id": "lakes",
+    "title_it": "Laghi e bacini alpini",
+    "title_en": "Alpine lakes and basins",
+    "eyebrow_it": "Specchi d'acqua",
+    "eyebrow_en": "Water mirrors",
+    "body_it": "Laghi naturali e artificiali punteggiano l'arco alpino valdostano: Djouan e Teide in Valsavarenche, Arpy e Pietra Rossa in Val Ferret, Checrouit sopra Courmayeur, Blue Lake in Val d'Ayas. Molti sono di origine glaciale (sbarramento morenico) o per frana; altri, come quelli idroelettrici di Valgrisenche e Beauregard, modificano il regime idrologico locale.",
+    "body_en": "Natural and artificial lakes dot the Valdostan alpine arc: Djouan and Teide in Valsavarenche, Arpy and Pietra Rossa in Val Ferret, Checrouit above Courmayeur, Blue Lake in Ayas Valley. Many are glacial in origin (moraine dam) or landslide-formed; others, such as Valgrisenche and Beauregard reservoirs, modify local hydrology.",
+    "highlights_it": [
+      "Lago Djouan: tappa del Tour del Gran Paradiso",
+      "Lago Bleu: iconico specchio di Val d'Ayas",
+      "Laghi di Arpy: morene e flora pioniera"
+    ],
+    "highlights_en": [
+      "Lake Djouan: Gran Paradiso Tour stage",
+      "Blue Lake: iconic Ayas Valley mirror",
+      "Arpy lakes: moraines and pioneer flora"
+    ]
+  },
+  {
+    "id": "springs",
+    "title_it": "Sorgenti, acquiferi e risorse idriche",
+    "title_en": "Springs, aquifers and water resources",
+    "eyebrow_it": "Acqua sul sentiero",
+    "eyebrow_en": "Water on the trail",
+    "body_it": "Le sorgenti lungo i sentieri dipendono da acquiferi fratturati nel granito e gneiss, da circolazione superficiale in morene e da fusione estiva dei ghiacciai. Nelle schede sentiero segnaliamo fonti verificate dove possibile; in alta quota conviene sempre filtrare o trattare l'acqua. La Regione monitora la qualità delle captazioni comunali di fondovalle.",
+    "body_en": "Trail-side springs depend on fractured granite and gneiss aquifers, surficial flow in moraines and summer glacier melt. We flag verified sources on trail pages where possible; at high altitude water should always be filtered or treated. The Region monitors quality of valley-floor municipal intakes.",
+    "highlights_it": [
+      "Acquiferi carbonatici nelle valli meridionali (Champorcher)",
+      "Fonti alpine stagionali: verificare segnaletica CAI",
+      "Rischio contaminazione in pascoli intensivi di fondovalle"
+    ],
+    "highlights_en": [
+      "Carbonate aquifers in southern valleys (Champorcher)",
+      "Seasonal alpine springs: check CAI waymarking",
+      "Contamination risk in intensive valley-floor pastures"
+    ]
+  }
+]

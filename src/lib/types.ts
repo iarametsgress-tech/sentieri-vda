@@ -11,14 +11,62 @@ export const CoordsSchema = z.object({
 });
 export type Coords = z.infer<typeof CoordsSchema>;
 
+export const WaypointTypeSchema = z.enum([
+  'col',
+  'rifugio',
+  'bivacco',
+  'lago',
+  'panorama',
+  'fonte-acqua',
+  'bivio',
+]);
+export type WaypointType = z.infer<typeof WaypointTypeSchema>;
+
+export const WaypointSchema = z.object({
+  name: z.string(),
+  elevation_m: z.number(),
+  distance_from_start_km: z.number().nonnegative(),
+  type: WaypointTypeSchema,
+  note_it: z.string().optional(),
+  note_en: z.string().optional(),
+  note_fr: z.string().optional(),
+  note_de: z.string().optional(),
+});
+export type Waypoint = z.infer<typeof WaypointSchema>;
+
+export const NearbyPeakSchema = z.object({
+  name: z.string(),
+  elevation_m: z.number(),
+  distance_km: z.number().nonnegative(),
+});
+export type NearbyPeak = z.infer<typeof NearbyPeakSchema>;
+
+export const MobileCoverageSchema = z.enum(['good', 'partial', 'none']);
+export type MobileCoverage = z.infer<typeof MobileCoverageSchema>;
+
+export const FitnessLevelSchema = z.union([
+  z.literal(1),
+  z.literal(2),
+  z.literal(3),
+  z.literal(4),
+  z.literal(5),
+]);
+export type FitnessLevel = z.infer<typeof FitnessLevelSchema>;
+
 export const TrailSchema = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/),
   name_it: z.string(),
   name_en: z.string(),
+  name_fr: z.string(),
+  name_de: z.string(),
   shortDescription_it: z.string().max(280),
   shortDescription_en: z.string().max(280),
+  shortDescription_fr: z.string().max(280),
+  shortDescription_de: z.string().max(280),
   description_it: z.string(),
   description_en: z.string(),
+  description_fr: z.string(),
+  description_de: z.string(),
 
   distance_km: z.number().positive(),
   elevation_gain_m: z.number().nonnegative(),
@@ -42,7 +90,10 @@ export const TrailSchema = z.object({
   municipalities: z.array(z.string()),
 
   gpx_url: z.string().url().optional(),
+  gpx_path: z.string().regex(/^\/gpx\/.+\.gpx$/).nullable().optional(),
+  is_transfer_stage: z.boolean().optional(),  // tappa di trasferimento senza traccia continua
   hero_image: z.string(),             // path /images/... o https URL
+  image: z.string(),                  // card thumbnail — path /trails/...
   gallery: z.array(z.string()).default([]),
 
   refuges: z.array(z.string()).default([]),  // slug rifugi correlati
@@ -58,25 +109,96 @@ export const TrailSchema = z.object({
   }),
 
   updated_at: z.string(),                    // ISO date
+
+  // ── Arricchimento scientifico / pratico ──
+  waypoints: z.array(WaypointSchema).optional(),
+  geology_it: z.string().optional(),
+  geology_en: z.string().optional(),
+  geology_fr: z.string().optional(),
+  geology_de: z.string().optional(),
+  water_sources_it: z.string().optional(),
+  water_sources_en: z.string().optional(),
+  water_sources_fr: z.string().optional(),
+  water_sources_de: z.string().optional(),
+  transport_it: z.string().optional(),
+  transport_en: z.string().optional(),
+  transport_fr: z.string().optional(),
+  transport_de: z.string().optional(),
+  parking: z.string().optional(),
+  mobile_coverage: MobileCoverageSchema,
+  best_months: z.array(z.number().min(1).max(12)),
+  warnings_it: z.array(z.string()).optional(),
+  warnings_en: z.array(z.string()).optional(),
+  warnings_fr: z.array(z.string()).optional(),
+  warnings_de: z.array(z.string()).optional(),
+  nearby_peaks: z.array(NearbyPeakSchema).optional(),
+  cultural_notes_it: z.string().optional(),
+  cultural_notes_en: z.string().optional(),
+  cultural_notes_fr: z.string().optional(),
+  cultural_notes_de: z.string().optional(),
+  fitness_level: FitnessLevelSchema,
+  calories_estimate: z.number().positive().optional(),
 });
 
 export type Trail = z.infer<typeof TrailSchema>;
 
+export const RefugeImageSchema = z.object({
+  src: z.string(),
+  alt_it: z.string(),
+  alt_en: z.string(),
+  alt_fr: z.string(),
+  alt_de: z.string(),
+  credit: z.string().optional().nullable(),
+});
+
 export const RefugeSchema = z.object({
   slug: z.string(),
-  name: z.string(),
+  name_it: z.string(),
+  name_en: z.string(),
+  name_fr: z.string(),
+  name_de: z.string(),
   type: z.enum(['rifugio', 'bivacco', 'capanna']),
   coords: CoordsSchema,
   elevation_m: z.number(),
-  beds: z.number().optional(),
-  open_period: z.string().optional(),       // "giugno-settembre"
-  phone: z.string().optional(),
-  website: z.string().url().optional(),
-  booking_affiliate_url: z.string().url().optional(),
+  valley_it: z.string(),
+  valley_en: z.string(),
+  valley_fr: z.string(),
+  valley_de: z.string(),
+  beds: z.number().optional().nullable(),
+  open_period_it: z.string().optional().nullable(),
+  open_period_en: z.string().optional().nullable(),
+  open_period_fr: z.string().optional().nullable(),
+  open_period_de: z.string().optional().nullable(),
+  phone: z.string().optional().nullable(),
+  email: z.string().optional().nullable(),
+  website: z.string().url().optional().nullable(),
+  booking_url: z.string().url().optional().nullable(),
+  instagram: z.string().url().optional().nullable(),
+  facebook: z.string().url().optional().nullable(),
+  manager_it: z.string().optional().nullable(),
+  manager_en: z.string().optional().nullable(),
+  manager_fr: z.string().optional().nullable(),
+  manager_de: z.string().optional().nullable(),
   description_it: z.string(),
   description_en: z.string(),
-  image: z.string().optional(),
-  trails: z.array(z.string()).default([]),  // slug sentieri di accesso
+  description_fr: z.string(),
+  description_de: z.string(),
+  history_it: z.string().optional().nullable(),
+  history_en: z.string().optional().nullable(),
+  history_fr: z.string().optional().nullable(),
+  history_de: z.string().optional().nullable(),
+  food_it: z.string().optional().nullable(),
+  food_en: z.string().optional().nullable(),
+  food_fr: z.string().optional().nullable(),
+  food_de: z.string().optional().nullable(),
+  costs_it: z.string().optional().nullable(),
+  costs_en: z.string().optional().nullable(),
+  costs_fr: z.string().optional().nullable(),
+  costs_de: z.string().optional().nullable(),
+  images: z.array(RefugeImageSchema).default([]),
+  trails: z.array(z.string()).default([]),
+  source: z.string().optional().nullable(),
 });
 
 export type Refuge = z.infer<typeof RefugeSchema>;
+export type RefugeImage = z.infer<typeof RefugeImageSchema>;
