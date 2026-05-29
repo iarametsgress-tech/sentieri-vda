@@ -32,32 +32,45 @@ const QUERIES = {
     'walser-titsch': 'Walser Gressoney-La-Trinité',
     'fontina-fair': 'Fontina cheese',
     'jambon-de-bosses': 'Saint-Rhémy-en-Bosses',
-    carnival: 'Carnival Coumba Freida',
+    carnival: 'Coumba Freida landzette carnaval',
     'mont-mars-march': 'Mont Mars Fontainemore',
-    'coumba-freida': 'Désarpa Vallée d\'Aoste',
-    'traditional-costumes': 'Costume valdôtain',
-    transhumance: 'Désarpa Vallée d\'Aoste',
+    'coumba-freida': 'Coumba Freida landzette',
+    'traditional-costumes': 'Costume traditionnel Vallée Aoste folklore',
+    transhumance: 'Alpage Vallée d\'Aoste vaches',
     'saint-ours': 'Foire de Saint-Ours Aoste',
   },
   'food-wine.json': {
     fontina: 'Fontina cheese',
-    'jambon-de-bosses': 'Jambon',
+    'jambon-de-bosses': 'Jambon de Bosses',
     'lardo-arnad': 'Lard d\'Arnad',
     mocetta: 'Mocetta',
-    'seupa-valpellinentze': 'Seupa à la Vapelenentse',
+    'seupa-valpellinentze': 'Seupa Valpelline soupe',
     'polenta-concia': 'Polenta concia',
     carbonade: 'Carbonade',
     'caffe-valdostano': 'Coppa dell\'amicizia',
-    picotin: 'Vallée d\'Aoste fromage',
+    picotin: 'Picotin fromage',
     tegole: 'Tegole valdostane',
     'blanc-de-morgex': 'Blanc de Morgex et de La Salle',
-    'enfer-d-arvier': 'Arvier vignoble',
+    'enfer-d-arvier': 'Arvier vignoble Vallée Aoste',
     torrette: 'Torrette Vallée d\'Aoste vin',
     'donnas-picotendro': 'Donnas Vallée d\'Aoste vigne',
   },
 };
 
 const BAD_TITLE = /\.svg|logo|coat of arms|stemma|flag|bandiera|map|mappa|carte|locator|wikidata|icon/i;
+
+// Filtro di pertinenza per-voce: il titolo del file deve contenere una di queste parole.
+// Evita match fuori tema (es. una chiesa in Georgia per "transhumance").
+const MUST_MATCH = {
+  carnival: /coumba|landzette|carnaval|carnival|masque|maschere/i,
+  'traditional-costumes': /costume/i,
+  transhumance: /alpage|vache|pâturage|mucche|mucca|estive|bétail|troupeau|bestiame|pascolo/i,
+  'coumba-freida': /coumba|landzette/i,
+  'jambon-de-bosses': /jambon|bosses/i,
+  'seupa-valpellinentze': /seupa|soupe|zuppa|valpell/i,
+  'enfer-d-arvier': /arvier|enfer/i,
+  picotin: /picotin/i,
+};
 
 const UA = 'sentieri-vda-image-sourcing/1.0 (educational, contact: dev@sentierivda.local)';
 
@@ -106,12 +119,13 @@ async function searchCandidates(query) {
     .map((p) => ({ title: p.title, ii: p.imageinfo[0] }));
 }
 
-function pickBest(cands) {
+function pickBest(cands, must) {
   for (const c of cands) {
     const { ii, title } = c;
     if (BAD_TITLE.test(title)) continue;
     if (!/^image\/(jpeg|png)$/.test(ii.mime || '')) continue;
     if ((ii.width || 0) < 900) continue;
+    if (must && !must.test(title)) continue;
     return c;
   }
   return null;
@@ -148,7 +162,7 @@ async function run() {
       }
       try {
         const cands = await searchCandidates(query);
-        const best = pickBest(cands);
+        const best = pickBest(cands, MUST_MATCH[id]);
         if (!best) {
           console.log(`✗ ${id}: nessun candidato valido per "${query}"`);
           report.push({ file, id, query, status: 'no-match' });

@@ -15,6 +15,7 @@ import {
   TrailMunicipalityLinks,
 } from '@/components/TrailRelatedLinks';
 import TrailStickyBar, { TRAIL_HERO_SENTINEL_ID } from '@/components/TrailStickyBar';
+import TrailGallery from '@/components/TrailGallery';
 import LinkedText from '@/components/LinkedText';
 import AdSlot from '@/components/AdSlot';
 import { SITE_URL } from '@/lib/config';
@@ -25,7 +26,7 @@ import {
   getTrailLocalizedShortDesc,
   getTrailLocalizedDescription,
 } from '@/lib/stage-utils';
-import { extractRefugeSlugsFromTrail } from '@/lib/refuges';
+import { extractRefugeSlugsFromTrail, getTrailGalleryImages } from '@/lib/refuges';
 import { loadTrailGeoJSON, getGpxPublicPath, gpxFileExists } from '@/lib/gpx';
 import {
   Download,
@@ -85,6 +86,7 @@ export default async function TrailDetail({
   const name = getTrailLocalizedName(trail, locale);
   const description = getTrailLocalizedDescription(trail, locale);
   const refugeSlugs = extractRefugeSlugsFromTrail(trail);
+  const galleryImages = getTrailGalleryImages(trail, refugeSlugs, locale);
 
   const isAV1 = trail.tags.includes('alta-via-1');
   const isAV2 = trail.tags.includes('alta-via-2');
@@ -357,6 +359,10 @@ export default async function TrailDetail({
               locale={locale}
               label={t('refugesNearby')}
             />
+          )}
+
+          {galleryImages.length > 0 && (
+            <TrailGallery images={galleryImages} label={t('gallery')} />
           )}
 
           {/* Flora / Fauna */}

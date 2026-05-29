@@ -16,6 +16,7 @@ import {
   getPeakWikiUrl,
 } from '@/lib/environment';
 import { routing } from '@/i18n/routing';
+import TrailGallery, { type GalleryImage } from '@/components/TrailGallery';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -60,6 +61,16 @@ export default async function MassifDetailPage({
     ? getMassifOverviewText(overview, locale)
     : getPeakDescription(group.primary, locale);
   const highlights = overview ? getMassifHighlights(overview, locale) : [];
+
+  const allPeaks = [group.primary, ...group.secondaries];
+  const seenImg = new Set<string>();
+  const galleryImages: GalleryImage[] = [];
+  for (const peak of allPeaks) {
+    if (peak.image && !seenImg.has(peak.image)) {
+      seenImg.add(peak.image);
+      galleryImages.push({ src: peak.image, alt: `${getPeakName(peak, locale)} · ${peak.elevation_m} m` });
+    }
+  }
 
   return (
     <article>
@@ -149,6 +160,12 @@ export default async function MassifDetailPage({
             })}
           </div>
         </div>
+
+        {galleryImages.length > 1 && (
+          <div className="mt-14">
+            <TrailGallery images={galleryImages} label={t('gallery')} />
+          </div>
+        )}
       </div>
     </article>
   );

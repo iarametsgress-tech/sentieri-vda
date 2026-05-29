@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 /**
@@ -10,6 +10,7 @@ import { ChevronDown } from 'lucide-react';
  */
 export default function CinematicHero({
   image,
+  videoSrc,
   eyebrow,
   title,
   subtitle,
@@ -19,6 +20,8 @@ export default function CinematicHero({
   priority = true,
 }: {
   image: string;
+  /** Video di sfondo opzionale (es. /video/hero.mp4). Fallback automatico all'immagine. */
+  videoSrc?: string;
   eyebrow: string;
   title: string;
   subtitle?: string;
@@ -29,6 +32,7 @@ export default function CinematicHero({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
+  const [videoReady, setVideoReady] = useState(false);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start start', 'end start'],
@@ -51,8 +55,24 @@ export default function CinematicHero({
           className="h-full w-full object-cover"
           fetchPriority={priority ? 'high' : 'auto'}
           loading={priority ? 'eager' : 'lazy'}
-          {...(isRemote ? {} : {})}
         />
+        {videoSrc && !reduce ? (
+          <video
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+              videoReady ? 'opacity-100' : 'opacity-0'
+            }`}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster={isRemote ? undefined : image}
+            aria-hidden
+            onCanPlay={() => setVideoReady(true)}
+          >
+            <source src={videoSrc} />
+          </video>
+        ) : null}
       </motion.div>
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/15 via-45% to-ink/95" />

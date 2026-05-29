@@ -1,3 +1,5 @@
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
@@ -10,6 +12,11 @@ import {
 } from '@/lib/environment';
 import AmbienteExplorer from '@/components/AmbienteExplorer';
 import CinematicHero from '@/components/CinematicHero';
+
+// Video hero opzionale: attivo solo se il file è presente in public/video/.
+const AMBIENTE_HERO_VIDEO = existsSync(join(process.cwd(), 'public', 'video', 'ambiente-hero.mp4'))
+  ? '/video/ambiente-hero.mp4'
+  : undefined;
 
 export async function generateMetadata({
   params,
@@ -43,6 +50,7 @@ export default async function AmbientePage({
     <div>
       <CinematicHero
         image="/species/stambecco-bg.jpg"
+        videoSrc={AMBIENTE_HERO_VIDEO}
         eyebrow={t('heroEyebrow')}
         title={t('heroTitle')}
         subtitle={t('heroSubtitle', { fauna: fauna.length, flora: flora.length })}

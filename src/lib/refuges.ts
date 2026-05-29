@@ -1,5 +1,5 @@
 import refugesJson from '@/data/refuges.json';
-import { RefugeSchema, type Refuge } from '@/lib/types';
+import { RefugeSchema, type Refuge, type RefugeImage, type Trail } from '@/lib/types';
 import { getRefugeName } from '@/lib/refuge-locale';
 
 const parsed = (refugesJson as unknown[]).map((r) => RefugeSchema.parse(r));
@@ -71,6 +71,52 @@ export function getRefugeDisplayName(slug: string, locale: string): string {
 
 export function resolveRefugeSlugFromName(name: string): string | null {
   return REFUGE_NAME_TO_SLUG[name] ?? null;
+}
+
+export type GalleryImage = { src: string; alt: string; credit?: string | null };
+
+function pickRefugeImageAlt(img: RefugeImage, locale: string): string {
+  switch (locale) {
+    case 'en':
+      return img.alt_en;
+    case 'fr':
+      return img.alt_fr;
+    case 'de':
+      return img.alt_de;
+    default:
+      return img.alt_it;
+  }
+}
+
+/**
+ * Galleria di una tappa: unisce le immagini esplicite in `trail.gallery`
+ * alle foto reali dei rifugi presenti sul percorso (con alt localizzato e credit).
+ */
+export function getTrailGalleryImages(
+  trail: Pick<Trail, 'gallery' | 'name_it'>,
+  refugeSlugs: string[],
+  locale: string,
+  limit = 12
+): GalleryImage[] {
+  const out: GalleryImage[] = [];
+  const seen = new Set<string>();
+  const push = (img: GalleryImage) => {
+    if (img.src && !seen.has(img.src)) {
+      seen.add(img.src);
+      out.push(img);
+    }
+  };
+  for (const src of trail.gallery ?? []) {
+    push({ src, alt: trail.name_it });
+  }
+  for (const slug of refugeSlugs) {
+    const r = bySlug.get(slug);
+    if (!r) continue;
+    for (const img of r.images) {
+      push({ src: img.src, alt: pickRefugeImageAlt(img, locale), credit: img.credit });
+    }
+  }
+  return out.slice(0, limit);
 }
 
 export function extractRefugeSlugsFromTrail(trail: {

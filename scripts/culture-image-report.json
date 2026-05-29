@@ -1,23 +1,53 @@
 [
   {
     "file": "traditions.json",
+    "id": "jambon-de-bosses",
+    "query": "Saint-Rhémy-en-Bosses",
+    "status": "ok",
+    "title": "File:Saint-Rhémy-en-Bosses - Mémorial face église (avr 2024).jpg",
+    "credit": "Sebleouf (CC BY-SA 4.0)",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint-Rh%C3%A9my-en-Bosses_-_M%C3%A9morial_face_%C3%A9glise_(avr_2024).jpg"
+  },
+  {
+    "file": "traditions.json",
+    "id": "carnival",
+    "query": "Coumba Freida landzette carnaval",
+    "status": "no-match"
+  },
+  {
+    "file": "traditions.json",
     "id": "coumba-freida",
-    "query": "Désarpa Vallée d'Aoste",
+    "query": "Coumba Freida landzette",
+    "status": "no-match"
+  },
+  {
+    "file": "traditions.json",
+    "id": "traditional-costumes",
+    "query": "Costume traditionnel Vallée Aoste folklore",
     "status": "no-match"
   },
   {
     "file": "traditions.json",
     "id": "transhumance",
-    "query": "Désarpa Vallée d'Aoste",
+    "query": "Alpage Vallée d'Aoste vaches",
     "status": "no-match"
   },
   {
     "file": "food-wine.json",
-    "id": "donnas-picotendro",
-    "query": "Donnas Vallée d'Aoste vigne",
-    "status": "ok",
-    "title": "File:Otre Museo della vite e del vino di Donnas 02.jpg",
-    "credit": "Patafisik (CC BY-SA 4.0)",
-    "source": "https://commons.wikimedia.org/wiki/File:Otre_Museo_della_vite_e_del_vino_di_Donnas_02.jpg"
+    "id": "seupa-valpellinentze",
+    "query": "Seupa Valpelline soupe",
+    "status": "no-match"
+  },
+  {
+    "file": "food-wine.json",
+    "id": "picotin",
+    "query": "Picotin fromage",
+    "status": "no-match"
+  },
+  {
+    "file": "food-wine.json",
+    "id": "enfer-d-arvier",
+    "query": "Arvier vignoble Vallée Aoste",
+    "status": "no-match"
   }
 ]
