@@ -63,23 +63,17 @@ export default function Hero() {
         style={{ y: contentY, opacity }}
         className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-20 lg:px-10 lg:pb-32"
       >
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.15 }}
+        <p
           className="text-on-image-eyebrow mb-6 font-mono text-[11px] uppercase tracking-[0.35em] text-alpenglow"
         >
           {t('heroEyebrow')}
-        </motion.p>
+        </p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2, ease: 'easeOut' }}
+        <h1
           className="text-on-image-title font-display text-display-xl max-w-5xl pb-1 text-snow"
         >
           {t('heroTitle')}
-        </motion.h1>
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 8 }}

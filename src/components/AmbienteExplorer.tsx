@@ -448,7 +448,7 @@ export default function AmbienteExplorer({
       {/* Montagne */}
       <section
         id="montagne"
-        className={cn('scroll-mt-36 border-b border-white/5 py-16 lg:py-24', topicClasses('mountains').section)}
+        className={cn('defer-render scroll-mt-36 border-b border-white/5 py-16 lg:py-24', topicClasses('mountains').section)}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <ScrollReveal className="mb-10 max-w-2xl">
@@ -510,7 +510,7 @@ export default function AmbienteExplorer({
       {/* Geologia */}
       <section
         id="geologia"
-        className={cn('scroll-mt-36 border-b border-white/5 py-16 lg:py-24', topicClasses('geology').section)}
+        className={cn('defer-render scroll-mt-36 border-b border-white/5 py-16 lg:py-24', topicClasses('geology').section)}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <ScrollReveal className="mb-10 max-w-xl">
@@ -541,7 +541,7 @@ export default function AmbienteExplorer({
       {/* Idrologia */}
       <section
         id="idrologia"
-        className={cn('scroll-mt-36 py-16 lg:py-24', topicClasses('water').section)}
+        className={cn('defer-render scroll-mt-36 py-16 lg:py-24', topicClasses('water').section)}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <ScrollReveal className="mb-10 max-w-xl">

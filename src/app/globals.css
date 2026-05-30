@@ -41,6 +41,14 @@ body {
   letter-spacing: -0.01em;
 }
 
+/* Differisce il rendering delle sezioni fuori schermo nelle pagine lunghe
+   (Ambiente, Cultura): il browser non disegna i blocchi finché non ci si
+   scrolla vicino → primo paint più rapido al click, nessun cambio visivo. */
+.defer-render {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 1200px;
+}
+
 /* Grain overlay for hero — alpine atmosphere */
 .grain::after {
   content: '';

@@ -410,7 +410,7 @@ export default function CulturaExplorer({
 
       <section
         id="tradizioni"
-        className={cn('scroll-mt-36 border-b border-white/5 py-16 lg:py-24', topicClasses('traditions').section)}
+        className={cn('defer-render scroll-mt-36 border-b border-white/5 py-16 lg:py-24', topicClasses('traditions').section)}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-10 max-w-2xl">
@@ -444,7 +444,7 @@ export default function CulturaExplorer({
 
       <section
         id="cibo-vino"
-        className={cn('scroll-mt-36 py-16 lg:py-24', topicClasses('food').section)}
+        className={cn('defer-render scroll-mt-36 py-16 lg:py-24', topicClasses('food').section)}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-10 max-w-2xl">

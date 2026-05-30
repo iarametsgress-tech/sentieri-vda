@@ -90,23 +90,17 @@ export default function CinematicHero({
           centered ? 'items-center text-center' : ''
         }`}
       >
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.15 }}
+        <p
           className="text-on-image-eyebrow mb-5 font-mono text-[11px] uppercase tracking-[0.35em] text-alpenglow"
         >
           {eyebrow}
-        </motion.p>
+        </p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2, ease: 'easeOut' }}
+        <h1
           className={`text-on-image-title font-display text-display-lg text-snow ${centered ? 'max-w-4xl' : 'max-w-5xl'}`}
         >
           {title}
-        </motion.h1>
+        </h1>
 
         {subtitle ? (
           <motion.p
