@@ -42,7 +42,6 @@ export default function CinematicHero({
   const contentY = useTransform(scrollYProgress, [0, 1], ['0%', reduce ? '0%' : '12%']);
   const opacity = useTransform(scrollYProgress, [0, 0.65], [1, reduce ? 1 : 0]);
 
-  const words = title.split(' ');
   const isRemote = image.startsWith('http');
   const centered = align === 'center';
 
@@ -92,34 +91,28 @@ export default function CinematicHero({
         }`}
       >
         <motion.p
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.15 }}
           className="text-on-image-eyebrow mb-5 font-mono text-[11px] uppercase tracking-[0.35em] text-alpenglow"
         >
           {eyebrow}
         </motion.p>
 
-        <h1 className={`text-on-image-title font-display text-display-lg text-snow ${centered ? 'max-w-4xl' : 'max-w-5xl'}`}>
-          {words.map((word, i) => (
-            <span key={i} className="mr-[0.22em] inline-block overflow-hidden pb-[0.12em] align-bottom">
-              <motion.span
-                initial={{ opacity: 0, y: '110%' }}
-                animate={{ opacity: 1, y: '0%' }}
-                transition={{ duration: 0.85, delay: 0.2 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="inline-block"
-              >
-                {word}
-              </motion.span>
-            </span>
-          ))}
-        </h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, ease: 'easeOut' }}
+          className={`text-on-image-title font-display text-display-lg text-snow ${centered ? 'max-w-4xl' : 'max-w-5xl'}`}
+        >
+          {title}
+        </motion.h1>
 
         {subtitle ? (
           <motion.p
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.25, delay: 0.1, ease: 'easeOut' }}
             className={`text-on-image-body mt-5 text-lg font-light leading-relaxed text-snow/85 lg:text-xl ${
               centered ? 'max-w-2xl' : 'max-w-2xl'
             }`}

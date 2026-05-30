@@ -24,7 +24,6 @@ export default function Hero() {
   const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '12%']);
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
-  const titleWords = t('heroTitle').split(' ');
 
   return (
     <section
@@ -65,46 +64,36 @@ export default function Hero() {
         className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-20 lg:px-10 lg:pb-32"
       >
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.15 }}
           className="text-on-image-eyebrow mb-6 font-mono text-[11px] uppercase tracking-[0.35em] text-alpenglow"
         >
           {t('heroEyebrow')}
         </motion.p>
 
-        <h1 className="text-on-image-title font-display text-display-xl max-w-5xl pb-1 text-snow">
-          {titleWords.map((word, i) => (
-            <span key={i} className="mr-[0.22em] inline-block overflow-hidden pb-[0.12em] align-bottom">
-              <motion.span
-                initial={{ opacity: 0, y: '110%' }}
-                animate={{ opacity: 1, y: '0%' }}
-                transition={{
-                  duration: 0.9,
-                  delay: 0.2 + i * 0.12,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="inline-block"
-              >
-                {word}
-              </motion.span>
-            </span>
-          ))}
-        </h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, ease: 'easeOut' }}
+          className="text-on-image-title font-display text-display-xl max-w-5xl pb-1 text-snow"
+        >
+          {t('heroTitle')}
+        </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.25, delay: 0.1, ease: 'easeOut' }}
           className="text-on-image-body mt-6 max-w-2xl text-lg font-light leading-relaxed text-snow/90 lg:text-xl"
         >
           {t('heroSubtitle')}
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 14 }}
+          initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.75 }}
+          transition={{ duration: 0.25, delay: 0.15, ease: 'easeOut' }}
           className="mt-10 flex flex-wrap items-center gap-4"
         >
           <Link
