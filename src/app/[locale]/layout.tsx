@@ -5,7 +5,6 @@ import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import AdSenseScript from '@/components/AdSenseScript';
@@ -17,10 +16,6 @@ import {
   localeSiteMeta,
 } from '@/lib/metadata-languages';
 import '../globals.css';
-
-const PageTransition = dynamic(() => import('@/components/PageTransition'), {
-  ssr: false,
-});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -73,9 +68,7 @@ export default async function LocaleLayout({
       <body className="bg-ink text-snow min-h-screen flex flex-col antialiased">
         <NextIntlClientProvider messages={messages}>
           <Navbar locale={locale} />
-          <main className="flex-1">
-            <PageTransition>{children}</PageTransition>
-          </main>
+          <main className="flex-1">{children}</main>
           <Footer />
         </NextIntlClientProvider>
         <AdSenseScript />
