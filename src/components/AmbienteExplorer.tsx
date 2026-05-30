@@ -40,6 +40,7 @@ import {
 } from '@/lib/environment';
 import FloraFaunaExplorer from './FloraFaunaExplorer';
 import CounterStat from './CounterStat';
+import SceneDivider from './SceneDivider';
 
 const SECTIONS: {
   id: AmbienteSectionId;
@@ -52,6 +53,9 @@ const SECTIONS: {
 ];
 
 type PeakFilter = 'all' | '4000' | 'trails';
+
+/** Massicci esclusi dalla visualizzazione (non iconici per questo contesto). */
+const EXCLUDED_MASSIF_IDS = ['alpi-graie'];
 
 
 interface AmbienteExplorerProps {
@@ -186,19 +190,11 @@ function EnvironmentBlock({
 function MassifPeakCard({
   group,
   locale,
-  readMore,
-  secondarySummits,
-  mainSummit,
-  onTrails,
   viewMassif,
   highlightedPeakId,
 }: {
   group: MassifGroup;
   locale: string;
-  readMore: string;
-  secondarySummits: string;
-  mainSummit: string;
-  onTrails: string;
   viewMassif: string;
   highlightedPeakId?: string | null;
 }) {
@@ -209,7 +205,6 @@ function MassifPeakCard({
   const groupHighlighted =
     highlightedPeakId === primary.id ||
     secondaries.some((p) => p.id === highlightedPeakId);
-  const hasSecondaries = secondaries.length > 0;
 
   const reduce = useReducedMotion();
   const innerRef = useRef<HTMLDivElement>(null);
@@ -244,11 +239,11 @@ function MassifPeakCard({
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.98 }}
       style={{ perspective: 1000 }}
-      className={`group scroll-mt-40 rounded-2xl border bg-white/[0.02] transition-all hover:-translate-y-0.5 ${
+      className={`group scroll-mt-40 rounded-2xl border bg-white/[0.02] transition-all hover:-translate-y-1 ${
         groupHighlighted
           ? 'border-ice/60 ring-2 ring-ice/30 shadow-lg shadow-ice/10'
-          : 'border-white/10 hover:border-alpenglow/30'
-      } ${hasSecondaries ? 'sm:col-span-2 lg:col-span-2' : ''}`}
+          : 'border-white/10 hover:border-alpenglow/30 hover:shadow-lg hover:shadow-alpenglow/5'
+      }`}
     >
       <motion.div
         ref={innerRef}
@@ -257,94 +252,40 @@ function MassifPeakCard({
         style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
         className="overflow-hidden rounded-2xl"
       >
-      <Link href={massifHref} className="block relative aspect-[16/10] overflow-hidden">
-        <Image
-          src={primary.image}
-          alt={massifLabel}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, 800px"
-          unoptimized={isRemote}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-5">
-          <h3 className="font-display text-xl text-snow leading-tight mb-2">{massifLabel}</h3>
-          <p className="text-[11px] font-mono uppercase tracking-widest text-snow/50 mb-1">
-            {mainSummit}
-          </p>
-          <p className="font-display text-2xl text-ice tabular-nums leading-none">
-            {getPeakName(primary, locale)}
-          </p>
-          <p className="font-display text-3xl text-ice/90 tabular-nums leading-none mt-1">
-            {primary.elevation_m}
-            <span className="text-lg text-snow/60 ml-1">m</span>
-          </p>
-        </div>
-        {group.peaks.some((p) => p.is_4000) ? (
-          <span className="absolute top-3 right-3 rounded-full border border-alpenglow/40 bg-ink/70 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-alpenglow">
-            4000+
-          </span>
-        ) : null}
-      </Link>
-      <div className="p-5">
-        <p className="text-sm text-snow/65 leading-relaxed line-clamp-4">
-          {getPeakDescription(primary, locale)}
-        </p>
-
-        {hasSecondaries ? (
-          <div className="mt-5 border-t border-white/8 pt-4">
-            <p className="mb-3 font-mono text-[10px] uppercase tracking-[0.25em] text-snow/45">
-              {secondarySummits}
-              <span className="ml-2 text-ice/70">({secondaries.length})</span>
-            </p>
-            <ul className="space-y-1.5 max-h-56 overflow-y-auto scrollbar-thin pr-1">
-              {secondaries.map((peak) => {
-                const isHighlighted = highlightedPeakId === peak.id;
-                return (
-                  <li
-                    key={peak.id}
-                    id={`peak-${peak.id}`}
-                    className={`rounded-lg transition-colors ${
-                      isHighlighted
-                        ? 'bg-ice/10 border border-ice/30'
-                        : 'hover:bg-white/[0.03]'
-                    }`}
-                  >
-                    <Link
-                      href={`${massifHref}#peak-${peak.id}`}
-                      className="flex items-center justify-between gap-3 px-2.5 py-2"
-                    >
-                      <div className="min-w-0 flex-1">
-                        <p className="font-display text-sm text-snow leading-snug truncate">
-                          {getPeakName(peak, locale)}
-                        </p>
-                        <p className="font-mono text-xs text-ice/80 tabular-nums">
-                          {peak.elevation_m} m
-                          {peak.is_4000 ? (
-                            <span className="ml-2 text-alpenglow/80">4000+</span>
-                          ) : null}
-                          {peak.on_trails ? (
-                            <span className="ml-2 text-snow/40">· {onTrails}</span>
-                          ) : null}
-                        </p>
-                      </div>
-                      <ChevronRight size={14} className="text-snow/30 shrink-0" />
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
+        <Link href={massifHref} className="block">
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image
+              src={primary.image}
+              alt={massifLabel}
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              unoptimized={isRemote}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
+            {group.peaks.some((p) => p.is_4000) ? (
+              <span className="absolute top-3 right-3 rounded-full border border-alpenglow/40 bg-ink/70 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-alpenglow">
+                4000+
+              </span>
+            ) : null}
+            <div className="absolute bottom-0 left-0 right-0 p-5">
+              <h3 className="font-display text-xl text-snow leading-tight">{massifLabel}</h3>
+              <p className="font-display text-2xl text-ice tabular-nums leading-none mt-1">
+                {primary.elevation_m}
+                <span className="text-base text-snow/60 ml-1">m</span>
+              </p>
+            </div>
           </div>
-        ) : null}
-
-        <Link
-          href={massifHref}
-          className="mt-4 inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-alpenglow hover:text-snow transition-colors"
-        >
-          {viewMassif}
-          <ChevronRight size={12} />
+          <div className="p-5">
+            <p className="text-sm text-snow/65 leading-relaxed line-clamp-2">
+              {getPeakDescription(primary, locale)}
+            </p>
+            <span className="mt-3 inline-flex items-center gap-1 text-xs font-mono uppercase tracking-widest text-alpenglow group-hover:text-snow transition-colors">
+              {viewMassif}
+              <ChevronRight size={12} />
+            </span>
+          </div>
         </Link>
-      </div>
       </motion.div>
     </motion.article>
   );
@@ -386,7 +327,9 @@ export default function AmbienteExplorer({
   };
 
   const filteredGroups = useMemo(() => {
-    return filterMassifGroups(getMassifGroups(), peakFilter);
+    return filterMassifGroups(getMassifGroups(), peakFilter).filter(
+      (g) => !EXCLUDED_MASSIF_IDS.includes(g.id)
+    );
   }, [peakFilter]);
 
   const geologyStats = useMemo(
@@ -515,6 +458,14 @@ export default function AmbienteExplorer({
         </div>
       </section>
 
+      <SceneDivider
+        image="/trails/cervino.jpg"
+        title={isIT ? 'Montagne e Valli' : 'Mountains & Valleys'}
+        subtitle={isIT
+          ? 'Monte Bianco, Cervino, Monte Rosa, Gran Paradiso — massicci leggendari e valli di alta quota'
+          : 'Mont Blanc, Matterhorn, Monte Rosa, Gran Paradiso — legendary massifs and high-altitude valleys'}
+      />
+
       {/* Montagne */}
       <section
         id="montagne"
@@ -561,10 +512,6 @@ export default function AmbienteExplorer({
                 key={group.id}
                 group={group}
                 locale={locale}
-                readMore={labels.readMore}
-                secondarySummits={labels.secondarySummits}
-                mainSummit={labels.mainSummit}
-                onTrails={labels.onTrails}
                 viewMassif={labels.viewMassif}
                 highlightedPeakId={highlightedPeakId}
               />
@@ -572,6 +519,14 @@ export default function AmbienteExplorer({
           </div>
         </div>
       </section>
+
+      <SceneDivider
+        image="/trails/alta-via-1-tappa-9-valtournenche-rifugio-barmasse.jpg"
+        title={isIT ? 'Geologia' : 'Geology'}
+        subtitle={isIT
+          ? 'Rocce millenarie, ofioliti e morene glaciali — la storia delle Alpi scritta nella pietra'
+          : 'Ancient rocks, ophiolites and glacial moraines — the Alps\' history written in stone'}
+      />
 
       {/* Geologia */}
       <section id="geologia" className="scroll-mt-36 border-b border-white/5 py-16 lg:py-24">
@@ -592,6 +547,14 @@ export default function AmbienteExplorer({
           </div>
         </div>
       </section>
+
+      <SceneDivider
+        image="/trails/lago-djouan-cogne.jpg"
+        title={isIT ? 'Acque e Ghiacciai' : 'Waters & Glaciers'}
+        subtitle={isIT
+          ? '184 ghiacciai censiti, 168 km di Dora Baltea — l\'acqua che scende dalle creste al fondovalle'
+          : '184 catalogued glaciers, 168 km of Dora Baltea — water descending from ridges to valley floor'}
+      />
 
       {/* Idrologia */}
       <section id="idrologia" className="scroll-mt-36 py-16 lg:py-24">
