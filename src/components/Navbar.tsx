@@ -1,9 +1,9 @@
 'use client';
 
-import { Link, usePathname } from '@/i18n/routing';
+import { Link, usePathname, useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import { Menu, X } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import LocaleSwitch from './LocaleSwitch';
 import { cn } from '@/lib/cn';
@@ -14,6 +14,15 @@ export default function Navbar({ locale }: { locale: string }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+
+  // Prefetch aggressivo: scarica i chunk JS al primo hover, non al click.
+  const prefetch = useCallback(
+    (href: string) => {
+      router.prefetch(href as '/');
+    },
+    [router]
+  );
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -60,6 +69,8 @@ export default function Navbar({ locale }: { locale: string }) {
               <Link
                 key={l.href}
                 href={l.href}
+                onMouseEnter={() => prefetch(l.href)}
+                onFocus={() => prefetch(l.href)}
                 className="relative py-1 text-sm tracking-wide text-snow/65 transition-colors duration-200 hover:text-snow"
               >
                 {l.label}
@@ -132,6 +143,7 @@ export default function Navbar({ locale }: { locale: string }) {
                   <Link
                     href={l.href}
                     onClick={() => setOpen(false)}
+                    onMouseEnter={() => prefetch(l.href)}
                     className="font-display text-lg tracking-tight text-snow/80 transition-colors hover:text-snow"
                   >
                     {l.label}
