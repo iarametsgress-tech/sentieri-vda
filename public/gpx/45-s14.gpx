@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="sentieri-vda" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Les Fabriques - Lignan</name>
+    <desc>Catasto Sentieri VdA — 45_S14</desc>
+    <author><name>Regione Autonoma Valle d'Aosta</name></author>
+  </metadata>
+  <trk>
+    <name>Les Fabriques - Lignan</name>
+    <src>Catasto Sentieri VdA (45_S14)</src>
+    <trkseg>
+      <trkpt lat="45.7868207" lon="7.4808548">
+        <ele>1522</ele>
+      </trkpt>
+      <trkpt lat="45.7866998" lon="7.4811369">
+        <ele>1527</ele>
+      </trkpt>
+      <trkpt lat="45.7866429" lon="7.4813359">
+        <ele>1532</ele>
+      </trkpt>
+      <trkpt lat="45.7866386" lon="7.4814251">
+        <ele>1536</ele>
+      </trkpt>
+      <trkpt lat="45.7866671" lon="7.4817341">
+        <ele>1541</ele>
+      </trkpt>
+      <trkpt lat="45.7867355" lon="7.4819839">
+        <ele>1546</ele>
+      </trkpt>
+      <trkpt lat="45.7867749" lon="7.4820951">
+        <ele>1551</ele>
+      </trkpt>
+      <trkpt lat="45.7870689" lon="7.4826138">
+        <ele>1555</ele>
+      </trkpt>
+      <trkpt lat="45.7872404" lon="7.4830369">
+        <ele>1560</ele>
+      </trkpt>
+      <trkpt lat="45.7875460" lon="7.4834574">
+        <ele>1565</ele>
+      </trkpt>
+      <trkpt lat="45.7877274" lon="7.4836440">
+        <ele>1570</ele>
+      </trkpt>
+      <trkpt lat="45.7879666" lon="7.4839767">
+        <ele>1574</ele>
+      </trkpt>
+      <trkpt lat="45.7880193" lon="7.4841655">
+        <ele>1579</ele>
+      </trkpt>
+      <trkpt lat="45.7880268" lon="7.4845640">
+        <ele>1584</ele>
+      </trkpt>
+      <trkpt lat="45.7881364" lon="7.4848542">
+        <ele>1589</ele>
+      </trkpt>
+      <trkpt lat="45.7896651" lon="7.4855378">
+        <ele>1593</ele>
+      </trkpt>
+      <trkpt lat="45.7905992" lon="7.4857140">
+        <ele>1598</ele>
+      </trkpt>
+      <trkpt lat="45.7911792" lon="7.4862240">
+        <ele>1603</ele>
+      </trkpt>
+      <trkpt lat="45.7911592" lon="7.4864840">
+        <ele>1608</ele>
+      </trkpt>
+      <trkpt lat="45.7913492" lon="7.4866940">
+        <ele>1612</ele>
+      </trkpt>
+      <trkpt lat="45.7912392" lon="7.4871240">
+        <ele>1617</ele>
+      </trkpt>
+      <trkpt lat="45.7914092" lon="7.4877040">
+        <ele>1622</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

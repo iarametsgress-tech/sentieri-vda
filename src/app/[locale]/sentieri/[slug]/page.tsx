@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { getAllTrails, getTrailBySlug, getAdjacentAV1Stages, getAdjacentAV2Stages, getAdjacentTourStages } from '@/lib/trails';
-import { isSkeletonTrail } from '@/lib/skeleton-trails';
+import { isSkeletonTrail, shouldIndexTrail } from '@/lib/skeleton-trails';
 import dynamic from 'next/dynamic';
 const MapView = dynamic(() => import('@/components/MapView'), {
   ssr: false,
@@ -77,7 +77,7 @@ export async function generateMetadata({
     description: desc,
     // Le schede scheletro (dati ufficiali ma senza foto/descrizione editoriale)
     // restano navigabili ma noindex finché non sono arricchite: niente thin content.
-    ...(isSkeletonTrail(trail) ? { robots: { index: false, follow: true } } : {}),
+    ...(shouldIndexTrail(trail) ? {} : { robots: { index: false, follow: true } }),
     openGraph: {
       title: name,
       description: desc,

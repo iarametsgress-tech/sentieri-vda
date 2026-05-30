@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
-import { getAllTrails } from '@/lib/trails';
+import { getAllTrails, getBrowseTrails } from '@/lib/trails';
+import { isEnrichedTrail } from '@/lib/skeleton-trails';
 import { getAllRefuges } from '@/lib/refuges';
 import { getAllBlogSlugs } from '@/lib/blog';
 import { getMassifGroups } from '@/lib/environment';
@@ -69,6 +70,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: t.updated_at,
         changeFrequency: 'monthly',
         priority: 0.8,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((l) => [l, `${BASE}/${l}/sentieri/${t.slug}`])
+          ),
+        },
+      });
+    }
+
+    for (const t of getBrowseTrails()) {
+      if (!isEnrichedTrail(t)) continue;
+      if (trails.some((c) => c.slug === t.slug)) continue;
+      entries.push({
+        url: `${BASE}/${locale}/sentieri/${t.slug}`,
+        lastModified: t.updated_at,
+        changeFrequency: 'monthly',
+        priority: 0.65,
         alternates: {
           languages: Object.fromEntries(
             locales.map((l) => [l, `${BASE}/${l}/sentieri/${t.slug}`])

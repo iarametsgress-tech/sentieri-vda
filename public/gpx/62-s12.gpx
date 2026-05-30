@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="sentieri-vda" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Saint-Oyen - Pallais dessus</name>
+    <desc>Catasto Sentieri VdA — 62_S12</desc>
+    <author><name>Regione Autonoma Valle d'Aosta</name></author>
+  </metadata>
+  <trk>
+    <name>Saint-Oyen - Pallais dessus</name>
+    <src>Catasto Sentieri VdA (62_S12)</src>
+    <trkseg>
+      <trkpt lat="45.8248590" lon="7.2206354">
+        <ele>1337</ele>
+      </trkpt>
+      <trkpt lat="45.8249349" lon="7.2216104">
+        <ele>1346</ele>
+      </trkpt>
+      <trkpt lat="45.8246103" lon="7.2244500">
+        <ele>1356</ele>
+      </trkpt>
+      <trkpt lat="45.8246207" lon="7.2245871">
+        <ele>1365</ele>
+      </trkpt>
+      <trkpt lat="45.8247083" lon="7.2257400">
+        <ele>1374</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -17,3 +17,6 @@ sentieri-zip/
 
 # Build artifact TypeScript
 tsconfig.tsbuildinfo
+
+# Foto sentieri scaricate senza attribuzione verificata (da non ridistribuire)
+public/trails/[0-9][0-9]-s*.webp

@@ -104,6 +104,10 @@ function normalize(s: any): Trail | null {
     fitness_level: s.fitness_level ?? FITNESS_BY_DIFF[diff],
     mobile_coverage: s.mobile_coverage ?? 'partial',
     valley: s.valley || '',
+    gpx_path: s.gpx_path ?? null,
+    enriched: s.enriched === true,
+    image_credit: s.image_credit,
+    image_source: s.image_source,
     hero_image: s.hero_image || PLACEHOLDER_IMAGE,
     image: s.image || PLACEHOLDER_IMAGE,
     gallery: Array.isArray(s.gallery) ? s.gallery : [],
@@ -131,4 +135,14 @@ export function getSkeletonTrails(): Trail[] {
 /** True se il sentiero è una scheda scheletro non ancora arricchita. */
 export function isSkeletonTrail(trail: Trail): boolean {
   return trail.tags.includes(SKELETON_TAG);
+}
+
+/** True se scheletro arricchito (GPX + valle + descrizione + foto) → indicizzabile. */
+export function isEnrichedTrail(trail: Trail): boolean {
+  return trail.enriched === true;
+}
+
+/** Scheletri non arricchiti restano noindex. */
+export function shouldIndexTrail(trail: Trail): boolean {
+  return !isSkeletonTrail(trail) || isEnrichedTrail(trail);
 }

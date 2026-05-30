@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="sentieri-vda" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Località Champette - innesto sentiero 6 A</name>
+    <desc>Catasto Sentieri VdA — 69_S14</desc>
+    <author><name>Regione Autonoma Valle d'Aosta</name></author>
+  </metadata>
+  <trk>
+    <name>Località Champette - innesto sentiero 6 A</name>
+    <src>Catasto Sentieri VdA (69_S14)</src>
+    <trkseg>
+      <trkpt lat="45.8298193" lon="7.3620070">
+        <ele>1146</ele>
+      </trkpt>
+      <trkpt lat="45.8299293" lon="7.3607070">
+        <ele>1176</ele>
+      </trkpt>
+      <trkpt lat="45.8301893" lon="7.3604870">
+        <ele>1206</ele>
+      </trkpt>
+      <trkpt lat="45.8311093" lon="7.3619870">
+        <ele>1235</ele>
+      </trkpt>
+      <trkpt lat="45.8331218" lon="7.3636368">
+        <ele>1265</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

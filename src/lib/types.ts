@@ -105,6 +105,9 @@ export const TrailSchema = z.object({
   gpx_url: z.string().url().optional(),
   gpx_path: z.string().regex(/^\/gpx\/.+\.gpx$/).nullable().optional(),
   is_transfer_stage: z.boolean().optional(),  // tappa di trasferimento senza traccia continua
+  enriched: z.boolean().optional(),
+  image_credit: z.string().optional(),
+  image_source: z.string().url().optional(),
   hero_image: z.string(),             // path /images/... o https URL
   image: z.string(),                  // card thumbnail — path /trails/...
   gallery: z.array(z.string()).default([]),
@@ -231,6 +234,10 @@ export const TrailSkeletonSchema = z.object({
   gpx_url: z.string().url().optional(),
   gpx_path: z.string().regex(/^\/gpx\/.+\.gpx$/).nullable().optional(),
   is_transfer_stage: z.boolean().optional(),
+  /** Scheda scheletro arricchita (GPX + valle + descrizione + foto verificata) → indicizzabile */
+  enriched: z.boolean().optional(),
+  image_credit: z.string().optional(),
+  image_source: z.string().url().optional(),
   hero_image: z.string(),
   image: z.string(),
   gallery: z.array(z.string()).default([]),

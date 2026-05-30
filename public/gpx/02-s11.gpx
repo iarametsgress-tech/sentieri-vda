@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="sentieri-vda" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Poutaz - Triatel (Torgnon)</name>
+    <desc>Catasto Sentieri VdA — 02_S11</desc>
+    <author><name>Regione Autonoma Valle d'Aosta</name></author>
+  </metadata>
+  <trk>
+    <name>Poutaz - Triatel (Torgnon)</name>
+    <src>Catasto Sentieri VdA (02_S11)</src>
+    <trkseg>
+      <trkpt lat="45.8179700" lon="7.5800611">
+        <ele>1092</ele>
+      </trkpt>
+      <trkpt lat="45.8180624" lon="7.5804822">
+        <ele>1117</ele>
+      </trkpt>
+      <trkpt lat="45.8184273" lon="7.5810920">
+        <ele>1142</ele>
+      </trkpt>
+      <trkpt lat="45.8189873" lon="7.5805520">
+        <ele>1166</ele>
+      </trkpt>
+      <trkpt lat="45.8188973" lon="7.5818420">
+        <ele>1191</ele>
+      </trkpt>
+      <trkpt lat="45.8185173" lon="7.5824620">
+        <ele>1216</ele>
+      </trkpt>
+      <trkpt lat="45.8186373" lon="7.5829820">
+        <ele>1241</ele>
+      </trkpt>
+      <trkpt lat="45.8189373" lon="7.5830820">
+        <ele>1265</ele>
+      </trkpt>
+      <trkpt lat="45.8187273" lon="7.5834320">
+        <ele>1290</ele>
+      </trkpt>
+      <trkpt lat="45.8193973" lon="7.5832820">
+        <ele>1315</ele>
+      </trkpt>
+      <trkpt lat="45.8190673" lon="7.5839820">
+        <ele>1340</ele>
+      </trkpt>
+      <trkpt lat="45.8194573" lon="7.5841820">
+        <ele>1364</ele>
+      </trkpt>
+      <trkpt lat="45.8197373" lon="7.5840720">
+        <ele>1389</ele>
+      </trkpt>
+      <trkpt lat="45.8201883" lon="7.5840300">
+        <ele>1414</ele>
+      </trkpt>
+      <trkpt lat="45.8209273" lon="7.5849720">
+        <ele>1439</ele>
+      </trkpt>
+      <trkpt lat="45.8208773" lon="7.5857820">
+        <ele>1463</ele>
+      </trkpt>
+      <trkpt lat="45.8207673" lon="7.5863420">
+        <ele>1488</ele>
+      </trkpt>
+      <trkpt lat="45.8184180" lon="7.5879060">
+        <ele>1513</ele>
+      </trkpt>
+      <trkpt lat="45.8184947" lon="7.5881733">
+        <ele>1538</ele>
+      </trkpt>
+      <trkpt lat="45.8185929" lon="7.5886849">
+        <ele>1562</ele>
+      </trkpt>
+      <trkpt lat="45.8185979" lon="7.5890904">
+        <ele>1587</ele>
+      </trkpt>
+      <trkpt lat="45.8186034" lon="7.5895301">
+        <ele>1612</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

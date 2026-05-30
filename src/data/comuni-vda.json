@@ -1,0 +1,666 @@
+{
+  "_meta": {
+    "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri (sen_cod_co)",
+    "comuni_count": 73,
+    "unmapped_codes": []
+  },
+  "comuni": {
+    "10": {
+      "code": "10",
+      "name": "Bionaz",
+      "valley_it": "Valpelline",
+      "valley_en": "Valpelline",
+      "valley_fr": "Valpelline",
+      "valley_de": "Valpelline-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "11": {
+      "code": "11",
+      "name": "Brissogne",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "12": {
+      "code": "12",
+      "name": "Brusson",
+      "valley_it": "Val d'Ayas",
+      "valley_en": "Ayas Valley",
+      "valley_fr": "Vallée d'Ayas",
+      "valley_de": "Ayas-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "13": {
+      "code": "13",
+      "name": "Brusson",
+      "valley_it": "Val d'Ayas",
+      "valley_en": "Ayas Valley",
+      "valley_fr": "Vallée d'Ayas",
+      "valley_de": "Ayas-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "14": {
+      "code": "14",
+      "name": "Challand-Saint-Victor",
+      "valley_it": "Val d'Ayas",
+      "valley_en": "Ayas Valley",
+      "valley_fr": "Vallée d'Ayas",
+      "valley_de": "Ayas-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "15": {
+      "code": "15",
+      "name": "Châtillon",
+      "valley_it": "Valtournenche",
+      "valley_en": "Valtournenche",
+      "valley_fr": "Valtournenche",
+      "valley_de": "Valtournenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "16": {
+      "code": "16",
+      "name": "Champdepraz",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "17": {
+      "code": "17",
+      "name": "Charvensod",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "18": {
+      "code": "18",
+      "name": "Châtillon",
+      "valley_it": "Valtournenche",
+      "valley_en": "Valtournenche",
+      "valley_fr": "Valtournenche",
+      "valley_de": "Valtournenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "19": {
+      "code": "19",
+      "name": "Cogne",
+      "valley_it": "Val di Cogne",
+      "valley_en": "Cogne Valley",
+      "valley_fr": "Val de Cogne",
+      "valley_de": "Cogne-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "20": {
+      "code": "20",
+      "name": "Courmayeur",
+      "valley_it": "Valdigne",
+      "valley_en": "Valdigne",
+      "valley_fr": "Valdigne",
+      "valley_de": "Valdigne",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "21": {
+      "code": "21",
+      "name": "Donnas",
+      "valley_it": "Valle del Lys",
+      "valley_en": "Lys Valley",
+      "valley_fr": "Vallée du Lys",
+      "valley_de": "Lys-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "22": {
+      "code": "22",
+      "name": "Doues",
+      "valley_it": "Valle del Gran San Bernardo",
+      "valley_en": "Great St Bernard Valley",
+      "valley_fr": "Vallée du Grand-Saint-Bernard",
+      "valley_de": "Grosser-Sankt-Bernhard-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "23": {
+      "code": "23",
+      "name": "Emarèse",
+      "valley_it": "Valtournenche",
+      "valley_en": "Valtournenche",
+      "valley_fr": "Valtournenche",
+      "valley_de": "Valtournenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "24": {
+      "code": "24",
+      "name": "Emarèse",
+      "valley_it": "Valtournenche",
+      "valley_en": "Valtournenche",
+      "valley_fr": "Valtournenche",
+      "valley_de": "Valtournenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "25": {
+      "code": "25",
+      "name": "Etroubles",
+      "valley_it": "Valle del Gran San Bernardo",
+      "valley_en": "Great St Bernard Valley",
+      "valley_fr": "Vallée du Grand-Saint-Bernard",
+      "valley_de": "Grosser-Sankt-Bernhard-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "26": {
+      "code": "26",
+      "name": "Fénis",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "27": {
+      "code": "27",
+      "name": "Fontainemore",
+      "valley_it": "Valle del Lys",
+      "valley_en": "Lys Valley",
+      "valley_fr": "Vallée du Lys",
+      "valley_de": "Lys-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "28": {
+      "code": "28",
+      "name": "Gaby",
+      "valley_it": "Valle del Lys",
+      "valley_en": "Lys Valley",
+      "valley_fr": "Vallée du Lys",
+      "valley_de": "Lys-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "29": {
+      "code": "29",
+      "name": "Gignod",
+      "valley_it": "Valle del Gran San Bernardo",
+      "valley_en": "Great St Bernard Valley",
+      "valley_fr": "Vallée du Grand-Saint-Bernard",
+      "valley_de": "Grosser-Sankt-Bernhard-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "30": {
+      "code": "30",
+      "name": "Gressan",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "31": {
+      "code": "31",
+      "name": "Gressoney-La-Trinité",
+      "valley_it": "Valle del Lys",
+      "valley_en": "Lys Valley",
+      "valley_fr": "Vallée du Lys",
+      "valley_de": "Lys-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "32": {
+      "code": "32",
+      "name": "Gressoney-Saint-Jean",
+      "valley_it": "Valle del Lys",
+      "valley_en": "Lys Valley",
+      "valley_fr": "Vallée du Lys",
+      "valley_de": "Lys-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "33": {
+      "code": "33",
+      "name": "Hône",
+      "valley_it": "Valle di Champorcher",
+      "valley_en": "Champorcher Valley",
+      "valley_fr": "Vallée de Champorcher",
+      "valley_de": "Champorcher-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "34": {
+      "code": "34",
+      "name": "Introd",
+      "valley_it": "Valsavarenche",
+      "valley_en": "Valsavarenche",
+      "valley_fr": "Valsavarenche",
+      "valley_de": "Valsavarenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "35": {
+      "code": "35",
+      "name": "Issime",
+      "valley_it": "Valle del Lys",
+      "valley_en": "Lys Valley",
+      "valley_fr": "Vallée du Lys",
+      "valley_de": "Lys-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "36": {
+      "code": "36",
+      "name": "Issogne",
+      "valley_it": "Val d'Ayas",
+      "valley_en": "Ayas Valley",
+      "valley_fr": "Vallée d'Ayas",
+      "valley_de": "Ayas-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "37": {
+      "code": "37",
+      "name": "Jovençan",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "38": {
+      "code": "38",
+      "name": "La Magdeleine",
+      "valley_it": "Valtournenche",
+      "valley_en": "Valtournenche",
+      "valley_fr": "Valtournenche",
+      "valley_de": "Valtournenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "39": {
+      "code": "39",
+      "name": "La Salle",
+      "valley_it": "Valdigne",
+      "valley_en": "Valdigne",
+      "valley_fr": "Valdigne",
+      "valley_de": "Valdigne",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "40": {
+      "code": "40",
+      "name": "La Thuile",
+      "valley_it": "La Thuile",
+      "valley_en": "La Thuile",
+      "valley_fr": "La Thuile",
+      "valley_de": "La Thuile",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "41": {
+      "code": "41",
+      "name": "Lillianes",
+      "valley_it": "Valle del Lys",
+      "valley_en": "Lys Valley",
+      "valley_fr": "Vallée du Lys",
+      "valley_de": "Lys-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "42": {
+      "code": "42",
+      "name": "Montjovet",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "44": {
+      "code": "44",
+      "name": "Nus",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "45": {
+      "code": "45",
+      "name": "Ollomont",
+      "valley_it": "Valpelline",
+      "valley_en": "Valpelline",
+      "valley_fr": "Valpelline",
+      "valley_de": "Valpelline-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "46": {
+      "code": "46",
+      "name": "Oyace",
+      "valley_it": "Valpelline",
+      "valley_en": "Valpelline",
+      "valley_fr": "Valpelline",
+      "valley_de": "Valpelline-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "47": {
+      "code": "47",
+      "name": "Perloz",
+      "valley_it": "Valle del Lys",
+      "valley_en": "Lys Valley",
+      "valley_fr": "Vallée du Lys",
+      "valley_de": "Lys-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "48": {
+      "code": "48",
+      "name": "Pollein",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "49": {
+      "code": "49",
+      "name": "Pont-Saint-Martin",
+      "valley_it": "Valle del Lys",
+      "valley_en": "Lys Valley",
+      "valley_fr": "Vallée du Lys",
+      "valley_de": "Lys-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "50": {
+      "code": "50",
+      "name": "Pontboset",
+      "valley_it": "Valle di Champorcher",
+      "valley_en": "Champorcher Valley",
+      "valley_fr": "Vallée de Champorcher",
+      "valley_de": "Champorcher-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "51": {
+      "code": "51",
+      "name": "Pré-Saint-Didier",
+      "valley_it": "Valdigne",
+      "valley_en": "Valdigne",
+      "valley_fr": "Valdigne",
+      "valley_de": "Valdigne",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "52": {
+      "code": "52",
+      "name": "Quart",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "53": {
+      "code": "53",
+      "name": "Rhêmes-Notre-Dame",
+      "valley_it": "Val di Rhêmes",
+      "valley_en": "Rhêmes Valley",
+      "valley_fr": "Val de Rhêmes",
+      "valley_de": "Rhêmes-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "54": {
+      "code": "54",
+      "name": "Rhêmes-Saint-Georges",
+      "valley_it": "Val di Rhêmes",
+      "valley_en": "Rhêmes Valley",
+      "valley_fr": "Val de Rhêmes",
+      "valley_de": "Rhêmes-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "55": {
+      "code": "55",
+      "name": "Roisan",
+      "valley_it": "Valle del Gran San Bernardo",
+      "valley_en": "Great St Bernard Valley",
+      "valley_fr": "Vallée du Grand-Saint-Bernard",
+      "valley_de": "Grosser-Sankt-Bernhard-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "56": {
+      "code": "56",
+      "name": "Saint-Christophe",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "57": {
+      "code": "57",
+      "name": "Saint-Denis",
+      "valley_it": "Valtournenche",
+      "valley_en": "Valtournenche",
+      "valley_fr": "Valtournenche",
+      "valley_de": "Valtournenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "58": {
+      "code": "58",
+      "name": "Saint-Marcel",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "59": {
+      "code": "59",
+      "name": "Saint-Nicolas",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "60": {
+      "code": "60",
+      "name": "Saint-Oyen",
+      "valley_it": "Valle del Gran San Bernardo",
+      "valley_en": "Great St Bernard Valley",
+      "valley_fr": "Vallée du Grand-Saint-Bernard",
+      "valley_de": "Grosser-Sankt-Bernhard-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "61": {
+      "code": "61",
+      "name": "Saint-Pierre",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "62": {
+      "code": "62",
+      "name": "Saint-Rhémy-en-Bosses",
+      "valley_it": "Valle del Gran San Bernardo",
+      "valley_en": "Great St Bernard Valley",
+      "valley_fr": "Vallée du Grand-Saint-Bernard",
+      "valley_de": "Grosser-Sankt-Bernhard-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "63": {
+      "code": "63",
+      "name": "Saint-Vincent",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "64": {
+      "code": "64",
+      "name": "Sarre",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "65": {
+      "code": "65",
+      "name": "Torgnon",
+      "valley_it": "Valtournenche",
+      "valley_en": "Valtournenche",
+      "valley_fr": "Valtournenche",
+      "valley_de": "Valtournenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "66": {
+      "code": "66",
+      "name": "Valgrisenche",
+      "valley_it": "Valgrisenche",
+      "valley_en": "Valgrisenche",
+      "valley_fr": "Valgrisenche",
+      "valley_de": "Valgrisenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "67": {
+      "code": "67",
+      "name": "Valpelline",
+      "valley_it": "Valpelline",
+      "valley_en": "Valpelline",
+      "valley_fr": "Valpelline",
+      "valley_de": "Valpelline-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "68": {
+      "code": "68",
+      "name": "Valtournenche",
+      "valley_it": "Valtournenche",
+      "valley_en": "Valtournenche",
+      "valley_fr": "Valtournenche",
+      "valley_de": "Valtournenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "69": {
+      "code": "69",
+      "name": "Verrayes",
+      "valley_it": "Valtournenche",
+      "valley_en": "Valtournenche",
+      "valley_fr": "Valtournenche",
+      "valley_de": "Valtournenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "70": {
+      "code": "70",
+      "name": "Verrès",
+      "valley_it": "Val d'Ayas",
+      "valley_en": "Ayas Valley",
+      "valley_fr": "Vallée d'Ayas",
+      "valley_de": "Ayas-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "71": {
+      "code": "71",
+      "name": "Villeneuve",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "72": {
+      "code": "72",
+      "name": "Valsavarenche",
+      "valley_it": "Valsavarenche",
+      "valley_en": "Valsavarenche",
+      "valley_fr": "Valsavarenche",
+      "valley_de": "Valsavarenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "73": {
+      "code": "73",
+      "name": "Antey-Saint-André",
+      "valley_it": "Valtournenche",
+      "valley_en": "Valtournenche",
+      "valley_fr": "Valtournenche",
+      "valley_de": "Valtournenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "74": {
+      "code": "74",
+      "name": "Aosta",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "01": {
+      "code": "01",
+      "name": "Allein",
+      "valley_it": "Valle del Gran San Bernardo",
+      "valley_en": "Great St Bernard Valley",
+      "valley_fr": "Vallée du Grand-Saint-Bernard",
+      "valley_de": "Grosser-Sankt-Bernhard-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "02": {
+      "code": "02",
+      "name": "Torgnon",
+      "valley_it": "Valtournenche",
+      "valley_en": "Valtournenche",
+      "valley_fr": "Valtournenche",
+      "valley_de": "Valtournenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "03": {
+      "code": "03",
+      "name": "Challand-Saint-Victor",
+      "valley_it": "Val d'Ayas",
+      "valley_en": "Ayas Valley",
+      "valley_fr": "Vallée d'Ayas",
+      "valley_de": "Ayas-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "04": {
+      "code": "04",
+      "name": "Avise",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "05": {
+      "code": "05",
+      "name": "Arvier",
+      "valley_it": "Valgrisenche",
+      "valley_en": "Valgrisenche",
+      "valley_fr": "Valgrisenche",
+      "valley_de": "Valgrisenche",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "06": {
+      "code": "06",
+      "name": "La Salle",
+      "valley_it": "Valdigne",
+      "valley_en": "Valdigne",
+      "valley_fr": "Valdigne",
+      "valley_de": "Valdigne",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "07": {
+      "code": "07",
+      "name": "Avise",
+      "valley_it": "Valle centrale",
+      "valley_en": "Central Valley",
+      "valley_fr": "Vallée centrale",
+      "valley_de": "Zentraltal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "08": {
+      "code": "08",
+      "name": "Aymavilles",
+      "valley_it": "Val di Cogne",
+      "valley_en": "Cogne Valley",
+      "valley_fr": "Val de Cogne",
+      "valley_de": "Cogne-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    },
+    "09": {
+      "code": "09",
+      "name": "Bard",
+      "valley_it": "Valle del Lys",
+      "valley_en": "Lys Valley",
+      "valley_fr": "Vallée du Lys",
+      "valley_de": "Lys-Tal",
+      "source": "Regione Autonoma Valle d'Aosta — Catasto Sentieri / lovevda.it"
+    }
+  }
+}

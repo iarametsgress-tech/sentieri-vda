@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="sentieri-vda" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Lac de Chamolé</name>
+    <desc>Catasto Sentieri VdA — 31_S22</desc>
+    <author><name>Regione Autonoma Valle d'Aosta</name></author>
+  </metadata>
+  <trk>
+    <name>Lac de Chamolé</name>
+    <src>Catasto Sentieri VdA (31_S22)</src>
+    <trkseg>
+      <trkpt lat="45.6756221" lon="7.3271050">
+        <ele>2314</ele>
+      </trkpt>
+      <trkpt lat="45.6756051" lon="7.3272140">
+        <ele>2315</ele>
+      </trkpt>
+      <trkpt lat="45.6754931" lon="7.3274340">
+        <ele>2315</ele>
+      </trkpt>
+      <trkpt lat="45.6754391" lon="7.3276260">
+        <ele>2316</ele>
+      </trkpt>
+      <trkpt lat="45.6753731" lon="7.3277850">
+        <ele>2317</ele>
+      </trkpt>
+      <trkpt lat="45.6750331" lon="7.3283850">
+        <ele>2317</ele>
+      </trkpt>
+      <trkpt lat="45.6749431" lon="7.3287050">
+        <ele>2318</ele>
+      </trkpt>
+      <trkpt lat="45.6749631" lon="7.3289450">
+        <ele>2319</ele>
+      </trkpt>
+      <trkpt lat="45.6751831" lon="7.3289850">
+        <ele>2319</ele>
+      </trkpt>
+      <trkpt lat="45.6750531" lon="7.3291550">
+        <ele>2320</ele>
+      </trkpt>
+      <trkpt lat="45.6750131" lon="7.3293550">
+        <ele>2321</ele>
+      </trkpt>
+      <trkpt lat="45.6749931" lon="7.3293550">
+        <ele>2322</ele>
+      </trkpt>
+      <trkpt lat="45.6749031" lon="7.3296250">
+        <ele>2322</ele>
+      </trkpt>
+      <trkpt lat="45.6748431" lon="7.3300150">
+        <ele>2323</ele>
+      </trkpt>
+      <trkpt lat="45.6748131" lon="7.3300850">
+        <ele>2324</ele>
+      </trkpt>
+      <trkpt lat="45.6747951" lon="7.3304710">
+        <ele>2324</ele>
+      </trkpt>
+      <trkpt lat="45.6747931" lon="7.3308050">
+        <ele>2325</ele>
+      </trkpt>
+      <trkpt lat="45.6750231" lon="7.3314350">
+        <ele>2326</ele>
+      </trkpt>
+      <trkpt lat="45.6751331" lon="7.3321150">
+        <ele>2326</ele>
+      </trkpt>
+      <trkpt lat="45.6754031" lon="7.3325050">
+        <ele>2327</ele>
+      </trkpt>
+      <trkpt lat="45.6758731" lon="7.3329850">
+        <ele>2328</ele>
+      </trkpt>
+      <trkpt lat="45.6764531" lon="7.3337250">
+        <ele>2328</ele>
+      </trkpt>
+      <trkpt lat="45.6765431" lon="7.3340880">
+        <ele>2329</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

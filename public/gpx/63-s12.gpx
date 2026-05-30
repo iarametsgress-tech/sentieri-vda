@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="sentieri-vda" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Gerbore  - Vetan</name>
+    <desc>Catasto Sentieri VdA — 63_S12</desc>
+    <author><name>Regione Autonoma Valle d'Aosta</name></author>
+  </metadata>
+  <trk>
+    <name>Gerbore  - Vetan</name>
+    <src>Catasto Sentieri VdA (63_S12)</src>
+    <trkseg>
+      <trkpt lat="45.7296017" lon="7.1917383">
+        <ele>1636</ele>
+      </trkpt>
+      <trkpt lat="45.7294553" lon="7.1915252">
+        <ele>1638</ele>
+      </trkpt>
+      <trkpt lat="45.7292382" lon="7.1911756">
+        <ele>1639</ele>
+      </trkpt>
+      <trkpt lat="45.7291854" lon="7.1909632">
+        <ele>1641</ele>
+      </trkpt>
+      <trkpt lat="45.7291549" lon="7.1907429">
+        <ele>1642</ele>
+      </trkpt>
+      <trkpt lat="45.7291072" lon="7.1905710">
+        <ele>1644</ele>
+      </trkpt>
+      <trkpt lat="45.7288495" lon="7.1899303">
+        <ele>1645</ele>
+      </trkpt>
+      <trkpt lat="45.7285284" lon="7.1895455">
+        <ele>1647</ele>
+      </trkpt>
+      <trkpt lat="45.7283669" lon="7.1892953">
+        <ele>1648</ele>
+      </trkpt>
+      <trkpt lat="45.7282094" lon="7.1890120">
+        <ele>1650</ele>
+      </trkpt>
+      <trkpt lat="45.7279826" lon="7.1880463">
+        <ele>1651</ele>
+      </trkpt>
+      <trkpt lat="45.7278421" lon="7.1877046">
+        <ele>1653</ele>
+      </trkpt>
+      <trkpt lat="45.7278399" lon="7.1875661">
+        <ele>1654</ele>
+      </trkpt>
+      <trkpt lat="45.7281096" lon="7.1866931">
+        <ele>1656</ele>
+      </trkpt>
+      <trkpt lat="45.7282318" lon="7.1861731">
+        <ele>1657</ele>
+      </trkpt>
+      <trkpt lat="45.7282960" lon="7.1856815">
+        <ele>1659</ele>
+      </trkpt>
+      <trkpt lat="45.7283401" lon="7.1856242">
+        <ele>1660</ele>
+      </trkpt>
+      <trkpt lat="45.7283805" lon="7.1853350">
+        <ele>1662</ele>
+      </trkpt>
+      <trkpt lat="45.7283787" lon="7.1852186">
+        <ele>1663</ele>
+      </trkpt>
+      <trkpt lat="45.7283186" lon="7.1848346">
+        <ele>1665</ele>
+      </trkpt>
+      <trkpt lat="45.7282460" lon="7.1845120">
+        <ele>1666</ele>
+      </trkpt>
+      <trkpt lat="45.7282135" lon="7.1844532">
+        <ele>1668</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

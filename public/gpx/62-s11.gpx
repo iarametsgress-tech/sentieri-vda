@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="sentieri-vda" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Saint-Oyen - Eternod</name>
+    <desc>Catasto Sentieri VdA — 62_S11</desc>
+    <author><name>Regione Autonoma Valle d'Aosta</name></author>
+  </metadata>
+  <trk>
+    <name>Saint-Oyen - Eternod</name>
+    <src>Catasto Sentieri VdA (62_S11)</src>
+    <trkseg>
+      <trkpt lat="45.8251537" lon="7.2159059">
+        <ele>1367</ele>
+      </trkpt>
+      <trkpt lat="45.8251955" lon="7.2159540">
+        <ele>1380</ele>
+      </trkpt>
+      <trkpt lat="45.8252275" lon="7.2160878">
+        <ele>1394</ele>
+      </trkpt>
+      <trkpt lat="45.8253960" lon="7.2167752">
+        <ele>1407</ele>
+      </trkpt>
+      <trkpt lat="45.8255113" lon="7.2171510">
+        <ele>1421</ele>
+      </trkpt>
+      <trkpt lat="45.8256387" lon="7.2174770">
+        <ele>1434</ele>
+      </trkpt>
+      <trkpt lat="45.8258103" lon="7.2170010">
+        <ele>1448</ele>
+      </trkpt>
+      <trkpt lat="45.8264103" lon="7.2174510">
+        <ele>1461</ele>
+      </trkpt>
+      <trkpt lat="45.8265003" lon="7.2176710">
+        <ele>1475</ele>
+      </trkpt>
+      <trkpt lat="45.8271603" lon="7.2212300">
+        <ele>1488</ele>
+      </trkpt>
+      <trkpt lat="45.8278903" lon="7.2223500">
+        <ele>1502</ele>
+      </trkpt>
+      <trkpt lat="45.8282403" lon="7.2227500">
+        <ele>1515</ele>
+      </trkpt>
+      <trkpt lat="45.8283603" lon="7.2226700">
+        <ele>1529</ele>
+      </trkpt>
+      <trkpt lat="45.8286003" lon="7.2232900">
+        <ele>1542</ele>
+      </trkpt>
+      <trkpt lat="45.8289003" lon="7.2234200">
+        <ele>1556</ele>
+      </trkpt>
+      <trkpt lat="45.8290703" lon="7.2237800">
+        <ele>1569</ele>
+      </trkpt>
+      <trkpt lat="45.8294203" lon="7.2234600">
+        <ele>1583</ele>
+      </trkpt>
+      <trkpt lat="45.8295003" lon="7.2235500">
+        <ele>1596</ele>
+      </trkpt>
+      <trkpt lat="45.8293703" lon="7.2242100">
+        <ele>1610</ele>
+      </trkpt>
+      <trkpt lat="45.8295323" lon="7.2248060">
+        <ele>1623</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

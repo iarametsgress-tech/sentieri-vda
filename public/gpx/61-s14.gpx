@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="sentieri-vda" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Cerlogne - Vens</name>
+    <desc>Catasto Sentieri VdA — 61_S14</desc>
+    <author><name>Regione Autonoma Valle d'Aosta</name></author>
+  </metadata>
+  <trk>
+    <name>Cerlogne - Vens</name>
+    <src>Catasto Sentieri VdA (61_S14)</src>
+    <trkseg>
+      <trkpt lat="45.7218458" lon="7.1454857">
+        <ele>1583</ele>
+      </trkpt>
+      <trkpt lat="45.7220495" lon="7.1453299">
+        <ele>1590</ele>
+      </trkpt>
+      <trkpt lat="45.7224195" lon="7.1455799">
+        <ele>1598</ele>
+      </trkpt>
+      <trkpt lat="45.7224691" lon="7.1455792">
+        <ele>1605</ele>
+      </trkpt>
+      <trkpt lat="45.7226591" lon="7.1453092">
+        <ele>1612</ele>
+      </trkpt>
+      <trkpt lat="45.7228628" lon="7.1452490">
+        <ele>1620</ele>
+      </trkpt>
+      <trkpt lat="45.7232921" lon="7.1452580">
+        <ele>1627</ele>
+      </trkpt>
+      <trkpt lat="45.7235242" lon="7.1451800">
+        <ele>1635</ele>
+      </trkpt>
+      <trkpt lat="45.7237342" lon="7.1449500">
+        <ele>1642</ele>
+      </trkpt>
+      <trkpt lat="45.7239342" lon="7.1444600">
+        <ele>1649</ele>
+      </trkpt>
+      <trkpt lat="45.7240042" lon="7.1443800">
+        <ele>1657</ele>
+      </trkpt>
+      <trkpt lat="45.7240635" lon="7.1443577">
+        <ele>1664</ele>
+      </trkpt>
+      <trkpt lat="45.7241142" lon="7.1442900">
+        <ele>1671</ele>
+      </trkpt>
+      <trkpt lat="45.7242142" lon="7.1442800">
+        <ele>1679</ele>
+      </trkpt>
+      <trkpt lat="45.7243242" lon="7.1441300">
+        <ele>1686</ele>
+      </trkpt>
+      <trkpt lat="45.7244842" lon="7.1432900">
+        <ele>1693</ele>
+      </trkpt>
+      <trkpt lat="45.7247405" lon="7.1430712">
+        <ele>1701</ele>
+      </trkpt>
+      <trkpt lat="45.7244542" lon="7.1427600">
+        <ele>1708</ele>
+      </trkpt>
+      <trkpt lat="45.7242542" lon="7.1423400">
+        <ele>1716</ele>
+      </trkpt>
+      <trkpt lat="45.7241942" lon="7.1418100">
+        <ele>1723</ele>
+      </trkpt>
+      <trkpt lat="45.7242342" lon="7.1411972">
+        <ele>1730</ele>
+      </trkpt>
+      <trkpt lat="45.7240417" lon="7.1408432">
+        <ele>1738</ele>
+      </trkpt>
+      <trkpt lat="45.7241136" lon="7.1406833">
+        <ele>1745</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
