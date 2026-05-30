@@ -103,14 +103,22 @@ interface AmbienteExplorerProps {
 function StatBand({
   stats,
   sourcesLabel,
+  onLight = false,
 }: {
   stats: LocalizedStat[];
   sourcesLabel: string;
+  onLight?: boolean;
 }) {
   if (stats.length === 0) return null;
   const sources = Array.from(new Set(stats.map((s) => s.source)));
   return (
-    <ScrollReveal variant="scale" className="mb-12 rounded-2xl border border-white/8 bg-white/[0.02] px-6 py-8 lg:px-10 lg:py-10">
+    <ScrollReveal
+      variant="scale"
+      className={cn(
+        'mb-12 rounded-2xl border px-6 py-8 lg:px-10 lg:py-10',
+        onLight ? 'border-stone-300 bg-white' : 'border-white/8 bg-white/[0.02]',
+      )}
+    >
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
         {stats.map((s) => (
           <CounterStat
@@ -119,11 +127,20 @@ function StatBand({
             prefix={s.prefix}
             suffix={s.suffix}
             label={s.label}
-            valueClassName="font-display text-4xl tabular tracking-tighter text-snow lg:text-5xl"
+            valueClassName={cn(
+              'font-display text-4xl tabular tracking-tighter lg:text-5xl',
+              onLight ? 'text-stone-900' : 'text-snow',
+            )}
+            labelClassName={onLight ? 'text-stone-500' : undefined}
           />
         ))}
       </div>
-      <p className="mt-8 border-t border-white/8 pt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-snow/50">
+      <p
+        className={cn(
+          'mt-8 border-t pt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em]',
+          onLight ? 'border-stone-300 text-stone-500' : 'border-white/8 text-snow/50',
+        )}
+      >
         {sourcesLabel}: {sources.join(' · ')}
       </p>
     </ScrollReveal>
@@ -135,11 +152,13 @@ function EnvironmentBlock({
   locale,
   index,
   theme,
+  onLight = false,
 }: {
   section: EnvironmentSection;
   locale: string;
   index: number;
   theme: TopicThemeKey;
+  onLight?: boolean;
 }) {
   const highlights = getSectionHighlights(section, locale);
   const hasImage = Boolean(section.image);
@@ -151,7 +170,11 @@ function EnvironmentBlock({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.45, delay: index * 0.06 }}
-      className={cn('rounded-2xl border overflow-hidden transition-colors hover:border-white/20', t.card)}
+      className={cn(
+        'rounded-2xl border overflow-hidden transition-colors',
+        onLight ? 'hover:border-stone-400' : 'hover:border-white/20',
+        t.card,
+      )}
     >
       {hasImage && (
         <div className="relative w-full aspect-[16/7] overflow-hidden">
@@ -169,10 +192,10 @@ function EnvironmentBlock({
         <p className={cn('font-mono text-[10px] uppercase tracking-[0.3em] mb-2', t.eyebrow)}>
           {getSectionEyebrow(section, locale)}
         </p>
-        <h3 className="font-display text-xl lg:text-2xl tracking-tight text-snow mb-4">
+        <h3 className={cn('font-display text-xl lg:text-2xl tracking-tight mb-4', onLight ? 'text-stone-900' : 'text-snow')}>
           {getSectionTitle(section, locale)}
         </h3>
-        <p className="text-snow/70 leading-relaxed text-[15px] mb-5">
+        <p className={cn('leading-relaxed text-[15px] mb-5', onLight ? 'text-stone-600' : 'text-snow/70')}>
           {getSectionBody(section, locale)}
         </p>
         {highlights.length > 0 ? (
@@ -180,7 +203,7 @@ function EnvironmentBlock({
             {highlights.map((h) => (
               <li
                 key={h}
-                className="flex items-start gap-2 text-sm text-snow/60 leading-snug"
+                className={cn('flex items-start gap-2 text-sm leading-snug', onLight ? 'text-stone-600' : 'text-snow/60')}
               >
                 <ChevronRight size={14} className={cn('shrink-0 mt-0.5', t.icon)} />
                 {h}
@@ -509,7 +532,7 @@ function AmbienteExplorerInner({
       </section>
 
       <SceneDivider
-        image="/trails/alta-via-1-tappa-9-valtournenche-rifugio-barmasse.jpg"
+        image="/environment/ophiolites.jpg"
         title={isIT ? 'Geologia' : 'Geology'}
         subtitle={isIT
           ? 'Rocce millenarie, ofioliti e morene glaciali — la storia delle Alpi scritta nella pietra'
@@ -530,10 +553,10 @@ function AmbienteExplorerInner({
               {labels.geologyTitle}
             </h2>
           </ScrollReveal>
-          <StatBand stats={geologyStats} sourcesLabel={sourcesLabel} />
+          <StatBand stats={geologyStats} sourcesLabel={sourcesLabel} onLight />
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
             {geology.map((s, i) => (
-              <EnvironmentBlock key={s.id} section={s} locale={locale} index={i} theme="geology" />
+              <EnvironmentBlock key={s.id} section={s} locale={locale} index={i} theme="geology" onLight />
             ))}
           </div>
         </div>
@@ -541,10 +564,10 @@ function AmbienteExplorerInner({
 
       <SceneDivider
         image="/trails/tour-rutor-tappa-3-lago-rutor-rifugio-verney.jpg"
-        title={isIT ? 'Acque e Ghiacciai' : 'Waters & Glaciers'}
+        title={isIT ? 'Acque' : 'Waters'}
         subtitle={isIT
-          ? '184 ghiacciai censiti, 168 km di Dora Baltea — l\'acqua che scende dalle creste al fondovalle'
-          : '184 catalogued glaciers, 168 km of Dora Baltea — water descending from ridges to valley floor'}
+          ? 'Sorgenti, laghi alpini e 168 km di Dora Baltea — l\'acqua che scende dalle creste al fondovalle'
+          : 'Springs, alpine lakes and 168 km of Dora Baltea — water flowing from ridges to valley floor'}
       />
 
       {/* Idrologia */}

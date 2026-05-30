@@ -10,6 +10,7 @@ export default function CounterStat({
   label,
   duration = 2000,
   valueClassName = 'font-display text-5xl tabular tracking-tighter text-snow lg:text-7xl',
+  labelClassName = 'text-snow/55',
 }: {
   value: number;
   suffix?: string;
@@ -17,6 +18,7 @@ export default function CounterStat({
   label: string;
   duration?: number;
   valueClassName?: string;
+  labelClassName?: string;
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
@@ -43,7 +45,7 @@ export default function CounterStat({
         {count.toLocaleString('it-IT')}
         <span className="text-alpenglow">{suffix}</span>
       </p>
-      <p className="mt-3 font-mono text-xs uppercase tracking-[0.25em] text-snow/55">
+      <p className={`mt-3 font-mono text-xs uppercase tracking-[0.25em] ${labelClassName}`}>
         {label}
       </p>
     </div>

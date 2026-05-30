@@ -19,10 +19,10 @@ export const TOPIC_THEMES = {
     icon: 'text-ice',
   },
   geology: {
-    section: 'bg-stone-900/45',
-    card: 'border-stone-500/20 bg-stone-500/[0.07]',
-    eyebrow: 'text-stone-300',
-    icon: 'text-stone-400',
+    section: 'bg-stone-200 text-stone-900',
+    card: 'border-stone-300 bg-white shadow-sm',
+    eyebrow: 'text-stone-500',
+    icon: 'text-stone-500',
   },
   water: {
     section: 'bg-sky-950/35',
