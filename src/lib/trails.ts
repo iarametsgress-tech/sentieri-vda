@@ -15,15 +15,15 @@ const browse = [...parsed, ...skeletons];
 const bySlug = new Map(browse.map((t) => [t.slug, t]));
 
 /**
- * Sentieri CURATI. Alimenta hub, sitemap, featured, statistiche e mappa home —
- * volutamente NON include gli scheletri, che restano fuori dall'indicizzazione
- * finché non sono arricchiti.
+ * Sentieri CURATI e SCHELETRI ARRICCHITI. Alimenta hub, sitemap, featured, statistiche e mappa home.
+ * Gli scheletri non ancora arricchiti restano fuori dall'indicizzazione.
  */
 export function getAllTrails(): Trail[] {
-  return parsed;
+  const enrichedSkeletons = skeletons.filter((t) => t.enriched === true);
+  return [...parsed, ...enrichedSkeletons];
 }
 
-/** Catalogo completo navigabile (curati + scheletro). */
+/** Catalogo completo navigabile (curati + tutti gli scheletri). */
 export function getBrowseTrails(): Trail[] {
   return browse;
 }
