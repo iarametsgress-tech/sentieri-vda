@@ -1,4 +1,5 @@
 import CulturaValleyCard from '@/components/cultura/CulturaValleyCard';
+import CulturaValleyMap from '@/components/cultura/CulturaValleyMap';
 import { getAllValleys } from '@/lib/culture';
 import { topicClasses } from '@/lib/topic-themes';
 import { cn } from '@/lib/cn';
@@ -8,6 +9,18 @@ export default async function CulturaValliSection({ locale }: { locale: string }
   const t = await getTranslations('Cultura');
   const valleys = getAllValleys();
   const isIT = locale === 'it';
+
+  const valleyMarkers = valleys.map((v) => ({
+    id: v.id,
+    name:
+      locale === 'en'
+        ? v.name_en
+        : locale === 'fr'
+          ? v.name_fr
+          : locale === 'de'
+            ? v.name_de
+            : v.name_it,
+  }));
 
   return (
     <section
@@ -26,6 +39,14 @@ export default async function CulturaValliSection({ locale }: { locale: string }
           </p>
           <h2 className="mb-4 font-display text-display-md tracking-tighter">{t('valliTitle')}</h2>
           <p className="leading-relaxed text-snow/55">{t('valliSubtitle')}</p>
+        </div>
+        <div className="mb-12">
+          <CulturaValleyMap valleys={valleyMarkers} />
+          <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-widest text-snow/40">
+            {isIT
+              ? 'Le valli della Valle d’Aosta e dove si trovano'
+              : 'The valleys of Aosta Valley and where they lie'}
+          </p>
         </div>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           {valleys.map((valley, index) => (

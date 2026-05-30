@@ -105,17 +105,6 @@ export default function CulturaValleyCard({
             </div>
           ) : null}
           <div className="flex flex-wrap items-center gap-4 border-t border-white/8 pt-2">
-            {valley.official_url ? (
-              <a
-                href={valley.official_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-alpenglow hover:text-snow"
-              >
-                {labels.officialSite}
-                <ExternalLink size={12} />
-              </a>
-            ) : null}
             <p className="font-mono text-[10px] text-snow/50">
               {labels.source}: {valley.source}
             </p>

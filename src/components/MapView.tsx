@@ -21,6 +21,11 @@ export interface RouteHighlight {
   labelCoords: [number, number];
 }
 
+export interface MapLabel {
+  text: string;
+  coords: [number, number];
+}
+
 interface MapViewProps {
   center?: [number, number];
   zoom?: number;
@@ -29,8 +34,23 @@ interface MapViewProps {
   terrain3D?: boolean;
   markers?: MarkerPoint[];
   routeHighlights?: RouteHighlight[];
+  labels?: MapLabel[];
   className?: string;
   lineColor?: string;
+}
+
+function createMapLabelEl(text: string): HTMLElement {
+  const el = document.createElement('div');
+  el.textContent = text;
+  el.style.cssText = `
+    padding: 4px 10px; border-radius: 999px;
+    background: rgba(10,10,10,0.82); border: 1px solid rgba(212,165,116,0.45);
+    color: #FAFAF7; font-family: monospace; font-size: 10px;
+    font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    white-space: nowrap; box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px); pointer-events: none;
+  `;
+  return el;
 }
 
 function createMarkerEl(type: 'start' | 'end', label: string, elevation: number): HTMLElement {
@@ -133,6 +153,7 @@ export default function MapView({
   terrain3D = false,
   markers,
   routeHighlights,
+  labels,
   className = 'w-full h-[500px]',
   lineColor = '#D4A574',
 }: MapViewProps) {
@@ -318,6 +339,15 @@ export default function MapView({
           markerPoints.forEach((m) => bounds.extend(m.coords));
           map.fitBounds(bounds, { padding: 80, duration: 0, maxZoom: 13 });
         }
+      }
+
+      // Etichette di testo (es. nomi delle valli)
+      if (labels?.length) {
+        labels.forEach((l) => {
+          new maplibregl.Marker({ element: createMapLabelEl(l.text), anchor: 'center' })
+            .setLngLat(l.coords)
+            .addTo(map);
+        });
       }
     });
 
