@@ -10,8 +10,22 @@ import {
   getHydrologySections,
   getPeaks4000,
 } from '@/lib/environment';
-import AmbienteExplorer from '@/components/AmbienteExplorer';
 import CinematicHero from '@/components/CinematicHero';
+import dynamic from 'next/dynamic';
+
+const AmbienteExplorer = dynamic(() => import('@/components/AmbienteExplorer'), {
+  ssr: false,
+  loading: () => (
+    <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 animate-pulse space-y-8">
+      <div className="flex gap-3">
+        {[1, 2, 3, 4].map((i) => <div key={i} className="h-10 w-24 rounded-full bg-white/[0.04]" />)}
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[1, 2, 3, 4, 5, 6].map((i) => <div key={i} className="h-48 rounded-2xl bg-white/[0.03]" />)}
+      </div>
+    </div>
+  ),
+});
 
 // Video hero opzionale: attivo solo se il file è presente in public/video/.
 const AMBIENTE_HERO_VIDEO = existsSync(join(process.cwd(), 'public', 'video', 'ambiente-hero.mp4'))
