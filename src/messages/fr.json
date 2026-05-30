@@ -129,7 +129,9 @@
       "relatedTrails": "Sentiers associés",
       "relatedTrailsSubtitle": "Même vallée ou itinéraires similaires — d'autres randonnées à découvrir.",
       "tags": "Thèmes et caractéristiques"
-    }
+    },
+    "searchPlaceholder": "Rechercher un sentier…",
+    "showMore": "Afficher {n} de plus"
   },
   "TrailHubs": {
     "breadcrumbHome": "Accueil",

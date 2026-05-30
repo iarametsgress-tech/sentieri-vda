@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { Link, useRouter } from '@/i18n/routing';
@@ -43,6 +43,7 @@ import {
 import FloraFaunaExplorer from './FloraFaunaExplorer';
 import CounterStat from './CounterStat';
 import SceneDivider from './SceneDivider';
+import { AmbienteExplorerSkeleton } from '@/components/SectionExplorerSkeleton';
 
 const SECTIONS: {
   id: AmbienteSectionId;
@@ -296,7 +297,15 @@ function MassifPeakCard({
   );
 }
 
-export default function AmbienteExplorer({
+export default function AmbienteExplorer(props: AmbienteExplorerProps) {
+  return (
+    <Suspense fallback={<AmbienteExplorerSkeleton />}>
+      <AmbienteExplorerInner {...props} />
+    </Suspense>
+  );
+}
+
+function AmbienteExplorerInner({
   locale,
   flora,
   fauna,
@@ -305,10 +314,10 @@ export default function AmbienteExplorer({
   hydrology,
   labels,
 }: AmbienteExplorerProps) {
-  const isIT = locale === 'it';
   const searchParams = useSearchParams();
-  const router = useRouter();
   const peakParam = searchParams.get('vetta');
+  const isIT = locale === 'it';
+  const router = useRouter();
   const [activeSection, setActiveSection] = useState<AmbienteSectionId>('flora-fauna');
   const [peakFilter, setPeakFilter] = useState<PeakFilter>('all');
   const [highlightedPeakId, setHighlightedPeakId] = useState<string | null>(null);

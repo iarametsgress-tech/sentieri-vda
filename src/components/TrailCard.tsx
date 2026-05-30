@@ -84,7 +84,7 @@ export default function TrailCard({
             fill
             className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.06]"
             sizes="(max-width: 768px) 100vw, 400px"
-            {...imageProps}
+            {...(cardImage.endsWith('.svg') ? { unoptimized: true } : imageProps)}
           />
 
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/20 to-transparent" />

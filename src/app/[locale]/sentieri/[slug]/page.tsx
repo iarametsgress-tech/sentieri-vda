@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { getAllTrails, getTrailBySlug, getAdjacentAV1Stages, getAdjacentAV2Stages, getAdjacentTourStages } from '@/lib/trails';
+import { isSkeletonTrail } from '@/lib/skeleton-trails';
 import dynamic from 'next/dynamic';
 const MapView = dynamic(() => import('@/components/MapView'), {
   ssr: false,
@@ -52,6 +53,11 @@ import {
   Calendar,
 } from 'lucide-react';
 
+// Prerendera al build solo i sentieri curati (getAllTrails).
+// I 1000+ scheletri del Catasto vengono renderizzati on-demand (ISR) al primo
+// accesso e poi messi in cache: evita un build con migliaia di pagine.
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   return getAllTrails().map((t) => ({ slug: t.slug }));
 }
@@ -69,6 +75,9 @@ export async function generateMetadata({
   return {
     title: name,
     description: desc,
+    // Le schede scheletro (dati ufficiali ma senza foto/descrizione editoriale)
+    // restano navigabili ma noindex finché non sono arricchite: niente thin content.
+    ...(isSkeletonTrail(trail) ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title: name,
       description: desc,
@@ -237,7 +246,9 @@ export default async function TrailDetail({
             priority
             className="object-cover"
             sizes="(max-width: 1280px) 100vw, 1280px"
-            {...trailImageBlurProps(iconicImage)}
+            {...(iconicImage.endsWith('.svg')
+              ? { unoptimized: true }
+              : trailImageBlurProps(iconicImage))}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent pointer-events-none" />
         </div>

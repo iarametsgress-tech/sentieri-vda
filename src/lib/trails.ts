@@ -1,15 +1,35 @@
 import trailsJson from '@/data/trails.json';
 import routesJson from '@/data/trails-routes.json';
 import { TrailSchema, type Trail } from './types';
+import { getSkeletonTrails } from './skeleton-trails';
 
+/** Sentieri editoriali curati (con foto, descrizioni e arricchimento verificato). */
 const parsed = [...trailsJson, ...routesJson].map((t) => TrailSchema.parse(t));
+const curatedSlugs = new Set(parsed.map((t) => t.slug));
 
+/** Sentieri scheletro dal Catasto ufficiale, esclusi quelli già curati. */
+const skeletons = getSkeletonTrails().filter((t) => !curatedSlugs.has(t.slug));
+
+/** Tutti i sentieri navigabili: curati + scheletro (per catalogo e mappa). */
+const browse = [...parsed, ...skeletons];
+const bySlug = new Map(browse.map((t) => [t.slug, t]));
+
+/**
+ * Sentieri CURATI. Alimenta hub, sitemap, featured, statistiche e mappa home —
+ * volutamente NON include gli scheletri, che restano fuori dall'indicizzazione
+ * finché non sono arricchiti.
+ */
 export function getAllTrails(): Trail[] {
   return parsed;
 }
 
+/** Catalogo completo navigabile (curati + scheletro). */
+export function getBrowseTrails(): Trail[] {
+  return browse;
+}
+
 export function getTrailBySlug(slug: string): Trail | undefined {
-  return parsed.find((t) => t.slug === slug);
+  return bySlug.get(slug);
 }
 
 export function getTrailsByTag(tag: string): Trail[] {

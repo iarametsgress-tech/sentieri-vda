@@ -129,7 +129,9 @@
       "relatedTrails": "Related trails",
       "relatedTrailsSubtitle": "Same valley or similar routes — more hikes to explore.",
       "tags": "Themes and features"
-    }
+    },
+    "searchPlaceholder": "Search a trail…",
+    "showMore": "Show {n} more"
   },
   "TrailHubs": {
     "breadcrumbHome": "Home",

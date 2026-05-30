@@ -26,7 +26,7 @@ const accentBorder: Record<TourCatalogItem['accent'], string> = {
 export default function TourCatalog({ tours }: { tours: TourCatalogItem[] }) {
   return (
     <section className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 pb-20 lg:grid-cols-2 lg:px-10 lg:gap-10">
-      {tours.map((tour) => (
+      {tours.map((tour, index) => (
         <Link
           key={tour.id}
           href={`/tour/${tour.id}`}
@@ -37,6 +37,8 @@ export default function TourCatalog({ tours }: { tours: TourCatalogItem[] }) {
               src={tour.image}
               alt={tour.name}
               fill
+              priority={index < 2}
+              loading={index < 2 ? undefined : 'lazy'}
               className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
               sizes="(max-width: 1024px) 100vw, 640px"
               {...trailImageBlurProps(tour.image)}

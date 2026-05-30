@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Sentiero Valle d'Aosta">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#101417"/>
+      <stop offset="0.55" stop-color="#0c0f12"/>
+      <stop offset="1" stop-color="#080a0c"/>
+    </linearGradient>
+    <linearGradient id="ridge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1b2228"/>
+      <stop offset="1" stop-color="#0d1114"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#sky)"/>
+  <path d="M0 1090 L250 720 L470 980 L700 560 L930 940 L1200 690 L1200 1500 L0 1500 Z" fill="url(#ridge)"/>
+  <path d="M0 1220 L320 980 L560 1180 L820 900 L1060 1160 L1200 1040 L1200 1500 L0 1500 Z" fill="#11161a" opacity="0.85"/>
+  <circle cx="930" cy="360" r="70" fill="#d4a574" opacity="0.18"/>
+  <text x="600" y="1380" text-anchor="middle" font-family="Georgia, serif" font-size="40" fill="#FAFAF7" opacity="0.42" letter-spacing="6">SENTIERI VDA</text>
+</svg>

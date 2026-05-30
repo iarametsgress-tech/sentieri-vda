@@ -1,5 +1,5 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { getAllTrails } from '@/lib/trails';
+import { getBrowseTrails } from '@/lib/trails';
 import TrailsExplorer from '@/components/TrailsExplorer';
 import SectionPageHero from '@/components/SectionPageHero';
 import TrailHubExploreSection from '@/components/TrailHubExploreSection';
@@ -42,7 +42,16 @@ export default async function TrailsPage({
   const { tag } = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations('Trails');
-  const trails = getAllTrails();
+  // Catalogo completo (curati + scheletro). Le descrizioni lunghe non servono
+  // alla lista/filtri: le rimuoviamo per non spedire MB di JSON al client.
+  const trails = getBrowseTrails().map((tr) => ({
+    ...tr,
+    description_it: '',
+    description_en: '',
+    description_fr: '',
+    description_de: '',
+    waypoints: undefined,
+  }));
 
   return (
     <div>

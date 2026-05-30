@@ -22,8 +22,7 @@ export default function Hero() {
   });
   const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '25%']);
   const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '12%']);
-  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
-
+  const scrollCueOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
     <section
@@ -59,70 +58,68 @@ export default function Hero() {
         }}
       />
 
-      <motion.div
-        style={{ y: contentY, opacity }}
-        className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-20 lg:px-10 lg:pb-32"
-      >
-        <p
-          className="text-on-image-eyebrow mb-6 font-mono text-[11px] uppercase tracking-[0.35em] text-alpenglow"
-        >
-          {t('heroEyebrow')}
-        </p>
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-20 lg:px-10 lg:pb-32">
+        {/* Static SSR block — visible at first paint without JS or web-font */}
+        <div>
+          <p className="text-on-image-eyebrow mb-6 font-mono text-[11px] uppercase tracking-[0.35em] text-alpenglow">
+            {t('heroEyebrow')}
+          </p>
 
-        <h1
-          className="text-on-image-title font-display text-display-xl max-w-5xl pb-1 text-snow"
-        >
-          {t('heroTitle')}
-        </h1>
+          <h1 className="text-on-image-title font-display text-display-xl max-w-5xl pb-1 text-snow">
+            {t('heroTitle')}
+          </h1>
+        </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.25, delay: 0.1, ease: 'easeOut' }}
-          className="text-on-image-body mt-6 max-w-2xl text-lg font-light leading-relaxed text-snow/90 lg:text-xl"
-        >
-          {t('heroSubtitle')}
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.25, delay: 0.15, ease: 'easeOut' }}
-          className="mt-10 flex flex-wrap items-center gap-4"
-        >
-          <Link
-            href="/sentieri"
-            className="group inline-flex items-center gap-2 rounded-full bg-snow px-6 py-3.5 text-sm font-medium text-ink transition-all duration-300 hover:bg-alpenglow hover:shadow-[0_0_32px_rgba(212,165,116,0.4)]"
+        <motion.div style={{ y: contentY }}>
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.25, delay: 0.1, ease: 'easeOut' }}
+            className="text-on-image-body mt-6 max-w-2xl text-lg font-light leading-relaxed text-snow/90 lg:text-xl"
           >
-            {t('heroCtaPrimary')}
-            <ArrowUpRight
-              size={15}
-              className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
-          </Link>
-          <Link
-            href="/alte-vie"
-            className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm text-snow backdrop-blur-sm transition-all duration-300 hover:border-white/60 hover:bg-white/5"
+            {t('heroSubtitle')}
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.25, delay: 0.15, ease: 'easeOut' }}
+            className="mt-10 flex flex-wrap items-center gap-4"
           >
-            {t('heroCtaSecondary')}
-          </Link>
+            <Link
+              href="/sentieri"
+              className="group inline-flex items-center gap-2 rounded-full bg-snow px-6 py-3.5 text-sm font-medium text-ink transition-all duration-300 hover:bg-alpenglow hover:shadow-[0_0_32px_rgba(212,165,116,0.4)]"
+            >
+              {t('heroCtaPrimary')}
+              <ArrowUpRight
+                size={15}
+                className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </Link>
+            <Link
+              href="/alte-vie"
+              className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3.5 text-sm text-snow backdrop-blur-sm transition-all duration-300 hover:border-white/60 hover:bg-white/5"
+            >
+              {t('heroCtaSecondary')}
+            </Link>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2, duration: 1 }}
+            className="pointer-events-none absolute bottom-6 right-6 font-mono text-[10px] text-snow/25"
+          >
+            © Hairless Heart — CC BY-SA 4.0 / Wikimedia Commons
+          </motion.p>
         </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
-          className="pointer-events-none absolute bottom-6 right-6 font-mono text-[10px] text-snow/25"
-        >
-          © Hairless Heart — CC BY-SA 4.0 / Wikimedia Commons
-        </motion.p>
-      </motion.div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.8, duration: 1 }}
-        style={{ opacity }}
+        style={{ opacity: scrollCueOpacity }}
         className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-snow/55"
       >
         <motion.div

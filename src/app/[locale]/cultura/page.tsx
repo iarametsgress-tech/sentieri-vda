@@ -3,8 +3,17 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
-import { getAllValleys, getAllTraditions, getAllFoodWine } from '@/lib/culture';
-import CulturaExplorer from '@/components/CulturaExplorer';
+import valleysData from '@/data/culture/valleys.json';
+import CulturaSectionNav from '@/components/cultura/CulturaSectionNav';
+import CulturaDeepLinkScroll from '@/components/cultura/CulturaDeepLinkScroll';
+import {
+  CulturaValliSkeleton,
+  CulturaBelowFoldSkeleton,
+} from '@/components/SectionExplorerSkeleton';
+import CulturaValliSection from '@/components/sections/CulturaValliSection';
+import CulturaTradizioniSection from '@/components/sections/CulturaTradizioniSection';
+import CulturaCiboSection from '@/components/sections/CulturaCiboSection';
+import { trailImageBlurProps } from '@/lib/blur';
 
 export async function generateMetadata({
   params,
@@ -31,6 +40,7 @@ export default async function CulturaPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Cultura');
+  const isIT = locale === 'it';
 
   return (
     <div>
@@ -43,6 +53,7 @@ export default async function CulturaPage({
             priority
             className="object-cover"
             sizes="100vw"
+            {...trailImageBlurProps('/cultura/walser-titsch.jpg')}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/30" />
         </div>
@@ -54,41 +65,32 @@ export default async function CulturaPage({
             {t('heroTitle')}
           </h1>
           <p className="text-on-image-body mt-5 max-w-2xl text-lg leading-relaxed text-snow/80">
-            {t('heroSubtitle', { valleys: getAllValleys().length })}
+            {t('heroSubtitle', { valleys: valleysData.length })}
           </p>
         </div>
       </section>
 
-      <Suspense
-        fallback={
-          <div className="mx-auto max-w-7xl px-6 py-24">
-            <div className="h-96 animate-pulse rounded-3xl border border-white/10 bg-white/[0.02]" />
-          </div>
-        }
-      >
-        <CulturaExplorer
-          locale={locale}
-          valleys={getAllValleys()}
-          traditions={getAllTraditions()}
-          foodWine={getAllFoodWine()}
-          labels={{
-            navValli: t('navValli'),
-            navTradizioni: t('navTradizioni'),
-            navCiboVino: t('navCiboVino'),
-            valliTitle: t('valliTitle'),
-            valliSubtitle: t('valliSubtitle'),
-            tradizioniTitle: t('tradizioniTitle'),
-            tradizioniSubtitle: t('tradizioniSubtitle'),
-            ciboTitle: t('ciboTitle'),
-            ciboSubtitle: t('ciboSubtitle'),
-            townsTitle: t('townsTitle'),
-            officialSite: t('officialSite'),
-            source: t('source'),
-            readMore: t('readMore'),
-            vdaFooterNote: t('vdaFooterNote'),
-            vdaFooterLink: t('vdaFooterLink'),
-          }}
-        />
+      <CulturaSectionNav
+        labels={{
+          valli: t('navValli'),
+          tradizioni: t('navTradizioni'),
+          ciboVino: t('navCiboVino'),
+        }}
+        ariaLabel={isIT ? 'Sezioni cultura' : 'Culture sections'}
+      />
+
+      <CulturaDeepLinkScroll />
+
+      <Suspense fallback={<CulturaValliSkeleton />}>
+        <CulturaValliSection locale={locale} />
+      </Suspense>
+
+      <Suspense fallback={<CulturaBelowFoldSkeleton />}>
+        <CulturaTradizioniSection locale={locale} />
+      </Suspense>
+
+      <Suspense fallback={<CulturaBelowFoldSkeleton />}>
+        <CulturaCiboSection locale={locale} />
       </Suspense>
     </div>
   );
