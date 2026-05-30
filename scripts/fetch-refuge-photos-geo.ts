@@ -153,6 +153,8 @@ async function main() {
           src: `/refuges/${localName}`,
           alt_it: `Esterno del ${refuge.name_it}`,
           alt_en: `Exterior of ${refuge.name_en || refuge.name_it}`,
+          alt_fr: `Extérieur du ${refuge.name_fr || refuge.name_it}`,
+          alt_de: `Außenansicht der ${refuge.name_de || refuge.name_it}`,
           credit: `${artist} (${license}) · Wikimedia Commons`,
           source: page
         }];
