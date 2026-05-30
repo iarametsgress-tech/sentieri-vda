@@ -3,7 +3,11 @@ import Link from 'next/link';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { getAllTrails, getTrailBySlug, getAdjacentAV1Stages, getAdjacentAV2Stages, getAdjacentTourStages } from '@/lib/trails';
-import MapView from '@/components/MapView';
+import dynamic from 'next/dynamic';
+const MapView = dynamic(() => import('@/components/MapView'), {
+  ssr: false,
+  loading: () => <div className="w-full h-[520px] rounded-2xl bg-white/[0.03] animate-pulse" />,
+});
 import DifficultyBadge from '@/components/DifficultyBadge';
 import ElevationProfile from '@/components/ElevationProfile';
 import TrailScienceSections, { TrailFitnessBar } from '@/components/TrailScienceSections';

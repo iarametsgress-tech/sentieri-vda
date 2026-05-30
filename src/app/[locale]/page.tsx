@@ -1,8 +1,12 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Hero from '@/components/Hero';
 import TrailCard from '@/components/TrailCard';
-import MapView from '@/components/MapView';
+import dynamic from 'next/dynamic';
 import AdSlot from '@/components/AdSlot';
+const MapView = dynamic(() => import('@/components/MapView'), {
+  ssr: false,
+  loading: () => <div className="w-full h-[520px] rounded-2xl bg-white/[0.03] animate-pulse" />,
+});
 import CounterStat from '@/components/CounterStat';
 import ScrollReveal from '@/components/ScrollReveal';
 import { getFeaturedTrails, getAllTrails, getTotalTrailKm, getTotalAlteViaStages } from '@/lib/trails';

@@ -11,7 +11,11 @@ import {
   ExternalLink,
   Mountain,
 } from 'lucide-react';
-import MapView from '@/components/MapView';
+import dynamic from 'next/dynamic';
+const MapView = dynamic(() => import('@/components/MapView'), {
+  ssr: false,
+  loading: () => <div className="w-full h-[520px] rounded-2xl bg-white/[0.03] animate-pulse" />,
+});
 import StageCard from '@/components/StageCard';
 import type { AlteViaStageSummary } from '@/lib/alte-vie';
 
