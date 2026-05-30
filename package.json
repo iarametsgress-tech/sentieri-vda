@@ -21,6 +21,7 @@
     "fix:stage-images": "node scripts/fix-stage-images.mjs",
     "generate:refuges": "node scripts/generate-refuges-data.mjs",
     "fetch:refuge-images": "node scripts/fetch-refuge-images.mjs",
+    "fetch:refuge-photos-geo": "tsx scripts/fetch-refuge-photos-geo.ts",
     "sync:trail-refuges": "node scripts/sync-trail-refuges.mjs",
     "generate:sitemap": "tsx scripts/generate-sitemap.ts",
     "translate:trails-fr-de": "node scripts/translate-trails-fr-de.mjs",

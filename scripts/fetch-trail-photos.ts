@@ -10,13 +10,12 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { buildFeatureIndex, flattenLineCoords, loadSctRaw, slugifySctCode } from './lib/sct-utils';
 
-const USER_AGENT = 'SentieriVdA/1.0 (https://sentieri-vda.vercel.app; editorial trail guide)';
+const USER_AGENT = 'SentieriVda/1.0 (https://sentieri-vda.vercel.app; editorial trail guide)';
 const RADIUS_M = 2000;
 const SLEEP_MS = 350;
 
 const VALLEY_FALLBACK: Record<string, { local: string; credit: string; source: string }> = {
   "Valle d'Ayas": {
-    // Champoluc è in Val d'Ayas (non Gressoney/Lys)
     local: 'public/trails/tour-monte-rosa-tappa-3-valtournenche-champoluc.webp',
     credit: 'Wikimedia Commons — Champoluc, Val d\'Ayas',
     source: 'https://commons.wikimedia.org/wiki/Category:Champoluc',
@@ -91,45 +90,46 @@ function midpoint(coords: [number, number, number?][]): { lat: number; lng: numb
   return { lat: mid[1], lng: mid[0] };
 }
 
-async function geosearch(lat: number, lng: number): Promise<{ title: string; dist: number } | null> {
+async function geosearchFiles(lat: number, lng: number): Promise<any[]> {
   const url =
-    `https://commons.wikimedia.org/w/api.php?action=query&list=geosearch` +
-    `&gscoord=${lat}|${lng}&gsradius=${RADIUS_M}&gslimit=5&format=json&origin=*`;
-  const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT } });
-  if (!res.ok) return null;
-  const data = (await res.json()) as {
-    query?: { geosearch?: Array<{ title: string; dist: number }> };
-  };
-  const hits = data.query?.geosearch ?? [];
-  return hits[0] ?? null;
-}
-
-async function imageMeta(title: string): Promise<{
-  url: string;
-  credit: string;
-  license: string;
-  page: string;
-} | null> {
-  const url =
-    `https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent(title)}` +
+    `https://commons.wikimedia.org/w/api.php?action=query&generator=geosearch` +
+    `&ggscoord=${lat}|${lng}&ggsradius=${RADIUS_M}&ggslimit=20&ggsnamespace=6` +
     `&prop=imageinfo&iiprop=url|extmetadata&format=json&origin=*`;
   const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT } });
-  if (!res.ok) return null;
+  if (!res.ok) return [];
   const data = (await res.json()) as any;
   const pages = data.query?.pages ?? {};
-  const page = Object.values(pages)[0] as any;
-  const info = page?.imageinfo?.[0];
-  if (!info?.url) return null;
-  const license = info.extmetadata?.LicenseShortName?.value ?? '';
-  const allowed = /cc|public domain|pd/i.test(license);
-  if (!allowed) return null;
-  const artist = info.extmetadata?.Artist?.value?.replace(/<[^>]+>/g, '') ?? 'Wikimedia Commons';
-  return {
-    url: info.url as string,
-    credit: artist,
-    license,
-    page: `https://commons.wikimedia.org/wiki/${encodeURIComponent(title.replace(/ /g, '_'))}`,
-  };
+  return Object.values(pages);
+}
+
+function selectBestTrailImage(hits: any[], name: string) {
+  const nameLower = name.toLowerCase();
+  
+  const scores = hits.map(hit => {
+    let score = 50; 
+    const title = (hit.title || '').toLowerCase();
+    const meta = hit.imageinfo?.[0]?.extmetadata || {};
+    const description = (meta.ImageDescription?.value || '').toLowerCase();
+    const license = meta.LicenseShortName?.value || '';
+    const artist = (meta.Artist?.value || '').toLowerCase();
+    
+    if (title.includes(nameLower)) score += 50;
+    if (description.includes(nameLower)) score += 30;
+    
+    // Filter out NASA, Earth, STS (generic satellite views)
+    if (title.includes('sts') || title.includes('view of earth') || artist.includes('nasa')) {
+      score = -1;
+    }
+    
+    // Avoid non-image or PDF
+    if (!/cc|public domain|pd|ogl/i.test(license)) score = -1;
+    if (hit.title.toLowerCase().endsWith('.pdf')) score = -1;
+
+    return { hit, score };
+  });
+
+  const best = scores.filter(s => s.score > 0).sort((a, b) => b.score - a.score)[0];
+  return best?.hit ?? null;
 }
 
 async function downloadImage(url: string, dest: string) {
@@ -183,26 +183,30 @@ async function main() {
     processed++;
     await sleep(SLEEP_MS);
 
-    const hit = await geosearch(mid.lat, mid.lng);
-    if (hit) {
+    const hits = await geosearchFiles(mid.lat, mid.lng);
+    const best = selectBestTrailImage(hits, sk.name_it);
+
+    if (best) {
       geolocated++;
+      const info = best.imageinfo[0];
+      const meta = info.extmetadata;
+      const artist = meta?.Artist?.value?.replace(/<[^>]+>/g, '') ?? 'Wikimedia Commons';
+      const license = meta?.LicenseShortName?.value ?? 'CC';
+      const page = info.descriptionurl;
+
       if (dryRun) {
-        console.log(`[geo] ${sk.slug}: ${hit.title} (${Math.round(hit.dist)}m)`);
+        console.log(`[geo] ${sk.slug}: ${best.title} (${artist})`);
         continue;
       }
-      if (slugArg || !dryRun) {
-        const meta = await imageMeta(hit.title);
-        if (meta) {
-          const dest = path.resolve(`public/trails/${sk.slug}.jpg`);
-          await downloadImage(meta.url, dest);
-          sk.image = `/trails/${sk.slug}.jpg`;
-          sk.hero_image = sk.image;
-          sk.image_credit = meta.credit;
-          sk.image_source = meta.page;
-          console.log(`✓ ${sk.slug}: ${meta.credit} (${meta.license})`);
-          continue;
-        }
-      }
+
+      const dest = path.resolve(`public/trails/${sk.slug}.jpg`);
+      await downloadImage(info.url, dest);
+      sk.image = `/trails/${sk.slug}.jpg`;
+      sk.hero_image = sk.image;
+      sk.image_credit = `${artist} (${license})`;
+      sk.image_source = page;
+      console.log(`✓ ${sk.slug}: ${artist} (${license})`);
+      continue;
     }
 
     const fb = VALLEY_FALLBACK[sk.valley as string];
