@@ -563,7 +563,7 @@ function AmbienteExplorerInner({
       </section>
 
       <SceneDivider
-        image="/trails/tour-rutor-tappa-3-lago-rutor-rifugio-verney.jpg"
+        image="/trails/tour-rutor-tappa-3-lago-rutor-rifugio-verney.webp"
         title={isIT ? 'Acque' : 'Waters'}
         subtitle={isIT
           ? 'Sorgenti, laghi alpini e 168 km di Dora Baltea — l\'acqua che scende dalle creste al fondovalle'
