@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { ArrowUpRight } from 'lucide-react';
+import { trailImageBlurProps } from '@/lib/blur';
 import type { TourId } from '@/lib/tours';
 
 export type TourCatalogItem = {
@@ -38,7 +39,7 @@ export default function TourCatalog({ tours }: { tours: TourCatalogItem[] }) {
               fill
               className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
               sizes="(max-width: 1024px) 100vw, 640px"
-              unoptimized={tour.image.startsWith('http')}
+              {...trailImageBlurProps(tour.image)}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">

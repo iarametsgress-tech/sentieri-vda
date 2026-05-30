@@ -133,7 +133,7 @@ export default function CinematicHero({
         animate={{ opacity: 1 }}
         transition={{ delay: 1.6, duration: 1 }}
         style={{ opacity }}
-        className="absolute bottom-7 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center text-snow/40"
+        className="absolute bottom-7 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center text-snow/55"
       >
         <motion.div animate={reduce ? undefined : { y: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}>
           <ChevronDown size={20} />

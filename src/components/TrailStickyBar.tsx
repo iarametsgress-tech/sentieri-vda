@@ -74,14 +74,14 @@ export default function TrailStickyBar({
               </span>
               <div className="flex items-center gap-3 shrink-0 font-mono text-xs text-snow/60 tabular-nums">
                 <span className="inline-flex items-center gap-1">
-                  <TrendingUp size={12} className="text-snow/40" aria-hidden />
+                  <TrendingUp size={12} className="text-snow/55" aria-hidden />
                   {distanceKm} km
                 </span>
                 <span className="inline-flex items-center gap-1 text-ice/90">
                   <Mountain size={12} aria-hidden />+{elevationGainM} m
                 </span>
                 <span className="inline-flex items-center gap-1">
-                  <Clock size={12} className="text-snow/40" aria-hidden />
+                  <Clock size={12} className="text-snow/55" aria-hidden />
                   {durationHours} h
                 </span>
               </div>

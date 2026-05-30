@@ -74,7 +74,7 @@ function StatCard({
         {icon}
       </div>
       <div className="min-w-0">
-        <p className="text-[10px] font-mono uppercase tracking-widest text-snow/40 mb-1">{label}</p>
+        <p className="text-[10px] font-mono uppercase tracking-widest text-snow/55 mb-1">{label}</p>
         <p className="text-sm text-snow/85 leading-snug">{value}</p>
       </div>
     </div>
@@ -363,7 +363,7 @@ function FloraFaunaExplorerInner({ flora, fauna, locale }: FloraFaunaExplorerPro
                 className={`px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wide border transition-all ${
                   faunaClass === c
                     ? 'bg-ice/15 text-ice border-ice/35'
-                    : 'bg-white/[0.02] text-snow/45 border-white/8 hover:border-white/12'
+                    : 'bg-white/[0.02] text-snow/55 border-white/8 hover:border-white/12'
                 }`}
               >
                 {isIT ? FAUNA_CLASS_LABELS[c].it : FAUNA_CLASS_LABELS[c].en}
@@ -379,7 +379,7 @@ function FloraFaunaExplorerInner({ flora, fauna, locale }: FloraFaunaExplorerPro
                 className={`px-3 py-1.5 rounded-full text-[11px] font-mono border transition-all ${
                   faunaGroup === g
                     ? 'bg-ice/10 text-ice border-ice/30'
-                    : 'bg-transparent text-snow/40 border-white/8 hover:text-snow/60'
+                    : 'bg-transparent text-snow/55 border-white/8 hover:text-snow/60'
                 }`}
               >
                 {isIT ? FAUNA_GROUP_LABELS[g].it : FAUNA_GROUP_LABELS[g].en}
@@ -400,7 +400,7 @@ function FloraFaunaExplorerInner({ flora, fauna, locale }: FloraFaunaExplorerPro
                   className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wide border transition-all ${
                     floraGroup === g
                       ? 'bg-alpenglow/15 text-alpenglow border-alpenglow/35'
-                      : 'bg-white/[0.02] text-snow/45 border-white/8 hover:border-white/12'
+                      : 'bg-white/[0.02] text-snow/55 border-white/8 hover:border-white/12'
                   }`}
                 >
                   <Icon size={14} />
@@ -418,7 +418,7 @@ function FloraFaunaExplorerInner({ flora, fauna, locale }: FloraFaunaExplorerPro
                 className={`px-3 py-1.5 rounded-full text-[11px] font-mono border transition-all ${
                   floraSubgroup === sub
                     ? 'bg-alpenglow/10 text-alpenglow border-alpenglow/30'
-                    : 'bg-transparent text-snow/40 border-white/8 hover:text-snow/60'
+                    : 'bg-transparent text-snow/55 border-white/8 hover:text-snow/60'
                 }`}
               >
                 {isIT ? FLORA_SUBGROUP_LABELS[sub].it : FLORA_SUBGROUP_LABELS[sub].en}
@@ -431,16 +431,16 @@ function FloraFaunaExplorerInner({ flora, fauna, locale }: FloraFaunaExplorerPro
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
         <aside className="lg:col-span-4 xl:col-span-3 space-y-4">
           <div className="relative">
-            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-snow/30" />
+            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-snow/50" />
             <input
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder={isIT ? 'Cerca per nome…' : 'Search by name…'}
-              className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-snow placeholder:text-snow/30 focus:outline-none focus:border-white/20"
+              className="w-full pl-9 pr-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-snow placeholder:text-snow/50 focus:outline-none focus:border-white/20"
             />
           </div>
-          <p className="text-[10px] font-mono uppercase tracking-widest text-snow/40">
+          <p className="text-[10px] font-mono uppercase tracking-widest text-snow/55">
             {list.length} {isIT ? 'specie in questa categoria' : 'species in this category'}
           </p>
           <ul className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 snap-x snap-mandatory max-h-[60vh] lg:overflow-y-auto lg:pr-1">
@@ -465,7 +465,7 @@ function FloraFaunaExplorerInner({ flora, fauna, locale }: FloraFaunaExplorerPro
                     </div>
                     <div className="min-w-0">
                       <p className="font-display text-sm leading-tight truncate">{label}</p>
-                      <p className="text-[10px] font-mono italic text-snow/40 truncate">
+                      <p className="text-[10px] font-mono italic text-snow/55 truncate">
                         {s.scientific}
                       </p>
                     </div>
@@ -511,7 +511,7 @@ function FloraFaunaExplorerInner({ flora, fauna, locale }: FloraFaunaExplorerPro
                         <Mountain size={12} className={accentClass} />
                         {selected.altitude.min}–{selected.altitude.max} m
                       </span>
-                      <span className="text-[10px] font-mono text-snow/35">
+                      <span className="text-[10px] font-mono text-snow/50">
                         © {selected.author} · {selected.license}
                       </span>
                     </div>
@@ -520,14 +520,14 @@ function FloraFaunaExplorerInner({ flora, fauna, locale }: FloraFaunaExplorerPro
               </header>
 
               <section className="rounded-2xl border border-white/8 bg-white/[0.02] p-6 md:p-8">
-                <p className="text-[10px] font-mono uppercase tracking-widest text-snow/40 mb-6">
+                <p className="text-[10px] font-mono uppercase tracking-widest text-snow/55 mb-6">
                   {isIT ? 'Scheda naturalistica' : 'Naturalist profile'}
                 </p>
                 <StructuredProfile profile={selected.profile} locale={locale} />
               </section>
 
               <section className="space-y-4">
-                <p className="text-[10px] font-mono uppercase tracking-widest text-snow/40">
+                <p className="text-[10px] font-mono uppercase tracking-widest text-snow/55">
                   {isIT ? 'Areale in Valle d\'Aosta' : 'Range in Aosta Valley'}
                 </p>
                 <SpeciesDistributionMap
@@ -555,7 +555,7 @@ function FloraFaunaExplorerInner({ flora, fauna, locale }: FloraFaunaExplorerPro
 
               {selected.links.length > 0 && (
                 <section>
-                  <p className="text-[10px] font-mono uppercase tracking-widest text-snow/40 mb-3">
+                  <p className="text-[10px] font-mono uppercase tracking-widest text-snow/55 mb-3">
                     {isIT ? 'Approfondimenti' : 'Learn more'}
                   </p>
                   <ul className="flex flex-wrap gap-2">
@@ -581,7 +581,7 @@ function FloraFaunaExplorerInner({ flora, fauna, locale }: FloraFaunaExplorerPro
               )}
 
               <section>
-                <p className="text-[10px] font-mono uppercase tracking-widest text-snow/40 mb-4">
+                <p className="text-[10px] font-mono uppercase tracking-widest text-snow/55 mb-4">
                   {isIT ? 'Dati ecologici' : 'Ecological data'}
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

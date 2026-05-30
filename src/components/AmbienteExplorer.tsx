@@ -6,13 +6,15 @@ import Image from 'next/image';
 import { Link, useRouter } from '@/i18n/routing';
 import {
   motion,
-  useScroll,
   useSpring,
   useMotionValue,
   useTransform,
   useReducedMotion,
 } from 'framer-motion';
 import ScrollReveal from './ScrollReveal';
+import SectionScrollNav from './SectionScrollNav';
+import { topicClasses, type TopicThemeKey } from '@/lib/topic-themes';
+import { cn } from '@/lib/cn';
 import {
   Leaf,
   Mountain,
@@ -120,7 +122,7 @@ function StatBand({
           />
         ))}
       </div>
-      <p className="mt-8 border-t border-white/8 pt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-snow/35">
+      <p className="mt-8 border-t border-white/8 pt-4 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-snow/50">
         {sourcesLabel}: {sources.join(' · ')}
       </p>
     </ScrollReveal>
@@ -131,21 +133,24 @@ function EnvironmentBlock({
   section,
   locale,
   index,
+  theme,
 }: {
   section: EnvironmentSection;
   locale: string;
   index: number;
+  theme: TopicThemeKey;
 }) {
   const highlights = getSectionHighlights(section, locale);
   const hasImage = Boolean(section.image);
   const imageAlt = locale === 'it' ? (section.image_alt_it ?? '') : (section.image_alt_en ?? '');
+  const t = topicClasses(theme);
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.45, delay: index * 0.06 }}
-      className="rounded-2xl border border-white/8 bg-white/[0.02] overflow-hidden hover:border-white/14 transition-colors"
+      className={cn('rounded-2xl border overflow-hidden transition-colors hover:border-white/20', t.card)}
     >
       {hasImage && (
         <div className="relative w-full aspect-[16/7] overflow-hidden">
@@ -160,7 +165,7 @@ function EnvironmentBlock({
         </div>
       )}
       <div className="p-6 lg:p-8">
-        <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-alpenglow mb-2">
+        <p className={cn('font-mono text-[10px] uppercase tracking-[0.3em] mb-2', t.eyebrow)}>
           {getSectionEyebrow(section, locale)}
         </p>
         <h3 className="font-display text-xl lg:text-2xl tracking-tight text-snow mb-4">
@@ -176,7 +181,7 @@ function EnvironmentBlock({
                 key={h}
                 className="flex items-start gap-2 text-sm text-snow/60 leading-snug"
               >
-                <ChevronRight size={14} className="text-ice shrink-0 mt-0.5" />
+                <ChevronRight size={14} className={cn('shrink-0 mt-0.5', t.icon)} />
                 {h}
               </li>
             ))}
@@ -309,15 +314,6 @@ export default function AmbienteExplorer({
   const [highlightedPeakId, setHighlightedPeakId] = useState<string | null>(null);
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end end'],
-  });
-  const progressScaleX = useSpring(scrollYProgress, {
-    stiffness: 120,
-    damping: 30,
-    restDelta: 0.001,
-  });
 
   const sectionLabels: Record<AmbienteSectionId, string> = {
     'flora-fauna': labels.navFloraFauna,
@@ -409,40 +405,23 @@ export default function AmbienteExplorer({
 
   return (
     <div ref={containerRef} className="relative">
-      {/* Sticky section nav */}
-      <nav
-        aria-label={isIT ? 'Sezioni ambiente' : 'Environment sections'}
-        className="sticky top-[4.5rem] z-30 border-b border-white/8 bg-ink/90 backdrop-blur-xl"
-      >
-        <div className="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 py-3 lg:px-10 scrollbar-none">
-          {SECTIONS.map(({ id, icon: Icon }) => (
-            <button
-              key={id}
-              type="button"
-              onClick={() => scrollTo(id)}
-              className={`flex shrink-0 items-center gap-2 rounded-full px-4 py-2 font-mono text-[11px] uppercase tracking-widest transition-all ${
-                activeSection === id
-                  ? 'bg-alpenglow/15 text-alpenglow border border-alpenglow/35'
-                  : 'text-snow/50 hover:text-snow border border-transparent hover:border-white/10'
-              }`}
-            >
-              <Icon size={14} />
-              {sectionLabels[id]}
-            </button>
-          ))}
-        </div>
-        <motion.div
-          aria-hidden
-          style={{ scaleX: progressScaleX }}
-          className="absolute bottom-0 left-0 right-0 h-px origin-left bg-gradient-to-r from-alpenglow via-ice to-alpenglow"
-        />
-      </nav>
+      <SectionScrollNav
+        containerRef={containerRef}
+        sections={SECTIONS}
+        activeSection={activeSection}
+        sectionLabels={sectionLabels}
+        onNavigate={scrollTo}
+        ariaLabel={isIT ? 'Sezioni ambiente' : 'Environment sections'}
+      />
 
       {/* Flora & Fauna — catalogo interattivo con foto */}
-      <section id="flora-fauna" className="scroll-mt-36 border-b border-white/5">
+      <section
+        id="flora-fauna"
+        className={cn('scroll-mt-36 border-b border-white/5', topicClasses('flora').section)}
+      >
         <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24">
           <ScrollReveal className="mb-10 max-w-2xl">
-            <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.3em] text-alpenglow">
+            <p className={cn('mb-3 font-mono text-[11px] uppercase tracking-[0.3em]', topicClasses('flora').eyebrow)}>
               {labels.storyEyebrow}
             </p>
             <h2 className="font-display text-display-md tracking-tighter mb-4">
@@ -469,11 +448,11 @@ export default function AmbienteExplorer({
       {/* Montagne */}
       <section
         id="montagne"
-        className="scroll-mt-36 border-b border-white/5 bg-white/[0.01] py-16 lg:py-24"
+        className={cn('scroll-mt-36 border-b border-white/5 py-16 lg:py-24', topicClasses('mountains').section)}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <ScrollReveal className="mb-10 max-w-2xl">
-            <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.3em] text-alpenglow">
+            <p className={cn('mb-3 font-mono text-[11px] uppercase tracking-[0.3em]', topicClasses('mountains').eyebrow)}>
               {labels.peaksEyebrow}
             </p>
             <h2 className="font-display text-display-md tracking-tighter mb-4">
@@ -529,10 +508,13 @@ export default function AmbienteExplorer({
       />
 
       {/* Geologia */}
-      <section id="geologia" className="scroll-mt-36 border-b border-white/5 py-16 lg:py-24">
+      <section
+        id="geologia"
+        className={cn('scroll-mt-36 border-b border-white/5 py-16 lg:py-24', topicClasses('geology').section)}
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <ScrollReveal className="mb-10 max-w-xl">
-            <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.3em] text-alpenglow">
+            <p className={cn('mb-3 font-mono text-[11px] uppercase tracking-[0.3em]', topicClasses('geology').eyebrow)}>
               {labels.geologyEyebrow}
             </p>
             <h2 className="font-display text-display-md tracking-tighter">
@@ -542,7 +524,7 @@ export default function AmbienteExplorer({
           <StatBand stats={geologyStats} sourcesLabel={sourcesLabel} />
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
             {geology.map((s, i) => (
-              <EnvironmentBlock key={s.id} section={s} locale={locale} index={i} />
+              <EnvironmentBlock key={s.id} section={s} locale={locale} index={i} theme="geology" />
             ))}
           </div>
         </div>
@@ -557,10 +539,13 @@ export default function AmbienteExplorer({
       />
 
       {/* Idrologia */}
-      <section id="idrologia" className="scroll-mt-36 py-16 lg:py-24">
+      <section
+        id="idrologia"
+        className={cn('scroll-mt-36 py-16 lg:py-24', topicClasses('water').section)}
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <ScrollReveal className="mb-10 max-w-xl">
-            <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.3em] text-ice">
+            <p className={cn('mb-3 font-mono text-[11px] uppercase tracking-[0.3em]', topicClasses('water').eyebrow)}>
               {labels.hydrologyEyebrow}
             </p>
             <h2 className="font-display text-display-md tracking-tighter">
@@ -570,7 +555,7 @@ export default function AmbienteExplorer({
           <StatBand stats={hydrologyStats} sourcesLabel={sourcesLabel} />
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
             {hydrology.map((s, i) => (
-              <EnvironmentBlock key={s.id} section={s} locale={locale} index={i} />
+              <EnvironmentBlock key={s.id} section={s} locale={locale} index={i} theme="water" />
             ))}
           </div>
         </div>

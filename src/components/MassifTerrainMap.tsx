@@ -26,7 +26,7 @@ export default function MassifTerrainMap({
     <div className="overflow-hidden rounded-2xl border border-white/10 shadow-[0_24px_64px_rgba(0,0,0,0.45)]">
       <div className="flex items-center justify-between border-b border-white/8 bg-white/[0.03] px-5 py-3">
         <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-ice">{label}</p>
-        <p className="hidden text-[10px] text-snow/40 sm:block">{hint}</p>
+        <p className="hidden text-[10px] text-snow/55 sm:block">{hint}</p>
       </div>
       <MapView
         center={center}

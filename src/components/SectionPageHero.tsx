@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { pickLocalized } from '@/lib/locale-content';
+import { trailImageBlurProps } from '@/lib/blur';
 
 export type SectionHeroId =
   | 'sentieri'
@@ -21,16 +22,14 @@ export const SECTION_HERO_IMAGES: Record<
     altEn: 'High-altitude trail in Aosta Valley towards Rifugio Vittorio Sella',
   },
   rifugi: {
-    // Rifugio in quota — diverso dal precedente hero dei rifugi
-    src: '/refuges/rifugio-vittorio-sella-2.jpg',
-    altIt: 'Rifugio Vittorio Sella nel Parco del Gran Paradiso',
-    altEn: 'Rifugio Vittorio Sella in Gran Paradiso National Park',
+    src: '/refuges/rifugio-bonatti.jpg',
+    altIt: 'Rifugio Walter Bonatti in Val Ferret — rifugio iconico lungo Alta Via e Tour del Monte Bianco',
+    altEn: 'Walter Bonatti refuge in Val Ferret — iconic hut on the High Route and Tour du Mont Blanc',
   },
   tour: {
-    // Tour del Monte Bianco — tappa iconica con rifugio Bonatti
-    src: '/trails/tour-mont-blanc-tappa-2-rifugio-bertone-rifugio-bonatti.jpg',
-    altIt: 'Tour del Monte Bianco — tappa verso il Rifugio Bonatti',
-    altEn: 'Tour du Mont Blanc — stage towards Rifugio Bonatti',
+    src: '/trails/tour-mont-blanc-tappa-4-rifugio-elena-col-seigne.webp',
+    altIt: 'Ghiacciaio del Monte Bianco visto dal Col de la Seigne — Tour del Monte Bianco',
+    altEn: 'Mont Blanc glacier from Col de la Seigne — Tour du Mont Blanc',
   },
   'flora-fauna': {
     // Stambecco alpino — simbolo della fauna valdostana
@@ -84,6 +83,7 @@ export default function SectionPageHero({
           className="object-cover"
           sizes="100vw"
           unoptimized={isRemote}
+          {...(!isRemote ? trailImageBlurProps(image.src) : {})}
         />
       </div>
 

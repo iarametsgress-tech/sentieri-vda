@@ -14,7 +14,9 @@
     "sicurezza": "Sicurezza",
     "parks": "Parchi",
     "blog": "Diario",
-    "progetto": "Il progetto"
+    "progetto": "Il progetto",
+    "metodo": "Metodo",
+    "about": "Chi siamo"
   },
   "Home": {
     "heroEyebrow": "Valle d'Aosta · Alpi occidentali",
@@ -91,6 +93,12 @@
       "refugesNearby": "Rifugi e bivacchi",
       "gallery": "Galleria fotografica",
       "source": "Fonte dati",
+      "lastVerified": "Ultima verifica",
+      "conditionsOpen": "Sentiero percorribile",
+      "conditionsCaution": "Attenzione",
+      "conditionsClosed": "Sentiero chiuso",
+      "conditionsUpdated": "Condizioni aggiornate il",
+      "curatedBy": "Scheda curata e verificata da {name}",
       "waypoints": "Punti chiave",
       "geology": "Geologia e territorio",
       "geologyEyebrow": "Scienze della Terra",
@@ -117,7 +125,70 @@
       "municipalities": "Comuni",
       "gpxNoteAlteVia": "Traccia GPX ufficiale — Regione Autonoma Valle d'Aosta / lovevda.it",
       "gpxNoteGeneric": "Traccia GPX — verificare sul terreno prima dell'escursione",
-      "transferStageNote": "Tappa di collegamento tra versanti opposti: non esiste un sentiero pedonale continuo. La mappa mostra i punti di partenza e arrivo e la rete ufficiale dei sentieri."
+      "transferStageNote": "Tappa di collegamento tra versanti opposti: non esiste un sentiero pedonale continuo. La mappa mostra i punti di partenza e arrivo e la rete ufficiale dei sentieri.",
+      "relatedTrails": "Sentieri correlati",
+      "relatedTrailsSubtitle": "Nella stessa valle o con itinerari affini — altre escursioni da esplorare.",
+      "tags": "Temi e caratteristiche"
+    }
+  },
+  "TrailHubs": {
+    "breadcrumbHome": "Home",
+    "breadcrumbTrails": "Sentieri",
+    "exploreTitle": "Esplora per valle, difficoltà, tema e fauna",
+    "exploreSubtitle": "Raccolte di sentieri verificati — stessi dati del catalogo, organizzati per come si cerca sui mappe e su Google.",
+    "byValley": "Per valle",
+    "byDifficulty": "Per difficoltà",
+    "byTheme": "Per tema",
+    "bySpecies": "Dove osservare",
+    "trailCount": "{count, plural, one {# sentiero} other {# sentieri}}",
+    "moreSpecies": "+{count} altre specie nel catalogo",
+    "valley": {
+      "eyebrow": "Sentieri per valle",
+      "title": "{count, plural, one {# sentiero in {valley}} other {# sentieri in {valley}}}",
+      "intro": "{count, plural, one {Un sentiero documentato in {valley}: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.} other {{count} sentieri documentati in {valley}: difficoltà da {diffRange}, dislivelli da {minGain} a {maxGain} m.}}",
+      "metaTitle": "Sentieri in {valley} ({count})",
+      "metaDescription": "{count} sentieri in {valley}, Valle d'Aosta: mappe, GPX, difficoltà e dislivelli verificati su fonti ufficiali."
+    },
+    "difficulty": {
+      "eyebrow": "Sentieri per difficoltà",
+      "title": "{count, plural, one {# sentiero {label}} other {# sentieri {label}}}",
+      "intro": "{count, plural, one {Un sentiero classificato {label} (scala CAI): {diffRange}, distanze {minDistance}–{maxDistance} km, dislivelli da {minGain} a {maxGain} m.} other {{count} sentieri classificati {label} (scala CAI): {diffRange}, distanze {minDistance}–{maxDistance} km, dislivelli da {minGain} a {maxGain} m.}}",
+      "metaTitle": "Sentieri {label} ({count}) — Valle d'Aosta",
+      "metaDescription": "{count} sentieri {label} in Valle d'Aosta: schede con GPX, mappe e profilo altimetrico.",
+      "labels": {
+        "facili": "facili · CAI T",
+        "escursionistici": "escursionistici · CAI E",
+        "esperti": "per escursionisti esperti · CAI EE/EEA",
+        "alpinistici": "alpinistici · CAI A"
+      }
+    },
+    "theme": {
+      "eyebrow": "Sentieri per tema",
+      "title": "{count, plural, one {# sentiero · {theme}} other {# sentieri · {theme}}}",
+      "intro": "{count, plural, one {Un sentiero con tag {theme}: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.} other {{count} sentieri con tag {theme}: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.}}",
+      "metaTitle": "Sentieri {theme} ({count})",
+      "metaDescription": "{count} sentieri {theme} in Valle d'Aosta — mappe, GPX e schede complete.",
+      "tags": {
+        "cervino": "Cervino",
+        "col-champillon": "Col Champillon",
+        "col-malatra": "Col Malatrà",
+        "gran-san-bernardo": "Gran San Bernardo",
+        "mont-mars": "Mont Mars",
+        "monte-bianco": "Monte Bianco",
+        "monte-rosa": "Monte Rosa",
+        "val-ferret": "Val Ferret",
+        "valle-ayas": "Valle di Ayas",
+        "valpelline": "Valpelline",
+        "valtournenche": "Valtournenche",
+        "walser": "Cultura walser"
+      }
+    },
+    "species": {
+      "eyebrow": "Dove osservare",
+      "title": "{count, plural, one {# sentiero per osservare {species}} other {# sentieri per osservare {species}}}",
+      "intro": "{count, plural, one {Un sentiero dove {species} è segnalato in flora/fauna: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.} other {{count} sentieri dove {species} è segnalato in flora/fauna: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.}}",
+      "metaTitle": "Dove vedere {species} — {count} sentieri",
+      "metaDescription": "{count} sentieri in Valle d'Aosta per osservare {species}: mappe, GPX e note naturalistiche verificate."
     }
   },
   "Difficulty": {
@@ -135,7 +206,9 @@
     "newsletter": "Iscriviti alla newsletter",
     "newsletterPlaceholder": "la-tua@email.it",
     "newsletterCta": "Iscriviti",
-    "rights": "Tutti i diritti riservati."
+    "rights": "Tutti i diritti riservati.",
+    "newsletterSuccess": "Iscrizione confermata. A presto sul sentiero.",
+    "newsletterError": "Qualcosa è andato storto. Riprova tra poco."
   },
   "AlteVie": {
     "meta": {
@@ -357,6 +430,24 @@
     "vdaFooterNote": "Per approfondimenti ufficiali su tradizioni, enogastronomia e territorio valdostano.",
     "vdaFooterLink": "Territorio e cultura · Regione VdA"
   },
+  "Blog": {
+    "meta": {
+      "title": "Diario di montagna",
+      "description": "Racconti, note di campo e guide ai grandi itinerari valdostani — Alte Vie, tour e consigli pratici."
+    },
+    "eyebrow": "Diario di montagna",
+    "title": "Storie dai sentieri",
+    "subtitle": "Guide, racconti di tappa e approfondimenti sui grandi percorsi della Valle d'Aosta.",
+    "readArticle": "Leggi l'articolo",
+    "backToJournal": "Torna al diario",
+    "publishedOn": "Pubblicato il {date}",
+    "writtenBy": "Di {name}",
+    "newsletterHint": "Iscriviti alla newsletter per nuovi articoli e aggiornamenti sulle condizioni dei sentieri.",
+    "newsletterPlaceholder": "la-tua@email.it",
+    "newsletterCta": "Iscriviti",
+    "newsletterSuccess": "Iscrizione confermata. A presto sul sentiero.",
+    "newsletterError": "Qualcosa è andato storto. Riprova tra poco."
+  },
   "Progetto": {
     "meta": {
       "title": "Il progetto",
@@ -377,7 +468,37 @@
     "pillarCultureBody": "Valli, tradizioni, enogastronomia e comuni storici lungo Alte Vie e tour.",
     "dataTitle": "Fonti e metodo",
     "dataBody": "I dati sui sentieri provengono esclusivamente dal Catasto Sentieri della Regione Autonoma Valle d'Aosta, da OpenStreetMap e da fonti CAI verificate. Le descrizioni sono originali; le fotografie sono attribuite (Wikimedia Commons CC o asset locali). Progetto indipendente, senza sponsor.",
+    "dataMethodLink": "Come verifichiamo i dati",
+    "authorEyebrow": "Autore / curatore",
+    "authorRole": "Curatore editoriale · Sentieri VdA",
+    "authorBio": "Escursionista e appassionato di montagna valdostana. Cura ogni scheda sentiero incrociando dati ufficiali, tracce GPX e verifiche sul campo. Nessun dato inventato: se un'informazione non è verificabile, resta vuota.",
+    "authorPhotoAlt": "Foto di {name}, curatore di Sentieri VdA",
+    "authorMethodLink": "Leggi il metodo di verifica",
     "contact": "Contatti"
+  },
+  "Metodo": {
+    "meta": {
+      "title": "Come verifichiamo i dati",
+      "description": "Fonti ufficiali, Catasto Sentieri VdA, OpenStreetMap e Geoportale: il metodo editoriale di Sentieri VdA e la data di ultima verifica di ogni scheda."
+    },
+    "heroEyebrow": "Trasparenza",
+    "heroTitle": "Come verifichiamo i dati.",
+    "heroSubtitle": "Ogni scheda sentiero indica fonte ufficiale e data di ultima verifica. Ecco da dove arrivano i numeri e come li controlliamo.",
+    "intro": "Sentieri VdA è un progetto editoriale indipendente. Non inventiamo distanze, quote o difficoltà: usiamo solo dati tracciabili e segnaliamo quando un campo non è verificabile. Le descrizioni narrative sono originali, ma appoggiate a fonti istituzionali e open data.",
+    "sctTitle": "Catasto Sentieri Regione VdA",
+    "sctBody": "Fonte primaria per codice sentiero, nome, comune, lunghezza, quote di partenza/arrivo, difficoltà CAI e geometria della rete ufficiale (~5.000 km). Licenza open data DGR 899/2014. Aggiorniamo periodicamente tramite WFS/GeoJSON regionale.",
+    "sctLink": "Catasto Sentieri VdA",
+    "osmTitle": "OpenStreetMap",
+    "osmBody": "Integrazione per tracce GPX mancanti, nomi toponomastici e punti d'interesse lungo il percorso. I dati OSM sono crowd-sourced: li usiamo come complemento, non come unica fonte per distanza o difficoltà.",
+    "osmLink": "OpenStreetMap",
+    "geoTitle": "Geoportale SCT",
+    "geoBody": "Pacchetto ufficiale della rete sentieristica (shapefile/KMZ) e metadati cartografici della Regione Autonoma Valle d'Aosta. Utile per validare geometrie e confrontare versioni del dataset.",
+    "geoLink": "Geoportale — Rete sentieristica",
+    "verifyTitle": "Data di ultima verifica",
+    "verifyBody": "Ogni scheda curata in trails.json riporta il campo updated_at: la data in cui distanza, quote, difficoltà e traccia GPX sono stati controllati o aggiornati. La trovi in fondo a ogni pagina sentiero, accanto alla fonte dati.",
+    "verifyNote": "I sentieri cambiano: frane, neve tardiva, deviazioni. Prima di partire verifica sempre le condizioni sul Catasto Sentieri o presso il rifugio più vicino.",
+    "aboutLinkPrefix": "Chi cura il progetto?",
+    "aboutLinkLabel": "Il progetto"
   },
   "Sicurezza": {
     "meta": {
@@ -386,56 +507,122 @@
     },
     "heroEyebrow": "Sicurezza in montagna",
     "heroTitle": "Prima di partire, preparati.",
-    "heroSubtitle": "Responsabilità personale, equipaggiamento, meteo e soccorso: tutto quello che serve per camminare in sicurezza in Valle d'Aosta.",
+    "heroSubtitle": "Prima di mettere piede sul sentiero: verifica condizioni, controlla il meteo, prepara lo zaino e sappi cosa fare in caso di emergenza. In montagna la sicurezza si costruisce prima di partire.",
+    "emergencyCallLabel": "Emergenza sanitaria",
+    "emergencyCallHint": "Gratuito · h24 · attiva il Soccorso Alpino Valdostano (SAV)",
     "navEmergency": "Emergenza",
     "navResponsibility": "Responsabilità",
     "navEquipment": "Equipaggiamento",
     "navWeather": "Meteo",
     "navSignals": "Segnali",
     "navRescue": "Soccorso",
-    "navFamily": "Famiglia",
+    "navFamily": "Norme",
     "navContacts": "Contatti",
     "emergencyTitle": "Emergenza: chiama il 118",
-    "emergencyBody": "Numero unico di emergenza valido su tutto il territorio italiano, gratuito, h24. In Valle d'Aosta il Soccorso Alpino Valdostano (SAV) interviene in quota. Se non hai campo, usa il segnale internazionale di soccorso: 6 segnali visivi o acustici al minuto, ripetuti ogni minuto.",
+    "emergencyBody": "Il 118 è il numero unico di emergenza sanitaria in Italia. Funziona h24, è gratuito e risponde anche senza credito telefonico. In Valle d'Aosta ogni chiamata al 118 può attivare il Soccorso Alpino Valdostano (SAV), la squadra specializzata per interventi in montagna, su sentieri, rifugi e pareti.",
+    "emergencyExtra": "Prima di chiamare, metti in sicurezza te stesso e chi ti sta intorno. Se non hai campo, usa il segnale internazionale di soccorso: 6 segnali visivi o acustici al minuto (fischietto, torcia, specchio, urla), poi pausa di un minuto, ripetuto finché non vieni individuato. Restare fermi in un punto visibile riduce i tempi di ricerca rispetto a muoversi a caso.",
     "responsibilityTitle": "Responsabilità individuale",
-    "responsibilityBody": "Le informazioni su questo sito sono divulgative. I sentieri cambiano: frane, neve tardiva, tratti chiusi. Verifica sempre le condizioni attuali sul sito della Regione VdA, al rifugio più vicino o presso la sezione CAI. Nessun sito sostituisce il tuo giudizio sul campo.",
-    "equipmentTitle": "Equipaggiamento consigliato",
-    "equipmentIntro": "Per sentieri classificati E (Escursionistico) e superiori, porta almeno quanto segue. Adatta in base a stagione, quota e meteo.",
-    "equipmentItems": [
-      "Scarpe da trekking con suola Vibram e buon sostegno alla caviglia",
-      "Abbigliamento a strati: base termica, pile, giacca impermeabile antivento",
-      "Zaino con almeno 1,5 L d'acqua (estate) e cibo di riserva",
-      "Carta topografica 1:25.000 o app offline (OsmAnd, Gaia GPS)",
-      "Telefono carico con il 118 salvato in rubrica",
-      "Kit pronto soccorso: cerotti, benda, disinfettante, coperta termica",
-      "Bastoncini da trekking su percorsi con molto dislivello",
-      "Crema solare ad alto fattore e occhiali da sole",
-      "Frontalino se escursione al mattino presto o al tramonto",
-      "Guscio termico leggero anche in estate sopra i 2.500 m"
+    "responsibilityBody": "Nessun sito, mappa o scheda sentiero sostituisce ciò che vedi con i tuoi occhi. Sentieri VdA usa fonti ufficiali, ma frane, neve tardiva, ponti rimossi e deviazioni possono cambiare un percorso da un giorno all'altro. La decisione finale di partire, proseguire o tornare indietro spetta sempre a te.",
+    "responsibilityPoints": [
+      "Controlla le condizioni aggiornate su lovevda.it o Catasto Sentieri VdA il giorno prima e la mattina dell'uscita",
+      "Chiedi notizie al rifugio più vicino, alla sezione CAI o in paese: spesso sanno di frane o ghiaccio non ancora segnalati online",
+      "Scegli il percorso in base al membro più debole del gruppo, non al più esperto",
+      "Comunica a qualcuno il tuo itinerario, l'orario previsto di rientro e a che ora devi preoccuparsi se non chiami",
+      "Rinuncia alla vetta o al giro lungo se meteo, neve, stanchezza o segnaletica assente lo impongono: tornare indietro è una scelta corretta"
     ],
-    "weatherTitle": "Meteo e nivologia",
-    "weatherBody": "Controlla le previsioni nelle 24 ore precedenti su ARPA Valle d'Aosta (arpa.vda.it) o Météo France per le zone di confine. In estate i temporali pomeridiani sono frequenti: parti presto e scendi prima delle 13:00 se il cielo si copre. Non fermarti su crinali o sotto pareti durante i temporali.",
+    "equipmentTitle": "Equipaggiamento consigliato",
+    "equipmentIntro": "La difficoltà CAI indica il tipo di percorso, non ciò che devi portare in zaino. Su un sentiero E (Escursionistico) considera quanto segue come base minima. Su EE/EEA aggiungi casco, ramponi o piccozza secondo stagione, e attrezzatura da roccia solo se il percorso la richiede.",
+    "equipmentNote": "In Valle d'Aosta la quota cambia in poche ore: puoi partire a 600 m in maglietta e trovare neve o vento forte sopra i 2.500 m. Regola abbigliamento e acqua in base alla quota massima del percorso, non alla temperatura in valle.",
+    "equipmentItems": [
+      "Scarpe da trekking con suola Vibram e buon sostegno: su roccia bagnata e sterrato il grip evita scivolate",
+      "Abbigliamento a strati — base termica, pile, guscio impermeabile antivento — per adattarti senza sudare eccessivamente",
+      "Almeno 1,5 litri d'acqua a persona in estate; di più se fa caldo o il percorso non passa da sorgenti note",
+      "Cibo di riserva (barrette, frutta secca): anche su uscite brevi, un ritardo per meteo o stanchezza è frequente",
+      "Carta topografica 1:25.000 o app offline con traccia GPX (OsmAnd, Gaia GPS): la copertura mobile in valle laterali è spesso assente",
+      "Telefono carico, power bank se possibile, con il 118 già salvato in rubrica",
+      "Kit pronto soccorso: cerotti, benda, disinfettante, coperta termica — sufficiente per tamponare fino all'arrivo del soccorso",
+      "Bastoncini su percorsi con molto dislivello: scaricano ginocchia e aiutano l'equilibrio in discesa",
+      "Crema solare ad alto fattore e occhiali: l'UV aumenta rapidamente con la quota",
+      "Frontalino se parti al buio o rientri dopo il tramonto",
+      "Strato termico leggero anche in estate se superi i 2.200–2.500 m"
+    ],
+    "weatherTitle": "Meteo",
+    "weatherBody": "Il meteo in montagna non coincide con quello del fondovalle. Controlla le previsioni nelle 24 ore prima della partenza, preferendo fonti che distinguano quota e versante. In Valle d'Aosta usa ARPA VdA e Fondazione Montagna Sicura; per il confine francese (Monte Bianco, Val Ferret, Val Veny) integra con Météo France. In estate i temporali pomeridiani sono frequenti sopra i 2.000 m: spesso si vedono cumuli a ovest ore prima.",
+    "weatherLinksTitle": "Siti meteo consigliati",
+    "weatherPoints": [
+      "Parti presto: con cielo instabile punta a scendere sotto i 2.400 m entro le 13:00",
+      "Non restare su crinali esposti, sotto pareti o in canalini se il cielo si copre: i fulmini cercano i punti più alti",
+      "In inverno e primavera consulta il bollettino valanghe prima di uscire da sentieri battuti",
+      "Neve dura fino a giugno-luglio su versanti nord e passi oltre 2.500 m: verifica condizioni sul campo",
+      "Il vento in cresta abbassa molto la temperatura percepita: porta sempre un guscio antivento",
+      "Se il meteo peggiora, la scelta più sicura è accorciare il percorso o tornare indietro, non accelerare"
+    ],
+    "weatherLinks": [
+      {
+        "label": "ARPA VdA — Previsioni meteo",
+        "href": "https://www.arpa.vda.it/meteo/previsioni",
+        "desc": "Previsioni ufficiali regionali: fondovalle, medio monte e alta quota."
+      },
+      {
+        "label": "ARPA VdA — Bollettino nivologico",
+        "href": "https://www.arpa.vda.it/nivometeorologia/bollettino_nivologico",
+        "desc": "Neve, manto nevoso e condizioni nivologiche aggiornate."
+      },
+      {
+        "label": "MeteoMont (CAI)",
+        "href": "https://www.meteomont.org",
+        "desc": "Rete nazionale meteo-montana con dati da stazioni in quota."
+      },
+      {
+        "label": "Fondazione Montagna Sicura",
+        "href": "https://www.montagnasicura.org",
+        "desc": "Bollettino valanghe, nivologia e sicurezza in montagna in VdA."
+      },
+      {
+        "label": "Météo France — Montagne",
+        "href": "https://meteofrance.com/previsions-meteo-montagne/alpes",
+        "desc": "Previsioni per Alpi francesi: Monte Bianco, Val Ferret, confine."
+      },
+      {
+        "label": "MeteoBlue — Montagna",
+        "href": "https://www.meteoblue.com/it/meteo/outdoorsports/mountain",
+        "desc": "Previsioni per quota e versante, utili per pianificare l'orario di partenza."
+      }
+    ],
     "signalsTitle": "Segnali di pericolo",
+    "signalsIntro": "In montagna i segnali di pericolo compaiono prima che la situazione diventi critica. Imparare a leggerli evita di trovarsi in difficoltà a quota o lontano dal rifugio più vicino. Se ne riconosci uno, la scelta più sicura è quasi sempre tornare indietro o accorciare il percorso — rinunciare a una vetta non è un fallimento.",
     "signalItems": [
-      "Cielo che si scurisce rapidamente a ovest con nubi a sviluppo verticale",
-      "Calo repentino di temperatura anche in estate",
-      "Sentiero coperto da neve molle o ghiaccio oltre i 2.500 m anche in giugno",
-      "Segnaletica danneggiata o assente — torna indietro se perdi il filo",
-      "Stanchezza eccessiva, capogiri o mal di testa pulsante (AMS)",
-      "Scricchiolii o movimenti di neve su versanti ripidi (valanghe)"
+      "Cielo che si scurisce a ovest con nubi cumuliformi in rapida crescita: temporale probabile nel pomeriggio",
+      "Calo di temperatura e vento in aumento anche in estate: segnale di peggioramento in quota",
+      "Sentiero coperto da neve molle, ghiaccio o detriti recenti: valuta se hai l'attrezzatura adatta",
+      "Segnaletica assente, barrata o cartelli di chiusura ignorati: non proseguire a tentoni",
+      "Stanchezza eccessiva, capogiri, nausea o mal di testa pulsante: possibili sintomi da mal di montagna (AMS)",
+      "Scricchiolii, crepe o movimento di neve su versante ripido: rischio valanga, allontanati dal versante",
+      "Frana recente o ponte/tratto danneggiato: il terreno può essere instabile anche a distanza di ore"
     ],
     "rescueTitle": "Soccorso alpino: cosa fare",
-    "rescueIntro": "In caso di incidente, chiama il 118 e comunica con precisione:",
+    "rescueIntro": "In caso di incidente la priorità è proteggere il ferito dal freddo e dalle cadute di pietre, poi chiamare il 118. L'operatore attiva il SAV e ti guida passo passo: rispondi con calma, anche se la linea è disturbata. Non riattaccare: potrebbero richiamarti per chiarimenti.",
+    "rescueNote": "Senza campo telefonico, invia un messaggio con coordinate GPS a un contatto di fiducia (WhatsApp, SMS) e attiva la localizzazione. Resta il più visibile possibile: indosso colori chiari, movimento con le braccia. In gruppo, una persona resta con il ferito mentre gli altri cercano segnale — non lasciare mai un ferito solo senza assistenza.",
     "rescueSteps": [
-      "Nome e cognome della persona che chiama e del gruppo",
-      "Posizione: nome sentiero, rifugio vicino, quota approssimativa, coordinate se disponibili",
-      "Numero di persone coinvolte e condizioni (ferito, bloccato, ipotermia)",
-      "Numero di telefono da cui chiami e se la copertura è instabile"
+      "Chi chiama: nome e cognome, numero di telefono, relazione con il gruppo",
+      "Dove siete: nome del sentiero, rifugio o paese più vicino, quota indicativa, coordinate GPS se disponibili",
+      "Cosa è successo: numero di persone coinvolte, tipo di infortunio (caduta, smarimento, malore, ipotermia)",
+      "Condizioni sul posto: ferito cosciente o no, mobile o bloccato, meteo e visibilità attuali",
+      "Copertura: se la linea è instabile, dillo subito così registrano i dati essenziali"
     ],
-    "familyTitle": "Bambini e cani",
-    "familyBody": "Con bambini piccoli scegli percorsi T con basso dislivello. I bambini si stancano prima e termoregolano meno efficientemente. Con i cani verifica aree di protezione faunistica: nel Parco Nazionale Gran Paradiso il guinzaglio è obbligatorio su tutti i percorsi.",
+    "familyTitle": "Buone norme",
+    "familyBody": "Sul sentiero le buone norme proteggono chi cammina, chi arriva dopo e l'ambiente montano. Valle d'Aosta ha parchi protetti, pascoli attivi e sentieri condivisi con alpinisti e biker: rispettare segnaletica e comportamenti corretti riduce conflitti e incidenti evitabili.",
+    "familyPoints": [
+      "Rispetta cartelli di chiusura, deviazioni e recinzioni: spesso indicano frane, caccia o lavori in corso",
+      "Nel Parco Nazionale Gran Paradiso il guinzaglio per i cani è obbligatorio su tutti i percorsi",
+      "Nei pascoli con bestiame tieni il cane al guinzaglio corto e non attraversare recinti",
+      "Con bambini scegli sentieri T, pianifica soste frequenti e porta strati extra: si raffreddano più in fretta",
+      "Non lasciare rifiuti, non tagliare varianti non segnalate, non accendere fuochi fuori dalle aree attrezzate",
+      "Su sentieri stretti o in salita fai spazio a chi sale: rallenta e comunica con un saluto",
+      "Non disturbare la fauna: osserva da lontano, soprattutto stambecchi e camosci in periodo riproduttivo"
+    ],
     "contactsTitle": "Link e contatti utili",
-    "contactsSubtitle": "Fonti ufficiali per condizioni sentieri, meteo e soccorso.",
+    "contactsSubtitle": "Salva questi link e numeri prima di partire, soprattutto se il tuo percorso passa da zone senza copertura. Per condizioni sentieri usa fonti ufficiali; per meteo e valanghe consulta ARPA e Fondazione Montagna Sicura il giorno dell'uscita.",
     "contactLinks": [
       {
         "label": "Soccorso Alpino · 118",
@@ -450,7 +637,7 @@
       {
         "label": "ARPA Valle d'Aosta",
         "href": "https://www.arpa.vda.it/meteo",
-        "desc": "Previsioni meteo e bollettini nivologici regionali."
+        "desc": "Portale meteo regionale: previsioni, allerte e dati nivologici."
       },
       {
         "label": "Fondazione Montagna Sicura",

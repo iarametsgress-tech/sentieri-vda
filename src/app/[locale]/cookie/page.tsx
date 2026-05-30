@@ -40,7 +40,7 @@ export default async function CookiePage({
           {isIT ? 'Legale' : 'Legal'}
         </p>
         <h1 className="font-display text-3xl tracking-tighter mb-2">Cookie Policy</h1>
-        <p className="text-snow/40 text-xs font-mono mb-10">
+        <p className="text-snow/55 text-xs font-mono mb-10">
           {isIT ? 'Aggiornata: maggio 2026' : 'Updated: May 2026'}
         </p>
 
@@ -77,7 +77,7 @@ export default async function CookiePage({
                     </th>
                   </tr>
                 </thead>
-                <tbody className="text-snow/40">
+                <tbody className="text-snow/55">
                   <tr className="border-b border-white/5">
                     <td className="py-2 pr-4 font-mono">NEXT_LOCALE</td>
                     <td className="py-2 pr-4">
@@ -104,7 +104,7 @@ export default async function CookiePage({
               </table>
             </div>
 
-            <p className="mt-4 text-snow/40 text-xs">
+            <p className="mt-4 text-snow/55 text-xs">
               {isIT
                 ? 'Il sito non utilizza cookie di profilazione o marketing. Se in futuro verranno integrati sistemi pubblicitari (es. Google AdSense), questa pagina verrà aggiornata e verrà richiesto il consenso prima dell\'attivazione.'
                 : 'The site does not use profiling or marketing cookies. If advertising systems (e.g. Google AdSense) are integrated in the future, this page will be updated and consent will be requested before activation.'}

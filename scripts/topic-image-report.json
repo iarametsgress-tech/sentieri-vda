@@ -1,0 +1,90 @@
+[
+  {
+    "commons": "Serpentinite di Valpelline.jpg",
+    "dest": "public/environment/ophiolites.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Dora Baltea Pont-Saint-Martin.jpg",
+    "dest": "public/environment/dora-baltea.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Glacier du Miage.jpg",
+    "dest": "public/environment/glacier-miage.jpg",
+    "status": "ok",
+    "credit": "Rémih (CC BY-SA 4.0)",
+    "source": "https://commons.wikimedia.org/wiki/File:Glacier_du_Miage.jpg"
+  },
+  {
+    "commons": "Fontaine à Saint-Rhémy-en-Bosses.jpg",
+    "dest": "public/environment/alpine-spring.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Cogne (AO) - panoramica.jpg",
+    "dest": "public/cultura/val-di-cogne.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Jambon de Bosses.jpg",
+    "dest": "public/cultura/jambon-de-bosses.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Coumba Freida 2015.jpg",
+    "dest": "public/cultura/carnival.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Processione di Oropa.jpg",
+    "dest": "public/cultura/oropa-procession.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Coumba freida 2014.jpg",
+    "dest": "public/cultura/coumba-freida.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Fifre e tamburo.jpg",
+    "dest": "public/cultura/fifres.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Costume valdostano.jpg",
+    "dest": "public/cultura/traditional-costumes.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Transhumance en Val d Aoste.jpg",
+    "dest": "public/cultura/transhumance.jpg",
+    "status": "error",
+    "error": "rate limited"
+  },
+  {
+    "commons": "Foire de Saint-Ours à Aoste.jpg",
+    "dest": "public/cultura/saint-ours-fair.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Costume tradizionale valdostano - Gressoney.jpg",
+    "dest": "public/cultura/traditions-divider.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Seupa valpellinentze.jpg",
+    "dest": "public/cultura/seupa-valpellinentze.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Picotin fromage chèvre.jpg",
+    "dest": "public/cultura/picotin.jpg",
+    "status": "missing"
+  },
+  {
+    "commons": "Enfer d Arvier.jpg",
+    "dest": "public/cultura/enfer-d-arvier.jpg",
+    "status": "missing"
+  }
+]

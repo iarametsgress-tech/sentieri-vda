@@ -14,7 +14,9 @@
     "sicurezza": "Safety",
     "parks": "Parks",
     "blog": "Journal",
-    "progetto": "The project"
+    "progetto": "The project",
+    "metodo": "Method",
+    "about": "About"
   },
   "Home": {
     "heroEyebrow": "Aosta Valley · Western Alps",
@@ -91,6 +93,12 @@
       "refugesNearby": "Refuges & bivouacs",
       "gallery": "Photo gallery",
       "source": "Data source",
+      "lastVerified": "Last verified",
+      "conditionsOpen": "Trail open",
+      "conditionsCaution": "Caution",
+      "conditionsClosed": "Trail closed",
+      "conditionsUpdated": "Conditions updated on",
+      "curatedBy": "Curated and verified by {name}",
       "waypoints": "Key points",
       "geology": "Geology & landscape",
       "geologyEyebrow": "Earth sciences",
@@ -117,7 +125,70 @@
       "municipalities": "Municipalities",
       "gpxNoteAlteVia": "Official GPX track — Aosta Valley Region / lovevda.it",
       "gpxNoteGeneric": "GPX track — verify on the ground before hiking",
-      "transferStageNote": "Connector stage between opposite flanks: there is no continuous walking trail. The map shows the start and end points and the official trail network."
+      "transferStageNote": "Connector stage between opposite flanks: there is no continuous walking trail. The map shows the start and end points and the official trail network.",
+      "relatedTrails": "Related trails",
+      "relatedTrailsSubtitle": "Same valley or similar routes — more hikes to explore.",
+      "tags": "Themes and features"
+    }
+  },
+  "TrailHubs": {
+    "breadcrumbHome": "Home",
+    "breadcrumbTrails": "Trails",
+    "exploreTitle": "Explore by valley, difficulty, theme and wildlife",
+    "exploreSubtitle": "Verified trail collections — same catalog data, organised the way people search on maps and Google.",
+    "byValley": "By valley",
+    "byDifficulty": "By difficulty",
+    "byTheme": "By theme",
+    "bySpecies": "Where to spot",
+    "trailCount": "{count, plural, one {# trail} other {# trails}}",
+    "moreSpecies": "+{count} more species in the catalog",
+    "valley": {
+      "eyebrow": "Trails by valley",
+      "title": "{count, plural, one {# trail in {valley}} other {# trails in {valley}}}",
+      "intro": "{count, plural, one {One documented trail in {valley}: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.} other {{count} documented trails in {valley}: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.}}",
+      "metaTitle": "Trails in {valley} ({count})",
+      "metaDescription": "{count} trails in {valley}, Aosta Valley: maps, GPX, difficulty and elevation from official sources."
+    },
+    "difficulty": {
+      "eyebrow": "Trails by difficulty",
+      "title": "{count, plural, one {# {label} trail} other {# {label} trails}}",
+      "intro": "{count, plural, one {One trail rated {label} (CAI scale): {diffRange}, distances {minDistance}–{maxDistance} km, elevation gain {minGain}–{maxGain} m.} other {{count} trails rated {label} (CAI scale): {diffRange}, distances {minDistance}–{maxDistance} km, elevation gain {minGain}–{maxGain} m.}}",
+      "metaTitle": "{label} trails ({count}) — Aosta Valley",
+      "metaDescription": "{count} {label} trails in the Aosta Valley: GPX, maps and elevation profiles.",
+      "labels": {
+        "facili": "easy · CAI T",
+        "escursionistici": "hiking · CAI E",
+        "esperti": "for expert hikers · CAI EE/EEA",
+        "alpinistici": "mountaineering · CAI A"
+      }
+    },
+    "theme": {
+      "eyebrow": "Trails by theme",
+      "title": "{count, plural, one {# trail · {theme}} other {# trails · {theme}}}",
+      "intro": "{count, plural, one {One trail tagged {theme}: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.} other {{count} trails tagged {theme}: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.}}",
+      "metaTitle": "{theme} trails ({count})",
+      "metaDescription": "{count} {theme} trails in the Aosta Valley — maps, GPX and full guides.",
+      "tags": {
+        "cervino": "Matterhorn",
+        "col-champillon": "Col Champillon",
+        "col-malatra": "Col Malatrà",
+        "gran-san-bernardo": "Great St Bernard",
+        "mont-mars": "Mont Mars",
+        "monte-bianco": "Mont Blanc",
+        "monte-rosa": "Monte Rosa",
+        "val-ferret": "Val Ferret",
+        "valle-ayas": "Ayas Valley",
+        "valpelline": "Valpelline",
+        "valtournenche": "Valtournenche",
+        "walser": "Walser culture"
+      }
+    },
+    "species": {
+      "eyebrow": "Where to spot",
+      "title": "{count, plural, one {# trail to spot {species}} other {# trails to spot {species}}}",
+      "intro": "{count, plural, one {One trail where {species} is listed in flora/fauna: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.} other {{count} trails where {species} is listed in flora/fauna: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.}}",
+      "metaTitle": "Where to see {species} — {count} trails",
+      "metaDescription": "{count} Aosta Valley trails to observe {species}: maps, GPX and verified naturalist notes."
     }
   },
   "Difficulty": {
@@ -135,7 +206,9 @@
     "newsletter": "Subscribe to the newsletter",
     "newsletterPlaceholder": "your@email.com",
     "newsletterCta": "Subscribe",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "newsletterSuccess": "You're subscribed. See you on the trail.",
+    "newsletterError": "Something went wrong. Please try again shortly."
   },
   "AlteVie": {
     "meta": {
@@ -357,8 +430,29 @@
     "vdaFooterNote": "For official information on Valdostan traditions, food and wine.",
     "vdaFooterLink": "Territory & culture · Aosta Valley Region"
   },
+  "Blog": {
+    "meta": {
+      "title": "Mountain journal",
+      "description": "Stories, field notes and guides to the great Aosta Valley routes — High Routes, tours and practical tips."
+    },
+    "eyebrow": "Mountain journal",
+    "title": "Stories from the trails",
+    "subtitle": "Guides, stage reports and deep dives on the great routes of Aosta Valley.",
+    "readArticle": "Read article",
+    "backToJournal": "Back to journal",
+    "publishedOn": "Published {date}",
+    "writtenBy": "By {name}",
+    "newsletterHint": "Subscribe for new articles and trail condition updates.",
+    "newsletterPlaceholder": "your@email.com",
+    "newsletterCta": "Subscribe",
+    "newsletterSuccess": "You're subscribed. See you on the trail.",
+    "newsletterError": "Something went wrong. Please try again shortly."
+  },
   "Progetto": {
-    "meta": { "title": "The project", "description": "Sentieri VdA: a 360° editorial guide to trails, environment and culture in Aosta Valley." },
+    "meta": {
+      "title": "The project",
+      "description": "Sentieri VdA: a 360° editorial guide to trails, environment and culture in Aosta Valley."
+    },
     "heroEyebrow": "The project",
     "heroTitle": "A complete 360° guide.",
     "heroSubtitle": "Trails, environment, nature and Valdostan culture — with verified data and editorial depth.",
@@ -374,46 +468,192 @@
     "pillarCultureBody": "Valleys, traditions, food and wine and historic villages along High Routes and tours.",
     "dataTitle": "Sources and method",
     "dataBody": "Trail data comes exclusively from the Aosta Valley Region's Catasto Sentieri, OpenStreetMap and verified CAI sources. Descriptions are original; photos are attributed. Independent project, no sponsors.",
+    "dataMethodLink": "How we verify data",
+    "authorEyebrow": "Author / curator",
+    "authorRole": "Editorial curator · Sentieri VdA",
+    "authorBio": "Hiker and Aosta Valley mountain enthusiast. Every trail page cross-checks official data, GPX tracks and field notes. No invented figures: if something cannot be verified, it stays empty.",
+    "authorPhotoAlt": "Photo of {name}, Sentieri VdA curator",
+    "authorMethodLink": "Read our verification method",
     "contact": "Contact"
   },
+  "Metodo": {
+    "meta": {
+      "title": "How we verify data",
+      "description": "Official sources — Catasto Sentieri VdA, OpenStreetMap and Geoportale: Sentieri VdA's editorial method and last-verified date on every trail page."
+    },
+    "heroEyebrow": "Transparency",
+    "heroTitle": "How we verify data.",
+    "heroSubtitle": "Every trail page shows its official source and last verified date. Here is where the numbers come from and how we check them.",
+    "intro": "Sentieri VdA is an independent editorial project. We do not invent distances, elevations or grades: we use only traceable data and leave fields empty when they cannot be verified. Narrative descriptions are original but grounded in institutional and open data sources.",
+    "sctTitle": "Aosta Valley Region Trail Registry",
+    "sctBody": "Primary source for trail code, name, municipality, length, start/end elevation, CAI grade and official network geometry (~5,000 km). Open data licence DGR 899/2014. Updated periodically via regional WFS/GeoJSON.",
+    "sctLink": "Catasto Sentieri VdA",
+    "osmTitle": "OpenStreetMap",
+    "osmBody": "Used to fill missing GPX tracks, toponyms and points of interest along routes. OSM is crowd-sourced: we treat it as a complement, not the sole source for distance or difficulty.",
+    "osmLink": "OpenStreetMap",
+    "geoTitle": "SCT Geoportale",
+    "geoBody": "Official trail network package (shapefile/KMZ) and cartographic metadata from the Aosta Valley Region. Used to validate geometries and compare dataset versions.",
+    "geoLink": "Geoportale — Trail network",
+    "verifyTitle": "Last verified date",
+    "verifyBody": "Every curated page in trails.json includes updated_at: the date when distance, elevation, grade and GPX were checked or refreshed. You will find it at the bottom of each trail page, next to the data source.",
+    "verifyNote": "Trails change: landslides, late snow, diversions. Always check current conditions on the official registry or at the nearest refuge before setting out.",
+    "aboutLinkPrefix": "Who runs the project?",
+    "aboutLinkLabel": "The project"
+  },
   "Sicurezza": {
-    "meta": { "title": "Mountain safety", "description": "Equipment, weather, mountain rescue and useful contacts before setting out in Aosta Valley." },
+    "meta": {
+      "title": "Mountain safety",
+      "description": "Equipment, weather, mountain rescue and useful contacts before setting out in Aosta Valley."
+    },
     "heroEyebrow": "Mountain safety",
     "heroTitle": "Prepare before you go.",
-    "heroSubtitle": "Personal responsibility, equipment, weather and rescue: everything you need to hike safely in Aosta Valley.",
+    "heroSubtitle": "Before you set foot on the trail: check conditions, read the weather, pack your bag and know what to do in an emergency. Mountain safety starts before you leave.",
+    "emergencyCallLabel": "Medical emergency",
+    "emergencyCallHint": "Free · 24/7 · activates Soccorso Alpino Valdostano (SAV)",
     "navEmergency": "Emergency",
     "navResponsibility": "Responsibility",
     "navEquipment": "Equipment",
     "navWeather": "Weather",
     "navSignals": "Warning signs",
     "navRescue": "Rescue",
-    "navFamily": "Family",
+    "navFamily": "Norms",
     "navContacts": "Contacts",
     "emergencyTitle": "Emergency: call 118",
-    "emergencyBody": "Single emergency number valid throughout Italy, free, 24/7. In Aosta Valley the Soccorso Alpino Valdostano (SAV) responds at altitude. If you have no signal, use the international distress signal: 6 visual or acoustic signals per minute, repeated every minute.",
+    "emergencyBody": "118 is Italy's single emergency medical number. It works 24/7, is free and answers even without phone credit. In Aosta Valley, 118 calls can activate the Soccorso Alpino Valdostano (SAV) — the specialist team for mountain, trail and high-altitude rescue.",
+    "emergencyExtra": "Before calling, make yourself and others safe. With no signal, use the international distress signal: 6 visual or acoustic signals per minute (whistle, torch, mirror, shouts), then pause one minute, repeated until spotted. Staying visible in one place is usually faster to find than moving without orientation.",
     "responsibilityTitle": "Individual responsibility",
-    "responsibilityBody": "Information on this site is for guidance only. Trails change: landslides, late snow, closed sections. Always check current conditions on the Region website, at the nearest hut or with the local CAI section.",
+    "responsibilityBody": "No website, map or trail page replaces what you see on the ground. Sentieri VdA uses official sources, but landslides, late snow, removed bridges and diversions can change a route overnight. The final decision to start, continue or turn back is always yours.",
+    "responsibilityPoints": [
+      "Check updated conditions on lovevda.it or Catasto Sentieri VdA the day before and on the morning of your hike",
+      "Ask the nearest hut, CAI section or village — they often know of ice or landslides not yet online",
+      "Choose the route for the weakest member of the group, not the most experienced",
+      "Tell someone your route, expected return time and when to worry if they don't hear from you",
+      "Skip the summit or long loop if weather, snow, fatigue or missing signs require it — turning back is the right call"
+    ],
     "equipmentTitle": "Recommended equipment",
-    "equipmentIntro": "For trails graded E (Hiker) and above, carry at least the following. Adapt to season, altitude and weather.",
-    "equipmentItems": ["Trekking boots with Vibram sole and ankle support", "Layered clothing: thermal base, fleece, waterproof windproof jacket", "Rucksack with at least 1.5 L water (summer) and emergency food", "1:25,000 map or offline app (OsmAnd, Gaia GPS)", "Charged phone with 118 saved", "First-aid kit: plasters, bandage, antiseptic, emergency blanket", "Trekking poles on routes with significant elevation gain", "High-factor sunscreen and sunglasses", "Headlamp for early starts or late finishes", "Light thermal layer even in summer above 2,500 m"],
-    "weatherTitle": "Weather and snow conditions",
-    "weatherBody": "Check forecasts for the 24 hours before departure on ARPA Valle d'Aosta (arpa.vda.it) or Météo France for border areas. Summer afternoon storms are common: start early and descend before 1 pm if the sky clouds over.",
+    "equipmentIntro": "CAI grade describes the route, not what to carry. On an E (Hiker) trail, treat the list below as a minimum. On EE/EEA add helmet, crampons or ice axe by season, and climbing gear only if the route requires it.",
+    "equipmentNote": "In Aosta Valley elevation changes fast: you may start at 600 m in a T-shirt and find snow or strong wind above 2,500 m. Pack for the highest point of the route, not valley temperature.",
+    "equipmentItems": [
+      "Trekking boots with Vibram sole and ankle support — grip matters on wet rock and scree",
+      "Layered clothing: thermal base, fleece, waterproof windproof shell",
+      "At least 1.5 L water per person in summer; more in heat or if no reliable springs",
+      "Emergency food (bars, nuts): delays from weather or fatigue are common",
+      "1:25,000 map or offline app with GPX — mobile coverage is often missing in side valleys",
+      "Charged phone, power bank if possible, with 118 saved in contacts",
+      "First-aid kit: plasters, bandage, antiseptic, emergency blanket",
+      "Trekking poles on routes with significant elevation gain",
+      "High-factor sunscreen and sunglasses — UV increases quickly with altitude",
+      "Headlamp if starting in the dark or returning after sunset",
+      "Light thermal layer even in summer above 2,200–2,500 m"
+    ],
+    "weatherTitle": "Weather",
+    "weatherBody": "Mountain weather differs from the valley floor. Check forecasts for the 24 hours before departure, using sources that show altitude and aspect. In Aosta Valley use ARPA VdA and Fondazione Montagna Sicura; for the French border (Mont Blanc, Val Ferret, Val Veny) add Météo France. Summer afternoon storms above 2,000 m are common — cumulus building to the west is often visible hours ahead.",
+    "weatherLinksTitle": "Recommended weather sites",
+    "weatherPoints": [
+      "Start early: if the sky looks unstable, aim to be below 2,400 m by 1 pm",
+      "Do not stay on exposed ridges, below cliffs or in gullies when clouds build — lightning seeks high points",
+      "In winter and spring check the avalanche bulletin before leaving marked trails",
+      "Snow can last until June–July on north slopes and passes above 2,500 m — verify on the ground",
+      "Wind on ridges lowers perceived temperature sharply — always carry a windproof layer",
+      "If weather worsens, the safest choice is to shorten the route or turn back, not speed up"
+    ],
+    "weatherLinks": [
+      {
+        "label": "ARPA VdA — Weather forecast",
+        "href": "https://www.arpa.vda.it/meteo/previsioni",
+        "desc": "Official regional forecasts: valley, mid-mountain and high altitude."
+      },
+      {
+        "label": "ARPA VdA — Snow bulletin",
+        "href": "https://www.arpa.vda.it/nivometeorologia/bollettino_nivologico",
+        "desc": "Snow cover and nivological conditions."
+      },
+      {
+        "label": "MeteoMont (CAI)",
+        "href": "https://www.meteomont.org",
+        "desc": "National mountain weather network with high-altitude station data."
+      },
+      {
+        "label": "Fondazione Montagna Sicura",
+        "href": "https://www.montagnasicura.org",
+        "desc": "Avalanche bulletin and mountain safety in Aosta Valley."
+      },
+      {
+        "label": "Météo France — Mountains",
+        "href": "https://meteofrance.com/previsions-meteo-montagne/alpes",
+        "desc": "French Alps: Mont Blanc, Val Ferret, border areas."
+      },
+      {
+        "label": "MeteoBlue — Mountain",
+        "href": "https://www.meteoblue.com/en/weather/outdoorsports/mountain",
+        "desc": "Elevation and aspect forecasts for planning start times."
+      }
+    ],
     "signalsTitle": "Warning signs",
-    "signalItems": ["Sky rapidly darkening to the west with vertically developing clouds", "Sudden temperature drop even in summer", "Trail covered by soft snow or ice above 2,500 m even in June", "Damaged or absent trail markings", "Excessive fatigue, dizziness or pounding headache (AMS)", "Cracking or moving snow on steep slopes (avalanche risk)"],
+    "signalsIntro": "In the mountains, danger signs appear before a situation becomes critical. Learning to read them keeps you from getting into trouble at altitude or far from the nearest hut. If you notice one, the safest choice is almost always to turn back or shorten the route — skipping a summit is not a failure.",
+    "signalItems": [
+      "Sky darkening to the west with rapidly growing cumulus — afternoon storm likely",
+      "Temperature drop and rising wind even in summer — deterioration at altitude",
+      "Trail covered by soft snow, ice or fresh debris — assess whether you have suitable gear",
+      "Missing, damaged or ignored closure signs — do not continue blindly",
+      "Excessive fatigue, dizziness, nausea or pounding headache — possible altitude sickness (AMS)",
+      "Cracking or moving snow on steep slopes — avalanche risk, move away from the slope",
+      "Recent landslide or damaged bridge/section — ground may still be unstable"
+    ],
     "rescueTitle": "Mountain rescue: what to do",
-    "rescueIntro": "In an accident, call 118 and provide:",
-    "rescueSteps": ["Full name of caller and group", "Location: trail name, nearest hut, approximate altitude, coordinates if available", "Number of people involved and conditions", "Phone number you are calling from"],
-    "familyTitle": "Children and dogs",
-    "familyBody": "With young children choose T routes with low elevation gain. Dogs must be on lead in Gran Paradiso National Park on all routes.",
+    "rescueIntro": "In an accident, first protect the injured from cold and rock fall, then call 118. The operator activates the SAV and guides you step by step — answer calmly even if the line is poor. Do not hang up; they may call back for details.",
+    "rescueNote": "Without phone signal, send GPS coordinates to a trusted contact (WhatsApp, SMS) and stay as visible as possible — bright clothing, arm movements. In a group, one person stays with the injured while others seek signal. Never leave an injured person alone without care.",
+    "rescueSteps": [
+      "Caller: full name, phone number, relationship to the group",
+      "Location: trail name, nearest hut or village, approximate altitude, GPS coordinates if available",
+      "What happened: number of people, type of injury (fall, lost, illness, hypothermia)",
+      "On-site conditions: conscious or not, mobile or trapped, current weather and visibility",
+      "Signal: if the line is unstable, say so immediately so they record essentials"
+    ],
+    "familyTitle": "Good practice",
+    "familyBody": "On the trail, good practice protects hikers, those who follow and the mountain environment. Aosta Valley has protected parks, active pastures and shared routes with climbers and bikers — respecting signs and etiquette reduces avoidable incidents.",
+    "familyPoints": [
+      "Respect closure signs, diversions and fences — they often mark landslides, hunting or works",
+      "In Gran Paradiso National Park dogs must be on lead on all routes",
+      "In pastures with livestock keep dogs on a short lead and do not cross fences",
+      "With children choose T routes, plan frequent breaks and extra layers — they cool down faster",
+      "Leave no litter, do not cut unmarked shortcuts, no fires outside designated areas",
+      "On narrow or uphill sections give way to those climbing — slow down and greet",
+      "Do not disturb wildlife — observe from a distance, especially ibex and chamois in breeding season"
+    ],
     "contactsTitle": "Useful links and contacts",
-    "contactsSubtitle": "Official sources for trail conditions, weather and rescue.",
+    "contactsSubtitle": "Save these links and numbers before you leave, especially on routes without coverage. Use official sources for trail conditions; check ARPA and Fondazione Montagna Sicura for weather and avalanches on the day of your hike.",
     "contactLinks": [
-      { "label": "Mountain Rescue · 118", "href": "tel:118", "desc": "Mountain emergencies, 24/7, free in Italy." },
-      { "label": "Catasto Sentieri VdA", "href": "https://www.lovevda.it/en/sport/hiking", "desc": "Official trail conditions and High Routes." },
-      { "label": "ARPA Valle d'Aosta", "href": "https://www.arpa.vda.it/meteo", "desc": "Regional weather and snow bulletins." },
-      { "label": "Fondazione Montagna Sicura", "href": "https://www.montagnasicura.org", "desc": "Avalanche and mountain safety in Aosta Valley." },
-      { "label": "CAI Valle d'Aosta", "href": "https://www.caivalledaosta.it", "desc": "CAI sections, huts and local information." },
-      { "label": "Sentieri VdA", "href": "mailto:info@sentierivda.it", "desc": "Report errors or contribute to the project." }
+      {
+        "label": "Mountain Rescue · 118",
+        "href": "tel:118",
+        "desc": "Mountain emergencies, 24/7, free in Italy."
+      },
+      {
+        "label": "Catasto Sentieri VdA",
+        "href": "https://www.lovevda.it/en/sport/hiking",
+        "desc": "Official trail conditions and High Routes."
+      },
+      {
+        "label": "ARPA Valle d'Aosta",
+        "href": "https://www.arpa.vda.it/meteo",
+        "desc": "Regional weather and snow bulletins."
+      },
+      {
+        "label": "Fondazione Montagna Sicura",
+        "href": "https://www.montagnasicura.org",
+        "desc": "Avalanche and mountain safety in Aosta Valley."
+      },
+      {
+        "label": "CAI Valle d'Aosta",
+        "href": "https://www.caivalledaosta.it",
+        "desc": "CAI sections, huts and local information."
+      },
+      {
+        "label": "Sentieri VdA",
+        "href": "mailto:info@sentierivda.it",
+        "desc": "Report errors or contribute to the project."
+      }
     ]
   },
   "About": {

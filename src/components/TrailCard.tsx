@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 import { useLocale } from 'next-intl';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
@@ -7,6 +8,7 @@ import { useRef } from 'react';
 import { TrendingUp, Clock, Mountain, ArrowUpRight } from 'lucide-react';
 import type { Trail } from '@/lib/types';
 import { getTrailLocalizedName, getTrailLocalizedShortDesc } from '@/lib/stage-utils';
+import { trailImageBlurProps } from '@/lib/blur';
 import DifficultyBadge from './DifficultyBadge';
 
 export default function TrailCard({
@@ -21,6 +23,7 @@ export default function TrailCard({
   const name = getTrailLocalizedName(trail, locale);
   const desc = getTrailLocalizedShortDesc(trail, locale);
   const cardImage = trail.image || trail.hero_image;
+  const imageProps = trailImageBlurProps(cardImage);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -75,12 +78,13 @@ export default function TrailCard({
             className="absolute inset-0 z-10 origin-top bg-ink"
           />
 
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={cardImage}
             alt={name}
-            className="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.06]"
-            loading="lazy"
+            fill
+            className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.06]"
+            sizes="(max-width: 768px) 100vw, 400px"
+            {...imageProps}
           />
 
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/20 to-transparent" />
@@ -110,7 +114,7 @@ export default function TrailCard({
           {desc}
         </p>
 
-        <div className="flex items-center gap-5 border-t border-white/[0.07] pt-4 text-xs tabular text-snow/45">
+        <div className="flex items-center gap-5 border-t border-white/[0.07] pt-4 text-xs tabular text-snow/55">
           <span className="flex items-center gap-1.5">
             <TrendingUp size={12} />
             {trail.distance_km.toFixed(1)} km

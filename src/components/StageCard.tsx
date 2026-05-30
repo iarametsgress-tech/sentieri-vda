@@ -100,14 +100,14 @@ export default function StageCard({
         </div>
         <div className="space-y-3 p-5">
           <div>
-            <p className="mb-1 font-mono text-[10px] uppercase tracking-widest text-snow/35">
+            <p className="mb-1 font-mono text-[10px] uppercase tracking-widest text-snow/50">
               {stageLabel} {stage.stageNum}
             </p>
             <h3 className="font-display text-lg leading-snug tracking-tight transition-colors group-hover:text-snow">
               {stage.name}
             </h3>
           </div>
-          <p className="flex items-start gap-1.5 text-xs font-mono text-snow/45">
+          <p className="flex items-start gap-1.5 text-xs font-mono text-snow/55">
             <MapPin size={11} className="mt-0.5 shrink-0" />
             <span>
               {stage.startName} → {stage.endName}
@@ -117,7 +117,7 @@ export default function StageCard({
             {stage.shortDescription}
           </p>
           <div className="flex items-center justify-between border-t border-white/5 pt-2">
-            <div className="flex gap-4 font-mono text-xs tabular-nums text-snow/45">
+            <div className="flex gap-4 font-mono text-xs tabular-nums text-snow/55">
               <span className="inline-flex items-center gap-1">
                 <TrendingUp size={11} />
                 {stage.distance_km} km
@@ -126,7 +126,7 @@ export default function StageCard({
                 <Mountain size={11} />+{stage.elevation_gain_m} m
               </span>
             </div>
-            <span className="inline-flex items-center gap-1 font-mono text-xs text-snow/35 transition-colors group-hover:text-alpenglow">
+            <span className="inline-flex items-center gap-1 font-mono text-xs text-snow/50 transition-colors group-hover:text-alpenglow">
               {viewStageLabel}
               <ArrowUpRight size={12} />
             </span>

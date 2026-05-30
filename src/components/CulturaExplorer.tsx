@@ -1,11 +1,14 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { MapPin, Landmark, UtensilsCrossed, ExternalLink } from 'lucide-react';
 import LinkedText from '@/components/LinkedText';
+import SectionScrollNav from '@/components/SectionScrollNav';
+import { topicClasses } from '@/lib/topic-themes';
+import { cn } from '@/lib/cn';
 import type { Valley, Tradition, FoodWineItem, CulturaSectionId } from '@/lib/culture-types';
 import SceneDivider from '@/components/SceneDivider';
 import {
@@ -110,11 +113,13 @@ function ValleyCard({
       initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
-      className={`scroll-mt-40 overflow-hidden rounded-2xl border bg-white/[0.02] transition-all ${
+      className={cn(
+        'scroll-mt-40 overflow-hidden rounded-2xl border transition-all',
+        topicClasses('culture').card,
         highlighted
           ? 'border-alpenglow/50 ring-2 ring-alpenglow/20'
-          : 'border-white/10 hover:border-white/20'
-      }`}
+          : 'hover:border-white/20'
+      )}
     >
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
         <div className="relative aspect-[16/10] lg:aspect-auto lg:col-span-2 min-h-[200px]">
@@ -129,7 +134,7 @@ function ValleyCard({
           <ImageCredit item={valley} />
         </div>
         <div className="lg:col-span-3 p-6 lg:p-8">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-alpenglow mb-2">
+          <p className={cn('font-mono text-[10px] uppercase tracking-[0.3em] mb-2', topicClasses('culture').eyebrow)}>
             {getValleyEyebrow(valley, locale)}
           </p>
           <h3 className="font-display text-2xl text-snow tracking-tight mb-3">
@@ -140,7 +145,7 @@ function ValleyCard({
           </p>
           {valley.towns.length > 0 ? (
             <div className="mb-4">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-snow/40 mb-3">
+              <p className="font-mono text-[10px] uppercase tracking-widest text-snow/55 mb-3">
                 {labels.townsTitle}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -188,7 +193,7 @@ function ValleyCard({
                 <ExternalLink size={12} />
               </a>
             ) : null}
-            <p className="text-[10px] text-snow/35 font-mono">
+            <p className="text-[10px] text-snow/50 font-mono">
               {labels.source}: {valley.source}
             </p>
           </div>
@@ -217,9 +222,11 @@ function TraditionCard({
       initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
-      className={`scroll-mt-40 overflow-hidden rounded-2xl border bg-white/[0.02] ${
-        highlighted ? 'border-alpenglow/50 ring-2 ring-alpenglow/20' : 'border-white/10'
-      }`}
+      className={cn(
+        'scroll-mt-40 overflow-hidden rounded-2xl border',
+        topicClasses('traditions').card,
+        highlighted ? 'border-alpenglow/50 ring-2 ring-alpenglow/20' : ''
+      )}
     >
       <div className="relative aspect-[16/9]">
         <Image src={item.image} alt={getTraditionTitle(item, locale)} fill className="object-cover" sizes="400px" />
@@ -257,9 +264,11 @@ function FoodWineCard({
       initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
-      className={`scroll-mt-40 overflow-hidden rounded-2xl border bg-white/[0.02] hover:border-alpenglow/25 transition-colors ${
-        highlighted ? 'border-alpenglow/50 ring-2 ring-alpenglow/20' : 'border-white/10'
-      }`}
+      className={cn(
+        'scroll-mt-40 overflow-hidden rounded-2xl border transition-colors hover:border-alpenglow/25',
+        topicClasses('food').card,
+        highlighted ? 'border-alpenglow/50 ring-2 ring-alpenglow/20' : ''
+      )}
     >
       <div className="relative aspect-[4/3]">
         <Image src={item.image} alt={getFoodWineTitle(item, locale)} fill className="object-cover" sizes="350px" />
@@ -292,6 +301,7 @@ export default function CulturaExplorer({
   const itemParam = searchParams.get('item');
 
   const [activeSection, setActiveSection] = useState<CulturaSectionId>('valli');
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const scrollTo = useCallback((id: CulturaSectionId) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -327,6 +337,23 @@ export default function CulturaExplorer({
     return () => window.clearTimeout(timer);
   }, [valleParam, tradizioneParam, itemParam, scrollTo]);
 
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    for (const { id } of SECTIONS) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id);
+        },
+        { rootMargin: '-20% 0px -60% 0px', threshold: 0 }
+      );
+      obs.observe(el);
+      observers.push(obs);
+    }
+    return () => observers.forEach((o) => o.disconnect());
+  }, []);
+
   const sectionLabels: Record<CulturaSectionId, string> = {
     valli: labels.navValli,
     tradizioni: labels.navTradizioni,
@@ -336,33 +363,25 @@ export default function CulturaExplorer({
   const highlightedTownId = valleParam ? searchParams.get('town') : null;
 
   return (
-    <div>
-      <nav
-        aria-label={locale === 'it' ? 'Sezioni cultura' : 'Culture sections'}
-        className="sticky top-[4.5rem] z-30 border-b border-white/8 bg-ink/90 backdrop-blur-xl"
-      >
-        <div className="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 py-3 lg:px-10 scrollbar-none">
-          {SECTIONS.map(({ id, icon: Icon }) => (
-            <button
-              key={id}
-              type="button"
-              onClick={() => scrollTo(id)}
-              className={`flex shrink-0 items-center gap-2 rounded-full px-4 py-2 font-mono text-[11px] uppercase tracking-widest transition-all ${
-                activeSection === id
-                  ? 'bg-alpenglow/15 text-alpenglow border border-alpenglow/35'
-                  : 'text-snow/50 hover:text-snow border border-transparent hover:border-white/10'
-              }`}
-            >
-              <Icon size={14} />
-              {sectionLabels[id]}
-            </button>
-          ))}
-        </div>
-      </nav>
+    <div ref={containerRef}>
+      <SectionScrollNav
+        containerRef={containerRef}
+        sections={SECTIONS}
+        activeSection={activeSection}
+        sectionLabels={sectionLabels}
+        onNavigate={scrollTo}
+        ariaLabel={locale === 'it' ? 'Sezioni cultura' : 'Culture sections'}
+      />
 
-      <section id="valli" className="scroll-mt-36 border-b border-white/5 py-16 lg:py-24">
+      <section
+        id="valli"
+        className={cn('scroll-mt-36 border-b border-white/5 py-16 lg:py-24', topicClasses('culture').section)}
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-10 max-w-2xl">
+            <p className={cn('mb-3 font-mono text-[11px] uppercase tracking-[0.3em]', topicClasses('culture').eyebrow)}>
+              {locale === 'it' ? 'Valli e comuni' : 'Valleys & towns'}
+            </p>
             <h2 className="font-display text-display-md tracking-tighter mb-4">{labels.valliTitle}</h2>
             <p className="text-snow/55 leading-relaxed">{labels.valliSubtitle}</p>
           </div>
@@ -389,9 +408,15 @@ export default function CulturaExplorer({
           : 'Carnivals, costumes, music and devotion — the living cultural roots of Aosta Valley'}
       />
 
-      <section id="tradizioni" className="scroll-mt-36 border-b border-white/5 bg-white/[0.01] py-16 lg:py-24">
+      <section
+        id="tradizioni"
+        className={cn('scroll-mt-36 border-b border-white/5 py-16 lg:py-24', topicClasses('traditions').section)}
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-10 max-w-2xl">
+            <p className={cn('mb-3 font-mono text-[11px] uppercase tracking-[0.3em]', topicClasses('traditions').eyebrow)}>
+              {locale === 'it' ? 'Tradizioni' : 'Traditions'}
+            </p>
             <h2 className="font-display text-display-md tracking-tighter mb-4">{labels.tradizioniTitle}</h2>
             <p className="text-snow/55 leading-relaxed">{labels.tradizioniSubtitle}</p>
           </div>
@@ -417,9 +442,15 @@ export default function CulturaExplorer({
           : 'Fontina PDO, Jambon de Bosses, Lardo d\'Arnad — the authentic flavours of Valdostan high altitude'}
       />
 
-      <section id="cibo-vino" className="scroll-mt-36 py-16 lg:py-24">
+      <section
+        id="cibo-vino"
+        className={cn('scroll-mt-36 py-16 lg:py-24', topicClasses('food').section)}
+      >
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-10 max-w-2xl">
+            <p className={cn('mb-3 font-mono text-[11px] uppercase tracking-[0.3em]', topicClasses('food').eyebrow)}>
+              {locale === 'it' ? 'Enogastronomia' : 'Food & wine'}
+            </p>
             <h2 className="font-display text-display-md tracking-tighter mb-4">{labels.ciboTitle}</h2>
             <p className="text-snow/55 leading-relaxed">{labels.ciboSubtitle}</p>
           </div>

@@ -20,6 +20,8 @@ import {
   getTrailWarnings,
   getWaypointNote,
 } from '@/lib/stage-utils';
+import { topicClasses } from '@/lib/topic-themes';
+import { cn } from '@/lib/cn';
 
 type Props = {
   trail: Trail;
@@ -86,8 +88,8 @@ export default function TrailScienceSections({ trail, locale, labels }: Props) {
       )}
 
       {geology && (
-        <section className="border-l-2 border-alpenglow pl-6">
-          <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-alpenglow/80 mb-2">
+        <section className={cn('rounded-2xl border p-6 lg:p-8', topicClasses('geology').section, topicClasses('geology').card)}>
+          <p className={cn('font-mono text-[10px] uppercase tracking-[0.3em] mb-2', topicClasses('geology').eyebrow)}>
             {labels.geologyEyebrow}
           </p>
           <SectionLabel>{labels.geology}</SectionLabel>
@@ -98,7 +100,7 @@ export default function TrailScienceSections({ trail, locale, labels }: Props) {
       )}
 
       {culturalNotes && (
-        <section>
+        <section className={cn('rounded-2xl border p-6 lg:p-8', topicClasses('culture').section, topicClasses('culture').card)}>
           <SectionLabel>{labels.culturalNotes}</SectionLabel>
           <p className="text-snow/75 leading-[1.85] font-light text-[1.05rem]">
             <LinkedText text={culturalNotes} locale={locale} />
@@ -107,18 +109,18 @@ export default function TrailScienceSections({ trail, locale, labels }: Props) {
       )}
 
       {waterSources && (
-        <section>
+        <section className={cn('rounded-2xl border p-6 lg:p-8', topicClasses('water').section, topicClasses('water').card)}>
           <SectionLabel>{labels.waterSources}</SectionLabel>
           <p className="text-snow/75 leading-[1.85] font-light">{waterSources}</p>
         </section>
       )}
 
       {(transport || trail.parking) && (
-        <section>
+        <section className={cn('rounded-2xl border p-6 lg:p-8', topicClasses('transport').section, topicClasses('transport').card)}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {transport && (
-              <div className="bg-white/[0.02] border border-white/5 rounded-xl p-5">
-                <div className="flex items-center gap-2 text-alpenglow mb-3">
+              <div className={cn('rounded-xl border p-5', topicClasses('transport').card)}>
+                <div className={cn('flex items-center gap-2 mb-3', topicClasses('transport').icon)}>
                   <Bus size={16} />
                   <p className="font-mono text-xs uppercase tracking-widest">{labels.transport}</p>
                 </div>
@@ -126,8 +128,8 @@ export default function TrailScienceSections({ trail, locale, labels }: Props) {
               </div>
             )}
             {trail.parking && (
-              <div className="bg-white/[0.02] border border-white/5 rounded-xl p-5">
-                <div className="flex items-center gap-2 text-alpenglow mb-3">
+              <div className={cn('rounded-xl border p-5', topicClasses('transport').card)}>
+                <div className={cn('flex items-center gap-2 mb-3', topicClasses('transport').icon)}>
                   <Car size={16} />
                   <p className="font-mono text-xs uppercase tracking-widest">{labels.parking}</p>
                 </div>
@@ -139,12 +141,12 @@ export default function TrailScienceSections({ trail, locale, labels }: Props) {
       )}
 
       {warnings && warnings.length > 0 && (
-        <section className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-5">
+        <section className={cn('rounded-xl border p-5', topicClasses('warnings').section, topicClasses('warnings').card)}>
           <SectionLabel>{labels.warnings}</SectionLabel>
           <ul className="space-y-3">
             {warnings.map((w, i) => (
               <li key={i} className="flex gap-3 text-sm text-snow/80 leading-relaxed">
-                <AlertTriangle size={16} className="text-amber-400 shrink-0 mt-0.5" aria-hidden />
+                <AlertTriangle size={16} className={cn('shrink-0 mt-0.5', topicClasses('warnings').icon)} aria-hidden />
                 <LinkedText text={w} locale={locale} />
               </li>
             ))}
@@ -178,7 +180,7 @@ export function TrailFitnessBar({
   return (
     <div className="col-span-2 sm:col-span-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-6 mt-2 border-t border-white/5">
       <div>
-        <p className="text-xs font-mono uppercase tracking-widest text-snow/40 mb-2">
+        <p className="text-xs font-mono uppercase tracking-widest text-snow/55 mb-2">
           {fitnessLabel}
         </p>
         <div className="flex gap-1.5" role="img" aria-label={`${fitnessLabel}: ${fitnessLevel}/5`}>
@@ -242,6 +244,6 @@ function WaypointItem({
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="font-mono text-xs uppercase tracking-[0.25em] text-snow/40 mb-4">{children}</p>
+    <p className="font-mono text-xs uppercase tracking-[0.25em] text-snow/55 mb-4">{children}</p>
   );
 }

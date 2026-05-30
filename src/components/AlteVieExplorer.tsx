@@ -104,7 +104,7 @@ export default function AlteVieExplorer({
       <section>
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.25em] text-snow/40 mb-2">
+            <p className="font-mono text-xs uppercase tracking-[0.25em] text-snow/55 mb-2">
               {labels.selectRoute}
             </p>
             <h2 className="font-display text-3xl lg:text-4xl tracking-tight">{labels.mapTitle}</h2>
@@ -146,7 +146,7 @@ export default function AlteVieExplorer({
                 terrain3D
                 lineColor={active.lineColor}
               />
-              <p className="px-4 py-3 text-[11px] font-mono text-snow/35 border-t border-white/5 bg-ink/80">
+              <p className="px-4 py-3 text-[11px] font-mono text-snow/50 border-t border-white/5 bg-ink/80">
                 {labels.mapHint}
               </p>
             </div>
@@ -239,7 +239,7 @@ export default function AlteVieExplorer({
           </div>
           <Link
             href={`/sentieri?tag=${other.tag}`}
-            className="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono text-snow/40 hover:text-snow/70 transition-colors"
+            className="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono text-snow/55 hover:text-snow/70 transition-colors"
           >
             {other.code}
             <ArrowUpRight size={13} />
@@ -287,7 +287,7 @@ export default function AlteVieExplorer({
                   {route.code}
                 </span>
                 <h3 className="font-display text-2xl tracking-tight">{route.name}</h3>
-                <p className="font-mono text-xs text-snow/45">{route.route}</p>
+                <p className="font-mono text-xs text-snow/55">{route.route}</p>
                 <div className="flex flex-wrap gap-2">
                   {[route.stats.km, route.stats.gain, route.stats.stages].map((s) => (
                     <span

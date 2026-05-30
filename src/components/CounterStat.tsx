@@ -43,7 +43,7 @@ export default function CounterStat({
         {count.toLocaleString('it-IT')}
         <span className="text-alpenglow">{suffix}</span>
       </p>
-      <p className="mt-3 font-mono text-xs uppercase tracking-[0.25em] text-snow/40">
+      <p className="mt-3 font-mono text-xs uppercase tracking-[0.25em] text-snow/55">
         {label}
       </p>
     </div>

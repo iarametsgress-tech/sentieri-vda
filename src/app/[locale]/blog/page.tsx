@@ -1,7 +1,10 @@
-import { setRequestLocale } from 'next-intl/server';
-import { BookOpen } from 'lucide-react';
+import Image from 'next/image';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/routing';
+import { BookOpen, ArrowRight } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
+import { getAllBlogPosts } from '@/lib/blog';
 import NewsletterForm from '@/components/NewsletterForm';
 
 export async function generateMetadata({
@@ -10,18 +13,13 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const isIT = locale === 'it';
+  const t = await getTranslations({ locale, namespace: 'Blog.meta' });
   return {
-    title: isIT ? 'Diario di montagna' : 'Mountain Journal',
-    description: isIT
-      ? "Racconti, note di campo, consigli tecnici e reportage fotografici dai sentieri della Valle d'Aosta. In arrivo."
-      : "Stories, field notes, technical tips and photo essays from the trails of Aosta Valley. Coming soon.",
+    title: t('title'),
+    description: t('description'),
     alternates: {
       canonical: `${SITE_URL}/${locale}/blog`,
-      languages: {
-        it: `${SITE_URL}/it/blog`,
-        en: `${SITE_URL}/en/blog`,
-      },
+      languages: localeAlternatesAbsolute('/blog'),
     },
   };
 }
@@ -33,39 +31,75 @@ export default async function BlogPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const isIT = locale === 'it';
+  const t = await getTranslations('Blog');
+  const posts = getAllBlogPosts(locale);
 
   return (
-    <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-32">
-      <div className="max-w-2xl">
-        <div className="w-14 h-14 rounded-2xl border border-alpenglow/30 flex items-center justify-center mb-8">
+    <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-32">
+      <div className="mb-16 max-w-2xl">
+        <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-alpenglow/30">
           <BookOpen size={24} className="text-alpenglow" />
         </div>
-
-        <p className="text-xs font-mono tracking-widest text-alpenglow/80 uppercase mb-4">
-          {isIT ? 'Diario di montagna' : 'Mountain journal'}
+        <p className="mb-4 font-mono text-xs uppercase tracking-widest text-alpenglow/80">
+          {t('eyebrow')}
         </p>
+        <h1 className="mb-6 font-display text-display-lg tracking-tighter">{t('title')}</h1>
+        <p className="text-lg leading-relaxed text-snow/60">{t('subtitle')}</p>
+      </div>
 
-        <h1 className="font-display text-display-lg tracking-tighter mb-6">
-          {isIT ? 'In arrivo.' : 'Coming soon.'}
-        </h1>
+      {posts.length > 0 ? (
+        <div className="mb-20 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post) => {
+            const formattedDate = new Intl.DateTimeFormat(locale, {
+              day: 'numeric',
+              month: 'long',
+              year: 'numeric',
+            }).format(new Date(post.date));
 
-        <p className="text-snow/60 text-lg leading-relaxed mb-6">
-          {isIT
-            ? "Il diario di montagna sarà uno spazio per racconti di tappa, note di campo scritte sul posto, consigli tecnici su attrezzatura e meteo, e reportage fotografici dai sentieri della Valle d'Aosta."
-            : "The mountain journal will be a space for stage reports, field notes written on location, technical advice on gear and weather, and photo essays from the trails of Aosta Valley."}
-        </p>
+            return (
+              <article key={post.slug} className="group">
+                <Link href={`/blog/${post.slug}`} className="block">
+                  <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-xl border border-white/10 bg-slate-900">
+                    <Image
+                      src={post.cover}
+                      alt=""
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                      sizes="(max-width: 768px) 100vw, 400px"
+                      unoptimized={post.cover.startsWith('http') || post.cover.endsWith('.png')}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
+                  </div>
+                  <time
+                    dateTime={post.date}
+                    className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-snow/45"
+                  >
+                    {formattedDate}
+                  </time>
+                  <h2 className="mb-3 font-display text-2xl leading-tight tracking-tight text-snow transition-colors group-hover:text-alpenglow">
+                    {post.title}
+                  </h2>
+                  <p className="mb-4 line-clamp-3 text-sm leading-relaxed text-snow/55">
+                    {post.description}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-alpenglow">
+                    {t('readArticle')}
+                    <ArrowRight size={12} />
+                  </span>
+                </Link>
+              </article>
+            );
+          })}
+        </div>
+      ) : null}
 
-        <p className="text-snow/60 text-lg leading-relaxed mb-10">
-          {isIT
-            ? 'Iscriviti alla newsletter per non perdere il primo articolo — e per ricevere aggiornamenti sulle condizioni dei sentieri prima delle stagioni più frequentate.'
-            : 'Subscribe to the newsletter to catch the first article — and to receive trail condition updates before the busiest seasons.'}
-        </p>
-
-        {/* Newsletter form */}
+      <div className="max-w-2xl border-t border-white/5 pt-12">
+        <p className="mb-6 text-snow/60 leading-relaxed">{t('newsletterHint')}</p>
         <NewsletterForm
-          placeholder={isIT ? 'la-tua@email.it' : 'your@email.com'}
-          cta={isIT ? 'Iscriviti' : 'Subscribe'}
+          placeholder={t('newsletterPlaceholder')}
+          cta={t('newsletterCta')}
+          successMessage={t('newsletterSuccess')}
+          errorMessage={t('newsletterError')}
         />
       </div>
     </div>

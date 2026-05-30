@@ -59,7 +59,7 @@ export default function TrailsExplorer({
         {/* Route / itinerary */}
         {availableRouteTags.length > 0 && (
           <div className="flex items-center gap-2 w-full sm:w-auto">
-            <span className="text-xs font-mono uppercase tracking-widest text-snow/40 shrink-0">
+            <span className="text-xs font-mono uppercase tracking-widest text-snow/55 shrink-0">
               {t('filterRoute')}
             </span>
             <select
@@ -79,7 +79,7 @@ export default function TrailsExplorer({
 
         {/* Difficulty */}
         <div className="flex items-center gap-2">
-          <span className="text-xs font-mono uppercase tracking-widest text-snow/40">
+          <span className="text-xs font-mono uppercase tracking-widest text-snow/55">
             {t('filterDifficulty')}
           </span>
           <div className="flex gap-1">
@@ -96,7 +96,7 @@ export default function TrailsExplorer({
 
         {/* Valley */}
         <div className="flex items-center gap-2">
-          <span className="text-xs font-mono uppercase tracking-widest text-snow/40">
+          <span className="text-xs font-mono uppercase tracking-widest text-snow/55">
             {t('filterValley')}
           </span>
           <select
@@ -113,7 +113,7 @@ export default function TrailsExplorer({
 
         {/* Duration */}
         <div className="flex items-center gap-3">
-          <span className="text-xs font-mono uppercase tracking-widest text-snow/40">
+          <span className="text-xs font-mono uppercase tracking-widest text-snow/55">
             {t('filterDuration')}
           </span>
           <input
@@ -133,7 +133,7 @@ export default function TrailsExplorer({
       </div>
 
       {filtered.length === 0 ? (
-        <p className="text-snow/40 py-20 text-center">{t('noResults')}</p>
+        <p className="text-snow/55 py-20 text-center">{t('noResults')}</p>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
           {filtered.map((trail, i) => (

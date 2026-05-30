@@ -62,7 +62,7 @@
     "description_en": "Val Veny is Mont Blanc's wild valley: glaciers, moraines and glacial lakes such as Lac de Miage, with the Mont Blanc profile mirrored in cold water. Less busy than Ferret, it feels more austere and mountaineering-oriented, with Rifugio Elisabetta and routes toward Col de la Seigne. Wildlife — chamois, ibex, golden eagle — is especially visible here.",
     "description_fr": "Le Val Veny est la vallée sauvage du Mont Blanc : glaciers, moraines et lacs glaciaires comme le Lac de Miage, avec le profil du Mont Blanc qui se reflète dans les eaux froides. Moins fréquentée que la Ferret, elle offre une atmosphère plus austère et alpiniste, avec le Rifugio Elisabetta et les sentiers vers le Col de la Seigne. La faune — chamois, bouquetin, aigle royal — y est particulièrement visible.",
     "description_de": "Das Val Veny ist das wilde Tal des Mont Blanc: Gletscher, Moränen und Gletscherseen wie der Lac de Miage, mit dem Mont-Blanc-Profil, das sich im kalten Wasser spiegelt. Weniger frequentiert als die Ferret, wirkt es strenger und alpinistischer, mit dem Rifugio Elisabetta und Wegen zum Col de la Seigne. Wildtiere — Gämse, Steinbock, Steinadler — sind hier besonders gut zu beobachten.",
-    "image": "/trails/monte-bianco.jpg",
+    "image": "/trails/monte-bianco.webp",
     "towns": [
       {
         "id": "courmayeur",
@@ -109,7 +109,7 @@
     "description_en": "Valtournenche is the Italian-side Matterhorn valley: an iconic silhouette on every walk from the valley floor up to Breuil's glaciers. The landscape shifts from larch forest to alpine pasture and views onto the massif's north faces. The local community has deep roots in pastoralism and mountaineering, with historic huts such as Barmasse and Grand Tournalin.",
     "description_fr": "Valtournenche est la vallée italienne du Cervin : une silhouette iconique qui accompagne chaque promenade du fond de vallée jusqu'aux glaciers du Breuil. Le paysage alterne forêt de mélèzes, alpages et vues sur les faces nord du massif. La communauté locale a des racines profondes dans le pastoralisme et l'alpinisme, avec des refuges historiques comme le Barmasse et le Grand Tournalin.",
     "description_de": "Valtournenche ist das Tal auf der italienischen Seite des Matterhorns: eine ikonische Silhouette auf jedem Weg vom Talboden bis zu den Gletschern von Breuil. Die Landschaft wechselt zwischen Lärchenwald, Alpweiden und Blicken auf die Nordwände des Massivs. Die lokale Gemeinschaft hat tiefe Wurzeln im Hirtentum und Bergsteigen, mit historischen Hütten wie dem Barmasse und dem Grand Tournalin.",
-    "image": "/trails/alta-via-1-tappa-8-rifugio-grand-tournalin-valtournenche.jpg",
+    "image": "/trails/alta-via-1-tappa-8-rifugio-grand-tournalin-valtournenche.webp",
     "towns": [
       {
         "id": "valtournenche",
@@ -169,7 +169,7 @@
     "description_en": "The Lys Valley is the Valdostan basin of Monte Rosa, where Walser culture — titsch language, timber-and-stone architecture, transhumance — remains alive. From Gressoney-Saint-Jean the valley climbs through glaciers, pastures and huts to Colle del Teodulo. DOP Fontina and alpine-dairy products are integral to the cultural landscape.",
     "description_fr": "La Vallée du Lys est le bassin valdôtain du Mont Rose, où la culture walser — langue titsch, architecture en bois et pierre, transhumance — reste vivante. De Gressoney-Saint-Jean, la vallée monte à travers glaciers, alpages et refuges jusqu'au Colle del Teodulo. La Fontina AOP et les produits laitiers des alpages font partie intégrante du paysage culturel.",
     "description_de": "Das Lys-Tal ist das Valdostanische Becken des Monte Rosa, wo die Walser-Kultur — Titsch-Sprache, Holz-Stein-Architektur, Almwirtschaft — lebendig bleibt. Von Gressoney-Saint-Jean steigt das Tal durch Gletscher, Almen und Hütten bis zum Colle del Teodulo auf. g.U.-Fontina und Almmilchprodukte sind integraler Bestandteil der Kulturlandschaft.",
-    "image": "/trails/gressoney.jpg",
+    "image": "/trails/gressoney.webp",
     "towns": [
       {
         "id": "gressoney-saint-jean",
@@ -229,7 +229,7 @@
     "description_en": "Val d'Ayas branches north from Brusson toward Champoluc and passes that once linked the valley to Valais. A landscape of larch, Walser chalets and panoramic ridges, it is crossed by Alta Via 1 and trails toward Col Pinter. The economy blends summer tourism, skiing and mountain dairy production.",
     "description_fr": "Le Val d'Ayas se déroule vers le nord depuis Brusson jusqu'à Champoluc et les cols qui reliaient autrefois la vallée au Valais. Paysage de mélèzes, chalets walser et crêtes panoramiques, il est traversé par l'Alta Via 1 et des sentiers vers le Col Pinter. L'économie combine tourisme estival, ski et production laitière de montagne.",
     "description_de": "Das Val d'Ayas zweigt nördlich von Brusson ab nach Champoluc und zu Pässen, die das Tal einst mit dem Wallis verbanden. Eine Landschaft aus Lärchen, Walser-Hütten und Panoramakämmen, durchquert von der Alta Via 1 und Wegen zum Col Pinter. Die Wirtschaft verbindet Sommertourismus, Skifahren und Bergmilchwirtschaft.",
-    "image": "/trails/tour-monte-rosa-tappa-3-valtournenche-champoluc.jpg",
+    "image": "/trails/tour-monte-rosa-tappa-3-valtournenche-champoluc.webp",
     "towns": [
       {
         "id": "ayas",
@@ -289,7 +289,7 @@
     "description_en": "Valpelline is the upper western Valle d'Aosta, dominated by Gran Combin and the By glacier. An austere landscape of gneiss and moraine, with villages like Ollomont and Oyace preserving Walser architecture. Alta Via 1 crosses the valley north to south, linking historic huts and alpine passes.",
     "description_fr": "La Valpelline est la haute vallée occidentale de la Vallée d'Aoste, dominée par le Grand Combin et le glacier de By. Paysage austère de gneiss et de moraines, avec des villages comme Ollomont et Oyace qui conservent l'architecture walser. L'Alta Via 1 traverse la vallée du nord au sud, reliant refuges historiques et cols alpins.",
     "description_de": "Die Valpelline ist das obere westliche Aostatal, dominiert vom Gran Combin und dem By-Gletscher. Eine strenge Landschaft aus Gneis und Moränen, mit Dörfern wie Ollomont und Oyace, die die Walser-Architektur bewahren. Die Alta Via 1 durchquert das Tal von Nord nach Süd und verbindet historische Hütten mit Alpenpässen.",
-    "image": "/trails/valpelline.jpg",
+    "image": "/trails/valpelline.webp",
     "towns": [
       {
         "id": "ollomont",
@@ -396,7 +396,7 @@
     "description_en": "Valsavarenche is the wildest valley on the Valdostan side of Gran Paradiso: a gneiss-and-glacier cul-de-sac where ibex reign undisturbed. The village of Valsavarenche and hamlets of Eaux Rousses and Pont are bases for climbs to Gran Paradiso and Rifugio Vittorio Sella.",
     "description_fr": "La Valsavarenche est la vallée la plus sauvage du versant valdôtain du Grand Paradis : un cul-de-sac de gneiss et de glaciers où le bouquetin règne sans être dérangé. Le village de Valsavarenche et les hameaux d'Eaux Rousses et de Pont sont des bases pour les ascensions au Grand Paradis et au Rifugio Vittorio Sella.",
     "description_de": "Die Valsavarenche ist das wildeste Tal auf der Valdostanischen Seite des Gran Paradiso: eine Gneis-und-Gletscher-Sackgasse, in der Steinböcke ungestört regieren. Das Dorf Valsavarenche und die Weiler Eaux Rousses und Pont sind Basislager für Besteigungen des Gran Paradiso und des Rifugio Vittorio Sella.",
-    "image": "/trails/tour-gran-paradiso-tappa-1-cogne-valnontey.jpg",
+    "image": "/trails/tour-gran-paradiso-tappa-1-cogne-valnontey.webp",
     "towns": [
       {
         "id": "valsavarenche",
@@ -541,7 +541,7 @@
     "description_en": "La Thuile is the border valley with France, crossed by Colle del Piccolo San Bernardo. A landscape of larch, glacial lakes — Rutor, Verney — and historic huts such as Deffeyes and Elisabetta. Alta Via 2 and the Rutor Tour cross a territory where border history and mountain life intertwine.",
     "description_fr": "La Thuile est la vallée frontalière avec la France, traversée par le Petit-Saint-Bernard. Paysage de mélèzes, lacs glaciaires — Rutor, Verney — et refuges historiques comme Deffeyes et Elisabetta. L'Alta Via 2 et le Tour du Rutor traversent un territoire où histoire frontalière et vie de montagne s'entrecroisent.",
     "description_de": "La Thuile ist das Grenztal zu Frankreich, gequert vom Kleinen Sankt Bernhard. Eine Landschaft aus Lärchen, Gletscherseen — Rutor, Verney — und historischen Hütten wie Deffeyes und Elisabetta. Die Alta Via 2 und die Rutor-Runde durchqueren ein Gebiet, wo Grenzgeschichte und Bergalltag sich verflechten.",
-    "image": "/trails/tour-rutor-tappa-1-la-thuile-rifugio-deffeyes.jpg",
+    "image": "/trails/tour-rutor-tappa-1-la-thuile-rifugio-deffeyes.webp",
     "towns": [
       {
         "id": "la-thuile",
@@ -588,7 +588,7 @@
     "description_en": "The Lower Valley is the Valdostan stretch of the Dora Baltea from the Piedmont border to Aosta: terraced vineyards, chestnut groves and Walser villages like Perloz and Donnas. A milder climate allows viticulture and valley-floor cultivation. Alta Via 1 and Alta Via 2 start or pass through here, linking the alpine plain to the upper valleys.",
     "description_fr": "La Basse Vallée est le tronçon valdôtain de la Doire Baltée depuis la frontière piémontaise jusqu'à Aoste : vignes en terrasses, châtaigneraies et villages walser comme Perloz et Donnas. Le climat plus doux permet la viticulture et les cultures de fond de vallée. L'Alta Via 1 et l'Alta Via 2 partent ou transitent d'ici, reliant la plaine alpine aux hautes vallées.",
     "description_de": "Das Untertal ist der Valdostanische Abschnitt der Dora Baltea von der piemontesischen Grenze bis nach Aosta: terrassierte Weinberge, Kastanienwälder und Walser-Dörfer wie Perloz und Donnas. Ein milderes Klima erlaubt Weinbau und Talbodenlandwirtschaft. Die Alta Via 1 und Alta Via 2 beginnen oder verlaufen hier und verbinden die Alpenebene mit den oberen Tälern.",
-    "image": "/trails/donnas.jpg",
+    "image": "/trails/donnas.webp",
     "towns": [
       {
         "id": "donnas",
@@ -660,7 +660,7 @@
     "description_en": "The Great St Bernard Valley links Valle d'Aosta to Switzerland through one of the Alps' oldest passes. Saint-Rhémy-en-Bosses and Etroubles preserve transit traditions, goldsmithing and DOP Jambon de Bosses production. Alta Via 1 crosses the valley toward Rifugio Frassati and Colle del Gran San Bernardo.",
     "description_fr": "La Vallée du Grand-Saint-Bernard relie la Vallée d'Aoste à la Suisse à travers l'un des cols les plus anciens des Alpes. Saint-Rhémy-en-Bosses et Etroubles conservent des traditions de transit, d'orfèvrerie et de production du Jambon de Bosses AOP. L'Alta Via 1 traverse la vallée vers le Rifugio Frassati et le Col du Grand-Saint-Bernard.",
     "description_de": "Das Große-Sankt-Bernhard-Tal verbindet das Aostatal über einen der ältesten Pässe der Alpen mit der Schweiz. Saint-Rhémy-en-Bosses und Etroubles bewahren Transittraditionen, Goldschmiedehandwerk und die Produktion des g.U.-Jambon de Bosses. Die Alta Via 1 durchquert das Tal zum Rifugio Frassati und zum Großen Sankt Bernhard.",
-    "image": "/trails/grand-saint-bernard.jpg",
+    "image": "/trails/grand-saint-bernard.webp",
     "towns": [
       {
         "id": "saint-rhemy-en-bosses",
@@ -707,7 +707,7 @@
     "description_en": "Champorcher is a green, wooded side valley of the Lower Valley, climbing toward Colle di Champorcher and Crest Damon. Less known than the main valleys, it offers quiet trails, huts such as Dondena and an authentic mountain atmosphere. Alta Via 2 ends its Valdostan route here.",
     "description_fr": "Champorcher est une vallée latérale verdoyante et boisée de la Basse Vallée, qui monte vers le Colle di Champorcher et le Crest Damon. Moins connue que les grandes vallées, elle offre des sentiers tranquilles, des refuges comme le Dondena et une atmosphère de montagne authentique. L'Alta Via 2 termine ici son parcours valdôtain.",
     "description_de": "Champorcher ist ein grünes, bewaldetes Seitental des Untertals, das zum Colle di Champorcher und Crest Damon aufsteigt. Weniger bekannt als die Haupttäler, bietet es ruhige Wege, Hütten wie das Dondena und eine authentische Bergstimmung. Die Alta Via 2 beendet hier ihren Valdostanischen Verlauf.",
-    "image": "/trails/alta-via-2-tappa-12-rifugio-dondena-champorcher.jpg",
+    "image": "/trails/alta-via-2-tappa-12-rifugio-dondena-champorcher.webp",
     "towns": [
       {
         "id": "champorcher",

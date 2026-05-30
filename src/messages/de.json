@@ -13,7 +13,10 @@
     "cultura": "Kultur",
     "parks": "Parks",
     "blog": "Journal",
-    "about": "Über uns"
+    "about": "Über uns",
+    "progetto": "Das Projekt",
+    "sicurezza": "Sicherheit",
+    "metodo": "Methodik"
   },
   "Home": {
     "heroEyebrow": "Aostatal · Westalpen",
@@ -44,7 +47,12 @@
     "pathGpTitle": "Gran Paradiso",
     "pathGpSub": "Nationalpark · Steinböcke",
     "pathDayTitle": "Tagestouren",
-    "pathDaySub": "Alle Täler · Alle Schwierigkeiten"
+    "pathDaySub": "Alle Täler · Alle Schwierigkeiten",
+    "featuredAvTitle": "Die Hochrouten",
+    "featuredAvSub": "Alta Via 1 und Alta Via 2 — die offiziellen Mehrtagesüberquerungen der Region VdA.",
+    "featuredTourTitle": "Die Touren",
+    "featuredTourSub": "Rundtouren um Mont Blanc, Monte Rosa, Matterhorn, Gran Paradiso, Rutor und Grand Combin.",
+    "featuredCta": "Hochrouten entdecken"
   },
   "Trails": {
     "title": "Wanderwege im Aostatal",
@@ -85,6 +93,12 @@
       "refugesNearby": "Hütten & Biwaks",
       "gallery": "Fotogalerie",
       "source": "Datenquelle",
+      "lastVerified": "Zuletzt geprüft",
+      "conditionsOpen": "Weg begehbar",
+      "conditionsCaution": "Vorsicht",
+      "conditionsClosed": "Weg gesperrt",
+      "conditionsUpdated": "Bedingungen aktualisiert am",
+      "curatedBy": "Erstellt und geprüft von {name}",
       "waypoints": "Wichtige Punkte",
       "geology": "Geologie & Landschaft",
       "geologyEyebrow": "Geowissenschaften",
@@ -111,7 +125,70 @@
       "municipalities": "Gemeinden",
       "gpxNoteAlteVia": "Offizieller GPX-Track — Autonome Region Aostatal / lovevda.it",
       "gpxNoteGeneric": "GPX-Track — vor der Tour am Gelände prüfen",
-      "transferStageNote": "Verbindungsetappe zwischen gegenüberliegenden Talseiten: Es gibt keinen durchgehenden Wanderweg. Die Karte zeigt Start- und Zielpunkt sowie das offizielle Wegenetz."
+      "transferStageNote": "Verbindungsetappe zwischen gegenüberliegenden Talseiten: Es gibt keinen durchgehenden Wanderweg. Die Karte zeigt Start- und Zielpunkt sowie das offizielle Wegenetz.",
+      "relatedTrails": "Verwandte Wanderwege",
+      "relatedTrailsSubtitle": "Gleiches Tal oder ähnliche Routen — weitere Touren zum Entdecken.",
+      "tags": "Themen und Merkmale"
+    }
+  },
+  "TrailHubs": {
+    "breadcrumbHome": "Start",
+    "breadcrumbTrails": "Wege",
+    "exploreTitle": "Entdecken nach Tal, Schwierigkeit, Thema und Fauna",
+    "exploreSubtitle": "Verifizierte Wegesammlungen — dieselben Katalogdaten, organisiert wie man auf Karten und Google sucht.",
+    "byValley": "Nach Tal",
+    "byDifficulty": "Nach Schwierigkeit",
+    "byTheme": "Nach Thema",
+    "bySpecies": "Beobachtung",
+    "trailCount": "{count, plural, one {# Weg} other {# Wege}}",
+    "moreSpecies": "+{count} weitere Arten im Katalog",
+    "valley": {
+      "eyebrow": "Wege nach Tal",
+      "title": "{count, plural, one {# Weg in {valley}} other {# Wege in {valley}}}",
+      "intro": "{count, plural, one {Ein dokumentierter Weg in {valley}: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.} other {{count} dokumentierte Wege in {valley}: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.}}",
+      "metaTitle": "Wege in {valley} ({count})",
+      "metaDescription": "{count} Wege in {valley}, Aostatal: Karten, GPX, Schwierigkeit und Höhenmeter aus offiziellen Quellen."
+    },
+    "difficulty": {
+      "eyebrow": "Wege nach Schwierigkeit",
+      "title": "{count, plural, one {# {label} Weg} other {# {label} Wege}}",
+      "intro": "{count, plural, one {Ein Weg der Kategorie {label} (CAI-Skala): {diffRange}, Distanzen {minDistance}–{maxDistance} km, Höhenmeter {minGain}–{maxGain} m.} other {{count} Wege der Kategorie {label} (CAI-Skala): {diffRange}, Distanzen {minDistance}–{maxDistance} km, Höhenmeter {minGain}–{maxGain} m.}}",
+      "metaTitle": "{label} Wege ({count}) — Aostatal",
+      "metaDescription": "{count} {label} Wege im Aostatal: GPX, Karten und Höhenprofile.",
+      "labels": {
+        "facili": "leicht · CAI T",
+        "escursionistici": "Wanderwege · CAI E",
+        "esperti": "für Experten · CAI EE/EEA",
+        "alpinistici": "alpin · CAI A"
+      }
+    },
+    "theme": {
+      "eyebrow": "Wege nach Thema",
+      "title": "{count, plural, one {# Weg · {theme}} other {# Wege · {theme}}}",
+      "intro": "{count, plural, one {Ein Weg mit Tag {theme}: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.} other {{count} Wege mit Tag {theme}: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.}}",
+      "metaTitle": "{theme} Wege ({count})",
+      "metaDescription": "{count} {theme} Wege im Aostatal — Karten, GPX und vollständige Steckbriefe.",
+      "tags": {
+        "cervino": "Matterhorn",
+        "col-champillon": "Col Champillon",
+        "col-malatra": "Col Malatrà",
+        "gran-san-bernardo": "Großer St. Bernhard",
+        "mont-mars": "Mont Mars",
+        "monte-bianco": "Mont Blanc",
+        "monte-rosa": "Monte Rosa",
+        "val-ferret": "Val Ferret",
+        "valle-ayas": "Ayas-Tal",
+        "valpelline": "Valpelline",
+        "valtournenche": "Valtournenche",
+        "walser": "Walser-Kultur"
+      }
+    },
+    "species": {
+      "eyebrow": "Beobachtung",
+      "title": "{count, plural, one {# Weg für {species}} other {# Wege für {species}}}",
+      "intro": "{count, plural, one {Ein Weg, an dem {species} in Flora/Fauna vermerkt ist: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.} other {{count} Wege, an denen {species} in Flora/Fauna vermerkt ist: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.}}",
+      "metaTitle": "Wo {species} beobachten — {count} Wege",
+      "metaDescription": "{count} Wege im Aostatal zur Beobachtung von {species}: Karten, GPX und verifizierte Naturhinweise."
     }
   },
   "Difficulty": {
@@ -129,7 +206,9 @@
     "newsletter": "Newsletter abonnieren",
     "newsletterPlaceholder": "ihre@email.de",
     "newsletterCta": "Abonnieren",
-    "rights": "Alle Rechte vorbehalten."
+    "rights": "Alle Rechte vorbehalten.",
+    "newsletterSuccess": "Anmeldung bestätigt. Bis bald auf dem Weg.",
+    "newsletterError": "Etwas ist schiefgelaufen. Bitte versuche es gleich noch einmal."
   },
   "AlteVie": {
     "meta": {
@@ -318,7 +397,13 @@
       "summitsTitle": "Alle Gipfel",
       "gallery": "Gipfelgalerie",
       "readMore": "Mehr auf Wikipedia",
-      "highlightsTitle": "Auf einen Blick"
+      "highlightsTitle": "Auf einen Blick",
+      "terrain3dTitle": "3D-Ansicht des Massivs",
+      "terrain3dHint": "Interaktive Karte mit MapTiler-Gelände. Drehen und neigen, um die Morphologie der Gebirgsgruppe zu erkunden.",
+      "terrain3dLabel": "3D-Modell · MapTiler Terrain",
+      "geologyTitle": "Geologie",
+      "historyTitle": "Geschichte und alpine Kultur",
+      "trailsTitle": "Wege und Routen"
     }
   },
   "Cultura": {
@@ -341,13 +426,241 @@
     "townsTitle": "Gemeinden und Dörfer",
     "officialSite": "Offizielle Website",
     "source": "Quelle",
-    "readMore": "Mehr erfahren"
+    "readMore": "Mehr erfahren",
+    "vdaFooterNote": "Für offizielle Informationen zu Traditionen, Gastronomie und dem Aostatal.",
+    "vdaFooterLink": "Territorium und Kultur · Region VdA"
   },
   "About": {
     "heroEyebrow": "Über uns",
     "heroTitle": "Ein Enthusiast, eine Region.",
     "heroSubtitle": "Unabhängiges Aostatal-Wegprojekt: verifizierte Daten, originelle Beschreibungen, keine erfundenen Fakten.",
     "contact": "Kontakt"
+  },
+  "Blog": {
+    "meta": {
+      "title": "Bergjournal",
+      "description": "Geschichten, Feldnotizen und Führer zu den großen Aostatal-Routen — Hochrouten, Touren und praktische Tipps."
+    },
+    "eyebrow": "Bergjournal",
+    "title": "Geschichten von den Wegen",
+    "subtitle": "Führer, Etappenberichte und Vertiefungen zu den großen Routen im Aostatal.",
+    "readArticle": "Artikel lesen",
+    "backToJournal": "Zurück zum Journal",
+    "publishedOn": "Veröffentlicht am {date}",
+    "writtenBy": "Von {name}",
+    "newsletterHint": "Newsletter abonnieren für neue Artikel und Wegbedingungen.",
+    "newsletterPlaceholder": "ihre@email.de",
+    "newsletterCta": "Abonnieren",
+    "newsletterSuccess": "Anmeldung bestätigt. Bis bald auf dem Weg.",
+    "newsletterError": "Etwas ist schiefgelaufen. Bitte versuche es gleich noch einmal."
+  },
+  "Progetto": {
+    "meta": {
+      "title": "Das Projekt",
+      "description": "Sentieri VdA: 360°-Redaktionsführer zu Wegen, Umwelt und Kultur im Aostatal."
+    },
+    "heroEyebrow": "Das Projekt",
+    "heroTitle": "Ein vollständiger 360°-Führer.",
+    "heroSubtitle": "Wege, Umwelt, Natur und valdostanische Kultur — mit verifizierten Daten und redaktioneller Tiefe.",
+    "intro": "Sentieri VdA bietet einen integrierten Blick auf das valdostanische Alpengebiet: nicht nur eine Wegeliste, sondern ein navigierbarer Atlas, der jede Etappe mit Landschaft, Geologie, Fauna und kulturellen Wurzeln der Täler verbindet.",
+    "mission": "Ziel ist die vollständigste Ressource zu den Wegen im Aostatal — von den Hochrouten bis zu Touren um die großen Massive, von Hütten zu Gipfeln, von der Natur bis zur Walser-Kultur und Gastronomie — mit überprüfbaren Informationen und ohne erfundene Daten.",
+    "pillarTrailsTitle": "Wege und Karten",
+    "pillarTrailsBody": "Vollständige Seiten mit GPX, Höhenprofilen, CAI-Schwierigkeit, Hütten und Hinweisen. Daten aus dem offiziellen Wegregister der Region VdA.",
+    "pillarAmbienteTitle": "Umwelt und Berge",
+    "pillarAmbienteBody": "Massive mit vertieften Seiten und 3D-Ansicht, Geologie, Hydrologie, Gletscher und Gipfel über 4.000 m.",
+    "pillarNatureTitle": "Flora und Fauna",
+    "pillarNatureBody": "Katalogisierte Arten mit Fotos, Verbreitungsgebieten und Links zu Wegen, auf denen sie zu beobachten sind.",
+    "pillarCultureTitle": "Valdostanische Kultur",
+    "pillarCultureBody": "Täler, Traditionen, Gastronomie und historische Gemeinden entlang der Hochrouten und Touren.",
+    "dataTitle": "Quellen und Methodik",
+    "dataBody": "Wegdaten stammen ausschließlich aus dem Catasto Sentieri der Autonomen Region Aostatal, OpenStreetMap und verifizierten CAI-Quellen. Beschreibungen sind original; Fotos sind attribuiert. Unabhängiges Projekt, ohne Sponsoren.",
+    "dataMethodLink": "Wie wir Daten verifizieren",
+    "authorEyebrow": "Autor / Kurator",
+    "authorRole": "Redaktioneller Kurator · Sentieri VdA",
+    "authorBio": "Wanderer und Liebhaber der valdostanischen Berge. Jede Wegeseite verknüpft offizielle Daten, GPX-Spuren und Feldnotizen. Keine erfundenen Angaben: Was nicht verifizierbar ist, bleibt leer.",
+    "authorPhotoAlt": "Foto von {name}, Kurator von Sentieri VdA",
+    "authorMethodLink": "Verifizierungsmethodik lesen",
+    "contact": "Kontakt"
+  },
+  "Metodo": {
+    "meta": {
+      "title": "Wie wir Daten verifizieren",
+      "description": "Offizielle Quellen — Catasto Sentieri VdA, OpenStreetMap und Geoportale: die redaktionelle Methodik von Sentieri VdA und das Datum der letzten Überprüfung jeder Wegeseite."
+    },
+    "heroEyebrow": "Transparenz",
+    "heroTitle": "Wie wir Daten verifizieren.",
+    "heroSubtitle": "Jede Wegeseite zeigt offizielle Quelle und Datum der letzten Überprüfung. Hier erfahren Sie, woher die Zahlen kommen und wie wir sie prüfen.",
+    "intro": "Sentieri VdA ist ein unabhängiges Redaktionsprojekt. Wir erfinden keine Distanzen, Höhen oder Schwierigkeiten: Wir nutzen nur nachvollziehbare Daten und lassen Felder leer, wenn sie nicht verifizierbar sind. Erzählende Beschreibungen sind original, basieren aber auf institutionellen und Open-Data-Quellen.",
+    "sctTitle": "Catasto Sentieri Region VdA",
+    "sctBody": "Primärquelle für Wegcode, Name, Gemeinde, Länge, Start-/Zielhöhe, CAI-Schwierigkeit und Geometrie des offiziellen Netzes (~5.000 km). Open-Data-Lizenz DGR 899/2014. Periodische Aktualisierung über regionales WFS/GeoJSON.",
+    "sctLink": "Catasto Sentieri VdA",
+    "osmTitle": "OpenStreetMap",
+    "osmBody": "Ergänzung für fehlende GPX-Spuren, Toponyme und Sehenswürdigkeiten entlang der Route. OSM ist crowd-sourced: Wir nutzen es ergänzend, nicht als alleinige Quelle für Distanz oder Schwierigkeit.",
+    "osmLink": "OpenStreetMap",
+    "geoTitle": "SCT-Geoportale",
+    "geoBody": "Offizielles Wegenetz-Paket (Shapefile/KMZ) und kartographische Metadaten der Autonomen Region Aostatal. Dient zur Validierung von Geometrien und zum Vergleich von Datensatzversionen.",
+    "geoLink": "Geoportale — Wegenetz",
+    "verifyTitle": "Datum der letzten Überprüfung",
+    "verifyBody": "Jede kuratierte Seite in trails.json enthält updated_at: das Datum, an dem Distanz, Höhen, Schwierigkeit und GPX geprüft oder aktualisiert wurden. Es steht am Ende jeder Wegeseite neben der Datenquelle.",
+    "verifyNote": "Wege ändern sich: Erdrutsche, Spätschnee, Umleitungen. Prüfen Sie vor der Tour immer die aktuellen Bedingungen im offiziellen Register oder in der nächsten Hütte.",
+    "aboutLinkPrefix": "Wer betreut das Projekt?",
+    "aboutLinkLabel": "Das Projekt"
+  },
+  "Sicurezza": {
+    "meta": {
+      "title": "Bergsicherheit",
+      "description": "Ausrüstung, Wetter, Bergrettung und nützliche Kontakte vor der Tour im Aostatal."
+    },
+    "heroEyebrow": "Bergsicherheit",
+    "heroTitle": "Vor der Tour vorbereiten.",
+    "heroSubtitle": "Bevor Sie den Weg betreten: Bedingungen prüfen, Wetter lesen, Rucksack packen und wissen, was im Notfall zu tun ist. Bergsicherheit beginnt vor dem Abfahren.",
+    "emergencyCallLabel": "Medizinischer Notfall",
+    "emergencyCallHint": "Kostenlos · 24/7 · aktiviert den Soccorso Alpino Valdostano (SAV) in den Bergen",
+    "navEmergency": "Notfall",
+    "navResponsibility": "Verantwortung",
+    "navEquipment": "Ausrüstung",
+    "navWeather": "Wetter",
+    "navSignals": "Warnsignale",
+    "navRescue": "Rettung",
+    "navFamily": "Regeln",
+    "navContacts": "Kontakte",
+    "emergencyTitle": "Notfall: 118 anrufen",
+    "emergencyBody": "118 ist Italiens einheitliche medizinische Notrufnummer. Sie funktioniert rund um die Uhr, ist kostenlos und antwortet auch ohne Guthaben. Im Aostatal kann jeder Anruf beim 118 den Soccorso Alpino Valdostano (SAV) aktivieren — das spezialisierte Team für Berg-, Weg- und Hochgebirgsrettung.",
+    "emergencyExtra": "Bevor Sie anrufen, bringen Sie sich und andere in Sicherheit. Ohne Empfang gilt das internationale Notsignal: 6 visuelle oder akustische Signale pro Minute (Pfeife, Taschenlampe, Spiegel, Rufe), dann eine Minute Pause, wiederholt bis zur Entdeckung. Sichtbar an einem Ort zu bleiben ist meist schneller zu finden als ziellos weiterzulaufen.",
+    "responsibilityTitle": "Individuelle Verantwortung",
+    "responsibilityBody": "Keine Website, Karte oder Wegbeschreibung ersetzt das, was Sie vor Ort sehen. Sentieri VdA nutzt offizielle Quellen, aber Erdrutsche, Spätschnee, entfernte Brücken und Umleitungen können einen Weg über Nacht ändern. Die Entscheidung zu starten, weiterzugehen oder umzukehren liegt immer bei Ihnen.",
+    "responsibilityPoints": [
+      "Aktuelle Bedingungen am Tag vorher und am Morgen der Tour auf lovevda.it oder Catasto Sentieri VdA prüfen",
+      "Die nächste Hütte, CAI-Sektion oder das Dorf fragen — oft wissen sie von Eis oder Erdrutschen, die noch nicht online stehen",
+      "Den Weg nach dem schwächsten Gruppenmitglied wählen, nicht nach dem erfahrensten",
+      "Jemandem Route, geplante Rückkehr und den Zeitpunkt mitteilen, ab dem man sich Sorgen machen soll",
+      "Auf Gipfel oder lange Runde verzichten, wenn Wetter, Schnee, Müdigkeit oder fehlende Markierung es erfordern — Umkehren ist richtig"
+    ],
+    "equipmentTitle": "Empfohlene Ausrüstung",
+    "equipmentIntro": "Die CAI-Schwierigkeit beschreibt den Weg, nicht den Rucksackinhalt. Auf einem E-Weg (Escursionistico) gilt die Liste unten als Minimum. Bei EE/EEA Helm, Steigeisen oder Eispickel je nach Saison ergänzen — Kletterausrüstung nur, wenn der Weg sie verlangt.",
+    "equipmentNote": "Im Aostatal ändert sich die Höhe schnell: Start bei 600 m im T-Shirt, Schnee oder starker Wind über 2.500 m. Packen Sie für den höchsten Punkt der Route, nicht für die Tal-Temperatur.",
+    "equipmentItems": [
+      "Trekkingstiefel mit Vibram-Sohle und Knöchelhalt — Grip auf nassem Fels und Geröll",
+      "Schichtenkleidung: Thermo-Basis, Fleece, wasserdichte winddichte Jacke",
+      "Mindestens 1,5 L Wasser pro Person im Sommer; mehr bei Hitze oder ohne sichere Quellen",
+      "Notverpflegung (Riegel, Nüsse): Verzögerungen durch Wetter oder Müdigkeit sind häufig",
+      "Karte 1:25.000 oder Offline-App mit GPX — Mobilfunk fehlt oft in Seitentälern",
+      "Geladenes Handy, Powerbank wenn möglich, 118 in den Kontakten gespeichert",
+      "Erste-Hilfe-Set: Pflaster, Bandage, Desinfektionsmittel, Rettungsdecke",
+      "Stöcke bei Wegen mit viel Höhenunterschied — entlasten Knie und helfen in der Abstieg",
+      "Sonnencreme mit hohem Lichtschutzfaktor und Sonnenbrille — UV steigt mit der Höhe",
+      "Kopflampe bei Start im Dunkeln oder Rückkehr nach Sonnenuntergang",
+      "Leichte Thermoschicht auch im Sommer über 2.200–2.500 m"
+    ],
+    "weatherTitle": "Wetter",
+    "weatherBody": "Das Bergwetter unterscheidet sich vom Tal. Prüfen Sie die Prognose in den 24 Stunden vor der Abfahrt mit Quellen, die Höhe und Exposition anzeigen. Im Aostatal ARPA VdA und Fondazione Montagna Sicura; für die französische Grenze (Mont Blanc, Val Ferret, Val Veny) Météo France ergänzen. Sommerliche Nachmittagsgewitter über 2.000 m sind häufig — Quellwolben im Westen sind oft Stunden vorher sichtbar.",
+    "weatherLinksTitle": "Empfohlene Wetterseiten",
+    "weatherPoints": [
+      "Früh starten: bei instabilem Himmel bis 13 Uhr unter 2.400 m sein",
+      "Bei aufziehenden Wolken nicht auf offenen Graten, unter Wänden oder in Rinnen verweilen — Blitz sucht hohe Punkte",
+      "Im Winter und Frühling Lawinenbulletin prüfen, bevor man markierte Wege verlässt",
+      "Schnee bis Juni–Juli auf Nordhängen und Pässen über 2.500 m — vor Ort prüfen",
+      "Wind auf Graten senkt die gefühlte Temperatur deutlich — immer eine winddichte Schicht mitführen",
+      "Bei Wetterverschlechterung Route verkürzen oder umkehren, nicht beschleunigen"
+    ],
+    "weatherLinks": [
+      {
+        "label": "ARPA VdA — Wetterprognose",
+        "href": "https://www.arpa.vda.it/meteo/previsioni",
+        "desc": "Offizielle Prognosen: Tal, Mittelgebirge und Hochgebirge."
+      },
+      {
+        "label": "ARPA VdA — Schneebericht",
+        "href": "https://www.arpa.vda.it/nivometeorologia/bollettino_nivologico",
+        "desc": "Schneedecke und nivologische Bedingungen."
+      },
+      {
+        "label": "MeteoMont (CAI)",
+        "href": "https://www.meteomont.org",
+        "desc": "Nationales Bergwetter-Netz mit Hochgebirgsdaten."
+      },
+      {
+        "label": "Fondazione Montagna Sicura",
+        "href": "https://www.montagnasicura.org",
+        "desc": "Lawinenbulletin und Bergsicherheit im Aostatal."
+      },
+      {
+        "label": "Météo France — Montagne",
+        "href": "https://meteofrance.com/previsions-meteo-montagne/alpes",
+        "desc": "Französische Alpen: Mont Blanc, Val Ferret, Grenzgebiet."
+      },
+      {
+        "label": "MeteoBlue — Berg",
+        "href": "https://www.meteoblue.com/de/wetter/outdoorsports/mountain",
+        "desc": "Prognosen nach Höhe und Exposition für die Startplanung."
+      }
+    ],
+    "signalsTitle": "Warnsignale",
+    "signalsIntro": "In den Bergen erscheinen Gefahrensignale, bevor die Situation kritisch wird. Sie zu erkennen verhindert Schwierigkeiten in der Höhe oder fern von der nächsten Hütte. Bei einem Signal ist Umkehren oder Verkürzen fast immer die sicherste Wahl — auf einen Gipfel zu verzichten ist kein Scheitern.",
+    "signalItems": [
+      "Himmel verdunkelt sich im Westen mit schnell wachsenden Quellwolken — Nachmittagsgewitter wahrscheinlich",
+      "Temperatursturz und zunehmender Wind auch im Sommer — Verschlechterung in der Höhe",
+      "Weg bedeckt mit weichem Schnee, Eis oder frischem Geröll — prüfen, ob die Ausrüstung passt",
+      "Fehlende, beschädigte oder ignorierte Sperrschilder — nicht blind weitergehen",
+      "Übermüdung, Schwindel, Übelkeit oder pochende Kopfschmerzen — mögliche Höhenkrankheit (AMS)",
+      "Knacken oder Bewegung von Schnee an steilen Hängen — Lawinenrisiko, Hang meiden",
+      "Frischer Erdrutsch oder beschädigte Brücke/Strecke — Gelände kann noch instabil sein"
+    ],
+    "rescueTitle": "Bergrettung: was tun",
+    "rescueIntro": "Bei einem Unfall zuerst den Verletzten vor Kälte und Steinschlag schützen, dann 118 anrufen. Der Disponent aktiviert den SAV und führt Sie Schritt für Schritt — ruhig antworten, auch bei schlechter Leitung. Nicht auflegen; sie können für Details zurückrufen.",
+    "rescueNote": "Ohne Empfang GPS-Koordinaten an eine Vertrauensperson senden (WhatsApp, SMS) und möglichst sichtbar bleiben — helle Kleidung, Armbewegungen. In der Gruppe eine Person beim Verletzten, andere suchen Empfang. Einen Verletzten nie allein ohne Betreuung lassen.",
+    "rescueSteps": [
+      "Anrufer: Vor- und Nachname, Telefonnummer, Bezug zur Gruppe",
+      "Ort: Wegname, nächste Hütte oder Dorf, ungefähre Höhe, GPS-Koordinaten wenn verfügbar",
+      "Vorfall: Anzahl Betroffener, Art der Verletzung (Sturz, Verirren, Krankheit, Unterkühlung)",
+      "Vor Ort: Bewusstsein, mobil oder eingeklemmt, aktuelles Wetter und Sicht",
+      "Empfang: bei instabiler Leitung sofort sagen, damit Wesentliches notiert wird"
+    ],
+    "familyTitle": "Gute Regeln",
+    "familyBody": "Auf dem Weg schützen gute Regeln Wanderer, Nachkommende und die Bergumwelt. Das Aostatal hat geschützte Parks, aktive Almen und gemeinsame Routen mit Kletterern und Bikern — Markierung und Fairness reduzieren vermeidbare Vorfälle.",
+    "familyPoints": [
+      "Sperr-, Umleitungs- und Zaunschilder respektieren — oft Erdrutsche, Jagd oder Arbeiten",
+      "Im Parco Nazionale Gran Paradiso Leine für Hunde auf allen Wegen Pflicht",
+      "Auf Weiden mit Vieh Hund an kurzer Leine, keine Zäune überqueren",
+      "Mit Kindern T-Wege wählen, häufige Pausen und extra Schichten — sie kühlen schneller aus",
+      "Keinen Müll hinterlassen, keine unmarkierten Abkürzungen, kein Feuer außerhalb ausgewiesener Bereiche",
+      "Auf engen oder bergauf führenden Passagen ausweichen — verlangsamen und grüßen",
+      "Wildtiere nicht stören — aus der Ferne beobachten, besonders Steinbock und Gämse in der Brutzeit"
+    ],
+    "contactsTitle": "Nützliche Links und Kontakte",
+    "contactsSubtitle": "Links und Nummern vor der Abfahrt speichern, besonders auf Strecken ohne Empfang. Offizielle Quellen für Wegbedingungen; ARPA und Fondazione Montagna Sicura am Tag der Tour für Wetter und Lawinen.",
+    "contactLinks": [
+      {
+        "label": "Bergrettung · 118",
+        "href": "tel:118",
+        "desc": "Bergnotfälle, 24/7, kostenlos in Italien."
+      },
+      {
+        "label": "Catasto Sentieri VdA",
+        "href": "https://www.lovevda.it/de/sport/wandern",
+        "desc": "Offizielle Wegbedingungen und Hochrouten."
+      },
+      {
+        "label": "ARPA Aostatal",
+        "href": "https://www.arpa.vda.it/meteo",
+        "desc": "Wetter- und Schneeberichte der Region."
+      },
+      {
+        "label": "Fondazione Montagna Sicura",
+        "href": "https://www.montagnasicura.org",
+        "desc": "Lawinen und Bergsicherheit im Aostatal."
+      },
+      {
+        "label": "CAI Aostatal",
+        "href": "https://www.caivalledaosta.it",
+        "desc": "CAI-Sektionen, Hütten und lokale Informationen."
+      },
+      {
+        "label": "Sentieri VdA",
+        "href": "mailto:info@sentierivda.it",
+        "desc": "Fehler melden oder zum Projekt beitragen."
+      }
+    ]
   },
   "Refuges": {
     "meta": {

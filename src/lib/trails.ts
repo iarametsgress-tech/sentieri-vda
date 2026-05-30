@@ -85,3 +85,43 @@ export function getAdjacentTourStages(
 export function countTrailsByTag(tag: string): number {
   return parsed.filter((t) => t.tags.includes(tag)).length;
 }
+
+function valleyBase(valley: string): string {
+  return valley.split(' — ')[0].trim();
+}
+
+function valleysRelated(a: string, b: string): boolean {
+  if (a === b) return true;
+  return valleyBase(a) === valleyBase(b);
+}
+
+function countSharedTags(a: string[], b: string[]): number {
+  const setB = new Set(b);
+  return a.filter((tag) => setB.has(tag)).length;
+}
+
+/** Sentieri della stessa valle o con tag in comune, escluso il corrente e slug opzionali. */
+export function getRelatedTrails(
+  trail: Trail,
+  limit = 4,
+  excludeSlugs: string[] = [],
+): Trail[] {
+  const exclude = new Set<string>([trail.slug, ...excludeSlugs.filter(Boolean)]);
+
+  return getAllTrails()
+    .filter((t) => !exclude.has(t.slug))
+    .map((candidate) => {
+      const sameValley = valleysRelated(trail.valley, candidate.valley);
+      const tagsInCommon = countSharedTags(trail.tags, candidate.tags);
+      const score = (sameValley ? 100 : 0) + tagsInCommon * 15;
+      return { candidate, score, tagsInCommon };
+    })
+    .filter(({ score }) => score > 0)
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      if (b.tagsInCommon !== a.tagsInCommon) return b.tagsInCommon - a.tagsInCommon;
+      return a.candidate.name_it.localeCompare(b.candidate.name_it, 'it');
+    })
+    .slice(0, limit)
+    .map(({ candidate }) => candidate);
+}

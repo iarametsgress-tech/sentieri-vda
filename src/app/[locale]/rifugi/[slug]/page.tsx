@@ -59,7 +59,7 @@ function InfoBlock({
 }) {
   return (
     <section className="space-y-3">
-      <h2 className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-snow/45">
+      <h2 className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-snow/55">
         {icon}
         {title}
       </h2>
@@ -179,7 +179,7 @@ export default async function RefugeDetailPage({
 
         {refuge.trails.length > 0 ? (
           <section className="mb-12">
-            <h2 className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-snow/45 mb-4">
+            <h2 className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-snow/55 mb-4">
               <MapPin size={14} />
               {t('onTrails')}
             </h2>
@@ -198,7 +198,7 @@ export default async function RefugeDetailPage({
         ) : null}
 
         {refuge.source ? (
-          <p className="text-snow/30 text-xs font-mono mb-8">
+          <p className="text-snow/50 text-xs font-mono mb-8">
             {t('source')}: {refuge.source}
           </p>
         ) : null}

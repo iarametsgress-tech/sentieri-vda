@@ -40,7 +40,7 @@ export default async function PrivacyPage({
           {isIT ? 'Legale' : 'Legal'}
         </p>
         <h1 className="font-display text-3xl tracking-tighter mb-2">Privacy Policy</h1>
-        <p className="text-snow/40 text-xs font-mono mb-10">
+        <p className="text-snow/55 text-xs font-mono mb-10">
           {isIT ? 'Aggiornata: maggio 2026' : 'Updated: May 2026'}
         </p>
 

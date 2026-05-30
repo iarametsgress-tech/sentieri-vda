@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import NewsletterForm from '@/components/NewsletterForm';
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -17,23 +18,19 @@ export default function Footer() {
           <p className="mt-4 text-snow/50 text-sm leading-relaxed max-w-md">
             {tSite('tagline')}
           </p>
-          <form className="mt-8 flex gap-2 max-w-sm">
-            <input
-              type="email"
+          <div className="mt-8">
+            <NewsletterForm
+              variant="compact"
               placeholder={t('newsletterPlaceholder')}
-              className="flex-1 bg-white/5 border border-white/10 rounded-full px-4 py-2.5 text-sm text-snow placeholder:text-snow/30 focus:outline-none focus:border-alpenglow/50"
+              cta={t('newsletterCta')}
+              successMessage={t('newsletterSuccess')}
+              errorMessage={t('newsletterError')}
             />
-            <button
-              type="submit"
-              className="bg-alpenglow text-ink px-4 py-2.5 rounded-full text-sm font-medium hover:opacity-90"
-            >
-              {t('newsletterCta')}
-            </button>
-          </form>
+          </div>
         </div>
 
         <div>
-          <p className="font-mono text-xs uppercase tracking-widest text-snow/40 mb-4">
+          <p className="font-mono text-xs uppercase tracking-widest text-snow/55 mb-4">
             {t('explore')}
           </p>
           <ul className="space-y-2 text-sm">
@@ -47,11 +44,12 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="font-mono text-xs uppercase tracking-widest text-snow/40 mb-4">
+          <p className="font-mono text-xs uppercase tracking-widest text-snow/55 mb-4">
             {t('info')}
           </p>
           <ul className="space-y-2 text-sm">
             <li><Link href="/about" className="text-snow/70 hover:text-snow">{tNav('progetto')}</Link></li>
+            <li><Link href="/metodo" className="text-snow/70 hover:text-snow">{tNav('metodo')}</Link></li>
             <li><Link href="/privacy" className="text-snow/70 hover:text-snow">Privacy</Link></li>
             <li><Link href="/cookie" className="text-snow/70 hover:text-snow">Cookie</Link></li>
             <li><Link href="/avvertenze" className="text-snow/70 hover:text-snow">{tNav('sicurezza')}</Link></li>
@@ -60,7 +58,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 text-xs text-snow/40 space-y-2">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 text-xs text-snow/55 space-y-2">
           <p>{t('disclaimer')}</p>
           <p>{t('credits')}</p>
           <p>© {new Date().getFullYear()} Sentieri VdA — {t('rights')}</p>

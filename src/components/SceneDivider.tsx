@@ -40,7 +40,7 @@ export default function SceneDivider({
         )}
       </motion.div>
       {credit && (
-        <p className="absolute bottom-3 right-4 text-[10px] text-snow/30 font-mono z-10">
+        <p className="absolute bottom-3 right-4 text-[10px] text-snow/50 font-mono z-10">
           {credit}
         </p>
       )}

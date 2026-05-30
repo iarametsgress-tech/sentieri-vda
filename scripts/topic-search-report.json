@@ -1,0 +1,110 @@
+[
+  {
+    "query": "serpentinite Valpelline ophiolite",
+    "dest": "public/environment/ophiolites.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "Dora Baltea river close",
+    "dest": "public/environment/dora-baltea.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "Ghiacciaio Rutor Valle d Aosta",
+    "dest": "public/environment/glacier-rutor.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "sorgente alpina fontaine montagne",
+    "dest": "public/environment/alpine-spring.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "Cogne Valle d Aosta paese",
+    "dest": "public/cultura/val-di-cogne.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "Jambon de Bosses prosciutto",
+    "dest": "public/cultura/jambon-de-bosses.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "carnevale valdostano maschera",
+    "dest": "public/cultura/carnival.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "processione Oropa Biella",
+    "dest": "public/cultura/oropa-procession.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "Coumba freida landzette costume",
+    "dest": "public/cultura/coumba-freida.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "fifre tamburo Valle d Aoste",
+    "dest": "public/cultura/fifres.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "costume traditionnel Vallée Aoste folklore",
+    "dest": "public/cultura/traditional-costumes.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "transumanza alpeggio mucche Valle Aosta",
+    "dest": "public/cultura/transhumance.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "Foire Saint-Ours Aoste bancarelle",
+    "dest": "public/cultura/saint-ours-fair.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "costume walser Gressoney tradizionale",
+    "dest": "public/cultura/traditions-divider.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "Seupa valpellinentze zuppa",
+    "dest": "public/cultura/seupa-valpellinentze.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "Picotin fromage chèvre Aosta",
+    "dest": "public/cultura/picotin.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "Enfer Arvier vino rosso",
+    "dest": "public/cultura/enfer-d-arvier.jpg",
+    "must": {},
+    "status": "no-match"
+  },
+  {
+    "query": "Jambon cru tranche prosciutto",
+    "dest": "public/cultura/jambon-food.jpg",
+    "must": {},
+    "status": "no-match"
+  }
+]

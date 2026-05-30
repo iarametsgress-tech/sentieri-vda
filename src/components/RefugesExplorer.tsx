@@ -97,20 +97,20 @@ function RefugeCard({ refuge, locale, labels }: { refuge: Refuge; locale: string
         <div className="p-5 space-y-3">
           <dl className="grid grid-cols-2 gap-2 text-xs font-mono">
             <div>
-              <dt className="text-snow/40 mb-0.5 flex items-center gap-1">
+              <dt className="text-snow/55 mb-0.5 flex items-center gap-1">
                 <Mountain size={11} /> {labels.elevation}
               </dt>
               <dd className="text-ice tabular-nums">{refuge.elevation_m} m</dd>
             </div>
             <div>
-              <dt className="text-snow/40 mb-0.5 flex items-center gap-1">
+              <dt className="text-snow/55 mb-0.5 flex items-center gap-1">
                 <MapPin size={11} /> {labels.valley}
               </dt>
               <dd className="text-snow/70 truncate">{valley}</dd>
             </div>
             {refuge.beds ? (
               <div>
-                <dt className="text-snow/40 mb-0.5 flex items-center gap-1">
+                <dt className="text-snow/55 mb-0.5 flex items-center gap-1">
                   <BedDouble size={11} /> {labels.beds}
                 </dt>
                 <dd className="text-snow/70">{refuge.beds}</dd>
@@ -118,7 +118,7 @@ function RefugeCard({ refuge, locale, labels }: { refuge: Refuge; locale: string
             ) : null}
             {open ? (
               <div className="col-span-2">
-                <dt className="text-snow/40 mb-0.5 flex items-center gap-1">
+                <dt className="text-snow/55 mb-0.5 flex items-center gap-1">
                   <Calendar size={11} /> {labels.open}
                 </dt>
                 <dd className="text-snow/60 leading-snug">{open}</dd>
@@ -183,20 +183,20 @@ export default function RefugesExplorer({ refuges, locale, labels }: RefugesExpl
         </div>
 
         <div className="relative max-w-xs w-full">
-          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-snow/30" />
+          <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-snow/50" />
           <input
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={labels.search}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-snow placeholder:text-snow/30 focus:outline-none focus:border-alpenglow/40"
+            className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-sm text-snow placeholder:text-snow/50 focus:outline-none focus:border-alpenglow/40"
           />
         </div>
       </div>
 
       <AnimatePresence mode="popLayout">
         {filtered.length === 0 ? (
-          <p className="text-snow/40 font-mono text-sm py-12 text-center">{labels.noResults}</p>
+          <p className="text-snow/55 font-mono text-sm py-12 text-center">{labels.noResults}</p>
         ) : (
           <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((r) => (
@@ -239,7 +239,7 @@ export function RefugeDetailStats({
         >
           <div className="text-alpenglow/80 shrink-0 mt-0.5">{item.icon}</div>
           <div>
-            <p className="text-[10px] font-mono uppercase tracking-widest text-snow/40 mb-1">
+            <p className="text-[10px] font-mono uppercase tracking-widest text-snow/55 mb-1">
               {item.label}
             </p>
             <p className="text-sm text-snow/85 leading-snug">{item.value}</p>
@@ -380,7 +380,7 @@ export function RefugeContactsSection({
                 {item.icon}
               </span>
               <span className="min-w-0">
-                <span className="block text-[10px] font-mono uppercase tracking-widest text-snow/40 mb-1">
+                <span className="block text-[10px] font-mono uppercase tracking-widest text-snow/55 mb-1">
                   {item.label}
                 </span>
                 <span className="block text-sm text-snow/90 truncate group-hover:text-snow transition-colors">
@@ -390,7 +390,7 @@ export function RefugeContactsSection({
               {item.external ? (
                 <ExternalLink
                   size={14}
-                  className="ml-auto shrink-0 text-snow/30 group-hover:text-alpenglow transition-colors"
+                  className="ml-auto shrink-0 text-snow/50 group-hover:text-alpenglow transition-colors"
                   aria-hidden
                 />
               ) : null}

@@ -53,6 +53,19 @@ export const FitnessLevelSchema = z.union([
 ]);
 export type FitnessLevel = z.infer<typeof FitnessLevelSchema>;
 
+export const TrailConditionStatusSchema = z.enum(['open', 'caution', 'closed']);
+export type TrailConditionStatus = z.infer<typeof TrailConditionStatusSchema>;
+
+export const TrailConditionsSchema = z.object({
+  status: TrailConditionStatusSchema,
+  note_it: z.string(),
+  note_en: z.string(),
+  note_fr: z.string(),
+  note_de: z.string(),
+  updated_at: z.string(),
+});
+export type TrailConditions = z.infer<typeof TrailConditionsSchema>;
+
 export const TrailSchema = z.object({
   slug: z.string().regex(/^[a-z0-9-]+$/),
   name_it: z.string(),
@@ -110,6 +123,9 @@ export const TrailSchema = z.object({
 
   updated_at: z.string(),                    // ISO date
 
+  /** Condizioni attuali del sentiero — compilato manualmente, mai generato automaticamente */
+  conditions: TrailConditionsSchema.optional(),
+
   // ── Arricchimento scientifico / pratico ──
   waypoints: z.array(WaypointSchema).optional(),
   geology_it: z.string().optional(),
@@ -141,6 +157,103 @@ export const TrailSchema = z.object({
 });
 
 export type Trail = z.infer<typeof TrailSchema>;
+
+/**
+ * Scheda sentiero incompleta generata dal Catasto Sentieri (SCT).
+ * Stessa struttura di Trail ma con campi editoriali vuoti/null finché non curati.
+ */
+export const TrailSkeletonSchema = z.object({
+  slug: z.string().regex(/^[a-z0-9-]+$/),
+  /** Codice ufficiale SCT (es. `01_S1`) — usato per deduplicazione con trails.json */
+  sct_code: z.string(),
+  name_it: z.string(),
+  name_en: z.string(),
+  name_fr: z.string(),
+  name_de: z.string(),
+  shortDescription_it: z.string().max(280),
+  shortDescription_en: z.string().max(280),
+  shortDescription_fr: z.string().max(280),
+  shortDescription_de: z.string().max(280),
+  description_it: z.string(),
+  description_en: z.string(),
+  description_fr: z.string(),
+  description_de: z.string(),
+
+  distance_km: z.number().positive().nullable(),
+  elevation_gain_m: z.number().nonnegative().nullable(),
+  elevation_loss_m: z.number().nonnegative().nullable(),
+  duration_hours: z.number().positive().nullable(),
+  difficulty: DifficultySchema.nullable(),
+  season: z.array(SeasonSchema).default([]),
+
+  start: z
+    .object({
+      name: z.string(),
+      coords: CoordsSchema,
+      elevation_m: z.number(),
+    })
+    .nullable(),
+  end: z
+    .object({
+      name: z.string(),
+      coords: CoordsSchema,
+      elevation_m: z.number(),
+    })
+    .nullable(),
+
+  valley: z.string(),
+  municipalities: z.array(z.string()),
+
+  gpx_url: z.string().url().optional(),
+  gpx_path: z.string().regex(/^\/gpx\/.+\.gpx$/).nullable().optional(),
+  is_transfer_stage: z.boolean().optional(),
+  hero_image: z.string(),
+  image: z.string(),
+  gallery: z.array(z.string()).default([]),
+
+  refuges: z.array(z.string()).default([]),
+  flora: z.array(z.string()).default([]),
+  fauna: z.array(z.string()).default([]),
+  tags: z.array(z.string()).default([]),
+
+  source: z.object({
+    name: z.string(),
+    url: z.string().url(),
+    license: z.string(),
+  }),
+
+  updated_at: z.string(),
+
+  waypoints: z.array(WaypointSchema).optional(),
+  geology_it: z.string().optional(),
+  geology_en: z.string().optional(),
+  geology_fr: z.string().optional(),
+  geology_de: z.string().optional(),
+  water_sources_it: z.string().optional(),
+  water_sources_en: z.string().optional(),
+  water_sources_fr: z.string().optional(),
+  water_sources_de: z.string().optional(),
+  transport_it: z.string().optional(),
+  transport_en: z.string().optional(),
+  transport_fr: z.string().optional(),
+  transport_de: z.string().optional(),
+  parking: z.string().optional(),
+  mobile_coverage: MobileCoverageSchema.nullable(),
+  best_months: z.array(z.number().min(1).max(12)).nullable(),
+  warnings_it: z.array(z.string()).optional(),
+  warnings_en: z.array(z.string()).optional(),
+  warnings_fr: z.array(z.string()).optional(),
+  warnings_de: z.array(z.string()).optional(),
+  nearby_peaks: z.array(NearbyPeakSchema).optional(),
+  cultural_notes_it: z.string().optional(),
+  cultural_notes_en: z.string().optional(),
+  cultural_notes_fr: z.string().optional(),
+  cultural_notes_de: z.string().optional(),
+  fitness_level: FitnessLevelSchema.nullable(),
+  calories_estimate: z.number().positive().optional(),
+});
+
+export type TrailSkeleton = z.infer<typeof TrailSkeletonSchema>;
 
 export const RefugeImageSchema = z.object({
   src: z.string(),

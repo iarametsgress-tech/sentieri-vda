@@ -95,7 +95,7 @@ export default function TourRouteExplorer({
     <div className="space-y-20 lg:space-y-28">
       <Link
         href="/tour"
-        className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-snow/45 transition-colors hover:text-snow"
+        className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-snow/55 transition-colors hover:text-snow"
       >
         <ArrowLeft size={14} />
         {labels.backToTours}
@@ -187,7 +187,7 @@ export default function TourRouteExplorer({
             terrain3D
             lineColor={route.lineColor}
           />
-          <p className="border-t border-white/5 bg-ink/80 px-4 py-3 font-mono text-[11px] text-snow/35">
+          <p className="border-t border-white/5 bg-ink/80 px-4 py-3 font-mono text-[11px] text-snow/50">
             {labels.mapHint}
           </p>
         </div>

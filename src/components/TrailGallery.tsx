@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { trailImageBlurProps } from '@/lib/blur';
 
 export type GalleryImage = { src: string; alt: string; credit?: string | null };
 
@@ -47,7 +48,7 @@ export default function TrailGallery({
 
   return (
     <section>
-      <p className="font-mono text-xs uppercase tracking-[0.25em] text-snow/40 mb-4">{label}</p>
+      <p className="font-mono text-xs uppercase tracking-[0.25em] text-snow/55 mb-4">{label}</p>
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3">
         {images.map((img, i) => (
           <button
@@ -66,7 +67,7 @@ export default function TrailGallery({
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
               sizes="(max-width: 640px) 50vw, 280px"
-              unoptimized={img.src.startsWith('http') || img.src.endsWith('.png')}
+              {...trailImageBlurProps(img.src)}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
           </button>
@@ -137,14 +138,12 @@ export default function TrailGallery({
                   fill
                   className="object-contain"
                   sizes="(max-width: 1024px) 100vw, 1024px"
-                  unoptimized={
-                    images[index].src.startsWith('http') || images[index].src.endsWith('.png')
-                  }
+                  {...trailImageBlurProps(images[index].src)}
                 />
               </div>
               <figcaption className="mt-3 flex flex-wrap items-center justify-between gap-2 px-1 text-sm text-snow/70">
                 <span>{images[index].alt}</span>
-                <span className="font-mono text-[11px] text-snow/40">
+                <span className="font-mono text-[11px] text-snow/55">
                   {images[index].credit ? `© ${images[index].credit} · ` : ''}
                   {index + 1} / {images.length}
                 </span>

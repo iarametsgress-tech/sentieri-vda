@@ -120,7 +120,7 @@ function ScenePanel({
       <p className={`text-on-image-eyebrow mb-4 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.3em] ${accent}`}>
         {isFlora ? <Leaf size={13} /> : <PawPrint size={13} />}
         {isFlora ? labels.flora : labels.fauna}
-        <span className="text-snow/45">·</span>
+        <span className="text-snow/55">·</span>
         <span className="inline-flex items-center gap-1 text-snow/70">
           <Mountain size={12} />
           {scene.altMin.toLocaleString('it-IT')}–{scene.altMax.toLocaleString('it-IT')} m
@@ -215,7 +215,7 @@ export default function FloraFaunaScrollStory({
 
         {/* Rail della quota */}
         <div className="pointer-events-none absolute right-5 top-1/2 hidden h-[60vh] -translate-y-1/2 flex-col items-center sm:flex lg:right-8">
-          <span className="mb-3 font-mono text-[9px] uppercase tracking-[0.25em] text-snow/45">
+          <span className="mb-3 font-mono text-[9px] uppercase tracking-[0.25em] text-snow/55">
             {labels.altitudeLabel}
           </span>
           <div className="relative w-px flex-1 bg-snow/15">
@@ -224,13 +224,13 @@ export default function FloraFaunaScrollStory({
               className="absolute left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-ice shadow-[0_0_12px_rgba(91,192,235,0.8)]"
             />
           </div>
-          <span className="mt-3 font-mono text-[9px] text-snow/45">+</span>
+          <span className="mt-3 font-mono text-[9px] text-snow/55">+</span>
         </div>
 
         {/* Scroll cue */}
         <motion.div
           style={{ opacity: hintOpacity }}
-          className="pointer-events-none absolute bottom-7 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-snow/45"
+          className="pointer-events-none absolute bottom-7 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-snow/55"
         >
           <span className="font-mono text-[10px] uppercase tracking-[0.3em]">
             {labels.scrollHint}

@@ -62,7 +62,7 @@ export default function AdSlot({
       <div
         className={cn(
           SIZES[slot],
-          'flex items-center justify-center border border-dashed border-white/15 bg-white/[0.02] text-snow/30 text-xs font-mono uppercase tracking-widest',
+          'flex items-center justify-center border border-dashed border-white/15 bg-white/[0.02] text-snow/50 text-xs font-mono uppercase tracking-widest',
           className
         )}
         data-ad-slot={slot}

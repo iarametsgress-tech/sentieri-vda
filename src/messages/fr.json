@@ -13,7 +13,10 @@
     "cultura": "Culture",
     "parks": "Parcs",
     "blog": "Journal",
-    "about": "À propos"
+    "about": "À propos",
+    "progetto": "Le projet",
+    "sicurezza": "Sécurité",
+    "metodo": "Méthode"
   },
   "Home": {
     "heroEyebrow": "Vallée d'Aoste · Alpes occidentales",
@@ -44,7 +47,12 @@
     "pathGpTitle": "Grand Paradiso",
     "pathGpSub": "Parc national · Bouquetins",
     "pathDayTitle": "Une journée",
-    "pathDaySub": "Toutes les vallées · Tous niveaux"
+    "pathDaySub": "Toutes les vallées · Tous niveaux",
+    "featuredAvTitle": "Les Hautes Routes",
+    "featuredAvSub": "Alta Via 1 et Alta Via 2 — les traversées officielles à étapes de la Région VdA.",
+    "featuredTourTitle": "Les Tours",
+    "featuredTourSub": "Boucles autour du Mont Blanc, Mont Rose, Cervin, Grand Paradis, Rutor et Grand Combin.",
+    "featuredCta": "Découvrir les Hautes Routes"
   },
   "Trails": {
     "title": "Sentiers de la Vallée d'Aoste",
@@ -85,6 +93,12 @@
       "refugesNearby": "Refuges & bivouacs",
       "gallery": "Galerie photo",
       "source": "Source des données",
+      "lastVerified": "Dernière vérification",
+      "conditionsOpen": "Sentier praticable",
+      "conditionsCaution": "Attention",
+      "conditionsClosed": "Sentier fermé",
+      "conditionsUpdated": "Conditions mises à jour le",
+      "curatedBy": "Fiche rédigée et vérifiée par {name}",
       "waypoints": "Points clés",
       "geology": "Géologie & paysage",
       "geologyEyebrow": "Sciences de la Terre",
@@ -111,7 +125,70 @@
       "municipalities": "Communes",
       "gpxNoteAlteVia": "Trace GPX officielle — Région Autonome Vallée d'Aoste / lovevda.it",
       "gpxNoteGeneric": "Trace GPX — vérifier sur le terrain avant la randonnée",
-      "transferStageNote": "Étape de liaison entre versants opposés : il n'existe pas de sentier pédestre continu. La carte indique les points de départ et d'arrivée et le réseau officiel des sentiers."
+      "transferStageNote": "Étape de liaison entre versants opposés : il n'existe pas de sentier pédestre continu. La carte indique les points de départ et d'arrivée et le réseau officiel des sentiers.",
+      "relatedTrails": "Sentiers associés",
+      "relatedTrailsSubtitle": "Même vallée ou itinéraires similaires — d'autres randonnées à découvrir.",
+      "tags": "Thèmes et caractéristiques"
+    }
+  },
+  "TrailHubs": {
+    "breadcrumbHome": "Accueil",
+    "breadcrumbTrails": "Sentiers",
+    "exploreTitle": "Explorer par vallée, difficulté, thème et faune",
+    "exploreSubtitle": "Collections de sentiers vérifiés — mêmes données que le catalogue, organisées comme on cherche sur les cartes et Google.",
+    "byValley": "Par vallée",
+    "byDifficulty": "Par difficulté",
+    "byTheme": "Par thème",
+    "bySpecies": "Où observer",
+    "trailCount": "{count, plural, one {# sentier} other {# sentiers}}",
+    "moreSpecies": "+{count} autres espèces au catalogue",
+    "valley": {
+      "eyebrow": "Sentiers par vallée",
+      "title": "{count, plural, one {# sentier en {valley}} other {# sentiers en {valley}}}",
+      "intro": "{count, plural, one {Un sentier documenté en {valley} : difficulté {diffRange}, dénivelés de {minGain} à {maxGain} m.} other {{count} sentiers documentés en {valley} : difficulté {diffRange}, dénivelés de {minGain} à {maxGain} m.}}",
+      "metaTitle": "Sentiers en {valley} ({count})",
+      "metaDescription": "{count} sentiers en {valley}, Vallée d'Aoste : cartes, GPX, difficulté et dénivelés vérifiés sur sources officielles."
+    },
+    "difficulty": {
+      "eyebrow": "Sentiers par difficulté",
+      "title": "{count, plural, one {# sentier {label}} other {# sentiers {label}}}",
+      "intro": "{count, plural, one {Un sentier classé {label} (échelle CAI) : {diffRange}, distances {minDistance}–{maxDistance} km, dénivelés {minGain}–{maxGain} m.} other {{count} sentiers classés {label} (échelle CAI) : {diffRange}, distances {minDistance}–{maxDistance} km, dénivelés {minGain}–{maxGain} m.}}",
+      "metaTitle": "Sentiers {label} ({count}) — Vallée d'Aoste",
+      "metaDescription": "{count} sentiers {label} en Vallée d'Aoste : fiches avec GPX, cartes et profil altimétrique.",
+      "labels": {
+        "facili": "faciles · CAI T",
+        "escursionistici": "randonnée · CAI E",
+        "esperti": "randonneurs experts · CAI EE/EEA",
+        "alpinistici": "alpinisme · CAI A"
+      }
+    },
+    "theme": {
+      "eyebrow": "Sentiers par thème",
+      "title": "{count, plural, one {# sentier · {theme}} other {# sentiers · {theme}}}",
+      "intro": "{count, plural, one {Un sentier avec le tag {theme} : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.} other {{count} sentiers avec le tag {theme} : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.}}",
+      "metaTitle": "Sentiers {theme} ({count})",
+      "metaDescription": "{count} sentiers {theme} en Vallée d'Aoste — cartes, GPX et fiches complètes.",
+      "tags": {
+        "cervino": "Cervin",
+        "col-champillon": "Col Champillon",
+        "col-malatra": "Col Malatrà",
+        "gran-san-bernardo": "Grand-Saint-Bernard",
+        "mont-mars": "Mont Mars",
+        "monte-bianco": "Mont-Blanc",
+        "monte-rosa": "Mont Rose",
+        "val-ferret": "Val Ferret",
+        "valle-ayas": "Vallée d'Ayas",
+        "valpelline": "Valpelline",
+        "valtournenche": "Valtournenche",
+        "walser": "Culture walser"
+      }
+    },
+    "species": {
+      "eyebrow": "Où observer",
+      "title": "{count, plural, one {# sentier pour observer {species}} other {# sentiers pour observer {species}}}",
+      "intro": "{count, plural, one {Un sentier où {species} est signalé en flore/faune : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.} other {{count} sentiers où {species} est signalé en flore/faune : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.}}",
+      "metaTitle": "Où voir {species} — {count} sentiers",
+      "metaDescription": "{count} sentiers en Vallée d'Aoste pour observer {species} : cartes, GPX et notes naturalistes vérifiées."
     }
   },
   "Difficulty": {
@@ -129,7 +206,9 @@
     "newsletter": "Newsletter",
     "newsletterPlaceholder": "votre@email.com",
     "newsletterCta": "S'inscrire",
-    "rights": "Tous droits réservés."
+    "rights": "Tous droits réservés.",
+    "newsletterSuccess": "Inscription confirmée. À bientôt sur les sentiers.",
+    "newsletterError": "Une erreur s'est produite. Réessayez dans un instant."
   },
   "AlteVie": {
     "meta": {
@@ -318,7 +397,13 @@
       "summitsTitle": "Tous les sommets",
       "gallery": "Galerie des sommets",
       "readMore": "En savoir plus sur Wikipédia",
-      "highlightsTitle": "En bref"
+      "highlightsTitle": "En bref",
+      "terrain3dTitle": "Vue 3D du massif",
+      "terrain3dHint": "Carte interactive avec relief MapTiler. Tournez et inclinez pour explorer la morphologie du massif.",
+      "terrain3dLabel": "Modèle 3D · MapTiler Terrain",
+      "geologyTitle": "Géologie",
+      "historyTitle": "Histoire et culture alpine",
+      "trailsTitle": "Sentiers et itinéraires"
     }
   },
   "Cultura": {
@@ -341,13 +426,241 @@
     "townsTitle": "Communes et villages",
     "officialSite": "Site officiel",
     "source": "Source",
-    "readMore": "En savoir plus"
+    "readMore": "En savoir plus",
+    "vdaFooterNote": "Pour des informations officielles sur les traditions, la gastronomie et le territoire valdôtain.",
+    "vdaFooterLink": "Territoire et culture · Région VdA"
   },
   "About": {
     "heroEyebrow": "À propos",
     "heroTitle": "Un passionné, une région.",
     "heroSubtitle": "Projet indépendant sur les sentiers valdôtains : données vérifiées, descriptions originales, zéro invention.",
     "contact": "Contact"
+  },
+  "Blog": {
+    "meta": {
+      "title": "Journal de montagne",
+      "description": "Récits, notes de terrain et guides des grands itinéraires valdôtaines — Hautes Routes, tours et conseils pratiques."
+    },
+    "eyebrow": "Journal de montagne",
+    "title": "Récits des sentiers",
+    "subtitle": "Guides, récits d'étape et approfondissements sur les grands parcours de la Vallée d'Aoste.",
+    "readArticle": "Lire l'article",
+    "backToJournal": "Retour au journal",
+    "publishedOn": "Publié le {date}",
+    "writtenBy": "Par {name}",
+    "newsletterHint": "Inscrivez-vous pour les nouveaux articles et les mises à jour des conditions des sentiers.",
+    "newsletterPlaceholder": "votre@email.fr",
+    "newsletterCta": "S'inscrire",
+    "newsletterSuccess": "Inscription confirmée. À bientôt sur les sentiers.",
+    "newsletterError": "Une erreur s'est produite. Réessayez dans un instant."
+  },
+  "Progetto": {
+    "meta": {
+      "title": "Le projet",
+      "description": "Sentieri VdA : guide éditorial à 360° sur les sentiers, l'environnement et la culture de la Vallée d'Aoste."
+    },
+    "heroEyebrow": "Le projet",
+    "heroTitle": "Un guide complet à 360°.",
+    "heroSubtitle": "Sentiers, environnement, nature et culture valdôtaine — avec des données vérifiées et des approfondissements éditoriaux.",
+    "intro": "Sentieri VdA offre une vision intégrée du territoire alpin valdôtain : pas seulement une liste de parcours, mais un atlas navigable reliant chaque étape au paysage, à la géologie, à la faune et aux racines culturelles des vallées.",
+    "mission": "L'objectif est de construire la ressource la plus complète sur les sentiers de la Vallée d'Aoste — des Hautes Routes aux tours autour des grands massifs, des refuges aux sommets, de l'environnement naturel à la culture walser et à l'œnotourisme — avec des informations vérifiables et sans invention.",
+    "pillarTrailsTitle": "Sentiers et cartes",
+    "pillarTrailsBody": "Fiches complètes avec GPX, profils altimétriques, difficulté CAI, refuges et avertissements. Données du Catasto Sentieri de la Région VdA.",
+    "pillarAmbienteTitle": "Environnement et montagnes",
+    "pillarAmbienteBody": "Massifs avec fiches approfondies et vue 3D, géologie, hydrologie, glaciers et sommets au-dessus de 4 000 m.",
+    "pillarNatureTitle": "Flore et faune",
+    "pillarNatureBody": "Espèces cataloguées avec photos, aires de répartition et liens vers les sentiers où les observer.",
+    "pillarCultureTitle": "Culture valdôtaine",
+    "pillarCultureBody": "Vallées, traditions, gastronomie et communes historiques le long des Hautes Routes et tours.",
+    "dataTitle": "Sources et méthode",
+    "dataBody": "Les données sur les sentiers proviennent exclusivement du Catasto Sentieri de la Région Autonome Vallée d'Aoste, d'OpenStreetMap et de sources CAI vérifiées. Les descriptions sont originales ; les photos sont attribuées. Projet indépendant, sans sponsor.",
+    "dataMethodLink": "Comment nous vérifions les données",
+    "authorEyebrow": "Auteur / curateur",
+    "authorRole": "Curateur éditorial · Sentieri VdA",
+    "authorBio": "Randonneur et passionné de montagne valdôtaine. Chaque fiche sentier croise données officielles, traces GPX et vérifications sur le terrain. Aucune donnée inventée : si une information n'est pas vérifiable, elle reste vide.",
+    "authorPhotoAlt": "Photo de {name}, curateur de Sentieri VdA",
+    "authorMethodLink": "Lire la méthode de vérification",
+    "contact": "Contact"
+  },
+  "Metodo": {
+    "meta": {
+      "title": "Comment nous vérifions les données",
+      "description": "Sources officielles — Catasto Sentieri VdA, OpenStreetMap et Geoportale : la méthode éditoriale de Sentieri VdA et la date de dernière vérification de chaque fiche."
+    },
+    "heroEyebrow": "Transparence",
+    "heroTitle": "Comment nous vérifions les données.",
+    "heroSubtitle": "Chaque fiche sentier indique la source officielle et la date de dernière vérification. Voici d'où viennent les chiffres et comment nous les contrôlons.",
+    "intro": "Sentieri VdA est un projet éditorial indépendant. Nous n'inventons pas distances, altitudes ou difficultés : nous utilisons uniquement des données traçables et signalons quand un champ n'est pas vérifiable. Les descriptions narratives sont originales mais fondées sur des sources institutionnelles et open data.",
+    "sctTitle": "Catasto Sentieri Région VdA",
+    "sctBody": "Source primaire pour code sentier, nom, commune, longueur, altitudes de départ/arrivée, difficulté CAI et géométrie du réseau officiel (~5 000 km). Licence open data DGR 899/2014. Mise à jour périodique via WFS/GeoJSON régional.",
+    "sctLink": "Catasto Sentieri VdA",
+    "osmTitle": "OpenStreetMap",
+    "osmBody": "Complément pour traces GPX manquantes, toponymie et points d'intérêt le long du parcours. OSM est participatif : nous l'utilisons en complément, pas comme source unique pour distance ou difficulté.",
+    "osmLink": "OpenStreetMap",
+    "geoTitle": "Geoportale SCT",
+    "geoBody": "Pack officiel du réseau sentieristique (shapefile/KMZ) et métadonnées cartographiques de la Région Autonome Vallée d'Aoste. Sert à valider les géométries et comparer les versions du jeu de données.",
+    "geoLink": "Geoportale — Réseau sentieristique",
+    "verifyTitle": "Date de dernière vérification",
+    "verifyBody": "Chaque fiche curatée dans trails.json comporte updated_at : la date à laquelle distance, altitudes, difficulté et trace GPX ont été contrôlées ou mises à jour. Vous la trouverez en bas de chaque page sentier, à côté de la source.",
+    "verifyNote": "Les sentiers changent : éboulements, neige tardive, déviations. Avant de partir, vérifiez toujours les conditions sur le Catasto Sentieri ou au refuge le plus proche.",
+    "aboutLinkPrefix": "Qui anime le projet ?",
+    "aboutLinkLabel": "Le projet"
+  },
+  "Sicurezza": {
+    "meta": {
+      "title": "Sécurité en montagne",
+      "description": "Équipement, météo, secours alpine et contacts utiles avant de partir en Vallée d'Aoste."
+    },
+    "heroEyebrow": "Sécurité en montagne",
+    "heroTitle": "Préparez-vous avant de partir.",
+    "heroSubtitle": "Avant de mettre le pied sur le sentier : vérifiez les conditions, consultez la météo, préparez le sac et sachez quoi faire en cas d'urgence. La sécurité en montagne se prépare avant le départ.",
+    "emergencyCallLabel": "Urgence sanitaire",
+    "emergencyCallHint": "Gratuit · 24h/24 · active le SAV en montagne",
+    "navEmergency": "Urgence",
+    "navResponsibility": "Responsabilité",
+    "navEquipment": "Équipement",
+    "navWeather": "Météo",
+    "navSignals": "Signaux",
+    "navRescue": "Secours",
+    "navFamily": "Normes",
+    "navContacts": "Contacts",
+    "emergencyTitle": "Urgence : appelez le 118",
+    "emergencyBody": "Le 118 est le numéro unique d'urgence sanitaire en Italie. Il fonctionne 24h/24, est gratuit et répond même sans crédit. En Vallée d'Aoste, le 118 active le Soccorso Alpino Valdostano (SAV), équipe spécialisée pour les interventions en montagne, sur sentiers et en altitude.",
+    "emergencyExtra": "Avant d'appeler, mettez-vous en sécurité. Sans réseau, utilisez le signal international : 6 signaux visuels ou acoustiques par minute (sifflet, lampe, miroir, cris), pause d'une minute, répété jusqu'à être repéré. Rester visible au même endroit accélère les secours.",
+    "responsibilityTitle": "Responsabilité individuelle",
+    "responsibilityBody": "Aucun site ou fiche sentier ne remplace ce que vous voyez sur le terrain. Les sentiers changent vite : éboulements, neige tardive, ponts retirés. Décider de partir, continuer ou rebrousser chemin vous appartient toujours.",
+    "responsibilityPoints": [
+      "Vérifiez lovevda.it ou Catasto Sentieri VdA la veille et le matin même",
+      "Demandez au refuge, à la section CAI ou au village — ils connaissent souvent la neige ou les éboulements non publiés",
+      "Choisissez le parcours selon le membre le plus faible du groupe",
+      "Indiquez à quelqu'un votre itinéraire, l'heure de retour et quand s'inquiéter",
+      "Renoncez au sommet si météo, neige, fatigue ou signalétique absente l'exigent"
+    ],
+    "equipmentTitle": "Équipement recommandé",
+    "equipmentIntro": "La cote CAI décrit le parcours, pas le contenu du sac. Sur un sentier E, considérez la liste ci-dessous comme minimum. Sur EE/EEA, ajoutez casque, crampons ou piolet selon la saison.",
+    "equipmentNote": "L'altitude change vite : vous pouvez partir à 600 m en T-shirt et trouver de la neige au-dessus de 2 500 m. Prévoyez pour le point le plus haut, pas pour la vallée.",
+    "equipmentItems": [
+      "Chaussures Vibram avec bon maintien — adhérence essentielle sur roche mouillée",
+      "Vêtements en couches : base thermique, polaire, veste imperméable",
+      "Au moins 1,5 L d'eau par personne en été ; plus s'il fait chaud",
+      "Nourriture de secours : retards fréquents par météo ou fatigue",
+      "Carte 1:25 000 ou appli offline avec GPX — réseau souvent absent",
+      "Téléphone chargé, batterie externe si possible, 118 enregistré",
+      "Trousse de secours : pansements, bande, désinfectant, couverture de survie",
+      "Bâtons sur parcours avec fort dénivelé",
+      "Crème solaire et lunettes — UV augmente avec l'altitude",
+      "Frontale si départ tôt ou retour après le coucher du soleil",
+      "Couche thermique légère au-dessus de 2 200–2 500 m même en été"
+    ],
+    "weatherTitle": "Météo",
+    "weatherBody": "La météo en montagne diffère du fond de vallée. Consultez les prévisions 24 h avant le départ avec des sources indiquant altitude et versant. ARPA VdA et Fondazione Montagna Sicura ; Météo France pour le confinement (Mont-Blanc, Val Ferret). Orages estivaux fréquents au-dessus de 2 000 m.",
+    "weatherLinksTitle": "Sites météo recommandés",
+    "weatherPoints": [
+      "Partez tôt : sous 2 400 m avant 13 h si le ciel est instable",
+      "Ne restez pas sur crêtes exposées ou sous falaises si le ciel se couvre",
+      "Bulletin valanches en hiver et printemps avant de quitter les sentiers battus",
+      "Neige jusqu'en juin-juillet sur versants nord au-dessus de 2 500 m",
+      "Vent en crête : température ressentie très basse — couche coupe-vent",
+      "Si la météo se dégrade, raccourcissez ou rebroussez — ne précipitez pas"
+    ],
+    "signalsTitle": "Signaux de danger",
+    "signalsIntro": "Les signaux de danger apparaissent avant la situation critique. Les reconnaître évite de se retrouver en difficulté en altitude. Renoncer à une cime n'est pas un échec.",
+    "signalItems": [
+      "Ciel sombre à l'ouest avec cumulus en croissance — orage probable l'après-midi",
+      "Baisse de température et vent même en été",
+      "Neige molle, glace ou débris récents sur le sentier",
+      "Signalétique absente ou panneaux de fermeture ignorés",
+      "Fatigue, vertiges, nausées ou mal de tête — possible AMS",
+      "Grincements ou neige qui bouge sur pente raide — risque avalanche",
+      "Éboulement récent ou pont endommagé — terrain encore instable"
+    ],
+    "rescueTitle": "Secours alpine : que faire",
+    "rescueIntro": "Protégez d'abord le blessé du froid, puis appelez le 118. L'opérateur active le SAV et vous guide. Ne raccrochez pas.",
+    "rescueNote": "Sans réseau : message GPS à un contact de confiance. Restez visible. En groupe, une personne reste avec le blessé.",
+    "rescueSteps": [
+      "Appelant : nom, téléphone, lien avec le groupe",
+      "Lieu : sentier, refuge ou village proche, altitude, coordonnées GPS",
+      "Incident : nombre de personnes, type de blessure",
+      "Sur place : blessé conscient, mobile ou bloqué, météo actuelle",
+      "Réseau : signalez si la ligne est instable"
+    ],
+    "familyTitle": "Bonnes pratiques",
+    "familyBody": "Les bonnes pratiques protègent randonneurs, environnement et faune. Parcs protégés, pâturages actifs : respecter la signalétique réduit les incidents évitables.",
+    "familyPoints": [
+      "Respectez fermetures, déviations et clôtures",
+      "Grand Paradis : laisse obligatoire pour les chiens",
+      "Pâturages : chien en laisse courte, ne pas franchir les clôtures",
+      "Enfants : sentiers T, pauses fréquentes, couches supplémentaires",
+      "Pas de déchets, pas de raccourcis non balisés, pas de feu hors zones prévues",
+      "Passages étroits : laissez passer ceux qui montent",
+      "Ne dérangez pas la faune — observez de loin"
+    ],
+    "contactsTitle": "Liens et contacts utiles",
+    "contactsSubtitle": "Enregistrez ces liens avant de partir, surtout sans réseau. Sources officielles pour sentiers ; ARPA et Montagna Sicura le jour de la sortie pour météo et avalanches.",
+    "weatherLinks": [
+      {
+        "label": "ARPA VdA — Prévisions",
+        "href": "https://www.arpa.vda.it/meteo/previsioni",
+        "desc": "Prévisions officielles : fond de vallée, moyenne montagne et haute altitude."
+      },
+      {
+        "label": "ARPA VdA — Bulletin nivo",
+        "href": "https://www.arpa.vda.it/nivometeorologia/bollettino_nivologico",
+        "desc": "Neige et conditions nivologiques."
+      },
+      {
+        "label": "MeteoMont (CAI)",
+        "href": "https://www.meteomont.org",
+        "desc": "Réseau météo montagne avec données en altitude."
+      },
+      {
+        "label": "Fondazione Montagna Sicura",
+        "href": "https://www.montagnasicura.org",
+        "desc": "Bulletin avalanches et sécurité en montagne."
+      },
+      {
+        "label": "Météo France — Montagne",
+        "href": "https://meteofrance.com/previsions-meteo-montagne/alpes",
+        "desc": "Alpes françaises : Mont-Blanc, Val Ferret, frontière."
+      },
+      {
+        "label": "MeteoBlue — Montagne",
+        "href": "https://www.meteoblue.com/fr/meteo/outdoorsports/mountain",
+        "desc": "Prévisions par altitude et versant."
+      }
+    ],
+    "contactLinks": [
+      {
+        "label": "Secours alpine · 118",
+        "href": "tel:118",
+        "desc": "Urgences en montagne, 24h/24, gratuit en Italie."
+      },
+      {
+        "label": "Catasto Sentieri VdA",
+        "href": "https://www.lovevda.it/fr/sport/randonnee",
+        "desc": "Conditions officielles et Hautes Routes."
+      },
+      {
+        "label": "ARPA Vallée d'Aoste",
+        "href": "https://www.arpa.vda.it/meteo",
+        "desc": "Prévisions météo et bulletins nivologiques."
+      },
+      {
+        "label": "Fondazione Montagna Sicura",
+        "href": "https://www.montagnasicura.org",
+        "desc": "Avalanches et sécurité en montagne."
+      },
+      {
+        "label": "CAI Vallée d'Aoste",
+        "href": "https://www.caivalledaosta.it",
+        "desc": "Sections CAI, refuges et informations locales."
+      },
+      {
+        "label": "Sentieri VdA",
+        "href": "mailto:info@sentierivda.it",
+        "desc": "Signaler des erreurs ou contribuer au projet."
+      }
+    ]
   },
   "Refuges": {
     "meta": {

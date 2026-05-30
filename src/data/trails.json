@@ -61,7 +61,15 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-1-donnas-perloz.jpg",
+    "conditions": {
+      "status": "caution",
+      "note_it": "Tratto innevato sopra 2.200 m — ramponi consigliati.",
+      "note_en": "Snow-covered section above 2,200 m — crampons recommended.",
+      "note_fr": "Tronçon enneigé au-dessus de 2 200 m — crampons recommandés.",
+      "note_de": "Verschneiter Abschnitt über 2.200 m — Steigeisen empfohlen.",
+      "updated_at": "2026-05-30"
+    },
+    "image": "/trails/alta-via-1-tappa-1-donnas-perloz.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-1-donnas-perloz.gpx",
     "mobile_coverage": "good",
     "best_months": [
@@ -190,7 +198,7 @@
     "municipalities": [
       "Courmayeur"
     ],
-    "hero_image": "/trails/tour-rifugio-bonatti.jpg",
+    "hero_image": "/trails/tour-rifugio-bonatti.webp",
     "gallery": [],
     "refuges": [
       "rifugio-bonatti"
@@ -217,7 +225,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/tour-rifugio-bonatti.jpg",
+    "image": "/trails/tour-rifugio-bonatti.webp",
     "mobile_coverage": "partial",
     "best_months": [
       6,
@@ -344,7 +352,7 @@
     "municipalities": [
       "Cogne"
     ],
-    "hero_image": "/trails/lago-djouan-cogne.jpg",
+    "hero_image": "/trails/lago-djouan-cogne.webp",
     "gallery": [],
     "refuges": [
       "rifugio-vittorio-sella"
@@ -370,7 +378,7 @@
       "license": "Open data"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/lago-djouan-cogne.jpg",
+    "image": "/trails/lago-djouan-cogne.webp",
     "mobile_coverage": "partial",
     "best_months": [
       6,
@@ -501,7 +509,7 @@
       "Perloz",
       "Lillianes"
     ],
-    "hero_image": "/trails/alta-via-1-tappa-2-perloz-rifugio-coda.png",
+    "hero_image": "/trails/alta-via-1-tappa-2-perloz-rifugio-coda.webp",
     "gallery": [],
     "refuges": [
       "rifugio-coda"
@@ -528,7 +536,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-2-perloz-rifugio-coda.png",
+    "image": "/trails/alta-via-1-tappa-2-perloz-rifugio-coda.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-2-perloz-rifugio-coda.gpx",
     "mobile_coverage": "partial",
     "best_months": [
@@ -668,7 +676,7 @@
       "Lillianes",
       "Gaby"
     ],
-    "hero_image": "/trails/alta-via-1-tappa-3-rifugio-coda-rifugio-barma.png",
+    "hero_image": "/trails/alta-via-1-tappa-3-rifugio-coda-rifugio-barma.webp",
     "gallery": [],
     "refuges": [
       "rifugio-barma",
@@ -696,7 +704,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-3-rifugio-coda-rifugio-barma.png",
+    "image": "/trails/alta-via-1-tappa-3-rifugio-coda-rifugio-barma.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-3-rifugio-coda-rifugio-barma.gpx",
     "mobile_coverage": "partial",
     "best_months": [
@@ -840,7 +848,7 @@
     "municipalities": [
       "Gaby"
     ],
-    "hero_image": "/trails/alta-via-1-tappa-4-rifugio-barma-niel.jpg",
+    "hero_image": "/trails/alta-via-1-tappa-4-rifugio-barma-niel.webp",
     "gallery": [],
     "refuges": [
       "rifugio-barma"
@@ -866,7 +874,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-4-rifugio-barma-niel.jpg",
+    "image": "/trails/alta-via-1-tappa-4-rifugio-barma-niel.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-4-rifugio-barma-niel.gpx",
     "mobile_coverage": "partial",
     "best_months": [
@@ -1024,7 +1032,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-5-niel-gressoney-saint-jean.jpg",
+    "image": "/trails/alta-via-1-tappa-5-niel-gressoney-saint-jean.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-5-niel-gressoney-saint-jean.gpx",
     "mobile_coverage": "partial",
     "best_months": [
@@ -1201,7 +1209,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-6-gressoney-saint-jean-rifugio-vieux-crest.jpg",
+    "image": "/trails/alta-via-1-tappa-6-gressoney-saint-jean-rifugio-vieux-crest.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-6-gressoney-saint-jean-rifugio-vieux-crest.gpx",
     "mobile_coverage": "partial",
     "best_months": [
@@ -1365,7 +1373,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-7-rifugio-vieux-crest-rifugio-grand-tournalin.jpg",
+    "image": "/trails/alta-via-1-tappa-7-rifugio-vieux-crest-rifugio-grand-tournalin.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-7-rifugio-vieux-crest-rifugio-grand-tournalin.gpx",
     "mobile_coverage": "partial",
     "best_months": [
@@ -1529,7 +1537,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-8-rifugio-grand-tournalin-valtournenche.jpg",
+    "image": "/trails/alta-via-1-tappa-8-rifugio-grand-tournalin-valtournenche.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-8-rifugio-grand-tournalin-valtournenche.gpx",
     "mobile_coverage": "good",
     "best_months": [
@@ -1661,7 +1669,7 @@
     "municipalities": [
       "Valtournenche"
     ],
-    "hero_image": "https://commons.wikimedia.org/wiki/File:Valtournenche0001.jpg",
+    "hero_image": "/trails/alta-via-1-tappa-9-valtournenche-rifugio-barmasse.webp",
     "gallery": [],
     "refuges": [
       "rifugio-jean-barmasse"
@@ -1688,7 +1696,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-9-valtournenche-rifugio-barmasse.jpg",
+    "image": "/trails/alta-via-1-tappa-9-valtournenche-rifugio-barmasse.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-9-valtournenche-rifugio-barmasse.gpx",
     "mobile_coverage": "partial",
     "best_months": [
@@ -1820,7 +1828,7 @@
       "Valtournenche",
       "Torgnon"
     ],
-    "hero_image": "/trails/alta-via-1-tappa-10-rifugio-barmasse-rifugio-cuney.jpg",
+    "hero_image": "/trails/alta-via-1-tappa-10-rifugio-barmasse-rifugio-cuney.webp",
     "gallery": [],
     "refuges": [
       "rifugio-jean-barmasse",
@@ -1849,7 +1857,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-10-rifugio-barmasse-rifugio-cuney.jpg",
+    "image": "/trails/alta-via-1-tappa-10-rifugio-barmasse-rifugio-cuney.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-10-rifugio-barmasse-rifugio-cuney.gpx",
     "mobile_coverage": "none",
     "best_months": [
@@ -2024,7 +2032,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-11-rifugio-cuney-oyace.jpg",
+    "image": "/trails/alta-via-1-tappa-11-rifugio-cuney-oyace.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-11-rifugio-cuney-oyace.gpx",
     "mobile_coverage": "none",
     "best_months": [
@@ -2155,7 +2163,7 @@
       "Bionaz",
       "Ollomont"
     ],
-    "hero_image": "https://commons.wikimedia.org/wiki/File:Ollomont.jpg",
+    "hero_image": "/trails/alta-via-1-tappa-12-oyace-ollomont.webp",
     "gallery": [],
     "refuges": [],
     "flora": [
@@ -2181,7 +2189,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-12-oyace-ollomont.jpg",
+    "image": "/trails/alta-via-1-tappa-12-oyace-ollomont.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-12-oyace-ollomont.gpx",
     "mobile_coverage": "partial",
     "best_months": [
@@ -2333,7 +2341,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-13-ollomont-rifugio-champillon.jpg",
+    "image": "/trails/alta-via-1-tappa-13-ollomont-rifugio-champillon.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-13-ollomont-rifugio-champillon.gpx",
     "mobile_coverage": "partial",
     "best_months": [
@@ -2487,7 +2495,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-14-rifugio-champillon-saint-rhemy.jpg",
+    "image": "/trails/alta-via-1-tappa-14-rifugio-champillon-saint-rhemy.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-14-rifugio-champillon-saint-rhemy.gpx",
     "mobile_coverage": "partial",
     "best_months": [
@@ -2642,7 +2650,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-15-saint-rhemy-rifugio-frassati.jpg",
+    "image": "/trails/alta-via-1-tappa-15-saint-rhemy-rifugio-frassati.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-15-saint-rhemy-rifugio-frassati.gpx",
     "mobile_coverage": "partial",
     "best_months": [
@@ -2769,7 +2777,7 @@
       "Etroubles",
       "Courmayeur"
     ],
-    "hero_image": "/trails/alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti.jpg",
+    "hero_image": "/trails/alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti.webp",
     "gallery": [],
     "refuges": [
       "rifugio-bonatti",
@@ -2798,7 +2806,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti.jpg",
+    "image": "/trails/alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti.gpx",
     "mobile_coverage": "none",
     "best_months": [
@@ -2956,7 +2964,7 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-05-25",
-    "image": "/trails/alta-via-1-tappa-17-rifugio-bonatti-courmayeur.jpg",
+    "image": "/trails/alta-via-1-tappa-17-rifugio-bonatti-courmayeur.webp",
     "gpx_path": "/gpx/alta-via-1-tappa-17-rifugio-bonatti-courmayeur.gpx",
     "mobile_coverage": "good",
     "best_months": [

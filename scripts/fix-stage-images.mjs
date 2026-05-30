@@ -1,6 +1,6 @@
 /**
  * Corregge foto duplicate o irrilevanti con immagini Commons curate per tappa.
- * Uso: node scripts/fix-stage-images.mjs
+ * Uso: node scripts/fix-stage-images.mjs [slug...]
  */
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -8,14 +8,32 @@ import crypto from 'node:crypto';
 
 const OUT = path.resolve('public/trails');
 const UA = 'SentieriVda/1.0 (https://sentieri-vda.vercel.app)';
+const WIDTH = 1920;
 
-/** slug → filename Commons (priorità decrescente) */
+/** slug → filename Commons (priorità decrescente) — solo foto pertinenti al percorso */
 const FIXES = {
-  'alta-via-1-tappa-2-perloz-rifugio-coda': ['PerlozAug032024 03.jpg', 'Perloz da Ponte.jpg'],
-  'alta-via-1-tappa-3-rifugio-coda-rifugio-barma': [
-    'Antagnod.jpg',
-    'Val d Ayas.jpg',
-    'Plastico villaggio walser crest ad ayas 235.jpg',
+  'alta-via-1-tappa-9-valtournenche-rifugio-barmasse': [
+    'Rifugio Barmasse - Lac de Cortinaz.jpg',
+    'Rifugio Jean Barmasse.jpg',
+  ],
+  'alta-via-1-tappa-12-oyace-ollomont': [
+    'OllomontAug262024 01.jpg',
+    'OllomontAug262024 02.jpg',
+    'ISS067-E-152527 - View of Alps, Valpelline valley, Lac de Place Moulin, sidevalley Val d Ollomont, glaciers (cropped).jpg',
+  ],
+  'tour-mont-blanc-tappa-1-courmayeur-rifugio-bertone': [
+    'Bertone1.jpg',
+    'Rif bertone vvv1.JPG',
+    'Col Monte Della Saxe 04.JPG',
+  ],
+  'tour-rutor-tappa-1-la-thuile-rifugio-deffeyes': [
+    'La Thuile-Rifugio Deffeyes.jpg',
+    'RifugioDeffeyes20161001.jpg',
+  ],
+  'tour-rutor-tappa-2-rifugio-deffeyes-lago-rutor': [
+    'Lac du Ruitor @ Lancebranlette.jpg',
+    'Gabinio.Grand Assaly E Lago Del Rutor. Valle Di Aosta-Il Grande Assaly Visto Da Nord, Dal Lago Del Ruitor 18A20.jpg',
+    'Gabinio.Lago. Valle Di Aosta-Lago Del Rutor 18A63.jpg',
   ],
   'alta-via-2-tappa-7-rhemes-notre-dame-eaux-rousses': [
     'Da Eaux Rousses a Orvieilles, Valsavarenche 02.JPG',
@@ -46,10 +64,6 @@ const FIXES = {
     'Cervino da Breuil.jpg',
     'Breuil-Cervinia panorama.jpg',
   ],
-  'tour-rutor-tappa-1-la-thuile-rifugio-deffeyes': [
-    'La Thuile-Rifugio Deffeyes.jpg',
-    'Refuge Deffeyes - img 03178.jpg',
-  ],
   'tour-gran-combin-tappa-3-col-gran-san-bernardo-combin-tsessione': [
     'Combin de Grafeneire.jpg',
     'Gran Combin from Valpelline.jpg',
@@ -62,14 +76,17 @@ const FIXES = {
   ],
 };
 
-/** Usa PNG locali già presenti (tappa-specifici) */
+/** PNG locali già verificati per tappa (priorità assoluta) */
 const LOCAL_PNG = {
   'alta-via-1-tappa-2-perloz-rifugio-coda': 'alta-via-1-tappa-2-perloz-rifugio-coda.png',
   'alta-via-1-tappa-3-rifugio-coda-rifugio-barma': 'alta-via-1-tappa-3-rifugio-coda-rifugio-barma.png',
+  'alta-via-1-tappa-4-rifugio-barma-niel': 'alta-via-1-tappa-4-rifugio-barma-niel.png',
 };
 
+const REJECT = /plastico|model|schema|diagram|locator|logo|icon|map flag|Mezzalama|Ottorino/i;
+
 function wikiFileUrl(filename) {
-  return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(filename)}?width=1600`;
+  return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(filename)}?width=${WIDTH}`;
 }
 
 function md5(buf) {
@@ -77,13 +94,14 @@ function md5(buf) {
 }
 
 async function downloadWiki(filename) {
+  if (REJECT.test(filename)) throw new Error('filename rejected');
   const res = await fetch(wikiFileUrl(filename), {
     headers: { 'User-Agent': UA, Accept: 'image/*' },
     redirect: 'follow',
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const buf = Buffer.from(await res.arrayBuffer());
-  if (buf.length < 8000) throw new Error('troppo piccolo');
+  if (buf.length < 12000) throw new Error('troppo piccolo');
   return buf;
 }
 
@@ -91,7 +109,14 @@ function findTrail(slug, base, routes) {
   return base.find((t) => t.slug === slug) ?? routes.find((t) => t.slug === slug);
 }
 
+async function removeDerived(slug) {
+  for (const ext of ['jpg', 'jpeg', 'webp']) {
+    await fs.rm(path.join(OUT, `${slug}.${ext}`), { force: true });
+  }
+}
+
 async function main() {
+  const only = process.argv.slice(2);
   const basePath = path.resolve('src/data/trails.json');
   const routesPath = path.resolve('src/data/trails-routes.json');
   const baseTrails = JSON.parse(await fs.readFile(basePath, 'utf8'));
@@ -100,13 +125,9 @@ async function main() {
 
   const usedHashes = new Map();
   for (const t of allTrails) {
-    const candidates = [
-      path.join(OUT, `${t.slug}.jpg`),
-      path.join(OUT, `${t.slug}.png`),
-    ];
-    for (const p of candidates) {
+    for (const ext of ['jpg', 'png', 'webp']) {
       try {
-        const buf = await fs.readFile(p);
+        const buf = await fs.readFile(path.join(OUT, `${t.slug}.${ext}`));
         usedHashes.set(md5(buf), t.slug);
       } catch {
         /* skip */
@@ -115,16 +136,15 @@ async function main() {
   }
 
   const slugsToFix = [
-    ...Object.keys(FIXES),
-    ...Object.keys(LOCAL_PNG),
-    'tour-rifugio-bonatti',
-  ];
+    ...new Set([...Object.keys(FIXES), ...Object.keys(LOCAL_PNG), 'tour-rifugio-bonatti']),
+  ].filter((slug) => only.length === 0 || only.includes(slug));
 
   for (const slug of slugsToFix) {
     const trail = findTrail(slug, baseTrails, routeTrails);
     if (!trail) continue;
 
     process.stdout.write(`→ ${slug} … `);
+    await removeDerived(slug);
 
     try {
       let buf;
@@ -161,7 +181,6 @@ async function main() {
         buf = picked.buf;
         heroUrl = wikiFileUrl(picked.filename);
         source = `curated:${picked.filename}`;
-        usedHashes.set(picked.hash, slug);
       }
 
       const hash = md5(buf);
@@ -173,12 +192,11 @@ async function main() {
 
       const dest = path.join(OUT, `${slug}.${ext}`);
       await fs.writeFile(dest, buf);
-      if (ext === 'png') {
-        await fs.rm(path.join(OUT, `${slug}.jpg`), { force: true });
-      }
 
-      trail.image = `/trails/${slug}.${ext}`;
-      trail.hero_image = heroUrl.startsWith('/') ? heroUrl : heroUrl;
+      const localPath = `/trails/${slug}.${ext}`;
+      trail.image = localPath;
+      trail.hero_image = localPath;
+
       console.log(`OK (${source})`);
     } catch (e) {
       console.log(`FAIL — ${e.message}`);
@@ -190,7 +208,7 @@ async function main() {
 
   const byHash = new Map();
   for (const t of allTrails) {
-    for (const ext of ['jpg', 'png']) {
+    for (const ext of ['jpg', 'png', 'webp']) {
       try {
         const buf = await fs.readFile(path.join(OUT, `${t.slug}.${ext}`));
         const h = md5(buf);

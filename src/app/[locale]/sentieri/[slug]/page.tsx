@@ -9,6 +9,7 @@ const MapView = dynamic(() => import('@/components/MapView'), {
   loading: () => <div className="w-full h-[520px] rounded-2xl bg-white/[0.03] animate-pulse" />,
 });
 import DifficultyBadge from '@/components/DifficultyBadge';
+import TrailConditionsBadge from '@/components/TrailConditionsBadge';
 import ElevationProfile from '@/components/ElevationProfile';
 import TrailScienceSections, { TrailFitnessBar } from '@/components/TrailScienceSections';
 import {
@@ -17,20 +18,26 @@ import {
   TrailRefugesSection,
   TrailValleyLink,
   TrailMunicipalityLinks,
+  TrailDifficultyLink,
+  TrailThemeTagLinks,
 } from '@/components/TrailRelatedLinks';
 import TrailStickyBar, { TRAIL_HERO_SENTINEL_ID } from '@/components/TrailStickyBar';
 import TrailGallery from '@/components/TrailGallery';
+import RelatedTrails from '@/components/RelatedTrails';
 import LinkedText from '@/components/LinkedText';
 import AdSlot from '@/components/AdSlot';
-import { SITE_URL } from '@/lib/config';
+import { SITE_URL, SITE_AUTHOR } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
 import type { Trail } from '@/lib/types';
 import {
   getTrailLocalizedName,
   getTrailLocalizedShortDesc,
   getTrailLocalizedDescription,
+  getTrailConditionsNote,
 } from '@/lib/stage-utils';
 import { extractRefugeSlugsFromTrail, getTrailGalleryImages } from '@/lib/refuges';
+import { getLinkableThemeTagsForTrail } from '@/lib/hubs';
+import { trailImageBlurProps } from '@/lib/blur';
 import { loadTrailGeoJSON, getGpxPublicPath, gpxFileExists } from '@/lib/gpx';
 import {
   Download,
@@ -87,6 +94,7 @@ export default async function TrailDetail({
   if (!trail) notFound();
 
   const t = await getTranslations('Trails.details');
+  const tTheme = await getTranslations('TrailHubs.theme');
   const name = getTrailLocalizedName(trail, locale);
   const description = getTrailLocalizedDescription(trail, locale);
   const refugeSlugs = extractRefugeSlugsFromTrail(trail);
@@ -121,6 +129,12 @@ export default async function TrailDetail({
       longitude: trail.start.coords.lng,
     },
     isAccessibleForFree: true,
+    ...(trail.updated_at ? { dateModified: trail.updated_at } : {}),
+    author: {
+      '@type': 'Person',
+      name: SITE_AUTHOR.name,
+      url: SITE_AUTHOR.url,
+    },
   };
 
   const mapMarkers = [
@@ -190,15 +204,31 @@ export default async function TrailDetail({
         <h1 className="font-display text-display-lg tracking-tighter mb-5 max-w-4xl">
           {name}
         </h1>
+        {trail.conditions && (
+          <TrailConditionsBadge
+            status={trail.conditions.status}
+            note={getTrailConditionsNote(trail.conditions, locale)}
+            updatedAt={trail.conditions.updated_at}
+            locale={locale}
+            labels={{
+              statusOpen: t('conditionsOpen'),
+              statusCaution: t('conditionsCaution'),
+              statusClosed: t('conditionsClosed'),
+              updated: t('conditionsUpdated'),
+            }}
+          />
+        )}
         <div className="flex items-center gap-3 flex-wrap mb-10">
-          <DifficultyBadge difficulty={trail.difficulty} full />
+          <TrailDifficultyLink difficulty={trail.difficulty} locale={locale}>
+            <DifficultyBadge difficulty={trail.difficulty} full />
+          </TrailDifficultyLink>
           <span className="font-mono text-xs text-snow/50 tracking-widest uppercase flex items-center gap-1.5">
             <Calendar size={11} />
             {trail.season.join(' · ')}
           </span>
         </div>
 
-        {/* Immagine iconica grande sotto il titolo */}
+        {/* Full-bleed hero: `fill` + fixed aspect-ratio container (no layout shift). */}
         <div className="relative w-full aspect-[21/9] max-h-[520px] overflow-hidden rounded-2xl border border-white/10 bg-ink grain">
           <Image
             src={iconicImage}
@@ -207,10 +237,7 @@ export default async function TrailDetail({
             priority
             className="object-cover"
             sizes="(max-width: 1280px) 100vw, 1280px"
-            unoptimized={
-              iconicImage.startsWith('http') ||
-              iconicImage.endsWith('.png')
-            }
+            {...trailImageBlurProps(iconicImage)}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent pointer-events-none" />
         </div>
@@ -263,7 +290,7 @@ export default async function TrailDetail({
           <section>
             <SectionLabel>{t('altimetricProfile')}</SectionLabel>
             <div className="rounded-2xl border border-white/5 bg-white/[0.02] p-5">
-              <div className="flex items-end justify-between mb-3 text-xs font-mono text-snow/40">
+              <div className="flex items-end justify-between mb-3 text-xs font-mono text-snow/55">
                 <span>{trail.start.name} · {trail.start.elevation_m} m</span>
                 <span>{trail.end.name} · {trail.end.elevation_m} m</span>
               </div>
@@ -307,11 +334,11 @@ export default async function TrailDetail({
               />
             </div>
             {gpxPath ? (
-              <p className="mt-3 text-xs text-snow/40 font-mono">
+              <p className="mt-3 text-xs text-snow/55 font-mono">
                 {isAV1 || isAV2 ? t('gpxNoteAlteVia') : t('gpxNoteGeneric')}
               </p>
             ) : trail.is_transfer_stage ? (
-              <p className="mt-3 text-xs text-snow/40 font-mono">
+              <p className="mt-3 text-xs text-snow/55 font-mono">
                 {t('transferStageNote')}
               </p>
             ) : null}
@@ -369,8 +396,8 @@ export default async function TrailDetail({
             <TrailGallery images={galleryImages} label={t('gallery')} />
           )}
 
-          {/* Flora / Fauna */}
-          {(trail.flora.length > 0 || trail.fauna.length > 0) && (
+          {/* Flora / Fauna / Theme tags */}
+          {(trail.flora.length > 0 || trail.fauna.length > 0 || getLinkableThemeTagsForTrail(trail).length > 0) && (
             <section className="grid grid-cols-1 sm:grid-cols-2 gap-10">
               {trail.flora.length > 0 && (
                 <div>
@@ -385,6 +412,19 @@ export default async function TrailDetail({
                   <SectionLabel>{t('fauna')}</SectionLabel>
                   <div className="flex flex-wrap gap-2">
                     <TrailFloraFaunaLinks slugs={trail.fauna} />
+                  </div>
+                </div>
+              )}
+              {getLinkableThemeTagsForTrail(trail).length > 0 && (
+                <div className="sm:col-span-2">
+                  <SectionLabel>{t('tags')}</SectionLabel>
+                  <div className="flex flex-wrap gap-2">
+                    <TrailThemeTagLinks
+                      trail={trail}
+                      getLabel={(tag) =>
+                        tTheme(`tags.${tag}`, { defaultValue: tag.replace(/-/g, ' ') })
+                      }
+                    />
                   </div>
                 </div>
               )}
@@ -416,19 +456,42 @@ export default async function TrailDetail({
             </section>
           )}
 
-          {/* Source */}
-          <p className="text-xs text-snow/35 border-t border-white/5 pt-6">
-            {t('source')}:{' '}
-            <a
-              href={trail.source.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-alpenglow hover:underline inline-flex items-center gap-1"
-            >
-              {trail.source.name} <ExternalLink size={11} />
-            </a>{' '}
-            · {trail.source.license}
-          </p>
+          {/* Source + last verified + author */}
+          <div className="border-t border-white/5 pt-6 space-y-2">
+            <p className="text-sm text-snow/70 flex items-center gap-2">
+              <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-alpenglow/15 text-[11px] font-display text-alpenglow">
+                {SITE_AUTHOR.name.charAt(0)}
+              </span>
+              <Link href={`/${locale}/metodo`} className="hover:text-snow transition-colors">
+                {t('curatedBy', { name: SITE_AUTHOR.name })}
+              </Link>
+            </p>
+            <p className="text-xs text-snow/50">
+              {t('source')}:{' '}
+              <a
+                href={trail.source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-alpenglow hover:underline inline-flex items-center gap-1"
+              >
+                {trail.source.name} <ExternalLink size={11} />
+              </a>{' '}
+              · {trail.source.license}
+            </p>
+            {trail.updated_at && (
+              <p className="text-xs text-snow/50 flex items-center gap-1.5">
+                <Calendar size={11} />
+                {t('lastVerified')}:{' '}
+                <time dateTime={trail.updated_at}>
+                  {new Intl.DateTimeFormat(locale, {
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric',
+                  }).format(new Date(trail.updated_at))}
+                </time>
+              </p>
+            )}
+          </div>
         </div>
 
         {/* ── Sidebar ─────────────────────────────────────── */}
@@ -436,7 +499,7 @@ export default async function TrailDetail({
           <div className="lg:sticky lg:top-24 space-y-6">
             {/* Quick info card */}
             <div className="bg-white/[0.03] border border-white/5 rounded-2xl p-6 space-y-4">
-              <p className="font-mono text-xs uppercase tracking-widest text-snow/40 mb-1">
+              <p className="font-mono text-xs uppercase tracking-widest text-snow/55 mb-1">
                 {t('quickInfo')}
               </p>
               <InfoRowLinked label={t('valley')}>
@@ -445,13 +508,14 @@ export default async function TrailDetail({
               <InfoRowLinked label={t('municipalities')}>
                 <TrailMunicipalityLinks names={trail.municipalities} locale={locale} />
               </InfoRowLinked>
-              <InfoRow
-                label={t('difficulty')}
-                value={trail.difficulty}
-              />
+              <InfoRowLinked label={t('difficulty')}>
+                <TrailDifficultyLink difficulty={trail.difficulty} locale={locale}>
+                  <DifficultyBadge difficulty={trail.difficulty} full />
+                </TrailDifficultyLink>
+              </InfoRowLinked>
               {refugeSlugs.length > 0 && (
                 <div className="border-b border-white/5 pb-3">
-                  <p className="text-snow/40 font-mono text-xs uppercase tracking-widest mb-2">
+                  <p className="text-snow/55 font-mono text-xs uppercase tracking-widest mb-2">
                     {t('refugesNearby')}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
@@ -465,6 +529,15 @@ export default async function TrailDetail({
           </div>
         </aside>
       </div>
+
+      <RelatedTrails
+        trail={trail}
+        excludeSlugs={[prev?.slug, next?.slug].filter((s): s is string => Boolean(s))}
+        labels={{
+          title: t('relatedTrails'),
+          subtitle: t('relatedTrailsSubtitle'),
+        }}
+      />
     </article>
   );
 }
@@ -473,7 +546,7 @@ export default async function TrailDetail({
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="font-mono text-xs uppercase tracking-[0.25em] text-snow/40 mb-4">{children}</p>
+    <p className="font-mono text-xs uppercase tracking-[0.25em] text-snow/55 mb-4">{children}</p>
   );
 }
 
@@ -490,7 +563,7 @@ function Stat({
 }) {
   return (
     <div>
-      <div className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-snow/40 mb-2">
+      <div className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-snow/55 mb-2">
         {icon}
         {label}
       </div>
@@ -538,7 +611,7 @@ function InfoRowLinked({
 }) {
   return (
     <div className="flex justify-between items-start gap-3 text-sm border-b border-white/5 pb-3 last:border-0 last:pb-0">
-      <span className="text-snow/40 font-mono text-xs uppercase tracking-widest shrink-0">
+      <span className="text-snow/55 font-mono text-xs uppercase tracking-widest shrink-0">
         {label}
       </span>
       <span className="text-snow/80 text-right leading-tight">{children}</span>
@@ -549,7 +622,7 @@ function InfoRowLinked({
 function InfoRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex justify-between items-start gap-3 text-sm border-b border-white/5 pb-3 last:border-0 last:pb-0">
-      <span className="text-snow/40 font-mono text-xs uppercase tracking-widest shrink-0">
+      <span className="text-snow/55 font-mono text-xs uppercase tracking-widest shrink-0">
         {label}
       </span>
       <span className="text-snow/80 text-right leading-tight">{value}</span>
@@ -574,7 +647,7 @@ function StageNavCard({
       href={`/${locale}/sentieri/${trail.slug}`}
       className="group block bg-white/[0.02] border border-white/5 rounded-xl p-5 hover:bg-white/[0.04] hover:border-white/10 transition-all"
     >
-      <p className="font-mono text-xs uppercase tracking-widest text-snow/40 mb-2 flex items-center gap-1.5">
+      <p className="font-mono text-xs uppercase tracking-widest text-snow/55 mb-2 flex items-center gap-1.5">
         {direction === 'prev' && <ArrowLeft size={11} />}
         {label}
         {direction === 'next' && <ArrowRight size={11} />}
@@ -582,7 +655,7 @@ function StageNavCard({
       <p className="font-display text-base leading-tight text-snow group-hover:text-alpenglow transition-colors">
         {name}
       </p>
-      <p className="text-xs text-snow/40 mt-1 font-mono">
+      <p className="text-xs text-snow/55 mt-1 font-mono">
         {trail.distance_km} km · {trail.difficulty}
       </p>
     </Link>

@@ -1,4 +1,4 @@
-import type { Trail } from './types';
+import type { Trail, TrailConditions } from './types';
 import {
   pickLocalized,
   pickLocalizedArray,
@@ -140,6 +140,18 @@ export function getTrailWarnings(trail: Trail, locale: string): string[] | undef
     en: trail.warnings_en,
     fr: trail.warnings_fr,
     de: trail.warnings_de,
+  });
+}
+
+export function getTrailConditionsNote(
+  conditions: TrailConditions,
+  locale: string
+): string {
+  return pickLocalized(locale, {
+    it: conditions.note_it,
+    en: conditions.note_en,
+    fr: conditions.note_fr,
+    de: conditions.note_de,
   });
 }
 

@@ -1,12 +1,12 @@
-import { getSpeciesById } from '@/data/species';
 import { getRefugeBySlug, getRefugeDisplayName } from '@/lib/refuges';
 import { resolvePeakIdFromName, getPeakHref } from '@/lib/environment';
-
-/** Alias slug sentiero → id specie nel catalogo */
-const SPECIES_ALIASES: Record<string, string> = {
-  genziana: 'gentiana',
-  stambeco: 'stambecco',
-};
+import {
+  getDifficultyHubHref,
+  getSpeciesHubHref,
+  getThemeHubHref,
+  getValleyHubHref,
+  resolveTrailSpeciesId,
+} from '@/lib/hubs';
 
 /** Wikipedia per vette citate nelle schede */
 const PEAK_WIKI: Record<string, { it: string; en: string }> = {
@@ -85,13 +85,14 @@ const PEAK_WIKI: Record<string, { it: string; en: string }> = {
 };
 
 export function resolveSpeciesId(slug: string): string | null {
-  const id = SPECIES_ALIASES[slug] ?? slug;
-  return getSpeciesById(id) ? id : null;
+  return resolveTrailSpeciesId(slug);
 }
 
 export function getSpeciesHref(speciesId: string): string {
-  return `/ambiente?specie=${speciesId}`;
+  return getSpeciesHubHref(speciesId);
 }
+
+export { getValleyHubHref, getDifficultyHubHref, getThemeHubHref };
 
 export function getRefugeHref(refugeSlug: string): string | null {
   return getRefugeBySlug(refugeSlug) ? `/rifugi/${refugeSlug}` : null;
@@ -117,4 +118,9 @@ export function isPeakInternalLink(peakName: string): boolean {
   return resolvePeakIdFromName(peakName) !== null;
 }
 
-export { getValleyHrefFromLabel, getMunicipalityHref, getValleyHref } from '@/lib/culture';
+export { getMunicipalityHref, getValleyHref } from '@/lib/culture';
+
+/** Link hub sentieri per valle (da label trail.valley) */
+export function getValleyHrefFromLabel(label: string): string {
+  return getValleyHubHref(label);
+}

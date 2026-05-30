@@ -7,10 +7,13 @@ import {
   getSpeciesHref,
   getValleyHrefFromLabel,
   getMunicipalityHref,
+  getDifficultyHubHref,
+  getThemeHubHref,
   isPeakInternalLink,
   resolveSpeciesId,
 } from '@/lib/trail-links';
-import type { NearbyPeak, Trail } from '@/lib/types';
+import { getLinkableThemeTagsForTrail } from '@/lib/hubs';
+import type { Difficulty, NearbyPeak, Trail } from '@/lib/types';
 
 function LinkedChip({
   href,
@@ -65,6 +68,54 @@ export function TrailFloraFaunaLinks({ slugs }: { slugs: string[] }) {
   );
 }
 
+export function TrailDifficultyLink({
+  difficulty,
+  locale = 'it',
+  children,
+}: {
+  difficulty: Difficulty;
+  locale?: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link
+      href={getDifficultyHubHref(difficulty)}
+      className="inline-flex hover:opacity-90 transition-opacity"
+      title={
+        locale === 'it'
+          ? 'Altri sentieri con questa difficoltà'
+          : locale === 'fr'
+            ? 'Autres sentiers de cette difficulté'
+            : locale === 'de'
+              ? 'Weitere Wege mit dieser Schwierigkeit'
+              : 'More trails at this difficulty'
+      }
+    >
+      {children}
+    </Link>
+  );
+}
+
+export function TrailThemeTagLinks({
+  trail,
+  getLabel,
+}: {
+  trail: Trail;
+  getLabel: (tag: string) => string;
+}) {
+  const tags = getLinkableThemeTagsForTrail(trail);
+  if (tags.length === 0) return null;
+  return (
+    <>
+      {tags.map((tag) => (
+        <LinkedChip key={tag} href={getThemeHubHref(tag)}>
+          {getLabel(tag)}
+        </LinkedChip>
+      ))}
+    </>
+  );
+}
+
 export function TrailRefugeLinks({ slugs, locale = 'it' }: { slugs: string[]; locale?: string }) {
   return (
     <>
@@ -98,7 +149,7 @@ export function TrailPeakLink({ peak, locale }: { peak: NearbyPeak; locale: stri
         ) : null}
       </p>
       <p className="font-display text-2xl text-ice tabular-nums">{peak.elevation_m} m</p>
-      <p className="text-xs text-snow/45 font-mono mt-2">
+      <p className="text-xs text-snow/55 font-mono mt-2">
         {locale === 'it' ? `${peak.distance_km} km (linea d'aria)` : `${peak.distance_km} km (as crow flies)`}
       </p>
     </>
@@ -157,19 +208,18 @@ export function TrailValleyLink({
   locale?: string;
 }) {
   const href = getValleyHrefFromLabel(label);
-  if (!href) return <span>{label}</span>;
   return (
     <Link
       href={href}
       className="text-alpenglow hover:underline"
       title={
         locale === 'it'
-          ? 'Scheda valle su Cultura'
+          ? 'Sentieri in questa valle'
           : locale === 'fr'
-            ? 'Fiche vallée sur Culture'
+            ? 'Sentiers dans cette vallée'
             : locale === 'de'
-              ? 'Talprofil auf Kultur'
-              : 'Valley profile on Culture'
+              ? 'Wege in diesem Tal'
+              : 'Trails in this valley'
       }
     >
       {label}
@@ -232,7 +282,7 @@ export function TrailRefugesSection({
   if (refugeSlugs.length === 0) return null;
   return (
     <section>
-      <p className="font-mono text-xs uppercase tracking-[0.25em] text-snow/40 mb-4">{label}</p>
+      <p className="font-mono text-xs uppercase tracking-[0.25em] text-snow/55 mb-4">{label}</p>
       <div className="flex flex-wrap gap-2">
         <TrailRefugeLinks slugs={refugeSlugs} locale={locale} />
       </div>

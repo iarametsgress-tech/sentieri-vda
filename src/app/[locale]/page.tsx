@@ -14,7 +14,13 @@ import { getAlteViaStages } from '@/lib/alte-vie';
 import { mergeTrailsGeoJSON } from '@/lib/gpx';
 import type { RouteHighlight } from '@/components/MapView';
 import { Link } from '@/i18n/routing';
+import { trailImageBlurProps } from '@/lib/blur';
 import { ArrowUpRight, Mountain, Footprints, Map, Sun } from 'lucide-react';
+
+const HOME_AV_IMAGE =
+  '/trails/alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti.webp';
+const HOME_TOUR_IMAGE =
+  '/trails/tour-mont-blanc-tappa-3-rifugio-bonatti-rifugio-elena.webp';
 
 export default async function HomePage({
   params,
@@ -164,11 +170,12 @@ export default async function HomePage({
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
-                  src="/trails/alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti.jpg"
+                  src={HOME_AV_IMAGE}
                   alt={t('featuredAvTitle')}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  {...trailImageBlurProps(HOME_AV_IMAGE)}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
                 <span className="absolute top-4 left-4 rounded-full border border-ice/40 bg-ink/70 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ice">
@@ -180,7 +187,7 @@ export default async function HomePage({
                   {t('featuredAvTitle')}
                 </h3>
                 <p className="text-sm text-snow/55 leading-relaxed mb-4">{t('featuredAvSub')}</p>
-                <span className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-snow/40 group-hover:text-ice transition-colors">
+                <span className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-snow/55 group-hover:text-ice transition-colors">
                   {t('exploreCta')}
                   <ArrowUpRight size={12} />
                 </span>
@@ -195,11 +202,12 @@ export default async function HomePage({
             >
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
-                  src="/trails/tour-mont-blanc-tappa-3-rifugio-bonatti-rifugio-elena.jpg"
+                  src={HOME_TOUR_IMAGE}
                   alt={t('featuredTourTitle')}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  {...trailImageBlurProps(HOME_TOUR_IMAGE)}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
                 <span className="absolute top-4 left-4 rounded-full border border-alpenglow/40 bg-ink/70 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-alpenglow">
@@ -211,7 +219,7 @@ export default async function HomePage({
                   {t('featuredTourTitle')}
                 </h3>
                 <p className="text-sm text-snow/55 leading-relaxed mb-4">{t('featuredTourSub')}</p>
-                <span className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-snow/40 group-hover:text-alpenglow transition-colors">
+                <span className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-snow/55 group-hover:text-alpenglow transition-colors">
                   {t('exploreCta')}
                   <ArrowUpRight size={12} />
                 </span>
@@ -247,8 +255,8 @@ export default async function HomePage({
                   <p className="mb-1.5 font-display text-xl tracking-tight text-snow">
                     {path.title}
                   </p>
-                  <p className="text-xs leading-relaxed text-snow/45">{path.sub}</p>
-                  <div className="mt-4 flex items-center gap-1 text-xs text-snow/30 transition-colors group-hover:text-snow/70">
+                  <p className="text-xs leading-relaxed text-snow/55">{path.sub}</p>
+                  <div className="mt-4 flex items-center gap-1 text-xs text-snow/50 transition-colors group-hover:text-snow/70">
                     {t('exploreCta')}
                     <ArrowUpRight
                       size={11}

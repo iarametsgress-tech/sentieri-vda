@@ -1,8 +1,15 @@
 import type { MetadataRoute } from 'next';
 import { getAllTrails } from '@/lib/trails';
 import { getAllRefuges } from '@/lib/refuges';
+import { getAllBlogSlugs } from '@/lib/blog';
 import { getMassifGroups } from '@/lib/environment';
 import { TOUR_IDS } from '@/lib/tours';
+import {
+  getAllDifficultyHubs,
+  getAllSpeciesHubs,
+  getAllThemeHubs,
+  getAllValleyHubs,
+} from '@/lib/hubs';
 import { SITE_URL } from '@/lib/config';
 import { routing } from '@/i18n/routing';
 
@@ -22,7 +29,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ambiente',
     '/cultura',
     '/avvertenze',
+    '/blog',
     '/about',
+    '/metodo',
   ];
 
   const entries: MetadataRoute.Sitemap = [];
@@ -68,6 +77,54 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
+    for (const { slug } of getAllValleyHubs()) {
+      const path = `/sentieri/valle/${slug}`;
+      entries.push({
+        url: `${BASE}/${locale}${path}`,
+        changeFrequency: 'weekly',
+        priority: 0.72,
+        alternates: {
+          languages: Object.fromEntries(locales.map((l) => [l, `${BASE}/${l}${path}`])),
+        },
+      });
+    }
+
+    for (const { slug } of getAllDifficultyHubs()) {
+      const path = `/sentieri/difficolta/${slug}`;
+      entries.push({
+        url: `${BASE}/${locale}${path}`,
+        changeFrequency: 'weekly',
+        priority: 0.72,
+        alternates: {
+          languages: Object.fromEntries(locales.map((l) => [l, `${BASE}/${l}${path}`])),
+        },
+      });
+    }
+
+    for (const { slug } of getAllThemeHubs()) {
+      const path = `/sentieri/tema/${slug}`;
+      entries.push({
+        url: `${BASE}/${locale}${path}`,
+        changeFrequency: 'weekly',
+        priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(locales.map((l) => [l, `${BASE}/${l}${path}`])),
+        },
+      });
+    }
+
+    for (const { slug } of getAllSpeciesHubs()) {
+      const path = `/sentieri/dove-vedere/${slug}`;
+      entries.push({
+        url: `${BASE}/${locale}${path}`,
+        changeFrequency: 'weekly',
+        priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(locales.map((l) => [l, `${BASE}/${l}${path}`])),
+        },
+      });
+    }
+
     for (const r of refuges) {
       entries.push({
         url: `${BASE}/${locale}/rifugi/${r.slug}`,
@@ -89,6 +146,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: Object.fromEntries(
             locales.map((l) => [l, `${BASE}/${l}/ambiente/montagne/${id}`])
+          ),
+        },
+      });
+    }
+
+    for (const slug of getAllBlogSlugs()) {
+      entries.push({
+        url: `${BASE}/${locale}/blog/${slug}`,
+        changeFrequency: 'monthly',
+        priority: 0.65,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((l) => [l, `${BASE}/${l}/blog/${slug}`])
           ),
         },
       });

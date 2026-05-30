@@ -29,12 +29,14 @@ export const TOUR_TAGS: Record<TourId, string> = {
 };
 
 export const TOUR_HERO_IMAGES: Record<TourId, string> = {
-  tmb: '/trails/monte-bianco.jpg',
-  'monte-rosa': '/trails/monte-rosa.jpg',
-  cervino: '/trails/cervino.jpg',
-  'gran-paradiso': '/trails/tour-gran-paradiso-tappa-4-eaux-rousses-rifugio-vittorio-sella.jpg',
-  rutor: '/trails/tour-rutor-tappa-2-rifugio-deffeyes-lago-rutor.jpg',
-  'gran-combin': '/trails/tour-gran-combin-tappa-3-col-gran-san-bernardo-combin-tsessione.jpg',
+  tmb: '/trails/monte-bianco.webp',
+  'monte-rosa': '/trails/monte-rosa.webp',
+  cervino: '/trails/cervino.webp',
+  'gran-paradiso':
+    '/trails/tour-gran-paradiso-tappa-4-eaux-rousses-rifugio-vittorio-sella.webp',
+  rutor: '/trails/tour-rutor-tappa-2-rifugio-deffeyes-lago-rutor.webp',
+  'gran-combin':
+    '/trails/tour-gran-combin-tappa-3-col-gran-san-bernardo-combin-tsessione.webp',
 };
 
 export const TOUR_ACCENTS: Record<
