@@ -6,8 +6,10 @@
  * usabile in MapLibre come "raster source". Licenza: open data DGR 899/2014.
  */
 
-export const SCT_WMS_URL =
-  'https://geoservizi.regione.vda.it/geoserver/sctGeoSentieri/wms';
+// Proxy same-origin — evita il blocco CORS del server WMS regionale.
+// La route /api/wms inoltra la richiesta a geoservizi.regione.vda.it
+// aggiungendo Access-Control-Allow-Origin: *.
+export const SCT_WMS_URL = '/api/wms';
 
 export const SCT_LAYERS = {
   sentieri: 'sctGeoSentieri:sentieri',
