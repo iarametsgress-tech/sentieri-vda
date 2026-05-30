@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Landmark, UtensilsCrossed, ExternalLink } from 'lucide-react';
 import LinkedText from '@/components/LinkedText';
 import type { Valley, Tradition, FoodWineItem, CulturaSectionId } from '@/lib/culture-types';
+import SceneDivider from '@/components/SceneDivider';
 import {
   getValleyName,
   getValleyEyebrow,
@@ -111,7 +112,7 @@ function ValleyCard({
         highlighted
           ? 'border-alpenglow/50 ring-2 ring-alpenglow/20'
           : 'border-white/10 hover:border-white/20'
-      } ${valley.towns.length > 2 ? 'lg:col-span-2' : ''}`}
+      }`}
     >
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
         <div className="relative aspect-[16/10] lg:aspect-auto lg:col-span-2 min-h-[200px]">
@@ -403,6 +404,14 @@ export default function CulturaExplorer({
         </div>
       </section>
 
+      <SceneDivider
+        image="/cultura/walser-titsch.jpg"
+        title={locale === 'it' ? 'Tradizioni' : 'Traditions'}
+        subtitle={locale === 'it'
+          ? 'Carnevali, costumi, musica e devozione — le radici culturali vive della Valle d\'Aosta'
+          : 'Carnivals, costumes, music and devotion — the living cultural roots of Aosta Valley'}
+      />
+
       <section id="tradizioni" className="scroll-mt-36 border-b border-white/5 bg-white/[0.01] py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mb-10 max-w-2xl">
@@ -422,6 +431,14 @@ export default function CulturaExplorer({
           </div>
         </div>
       </section>
+
+      <SceneDivider
+        image="/cultura/fontina.jpg"
+        title={locale === 'it' ? 'Cibo e Vino' : 'Food & Wine'}
+        subtitle={locale === 'it'
+          ? 'Fontina DOP, Jambon de Bosses, Lardo d\'Arnad — i sapori autentici dell\'alta quota valdostana'
+          : 'Fontina PDO, Jambon de Bosses, Lardo d\'Arnad — the authentic flavours of Valdostan high altitude'}
+      />
 
       <section id="cibo-vino" className="scroll-mt-36 py-16 lg:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">

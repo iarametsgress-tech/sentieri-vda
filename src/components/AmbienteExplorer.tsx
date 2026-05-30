@@ -55,7 +55,7 @@ const SECTIONS: {
 type PeakFilter = 'all' | '4000' | 'trails';
 
 /** Massicci esclusi dalla visualizzazione (non iconici per questo contesto). */
-const EXCLUDED_MASSIF_IDS = ['alpi-graie'];
+const EXCLUDED_MASSIF_IDS = ['alpi-graie', 'alpi-pennine'];
 
 
 interface AmbienteExplorerProps {
@@ -460,10 +460,10 @@ export default function AmbienteExplorer({
 
       <SceneDivider
         image="/trails/cervino.jpg"
-        title={isIT ? 'Montagne e Valli' : 'Mountains & Valleys'}
+        title={isIT ? 'Montagne' : 'Mountains'}
         subtitle={isIT
-          ? 'Monte Bianco, Cervino, Monte Rosa, Gran Paradiso — massicci leggendari e valli di alta quota'
-          : 'Mont Blanc, Matterhorn, Monte Rosa, Gran Paradiso — legendary massifs and high-altitude valleys'}
+          ? 'Monte Bianco, Cervino, Monte Rosa, Gran Paradiso — i massicci leggendari delle Alpi occidentali'
+          : 'Mont Blanc, Matterhorn, Monte Rosa, Gran Paradiso — legendary massifs of the Western Alps'}
       />
 
       {/* Montagne */}
@@ -549,7 +549,7 @@ export default function AmbienteExplorer({
       </section>
 
       <SceneDivider
-        image="/trails/lago-djouan-cogne.jpg"
+        image="/trails/tour-rutor-tappa-3-lago-rutor-rifugio-verney.jpg"
         title={isIT ? 'Acque e Ghiacciai' : 'Waters & Glaciers'}
         subtitle={isIT
           ? '184 ghiacciai censiti, 168 km di Dora Baltea — l\'acqua che scende dalle creste al fondovalle'
