@@ -51,10 +51,10 @@ export default function Footer() {
             {t('info')}
           </p>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/about" className="text-snow/70 hover:text-snow">{tNav('about')}</Link></li>
+            <li><Link href="/about" className="text-snow/70 hover:text-snow">{tNav('progetto')}</Link></li>
             <li><Link href="/privacy" className="text-snow/70 hover:text-snow">Privacy</Link></li>
             <li><Link href="/cookie" className="text-snow/70 hover:text-snow">Cookie</Link></li>
-            <li><Link href="/avvertenze" className="text-snow/70 hover:text-snow">Sicurezza</Link></li>
+            <li><Link href="/avvertenze" className="text-snow/70 hover:text-snow">{tNav('sicurezza')}</Link></li>
           </ul>
         </div>
       </div>

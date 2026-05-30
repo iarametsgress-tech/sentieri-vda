@@ -44,7 +44,7 @@
     "body_en": "Jambon de Bosses is a high-altitude cured ham aged in Saint-Rhémy-en-Bosses, along the Great St Bernard Valley. The tradition stems from the pass hospice's hospitality: travellers left pork legs to cure before crossing the Alps. Today the Consortium protects a European-recognised DOP product, symbol of Valdostan food craftsmanship.",
     "body_fr": "Le Jambon de Bosses est un jambon cru affiné en altitude à Saint-Rhémy-en-Bosses, dans la Vallée du Grand-Saint-Bernard. La tradition remonte à l'hospitalité du col : les voyageurs laissaient les jambons à saler avant de traverser les Alpes. Aujourd'hui, le Consortium protège un produit AOP reconnu au niveau européen, symbole de l'artisanat alimentaire valdôtain.",
     "body_de": "Der Jambon de Bosses ist ein roher Schinken, der in Saint-Rhémy-en-Bosses auf über 1.600 Metern gereift wird. Die Tradition geht auf die Gastfreundschaft des Hospizklosters zurück: Reisende ließen ihre Schweinekeulen zum Einsalzen zurück, bevor sie die Alpen überquerten. Heute schützt das Konsortium ein europaweit anerkanntes g.U.-Produkt, das Symbol des Valdostanischen Lebensmittelhandwerks.",
-    "image": "/trails/grand-saint-bernard.jpg",
+    "image": "/cultura/jambon-de-bosses.jpg",
     "official_url": "https://www.jambon-debosses.it/",
     "source": "Consorzio del Jambon de Bosses DOP"
   },
@@ -59,26 +59,24 @@
     "body_en": "Valdostan Carnival has roots in peasant rites to drive out winter and ensure fertile fields. Wooden masks, wool costumes and village festivals animate municipalities such as Verrès, Pont-Saint-Martin and Val d'Ayas. Each valley preserves local variants — grotesque figures, parodies, dances — that the Region documents as intangible heritage to pass on.",
     "body_fr": "Le Carnaval valdôtain plonge ses racines dans des rites paysans pour chasser l'hiver et propitier la fertilité des champs. Masques en bois, costumes en laine et fêtes villageoises animent des communes comme Verrès, Pont-Saint-Martin et la Val d'Ayas. Chaque vallée conserve ses variantes locales — personnages grotesques, parodies, danses — que la Région documente comme patrimoine immatériel à transmettre.",
     "body_de": "Der valdostanische Karneval wurzelt in bäuerlichen Riten zur Vertreibung des Winters und zur Förderung der Fruchtbarkeit. Holzmasken, Wollkostüme und Dorffeste beleben Gemeinden wie Verrès, Pont-Saint-Martin und das Val d'Ayas. Jedes Tal bewahrt eigene lokale Varianten — groteske Figuren, Parodien, Tänze —, die die Region als immaterielles Erbe dokumentiert.",
-    "image": "/cultura/fontina-fair.jpg",
+    "image": "/cultura/carnival.jpg",
     "official_url": "https://www.regione.vda.it/cultura",
     "source": "Regione Autonoma Valle d'Aosta — Assessorato Cultura"
   },
   {
-    "id": "mont-mars-march",
+    "id": "oropa-procession",
     "category": "devozione",
-    "title_it": "Marcia di Mont Mars",
-    "title_en": "Mont Mars pilgrimage",
-    "title_fr": "Pèlerinage au Mont Mars",
-    "title_de": "Pilgergang zum Mont Mars",
-    "body_it": "La marcia di Mont Mars è una processione religiosa che ogni anno, il 5 agosto, sale dal fondovalle di Gaby e Perloz verso l'Oratorio di Mars. Fedeli e bande musicali percorrono sentieri e mulattiere fino alla cappella di quota, dove si celebra la messa in onore della Madonna. Un rito che unisce devozione, comunità di valle e memoria storica della Bassa Valle.",
-    "body_en": "The Mont Mars pilgrimage is a religious procession that each year on 5 August climbs from the Gaby and Perloz valley floor to the Oratory of Mars. Faithful and brass bands follow trails and mule tracks to the high chapel, where Mass is celebrated in honour of the Madonna. A rite that combines devotion, valley community and Lower Valley historical memory.",
-    "body_fr": "Le pèlerinage au Mont Mars est une procession religieuse qui, chaque année le 5 août, monte depuis les vallées de Gaby et Perloz vers l'Oratoire de Mars. Fidèles et fanfares suivent sentiers et chemins muletiers jusqu'à la chapelle d'altitude, où la messe est célébrée en l'honneur de la Vierge. Un rite qui unit dévotion, communauté de vallée et mémoire historique de la Basse Vallée.",
-    "body_de": "Der Pilgergang zum Mont Mars ist eine religiöse Prozession, die jedes Jahr am 5. August vom Talboden in Gaby und Perloz zum Oratorium von Mars aufsteigt. Gläubige und Musikkapellen folgen Wegen und Saumpfaden bis zur Bergkapelle, wo eine Messe zu Ehren der Madonna gefeiert wird. Ein Ritual, das Frömmigkeit, Talgemeinschaft und historisches Gedächtnis des Untertals verbindet.",
-    "image": "/cultura/mont-mars-march.jpg",
+    "title_it": "Processione di Oropa",
+    "title_en": "Oropa pilgrimage",
+    "title_fr": "Pèlerinage à Oropa",
+    "title_de": "Wallfahrt nach Oropa",
+    "body_it": "La processione di Oropa è una delle devozioni più antiche della Bassa Valle: ogni anno fedeli da Fontainemore e dalle valli limitrofe percorrono a piedi il cammino verso il Santuario della Madonna di Oropa, nel Biellese. Bande musicali, bandiere e comunità di valle animano il pellegrinaggio che unisce fede, cammino e memoria condivisa tra Valle d'Aosta e Piemonte.",
+    "body_en": "The Oropa pilgrimage is one of the Lower Valley's oldest devotions: each year faithful from Fontainemore and neighbouring valleys walk the route to the Sanctuary of Our Lady of Oropa in Piedmont. Brass bands, banners and valley communities animate a pilgrimage that weaves together faith, walking and shared memory between Aosta Valley and Piedmont.",
+    "body_fr": "Le pèlerinage à Oropa est l'une des plus anciennes dévotions de la Basse Vallée : chaque année, des fidèles de Fontainemore et des vallées voisines parcourent à pied le chemin vers le sanctuaire de Notre-Dame d'Oropa, dans le Biellais. Fanfares, bannières et communautés de vallée animent ce pèlerinage qui unit foi, marche et mémoire partagée entre Vallée d'Aoste et Piémont.",
+    "body_de": "Die Wallfahrt nach Oropa ist eine der ältesten Frömmigkeiten des Untertals: Jedes Jahr pilgern Gläubige aus Fontainemore und den Nachbartälern zu Fuß zum Heiligtum Unserer Lieben Frau von Oropa im Piemont. Musikkapellen, Fahnen und Talgemeinschaften beleben eine Pilgerfahrt, die Glauben, Wandern und gemeinsames Gedächtnis zwischen Aostatal und Piemont verbindet.",
+    "image": "/cultura/oropa-procession.jpg",
     "official_url": "https://www.regione.vda.it/cultura",
-    "source": "Regione Autonoma Valle d'Aosta — Assessorato Cultura",
-    "image_credit": "Tenam2 (CC BY-SA 3.0)",
-    "image_source": "https://commons.wikimedia.org/wiki/File:R%C3%A9s_nat_Mont-Mars_-_Centre_de_visite.JPG"
+    "source": "Regione Autonoma Valle d'Aosta — Assessorato Cultura"
   },
   {
     "id": "coumba-freida",
@@ -91,7 +89,7 @@
     "body_en": "Coumba freida — «cold valley» in patois — is the historic carnival of Saint-Rhémy-en-Bosses and the Great St Bernard Valley. The «landzette», masked figures in wool garments and cowbells, parade through village streets in a rite evoking winter's passage. Recognised by the Region as a culturally significant event, it draws visitors from across the valley.",
     "body_fr": "La Coumba freida — « vallée froide » en patois — est le carnaval historique de Saint-Rhémy-en-Bosses et de la Vallée du Grand-Saint-Bernard. Les « landzette », personnages masqués aux habits de laine et aux sonnailles, défilent dans les rues du village dans un rite évoquant le passage de l'hiver. Reconnu par la Région comme manifestation d'intérêt culturel, il attire des visiteurs de toute la vallée.",
     "body_de": "Die Coumba freida — «kaltes Tal» im Patois — ist der historische Karneval von Saint-Rhémy-en-Bosses und dem Großen-Sankt-Bernhard-Tal. Die «Landzette», maskierte Gestalten in Wollgewändern mit Kuhglocken, ziehen durch die Dorfstraßen in einem Ritual, das den Abschied des Winters beschwört. Von der Region als kulturell bedeutende Veranstaltung anerkannt, zieht es Besucher aus dem gesamten Tal an.",
-    "image": "/trails/grand-saint-bernard.jpg",
+    "image": "/cultura/coumba-freida.jpg",
     "official_url": "https://www.regione.vda.it/cultura",
     "source": "Regione Autonoma Valle d'Aosta — Assessorato Cultura"
   },
@@ -106,7 +104,7 @@
     "body_en": "Fifres — traditional wooden flutes — and bands of musicians animate festivals, processions and village feasts across Valle d'Aosta. Valdostan folk music blends Walser, Piedmontese and Savoyard influences, with repertoires passed down orally through generations. The Fondazione Valle d'Aosta and traditional music schools protect this sonic heritage.",
     "body_fr": "Les fifres — flûtes en bois traditionnelles — et les groupes de musiciens animent fêtes, processions et foires dans toute la Vallée d'Aoste. La musique populaire valdôtaine mêle influences walser, piémontaises et savoyardes, avec des répertoires transmis oralement de génération en génération. La Fondazione Valle d'Aosta et les écoles de musique traditionnelle protègent ce patrimoine sonore.",
     "body_de": "Fifres — traditionelle Holzflöten — und Musikgruppen beleben Feste, Prozessionen und Dorffeste im gesamten Aostatal. Die valdostanische Volksmusik vereint Walser-, piemontesische und savoyardische Einflüsse mit Repertoires, die über Generationen mündlich weitergegeben wurden. Die Fondazione Valle d'Aosta und traditionelle Musikschulen schützen dieses klingende Erbe.",
-    "image": "/cultura/walser-titsch.jpg",
+    "image": "/cultura/fifres.jpg",
     "official_url": "https://www.fondazionevda.it/",
     "source": "Fondazione Valle d'Aosta per l'Educazione Permanente e la Cultura"
   },
@@ -121,7 +119,7 @@
     "body_en": "Traditional Valdostan costumes vary by valley: wool and linen garments, embroidered waistcoats, headwear and accessories that identify communities and trades. In Gressoney, Issime and Valpelline Walser costumes stand out for cut and decoration. Folk groups and ethnographic museums preserve and present these garments at festivals and cultural events.",
     "body_fr": "Les costumes traditionnels valdôtains varient selon la vallée : vêtements en laine et en lin, gilets brodés, coiffures et accessoires qui identifient communautés et métiers. À Gressoney, Issime et en Valpelline, les costumes walser se distinguent par leur coupe et leurs ornements. Groupes folkloriques et musées ethnographiques conservent et présentent ces tenues lors de fêtes et de manifestations culturelles.",
     "body_de": "Die traditionellen valdostanischen Trachten variieren von Tal zu Tal: Woll- und Leinengewänder, bestickte Westen, Kopfbedeckungen und Accessoires, die Gemeinschaften und Berufe kennzeichnen. In Gressoney, Issime und der Valpelline fallen die Walser-Trachten durch Schnitt und Verzierungen auf. Folkloregruppen und ethnografische Museen bewahren diese Kleidungsstücke und präsentieren sie bei Festen und kulturellen Veranstaltungen.",
-    "image": "/cultura/saint-ours.jpg",
+    "image": "/cultura/traditional-costumes.jpg",
     "official_url": "https://www.fondazionevda.it/",
     "source": "Fondazione Valle d'Aosta per l'Educazione Permanente e la Cultura"
   },
@@ -136,7 +134,7 @@
     "body_en": "Transhumance — the seasonal movement of herds between valley floor and alpine pastures — is still practised in Monte Rosa, Gran Paradiso and Valpelline valleys. In spring and autumn, shepherds and cattle follow ancient trails; on alpine pastures Fontina, butter and mountain cheeses are made. An ancient pastoral economy that defines Valdostan landscape and identity.",
     "body_fr": "La transhumance — le déplacement saisonnier des troupeaux entre les fonds de vallée et les alpages — est encore pratiquée dans les vallées du Mont-Rose, du Grand Paradis et de la Valpelline. Au printemps et en automne, bergers et bovins empruntent des chemins séculaires ; sur les alpages on produit Fontina, beurre et fromages de montagne. Une ancienne économie pastorale qui définit le paysage et l'identité valdôtaine.",
     "body_de": "Die Transhumanz — die saisonale Wanderung der Herden zwischen Talboden und Almweiden — wird noch heute in den Tälern des Monte Rosa, des Gran Paradiso und der Valpelline praktiziert. Im Frühjahr und Herbst folgen Hirten und Rinder uralten Wegen; auf den Almen werden Fontina, Butter und Bergkäse hergestellt. Eine uralte Weidewirtschaft, die Landschaft und Identität des Aostatals prägt.",
-    "image": "/trails/tour-gran-paradiso-tappa-1-cogne-valnontey.jpg",
+    "image": "/cultura/transhumance.jpg",
     "official_url": "https://www.fontina.it/",
     "source": "Consorzio Produttori Fontina DOP"
   },
@@ -151,10 +149,8 @@
     "body_en": "The Sant'Orso Fair, on 30 and 31 January in Aosta, is Valle d'Aosta's oldest and best-loved craft festival. Since the Middle Ages, artisans have displayed wood, stone, wrought iron and textile work along the historic centre's streets. Hundreds of stalls, music and conviviality draw tens of thousands of visitors over two days of winter celebration.",
     "body_fr": "La Foire de Saint-Ours, les 30 et 31 janvier à Aoste, est la manifestation artisanale la plus ancienne et la plus aimée de la Vallée d'Aoste. Depuis le Moyen Âge, les artisans exposent des travaux en bois, pierre, fer forgé et tissus le long des rues du centre historique. Des centaines d'étals, de la musique et une ambiance conviviale attirent des dizaines de milliers de visiteurs lors de ces deux jours de fête hivernale.",
     "body_de": "Die Sankt-Ursus-Messe, am 30. und 31. Januar in Aosta, ist das älteste und beliebteste Handwerksfestival des Aostatals. Seit dem Mittelalter stellen Handwerker Holz-, Stein-, Schmiedeeisen- und Textilarbeiten entlang der Straßen der Altstadt aus. Hunderte von Ständen, Musik und Geselligkeit locken Zehntausende von Besuchern zu diesem zweitägigen Winterfest.",
-    "image": "/cultura/saint-ours.jpg",
+    "image": "/cultura/saint-ours-fair.jpg",
     "official_url": "https://www.fieradisanorsa.it/",
-    "source": "Comune di Aosta — Fiera di Sant'Orso",
-    "image_credit": "Pampuco (CC BY 4.0)",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Jambon_alla_brace_di_Saint-Oyen_Foire_de_Sait_Ours_02.png"
+    "source": "Comune di Aosta — Fiera di Sant'Orso"
   }
 ]

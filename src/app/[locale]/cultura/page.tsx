@@ -1,24 +1,10 @@
 import { Suspense } from 'react';
-import dynamic from 'next/dynamic';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
 import { getAllValleys, getAllTraditions, getAllFoodWine } from '@/lib/culture';
-
-const CulturaExplorer = dynamic(() => import('@/components/CulturaExplorer'), {
-  ssr: false,
-  loading: () => (
-    <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 animate-pulse space-y-8">
-      <div className="flex gap-3">
-        {[1, 2, 3].map((i) => <div key={i} className="h-10 w-28 rounded-full bg-white/[0.04]" />)}
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {[1, 2, 3, 4].map((i) => <div key={i} className="h-64 rounded-2xl bg-white/[0.03]" />)}
-      </div>
-    </div>
-  ),
-});
+import CulturaExplorer from '@/components/CulturaExplorer';
 
 export async function generateMetadata({
   params,
@@ -99,6 +85,8 @@ export default async function CulturaPage({
             officialSite: t('officialSite'),
             source: t('source'),
             readMore: t('readMore'),
+            vdaFooterNote: t('vdaFooterNote'),
+            vdaFooterLink: t('vdaFooterLink'),
           }}
         />
       </Suspense>

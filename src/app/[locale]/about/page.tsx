@@ -1,26 +1,23 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { Mail } from 'lucide-react';
+import { Mail, Map, Mountain, Leaf, BookOpen } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
 import SectionPageHero from '@/components/SectionPageHero';
+import ScrollReveal from '@/components/ScrollReveal';
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const isIT = locale === 'it';
+  const t = await getTranslations({ locale, namespace: 'Progetto.meta' });
   return {
-    title: isIT ? 'Chi siamo' : 'About',
-    description: isIT
-      ? "Un progetto indipendente nato dalla passione per la Valle d'Aosta e per i sentieri di montagna."
-      : 'An independent project born from a passion for Aosta Valley and mountain trails.',
+    title: t('title'),
+    description: t('description'),
     alternates: {
       canonical: `${SITE_URL}/${locale}/about`,
-      languages: {
-        it: `${SITE_URL}/it/about`,
-        en: `${SITE_URL}/en/about`,
-      },
+      languages: localeAlternatesAbsolute('/about'),
     },
   };
 }
@@ -32,7 +29,14 @@ export default async function AboutPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('About');
+  const t = await getTranslations('Progetto');
+
+  const pillars = [
+    { icon: Map, title: t('pillarTrailsTitle'), body: t('pillarTrailsBody') },
+    { icon: Mountain, title: t('pillarAmbienteTitle'), body: t('pillarAmbienteBody') },
+    { icon: Leaf, title: t('pillarNatureTitle'), body: t('pillarNatureBody') },
+    { icon: BookOpen, title: t('pillarCultureTitle'), body: t('pillarCultureBody') },
+  ];
 
   return (
     <div>
@@ -44,77 +48,48 @@ export default async function AboutPage({
         locale={locale}
       />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pb-20 lg:pb-28">
-        <div className="max-w-2xl">
-          {locale === 'it' ? (
-          <div className="prose prose-invert prose-lg max-w-none space-y-6 text-snow/70 leading-relaxed">
-            <p>
-              Ho cominciato a camminare in Valle d'Aosta quasi per caso, una domenica di luglio con
-              le scarpe sbagliate e una cartina strappata. Poi è diventata un'abitudine, poi una
-              necessità. Oggi non riesco a immaginare un'estate senza almeno una settimana di
-              tappe sull'Alta Via 1.
-            </p>
-            <p>
-              Sentieri VdA nasce dalla frustrazione: ogni volta che cercavo informazioni
-              affidabili sui percorsi — dislivelli precisi, condizioni attuali, rifugi aperti,
-              fonti ufficiali — trovavo dati contraddittori, testi copiati da altri siti, foto
-              che non corrispondevano ai luoghi. Ho deciso di fare la cosa bene.
-            </p>
-            <p>
-              I dati che trovi qui provengono esclusivamente dal Catasto Sentieri della Regione
-              Valle d'Aosta, da OpenStreetMap e da fonti CAI verificate. Le descrizioni le
-              scrivo io, di persona, dopo aver camminato i percorsi o dopo ricerca accurata. Le
-              foto sono Wikimedia Commons con licenza CC o immagini con attribuzione esplicita.
-              Non invento nulla, non copio.
-            </p>
-            <p>
-              Questo è un progetto personale e indipendente. Non ho redazioni, sponsor, o
-              obiettivi commerciali al momento — solo l'intenzione di costruire la risorsa sui
-              sentieri valdostani che avrei voluto trovare io da escursionista. Se trovi un
-              errore, un dato impreciso o vuoi contribuire, scrivi.
-            </p>
-          </div>
-        ) : (
-          <div className="prose prose-invert prose-lg max-w-none space-y-6 text-snow/70 leading-relaxed">
-            <p>
-              I started walking in Aosta Valley almost by chance — a Sunday in July with the wrong
-              shoes and a torn map. Then it became a habit, then a necessity. Today I cannot imagine
-              a summer without at least a week of stages on the Alta Via 1.
-            </p>
-            <p>
-              Sentieri VdA was born out of frustration: every time I searched for reliable information
-              on the routes — precise elevation data, current conditions, open refuges, official
-              sources — I found contradictory data, texts copied from other sites, photos that
-              did not match the places. I decided to do it properly.
-            </p>
-            <p>
-              The data you find here comes exclusively from the Aosta Valley Region's official trail
-              registry (Catasto Sentieri), OpenStreetMap and verified CAI sources. I write the
-              descriptions myself, personally, after walking the routes or after careful research. The
-              photos are Wikimedia Commons CC-licensed images or images with explicit attribution.
-              I invent nothing, I copy nothing.
-            </p>
-            <p>
-              This is a personal, independent project. There are no editorial teams, sponsors, or
-              commercial objectives at present — only the intention to build the Aosta Valley trail
-              resource I would have wanted to find as a hiker. If you find an error, imprecise data,
-              or would like to contribute, write to me.
-            </p>
-          </div>
-        )}
+      <div className="mx-auto max-w-7xl px-6 lg:px-10 pb-20 lg:pb-28">
+        <div className="max-w-3xl">
+          <ScrollReveal>
+            <p className="text-snow/70 text-lg leading-relaxed mb-8">{t('intro')}</p>
+          </ScrollReveal>
+          <ScrollReveal delay={0.05}>
+            <p className="text-snow/60 leading-relaxed mb-14">{t('mission')}</p>
+          </ScrollReveal>
 
-        <div className="mt-12 pt-8 border-t border-white/5">
-          <p className="text-snow/40 text-sm font-mono mb-4">{t('contact')}</p>
-          <a
-            href="mailto:info@sentierivda.it"
-            className="inline-flex items-center gap-2 text-sm text-alpenglow hover:text-alpenglow/80 transition-colors"
-          >
-            <Mail size={14} />
-            info@sentierivda.it
-          </a>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 mb-16">
+            {pillars.map(({ icon: Icon, title, body }, i) => (
+              <ScrollReveal key={title} delay={i * 0.06}>
+                <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 h-full">
+                  <Icon size={22} className="text-alpenglow mb-4" />
+                  <h2 className="font-display text-xl text-snow tracking-tight mb-3">{title}</h2>
+                  <p className="text-sm text-snow/55 leading-relaxed">{body}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal>
+            <div className="rounded-2xl border border-ice/20 bg-ice/5 p-8">
+              <h2 className="font-display text-2xl text-snow tracking-tight mb-4">
+                {t('dataTitle')}
+              </h2>
+              <p className="text-snow/65 leading-relaxed">{t('dataBody')}</p>
+            </div>
+          </ScrollReveal>
+
+          <div className="mt-12 pt-8 border-t border-white/5">
+            <p className="text-snow/40 text-sm font-mono mb-4">{t('contact')}</p>
+            <a
+              href="mailto:info@sentierivda.it"
+              className="inline-flex items-center gap-2 text-sm text-alpenglow hover:text-alpenglow/80 transition-colors"
+            >
+              <Mail size={14} />
+              info@sentierivda.it
+            </a>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 }

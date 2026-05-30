@@ -86,6 +86,8 @@ interface CulturaExplorerProps {
     officialSite: string;
     source: string;
     readMore: string;
+    vdaFooterNote: string;
+    vdaFooterLink: string;
   };
 }
 
@@ -105,7 +107,7 @@ function ValleyCard({
   return (
     <motion.article
       id={`valley-${valley.id}`}
-      initial={{ opacity: 0, y: 16 }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       className={`scroll-mt-40 overflow-hidden rounded-2xl border bg-white/[0.02] transition-all ${
@@ -212,7 +214,7 @@ function TraditionCard({
   return (
     <motion.article
       id={`tradition-${item.id}`}
-      initial={{ opacity: 0, y: 16 }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       className={`scroll-mt-40 overflow-hidden rounded-2xl border bg-white/[0.02] ${
@@ -230,22 +232,8 @@ function TraditionCard({
       <div className="p-5">
         <h3 className="font-display text-xl text-snow mb-3">{getTraditionTitle(item, locale)}</h3>
         <p className="text-sm text-snow/65 leading-relaxed">
-          <LinkedText text={getTraditionBody(item, locale)} locale={locale} />
+          {getTraditionBody(item, locale)}
         </p>
-        <div className="mt-4 flex flex-wrap gap-3 items-center">
-          {item.official_url ? (
-            <a
-              href={item.official_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-alpenglow hover:text-snow"
-            >
-              {labels.officialSite}
-              <ExternalLink size={12} />
-            </a>
-          ) : null}
-          <span className="text-[10px] text-snow/35 font-mono">{item.source}</span>
-        </div>
       </div>
     </motion.article>
   );
@@ -266,7 +254,7 @@ function FoodWineCard({
   return (
     <motion.article
       id={`item-${item.id}`}
-      initial={{ opacity: 0, y: 16 }}
+      initial={false}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
       className={`scroll-mt-40 overflow-hidden rounded-2xl border bg-white/[0.02] hover:border-alpenglow/25 transition-colors ${
@@ -284,19 +272,8 @@ function FoodWineCard({
       <div className="p-5">
         <h3 className="font-display text-lg text-snow mb-2">{getFoodWineTitle(item, locale)}</h3>
         <p className="text-sm text-snow/65 leading-relaxed line-clamp-6">
-          <LinkedText text={getFoodWineBody(item, locale)} locale={locale} />
+          {getFoodWineBody(item, locale)}
         </p>
-        {item.official_url ? (
-          <a
-            href={item.official_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-alpenglow hover:text-snow"
-          >
-            {labels.officialSite}
-            <ExternalLink size={12} />
-          </a>
-        ) : null}
       </div>
     </motion.article>
   );
@@ -405,7 +382,7 @@ export default function CulturaExplorer({
       </section>
 
       <SceneDivider
-        image="/cultura/walser-titsch.jpg"
+        image="/cultura/traditions-divider.jpg"
         title={locale === 'it' ? 'Tradizioni' : 'Traditions'}
         subtitle={locale === 'it'
           ? 'Carnevali, costumi, musica e devozione — le radici culturali vive della Valle d\'Aosta'
@@ -457,6 +434,23 @@ export default function CulturaExplorer({
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="border-t border-white/8 bg-white/[0.01] py-12 lg:py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10 text-center">
+          <p className="text-snow/50 text-sm mb-4 max-w-xl mx-auto leading-relaxed">
+            {labels.vdaFooterNote}
+          </p>
+          <a
+            href="https://www.lovevda.it/it/territorio-e-cultura"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-alpenglow/30 bg-alpenglow/10 px-6 py-3 font-mono text-[11px] uppercase tracking-widest text-alpenglow hover:bg-alpenglow/20 hover:text-snow transition-colors"
+          >
+            {labels.vdaFooterLink}
+            <ExternalLink size={14} />
+          </a>
         </div>
       </section>
     </div>

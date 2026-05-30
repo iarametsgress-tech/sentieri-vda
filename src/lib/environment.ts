@@ -12,7 +12,7 @@ import {
   type PeakFilter,
   type MassifOverview,
 } from './environment-types';
-import { pickLocalized } from './locale-content';
+import { pickLocalized, pickLocalizedOptional } from './locale-content';
 
 const peaks = (peaksJson as unknown[]).map((p) => PeakSchema.parse(p));
 const massifOverviews = (massifsJson as unknown[]).map((m) => MassifOverviewSchema.parse(m));
@@ -260,4 +260,29 @@ export function getMassifOverviewText(overview: MassifOverview, locale: string):
 export function getMassifHighlights(overview: MassifOverview, locale: string): string[] {
   const list = locale === 'it' ? overview.highlights_it : overview.highlights_en;
   return list ?? [];
+}
+
+export function getMassifSectionText(
+  overview: MassifOverview,
+  locale: string,
+  field: 'geology' | 'history' | 'trails'
+): string | undefined {
+  const keyIt = `${field}_it` as keyof MassifOverview;
+  const keyEn = `${field}_en` as keyof MassifOverview;
+  return pickLocalizedOptional(locale, {
+    it: overview[keyIt] as string | undefined,
+    en: overview[keyEn] as string | undefined,
+  });
+}
+
+export function getMassifMapCenter(
+  overview: MassifOverview
+): [number, number] | undefined {
+  if (overview.map_center_lng == null || overview.map_center_lat == null) return undefined;
+  return [overview.map_center_lng, overview.map_center_lat];
+}
+
+export function getPeakDetail(peak: Peak, locale: string): string {
+  const detail = pickLocalizedOptional(locale, { it: peak.detail_it, en: peak.detail_en });
+  return detail ?? getPeakDescription(peak, locale);
 }

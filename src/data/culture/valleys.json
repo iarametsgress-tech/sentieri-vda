@@ -349,7 +349,7 @@
     "description_en": "Val di Cogne is the valley of Gran Paradiso National Park, a protected ecosystem where ibex and marmot are living symbols. Cogne, a mountain pearl, opens onto meadows, forests and trails toward the park's lakes — Djouan, Loie, Grauson. Alta Via 2 crosses the valley, linking huts and high-mountain landscapes.",
     "description_fr": "Le Val de Cogne est la vallée du Parc National du Grand Paradis, un écosystème protégé où le bouquetin et la marmotte sont des symboles vivants. Cogne, perle de montagne, ouvre sur des prairies, des forêts et des sentiers vers les lacs du parc — Djouan, Loie, Grauson. L'Alta Via 2 traverse la vallée, reliant refuges et paysages de haute montagne.",
     "description_de": "Das Cogne-Tal ist das Tal des Nationalparks Gran Paradiso, ein geschütztes Ökosystem, in dem Steinbock und Murmeltier lebende Symbole sind. Cogne, die Bergperle, öffnet sich auf Wiesen, Wälder und Wege zu den Parkseen — Djouan, Loie, Grauson. Die Alta Via 2 durchquert das Tal und verbindet Hütten und Hochgebirgslandschaften.",
-    "image": "/trails/gran-paradiso.jpg",
+    "image": "/cultura/val-di-cogne.jpg",
     "towns": [
       {
         "id": "cogne",
@@ -736,54 +736,6 @@
     ],
     "trail_labels": [
       "Champorcher"
-    ],
-    "official_url": "https://www.regione.vda.it/turismo",
-    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
-  },
-  {
-    "id": "val-di-gaby",
-    "name_it": "Valle di Gaby",
-    "name_en": "Gaby Valley",
-    "name_fr": "Vallée de Gaby",
-    "name_de": "Gaby-Tal",
-    "eyebrow_it": "Walser nascosta del Monte Rosa",
-    "eyebrow_en": "Hidden Walser valley of Monte Rosa",
-    "eyebrow_fr": "Vallée walser cachée du Mont Rose",
-    "eyebrow_de": "Verborgenes Walser-Tal des Monte Rosa",
-    "description_it": "La Valle di Gaby è una valle laterale della Val d'Ayas, stretta e walser, con il borgo di Niel come gioiello architettonico. Case in pietra scura, stretti terrazzamenti e tradizioni di pastorizia conservano un'atmosfera di tempi passati. L'Alta Via 1 scende da Gressoney verso Niel e il Rifugio Barma.",
-    "description_en": "Val di Gaby is a narrow Walser side valley of Val d'Ayas, with the village of Niel as an architectural gem. Dark-stone houses, tight terraces and pastoral traditions preserve an atmosphere of times past. Alta Via 1 descends from Gressoney toward Niel and Rifugio Barma.",
-    "description_fr": "La Vallée de Gaby est une vallée latérale étroite et walser du Val d'Ayas, avec le village de Niel comme joyau architectural. Maisons en pierre sombre, petites terrasses et traditions pastorales conservent une atmosphère d'autrefois. L'Alta Via 1 descend de Gressoney vers Niel et le Rifugio Barma.",
-    "description_de": "Das Gaby-Tal ist ein schmales Walser-Seitental des Val d'Ayas mit dem Dorf Niel als architektonischem Juwel. Dunkle Steinhäuser, enge Terrassen und Hirtentraditionen bewahren eine Atmosphäre vergangener Zeiten. Die Alta Via 1 steigt von Gressoney nach Niel und zum Rifugio Barma ab.",
-    "image": "/trails/alta-via-1-tappa-4-rifugio-barma-niel.jpg",
-    "towns": [
-      {
-        "id": "gaby",
-        "name_it": "Gaby",
-        "name_en": "Gaby",
-        "name_fr": "Gaby",
-        "name_de": "Gaby",
-        "description_it": "Gaby è il comune della valle, con frazioni come Niel e Lignana. Architettura walser, alpeggi e sentieri verso il Colle del Pinter ne fanno una meta per chi cerca autenticità lontano dalle rotte più battute.",
-        "description_en": "Gaby is the valley municipality, with hamlets such as Niel and Lignana. Walser architecture, alpine pastures and trails toward Colle del Pinter make it a destination for those seeking authenticity off the beaten path.",
-        "description_fr": "Gaby est la commune de la vallée, avec des hameaux comme Niel et Lignana. Architecture walser, alpages et sentiers vers le Col du Pinter en font une destination pour ceux qui recherchent l'authenticité loin des sentiers battus.",
-        "description_de": "Gaby ist die Talgemeinde mit Weilern wie Niel und Lignana. Walser-Architektur, Almen und Wege zum Col Pinter machen es zu einem Ziel für Authentizitätssuchende abseits der ausgetretenen Pfade.",
-        "official_url": "https://www.comune.gaby.ao.it/"
-      },
-      {
-        "id": "niel",
-        "name_it": "Niel",
-        "name_en": "Niel",
-        "name_fr": "Niel",
-        "name_de": "Niel",
-        "description_it": "Niel è il borgo walser più remoto della valle, con case in pietra scura e un'atmosfera sospesa nel tempo. Tappa dell'Alta Via 1, è raggiungibile dal Rifugio Barma lungo un sentiero panoramico.",
-        "description_en": "Niel is the valley's most remote Walser village, with dark-stone houses and a time-suspended atmosphere. An Alta Via 1 stage, it is reachable from Rifugio Barma along a scenic trail.",
-        "description_fr": "Niel est le village walser le plus reculé de la vallée, avec des maisons en pierre sombre et une atmosphère suspendue dans le temps. Étape de l'Alta Via 1, il est accessible depuis le Rifugio Barma le long d'un sentier panoramique.",
-        "description_de": "Niel ist das abgelegenste Walser-Dorf des Tals, mit dunklen Steinhäusern und einer zeitlosen Atmosphäre. Eine Etappe der Alta Via 1, ist es vom Rifugio Barma aus auf einem Panoramaweg erreichbar.",
-        "official_url": "https://www.comune.gaby.ao.it/"
-      }
-    ],
-    "trail_labels": [
-      "Valle di Gaby",
-      "Mont Mars — Valle di Gaby"
     ],
     "official_url": "https://www.regione.vda.it/turismo",
     "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"

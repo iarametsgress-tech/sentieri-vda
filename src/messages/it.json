@@ -11,9 +11,10 @@
     "floraFauna": "Flora & Fauna",
     "ambiente": "Ambiente",
     "cultura": "Cultura",
+    "sicurezza": "Sicurezza",
     "parks": "Parchi",
     "blog": "Diario",
-    "about": "Chi siamo"
+    "progetto": "Il progetto"
   },
   "Home": {
     "heroEyebrow": "Valle d'Aosta · Alpi occidentali",
@@ -22,7 +23,12 @@
     "heroCtaPrimary": "Esplora i sentieri",
     "heroCtaSecondary": "Le Alte Vie",
     "featuredEyebrow": "In evidenza",
-    "featuredTitle": "Tappe da fare almeno una volta",
+    "featuredTitle": "Grandi percorsi",
+    "featuredAvTitle": "Le Alte Vie",
+    "featuredAvSub": "Alta Via 1 dei Giganti e Alta Via 2 dei Pastori — le traversate ufficiali a tappe della Regione VdA.",
+    "featuredTourTitle": "I Tour",
+    "featuredTourSub": "Anelli attorno a Monte Bianco, Monte Rosa, Cervino, Gran Paradiso, Rutor e Gran Combin.",
+    "featuredCta": "Scopri le Alte Vie",
     "exploreMapTitle": "Tutta la regione, in una mappa",
     "exploreMapDescription": "Filtra per difficoltà, durata, dislivello. Scarica il GPX. Vai.",
     "statTrails": "Sentieri documentati",
@@ -318,7 +324,13 @@
       "summitsTitle": "Tutte le vette",
       "gallery": "Galleria delle vette",
       "readMore": "Approfondisci su Wikipedia",
-      "highlightsTitle": "In sintesi"
+      "highlightsTitle": "In sintesi",
+      "terrain3dTitle": "Visione 3D del massiccio",
+      "terrain3dHint": "Mappa interattiva con rilievo altimetrico MapTiler. Ruota e inclina per esplorare la morfologia del gruppo montuoso.",
+      "terrain3dLabel": "Modello 3D · MapTiler Terrain",
+      "geologyTitle": "Geologia",
+      "historyTitle": "Storia e cultura alpina",
+      "trailsTitle": "Sentieri e itinerari"
     }
   },
   "Cultura": {
@@ -341,7 +353,121 @@
     "townsTitle": "Comuni e borghi",
     "officialSite": "Sito ufficiale",
     "source": "Fonte",
-    "readMore": "Approfondisci"
+    "readMore": "Approfondisci",
+    "vdaFooterNote": "Per approfondimenti ufficiali su tradizioni, enogastronomia e territorio valdostano.",
+    "vdaFooterLink": "Territorio e cultura · Regione VdA"
+  },
+  "Progetto": {
+    "meta": {
+      "title": "Il progetto",
+      "description": "Sentieri VdA: guida editoriale a 360° sui sentieri, l'ambiente e la cultura della Valle d'Aosta."
+    },
+    "heroEyebrow": "Il progetto",
+    "heroTitle": "Una guida completa a 360°.",
+    "heroSubtitle": "Sentieri, ambiente, natura e cultura valdostana — raccontati con dati verificati e approfondimenti editoriali.",
+    "intro": "Sentieri VdA nasce per offrire una visione integrale del territorio alpino valdostano: non solo una lista di percorsi, ma un atlante navigabile che collega ogni tappa al paesaggio, alla geologia, alla fauna e alle radici culturali delle valli.",
+    "mission": "L'obiettivo è costruire la risorsa più completa sui sentieri della Valle d'Aosta — dalle Alte Vie ai tour intorno ai grandi massicci, dai rifugi alle vette, dall'ambiente naturale alla cultura walser e enogastronomica — con informazioni verificabili e zero invenzioni.",
+    "pillarTrailsTitle": "Sentieri e mappe",
+    "pillarTrailsBody": "Schede complete con GPX, profili altimetrici, difficoltà CAI, rifugi e avvertenze. Dati dal Catasto Sentieri Regione VdA.",
+    "pillarAmbienteTitle": "Ambiente e montagne",
+    "pillarAmbienteBody": "Massicci con schede approfondite e visione 3D, geologia, idrologia, ghiacciai e vette oltre i 4.000 metri.",
+    "pillarNatureTitle": "Flora e fauna",
+    "pillarNatureBody": "Specie catalogate con fotografie, areali e collegamenti ai sentieri dove osservarle.",
+    "pillarCultureTitle": "Cultura valdostana",
+    "pillarCultureBody": "Valli, tradizioni, enogastronomia e comuni storici lungo Alte Vie e tour.",
+    "dataTitle": "Fonti e metodo",
+    "dataBody": "I dati sui sentieri provengono esclusivamente dal Catasto Sentieri della Regione Autonoma Valle d'Aosta, da OpenStreetMap e da fonti CAI verificate. Le descrizioni sono originali; le fotografie sono attribuite (Wikimedia Commons CC o asset locali). Progetto indipendente, senza sponsor.",
+    "contact": "Contatti"
+  },
+  "Sicurezza": {
+    "meta": {
+      "title": "Sicurezza in montagna",
+      "description": "Equipaggiamento, meteo, soccorso alpino e contatti utili prima di partire per un sentiero valdostano."
+    },
+    "heroEyebrow": "Sicurezza in montagna",
+    "heroTitle": "Prima di partire, preparati.",
+    "heroSubtitle": "Responsabilità personale, equipaggiamento, meteo e soccorso: tutto quello che serve per camminare in sicurezza in Valle d'Aosta.",
+    "navEmergency": "Emergenza",
+    "navResponsibility": "Responsabilità",
+    "navEquipment": "Equipaggiamento",
+    "navWeather": "Meteo",
+    "navSignals": "Segnali",
+    "navRescue": "Soccorso",
+    "navFamily": "Famiglia",
+    "navContacts": "Contatti",
+    "emergencyTitle": "Emergenza: chiama il 118",
+    "emergencyBody": "Numero unico di emergenza valido su tutto il territorio italiano, gratuito, h24. In Valle d'Aosta il Soccorso Alpino Valdostano (SAV) interviene in quota. Se non hai campo, usa il segnale internazionale di soccorso: 6 segnali visivi o acustici al minuto, ripetuti ogni minuto.",
+    "responsibilityTitle": "Responsabilità individuale",
+    "responsibilityBody": "Le informazioni su questo sito sono divulgative. I sentieri cambiano: frane, neve tardiva, tratti chiusi. Verifica sempre le condizioni attuali sul sito della Regione VdA, al rifugio più vicino o presso la sezione CAI. Nessun sito sostituisce il tuo giudizio sul campo.",
+    "equipmentTitle": "Equipaggiamento consigliato",
+    "equipmentIntro": "Per sentieri classificati E (Escursionistico) e superiori, porta almeno quanto segue. Adatta in base a stagione, quota e meteo.",
+    "equipmentItems": [
+      "Scarpe da trekking con suola Vibram e buon sostegno alla caviglia",
+      "Abbigliamento a strati: base termica, pile, giacca impermeabile antivento",
+      "Zaino con almeno 1,5 L d'acqua (estate) e cibo di riserva",
+      "Carta topografica 1:25.000 o app offline (OsmAnd, Gaia GPS)",
+      "Telefono carico con il 118 salvato in rubrica",
+      "Kit pronto soccorso: cerotti, benda, disinfettante, coperta termica",
+      "Bastoncini da trekking su percorsi con molto dislivello",
+      "Crema solare ad alto fattore e occhiali da sole",
+      "Frontalino se escursione al mattino presto o al tramonto",
+      "Guscio termico leggero anche in estate sopra i 2.500 m"
+    ],
+    "weatherTitle": "Meteo e nivologia",
+    "weatherBody": "Controlla le previsioni nelle 24 ore precedenti su ARPA Valle d'Aosta (arpa.vda.it) o Météo France per le zone di confine. In estate i temporali pomeridiani sono frequenti: parti presto e scendi prima delle 13:00 se il cielo si copre. Non fermarti su crinali o sotto pareti durante i temporali.",
+    "signalsTitle": "Segnali di pericolo",
+    "signalItems": [
+      "Cielo che si scurisce rapidamente a ovest con nubi a sviluppo verticale",
+      "Calo repentino di temperatura anche in estate",
+      "Sentiero coperto da neve molle o ghiaccio oltre i 2.500 m anche in giugno",
+      "Segnaletica danneggiata o assente — torna indietro se perdi il filo",
+      "Stanchezza eccessiva, capogiri o mal di testa pulsante (AMS)",
+      "Scricchiolii o movimenti di neve su versanti ripidi (valanghe)"
+    ],
+    "rescueTitle": "Soccorso alpino: cosa fare",
+    "rescueIntro": "In caso di incidente, chiama il 118 e comunica con precisione:",
+    "rescueSteps": [
+      "Nome e cognome della persona che chiama e del gruppo",
+      "Posizione: nome sentiero, rifugio vicino, quota approssimativa, coordinate se disponibili",
+      "Numero di persone coinvolte e condizioni (ferito, bloccato, ipotermia)",
+      "Numero di telefono da cui chiami e se la copertura è instabile"
+    ],
+    "familyTitle": "Bambini e cani",
+    "familyBody": "Con bambini piccoli scegli percorsi T con basso dislivello. I bambini si stancano prima e termoregolano meno efficientemente. Con i cani verifica aree di protezione faunistica: nel Parco Nazionale Gran Paradiso il guinzaglio è obbligatorio su tutti i percorsi.",
+    "contactsTitle": "Link e contatti utili",
+    "contactsSubtitle": "Fonti ufficiali per condizioni sentieri, meteo e soccorso.",
+    "contactLinks": [
+      {
+        "label": "Soccorso Alpino · 118",
+        "href": "tel:118",
+        "desc": "Emergenze in montagna, h24, gratuito su tutto il territorio italiano."
+      },
+      {
+        "label": "Catasto Sentieri VdA",
+        "href": "https://www.lovevda.it/it/sport/escursionismo",
+        "desc": "Condizioni ufficiali, Alte Vie e rete sentieristica Regione Autonoma Valle d'Aosta."
+      },
+      {
+        "label": "ARPA Valle d'Aosta",
+        "href": "https://www.arpa.vda.it/meteo",
+        "desc": "Previsioni meteo e bollettini nivologici regionali."
+      },
+      {
+        "label": "Fondazione Montagna Sicura",
+        "href": "https://www.montagnasicura.org",
+        "desc": "Valanghe, nivologia e sicurezza in montagna in Valle d'Aosta."
+      },
+      {
+        "label": "CAI Valle d'Aosta",
+        "href": "https://www.caivalledaosta.it",
+        "desc": "Sezioni CAI, rifugi, escursionismo e informazioni locali."
+      },
+      {
+        "label": "Sentieri VdA",
+        "href": "mailto:info@sentierivda.it",
+        "desc": "Segnalazioni errori, suggerimenti e contributi al progetto."
+      }
+    ]
   },
   "About": {
     "heroEyebrow": "Chi siamo",

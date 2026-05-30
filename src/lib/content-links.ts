@@ -127,7 +127,7 @@ function buildLinkTerms(): LinkTerm[] {
     { label: 'Gran Paradiso', href: getMassifHref('massiccio-del-gran-paradiso') },
     { label: 'Gran Combin', href: getMassifHref('massiccio-del-gran-combin') },
     { label: 'Mont Mars', href: getPeakHref('mont-mars') },
-    { label: 'Marcia di Mont Mars', href: getTraditionHref('mont-mars-march') },
+    { label: 'Processione di Oropa', href: getTraditionHref('oropa-procession') },
     { label: 'Fiera della Fontina', href: getTraditionHref('fontina-fair') },
     { label: 'Carnevale valdostano', href: getTraditionHref('carnival') },
     { label: 'Valpelline', href: getValleyHref('valpelline') },
@@ -144,7 +144,6 @@ function buildLinkTerms(): LinkTerm[] {
     { label: 'Donnas', href: getValleyHref('bassa-valle') },
     { label: 'Pont-Saint-Martin', href: getValleyHref('bassa-valle') },
     { label: 'Saint-Rhémy-en-Bosses', href: getValleyHref('valle-gran-san-bernardo') },
-    { label: 'Gaby', href: getValleyHref('val-di-gaby') },
     { label: 'Champorcher', href: getValleyHref('champorcher') },
   ];
 

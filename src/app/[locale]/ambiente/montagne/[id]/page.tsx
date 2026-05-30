@@ -1,8 +1,10 @@
+import type { ReactNode } from 'react';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
-import { ExternalLink, ArrowLeft, Mountain } from 'lucide-react';
+import { ArrowLeft, Mountain, Layers, History, Footprints } from 'lucide-react';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
 import {
@@ -11,12 +13,20 @@ import {
   getMassifOverview,
   getMassifOverviewText,
   getMassifHighlights,
+  getMassifSectionText,
+  getMassifMapCenter,
   getPeakName,
-  getPeakDescription,
-  getPeakWikiUrl,
+  getPeakDetail,
 } from '@/lib/environment';
 import { routing } from '@/i18n/routing';
 import TrailGallery, { type GalleryImage } from '@/components/TrailGallery';
+
+const MassifTerrainMap = dynamic(() => import('@/components/MassifTerrainMap'), {
+  ssr: false,
+  loading: () => (
+    <div className="h-[420px] animate-pulse rounded-2xl bg-white/[0.04] lg:h-[480px]" />
+  ),
+});
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -36,12 +46,32 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'Ambiente.massif' });
   return {
     title: `${name} — ${t('metaTitle')}`,
-    description: getMassifOverviewText(getMassifOverview(id) ?? { id, overview_it: getPeakDescription(group.primary, 'it'), overview_en: getPeakDescription(group.primary, 'en') }, locale).slice(0, 160),
+    description: getMassifOverviewText(getMassifOverview(id) ?? { id, overview_it: getPeakDetail(group.primary, 'it'), overview_en: getPeakDetail(group.primary, 'en') }, locale).slice(0, 160),
     alternates: {
       canonical: `${SITE_URL}/${locale}/ambiente/montagne/${id}`,
       languages: localeAlternatesAbsolute(`/ambiente/montagne/${id}`),
     },
   };
+}
+
+function DetailBlock({
+  icon: Icon,
+  title,
+  children,
+}: {
+  icon: typeof Mountain;
+  title: string;
+  children: ReactNode;
+}) {
+  return (
+    <section className="rounded-2xl border border-white/10 bg-white/[0.02] p-6 lg:p-8">
+      <h2 className="mb-4 flex items-center gap-2 font-display text-xl text-snow tracking-tight">
+        <Icon size={18} className="text-ice shrink-0" />
+        {title}
+      </h2>
+      <div className="text-snow/65 leading-relaxed space-y-4">{children}</div>
+    </section>
+  );
 }
 
 export default async function MassifDetailPage({
@@ -59,8 +89,12 @@ export default async function MassifDetailPage({
   const massifName = locale === 'it' ? group.massif_it : group.massif_en;
   const overviewText = overview
     ? getMassifOverviewText(overview, locale)
-    : getPeakDescription(group.primary, locale);
+    : getPeakDetail(group.primary, locale);
   const highlights = overview ? getMassifHighlights(overview, locale) : [];
+  const geology = overview ? getMassifSectionText(overview, locale, 'geology') : undefined;
+  const history = overview ? getMassifSectionText(overview, locale, 'history') : undefined;
+  const trails = overview ? getMassifSectionText(overview, locale, 'trails') : undefined;
+  const mapCenter = overview ? getMassifMapCenter(overview) : undefined;
 
   const allPeaks = [group.primary, ...group.secondaries];
   const seenImg = new Set<string>();
@@ -71,6 +105,8 @@ export default async function MassifDetailPage({
       galleryImages.push({ src: peak.image, alt: `${getPeakName(peak, locale)} · ${peak.elevation_m} m` });
     }
   }
+
+  const isIT = locale === 'it';
 
   return (
     <article>
@@ -109,60 +145,86 @@ export default async function MassifDetailPage({
         </div>
       </section>
 
-      <div className="mx-auto max-w-4xl px-6 py-14 lg:px-10 lg:py-20">
+      <div className="mx-auto max-w-4xl px-6 py-14 lg:px-10 lg:py-20 space-y-12">
         <div className="prose-alpine max-w-none">
-          <p className="text-snow/75 text-lg leading-relaxed mb-8">{overviewText}</p>
+          <p className="text-snow/75 text-lg leading-relaxed">{overviewText}</p>
 
           {highlights.length > 0 ? (
-            <ul className="mb-12 space-y-2">
-              {highlights.map((h) => (
-                <li key={h} className="flex items-start gap-2 text-snow/65">
-                  <Mountain size={14} className="text-ice shrink-0 mt-1" />
-                  {h}
-                </li>
-              ))}
-            </ul>
+            <div className="mt-8">
+              <h2 className="font-display text-lg text-snow mb-4">{t('highlightsTitle')}</h2>
+              <ul className="space-y-2">
+                {highlights.map((h) => (
+                  <li key={h} className="flex items-start gap-2 text-snow/65">
+                    <Mountain size={14} className="text-ice shrink-0 mt-1" />
+                    {h}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ) : null}
+        </div>
 
+        {mapCenter ? (
+          <div>
+            <h2 className="font-display text-2xl text-snow tracking-tight mb-4">
+              {t('terrain3dTitle')}
+            </h2>
+            <p className="text-snow/50 text-sm mb-6 leading-relaxed">{t('terrain3dHint')}</p>
+            <MassifTerrainMap
+              center={mapCenter}
+              zoom={overview?.map_zoom ?? 10.5}
+              label={t('terrain3dLabel')}
+              hint={isIT ? 'Ruota · inclina · zoom' : 'Rotate · tilt · zoom'}
+            />
+          </div>
+        ) : null}
+
+        <div className="grid grid-cols-1 gap-6">
+          {geology ? (
+            <DetailBlock icon={Layers} title={t('geologyTitle')}>
+              <p>{geology}</p>
+            </DetailBlock>
+          ) : null}
+          {history ? (
+            <DetailBlock icon={History} title={t('historyTitle')}>
+              <p>{history}</p>
+            </DetailBlock>
+          ) : null}
+          {trails ? (
+            <DetailBlock icon={Footprints} title={t('trailsTitle')}>
+              <p>{trails}</p>
+            </DetailBlock>
+          ) : null}
+        </div>
+
+        <div>
           <h2 className="font-display text-2xl text-snow tracking-tight mb-6">
             {t('summitsTitle')}
           </h2>
           <div className="space-y-6">
-            {[group.primary, ...group.secondaries].map((peak) => {
-              const wiki = getPeakWikiUrl(peak, locale);
-              return (
-                <section
-                  key={peak.id}
-                  id={`peak-${peak.id}`}
-                  className="scroll-mt-32 rounded-2xl border border-white/10 bg-white/[0.02] p-6 lg:p-8"
-                >
-                  <div className="flex flex-wrap items-baseline justify-between gap-3 mb-4">
-                    <h3 className="font-display text-xl text-snow">{getPeakName(peak, locale)}</h3>
-                    <p className="font-display text-2xl text-ice tabular-nums">
-                      {peak.elevation_m}
-                      <span className="text-base text-snow/50 ml-1">m</span>
-                    </p>
-                  </div>
-                  <p className="text-snow/65 leading-relaxed">{getPeakDescription(peak, locale)}</p>
-                  {wiki ? (
-                    <a
-                      href={wiki}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-alpenglow hover:text-snow"
-                    >
-                      {t('readMore')}
-                      <ExternalLink size={12} />
-                    </a>
-                  ) : null}
-                </section>
-              );
-            })}
+            {[group.primary, ...group.secondaries].map((peak) => (
+              <section
+                key={peak.id}
+                id={`peak-${peak.id}`}
+                className="scroll-mt-32 rounded-2xl border border-white/10 bg-white/[0.02] p-6 lg:p-8"
+              >
+                <div className="flex flex-wrap items-baseline justify-between gap-3 mb-4">
+                  <h3 className="font-display text-xl text-snow">{getPeakName(peak, locale)}</h3>
+                  <p className="font-display text-2xl text-ice tabular-nums">
+                    {peak.elevation_m}
+                    <span className="text-base text-snow/50 ml-1">m</span>
+                  </p>
+                </div>
+                <p className="text-snow/65 leading-relaxed whitespace-pre-line">
+                  {getPeakDetail(peak, locale)}
+                </p>
+              </section>
+            ))}
           </div>
         </div>
 
         {galleryImages.length > 1 && (
-          <div className="mt-14">
+          <div>
             <TrailGallery images={galleryImages} label={t('gallery')} />
           </div>
         )}

@@ -1,7 +1,7 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Hero from '@/components/Hero';
-import TrailCard from '@/components/TrailCard';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import AdSlot from '@/components/AdSlot';
 const MapView = dynamic(() => import('@/components/MapView'), {
   ssr: false,
@@ -9,7 +9,7 @@ const MapView = dynamic(() => import('@/components/MapView'), {
 });
 import CounterStat from '@/components/CounterStat';
 import ScrollReveal from '@/components/ScrollReveal';
-import { getFeaturedTrails, getAllTrails, getTotalTrailKm, getTotalAlteViaStages } from '@/lib/trails';
+import { getAllTrails, getTotalTrailKm, getTotalAlteViaStages } from '@/lib/trails';
 import { getAlteViaStages } from '@/lib/alte-vie';
 import { mergeTrailsGeoJSON } from '@/lib/gpx';
 import type { RouteHighlight } from '@/components/MapView';
@@ -24,7 +24,6 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Home');
-  const trails = getFeaturedTrails(6);
   const trailCount = getAllTrails().length;
   const totalKm = getTotalTrailKm();
   const alteViaStages = getTotalAlteViaStages();
@@ -145,10 +144,10 @@ export default async function HomePage({
           </div>
           <ScrollReveal variant="fade-in" delay={0.2}>
             <Link
-              href="/sentieri"
+              href="/alte-vie"
               className="group hidden items-center gap-1.5 text-sm text-snow/50 transition-colors hover:text-snow sm:inline-flex"
             >
-              {t('allTrails')}
+              {t('featuredCta')}
               <ArrowUpRight
                 size={14}
                 className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -157,10 +156,68 @@ export default async function HomePage({
           </ScrollReveal>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-          {trails.map((trail, i) => (
-            <TrailCard key={trail.slug} trail={trail} index={i} />
-          ))}
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <ScrollReveal variant="fade-up" delay={0.05}>
+            <Link
+              href="/alte-vie"
+              className="group relative block overflow-hidden rounded-2xl border border-ice/20 bg-gradient-to-br from-ice/10 to-transparent transition-all duration-300 hover:-translate-y-1 hover:border-ice/45 hover:shadow-[0_16px_48px_rgba(0,0,0,0.45)]"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src="/trails/alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti.jpg"
+                  alt={t('featuredAvTitle')}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+                <span className="absolute top-4 left-4 rounded-full border border-ice/40 bg-ink/70 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ice">
+                  AV1 · AV2
+                </span>
+              </div>
+              <div className="p-8">
+                <h3 className="font-display text-2xl text-snow tracking-tight mb-2 group-hover:text-ice transition-colors">
+                  {t('featuredAvTitle')}
+                </h3>
+                <p className="text-sm text-snow/55 leading-relaxed mb-4">{t('featuredAvSub')}</p>
+                <span className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-snow/40 group-hover:text-ice transition-colors">
+                  {t('exploreCta')}
+                  <ArrowUpRight size={12} />
+                </span>
+              </div>
+            </Link>
+          </ScrollReveal>
+
+          <ScrollReveal variant="fade-up" delay={0.12}>
+            <Link
+              href="/tour"
+              className="group relative block overflow-hidden rounded-2xl border border-alpenglow/20 bg-gradient-to-br from-alpenglow/10 to-transparent transition-all duration-300 hover:-translate-y-1 hover:border-alpenglow/45 hover:shadow-[0_16px_48px_rgba(0,0,0,0.45)]"
+            >
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src="/trails/tour-mont-blanc-tappa-3-rifugio-bonatti-rifugio-elena.jpg"
+                  alt={t('featuredTourTitle')}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
+                <span className="absolute top-4 left-4 rounded-full border border-alpenglow/40 bg-ink/70 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-alpenglow">
+                  Tour
+                </span>
+              </div>
+              <div className="p-8">
+                <h3 className="font-display text-2xl text-snow tracking-tight mb-2 group-hover:text-alpenglow transition-colors">
+                  {t('featuredTourTitle')}
+                </h3>
+                <p className="text-sm text-snow/55 leading-relaxed mb-4">{t('featuredTourSub')}</p>
+                <span className="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-snow/40 group-hover:text-alpenglow transition-colors">
+                  {t('exploreCta')}
+                  <ArrowUpRight size={12} />
+                </span>
+              </div>
+            </Link>
+          </ScrollReveal>
         </div>
       </section>
 

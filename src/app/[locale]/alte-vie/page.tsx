@@ -2,12 +2,18 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import { Info } from 'lucide-react';
 import AdSlot from '@/components/AdSlot';
-import SectionPageHero from '@/components/SectionPageHero';
+import dynamic from 'next/dynamic';
 import AlteVieExplorer, { type AlteViaRouteData } from '@/components/AlteVieExplorer';
 import { getAlteViaStages, toStageSummary } from '@/lib/alte-vie';
 import { mergeTrailsGeoJSON } from '@/lib/gpx';
+import type { RouteHighlight } from '@/components/MapView';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
+
+const AlteVieHeroMap = dynamic(() => import('@/components/AlteVieHeroMap'), {
+  ssr: false,
+  loading: () => <div className="absolute inset-0 bg-ink/80 animate-pulse" aria-hidden />,
+});
 
 const HERO_AV1 = '/trails/alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti.jpg';
 const HERO_AV2 = '/trails/alta-via-2-tappa-10-cogne-rifugio-sogno-berdze.jpg';
@@ -112,6 +118,33 @@ export default async function AlteViePage({
 
   const initialRouteId = routeParam === 'av2' ? 'av2' : 'av1';
 
+  const av1Stages = getAlteViaStages('alta-via-1');
+  const av2Stages = getAlteViaStages('alta-via-2');
+  const av1Geo = mergeTrailsGeoJSON(av1Stages.map((s) => s.slug));
+  const av2Geo = mergeTrailsGeoJSON(av2Stages.map((s) => s.slug));
+
+  const heroHighlights: RouteHighlight[] = [];
+  if (av1Geo && av1Stages[0]) {
+    heroHighlights.push({
+      id: 'av1',
+      geojson: av1Geo,
+      lineColor: '#D4A574',
+      label: 'AV1',
+      href: `/${locale}/alte-vie?route=av1`,
+      labelCoords: [av1Stages[0].start.coords.lng, av1Stages[0].start.coords.lat],
+    });
+  }
+  if (av2Geo && av2Stages[0]) {
+    heroHighlights.push({
+      id: 'av2',
+      geojson: av2Geo,
+      lineColor: '#5BC0EB',
+      label: 'AV2',
+      href: `/${locale}/alte-vie?route=av2`,
+      labelCoords: [av2Stages[0].start.coords.lng, av2Stages[0].start.coords.lat],
+    });
+  }
+
   const routes: [AlteViaRouteData, AlteViaRouteData] = [
     buildRouteData('av1', 'alta-via-1', t, HERO_AV1, 'alpenglow', '#D4A574', LOVEVDA_AV1, locale),
     buildRouteData('av2', 'alta-via-2', t, HERO_AV2, 'ice', '#5BC0EB', LOVEVDA_AV2, locale),
@@ -119,13 +152,20 @@ export default async function AlteViePage({
 
   return (
     <div className="bg-ink">
-      <SectionPageHero
-        eyebrow={t('heroEyebrow')}
-        title={t('heroTitle')}
-        subtitle={t('heroSubtitle')}
-        section="alte-vie"
-        locale={locale}
-      />
+      <section className="relative min-h-[52vh] overflow-hidden lg:min-h-[60vh]">
+        <AlteVieHeroMap routeHighlights={heroHighlights} />
+        <div className="relative z-10 mx-auto flex min-h-[52vh] max-w-7xl flex-col justify-end px-6 pb-14 pt-28 lg:min-h-[60vh] lg:px-10 lg:pb-20">
+          <p className="text-on-image-eyebrow mb-5 font-mono text-xs uppercase tracking-[0.3em] text-alpenglow">
+            {t('heroEyebrow')}
+          </p>
+          <h1 className="text-on-image-title font-display text-display-lg mb-6 max-w-4xl tracking-tighter text-snow">
+            {t('heroTitle')}
+          </h1>
+          <p className="text-on-image-body max-w-2xl text-lg leading-relaxed text-snow/90">
+            {t('heroSubtitle')}
+          </p>
+        </div>
+      </section>
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-24">
         <AlteVieExplorer

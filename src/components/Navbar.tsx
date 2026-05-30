@@ -37,6 +37,7 @@ export default function Navbar({ locale }: { locale: string }) {
     { href: '/rifugi', label: t('refuges') },
     { href: '/ambiente', label: t('ambiente') },
     { href: '/cultura', label: t('cultura') },
+    { href: '/avvertenze', label: t('sicurezza') },
   ];
 
   return (

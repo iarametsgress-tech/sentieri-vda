@@ -37,8 +37,6 @@ const VALLEY_ALIASES: Record<string, string> = {
   'bassa valle — mont mars': 'bassa-valle',
   'valle del gran san bernardo': 'valle-gran-san-bernardo',
   champorcher: 'champorcher',
-  'valle di gaby': 'val-di-gaby',
-  'mont mars — valle di gaby': 'val-di-gaby',
 };
 
 /** Comuni → valle di appartenenza */
@@ -69,7 +67,6 @@ const TOWN_TO_VALLEY: Record<string, string> = {
   'saint-rhemy-en-bosses': 'valle-gran-san-bernardo',
   etroubles: 'valle-gran-san-bernardo',
   champorcher: 'champorcher',
-  gaby: 'val-di-gaby',
   issime: 'valle-del-lys',
   torgnon: 'valtournenche',
 };

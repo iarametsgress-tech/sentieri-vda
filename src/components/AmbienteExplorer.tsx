@@ -459,7 +459,7 @@ export default function AmbienteExplorer({
       </section>
 
       <SceneDivider
-        image="/trails/cervino.jpg"
+        image="/environment/glacier-miage.jpg"
         title={isIT ? 'Montagne' : 'Mountains'}
         subtitle={isIT
           ? 'Monte Bianco, Cervino, Monte Rosa, Gran Paradiso — i massicci leggendari delle Alpi occidentali'
