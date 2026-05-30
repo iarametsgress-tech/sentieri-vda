@@ -16,10 +16,10 @@ export const SECTION_HERO_IMAGES: Record<
   { src: string; altIt: string; altEn: string }
 > = {
   sentieri: {
-    // Escursionista sul sentiero — tappa AV2 in alta quota
-    src: '/trails/alta-via-2-tappa-8-eaux-rousses-rifugio-vittorio-sella.jpg',
-    altIt: 'Sentiero di alta quota in Valle d\'Aosta verso il Rifugio Vittorio Sella',
-    altEn: 'High-altitude trail in Aosta Valley towards Rifugio Vittorio Sella',
+    // Panorama Monte Bianco — Val Ferret, non usato altrove come hero di sezione
+    src: '/trails/monte-bianco.webp',
+    altIt: 'Monte Bianco e Grandes Jorasses visti da un sentiero di alta quota in Val Ferret',
+    altEn: 'Mont Blanc and Grandes Jorasses from a high-altitude trail in Val Ferret',
   },
   rifugi: {
     src: '/refuges/rifugio-bonatti.jpg',

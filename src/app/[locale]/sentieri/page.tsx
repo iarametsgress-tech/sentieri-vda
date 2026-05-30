@@ -1,11 +1,37 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { getBrowseTrails } from '@/lib/trails';
+import { getBrowseTrails, getBrowseTrailCount } from '@/lib/trails';
 import TrailsExplorer from '@/components/TrailsExplorer';
 import SectionPageHero from '@/components/SectionPageHero';
 import TrailHubExploreSection from '@/components/TrailHubExploreSection';
 import AdSlot from '@/components/AdSlot';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
+import type { Trail, BrowseTrailSummary } from '@/lib/types';
+
+/** Campi necessari a card, filtri e ricerca — evita MB di JSON inutile al client. */
+function toBrowseSummary(tr: Trail): BrowseTrailSummary {
+  return {
+    slug: tr.slug,
+    name_it: tr.name_it,
+    name_en: tr.name_en,
+    name_fr: tr.name_fr,
+    name_de: tr.name_de,
+    shortDescription_it: tr.shortDescription_it,
+    shortDescription_en: tr.shortDescription_en,
+    shortDescription_fr: tr.shortDescription_fr,
+    shortDescription_de: tr.shortDescription_de,
+    difficulty: tr.difficulty,
+    distance_km: tr.distance_km,
+    elevation_gain_m: tr.elevation_gain_m,
+    duration_hours: tr.duration_hours,
+    valley: tr.valley,
+    image: tr.image,
+    hero_image: tr.hero_image,
+    tags: tr.tags,
+    start: tr.start,
+    end: tr.end,
+  };
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -31,34 +57,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function TrailsPage({
-  params,
-  searchParams,
-}: {
-  params: Promise<{ locale: string }>;
-  searchParams: Promise<{ tag?: string }>;
-}) {
+export default async function TrailsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const { tag } = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations('Trails');
-  // Catalogo completo (curati + scheletro). Le descrizioni lunghe non servono
-  // alla lista/filtri: le rimuoviamo per non spedire MB di JSON al client.
-  const trails = getBrowseTrails().map((tr) => ({
-    ...tr,
-    description_it: '',
-    description_en: '',
-    description_fr: '',
-    description_de: '',
-    waypoints: undefined,
-  }));
+  const totalCount = getBrowseTrailCount();
+  const trails = getBrowseTrails().map(toBrowseSummary);
 
   return (
     <div>
       <SectionPageHero
         eyebrow={t('heroEyebrow')}
         title={t('title')}
-        subtitle={t('heroSubtitle', { count: trails.length })}
+        subtitle={t('heroSubtitle', { count: totalCount })}
         section="sentieri"
         locale={locale}
       />
@@ -66,7 +77,7 @@ export default async function TrailsPage({
       <div className="max-w-7xl mx-auto px-6 lg:px-10 pb-20 lg:pb-28">
         <AdSlot slot="header-billboard" className="mb-12" />
         <TrailHubExploreSection locale={locale} />
-        <TrailsExplorer trails={trails} initialTag={tag} />
+        <TrailsExplorer trails={trails} totalCount={totalCount} />
       </div>
     </div>
   );

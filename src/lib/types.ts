@@ -158,6 +158,30 @@ export const TrailSchema = z.object({
 
 export type Trail = z.infer<typeof TrailSchema>;
 
+/** Sottoinsieme di Trail per il catalogo /sentieri (card + filtri, senza payload pesante). */
+export type BrowseTrailSummary = Pick<
+  Trail,
+  | 'slug'
+  | 'name_it'
+  | 'name_en'
+  | 'name_fr'
+  | 'name_de'
+  | 'shortDescription_it'
+  | 'shortDescription_en'
+  | 'shortDescription_fr'
+  | 'shortDescription_de'
+  | 'difficulty'
+  | 'distance_km'
+  | 'elevation_gain_m'
+  | 'duration_hours'
+  | 'valley'
+  | 'image'
+  | 'hero_image'
+  | 'tags'
+  | 'start'
+  | 'end'
+>;
+
 /**
  * Scheda sentiero incompleta generata dal Catasto Sentieri (SCT).
  * Stessa struttura di Trail ma con campi editoriali vuoti/null finché non curati.

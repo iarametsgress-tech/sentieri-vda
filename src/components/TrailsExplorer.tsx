@@ -1,10 +1,11 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Search } from 'lucide-react';
 import TrailCard from './TrailCard';
-import type { Trail, Difficulty } from '@/lib/types';
+import type { Trail, BrowseTrailSummary, Difficulty } from '@/lib/types';
 import { cn } from '@/lib/cn';
 
 const DIFFICULTIES: Difficulty[] = ['T', 'E', 'EE', 'EEA', 'A'];
@@ -25,11 +26,35 @@ type RouteTag = (typeof ROUTE_TAGS)[number];
 
 export default function TrailsExplorer({
   trails,
-  initialTag,
+  totalCount,
 }: {
-  trails: Trail[];
-  initialTag?: string;
+  trails: BrowseTrailSummary[];
+  totalCount: number;
 }) {
+  return (
+    <Suspense fallback={<TrailsExplorerFallback totalCount={totalCount} />}>
+      <TrailsExplorerInner trails={trails} totalCount={totalCount} />
+    </Suspense>
+  );
+}
+
+function TrailsExplorerFallback({ totalCount }: { totalCount: number }) {
+  return (
+    <div className="py-8 text-center text-sm text-snow/50 tabular">
+      {totalCount} sentieri…
+    </div>
+  );
+}
+
+function TrailsExplorerInner({
+  trails,
+  totalCount,
+}: {
+  trails: BrowseTrailSummary[];
+  totalCount: number;
+}) {
+  const searchParams = useSearchParams();
+  const initialTag = searchParams.get('tag') ?? undefined;
   const t = useTranslations('Trails');
   const [diff, setDiff] = useState<Difficulty | 'all'>('all');
   const [valley, setValley] = useState<string>('all');
@@ -166,7 +191,7 @@ export default function TrailsExplorer({
         </div>
 
         <div className="ml-auto text-sm text-snow/50 tabular">
-          {filtered.length} / {trails.length}
+          {filtered.length} / {totalCount}
         </div>
       </div>
 
@@ -176,7 +201,7 @@ export default function TrailsExplorer({
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
             {shown.map((trail, i) => (
-              <TrailCard key={trail.slug} trail={trail} index={Math.min(i, 12)} />
+              <TrailCard key={trail.slug} trail={trail as Trail} index={Math.min(i, 12)} />
             ))}
           </div>
           {visible < filtered.length && (

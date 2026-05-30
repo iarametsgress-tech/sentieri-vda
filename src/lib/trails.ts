@@ -28,6 +28,10 @@ export function getBrowseTrails(): Trail[] {
   return browse;
 }
 
+export function getBrowseTrailCount(): number {
+  return browse.length;
+}
+
 export function getTrailBySlug(slug: string): Trail | undefined {
   return bySlug.get(slug);
 }
