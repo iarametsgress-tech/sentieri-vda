@@ -37,7 +37,7 @@ import {
   getTrailConditionsNote,
 } from '@/lib/stage-utils';
 import { extractRefugeSlugsFromTrail, getTrailGalleryImages } from '@/lib/refuges';
-import { getLinkableThemeTagsForTrail } from '@/lib/hubs';
+import { getLinkableThemeTagsForTrail, humanizeThemeTag } from '@/lib/hubs';
 import { trailImageBlurProps } from '@/lib/blur';
 import { loadTrailGeoJSON, getGpxPublicPath, gpxFileExists } from '@/lib/gpx';
 import {
@@ -433,7 +433,9 @@ export default async function TrailDetail({
                     <TrailThemeTagLinks
                       trail={trail}
                       getLabel={(tag) =>
-                        tTheme(`tags.${tag}`, { defaultValue: tag.replace(/-/g, ' ') })
+                        tTheme.has(`tags.${tag}`)
+                          ? tTheme(`tags.${tag}`)
+                          : humanizeThemeTag(tag)
                       }
                     />
                   </div>

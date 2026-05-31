@@ -6,6 +6,7 @@ import {
   getAllThemeHubs,
   getAllValleyHubs,
   getSpeciesLocalizedName,
+  humanizeThemeTag,
 } from '@/lib/hubs';
 
 export default async function TrailHubExploreSection({ locale }: { locale: string }) {
@@ -57,7 +58,11 @@ export default async function TrailHubExploreSection({ locale }: { locale: strin
             <HubLink
               key={hub.slug}
               href={`/sentieri/tema/${hub.slug}`}
-              label={tTheme(`tags.${hub.tag}`, { defaultValue: hub.tag.replace(/-/g, ' ') })}
+              label={
+                tTheme.has(`tags.${hub.tag}`)
+                  ? tTheme(`tags.${hub.tag}`)
+                  : humanizeThemeTag(hub.tag)
+              }
               count={hub.count}
               countLabel={t('trailCount', { count: hub.count })}
             />

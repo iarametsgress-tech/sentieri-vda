@@ -9,6 +9,7 @@ import {
   getAllThemeHubs,
   getHubHeroImage,
   getThemeHubBySlug,
+  humanizeThemeTag,
 } from '@/lib/hubs';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
 import type { Difficulty } from '@/lib/types';
@@ -26,7 +27,9 @@ export async function generateMetadata({
   const hub = getThemeHubBySlug(tag);
   if (!hub) return {};
   const t = await getTranslations({ locale, namespace: 'TrailHubs.theme' });
-  const themeLabel = t(`tags.${hub.tag}`, { defaultValue: hub.tag.replace(/-/g, ' ') });
+  const themeLabel = t.has(`tags.${hub.tag}`)
+    ? t(`tags.${hub.tag}`)
+    : humanizeThemeTag(hub.tag);
   const title = t('metaTitle', { theme: themeLabel, count: hub.count });
   const description = t('metaDescription', { theme: themeLabel, count: hub.count });
   const path = `/sentieri/tema/${tag}`;
@@ -60,7 +63,9 @@ export default async function ThemeHubPage({
   const t = await getTranslations('TrailHubs');
   const tTheme = await getTranslations('TrailHubs.theme');
   const tDiff = await getTranslations('Difficulty');
-  const themeLabel = tTheme(`tags.${hub.tag}`, { defaultValue: hub.tag.replace(/-/g, ' ') });
+  const themeLabel = tTheme.has(`tags.${hub.tag}`)
+    ? tTheme(`tags.${hub.tag}`)
+    : humanizeThemeTag(hub.tag);
   const stats = computeTrailStats(hub.trails);
   const diffLabels = Object.fromEntries(
     (['T', 'E', 'EE', 'EEA', 'A'] as Difficulty[]).map((d) => [d, tDiff(d)]),

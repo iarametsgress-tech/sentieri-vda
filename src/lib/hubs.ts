@@ -1,6 +1,7 @@
 import { getSpeciesById } from '@/data/species';
 import { getAllTrails } from '@/lib/trails';
 import { pickLocalized } from '@/lib/locale-content';
+import { SKELETON_TAG } from '@/lib/skeleton-trails';
 import type { Difficulty, Trail } from '@/lib/types';
 
 /** Alias slug sentiero → id specie canonico (allineato a trail-links) */
@@ -11,6 +12,7 @@ const SPECIES_ALIASES: Record<string, string> = {
 
 /** Tag di percorso / sistema — esclusi dalle hub tema */
 export const EXCLUDED_THEME_TAGS = new Set([
+  SKELETON_TAG,
   'alta-via-1',
   'alta-via-2',
   'tour',
@@ -82,6 +84,11 @@ export function slugify(text: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
+}
+
+export function humanizeThemeTag(tag: string): string {
+  const label = tag.replace(/-/g, ' ');
+  return label.charAt(0).toUpperCase() + label.slice(1);
 }
 
 export function resolveTrailSpeciesId(slug: string): string | null {
