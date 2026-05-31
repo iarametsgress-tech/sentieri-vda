@@ -3097,8 +3097,8 @@
     "municipalities": [
       "La Salle"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/_placeholder.svg",
+    "image": "/trails/_placeholder.svg",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -3163,8 +3163,8 @@
     "municipalities": [
       "La Salle"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/06-s11.webp",
+    "image": "/trails/geo/06-s11.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -3184,7 +3184,9 @@
     "gpx_path": "/gpx/06-s11.gpx",
     "sen_period": "Metà giugno - settembre",
     "signposts": 11,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Fulvio Spada from Torino, Italy — Wikimedia Commons (CC BY-SA 2.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:The_Monte_Bianco_has_grown_a_moustache_(13702384973).jpg"
   },
   {
     "slug": "06-s14",
@@ -4203,8 +4205,8 @@
     "municipalities": [
       "La Salle"
     ],
-    "hero_image": "/trails/06-s28.jpg",
-    "image": "/trails/06-s28.jpg",
+    "hero_image": "/trails/geo/06-s28.webp",
+    "image": "/trails/geo/06-s28.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -4228,8 +4230,8 @@
     "sen_period": "Giugno-settembre",
     "signposts": null,
     "enriched": true,
-    "image_credit": "Giorgio Stagni (CC BY-SA 3.0)",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Avise_-_ex_sottostazione_elettrica.jpg"
+    "image_credit": "SNappa2006 — Wikimedia Commons (CC BY 2.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Scorcio_campanile_chiesa_Arvier.jpg"
   },
   {
     "slug": "06-s29",
@@ -4275,8 +4277,8 @@
     "municipalities": [
       "La Salle"
     ],
-    "hero_image": "/trails/06-s29.jpg",
-    "image": "/trails/06-s29.jpg",
+    "hero_image": "/trails/geo/06-s29.webp",
+    "image": "/trails/geo/06-s29.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -4300,7 +4302,7 @@
     "sen_period": "Giugno-settembre",
     "signposts": null,
     "enriched": true,
-    "image_credit": "Patafisik (CC BY-SA 3.0)",
+    "image_credit": "Patafisik — Wikimedia Commons (CC BY-SA 3.0)",
     "image_source": "https://commons.wikimedia.org/wiki/File:Casaforte_di_Planaval_abc3.JPG"
   },
   {
@@ -17532,8 +17534,8 @@
     "municipalities": [
       "Châtillon"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/18-s20.webp",
+    "image": "/trails/geo/18-s20.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -17556,7 +17558,9 @@
     "gpx_path": "/gpx/18-s20.gpx",
     "sen_period": "giugno, luglio, agosto, settembre",
     "signposts": 10,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Toma15996 — Wikimedia Commons (CC BY-SA 4.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Rifugio_Lago_Barbustel_Champdepraz_1.jpg"
   },
   {
     "slug": "18-s21",
@@ -17877,8 +17881,8 @@
     "municipalities": [
       "Châtillon"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/18-s25.webp",
+    "image": "/trails/geo/18-s25.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -17901,7 +17905,9 @@
     "gpx_path": "/gpx/18-s25.gpx",
     "sen_period": "giugno, luglio, agosto, settembre",
     "signposts": null,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Fulvio Spada from Torino, Italy — Wikimedia Commons (CC BY-SA 2.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Autumn_in_the_Valle_di_Champorcher_(10833229265).jpg"
   },
   {
     "slug": "18-s26",
@@ -18015,8 +18021,8 @@
     "municipalities": [
       "Châtillon"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/_placeholder.svg",
+    "image": "/trails/_placeholder.svg",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -18291,8 +18297,8 @@
     "municipalities": [
       "Châtillon"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/18-s32.webp",
+    "image": "/trails/geo/18-s32.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -18315,7 +18321,9 @@
     "gpx_path": "/gpx/18-s32.gpx",
     "sen_period": "giugno, luglio, agosto, settembre",
     "signposts": 8,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Pampuco — Wikimedia Commons (CC BY-SA 4.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Monte_Rascias_dal_lago_Miserin_01.png"
   },
   {
     "slug": "18-s33",
@@ -18360,8 +18368,8 @@
     "municipalities": [
       "Châtillon"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/18-s33.webp",
+    "image": "/trails/geo/18-s33.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -18384,7 +18392,9 @@
     "gpx_path": "/gpx/18-s33.gpx",
     "sen_period": "luglio, agosto, settembre",
     "signposts": null,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "SergioEnricoVDA — Wikimedia Commons (CC0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Lago_e_Santuario_Miserin_Champorcher.jpg"
   },
   {
     "slug": "18-s34",
@@ -18914,8 +18924,8 @@
     "municipalities": [
       "Châtillon"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/18-s46.webp",
+    "image": "/trails/geo/18-s46.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -18938,7 +18948,9 @@
     "gpx_path": "/gpx/18-s46.gpx",
     "sen_period": "giugno, luglio, agosto, settembre",
     "signposts": null,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר — Wikimedia Commons (CC BY-SA 4.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:LagoVercocheAug012024_01.jpg"
   },
   {
     "slug": "18-s49",
@@ -19813,8 +19825,8 @@
     "municipalities": [
       "Châtillon"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/18-s67.webp",
+    "image": "/trails/geo/18-s67.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -19837,7 +19849,9 @@
     "gpx_path": "/gpx/18-s67.gpx",
     "sen_period": "luglio, agosto, settembre",
     "signposts": null,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Francesca Perseghin — Wikimedia Commons (CC BY-SA 4.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Lago_Vallette.jpg"
   },
   {
     "slug": "18-s8",
@@ -22251,8 +22265,8 @@
     "municipalities": [
       "Donnas"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/21-s13.webp",
+    "image": "/trails/geo/21-s13.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -22277,7 +22291,9 @@
     "gpx_path": "/gpx/21-s13.gpx",
     "sen_period": "Maggio - ottobre",
     "signposts": 6,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Tiia Monto — Wikimedia Commons (CC BY-SA 4.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Montroz_3.jpg"
   },
   {
     "slug": "21-s15",
@@ -23426,8 +23442,8 @@
     "municipalities": [
       "Donnas"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/21-s37.webp",
+    "image": "/trails/geo/21-s37.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -23452,7 +23468,9 @@
     "gpx_path": "/gpx/21-s37.gpx",
     "sen_period": "Maggio - Ottobre",
     "signposts": null,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר — Wikimedia Commons (CC BY-SA 4.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:LillazJuly292024_01.jpg"
   },
   {
     "slug": "21-s38",
@@ -23498,8 +23516,8 @@
     "municipalities": [
       "Donnas"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/21-s38.webp",
+    "image": "/trails/geo/21-s38.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -23523,7 +23541,9 @@
     "gpx_path": "/gpx/21-s38.gpx",
     "sen_period": "Giugno - Ottobre",
     "signposts": 17,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Marie-Lan Nguyen — Wikimedia Commons (CC BY 4.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Punta_Pousset_da_capoluogo_Cogne_2017-08_n01.jpg"
   },
   {
     "slug": "21-s39",
@@ -23570,8 +23590,8 @@
     "municipalities": [
       "Donnas"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/21-s39.webp",
+    "image": "/trails/geo/21-s39.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -23596,7 +23616,9 @@
     "gpx_path": "/gpx/21-s39.gpx",
     "sen_period": "Maggio - Ottobre",
     "signposts": 23,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Tiia Monto — Wikimedia Commons (CC BY-SA 4.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Torrent_Valnontey.jpg"
   },
   {
     "slug": "21-s4",
@@ -28894,8 +28916,8 @@
     "municipalities": [
       "Emarèse"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/23-s8.webp",
+    "image": "/trails/geo/23-s8.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -28918,7 +28940,9 @@
     "gpx_path": "/gpx/23-s8.gpx",
     "sen_period": "maggio, giugno, luglio, agosto, settembre, ottobre",
     "signposts": null,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Rosario Lepore — Wikimedia Commons (CC BY-SA 3.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Donnas_26.jpg"
   },
   {
     "slug": "23-s9",
@@ -40001,8 +40025,8 @@
     "municipalities": [
       "Issime"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/35-s1.webp",
+    "image": "/trails/geo/35-s1.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -40025,7 +40049,9 @@
     "gpx_path": "/gpx/35-s1.gpx",
     "sen_period": "Giugno , luglio , agosto , settembre",
     "signposts": 1,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Fulvio Spada from Torino, Italy — Wikimedia Commons (CC BY-SA 2.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:All_of_a_sudden_behind_a_bend_(11287059863).jpg"
   },
   {
     "slug": "35-s12",
@@ -65848,8 +65874,8 @@
     "municipalities": [
       "Valtournenche"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/68-s18.webp",
+    "image": "/trails/geo/68-s18.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -65870,7 +65896,9 @@
     "gpx_path": "/gpx/68-s18.gpx",
     "sen_period": "Luglio-agosto",
     "signposts": null,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Matseye — Wikimedia Commons (CC BY-SA 4.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Lungo_l%27alta_via_glaciale_2.jpg"
   },
   {
     "slug": "68-s19",
@@ -66123,8 +66151,8 @@
     "municipalities": [
       "Valtournenche"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/68-s21.webp",
+    "image": "/trails/geo/68-s21.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -66147,7 +66175,9 @@
     "gpx_path": "/gpx/68-s21.gpx",
     "sen_period": "Giugno-settembre",
     "signposts": null,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Francesco Cundari — Wikimedia Commons (CC BY-SA 4.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:M.te_Chateau_Blanc.jpg"
   },
   {
     "slug": "68-s22",
@@ -76215,8 +76245,8 @@
       "Valtournenche",
       "Roisan"
     ],
-    "hero_image": "",
-    "image": "",
+    "hero_image": "/trails/geo/av2-s6.webp",
+    "image": "/trails/geo/av2-s6.webp",
     "gallery": [],
     "refuges": [],
     "flora": [],
@@ -76238,7 +76268,9 @@
     "gpx_path": "/gpx/av2-s6.gpx",
     "sen_period": "luglio-settembre",
     "signposts": null,
-    "enriched": false
+    "enriched": true,
+    "image_credit": "Fulvio Spada from Torino, Italy — Wikimedia Commons (CC BY-SA 2.0)",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Chiesa_di_Rh%C3%AAmes-Notre-Dame_e_Granta_Parei_-_Val_di_Rh%C3%AAmes_(8195693475).jpg"
   },
   {
     "slug": "av2-s7",

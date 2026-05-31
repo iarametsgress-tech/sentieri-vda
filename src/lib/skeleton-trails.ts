@@ -20,6 +20,7 @@ import { TrailSchema, type Trail, type Difficulty } from './types';
 
 export const SKELETON_TAG = 'skeleton';
 const PLACEHOLDER_IMAGE = '/trails/_placeholder.svg';
+const DEFAULT_INDEX_BATCH_SIZE = 200;
 
 const VALID_DIFF: Difficulty[] = ['T', 'E', 'EE', 'EEA', 'A'];
 const FITNESS_BY_DIFF: Record<Difficulty, 1 | 2 | 3 | 4 | 5> = {
@@ -142,7 +143,30 @@ export function isEnrichedTrail(trail: Trail): boolean {
   return trail.enriched === true;
 }
 
-/** Scheletri non arricchiti restano noindex. */
+/** True solo per foto geolocalizzate con attribuzione completa. */
+export function hasVerifiedGeolocatedPhoto(trail: Trail): boolean {
+  return (
+    trail.image.startsWith('/trails/geo/') &&
+    trail.hero_image.startsWith('/trails/geo/') &&
+    Boolean(trail.image_credit && trail.image_source)
+  );
+}
+
+function indexBatchSize(): number {
+  const value = Number(process.env.SKELETON_INDEX_BATCH_SIZE ?? DEFAULT_INDEX_BATCH_SIZE);
+  return Number.isInteger(value) && value >= 0 ? value : DEFAULT_INDEX_BATCH_SIZE;
+}
+
+function isInIndexBatch(trail: Trail): boolean {
+  const indexableSlugs = getSkeletonTrails()
+    .filter((candidate) => candidate.enriched === true && hasVerifiedGeolocatedPhoto(candidate))
+    .map((candidate) => candidate.slug)
+    .sort()
+    .slice(0, indexBatchSize());
+  return indexableSlugs.includes(trail.slug);
+}
+
+/** Scheletri senza foto verificata o oltre la soglia di rollout restano noindex. */
 export function shouldIndexTrail(trail: Trail): boolean {
-  return !isSkeletonTrail(trail) || isEnrichedTrail(trail);
+  return !isSkeletonTrail(trail) || (isEnrichedTrail(trail) && isInIndexBatch(trail));
 }

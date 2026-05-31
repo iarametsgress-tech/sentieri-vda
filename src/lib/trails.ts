@@ -1,7 +1,7 @@
 import trailsJson from '@/data/trails.json';
 import routesJson from '@/data/trails-routes.json';
 import { TrailSchema, type Trail } from './types';
-import { getSkeletonTrails } from './skeleton-trails';
+import { getSkeletonTrails, shouldIndexTrail } from './skeleton-trails';
 
 /** Sentieri editoriali curati (con foto, descrizioni e arricchimento verificato). */
 const parsed = [...trailsJson, ...routesJson].map((t) => TrailSchema.parse(t));
@@ -19,7 +19,7 @@ const bySlug = new Map(browse.map((t) => [t.slug, t]));
  * Gli scheletri non ancora arricchiti restano fuori dall'indicizzazione.
  */
 export function getAllTrails(): Trail[] {
-  const enrichedSkeletons = skeletons.filter((t) => t.enriched === true);
+  const enrichedSkeletons = skeletons.filter(shouldIndexTrail);
   return [...parsed, ...enrichedSkeletons];
 }
 

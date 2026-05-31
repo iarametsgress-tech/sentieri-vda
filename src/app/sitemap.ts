@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getAllTrails, getBrowseTrails } from '@/lib/trails';
-import { isEnrichedTrail } from '@/lib/skeleton-trails';
+import { shouldIndexTrail } from '@/lib/skeleton-trails';
 import { getAllRefuges } from '@/lib/refuges';
 import { getAllBlogSlugs } from '@/lib/blog';
 import { getMassifGroups } from '@/lib/environment';
@@ -79,7 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
 
     for (const t of getBrowseTrails()) {
-      if (!isEnrichedTrail(t)) continue;
+      if (!shouldIndexTrail(t)) continue;
       if (trails.some((c) => c.slug === t.slug)) continue;
       entries.push({
         url: `${BASE}/${locale}/sentieri/${t.slug}`,

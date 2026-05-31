@@ -251,6 +251,16 @@ export default async function TrailDetail({
               : trailImageBlurProps(iconicImage))}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent pointer-events-none" />
+          {trail.image_credit && trail.image_source && (
+            <a
+              href={trail.image_source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-2 right-3 z-10 rounded bg-ink/55 px-2 py-1 font-mono text-[10px] text-snow/60 transition-colors hover:text-snow"
+            >
+              © {trail.image_credit}
+            </a>
+          )}
         </div>
         <div id={TRAIL_HERO_SENTINEL_ID} className="h-0 w-full" aria-hidden />
       </header>
