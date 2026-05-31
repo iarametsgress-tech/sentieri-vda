@@ -6,6 +6,8 @@ import { GeistMono } from 'geist/font/mono';
 import { Fraunces } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import AdSenseScript from '@/components/AdSenseScript';
@@ -81,6 +83,8 @@ export default async function LocaleLayout({
           <Footer />
         </NextIntlClientProvider>
         <AdSenseScript />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
