@@ -30,12 +30,14 @@
     "audit:img": "tsx scripts/audit-images.ts",
     "optimize:heroes": "tsx scripts/optimize-hero-images.ts",
     "blur": "tsx scripts/generate-blur.ts",
-    "refetch:heroes": "node scripts/refetch-hero-images.mjs"
+    "refetch:heroes": "node scripts/refetch-hero-images.mjs",
+    "upload:blob": "tsx scripts/upload-photos-blob.ts"
   },
   "dependencies": {
     "@21st-sdk/agent": "^0.0.18",
     "@tmcw/togeojson": "^5.8.1",
     "@vercel/analytics": "^2.0.1",
+    "@vercel/blob": "^2.4.0",
     "@vercel/speed-insights": "^2.0.0",
     "@xmldom/xmldom": "^0.9.10",
     "clsx": "^2.1.1",

@@ -20,3 +20,6 @@ tsconfig.tsbuildinfo
 
 # Foto sentieri scaricate senza attribuzione verificata (da non ridistribuire)
 public/trails/[0-9][0-9]-s*.webp
+
+# Foto sentieri geolocalizzate: ospitate su Vercel Blob, non in git
+public/trails/geo/
