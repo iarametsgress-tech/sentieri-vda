@@ -144,14 +144,14 @@ export function isEnrichedTrail(trail: Trail): boolean {
   return trail.enriched === true;
 }
 
-/** True solo per foto geolocalizzate con attribuzione completa.
- *  Riconosce sia i path locali (/trails/geo/...) sia gli URL su Vercel Blob
- *  (https://…blob.vercel-storage.com/trails/geo/…). */
+/** True se ha una foto REALE verificata con attribuzione completa: non il
+ *  placeholder, e con credito + fonte. Copre foto su Vercel Blob, /trails/geo/
+ *  e i .jpg verificati committati. */
 export function hasVerifiedGeolocatedPhoto(trail: Trail): boolean {
-  const isGeo = (s: string) => s.includes('/trails/geo/');
+  const isReal = (s: string) => Boolean(s) && !s.includes('_placeholder');
   return (
-    isGeo(trail.image) &&
-    isGeo(trail.hero_image) &&
+    isReal(trail.image) &&
+    isReal(trail.hero_image) &&
     Boolean(trail.image_credit && trail.image_source)
   );
 }
