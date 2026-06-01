@@ -10,6 +10,7 @@ import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SiteJsonLd from '@/components/SiteJsonLd';
 import AdSenseScript from '@/components/AdSenseScript';
 import { SITE_URL } from '@/lib/config';
 import {
@@ -77,6 +78,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${GeistSans.variable} ${GeistMono.variable} ${fraunces.variable}`}>
       <body className="bg-ink text-snow min-h-screen flex flex-col antialiased">
+        <SiteJsonLd />
         <NextIntlClientProvider messages={messages}>
           <Navbar locale={locale} />
           <main className="flex-1">{children}</main>

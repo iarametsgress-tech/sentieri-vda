@@ -9,6 +9,7 @@ import {
   getAllValleyHubs,
   getHubHeroImage,
   getValleyHubBySlug,
+  getValleyHubLabel,
 } from '@/lib/hubs';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
 import type { Difficulty } from '@/lib/types';
@@ -25,9 +26,10 @@ export async function generateMetadata({
   const { locale, valley } = await params;
   const hub = getValleyHubBySlug(valley);
   if (!hub) return {};
+  const valleyLabel = getValleyHubLabel(valley, locale);
   const t = await getTranslations({ locale, namespace: 'TrailHubs.valley' });
-  const title = t('metaTitle', { valley: hub.label, count: hub.count });
-  const description = t('metaDescription', { valley: hub.label, count: hub.count });
+  const title = t('metaTitle', { valley: valleyLabel, count: hub.count });
+  const description = t('metaDescription', { valley: valleyLabel, count: hub.count });
   const path = `/sentieri/valle/${valley}`;
   return {
     title,
@@ -56,6 +58,7 @@ export default async function ValleyHubPage({
   const hub = getValleyHubBySlug(valley);
   if (!hub) notFound();
 
+  const valleyLabel = getValleyHubLabel(valley, locale);
   const t = await getTranslations('TrailHubs');
   const tValley = await getTranslations('TrailHubs.valley');
   const tDiff = await getTranslations('Difficulty');
@@ -65,10 +68,10 @@ export default async function ValleyHubPage({
   ) as Record<Difficulty, string>;
   const diffRange = formatDifficultyRange(stats.difficulties, locale, diffLabels);
 
-  const title = tValley('title', { valley: hub.label, count: hub.count });
+  const title = tValley('title', { valley: valleyLabel, count: hub.count });
   const intro = tValley('intro', {
     count: hub.count,
-    valley: hub.label,
+    valley: valleyLabel,
     diffRange,
     minGain: stats.minGain,
     maxGain: stats.maxGain,
@@ -84,7 +87,7 @@ export default async function ValleyHubPage({
     breadcrumbs: [
       { name: t('breadcrumbHome'), path: '' },
       { name: t('breadcrumbTrails'), path: '/sentieri' },
-      { name: hub.label, path },
+      { name: valleyLabel, path },
     ],
   });
 
@@ -99,7 +102,7 @@ export default async function ValleyHubPage({
       breadcrumbs={[
         { label: t('breadcrumbHome'), href: '/' },
         { label: t('breadcrumbTrails'), href: '/sentieri' },
-        { label: hub.label },
+        { label: valleyLabel },
       ]}
       jsonLd={jsonLd}
     />

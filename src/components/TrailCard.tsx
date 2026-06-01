@@ -6,6 +6,7 @@ import { useLocale } from 'next-intl';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { TrendingUp, Clock, Mountain, ArrowUpRight } from 'lucide-react';
+import { formatDistanceLabel } from '@/lib/format';
 import type { Trail } from '@/lib/types';
 import { getTrailLocalizedName, getTrailLocalizedShortDesc } from '@/lib/stage-utils';
 import { trailImageBlurProps } from '@/lib/blur';
@@ -117,7 +118,7 @@ export default function TrailCard({
         <div className="flex items-center gap-5 border-t border-white/[0.07] pt-4 text-xs tabular text-snow/55">
           <span className="flex items-center gap-1.5">
             <TrendingUp size={12} />
-            {trail.distance_km.toFixed(1)} km
+            {formatDistanceLabel(trail.distance_km)}
           </span>
           <span className="flex items-center gap-1.5">
             <Mountain size={12} />+{trail.elevation_gain_m} m

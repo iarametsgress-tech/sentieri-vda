@@ -1,23 +1,24 @@
 import { Link } from '@/i18n/routing';
 import { getTranslations } from 'next-intl/server';
+import { getValleyById, getValleyName } from '@/lib/culture';
+import { getCultureThemeLabel, getAllCultureThemeHubs } from '@/lib/culture-theme-hubs';
 import {
   getAllDifficultyHubs,
   getAllSpeciesHubs,
-  getAllThemeHubs,
   getAllValleyHubs,
+  getExploreMassifLinks,
   getSpeciesLocalizedName,
-  humanizeThemeTag,
 } from '@/lib/hubs';
 
 export default async function TrailHubExploreSection({ locale }: { locale: string }) {
   const t = await getTranslations('TrailHubs');
   const tDiff = await getTranslations('TrailHubs.difficulty');
-  const tTheme = await getTranslations('TrailHubs.theme');
 
   const valleys = getAllValleyHubs();
   const difficulties = getAllDifficultyHubs();
-  const themes = getAllThemeHubs();
-  const species = getAllSpeciesHubs().slice(0, 12);
+  const cultureThemes = getAllCultureThemeHubs();
+  const massifs = getExploreMassifLinks(locale);
+  const species = getAllSpeciesHubs();
 
   return (
     <section className="mb-16 border-t border-white/10 pt-14">
@@ -30,15 +31,19 @@ export default async function TrailHubExploreSection({ locale }: { locale: strin
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
         <HubGroup title={t('byValley')}>
-          {valleys.map((hub) => (
-            <HubLink
-              key={hub.slug}
-              href={`/sentieri/valle/${hub.slug}`}
-              label={hub.label}
-              count={hub.count}
-              countLabel={t('trailCount', { count: hub.count })}
-            />
-          ))}
+          {valleys.map((hub) => {
+            const valley = getValleyById(hub.slug);
+            const label = valley ? getValleyName(valley, locale) : hub.label;
+            return (
+              <HubLink
+                key={hub.slug}
+                href={`/sentieri/valle/${hub.slug}`}
+                label={label}
+                count={hub.count}
+                countLabel={t('trailCount', { count: hub.count })}
+              />
+            );
+          })}
         </HubGroup>
 
         <HubGroup title={t('byDifficulty')}>
@@ -54,22 +59,32 @@ export default async function TrailHubExploreSection({ locale }: { locale: strin
         </HubGroup>
 
         <HubGroup title={t('byTheme')}>
-          {themes.map((hub) => (
+          {cultureThemes.map((hub) => (
             <HubLink
               key={hub.slug}
               href={`/sentieri/tema/${hub.slug}`}
-              label={
-                tTheme.has(`tags.${hub.tag}`)
-                  ? tTheme(`tags.${hub.tag}`)
-                  : humanizeThemeTag(hub.tag)
-              }
+              label={getCultureThemeLabel(hub.themeId, locale)}
               count={hub.count}
               countLabel={t('trailCount', { count: hub.count })}
             />
           ))}
         </HubGroup>
 
-        <HubGroup title={t('bySpecies')}>
+        <HubGroup title={t('byMountain')}>
+          {massifs.map((massif) => (
+            <HubLink
+              key={massif.id}
+              href={massif.href}
+              label={massif.label}
+              count={massif.count}
+              countLabel={
+                massif.count != null ? t('trailCount', { count: massif.count }) : undefined
+              }
+            />
+          ))}
+        </HubGroup>
+
+        <HubGroup title={t('bySpecies')} className="lg:col-span-2">
           {species.map((hub) => (
             <HubLink
               key={hub.slug}
@@ -79,20 +94,23 @@ export default async function TrailHubExploreSection({ locale }: { locale: strin
               countLabel={t('trailCount', { count: hub.count })}
             />
           ))}
-          {getAllSpeciesHubs().length > species.length && (
-            <p className="mt-3 text-xs font-mono uppercase tracking-widest text-snow/45">
-              {t('moreSpecies', { count: getAllSpeciesHubs().length - species.length })}
-            </p>
-          )}
         </HubGroup>
       </div>
     </section>
   );
 }
 
-function HubGroup({ title, children }: { title: string; children: React.ReactNode }) {
+function HubGroup({
+  title,
+  children,
+  className,
+}: {
+  title: string;
+  children: React.ReactNode;
+  className?: string;
+}) {
   return (
-    <div>
+    <div className={className}>
       <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.25em] text-alpenglow">
         {title}
       </h3>
@@ -109,8 +127,8 @@ function HubLink({
 }: {
   href: string;
   label: string;
-  count: number;
-  countLabel: string;
+  count?: number;
+  countLabel?: string;
 }) {
   return (
     <li>
@@ -119,10 +137,14 @@ function HubLink({
         className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-sm text-snow/75 transition-colors hover:border-alpenglow/40 hover:bg-alpenglow/10 hover:text-snow"
       >
         <span>{label}</span>
-        <span className="font-mono text-[10px] uppercase tracking-widest text-snow/45">
-          {count}
-        </span>
-        <span className="sr-only">{countLabel}</span>
+        {count != null && count > 0 && (
+          <>
+            <span className="font-mono text-[10px] uppercase tracking-widest text-snow/45">
+              {count}
+            </span>
+            {countLabel && <span className="sr-only">{countLabel}</span>}
+          </>
+        )}
       </Link>
     </li>
   );

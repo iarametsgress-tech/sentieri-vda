@@ -131,16 +131,19 @@
       "tags": "Themes and features"
     },
     "searchPlaceholder": "Search a trail…",
-    "showMore": "Show {n} more"
+    "showMore": "Show {n} more",
+    "indexByValleyTitle": "Trail index by valley",
+    "indexByValleySubtitle": "{count} trails with full pages, GPX tracks and official registry data — direct links by valley."
   },
   "TrailHubs": {
     "breadcrumbHome": "Home",
     "breadcrumbTrails": "Trails",
-    "exploreTitle": "Explore by valley, difficulty, theme and wildlife",
-    "exploreSubtitle": "Verified trail collections — same catalog data, organised the way people search on maps and Google.",
+    "exploreTitle": "Explore by valley, difficulty, culture, mountains and nature",
+    "exploreSubtitle": "Verified trail collections linked to Culture and Environment guides — organised the way people search on maps and Google.",
     "byValley": "By valley",
     "byDifficulty": "By difficulty",
     "byTheme": "By theme",
+    "byMountain": "By mountain",
     "bySpecies": "Where to spot",
     "trailCount": "{count, plural, one {# trail} other {# trails}}",
     "moreSpecies": "+{count} more species in the catalog",
@@ -166,10 +169,15 @@
     },
     "theme": {
       "eyebrow": "Trails by theme",
+      "eyebrowCulture": "Trails and culture",
       "title": "{count, plural, one {# trail · {theme}} other {# trails · {theme}}}",
+      "titleCulture": "{count, plural, one {The {theme} trail} other {Trails and {theme}}}",
       "intro": "{count, plural, one {One trail tagged {theme}: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.} other {{count} trails tagged {theme}: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.}}",
+      "introCulture": "{count, plural, one {One trail linked to {theme} — a local tradition or typical product: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.} other {{count} trails linked to {theme} — traditions and flavours along the route: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.}}",
       "metaTitle": "{theme} trails ({count})",
+      "metaTitleCulture": "Trails and {theme} ({count})",
       "metaDescription": "{count} {theme} trails in the Aosta Valley — maps, GPX and full guides.",
+      "metaDescriptionCulture": "{count} trails linked to {theme} in the Aosta Valley — maps, GPX and cultural notes.",
       "tags": {
         "cervino": "Matterhorn",
         "col-champillon": "Col Champillon",
@@ -192,6 +200,13 @@
       "intro": "{count, plural, one {One trail where {species} is listed in flora/fauna: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.} other {{count} trails where {species} is listed in flora/fauna: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.}}",
       "metaTitle": "Where to see {species} — {count} trails",
       "metaDescription": "{count} Aosta Valley trails to observe {species}: maps, GPX and verified naturalist notes."
+    },
+    "massif": {
+      "eyebrow": "Trails by mountain",
+      "title": "{count, plural, one {# trail on {massif}} other {# trails on {massif}}}",
+      "intro": "{count, plural, one {One documented trail in the {massif} massif: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.} other {{count} documented trails in the {massif} massif: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.}}",
+      "metaTitle": "Trails on {massif} ({count})",
+      "metaDescription": "{count} trails in the {massif} massif, Aosta Valley: maps, GPX and full guides."
     }
   },
   "Difficulty": {
@@ -211,7 +226,10 @@
     "newsletterCta": "Subscribe",
     "rights": "All rights reserved.",
     "newsletterSuccess": "You're subscribed. See you on the trail.",
-    "newsletterError": "Something went wrong. Please try again shortly."
+    "newsletterError": "Something went wrong. Please try again shortly.",
+    "contactsTitle": "Contact",
+    "contactsIntro": "Report issues, share tips or suggest improvements:",
+    "contactsInstagram": "Instagram"
   },
   "AlteVie": {
     "meta": {

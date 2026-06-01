@@ -1,0 +1,23 @@
+{
+  "skill_name": "trail-description-writer",
+  "evals": [
+    {
+      "id": 0,
+      "name": "cultural-trail-torgnon",
+      "prompt": "Arricchisci la scheda del sentiero con slug 02-s11 (Poutaz - Triatel, comune di Torgnon, Valtournenche) leggendo i dati di partenza dallo scheletro in src/data/trails-skeleton.json. Scrivi description_it e shortDescription_it editoriali, poi traduci in en/fr/de, e compila i campi profondi che riesci a verificare (cultural_notes, water_sources, transport, warnings, waypoints). Triatel è noto per un antico nucleo rurale walser/rascard: includi note culturali solo se le verifichi su fonti affidabili. Non inventare quote, tempi o toponimi: se un dato non è verificato, lascialo null e segnalalo.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "lake-hike-grand-lac",
+      "prompt": "Arricchisci la scheda del sentiero con slug 07-s22 (Blanchard - Grand Lac) leggendo i dati di partenza dallo scheletro in src/data/trails-skeleton.json. Scrivi description_it e shortDescription_it editoriali (~200 parole), traduci in en/fr/de, e compila i campi profondi verificabili (water_sources, transport, parking, warnings, waypoints, nearby_peaks). Non inventare nulla di non verificato: campo null + segnalazione.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "obscure-local-path",
+      "prompt": "Arricchisci la scheda del sentiero con slug 01-s10 (Feilley - Moron, Valtournenche) leggendo i dati dallo scheletro in src/data/trails-skeleton.json. È un breve sentiero locale poco documentato. Scrivi description_it e shortDescription_it editoriali e traduci in en/fr/de. Per i campi profondi (geology, cultural_notes, ecc.) compila SOLO ciò che riesci a verificare su fonti affidabili; per tutto il resto lascia null e segnalalo esplicitamente. Non inventare per riempire.",
+      "files": []
+    }
+  ]
+}

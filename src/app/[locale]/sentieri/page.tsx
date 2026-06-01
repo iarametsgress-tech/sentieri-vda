@@ -1,10 +1,12 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { getBrowseTrails, getBrowseTrailCount } from '@/lib/trails';
+import { getBrowseTrails, getBrowseTrailCount, getIndexableTrails } from '@/lib/trails';
 import TrailsExplorer from '@/components/TrailsExplorer';
 import SectionPageHero from '@/components/SectionPageHero';
 import TrailHubExploreSection from '@/components/TrailHubExploreSection';
+import TrailsValleyIndex from '@/components/TrailsValleyIndex';
 import AdSlot from '@/components/AdSlot';
 import { SITE_URL } from '@/lib/config';
+import { buildTrailsCatalogJsonLd } from '@/lib/seo';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
 import type { Trail, BrowseTrailSummary } from '@/lib/types';
 
@@ -63,9 +65,15 @@ export default async function TrailsPage({ params }: { params: Promise<{ locale:
   const t = await getTranslations('Trails');
   const totalCount = getBrowseTrailCount();
   const trails = getBrowseTrails().map(toBrowseSummary);
+  const indexableCount = getIndexableTrails().length;
+  const catalogJsonLd = buildTrailsCatalogJsonLd(locale, indexableCount);
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(catalogJsonLd) }}
+      />
       <SectionPageHero
         eyebrow={t('heroEyebrow')}
         title={t('title')}
@@ -78,6 +86,7 @@ export default async function TrailsPage({ params }: { params: Promise<{ locale:
         <AdSlot slot="header-billboard" className="mb-12" />
         <TrailHubExploreSection locale={locale} />
         <TrailsExplorer trails={trails} totalCount={totalCount} />
+        <TrailsValleyIndex locale={locale} />
       </div>
     </div>
   );

@@ -1,6 +1,10 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { Mail, Instagram } from 'lucide-react';
 import NewsletterForm from '@/components/NewsletterForm';
+import { SITE_AUTHOR } from '@/lib/config';
+
+const INSTAGRAM_URL = 'https://www.instagram.com/_ramets/';
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -53,6 +57,41 @@ export default function Footer() {
             <li><Link href="/privacy" className="text-snow/70 hover:text-snow">Privacy</Link></li>
             <li><Link href="/cookie" className="text-snow/70 hover:text-snow">Cookie</Link></li>
             <li><Link href="/avvertenze" className="text-snow/70 hover:text-snow">{tNav('sicurezza')}</Link></li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-white/5 bg-white/[0.02]">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-10">
+          <p className="font-mono text-xs uppercase tracking-widest text-alpenglow mb-2">
+            {t('contactsTitle')}
+          </p>
+          <p className="text-sm text-snow/60 mb-5 max-w-xl leading-relaxed">
+            {t('contactsIntro')}
+          </p>
+          <ul className="flex flex-col sm:flex-row sm:flex-wrap gap-4 sm:gap-8 text-sm">
+            <li>
+              <a
+                href={`mailto:${SITE_AUTHOR.email}`}
+                className="inline-flex items-center gap-2.5 text-snow/80 hover:text-alpenglow transition-colors"
+              >
+                <Mail size={16} aria-hidden />
+                {SITE_AUTHOR.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 text-snow/80 hover:text-alpenglow transition-colors"
+                aria-label={`${t('contactsInstagram')} @_ramets`}
+              >
+                <Instagram size={16} aria-hidden />
+                <span>@_ramets</span>
+                <span className="sr-only">({t('contactsInstagram')})</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>

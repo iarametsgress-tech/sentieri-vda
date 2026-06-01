@@ -2,8 +2,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { getAllTrails, getTrailBySlug, getAdjacentAV1Stages, getAdjacentAV2Stages, getAdjacentTourStages } from '@/lib/trails';
-import { isSkeletonTrail, shouldIndexTrail } from '@/lib/skeleton-trails';
+import { formatDistanceLabel } from '@/lib/format';
+import { getTrailBySlug, getAdjacentAV1Stages, getAdjacentAV2Stages, getAdjacentTourStages, getIndexableTrailSlugs } from '@/lib/trails';
+import { shouldIndexTrail } from '@/lib/skeleton-trails';
+import {
+  absoluteAssetUrl,
+  buildBreadcrumbJsonLd,
+  buildTrailJsonLd,
+  metaDescription,
+} from '@/lib/seo';
 import dynamic from 'next/dynamic';
 const MapView = dynamic(() => import('@/components/MapView'), {
   ssr: false,
@@ -37,7 +44,7 @@ import {
   getTrailConditionsNote,
 } from '@/lib/stage-utils';
 import { extractRefugeSlugsFromTrail, getTrailGalleryImages } from '@/lib/refuges';
-import { getLinkableThemeTagsForTrail, humanizeThemeTag } from '@/lib/hubs';
+import { getLinkableThemeTagsForTrail, humanizeThemeTag, getValleyHubHref } from '@/lib/hubs';
 import { trailImageBlurProps } from '@/lib/blur';
 import { loadTrailGeoJSON, getGpxPublicPath, gpxFileExists } from '@/lib/gpx';
 import {
@@ -53,13 +60,12 @@ import {
   Calendar,
 } from 'lucide-react';
 
-// Prerendera al build solo i sentieri curati (getAllTrails).
-// I 1000+ scheletri del Catasto vengono renderizzati on-demand (ISR) al primo
-// accesso e poi messi in cache: evita un build con migliaia di pagine.
+// Prerendera al build tutti i sentieri indicizzabili (curati + Catasto arricchito).
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  return getAllTrails().map((t) => ({ slug: t.slug }));
+  const slugs = new Set(getIndexableTrailSlugs());
+  return [...slugs].map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -72,20 +78,31 @@ export async function generateMetadata({
   if (!trail) return {};
   const name = getTrailLocalizedName(trail, locale);
   const desc = getTrailLocalizedShortDesc(trail, locale);
+  const longDesc = getTrailLocalizedDescription(trail, locale);
+  const indexable = shouldIndexTrail(trail);
+  const ogImage = absoluteAssetUrl(trail.hero_image || trail.image);
+
   return {
     title: name,
-    description: desc,
-    // Le schede scheletro (dati ufficiali ma senza foto/descrizione editoriale)
-    // restano navigabili ma noindex finché non sono arricchite: niente thin content.
-    ...(shouldIndexTrail(trail) ? {} : { robots: { index: false, follow: true } }),
+    description: metaDescription(longDesc || desc),
+    robots: indexable
+      ? { index: true, follow: true, googleBot: { index: true, follow: true } }
+      : { index: false, follow: true },
     openGraph: {
       title: name,
-      description: desc,
-      images: [{ url: trail.hero_image, width: 1600, height: 900 }],
+      description: metaDescription(longDesc || desc),
+      ...(ogImage ? { images: [{ url: ogImage, width: 1600, height: 900 }] } : {}),
       type: 'article',
+      url: `${SITE_URL}/${locale}/sentieri/${slug}`,
+    },
+    twitter: {
+      card: ogImage ? 'summary_large_image' : 'summary',
+      title: name,
+      description: metaDescription(longDesc || desc),
+      ...(ogImage ? { images: [ogImage] } : {}),
     },
     alternates: {
-      canonical: `/${locale}/sentieri/${slug}`,
+      canonical: `${SITE_URL}/${locale}/sentieri/${slug}`,
       languages: localeAlternatesAbsolute(`/sentieri/${slug}`),
     },
   };
@@ -104,6 +121,7 @@ export default async function TrailDetail({
 
   const t = await getTranslations('Trails.details');
   const tTheme = await getTranslations('TrailHubs.theme');
+  const tNav = await getTranslations('Nav');
   const name = getTrailLocalizedName(trail, locale);
   const description = getTrailLocalizedDescription(trail, locale);
   const refugeSlugs = extractRefugeSlugsFromTrail(trail);
@@ -124,27 +142,17 @@ export default async function TrailDetail({
   const iconicImage = trail.image || trail.hero_image;
   const gpxPath = trail.gpx_path ?? (gpxFileExists(slug) ? getGpxPublicPath(slug) : null);
   const trailGeoJSON = loadTrailGeoJSON(slug);
+  const indexable = shouldIndexTrail(trail);
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'TouristAttraction',
-    '@id': `${SITE_URL}/${locale}/sentieri/${trail.slug}`,
-    name,
-    description,
-    image: trail.hero_image,
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: trail.start.coords.lat,
-      longitude: trail.start.coords.lng,
-    },
-    isAccessibleForFree: true,
-    ...(trail.updated_at ? { dateModified: trail.updated_at } : {}),
-    author: {
-      '@type': 'Person',
-      name: SITE_AUTHOR.name,
-      url: SITE_AUTHOR.url,
-    },
-  };
+  const jsonLd = indexable ? buildTrailJsonLd(trail, locale) : null;
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: 'Home', path: `/${locale}` },
+    { name: tNav('trails'), path: `/${locale}/sentieri` },
+    ...(trail.valley
+      ? [{ name: trail.valley, path: `/${locale}${getValleyHubHref(trail.valley)}` }]
+      : []),
+    { name, path: `/${locale}/sentieri/${trail.slug}` },
+  ]);
 
   const mapMarkers = [
     {
@@ -163,9 +171,15 @@ export default async function TrailDetail({
 
   return (
     <article>
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <TrailStickyBar
@@ -277,7 +291,7 @@ export default async function TrailDetail({
               <Stat
                 icon={<TrendingUp size={15} />}
                 label={t('distance')}
-                value={`${trail.distance_km} km`}
+                value={formatDistanceLabel(trail.distance_km)}
               />
               <Stat
                 icon={<Mountain size={15} />}
@@ -679,7 +693,7 @@ function StageNavCard({
         {name}
       </p>
       <p className="text-xs text-snow/55 mt-1 font-mono">
-        {trail.distance_km} km · {trail.difficulty}
+        {formatDistanceLabel(trail.distance_km)} · {trail.difficulty}
       </p>
     </Link>
   );

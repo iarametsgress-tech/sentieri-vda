@@ -1,5 +1,6 @@
 import skeletonJson from '@/data/trails-skeleton.json';
 import { TrailSchema, type Trail, type Difficulty } from './types';
+import { roundDistanceKm, formatDistanceKm } from './format';
 
 /**
  * I sentieri "scheletro" provengono dal Catasto Sentieri ufficiale della Regione VdA
@@ -20,7 +21,6 @@ import { TrailSchema, type Trail, type Difficulty } from './types';
 
 export const SKELETON_TAG = 'skeleton';
 const PLACEHOLDER_IMAGE = '/trails/_placeholder.svg';
-const DEFAULT_INDEX_BATCH_SIZE = 1150;
 
 const VALID_DIFF: Difficulty[] = ['T', 'E', 'EE', 'EEA', 'A'];
 const FITNESS_BY_DIFF: Record<Difficulty, 1 | 2 | 3 | 4 | 5> = {
@@ -42,7 +42,7 @@ function difficultyOf(raw: unknown): Difficulty {
 }
 
 function factualDescriptions(s: any, diff: Difficulty) {
-  const km = s.distance_km?.toFixed(1);
+  const km = formatDistanceKm(roundDistanceKm(s.distance_km ?? 0));
   const g = Math.round(s.elevation_gain_m ?? 0);
   const a = s.start?.name ?? '?';
   const b = s.end?.name ?? '?';
@@ -67,6 +67,7 @@ function normalize(s: any): Trail | null {
   const diff = difficultyOf(s.difficulty);
   const gain = Math.max(0, Math.round(s.elevation_gain_m ?? 0));
   const loss = Math.max(0, Math.round(s.elevation_loss_m ?? 0));
+  const distance_km = roundDistanceKm(s.distance_km);
   const maxElev = Math.max(s.start?.elevation_m ?? 0, s.end?.elevation_m ?? 0);
   const highAltitude = maxElev > 2200;
 
@@ -87,9 +88,10 @@ function normalize(s: any): Trail | null {
     description_fr: s.description_fr || d.long_fr,
     description_de: s.description_de || d.long_de,
     difficulty: diff,
+    distance_km,
     elevation_gain_m: gain,
     elevation_loss_m: loss,
-    duration_hours: s.duration_hours ?? estimateDuration(s.distance_km, gain, loss),
+    duration_hours: s.duration_hours ?? estimateDuration(distance_km, gain, loss),
     season:
       Array.isArray(s.season) && s.season.length
         ? s.season
@@ -123,7 +125,6 @@ function normalize(s: any): Trail | null {
 }
 
 let cache: Trail[] | null = null;
-let indexBatchCache: Set<string> | null = null;
 
 /** Sentieri scheletro normalizzati e validi (escluso quanto sovrascritto dai curati a monte). */
 export function getSkeletonTrails(): Trail[] {
@@ -156,28 +157,8 @@ export function hasVerifiedGeolocatedPhoto(trail: Trail): boolean {
   );
 }
 
-function indexBatchSize(): number {
-  const value = Number(process.env.SKELETON_INDEX_BATCH_SIZE ?? DEFAULT_INDEX_BATCH_SIZE);
-  return Number.isInteger(value) && value >= 0 ? value : DEFAULT_INDEX_BATCH_SIZE;
-}
-
-function getIndexBatchSlugs(): Set<string> {
-  if (indexBatchCache) return indexBatchCache;
-  indexBatchCache = new Set(
-    getSkeletonTrails()
-      .filter((candidate) => candidate.enriched === true && hasVerifiedGeolocatedPhoto(candidate))
-      .map((candidate) => candidate.slug)
-      .sort()
-      .slice(0, indexBatchSize()),
-  );
-  return indexBatchCache;
-}
-
-function isInIndexBatch(trail: Trail): boolean {
-  return getIndexBatchSlugs().has(trail.slug);
-}
-
-/** Scheletri senza foto verificata o oltre la soglia di rollout restano noindex. */
+/** Scheletri arricchiti (GPX + valle + descrizione + foto) → indicizzabili. */
 export function shouldIndexTrail(trail: Trail): boolean {
-  return !isSkeletonTrail(trail) || (isEnrichedTrail(trail) && isInIndexBatch(trail));
+  if (!isSkeletonTrail(trail)) return true;
+  return isEnrichedTrail(trail) && hasVerifiedGeolocatedPhoto(trail);
 }

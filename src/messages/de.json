@@ -131,16 +131,19 @@
       "tags": "Themen und Merkmale"
     },
     "searchPlaceholder": "Weg suchen…",
-    "showMore": "{n} weitere anzeigen"
+    "showMore": "{n} weitere anzeigen",
+    "indexByValleyTitle": "Wegverzeichnis nach Tal",
+    "indexByValleySubtitle": "{count} Wege mit vollständiger Seite, GPX-Strecke und offiziellen Katasterdaten — direkte Links nach Tal."
   },
   "TrailHubs": {
     "breadcrumbHome": "Start",
     "breadcrumbTrails": "Wege",
-    "exploreTitle": "Entdecken nach Tal, Schwierigkeit, Thema und Fauna",
-    "exploreSubtitle": "Verifizierte Wegesammlungen — dieselben Katalogdaten, organisiert wie man auf Karten und Google sucht.",
+    "exploreTitle": "Entdecken nach Tal, Schwierigkeit, Kultur, Bergen und Natur",
+    "exploreSubtitle": "Verifizierte Wegesammlungen mit Verknüpfungen zu Kultur und Umwelt — organisiert wie man auf Karten und Google sucht.",
     "byValley": "Nach Tal",
     "byDifficulty": "Nach Schwierigkeit",
     "byTheme": "Nach Thema",
+    "byMountain": "Nach Berg",
     "bySpecies": "Beobachtung",
     "trailCount": "{count, plural, one {# Weg} other {# Wege}}",
     "moreSpecies": "+{count} weitere Arten im Katalog",
@@ -166,10 +169,15 @@
     },
     "theme": {
       "eyebrow": "Wege nach Thema",
+      "eyebrowCulture": "Wege und Kultur",
       "title": "{count, plural, one {# Weg · {theme}} other {# Wege · {theme}}}",
+      "titleCulture": "{count, plural, one {Der Weg der {theme}} other {Wege und {theme}}}",
       "intro": "{count, plural, one {Ein Weg mit Tag {theme}: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.} other {{count} Wege mit Tag {theme}: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.}}",
+      "introCulture": "{count, plural, one {Ein Weg mit Bezug zu {theme} — Tradition oder typisches Produkt: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.} other {{count} Wege mit Bezug zu {theme} — Traditionen und Aromen entlang der Route: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.}}",
       "metaTitle": "{theme} Wege ({count})",
+      "metaTitleCulture": "Wege und {theme} ({count})",
       "metaDescription": "{count} {theme} Wege im Aostatal — Karten, GPX und vollständige Steckbriefe.",
+      "metaDescriptionCulture": "{count} Wege mit Bezug zu {theme} im Aostatal — Karten, GPX und Kulturhinweise.",
       "tags": {
         "cervino": "Matterhorn",
         "col-champillon": "Col Champillon",
@@ -192,6 +200,13 @@
       "intro": "{count, plural, one {Ein Weg, an dem {species} in Flora/Fauna vermerkt ist: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.} other {{count} Wege, an denen {species} in Flora/Fauna vermerkt ist: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.}}",
       "metaTitle": "Wo {species} beobachten — {count} Wege",
       "metaDescription": "{count} Wege im Aostatal zur Beobachtung von {species}: Karten, GPX und verifizierte Naturhinweise."
+    },
+    "massif": {
+      "eyebrow": "Wege nach Berg",
+      "title": "{count, plural, one {# Weg am {massif}} other {# Wege am {massif}}}",
+      "intro": "{count, plural, one {Ein dokumentierter Weg im Massiv des {massif}: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.} other {{count} dokumentierte Wege im Massiv des {massif}: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.}}",
+      "metaTitle": "Wege am {massif} ({count})",
+      "metaDescription": "{count} Wege im Massiv des {massif}, Aostatal: Karten, GPX und vollständige Steckbriefe."
     }
   },
   "Difficulty": {
@@ -211,7 +226,10 @@
     "newsletterCta": "Abonnieren",
     "rights": "Alle Rechte vorbehalten.",
     "newsletterSuccess": "Anmeldung bestätigt. Bis bald auf dem Weg.",
-    "newsletterError": "Etwas ist schiefgelaufen. Bitte versuche es gleich noch einmal."
+    "newsletterError": "Etwas ist schiefgelaufen. Bitte versuche es gleich noch einmal.",
+    "contactsTitle": "Kontakt",
+    "contactsIntro": "Probleme melden, Tipps senden oder Verbesserungen vorschlagen:",
+    "contactsInstagram": "Instagram"
   },
   "AlteVie": {
     "meta": {

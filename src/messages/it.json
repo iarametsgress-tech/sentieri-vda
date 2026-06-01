@@ -131,16 +131,19 @@
       "tags": "Temi e caratteristiche"
     },
     "searchPlaceholder": "Cerca un sentiero…",
-    "showMore": "Mostra altri {n}"
+    "showMore": "Mostra altri {n}",
+    "indexByValleyTitle": "Indice sentieri per valle",
+    "indexByValleySubtitle": "{count} sentieri con scheda completa, tracciato GPX e dati dal Catasto ufficiale — link diretti per valle."
   },
   "TrailHubs": {
     "breadcrumbHome": "Home",
     "breadcrumbTrails": "Sentieri",
-    "exploreTitle": "Esplora per valle, difficoltà, tema e fauna",
-    "exploreSubtitle": "Raccolte di sentieri verificati — stessi dati del catalogo, organizzati per come si cerca sui mappe e su Google.",
+    "exploreTitle": "Esplora per valle, difficoltà, cultura, montagna e natura",
+    "exploreSubtitle": "Raccolte di sentieri verificati e schede collegate a Cultura e Ambiente — organizzate per come si cerca sui mappe e su Google.",
     "byValley": "Per valle",
     "byDifficulty": "Per difficoltà",
     "byTheme": "Per tema",
+    "byMountain": "Per montagna",
     "bySpecies": "Dove osservare",
     "trailCount": "{count, plural, one {# sentiero} other {# sentieri}}",
     "moreSpecies": "+{count} altre specie nel catalogo",
@@ -166,10 +169,15 @@
     },
     "theme": {
       "eyebrow": "Sentieri per tema",
+      "eyebrowCulture": "Sentieri e cultura",
       "title": "{count, plural, one {# sentiero · {theme}} other {# sentieri · {theme}}}",
+      "titleCulture": "{count, plural, one {Il sentiero della {theme}} other {I sentieri della {theme}}}",
       "intro": "{count, plural, one {Un sentiero con tag {theme}: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.} other {{count} sentieri con tag {theme}: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.}}",
+      "introCulture": "{count, plural, one {Un sentiero collegato a {theme} — tradizione o prodotto tipico della valle: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.} other {{count} sentieri collegati a {theme} — tradizioni e sapori lungo il percorso: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.}}",
       "metaTitle": "Sentieri {theme} ({count})",
+      "metaTitleCulture": "Sentieri e {theme} ({count})",
       "metaDescription": "{count} sentieri {theme} in Valle d'Aosta — mappe, GPX e schede complete.",
+      "metaDescriptionCulture": "{count} sentieri collegati a {theme} in Valle d'Aosta — mappe, GPX e schede con note culturali.",
       "tags": {
         "cervino": "Cervino",
         "col-champillon": "Col Champillon",
@@ -192,6 +200,13 @@
       "intro": "{count, plural, one {Un sentiero dove {species} è segnalato in flora/fauna: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.} other {{count} sentieri dove {species} è segnalato in flora/fauna: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.}}",
       "metaTitle": "Dove vedere {species} — {count} sentieri",
       "metaDescription": "{count} sentieri in Valle d'Aosta per osservare {species}: mappe, GPX e note naturalistiche verificate."
+    },
+    "massif": {
+      "eyebrow": "Sentieri per montagna",
+      "title": "{count, plural, one {# sentiero sul {massif}} other {# sentieri sul {massif}}}",
+      "intro": "{count, plural, one {Un sentiero documentato nel massiccio del {massif}: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.} other {{count} sentieri documentati nel massiccio del {massif}: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.}}",
+      "metaTitle": "Sentieri sul {massif} ({count})",
+      "metaDescription": "{count} sentieri nel massiccio del {massif}, Valle d'Aosta: mappe, GPX e schede complete."
     }
   },
   "Difficulty": {
@@ -211,7 +226,10 @@
     "newsletterCta": "Iscriviti",
     "rights": "Tutti i diritti riservati.",
     "newsletterSuccess": "Iscrizione confermata. A presto sul sentiero.",
-    "newsletterError": "Qualcosa è andato storto. Riprova tra poco."
+    "newsletterError": "Qualcosa è andato storto. Riprova tra poco.",
+    "contactsTitle": "Contatti",
+    "contactsIntro": "Segnala problemi, invia consigli o suggerisci miglioramenti:",
+    "contactsInstagram": "Instagram"
   },
   "AlteVie": {
     "meta": {
