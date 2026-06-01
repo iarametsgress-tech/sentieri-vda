@@ -1,0 +1,121 @@
+{
+  "slug": "02-s11",
+  "sct_code": "02_S11",
+  "name_it": "Poutaz - Triatel (Torgnon)",
+  "name_en": "Poutaz - Triatel (Torgnon)",
+  "name_fr": "Poutaz - Triatel (Torgnon)",
+  "name_de": "Poutaz - Triatel (Torgnon)",
+
+  "shortDescription_it": "1,4 km in salita ripida dal fondovalle di Poutaz al villaggio rurale di Triatel, sede del museo etnografico del Petit-Monde, nel comune di Torgnon (Valtournenche).",
+  "shortDescription_en": "A steep 1.4 km climb from the valley floor at Poutaz to the rural village of Triatel, home to the Petit-Monde ethnographic museum, in Torgnon (Valtournenche).",
+  "shortDescription_fr": "1,4 km de montée raide depuis le fond de vallée de Poutaz jusqu'au hameau rural de Triatel, siège du musée ethnographique du Petit-Monde, à Torgnon (Valtournenche).",
+  "shortDescription_de": "1,4 km steiler Aufstieg vom Talboden bei Poutaz zum ländlichen Dorf Triatel, Sitz des ethnografischen Museums Petit-Monde, in Torgnon (Valtournenche).",
+
+  "description_it": "Breve ma deciso, questo sentiero del Catasto VdA (02_S11) sale dal fondovalle di Poutaz (1092 m), nel comune di Torgnon, fino al nucleo rurale di Triatel (1612 m): 1,4 km di sviluppo per circa +500 m di dislivello, una pendenza costante che si guadagna a passo lento tra il bosco di larici. Triatel fa parte del Petit-Monde, gruppo di antichi villaggi (con Etirol e Ronc) un tempo così isolati da meritare il soprannome di \"autre monde\". Il borgo conserva case in pietra e legno di grande valore storico e ospita il Museo etnografico del Petit-Monde, allestito in tre edifici recuperati: il raccard (1462-1503), il grenier (1476) e la grandze (1700). Salendo si attraversa un ambiente forestale ombroso; nei pressi del Petit-Monde scorre lo storico Ru du Pan Perdu, e dai punti più alti dell'altopiano di Torgnon lo sguardo si apre verso l'alta Valtournenche e la sagoma del Cervino. Difficoltà E (scala CAI), percorribile da giugno a settembre.",
+  "description_en": "Short but demanding, this Aosta Valley registry trail (02_S11) climbs from the valley floor at Poutaz (1092 m), in the municipality of Torgnon, up to the rural hamlet of Triatel (1612 m): 1.4 km for roughly +500 m of ascent, a steady gradient earned at a slow pace through a larch forest. Triatel is part of the Petit-Monde, a cluster of ancient villages (with Etirol and Ronc) once so cut off they were nicknamed \"autre monde\", another world. The hamlet preserves stone-and-wood houses of great historical value and is home to the Petit-Monde ethnographic museum, set in three restored buildings: the raccard (1462-1503), the grenier (1476) and the grandze (1700). The climb threads a shaded woodland; near the Petit-Monde runs the historic Ru du Pan Perdu irrigation canal, and from the higher points of the Torgnon plateau the view opens toward the upper Valtournenche and the unmistakable profile of the Matterhorn. Difficulty E (CAI scale), walkable from June to September.",
+  "description_fr": "Court mais soutenu, ce sentier du cadastre valdôtain (02_S11) monte du fond de vallée de Poutaz (1092 m), dans la commune de Torgnon, jusqu'au hameau rural de Triatel (1612 m) : 1,4 km pour environ +500 m de dénivelé, une pente régulière que l'on gagne d'un pas lent à travers la forêt de mélèzes. Triatel fait partie du Petit-Monde, ensemble d'anciens villages (avec Etirol et Ronc) jadis si isolés qu'on les surnommait \"autre monde\". Le hameau conserve des maisons de pierre et de bois d'une grande valeur historique et abrite le musée ethnographique du Petit-Monde, aménagé dans trois bâtiments restaurés : le raccard (1462-1503), le grenier (1476) et la grandze (1700). La montée traverse un milieu forestier ombragé ; près du Petit-Monde coule l'historique Ru du Pan Perdu, et depuis les points hauts du plateau de Torgnon le regard s'ouvre vers la haute Valtournenche et la silhouette du Cervin. Difficulté E (échelle CAI), praticable de juin à septembre.",
+  "description_de": "Kurz, aber fordernd steigt dieser Weg aus dem Wegekataster des Aostatals (02_S11) vom Talboden bei Poutaz (1092 m) in der Gemeinde Torgnon zum ländlichen Weiler Triatel (1612 m): 1,4 km bei rund +500 m Höhengewinn, eine gleichmässige Steigung, die man langsamen Schrittes durch den Lärchenwald gewinnt. Triatel gehört zum Petit-Monde, einer Gruppe alter Dörfer (mit Etirol und Ronc), die einst so abgeschieden waren, dass man sie \"autre monde\", eine andere Welt, nannte. Der Weiler bewahrt Häuser aus Stein und Holz von grossem historischem Wert und beherbergt das ethnografische Museum Petit-Monde in drei restaurierten Gebäuden: dem Raccard (1462-1503), dem Grenier (1476) und der Grandze (1700). Der Aufstieg führt durch schattigen Wald; nahe dem Petit-Monde fliesst der historische Ru du Pan Perdu, und von den höheren Punkten des Plateaus von Torgnon öffnet sich der Blick zur oberen Valtournenche und zur Silhouette des Matterhorns. Schwierigkeit E (CAI-Skala), begehbar von Juni bis September.",
+
+  "distance_km": 1.35427178878,
+  "elevation_gain_m": 500,
+  "elevation_loss_m": 0,
+  "duration_hours": null,
+  "difficulty": "E",
+  "season": ["summer"],
+
+  "start": {
+    "name": "Poutaz",
+    "coords": { "lat": 45.81797000878488, "lng": 7.580061079282223 },
+    "elevation_m": 1092
+  },
+  "end": {
+    "name": "Triatel",
+    "coords": { "lat": 45.818603350317616, "lng": 7.589530077276092 },
+    "elevation_m": 1612
+  },
+
+  "valley": "Valtournenche",
+  "municipalities": ["Torgnon"],
+
+  "gpx_path": "/gpx/02-s11.gpx",
+  "hero_image": "https://smwwdfy0797xfdqc.public.blob.vercel-storage.com/trails/geo/02-s11.webp",
+  "image": "https://smwwdfy0797xfdqc.public.blob.vercel-storage.com/trails/geo/02-s11.webp",
+  "gallery": [],
+
+  "refuges": [],
+  "flora": [],
+  "fauna": [],
+  "tags": ["family-friendly", "cultural", "museum"],
+
+  "source": {
+    "name": "Catasto Sentieri Regione Autonoma VdA; Comune di Torgnon / Musée Petit Monde",
+    "url": "https://catastosentieri.regione.vda.it/",
+    "license": "Open data — DGR 899/2014"
+  },
+
+  "updated_at": "2026-06-01",
+
+  "mobile_coverage": null,
+  "best_months": [6, 7, 8, 9],
+  "fitness_level": null,
+
+  "waypoints": [
+    {
+      "name": "Poutaz",
+      "elevation_m": 1092,
+      "distance_from_start_km": 0,
+      "type": "bivio",
+      "note_it": "Punto di partenza sul fondovalle, comune di Torgnon.",
+      "note_en": "Valley-floor trailhead, municipality of Torgnon.",
+      "note_fr": "Départ en fond de vallée, commune de Torgnon.",
+      "note_de": "Ausgangspunkt am Talboden, Gemeinde Torgnon."
+    },
+    {
+      "name": "Triatel",
+      "elevation_m": 1612,
+      "distance_from_start_km": 1.35,
+      "type": "panorama",
+      "note_it": "Villaggio rurale del Petit-Monde con il museo etnografico negli edifici del raccard, grenier e grandze.",
+      "note_en": "Petit-Monde rural village with the ethnographic museum in the raccard, grenier and grandze buildings.",
+      "note_fr": "Village rural du Petit-Monde avec le musée ethnographique dans les bâtiments du raccard, grenier et grandze.",
+      "note_de": "Ländliches Dorf des Petit-Monde mit dem ethnografischen Museum in den Gebäuden Raccard, Grenier und Grandze."
+    }
+  ],
+
+  "geology_it": null,
+  "geology_en": null,
+  "geology_fr": null,
+  "geology_de": null,
+
+  "water_sources_it": null,
+  "water_sources_en": null,
+  "water_sources_fr": null,
+  "water_sources_de": null,
+
+  "transport_it": null,
+  "transport_en": null,
+  "transport_fr": null,
+  "transport_de": null,
+
+  "parking": null,
+
+  "warnings_it": [
+    "Sentiero breve ma ripido (+500 m in circa 1,4 km): mettere in conto una salita costante e impegnativa."
+  ],
+  "warnings_en": [
+    "Short but steep trail (+500 m in about 1.4 km): expect a constant, demanding climb."
+  ],
+  "warnings_fr": [
+    "Sentier court mais raide (+500 m en environ 1,4 km) : prévoir une montée régulière et exigeante."
+  ],
+  "warnings_de": [
+    "Kurzer, aber steiler Weg (+500 m auf rund 1,4 km): mit gleichmässigem, anstrengendem Aufstieg rechnen."
+  ],
+
+  "nearby_peaks": null,
+
+  "cultural_notes_it": "Triatel è uno dei tre nuclei (con Etirol e Ronc) che compongono il Petit-Monde di Torgnon, antichi villaggi rurali un tempo isolatissimi. Conserva edifici in pietra e legno di notevole valore e ospita il Museo etnografico del Petit-Monde (Musée Petit Monde), inaugurato nel 2004 dopo il restauro conservativo di tre costruzioni: il raccard (1462-1503), il grenier (1476) e la grandze (1700). Il Ministero della cultura lo descrive come uno degli ecomusei più completi della Valle d'Aosta, dedicato alla vita contadina e all'organizzazione sociale di questo \"piccolo mondo\" alpino.",
+  "cultural_notes_en": "Triatel is one of the three hamlets (with Etirol and Ronc) that make up Torgnon's Petit-Monde, ancient rural villages once extremely isolated. It preserves stone-and-wood buildings of notable value and is home to the Petit-Monde ethnographic museum (Musée Petit Monde), opened in 2004 after the conservative restoration of three structures: the raccard (1462-1503), the grenier (1476) and the grandze (1700). The Italian Ministry of Culture describes it as one of the most complete ecomuseums in the Aosta Valley, devoted to peasant life and the social organisation of this alpine \"little world\".",
+  "cultural_notes_fr": "Triatel est l'un des trois hameaux (avec Etirol et Ronc) qui composent le Petit-Monde de Torgnon, anciens villages ruraux jadis très isolés. Il conserve des bâtiments de pierre et de bois d'une valeur remarquable et abrite le musée ethnographique du Petit-Monde (Musée Petit Monde), inauguré en 2004 après la restauration conservative de trois constructions : le raccard (1462-1503), le grenier (1476) et la grandze (1700). Le ministère italien de la Culture le décrit comme l'un des écomusées les plus complets de la Vallée d'Aoste, consacré à la vie paysanne et à l'organisation sociale de ce \"petit monde\" alpin.",
+  "cultural_notes_de": "Triatel ist einer der drei Weiler (mit Etirol und Ronc), die das Petit-Monde von Torgnon bilden – alte ländliche Dörfer, einst äusserst abgeschieden. Es bewahrt Gebäude aus Stein und Holz von bemerkenswertem Wert und beherbergt das ethnografische Museum Petit-Monde (Musée Petit Monde), 2004 nach der konservatorischen Restaurierung dreier Bauten eröffnet: dem Raccard (1462-1503), dem Grenier (1476) und der Grandze (1700). Das italienische Kulturministerium bezeichnet es als eines der vollständigsten Ökomuseen des Aostatals, gewidmet dem bäuerlichen Leben und der sozialen Ordnung dieser alpinen \"kleinen Welt\"."
+}
