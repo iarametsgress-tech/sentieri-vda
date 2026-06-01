@@ -1,14 +1,13 @@
 import type { MetadataRoute } from 'next';
-import { getAllTrails, getBrowseTrails } from '@/lib/trails';
-import { shouldIndexTrail } from '@/lib/skeleton-trails';
+import { getIndexableTrails } from '@/lib/trails';
 import { getAllRefuges } from '@/lib/refuges';
 import { getAllBlogSlugs } from '@/lib/blog';
 import { getMassifGroups } from '@/lib/environment';
 import { TOUR_IDS } from '@/lib/tours';
+import { getAllCultureThemeHubs } from '@/lib/culture-theme-hubs';
 import {
   getAllDifficultyHubs,
   getAllSpeciesHubs,
-  getAllThemeHubs,
   getAllValleyHubs,
 } from '@/lib/hubs';
 import { SITE_URL } from '@/lib/config';
@@ -18,7 +17,7 @@ const BASE = SITE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const locales = routing.locales;
-  const trails = getAllTrails();
+  const trails = getIndexableTrails();
   const refuges = getAllRefuges();
 
   const staticPaths = [
@@ -69,23 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${BASE}/${locale}/sentieri/${t.slug}`,
         lastModified: t.updated_at,
         changeFrequency: 'monthly',
-        priority: 0.8,
-        alternates: {
-          languages: Object.fromEntries(
-            locales.map((l) => [l, `${BASE}/${l}/sentieri/${t.slug}`])
-          ),
-        },
-      });
-    }
-
-    for (const t of getBrowseTrails()) {
-      if (!shouldIndexTrail(t)) continue;
-      if (trails.some((c) => c.slug === t.slug)) continue;
-      entries.push({
-        url: `${BASE}/${locale}/sentieri/${t.slug}`,
-        lastModified: t.updated_at,
-        changeFrequency: 'monthly',
-        priority: 0.65,
+        priority: t.tags.includes('skeleton') ? 0.65 : 0.8,
         alternates: {
           languages: Object.fromEntries(
             locales.map((l) => [l, `${BASE}/${l}/sentieri/${t.slug}`])
@@ -118,7 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
-    for (const { slug } of getAllThemeHubs()) {
+    for (const { slug } of getAllCultureThemeHubs()) {
       const path = `/sentieri/tema/${slug}`;
       entries.push({
         url: `${BASE}/${locale}${path}`,

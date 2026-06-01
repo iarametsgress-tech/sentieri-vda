@@ -131,16 +131,19 @@
       "tags": "Thèmes et caractéristiques"
     },
     "searchPlaceholder": "Rechercher un sentier…",
-    "showMore": "Afficher {n} de plus"
+    "showMore": "Afficher {n} de plus",
+    "indexByValleyTitle": "Index des sentiers par vallée",
+    "indexByValleySubtitle": "{count} sentiers avec fiche complète, tracé GPX et données du cadastre officiel — liens directs par vallée."
   },
   "TrailHubs": {
     "breadcrumbHome": "Accueil",
     "breadcrumbTrails": "Sentiers",
-    "exploreTitle": "Explorer par vallée, difficulté, thème et faune",
-    "exploreSubtitle": "Collections de sentiers vérifiés — mêmes données que le catalogue, organisées comme on cherche sur les cartes et Google.",
+    "exploreTitle": "Explorer par vallée, difficulté, culture, montagne et nature",
+    "exploreSubtitle": "Collections de sentiers vérifiés et fiches liées à Culture et Environnement — organisées comme on cherche sur les cartes et Google.",
     "byValley": "Par vallée",
     "byDifficulty": "Par difficulté",
     "byTheme": "Par thème",
+    "byMountain": "Par montagne",
     "bySpecies": "Où observer",
     "trailCount": "{count, plural, one {# sentier} other {# sentiers}}",
     "moreSpecies": "+{count} autres espèces au catalogue",
@@ -166,10 +169,15 @@
     },
     "theme": {
       "eyebrow": "Sentiers par thème",
+      "eyebrowCulture": "Sentiers et culture",
       "title": "{count, plural, one {# sentier · {theme}} other {# sentiers · {theme}}}",
+      "titleCulture": "{count, plural, one {Le sentier de {theme}} other {Les sentiers de {theme}}}",
       "intro": "{count, plural, one {Un sentier avec le tag {theme} : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.} other {{count} sentiers avec le tag {theme} : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.}}",
+      "introCulture": "{count, plural, one {Un sentier lié à {theme} — tradition ou produit typique : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.} other {{count} sentiers liés à {theme} — traditions et saveurs le long du parcours : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.}}",
       "metaTitle": "Sentiers {theme} ({count})",
+      "metaTitleCulture": "Sentiers et {theme} ({count})",
       "metaDescription": "{count} sentiers {theme} en Vallée d'Aoste — cartes, GPX et fiches complètes.",
+      "metaDescriptionCulture": "{count} sentiers liés à {theme} en Vallée d'Aoste — cartes, GPX et notes culturelles.",
       "tags": {
         "cervino": "Cervin",
         "col-champillon": "Col Champillon",
@@ -189,11 +197,18 @@
     "species": {
       "eyebrow": "Où observer",
       "title": "{count, plural, one {# sentier pour observer {species}} other {# sentiers pour observer {species}}}",
-      "intro": "{count, plural, one {Un sentier où {species} est signalé en flore/faune : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.} other {{count} sentiers où {species} est signalé en flore/faune : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.}}",
+      "intro": "{count, plural, one {Un sentier où {species} est signalé en flore/fauna : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.} other {{count} sentiers où {species} est signalé en flore/fauna : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.}}",
       "metaTitle": "Où voir {species} — {count} sentiers",
       "metaDescription": "{count} sentiers en Vallée d'Aoste pour observer {species} : cartes, GPX et notes naturalistes vérifiées."
+    },
+    "massif": {
+      "eyebrow": "Sentieri par montagna",
+      "title": "{count, plural, one {# sentier sur le {massif}} other {# sentiers sur le {massif}}}",
+      "intro": "{count, plural, one {Un sentier documenté dans le massif du {massif} : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.} other {{count} sentiers documentés dans le massif du {massif} : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.}}",
+      "metaTitle": "Sentieri sur le {massif} ({count})",
+      "metaDescription": "{count} sentiers dans le massif du {massif}, Vallée d'Aoste : cartes, GPX et fiches complètes."
     }
-  },
+    },
   "Difficulty": {
     "T": "Touristique",
     "E": "Randonnée",
@@ -211,7 +226,10 @@
     "newsletterCta": "S'inscrire",
     "rights": "Tous droits réservés.",
     "newsletterSuccess": "Inscription confirmée. À bientôt sur les sentiers.",
-    "newsletterError": "Une erreur s'est produite. Réessayez dans un instant."
+    "newsletterError": "Une erreur s'est produite. Réessayez dans un instant.",
+    "contactsTitle": "Contact",
+    "contactsIntro": "Signalez un problème, partagez un conseil ou proposez une amélioration :",
+    "contactsInstagram": "Instagram"
   },
   "AlteVie": {
     "meta": {

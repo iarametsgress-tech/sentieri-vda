@@ -110,6 +110,20 @@ export function getMassifHref(massifGroupId: string): string {
   return `/ambiente/montagne/${massifGroupId}`;
 }
 
+/** Massicci esclusi dalla griglia Montagne in Ambiente (solo contesto regionale). */
+export const AMBIENTE_MONTAGNA_EXCLUDED_IDS = ['alpi-graie', 'alpi-pennine'] as const;
+
+/** Massicci mostrati nella sezione Montagne di Ambiente (e in Esplora sentieri). */
+export function getAmbienteMontagnaMassifs(): MassifGroup[] {
+  return getMassifGroups().filter(
+    (g) => !(AMBIENTE_MONTAGNA_EXCLUDED_IDS as readonly string[]).includes(g.id),
+  );
+}
+
+export function getMassifLabel(group: MassifGroup, locale: string): string {
+  return locale === 'it' ? group.massif_it : group.massif_en;
+}
+
 export function getMassifGroupForPeakId(peakId: string): MassifGroup | undefined {
   const peak = getPeakById(peakId);
   if (!peak) return undefined;

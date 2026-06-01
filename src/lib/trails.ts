@@ -14,6 +14,15 @@ const skeletons = getSkeletonTrails().filter((t) => !curatedSlugs.has(t.slug));
 const browse = [...parsed, ...skeletons];
 const bySlug = new Map(browse.map((t) => [t.slug, t]));
 
+/** Sentieri indicizzabili (curati + scheletri arricchiti). */
+export function getIndexableTrails(): Trail[] {
+  return getBrowseTrails().filter(shouldIndexTrail);
+}
+
+export function getIndexableTrailSlugs(): string[] {
+  return getIndexableTrails().map((t) => t.slug);
+}
+
 /**
  * Sentieri CURATI e SCHELETRI ARRICCHITI. Alimenta hub, sitemap, featured, statistiche e mappa home.
  * Gli scheletri non ancora arricchiti restano fuori dall'indicizzazione.
@@ -21,6 +30,11 @@ const bySlug = new Map(browse.map((t) => [t.slug, t]));
 export function getAllTrails(): Trail[] {
   const enrichedSkeletons = skeletons.filter(shouldIndexTrail);
   return [...parsed, ...enrichedSkeletons];
+}
+
+/** Sentieri editoriali curati: usati per il prerender delle schede al build. */
+export function getCuratedTrails(): Trail[] {
+  return parsed;
 }
 
 /** Catalogo completo navigabile (curati + tutti gli scheletri). */

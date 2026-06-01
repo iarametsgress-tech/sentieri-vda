@@ -1,8 +1,65 @@
-import { getSpeciesById } from '@/data/species';
+import { SPECIES, getSpeciesById } from '@/data/species';
+import {
+  getAllFoodWine,
+  getAllTraditions,
+  getFoodWineHref,
+  getFoodWineTitle,
+  getTraditionHref,
+  getTraditionTitle,
+  getValleyById,
+  getValleyName,
+  resolveValleyId,
+} from '@/lib/culture';
+import {
+  getAmbienteMontagnaMassifs,
+  getMassifGroupById,
+  getMassifHref,
+  getMassifLabel,
+  resolvePeakIdFromName,
+} from '@/lib/environment';
 import { getAllTrails } from '@/lib/trails';
 import { pickLocalized } from '@/lib/locale-content';
 import { SKELETON_TAG } from '@/lib/skeleton-trails';
 import type { Difficulty, Trail } from '@/lib/types';
+
+/** 13 valli approfondite in Cultura (escluso Champorcher). */
+export const CULTURA_VALLEY_IDS = [
+  'valle-del-lys',
+  'valle-d-ayas',
+  'valtournenche',
+  'valpelline',
+  'valle-gran-san-bernardo',
+  'val-ferret',
+  'val-veny',
+  'la-thuile',
+  'valgrisenche',
+  'val-di-rhemes',
+  'valsavarenche',
+  'val-di-cogne',
+  'bassa-valle',
+] as const;
+
+export type CultureValleyId = (typeof CULTURA_VALLEY_IDS)[number];
+
+export type ExploreCultureTopic = {
+  id: string;
+  label: string;
+  href: string;
+};
+
+export type ExploreMassifLink = {
+  id: string;
+  label: string;
+  href: string;
+  count?: number;
+};
+
+export type ExploreSpeciesLink = {
+  id: string;
+  label: string;
+  href: string;
+  count?: number;
+};
 
 /** Alias slug sentiero → id specie canonico (allineato a trail-links) */
 const SPECIES_ALIASES: Record<string, string> = {
@@ -77,6 +134,13 @@ export type SpeciesHub = {
   trails: Trail[];
 };
 
+export type MassifHub = {
+  slug: string;
+  massifId: string;
+  count: number;
+  trails: Trail[];
+};
+
 export function slugify(text: string): string {
   return text
     .normalize('NFD')
@@ -127,28 +191,46 @@ export function getTrailsByValleySlug(slug: string): Trail[] {
   return getAllTrails().filter((t) => slugify(t.valley) === slug);
 }
 
+export function getTrailsByCultureValleyId(cultureValleyId: string): Trail[] {
+  return getAllTrails()
+    .filter((t) => resolveValleyId(t.valley) === cultureValleyId)
+    .sort((a, b) => a.name_it.localeCompare(b.name_it, 'it'));
+}
+
+function buildCultureValleyHub(cultureValleyId: string): ValleyHub | undefined {
+  const valley = getValleyById(cultureValleyId);
+  if (!valley) return undefined;
+  const trails = getTrailsByCultureValleyId(cultureValleyId);
+  if (trails.length === 0) return undefined;
+  return {
+    slug: cultureValleyId,
+    label: valley.name_it,
+    count: trails.length,
+    trails,
+  };
+}
+
+export function getValleyHubLabel(slug: string, locale: string): string {
+  const valley = getValleyById(slug);
+  if (valley) return getValleyName(valley, locale);
+  const hub = getValleyHubBySlug(slug);
+  return hub?.label ?? slug.replace(/-/g, ' ');
+}
+
 export function getAllValleyHubs(): ValleyHub[] {
-  const map = new Map<string, { label: string; trails: Trail[] }>();
-  for (const trail of getAllTrails()) {
-    const slug = slugify(trail.valley);
-    const entry = map.get(slug);
-    if (entry) {
-      entry.trails.push(trail);
-    } else {
-      map.set(slug, { label: trail.valley, trails: [trail] });
-    }
-  }
-  return [...map.entries()]
-    .map(([slug, { label, trails }]) => ({
-      slug,
-      label,
-      count: trails.length,
-      trails: trails.sort((a, b) => a.name_it.localeCompare(b.name_it, 'it')),
-    }))
-    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'it'));
+  return CULTURA_VALLEY_IDS.map((id) => buildCultureValleyHub(id)).filter(
+    (hub): hub is ValleyHub => Boolean(hub),
+  );
 }
 
 export function getValleyHubBySlug(slug: string): ValleyHub | undefined {
+  if ((CULTURA_VALLEY_IDS as readonly string[]).includes(slug)) {
+    return buildCultureValleyHub(slug);
+  }
+  const cultureId = resolveValleyId(slug.replace(/-/g, ' '));
+  if (cultureId && (CULTURA_VALLEY_IDS as readonly string[]).includes(cultureId)) {
+    return buildCultureValleyHub(cultureId);
+  }
   const trails = getTrailsByValleySlug(slug);
   if (trails.length === 0) return undefined;
   return {
@@ -157,6 +239,64 @@ export function getValleyHubBySlug(slug: string): ValleyHub | undefined {
     count: trails.length,
     trails: trails.sort((a, b) => a.name_it.localeCompare(b.name_it, 'it')),
   };
+}
+
+export function getExploreCultureTopics(locale: string): ExploreCultureTopic[] {
+  const seen = new Set<string>();
+  const topics: ExploreCultureTopic[] = [];
+
+  for (const item of getAllTraditions()) {
+    seen.add(item.id);
+    topics.push({
+      id: item.id,
+      label: getTraditionTitle(item, locale),
+      href: getTraditionHref(item.id),
+    });
+  }
+
+  for (const item of getAllFoodWine()) {
+    if (seen.has(item.id)) continue;
+    seen.add(item.id);
+    topics.push({
+      id: item.id,
+      label: getFoodWineTitle(item, locale),
+      href: getFoodWineHref(item.id),
+    });
+  }
+
+  return topics;
+}
+
+export function getExploreMassifLinks(locale: string): ExploreMassifLink[] {
+  return getAllMassifHubs().map((hub) => {
+    const group = getMassifGroupById(hub.massifId);
+    return {
+      id: hub.massifId,
+      label: group ? getMassifLabel(group, locale) : hub.massifId,
+      href: getMassifHubHref(hub.massifId),
+      count: hub.count,
+    };
+  });
+}
+
+export function getAllExploreSpeciesLinks(locale: string): ExploreSpeciesLink[] {
+  const trailCounts = new Map<string, number>();
+  for (const hub of getAllSpeciesHubs()) {
+    trailCounts.set(hub.speciesId, hub.count);
+  }
+
+  return SPECIES.map((species) => {
+    const count = trailCounts.get(species.id);
+    return {
+      id: species.id,
+      label: getSpeciesLocalizedName(species.id, locale),
+      href:
+        count != null && count > 0
+          ? getSpeciesHubHref(species.id)
+          : `/ambiente?specie=${species.id}#flora-fauna`,
+      count,
+    };
+  }).sort((a, b) => a.label.localeCompare(b.label, locale));
 }
 
 export function getDifficultyHubBySlug(slug: string) {
@@ -267,6 +407,62 @@ export function getSpeciesHubBySlug(slug: string): SpeciesHub | undefined {
   return { slug, speciesId: slug, count: trails.length, trails };
 }
 
+export function getTrailsByMassifId(massifId: string): Trail[] {
+  const group = getMassifGroupById(massifId);
+  if (!group) return [];
+  const peakIds = new Set(group.peaks.map((p) => p.id));
+  const valleyIds = new Set(
+    group.peaks.map((p) => resolveValleyId(p.massif_it)).filter((id): id is string => id !== null),
+  );
+
+  return getAllTrails()
+    .filter((trail) => {
+      // 1. Check nearby peaks
+      if (
+        trail.nearby_peaks?.some((np) => {
+          const id = resolvePeakIdFromName(np.name);
+          return id && peakIds.has(id);
+        })
+      )
+        return true;
+
+      // 2. Check valley match (optional, but helps if peaks are missing)
+      const trailValleyId = resolveValleyId(trail.valley);
+      if (trailValleyId && valleyIds.has(trailValleyId)) return true;
+
+      // 3. Specific tag matches
+      if (massifId === 'massiccio-del-monte-rosa' && trail.tags.includes('tour-monte-rosa'))
+        return true;
+      if (massifId === 'massiccio-del-monte-bianco' && trail.tags.includes('tmb')) return true;
+      if (massifId === 'massiccio-del-cervino' && trail.tags.includes('tour-cervino')) return true;
+      if (massifId === 'massiccio-del-gran-paradiso' && trail.tags.includes('tour-gran-paradiso'))
+        return true;
+
+      return false;
+    })
+    .sort((a, b) => a.name_it.localeCompare(b.name_it, 'it'));
+}
+
+export function getAllMassifHubs(): MassifHub[] {
+  return getAmbienteMontagnaMassifs()
+    .map((group) => {
+      const trails = getTrailsByMassifId(group.id);
+      return {
+        slug: group.id,
+        massifId: group.id,
+        count: trails.length,
+        trails,
+      };
+    })
+    .filter((hub) => hub.count > 0);
+}
+
+export function getMassifHubBySlug(slug: string): MassifHub | undefined {
+  const trails = getTrailsByMassifId(slug);
+  if (trails.length === 0) return undefined;
+  return { slug, massifId: slug, count: trails.length, trails };
+}
+
 export function getSpeciesLocalizedName(speciesId: string, locale: string): string {
   const species = getSpeciesById(speciesId);
   if (!species) return speciesId.replace(/-/g, ' ');
@@ -292,6 +488,10 @@ export function getLinkableThemeTagsForTrail(trail: Trail): string[] {
 }
 
 export function getValleyHubHref(valleyLabel: string): string {
+  const cultureId = resolveValleyId(valleyLabel);
+  if (cultureId && (CULTURA_VALLEY_IDS as readonly string[]).includes(cultureId)) {
+    return `/sentieri/valle/${cultureId}`;
+  }
   return `/sentieri/valle/${slugify(valleyLabel)}`;
 }
 
@@ -305,6 +505,10 @@ export function getThemeHubHref(tag: string): string {
 
 export function getSpeciesHubHref(speciesId: string): string {
   return `/sentieri/dove-vedere/${speciesId}`;
+}
+
+export function getMassifHubHref(massifId: string): string {
+  return `/sentieri/montagna/${massifId}`;
 }
 
 export function formatDifficultyRange(

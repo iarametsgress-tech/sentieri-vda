@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { Clock, Download, Mountain, TrendingUp } from 'lucide-react';
 import DifficultyBadge from '@/components/DifficultyBadge';
+import { formatDistanceLabel } from '@/lib/format';
 import type { Difficulty } from '@/lib/types';
 
 const SENTINEL_ID = 'trail-detail-hero';
@@ -75,7 +76,7 @@ export default function TrailStickyBar({
               <div className="flex items-center gap-3 shrink-0 font-mono text-xs text-snow/60 tabular-nums">
                 <span className="inline-flex items-center gap-1">
                   <TrendingUp size={12} className="text-snow/55" aria-hidden />
-                  {distanceKm} km
+                  {formatDistanceLabel(distanceKm)}
                 </span>
                 <span className="inline-flex items-center gap-1 text-ice/90">
                   <Mountain size={12} aria-hidden />+{elevationGainM} m

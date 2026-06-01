@@ -22,10 +22,21 @@ export default function CounterStat({
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [count, setCount] = useState(0);
+  // Init col valore finale: l'HTML server-side (e i client senza JS / i crawler)
+  // mostrano il numero reale invece di "0". L'animazione count-up parte solo
+  // dopo il mount, quando la sezione entra in viewport (progressive enhancement).
+  const [count, setCount] = useState(value);
 
   useEffect(() => {
     if (!isInView) return;
+    // Rispetta chi preferisce meno animazioni: nessun count-up, resta sul valore.
+    if (
+      typeof window !== 'undefined' &&
+      window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
+    ) {
+      setCount(value);
+      return;
+    }
     const startTime = performance.now();
     const tick = (now: number) => {
       const elapsed = now - startTime;
