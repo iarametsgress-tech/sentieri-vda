@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-02T08:53:49.962Z",
+  "updatedAt": "2026-06-02T09:06:09.595Z",
   "entries": [
     {
       "slug": "alta-via-1-tappa-1-donnas-perloz",
@@ -1255,10 +1255,10 @@
       "slug": "07-s61",
       "name": "Champoluc - Bivacco Lateltin",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1435,10 +1435,10 @@
       "slug": "08-s19",
       "name": "Vieyes - Alpeggi Nomenon - Bivacco Gontier",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1565,10 +1565,10 @@
       "slug": "10-s12",
       "name": "Place Moulin - Rifugio Prarayer",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1695,10 +1695,10 @@
       "slug": "10-s5",
       "name": "Panoramica: Ru - Berrié - Place Moulin",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1805,10 +1805,10 @@
       "slug": "12-s11",
       "name": "Strada per Estoul - Col de Palasinaz - Corno Boussolaz",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1935,10 +1935,10 @@
       "slug": "12-s36",
       "name": "Brusson - Testa di Comagna",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2115,10 +2115,10 @@
       "slug": "13-s32",
       "name": "Arbaz - Tete de Comagne",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2255,10 +2255,10 @@
       "slug": "14-s5",
       "name": "Isollaz - Col Dondeuil",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2345,10 +2345,10 @@
       "slug": "16-s3",
       "name": "Chamois - Col Pillonnet",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2435,10 +2435,10 @@
       "slug": "17-s11",
       "name": "Veulla  - Grand Lac",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {

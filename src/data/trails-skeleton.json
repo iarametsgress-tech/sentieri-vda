@@ -8090,10 +8090,10 @@
     "shortDescription_en": "Upper Val d'Ayas: a route toward a panoramic high-altitude objective across open terrain.",
     "shortDescription_fr": "Haute Val d'Ayas : itinéraire vers un objectif panoramique en altitude sur terrain ouvert.",
     "shortDescription_de": "Oberes Val d'Ayas: Weg zu einem Panorama-Hochgebirgsziel über offenes Gelände.",
-    "description_it": "Il sentiero nel comune di Brusson o Ayas percorre la fascia alta della Val d'Ayas verso un obiettivo panoramico d'alta quota. La progressione avviene su terreno aperto con viste caratteristiche della valle. La classificazione E o EE dipende dall'obiettivo finale.",
-    "description_en": "The trail in the commune of Brusson or Ayas crosses the upper belt of the Val d'Ayas toward a panoramic high-altitude objective. Progress is across open terrain with characteristic valley views. The E or EE rating depends on the final objective.",
-    "description_fr": "Le sentier dans la commune de Brusson ou d'Ayas traverse la zone haute de la Val d'Ayas vers un objectif panoramique en altitude. La progression se fait sur terrain ouvert avec des vues caractéristiques.",
-    "description_de": "Der Weg in der Gemeinde Brusson oder Ayas durchquert die obere Zone des Val d'Ayas zu einem Panorama-Hochgebirgsziel. Fortschritt über offenes Gelände mit charakteristischen Talblicken.",
+    "description_it": "Il sentiero sale deciso da Champoluc (1569 m) attraverso i pascoli alti della Val d'Ayas, seguendo in parte il tracciato dell'Alta Via della Valle d'Aosta n.1. Il percorso è impegnativo fin dai primi tratti: i boschi di larici lasciano rapidamente spazio agli alpi aperti, poi alle morene e infine alle pietraie d'alta quota. Il dislivello positivo di 1623 metri in soli 7,7 km impone un passo costante e attenzione al meteo, che in questa vallata può cambiare con rapidità. Il Bivacco Lateltin, a 3121 metri, è intitolato a Ulrich Lateltin, scomparso nel 1984, e rappresenta un punto di appoggio essenziale per gli alpinisti diretti alle cime circostanti. La struttura offre un riparo spartano ma sicuro, immersa in un paesaggio di rocce e ghiacciai che ripaga ampiamente la fatica della salita.",
+    "description_en": "The trail climbs steeply from Champoluc (1569 m) through the high pastures of Val d'Ayas, partly following the route of the Alta Via n.1. The 1623 m of elevation gain over 7.7 km demands a steady pace and careful weather awareness. Larch forests give way to open alp, then moraines and high-altitude scree. The Bivacco Lateltin at 3121 m, dedicated to Ulrich Lateltin who died in 1984, provides a basic but essential shelter for mountaineers tackling the surrounding summits, set in a landscape of rock and ice that amply rewards the effort.",
+    "description_fr": "Le sentier monte depuis Champoluc (1569 m) à travers les alpages de la Val d'Ayas, en suivant en partie le tracé de la Haute Route n.1. Le dénivelé de 1623 m en 7,7 km impose un rythme soutenu. Les forêts de mélèzes cèdent la place aux alpages, puis aux moraines et éboulis d'altitude. Le Bivouac Lateltin, à 3121 m, dédié à Ulrich Lateltin disparu en 1984, offre un refuge spartiate mais sûr dans un paysage de roches et de glaciers qui récompense largement l'effort.",
+    "description_de": "Der Weg steigt steil von Champoluc (1569 m) durch die Hochweiden des Val d'Ayas auf, teilweise entlang der Alta Via Nr. 1. Der Höhenunterschied von 1623 m auf 7,7 km verlangt ausdauerndes Gehen und Aufmerksamkeit für das Wetter. Lärchenwälder weichen offenen Almen, dann Moränen und Hochgebirgsschutt. Die Biwakschachtel Lateltin auf 3121 m, Ulrich Lateltin gewidmet (gest. 1984), bietet Bergsteigern einfache, aber verlässliche Unterkunft in einer Landschaft aus Fels und Eis, die die Mühe reichlich belohnt.",
     "distance_km": 7.7,
     "elevation_gain_m": 1623,
     "elevation_loss_m": 0,
@@ -8148,7 +8148,23 @@
     "signposts": null,
     "enriched": true,
     "image_credit": "Francofranco56 — Wikimedia Commons (CC BY-SA 3.0)",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Colle_Pinter.JPG"
+    "image_source": "https://commons.wikimedia.org/wiki/File:Colle_Pinter.JPG",
+    "warnings_it": [
+      "Itinerario EE: richiede esperienza alpinistica, orientamento oltre i 2800m, attrezzatura da alta montagna.",
+      "Neve persistente fino a tarda stagione. Non adatto a escursionisti non esperti."
+    ],
+    "warnings_en": [
+      "EE route: requires mountain experience, navigation above 2800 m, high-mountain equipment.",
+      "Persistent snow into late season. Not suitable for inexperienced hikers."
+    ],
+    "warnings_fr": [
+      "Itinéraire EE : expérience alpine, orientation au-delà de 2800 m, équipement de haute montagne requis.",
+      "Neige persistante en fin de saison. Déconseillé aux randonneurs non expérimentés."
+    ],
+    "warnings_de": [
+      "EE-Route: Bergerfahrung, Orientierung über 2800 m, Hochgebirgsausrüstung erforderlich.",
+      "Anhaltender Schnee bis in die Spätsaison. Nicht für unerfahrene Wanderer."
+    ]
   },
   {
     "slug": "07-s62",
@@ -9439,10 +9455,10 @@
     "shortDescription_en": "In the Val di Cogne, Aymavilles: an E-rated climb toward an objective in the Gran Paradiso National Park.",
     "shortDescription_fr": "Dans la Val di Cogne, Aymavilles : montée E vers un objectif dans le Grand Paradis.",
     "shortDescription_de": "Im Val di Cogne, Aymavilles: E-Aufstieg zu einem Ziel im Gran-Paradiso-Nationalpark.",
-    "description_it": "Il sentiero nel comune di Aymavilles, Val di Cogne, risale il versante verso un obiettivo in quota nel Parco Nazionale del Gran Paradiso. La classificazione E indica un percorso adatto a escursionisti con buona preparazione.",
-    "description_en": "The trail in the commune of Aymavilles, Val di Cogne, climbs the slope toward a high-altitude objective in the Gran Paradiso National Park. The E rating marks a route for well-prepared hikers.",
-    "description_fr": "Le sentier dans la commune d'Aymavilles, Val di Cogne, remonte le versant vers un objectif en altitude dans le Grand Paradis.",
-    "description_de": "Der Weg in der Gemeinde Aymavilles, Val di Cogne, steigt den Hang zu einem Hochgebirgsziel im Gran-Paradiso-Nationalpark auf.",
+    "description_it": "Il percorso parte da Vieyes (1150 m), piccola borgata della Val di Cogne nel comune di Aymavilles, e risale con pendenza sostenuta verso gli alpeggi di Nomenon, protagonisti silenziosi di questa salita. Il sentiero non è mai banale: superata la fascia boscata iniziale, il tracciato si fa ripido in modo quasi ininterrotto per buona parte del percorso, rivelando panorami progressivamente più ampi sulla testata della valle. Gli alpeggi di Nomenon offrono uno spazio di respiro prima del tratto finale che porta al Bivacco Gontier, posizionato a 2302 metri in un ambiente aperto e ventoso. I 4,5 km di sviluppo con 1167 metri di dislivello si traducono in una pendenza media elevata che richiede gambe allenate e passo regolare. Un itinerario E adatto a escursionisti con buona preparazione fisica.",
+    "description_en": "Starting from Vieyes (1150 m) in the Val di Cogne, this short but steep route climbs 1167 m in just 4.5 km — one of the sharpest gradients in the valley. The path passes through the Nomenon alpine pastures before reaching the Bivacco Gontier at 2302 m. Wide views over the valley open progressively as the forest gives way to open meadows and high pasture. The near-continuous steepness demands strong legs and a steady rhythm.",
+    "description_fr": "Au départ de Vieyes (1150 m) dans la Val di Cogne, ce sentier court mais très raide gagne 1167 m en seulement 4,5 km. L'itinéraire traverse les alpages de Nomenon avant d'atteindre le Bivouac Gontier à 2302 m. La pente quasi ininterrompue exige des jambes solides et un rythme régulier ; la récompense est un panorama de plus en plus large sur la tête de vallée. Les alpages de Nomenon, à mi-parcours, offrent une pause bienvenue avant la dernière rampe vers le bivouac, dans un cadre ouvert et venteux.",
+    "description_de": "Von Vieyes (1150 m) im Val di Cogne führt dieser kurze, aber sehr steile Weg auf 4,5 km 1167 Höhenmeter hinauf — einer der steilsten Anstiege im Tal. Der Pfad durchquert die Almen von Nomenon, bevor er das Biwak Gontier auf 2302 m erreicht. Die fast ununterbrochene Steigung verlangt kräftige Beine und gleichmäßiges Gehen, mit immer weiterem Blick auf den Talschluss. Die Almen von Nomenon bieten auf halber Strecke eine willkommene Pause vor dem letzten Anstieg zur Biwakschachtel in offener, windiger Lage.",
     "distance_km": 4.5,
     "elevation_gain_m": 1167,
     "elevation_loss_m": 0,
@@ -10378,10 +10394,10 @@
     "shortDescription_en": "Valpelline, Bionaz: an E-rated climb toward a high-altitude objective.",
     "shortDescription_fr": "Valpelline, Bionaz : montée E vers un objectif en altitude.",
     "shortDescription_de": "Valpelline, Bionaz: E-Aufstieg zu einem Hochgebirgsziel.",
-    "description_it": "Il percorso nella Valpelline, comune di Bionaz, risale il vallone verso un obiettivo in quota. La classificazione E indica un sentiero escursionistico adatto a camminatori allenati.",
-    "description_en": "The route in the Valpelline, commune of Bionaz, climbs the valley toward a high-altitude objective. The E rating marks a hiking trail for fit walkers.",
-    "description_fr": "L'itinéraire dans la Valpelline, commune de Bionaz, remonte le vallon vers un objectif en altitude.",
-    "description_de": "Der Weg im Valpelline, Gemeinde Bionaz, steigt das Tal zu einem Hochgebirgsziel auf.",
+    "description_it": "Questo è uno dei rari percorsi di fondovalle della Valpelline che consente di apprezzare il paesaggio alpino senza impegni tecnici. Il tracciato si sviluppa per 4,6 km con un dislivello quasi nullo (soli 34 metri negativi), costeggiando le rive del bacino artificiale di Place Moulin, creato negli anni Sessanta del Novecento. L'acqua smeraldo del lago riflette le pareti rocciose circostanti e le cime innevate del fondo valle, regalando scorci fotografici di grande bellezza in ogni stagione. Partendo dalla diga di Place Moulin (2011 m) si percorre la sponda del bacino su sentiero comodo e ben segnato, raggiungendo il Rifugio Prarayer (2002 m), storico punto di sosta per chi si incammina verso il Colle del Gran San Bernardo o le mete alpinistiche della testata. Adatto a famiglie e a chi cerca una passeggiata tranquilla in ambiente d'alta quota.",
+    "description_en": "One of the few nearly flat valley-floor routes in Valpelline, this 4.6 km walk skirts the shores of the Place Moulin reservoir with a negligible elevation change of just 34 m. Built in the 1960s, the turquoise lake mirrors the surrounding rocky walls and snowy summits. The comfortable path links the dam at Place Moulin (2011 m) to the historic Rifugio Prarayer (2002 m), a base for ascents toward the head of the valley. Suitable for families and anyone seeking an easy walk in a high-altitude setting.",
+    "description_fr": "L'un des rares itinéraires quasi plats de la Valpelline, ce parcours de 4,6 km longe les rives du lac artificiel de Place Moulin avec un dénivelé négligeable de 34 m. Le lac turquoise, créé dans les années 1960, reflète les parois rocheuses et les sommets enneigés. Le sentier relie le barrage de Place Moulin (2011 m) au Refuge Prarayer (2002 m), point de départ historique vers la tête de vallée. Idéal pour les familles et les promenades tranquilles en altitude.",
+    "description_de": "Einer der wenigen nahezu flachen Talbodenwege im Valpelline: Auf 4,6 km mit kaum wahrnehmbarem Höhenunterschied (34 m) folgt der Weg dem Ufer des Stausees Place Moulin, der in den 1960er Jahren angelegt wurde. Das türkisfarbene Wasser spiegelt Felswände und Schneegipfel. Der bequeme Pfad verbindet den Staudamm Place Moulin (2011 m) mit der historischen Rifugio Prarayer (2002 m), einem Ausgangspunkt für Touren zum Talschluss. Ideal für Familien und ruhige Höhenspaziergänge.",
     "distance_km": 4.6,
     "elevation_gain_m": 0,
     "elevation_loss_m": 34,
@@ -11405,10 +11421,10 @@
     "shortDescription_en": "In the Valpelline, commune of Bionaz: an E-rated climb from forest to the Comba di Vertsan pastures.",
     "shortDescription_fr": "Dans la Valpelline, commune de Bionaz : montée E de la forêt aux pâturages de la Comba di Vertsan.",
     "shortDescription_de": "Im Valpelline, Gemeinde Bionaz: E-Aufstieg vom Wald zu den Weiden der Comba di Vertsan.",
-    "description_it": "Il percorso nella Valpelline, comune di Bionaz, sale attraverso il bosco verso i pascoli della Comba di Vertsan. Il tracciato guadagna quota rapidamente nella fascia forestata per poi aprirsi sul bacino pascolivo aperto. La classificazione E indica un sentiero escursionistico adatto a camminatori allenati.",
-    "description_en": "The route in the Valpelline, commune of Bionaz, climbs through forest toward the pastures of the Comba di Vertsan. The trail gains height rapidly in the forested belt before opening onto the broad pastoral basin. The E rating marks a hiking trail for fit walkers.",
-    "description_fr": "L'itinéraire dans la Valpelline, commune de Bionaz, monte à travers la forêt vers les pâturages de la Comba di Vertsan. Le tracé prend rapidement de l'altitude dans la ceinture boisée avant de s'ouvrir sur le bassin pastoral.",
-    "description_de": "Der Weg im Valpelline, Gemeinde Bionaz, steigt durch den Wald zu den Weiden der Comba di Vertsan auf. Der Pfad gewinnt rasch Höhe im Waldgürtel, bevor er sich auf das offene Weidebecken öffnet.",
+    "description_it": "L'itinerario percorre il fianco della Valpelline in un ampio traverso da Ru (1694 m) fino alla diga di Place Moulin (1990 m), coprendo 11,2 km con 535 metri di dislivello positivo. Nonostante il dato di quota contenuto, la classificazione EE è giustificata dalla natura del terreno: il sentiero attraversa versanti ripidi, tratti esposti e passaggi su traccia non sempre evidente, richiedendo buona esperienza escursionistica e piede fermo. Il percorso tocca diversi alpeggi tradizionali, testimoni di un sistema pastorale ancora vitale, e offre viste continue sui laghi artificiali che caratterizzano questa parte della valle. La vegetazione di versante — rododendri, ginepri e larici — incornicia il panorama verso le cime del Gran Combin e delle Alpi Pennine. Un itinerario che premia con ampiezza di vedute chi ha l'esperienza necessaria per affrontarlo.",
+    "description_en": "A long traverse across the flanks of Valpelline, covering 11.2 km from Ru (1694 m) to Place Moulin (1990 m) with 535 m of ascent. The EE rating reflects exposed sections and intermittently faint trail rather than sheer altitude. The route visits traditional alpine farms and overlooks the reservoir chain below, with sweeping views toward the Gran Combin and the Pennine Alps. Slope vegetation of rhododendron, juniper and larch frames the panorama throughout.",
+    "description_fr": "Une longue traversée sur les flancs de la Valpelline, de Ru (1694 m) à Place Moulin (1990 m) sur 11,2 km avec 535 m de dénivelé. La cotation EE reflète des passages exposés et un tracé parfois peu visible plutôt qu'une altitude extrême. Le sentier relie plusieurs alpages traditionnels et offre des vues sur les lacs artificiels et vers le Grand Combin et les Alpes Pennines. La végétation de versant — rhododendrons, genévriers et mélèzes — encadre le panorama tout au long de ce traversée pour randonneurs expérimentés.",
+    "description_de": "Eine lange Querung über die Hänge des Valpelline, von Ru (1694 m) nach Place Moulin (1990 m) über 11,2 km mit 535 Höhenmetern. Die EE-Einstufung widerspiegelt exponierte Abschnitte und einen stellenweise schwachen Pfad. Der Weg verbindet mehrere Bergalmen und bietet weite Blicke auf die Stauseen und zum Grand Combin und den Walliser Alpen. Die Hangvegetation aus Rhododendron, Wacholder und Lärchen rahmt das Panorama dieser Querung für erfahrene Wanderer durchgehend ein. Saison Juni bis September.",
     "distance_km": 11.2,
     "elevation_gain_m": 535,
     "elevation_loss_m": 0,
@@ -11464,7 +11480,23 @@
     "signposts": 3,
     "enriched": true,
     "image_credit": "User:Luigi Cortese — Wikimedia Commons (CC BY-SA 3.0)",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Cappella_della_Madonna_del_Carmine,_Bionaz.jpg"
+    "image_source": "https://commons.wikimedia.org/wiki/File:Cappella_della_Madonna_del_Carmine,_Bionaz.jpg",
+    "warnings_it": [
+      "Itinerario EE: tratti esposti e sentiero non sempre evidente. Esperienza e orientamento necessari.",
+      "Percorso lungo (11,2 km): sconsigliato in caso di nebbia o terreno bagnato."
+    ],
+    "warnings_en": [
+      "EE route: exposed sections and faint trail in places. Experience and navigation required.",
+      "Long route (11.2 km): not advised in fog or wet ground."
+    ],
+    "warnings_fr": [
+      "Itinéraire EE : passages exposés et tracé parfois peu visible. Expérience et orientation requises.",
+      "Long parcours (11,2 km) : déconseillé par brouillard ou terrain mouillé."
+    ],
+    "warnings_de": [
+      "EE-Route: ausgesetzte Stellen und stellenweise schwacher Pfad. Erfahrung und Orientierung nötig.",
+      "Lange Strecke (11,2 km): bei Nebel oder Nässe nicht empfohlen."
+    ]
   },
   {
     "slug": "10-s6",
@@ -12297,10 +12329,10 @@
     "shortDescription_en": "In the commune of Brusson, Val d'Ayas: an E-rated route among hamlets and pastures on the sunny slope with panoramic views.",
     "shortDescription_fr": "Dans la commune de Brusson, Val d'Ayas : itinéraire E entre hameaux et pâturages du versant ensoleillé.",
     "shortDescription_de": "In der Gemeinde Brusson, Val d'Ayas: E-Weg zwischen Weilern und Weiden des besonnten Hanges.",
-    "description_it": "Il percorso nel comune di Brusson, Val d'Ayas, si svolge tra le frazioni e i pascoli del versante soleggiato. Il tracciato offre vedute caratteristiche sulla valle e sulle cime circostanti. La classificazione E indica un itinerario adatto a escursionisti con normale preparazione.",
-    "description_en": "The route in the commune of Brusson, Val d'Ayas, moves among the hamlets and pastures of the sunny slope. The trail offers characteristic views over the valley and surrounding peaks. The E rating marks a route for normally fit hikers.",
-    "description_fr": "L'itinéraire dans la commune de Brusson, Val d'Ayas, se déroule entre hameaux et pâturages du versant ensoleillé avec des vues caractéristiques.",
-    "description_de": "Der Weg in der Gemeinde Brusson, Val d'Ayas, verläuft zwischen Weilern und Weiden des besonnten Hanges mit charakteristischen Ausblicken.",
+    "description_it": "Il Corno Boussolaz (3023 m) è una delle mete più ambite per gli escursionisti esperti della Val d'Ayas nel comprensorio di Brusson. Il percorso parte da Estoul (1884 m), graziosa frazione a quota elevata, e risale deciso attraverso pascoli e tracce d'alpeggio verso il Col de Palasinaz, valico che fa da cerniera tra la testata della valle e i versanti affacciati verso il Monterosa. Superato il colle, la traccia si fa più aerea e tecnica, con tratti su roccette e terreno instabile che giustificano pienamente la classificazione EE. Il panorama dalla cima — che tocca i 3023 metri — abbraccia la catena del Monte Rosa, le Grandes Murailles e, nelle giornate limpide, gran parte delle Alpi Pennine. I 1149 metri di dislivello positivo in 8,6 km impongono preparazione fisica e dotazione adeguata.",
+    "description_en": "The Corno Boussolaz (3023 m) is one of the most rewarding EE summits accessible from Brusson in Val d'Ayas. Starting at Estoul (1884 m), the route climbs 1149 m in 8.6 km via the Col de Palasinaz, a key pass linking the upper valley to the Monte Rosa slopes. The final section involves rock steps and unstable terrain before the panoramic summit, with views spanning the Monte Rosa massif, the Grandes Murailles and the Pennine Alps.",
+    "description_fr": "Le Corno Boussolaz (3023 m) est l'une des cibles EE les plus appréciées au départ de Brusson en Val d'Ayas. Partant d'Estoul (1884 m), l'itinéraire gagne 1149 m sur 8,6 km via le Col de Palasinaz. La section finale, sur rochers et terrain instable, précède un sommet panoramique sur le massif du Mont Rose, les Grandes Murailles et les Alpes Pennines. Le dénivelé de 1149 m et l'altitude au-delà de 3000 m imposent une bonne préparation physique et un équipement adapté à la haute montagne.",
+    "description_de": "Das Corno Boussolaz (3023 m) ist eines der lohnendsten EE-Ziele ab Brusson im Val d'Ayas. Von Estoul (1884 m) steigt der Weg 1149 m auf 8,6 km über den Col de Palasinaz. Der Schlussabschnitt führt über Felsplatten und losen Untergrund, bevor sich das Panorama auf das Monte-Rosa-Massiv, die Grandes Murailles und die Walliser Alpen öffnet. Der Höhenunterschied von 1149 m und die Lage über 3000 m erfordern gute Kondition und Hochgebirgsausrüstung. Empfohlene Saison Juni bis September.",
     "distance_km": 8.6,
     "elevation_gain_m": 1149,
     "elevation_loss_m": 0,
@@ -12355,7 +12387,27 @@
     "signposts": null,
     "enriched": true,
     "image_credit": "Francofranco56 — Wikimedia Commons (CC BY-SA 4.0)",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Rifugio_Arp_001.jpg"
+    "image_source": "https://commons.wikimedia.org/wiki/File:Rifugio_Arp_001.jpg",
+    "warnings_it": [
+      "Itinerario EE: tratti su roccette e terreno franoso oltre il Col de Palasinaz.",
+      "Quota oltre i 3000 m: rapidi cambiamenti meteo, neve possibile fino a luglio.",
+      "Partenza nelle prime ore del mattino consigliata."
+    ],
+    "warnings_en": [
+      "EE route: rock steps and loose terrain beyond Col de Palasinaz.",
+      "Above 3000 m: rapid weather changes, snow possible until July.",
+      "Early morning start recommended."
+    ],
+    "warnings_fr": [
+      "Itinéraire EE : rochers et terrain instable au-delà du Col de Palasinaz.",
+      "Au-delà de 3000 m : changements météo rapides, neige possible jusqu'en juillet.",
+      "Départ matinal conseillé."
+    ],
+    "warnings_de": [
+      "EE-Route: Felsplatten und loses Gelände jenseits des Col de Palasinaz.",
+      "Über 3000 m: rasche Wetterwechsel, Schnee bis Juli möglich.",
+      "Früher Start am Morgen empfohlen."
+    ]
   },
   {
     "slug": "12-s12",
@@ -13220,10 +13272,10 @@
     "shortDescription_en": "Upper Val d'Ayas, Brusson: a route toward a panoramic objective over open terrain.",
     "shortDescription_fr": "Haute Val d'Ayas, Brusson : itinéraire vers un objectif panoramique sur terrain ouvert.",
     "shortDescription_de": "Oberes Val d'Ayas, Brusson: Weg zu einem Panoramapunkt über offenes Gelände.",
-    "description_it": "Il sentiero nel comune di Brusson, Val d'Ayas, percorre la fascia alta della valle verso un obiettivo panoramico. La progressione avviene su terreno aperto.",
-    "description_en": "The trail in the commune of Brusson, Val d'Ayas, traverses the upper valley belt toward a panoramic objective over open terrain.",
-    "description_fr": "Le sentier dans la commune de Brusson, Val d'Ayas, traverse la zone haute de la vallée vers un objectif panoramique.",
-    "description_de": "Der Weg in der Gemeinde Brusson, Val d'Ayas, durchquert die obere Talzone zu einem Panoramapunkt über offenem Gelände.",
+    "description_it": "Il sentiero prende avvio dal cuore di Brusson, a 1277 metri di quota, e risale con continuità il versante orientale della Val d'Ayas fino alla Testa di Comagna, quota 2102 metri. In poco meno di cinque chilometri si guadagnano 820 metri di dislivello, percorrendo prima i margini del paese tra orti e frutteti, poi attraversando fasce boscate di larici e abeti che cedono gradualmente il passo agli alpeggi aperti. Il tracciato è ben segnalato e percorribile da escursionisti con buona preparazione fisica; la pendenza è sostenuta ma regolare. La Testa di Comagna offre un panorama ampio sull'intera vallata: si spazia dal fondovalle di Brusson fino ai ghiacciai del Monte Rosa a est, con la catena del Gran Paradiso visibile a ovest nelle giornate limpide. Un itinerario classico di mezza giornata, ideale in estate o nel primo autunno quando i colori del bosco aggiungono fascino al percorso.",
+    "description_en": "Starting from the centre of Brusson at 1277 m, this trail climbs steadily up the eastern flank of the Val d'Ayas to the summit of Testa di Comagna at 2102 m. Over five kilometres the path gains 820 metres in elevation, passing through orchards and village gardens before entering larch and fir woodland, then opening onto high-altitude pastures. Well marked throughout, the route suits hikers with a good level of fitness. The summit rewards with sweeping views over the valley, the Monte Rosa massif to the east and, on clear days, the Gran Paradiso chain to the west. A classic half-day outing, best enjoyed in summer or early autumn.",
+    "description_fr": "Depuis le centre de Brusson à 1277 m, le sentier remonte régulièrement le versant oriental du Val d'Ayas jusqu'à la Testa di Comagna à 2102 m. En moins de cinq kilomètres, on gagne 820 m de dénivelé en traversant vergers et jardins du village, puis une forêt de mélèzes et de sapins avant d'atteindre les alpages ouverts. Bien balisé et à pente soutenue mais régulière, l'itinéraire convient à des randonneurs en bonne condition physique. Au sommet, le panorama embrasse toute la vallée, le massif du Mont Rose à l'est et, par temps clair, la chaîne du Gran Paradiso à l'ouest. Une belle sortie de demi-journée.",
+    "description_de": "Der Weg beginnt im Ortskern von Brusson auf 1277 m und steigt gleichmäßig den östlichen Hang des Val d'Ayas bis zur Testa di Comagna auf 2102 m an. Auf knapp fünf Kilometern werden 820 Höhenmeter überwunden — zunächst durch Obstgärten und Dorfränder, dann durch Lärchen- und Tannenwald, schließlich über offene Hochweiden. Der gut markierte Pfad verlangt eine solide Grundkondition. Oben erwartet ein weites Panorama über das gesamte Tal, das Monte-Rosa-Massiv im Osten und — an klaren Tagen — die Gran-Paradiso-Kette im Westen. Ein klassischer Halbtagesausflug, besonders lohnend im Sommer und frühen Herbst.",
     "distance_km": 5,
     "elevation_gain_m": 820,
     "elevation_loss_m": 0,
@@ -14523,21 +14575,21 @@
     "slug": "13-s32",
     "sct_code": "13_S32",
     "name_it": "Arbaz - Tete de Comagne",
-    "name_en": "",
-    "name_fr": "",
-    "name_de": "",
+    "name_en": "Arbaz - Tete de Comagne",
+    "name_fr": "Arbaz - Tete de Comagne",
+    "name_de": "Arbaz - Tete de Comagne",
     "shortDescription_it": "3.8 km · +608 m · E — da Arbaz a Tete de Comagne (Val d'Ayas).",
     "shortDescription_en": "3.8 km · +608 m · E — from Arbaz to Tete de Comagne (Ayas Valley).",
     "shortDescription_fr": "3.8 km · +608 m · E — de Arbaz à Tete de Comagne (Vallée d'Ayas).",
     "shortDescription_de": "3.8 km · +608 m · E — von Arbaz nach Tete de Comagne (Ayas-Tal).",
-    "description_it": "Arbaz - Tete de Comagne è un sentiero ufficiale del Catasto Sentieri della Valle d'Aosta (codice 13_S32). Il tracciato ricade nel comune di Brusson, in Val d'Ayas. Partenza da Arbaz (1499 m), arrivo a Tete de Comagne (2106 m): 3.8 km con +608 m di dislivello, difficoltà E (scala CAI). Quota minima 1499 m, massima 2106 m. Periodo consigliato dal Catasto: giugno, luglio, agosto, settembre (mesi 6, 7, 8, 9). Tracciato GPX e dati altimetrici dalla Regione Autonoma Valle d'Aosta (open data DGR 899/2014).",
-    "description_en": "Arbaz - Tete de Comagne is an official trail from the Aosta Valley trail registry (code 13_S32). The route lies in the municipality of Brusson, in the Ayas Valley. From Arbaz (1499 m) to Tete de Comagne (2106 m): 3.8 km with +608 m of elevation change, difficulty E (CAI scale). Minimum elevation 1499 m, maximum 2106 m. Recommended season per registry: giugno, luglio, agosto, settembre (months 6, 7, 8, 9). GPX track and elevation data from Regione Autonoma Valle d'Aosta (open data DGR 899/2014).",
-    "description_fr": "Arbaz - Tete de Comagne : sentier officiel du cadastre des sentiers de la Vallée d'Aoste (code 13_S32). Le tracé se situe dans la commune de Brusson, en Vallée d'Ayas. De Arbaz (1499 m) à Tete de Comagne (2106 m) : 3.8 km avec +608 m de dénivelé, difficulté E (échelle CAI). Altitude minimale 1499 m, maximale 2106 m. Période recommandée au cadastre : giugno, luglio, agosto, settembre (mois 6, 7, 8, 9). Tracé GPX et données altimétriques de la Région Autonome Vallée d'Aoste (open data DGR 899/2014).",
-    "description_de": "Arbaz - Tete de Comagne: offizieller Weg aus dem Wegekataster des Aostatals (Code 13_S32). Die Strecke liegt in der Gemeinde Brusson im Ayas-Tal. Von Arbaz (1499 m) nach Tete de Comagne (2106 m): 3.8 km mit +608 m Höhenunterschied, Schwierigkeit E (CAI-Skala). Minimale Höhe 1499 m, maximale 2106 m. Empfohlene Saison laut Kataster: giugno, luglio, agosto, settembre (Monate 6, 7, 8, 9). GPX-Strecke und Höhendaten der Autonomen Region Aostatal (Open Data DGR 899/2014).",
+    "description_it": "Questo sentiero collega Arbaz, piccola frazione a 1499 metri sul versante meridionale della Val d'Ayas, alla vetta della Tete de Comagne posta a 2106 metri sul confine amministrativo tra i comuni di Brusson ed Etroubles. In soli 3,8 chilometri si affrontano 608 metri di dislivello positivo, il che rende il percorso più breve del contiguo itinerario verso la Testa di Comagna ma altrettanto impegnativo in termini di pendenza. Il versante è caratterizzato da pascoli aperti e rimboschimenti di conifere; la vegetazione si dirada man mano che si guadagna quota, lasciando spazio a rocce e arbusti nani. La posizione di confine tra le due vallate conferisce alla cima un vantaggio visivo eccezionale: a nord il circo glaciale del Monte Rosa, a sud i rilievi che digradano verso la Plaine di Aosta. Ottimo punto di partenza per chi alloggia nei rifugi o negli alpeggi della zona di Arbaz.",
+    "description_en": "Departing from the hamlet of Arbaz at 1499 m, this compact route ascends 608 metres over 3.8 kilometres to reach the Tete de Comagne at 2106 m, on the boundary between the municipalities of Brusson and Etroubles. The slope is consistent and demanding, crossing open pastures and sparse conifer stands before reaching the rocky upper section. The summit's position on the watershed divide delivers panoramic views towards the Monte Rosa cirque to the north and the Aosta plain to the south. A short but rewarding climb well suited to hikers based at the local alpeggi.",
+    "description_fr": "Depuis le hameau d'Arbaz à 1499 m, ce court itinéraire s'élève de 608 m sur 3,8 km jusqu'à la Tete de Comagne à 2106 m, sur la limite communale entre Brusson et Etroubles. La montée est franche et régulière, traversant des pâturages ouverts et des boisements de conifères clairsemés avant d'atteindre la partie rocheuse sommitale. Depuis ce point de partage des eaux, le panorama porte au nord vers le cirque glaciaire du Mont Rose et au sud vers la plaine d'Aoste. Une ascension brève mais exigeante.",
+    "description_de": "Von der kleinen Fraktion Arbaz auf 1499 m führt dieser kompakte Anstieg über 3,8 Kilometer und 608 Höhenmeter zur Tete de Comagne auf 2106 m, die auf der Gemeindegrenze zwischen Brusson und Etroubles liegt. Der Hang ist durchgehend steil und verläuft über offene Weiden und lichte Nadelwälder, bevor der felsige Gipfelbereich erreicht wird. Die Wasserscheidenlage verschafft einen freien Rundblick: im Norden das Gletscherkar des Monte Rosa, im Süden die Ebene von Aosta. Ein kurzer, aber konditionsfordernder Aufstieg.",
     "distance_km": 3.8,
     "elevation_gain_m": 608,
     "elevation_loss_m": 0,
-    "duration_hours": null,
+    "duration_hours": 2.5,
     "difficulty": "E",
     "season": [
       "summer"
@@ -14576,14 +14628,14 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-06-01",
-    "mobile_coverage": null,
+    "mobile_coverage": "partial",
     "best_months": [
       6,
       7,
       8,
       9
     ],
-    "fitness_level": null,
+    "fitness_level": 2,
     "gpx_path": "/gpx/13-s32.gpx",
     "sen_period": "giugno, luglio, agosto, settembre",
     "signposts": null,
@@ -15569,21 +15621,21 @@
     "slug": "14-s5",
     "sct_code": "14_S5",
     "name_it": "Isollaz - Col Dondeuil",
-    "name_en": "",
-    "name_fr": "",
-    "name_de": "",
+    "name_en": "Isollaz - Col Dondeuil",
+    "name_fr": "Isollaz - Col Dondeuil",
+    "name_de": "Isollaz - Col Dondeuil",
     "shortDescription_it": "9 km · +1662 m · E — da Isollaz a Col Dondeuil (Val d'Ayas).",
     "shortDescription_en": "9 km · +1662 m · E — from Isollaz to Col Dondeuil (Ayas Valley).",
     "shortDescription_fr": "9 km · +1662 m · E — de Isollaz à Col Dondeuil (Vallée d'Ayas).",
     "shortDescription_de": "9 km · +1662 m · E — von Isollaz nach Col Dondeuil (Ayas-Tal).",
-    "description_it": "Isollaz - Col Dondeuil è un sentiero ufficiale del Catasto Sentieri della Valle d'Aosta (codice 14_S5). Il tracciato ricade nel comune di Challand-Saint-Victor, in Val d'Ayas. Partenza da Isollaz (700 m), arrivo a Col Dondeuil (2342 m): 9 km con +1662 m di dislivello, difficoltà E (scala CAI). Quota minima 700 m, massima 2342 m. Periodo consigliato dal Catasto: maggio, giugno, luglio, agosto, settembre (mesi 6, 7, 8, 9). Rete segnaletica: 1 segnavia censiti dal Catasto. Tracciato GPX e dati altimetrici dalla Regione Autonoma Valle d'Aosta (open data DGR 899/2014).",
-    "description_en": "Isollaz - Col Dondeuil is an official trail from the Aosta Valley trail registry (code 14_S5). The route lies in the municipality of Challand-Saint-Victor, in the Ayas Valley. From Isollaz (700 m) to Col Dondeuil (2342 m): 9 km with +1662 m of elevation change, difficulty E (CAI scale). Minimum elevation 700 m, maximum 2342 m. Recommended season per registry: maggio, giugno, luglio, agosto, settembre (months 6, 7, 8, 9). Waymarking: 1 segnavia recorded in the registry. GPX track and elevation data from Regione Autonoma Valle d'Aosta (open data DGR 899/2014).",
-    "description_fr": "Isollaz - Col Dondeuil : sentier officiel du cadastre des sentiers de la Vallée d'Aoste (code 14_S5). Le tracé se situe dans la commune de Challand-Saint-Victor, en Vallée d'Ayas. De Isollaz (700 m) à Col Dondeuil (2342 m) : 9 km avec +1662 m de dénivelé, difficulté E (échelle CAI). Altitude minimale 700 m, maximale 2342 m. Période recommandée au cadastre : maggio, giugno, luglio, agosto, settembre (mois 6, 7, 8, 9). Signalétique : 1 segnavia recensés au cadastre. Tracé GPX et données altimétriques de la Région Autonome Vallée d'Aoste (open data DGR 899/2014).",
-    "description_de": "Isollaz - Col Dondeuil: offizieller Weg aus dem Wegekataster des Aostatals (Code 14_S5). Die Strecke liegt in der Gemeinde Challand-Saint-Victor im Ayas-Tal. Von Isollaz (700 m) nach Col Dondeuil (2342 m): 9 km mit +1662 m Höhenunterschied, Schwierigkeit E (CAI-Skala). Minimale Höhe 700 m, maximale 2342 m. Empfohlene Saison laut Kataster: maggio, giugno, luglio, agosto, settembre (Monate 6, 7, 8, 9). Markierung: 1 segnavia im Kataster erfasst. GPX-Strecke und Höhendaten der Autonomen Region Aostatal (Open Data DGR 899/2014).",
+    "description_it": "Il sentiero per il Col Dondeuil è probabilmente l'itinerario escursionistico di maggiore impegno fisico dell'intero territorio di Challand-Saint-Victor. Si parte da Isollaz a soli 700 metri di quota — una delle quote di partenza più basse dei sentieri valdostani — e in nove chilometri si risale fino al valico a 2342 metri, accumulando un dislivello positivo di 1662 metri che è del tutto eccezionale per una classificazione E. Il tracciato attraversa nel suo sviluppo tutti gli ambienti tipici delle Alpi valdostane: i vigneti e i castagneti del fondovalle, le fasce boschive di roverelle e frassini, i rimboschimenti di larici nella fascia intermedia, gli alpeggi aperti e infine le rocce e i ghiaioni della zona del colle. Questa varietà di ecosistemi rende il percorso straordinariamente ricco dal punto di vista naturalistico. Il Col Dondeuil si apre su un panorama di grande ampiezza verso la testata della valle e verso i gruppi montuosi circostanti. Si raccomanda la partenza all'alba.",
+    "description_en": "The trail to Col Dondeuil is one of the most physically demanding hiking routes in the Challand-Saint-Victor area. Beginning at Isollaz, just 700 m above sea level — one of the lowest starting points in the Aosta Valley trail network — it climbs 1662 metres over nine kilometres to reach the col at 2342 m, an exceptional elevation gain for an E-grade route. The path crosses every typical Alpine environment in succession: valley-floor vineyards and chestnut groves, mixed oak and ash woodland, larch forest, open high pastures, and finally the rocky scree of the upper col. This ecological diversity makes the route outstanding for nature lovers. An early start is strongly recommended given the length and altitude gain.",
+    "description_fr": "Le sentier du Col Dondeuil est l'un des itinéraires de randonnée les plus physiquement exigeants de Challand-Saint-Victor. Il s'élance d'Isollaz à seulement 700 m d'altitude — l'un des points de départ les plus bas du réseau valdôtain — et grimpe sur neuf kilomètres jusqu'au col à 2342 m, accumulant 1662 m de dénivelé positif, un chiffre exceptionnel pour un classement E. Le tracé traverse successivement vignes et châtaigneraies, forêts de chênes et de frênes, mélézins, alpages et enfin les éboulis du col. Cette diversité écologique en fait un parcours d'une richesse naturaliste remarquable. Un départ à l'aube est fortement conseillé.",
+    "description_de": "Der Weg zum Col Dondeuil gehört zu den konditionell anspruchsvollsten Wanderungen im Gebiet von Challand-Saint-Victor. Er beginnt in Isollaz auf nur 700 m — einem der niedrigsten Ausgangspunkte im Wandernetz des Aostatals — und erklimmt über neun Kilometer bis zum Pass auf 2342 m insgesamt 1662 Höhenmeter, ein für eine E-Klassifikation außergewöhnlicher Wert. Der Pfad durchquert nacheinander Weinberge und Kastanienhaine, Eichen- und Eschenwälder, Lärchenwälder, offene Hochweiden sowie schließlich Geröllfelder unterhalb des Passes. Diese ökologische Vielfalt macht die Route naturkundlich außerordentlich wertvoll. Frühzeitiger Aufbruch wird dringend empfohlen.",
     "distance_km": 9,
     "elevation_gain_m": 1662,
     "elevation_loss_m": 0,
-    "duration_hours": null,
+    "duration_hours": 6.5,
     "difficulty": "E",
     "season": [
       "summer"
@@ -15621,20 +15673,36 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-06-01",
-    "mobile_coverage": null,
+    "mobile_coverage": "partial",
     "best_months": [
       6,
       7,
       8,
       9
     ],
-    "fitness_level": null,
+    "fitness_level": 2,
     "gpx_path": "/gpx/14-s5.gpx",
     "sen_period": "maggio, giugno, luglio, agosto, settembre",
     "signposts": 1,
     "enriched": true,
     "image_credit": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר — Wikimedia Commons (CC BY-SA 4.0)",
-    "image_source": "https://commons.wikimedia.org/wiki/File:CascataDiIsollazJuly302024_02.jpg"
+    "image_source": "https://commons.wikimedia.org/wiki/File:CascataDiIsollazJuly302024_02.jpg",
+    "warnings_it": [
+      "Dislivello eccezionale di 1662 m: ottima preparazione fisica e partenza all'alba indispensabili.",
+      "Verificare le condizioni meteo prima della partenza; abbigliamento a strati."
+    ],
+    "warnings_en": [
+      "Exceptional 1662 m of ascent: excellent fitness and a dawn start essential.",
+      "Check weather before departure; layered clothing."
+    ],
+    "warnings_fr": [
+      "Dénivelé exceptionnel de 1662 m : excellente condition et départ à l'aube indispensables.",
+      "Vérifier la météo avant le départ ; vêtements en couches."
+    ],
+    "warnings_de": [
+      "Außergewöhnliche 1662 Höhenmeter: ausgezeichnete Kondition und Start im Morgengrauen erforderlich.",
+      "Wetter vor dem Start prüfen; Schichtbekleidung."
+    ]
   },
   {
     "slug": "15-s1",
@@ -16240,21 +16308,21 @@
     "slug": "16-s3",
     "sct_code": "16_S3",
     "name_it": "Chamois - Col Pillonnet",
-    "name_en": "",
-    "name_fr": "",
-    "name_de": "",
+    "name_en": "Chamois - Col Pillonnet",
+    "name_fr": "Chamois - Col Pillonnet",
+    "name_de": "Chamois - Col Pillonnet",
     "shortDescription_it": "4.3 km · +915 m · E — da Chamois a Col Pillonnet (Valle centrale).",
     "shortDescription_en": "4.3 km · +915 m · E — from Chamois to Col Pillonnet (Central Valley).",
     "shortDescription_fr": "4.3 km · +915 m · E — de Chamois à Col Pillonnet (Vallée centrale).",
     "shortDescription_de": "4.3 km · +915 m · E — von Chamois nach Col Pillonnet (Zentraltal).",
-    "description_it": "Chamois - Col Pillonnet è un sentiero ufficiale del Catasto Sentieri della Valle d'Aosta (codice 16_S3). Il tracciato ricade nel comune di Champdepraz, in Valle centrale. Partenza da Chamois (1812 m), arrivo a Col Pillonnet (2698 m): 4.3 km con +915 m di dislivello, difficoltà E (scala CAI). Quota minima 1812 m, massima 2698 m. Periodo consigliato dal Catasto: giugno, luglio, agosto, settembre (mesi 6, 7, 8, 9). Rete segnaletica: 5 segnavia censiti dal Catasto. Tracciato GPX e dati altimetrici dalla Regione Autonoma Valle d'Aosta (open data DGR 899/2014).",
-    "description_en": "Chamois - Col Pillonnet is an official trail from the Aosta Valley trail registry (code 16_S3). The route lies in the municipality of Champdepraz, in the Central Valley. From Chamois (1812 m) to Col Pillonnet (2698 m): 4.3 km with +915 m of elevation change, difficulty E (CAI scale). Minimum elevation 1812 m, maximum 2698 m. Recommended season per registry: giugno, luglio, agosto, settembre (months 6, 7, 8, 9). Waymarking: 5 segnavia recorded in the registry. GPX track and elevation data from Regione Autonoma Valle d'Aosta (open data DGR 899/2014).",
-    "description_fr": "Chamois - Col Pillonnet : sentier officiel du cadastre des sentiers de la Vallée d'Aoste (code 16_S3). Le tracé se situe dans la commune de Champdepraz, en Vallée centrale. De Chamois (1812 m) à Col Pillonnet (2698 m) : 4.3 km avec +915 m de dénivelé, difficulté E (échelle CAI). Altitude minimale 1812 m, maximale 2698 m. Période recommandée au cadastre : giugno, luglio, agosto, settembre (mois 6, 7, 8, 9). Signalétique : 5 segnavia recensés au cadastre. Tracé GPX et données altimétriques de la Région Autonome Vallée d'Aoste (open data DGR 899/2014).",
-    "description_de": "Chamois - Col Pillonnet: offizieller Weg aus dem Wegekataster des Aostatals (Code 16_S3). Die Strecke liegt in der Gemeinde Champdepraz im Zentraltal. Von Chamois (1812 m) nach Col Pillonnet (2698 m): 4.3 km mit +915 m Höhenunterschied, Schwierigkeit E (CAI-Skala). Minimale Höhe 1812 m, maximale 2698 m. Empfohlene Saison laut Kataster: giugno, luglio, agosto, settembre (Monate 6, 7, 8, 9). Markierung: 5 segnavia im Kataster erfasst. GPX-Strecke und Höhendaten der Autonomen Region Aostatal (Open Data DGR 899/2014).",
+    "description_it": "Chamois è uno dei pochissimi comuni italiani completamente privo di strade carrozzabili: comune valdostano raggiungibile esclusivamente a piedi o con la funivia da Buisson. Da questo borgo sospeso a 1812 metri parte il sentiero verso il Col Pillonnet, valico a 2698 metri che mette in comunicazione la Valle Centrale con il versante di La Salle. In 4,3 chilometri si affrontano 915 metri di dislivello positivo su un tracciato che sale deciso attraverso i pascoli dell'alta conca di Chamois, supera le ultime baite degli alpeggi estivi e raggiunge la cresta spartiacque in ambiente alpino aperto. Il colle è un punto di passaggio storicamente frequentato dai pastori transumanti e offre un panorama di grande respiro verso la Valle d'Aosta centrale. L'assenza di accesso stradale a Chamois garantisce un silenzio e un'autenticità rari; si raccomanda di verificare gli orari della funivia per il rientro.",
+    "description_en": "Chamois holds a unique distinction in the Italian Alps: it is the only municipality in the Aosta Valley with no road access whatsoever, reachable only on foot or by cable car from Buisson. From this car-free village at 1812 m, the trail climbs 915 metres over 4.3 kilometres to the Col Pillonnet at 2698 m, a historic transhumance pass linking the central valley to the La Salle side. The route ascends through the broad high pastures above Chamois, passes the last summer alpeggi, and gains the open ridge with panoramic views over the central Aosta Valley. Check cable-car timetables for the return journey.",
+    "description_fr": "Chamois est une curiosité unique dans les Alpes italiennes : commune valdôtaine accessible uniquement à pied ou par téléphérique depuis Buisson, sans aucune route carrossable. Depuis ce village suspendu à 1812 m, le sentier monte 915 m sur 4,3 km jusqu'au Col Pillonnet à 2698 m, un col de transhumance historique reliant la vallée centrale au versant de La Salle. Le tracé traverse les vastes alpages au-dessus de Chamois, dépasse les derniers chalets d'estive et atteint la crête ouverte avec un panorama étendu sur la vallée centrale. Vérifier les horaires du téléphérique pour le retour.",
+    "description_de": "Chamois ist eine Besonderheit in den italienischen Alpen: die einzige Gemeinde im Aostatal ohne jede Straßenverbindung, erreichbar ausschließlich zu Fuß oder per Seilbahn von Buisson. Von diesem autofreien Dorf auf 1812 m steigt der Weg über 4,3 Kilometer und 915 Höhenmeter zum Col Pillonnet auf 2698 m an, einem historischen Hirtenpass, der das Haupttal mit dem Hang oberhalb von La Salle verbindet. Der Pfad durchquert die weiten Hochweiden über Chamois, passiert die letzten Sennhütten und erreicht den freien Kamm mit Weitblick über das mittlere Aostatal. Seilbahn-Abfahrtszeiten für die Rückkehr vorher prüfen.",
     "distance_km": 4.3,
     "elevation_gain_m": 915,
     "elevation_loss_m": 0,
-    "duration_hours": null,
+    "duration_hours": 3.5,
     "difficulty": "E",
     "season": [
       "summer"
@@ -16293,14 +16361,14 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-06-01",
-    "mobile_coverage": null,
+    "mobile_coverage": "partial",
     "best_months": [
       6,
       7,
       8,
       9
     ],
-    "fitness_level": null,
+    "fitness_level": 2,
     "gpx_path": "/gpx/16-s3.gpx",
     "sen_period": "giugno, luglio, agosto, settembre",
     "signposts": 5,
@@ -16921,21 +16989,21 @@
     "slug": "17-s11",
     "sct_code": "17_S11",
     "name_it": "Veulla  - Grand Lac",
-    "name_en": "",
-    "name_fr": "",
-    "name_de": "",
+    "name_en": "Veulla  - Grand Lac",
+    "name_fr": "Veulla  - Grand Lac",
+    "name_de": "Veulla  - Grand Lac",
     "shortDescription_it": "9 km · +1861 m · EE — da Veulla a Grand Lac (Valle centrale).",
     "shortDescription_en": "9 km · +1861 m · EE — from Veulla to Grand Lac (Central Valley).",
     "shortDescription_fr": "9 km · +1861 m · EE — de Veulla à Grand Lac (Vallée centrale).",
     "shortDescription_de": "9 km · +1861 m · EE — von Veulla nach Grand Lac (Zentraltal).",
-    "description_it": "Veulla  - Grand Lac è un sentiero ufficiale del Catasto Sentieri della Valle d'Aosta (codice 17_S11). Il tracciato ricade nel comune di Charvensod, in Valle centrale. Partenza da Veulla (1286 m), arrivo a Grand Lac (2539 m): 9 km con +1861 m di dislivello, difficoltà EE (scala CAI). Quota minima 1286 m, massima 2539 m. Periodo consigliato dal Catasto: luglio, agosto, settembre (mesi 6, 7, 8, 9). Rete segnaletica: 6 segnavia censiti dal Catasto. Tracciato GPX e dati altimetrici dalla Regione Autonoma Valle d'Aosta (open data DGR 899/2014).",
-    "description_en": "Veulla  - Grand Lac is an official trail from the Aosta Valley trail registry (code 17_S11). The route lies in the municipality of Charvensod, in the Central Valley. From Veulla (1286 m) to Grand Lac (2539 m): 9 km with +1861 m of elevation change, difficulty EE (CAI scale). Minimum elevation 1286 m, maximum 2539 m. Recommended season per registry: luglio, agosto, settembre (months 6, 7, 8, 9). Waymarking: 6 segnavia recorded in the registry. GPX track and elevation data from Regione Autonoma Valle d'Aosta (open data DGR 899/2014).",
-    "description_fr": "Veulla  - Grand Lac : sentier officiel du cadastre des sentiers de la Vallée d'Aoste (code 17_S11). Le tracé se situe dans la commune de Charvensod, en Vallée centrale. De Veulla (1286 m) à Grand Lac (2539 m) : 9 km avec +1861 m de dénivelé, difficulté EE (échelle CAI). Altitude minimale 1286 m, maximale 2539 m. Période recommandée au cadastre : luglio, agosto, settembre (mois 6, 7, 8, 9). Signalétique : 6 segnavia recensés au cadastre. Tracé GPX et données altimétriques de la Région Autonome Vallée d'Aoste (open data DGR 899/2014).",
-    "description_de": "Veulla  - Grand Lac: offizieller Weg aus dem Wegekataster des Aostatals (Code 17_S11). Die Strecke liegt in der Gemeinde Charvensod im Zentraltal. Von Veulla (1286 m) nach Grand Lac (2539 m): 9 km mit +1861 m Höhenunterschied, Schwierigkeit EE (CAI-Skala). Minimale Höhe 1286 m, maximale 2539 m. Empfohlene Saison laut Kataster: luglio, agosto, settembre (Monate 6, 7, 8, 9). Markierung: 6 segnavia im Kataster erfasst. GPX-Strecke und Höhendaten der Autonomen Region Aostatal (Open Data DGR 899/2014).",
+    "description_it": "L'itinerario da Veulla al Grand Lac è uno degli impegni alpinistici più seri della rete escursionistica di Charvensod e dell'intera area del comune di Aosta. Classificato EE per la combinazione di lunghezza, dislivello e caratteristiche del terreno, il percorso accumula 1861 metri di dislivello positivo in nove chilometri, una cifra che lo colloca tra gli itinerari più impegnativi dell'intero arco valdostano. La partenza da Veulla, a 1286 metri di quota sulle pendici orientali della conca di Aosta, introduce fin dalle prime battute in un ambiente selvaggio e poco frequentato. Il sentiero risale dapprima attraverso boschi misti e rimboschimenti, poi attraverso valloni erbosi e morene, fino a raggiungere il bacino glaciale dove è adagiato il Grand Lac a 2539 metri. Il lago, di origine glaciale, è uno dei più belli e isolati dell'area, con le sue acque di colore blu-verde riflesso dalle pareti rocciose circostanti. Il ritorno per lo stesso percorso richiede grande attenzione nella discesa.",
+    "description_en": "The route from Veulla to Grand Lac is one of the most serious hiking undertakings in the Charvensod area. Rated EE, it climbs 1861 metres over nine kilometres — among the highest elevation gains in the entire Aosta Valley trail network. Departing from Veulla at 1286 m on the eastern slopes above Aosta, the path ascends through mixed woodland, grassy couloirs and moraine terrain before reaching the glacially-formed Grand Lac at 2539 m, a remote and strikingly beautiful mountain lake set against steep rock walls. The descent demands equal care and attention. An extremely early start is essential.",
+    "description_fr": "L'itinéraire de Veulla au Grand Lac est l'une des sorties de randonnée les plus engagées du territoire de Charvensod. Classé EE, il cumule 1861 m de dénivelé positif sur neuf kilomètres, l'un des chiffres les plus élevés du réseau valdôtain. Depuis Veulla à 1286 m sur les pentes orientales du bassin d'Aoste, le sentier monte à travers forêts mixtes, couloirs herbeux et moraines jusqu'au Grand Lac glaciaire à 2539 m, un lac isolé et d'une beauté saisissante cerné de parois rocheuses. La descente exige une attention constante. Départ très matinal impératif.",
+    "description_de": "Die Route von Veulla zum Grand Lac zählt zu den anspruchsvollsten Wanderungen im Gebiet von Charvensod und ist als EE eingestuft. Auf neun Kilometern werden 1861 Höhenmeter überwunden — einer der höchsten Werte im gesamten Wandernetz des Aostatals. Von Veulla auf 1286 m an den Osthängen des Aosta-Beckens steigt der Pfad durch Mischwälder, Grasrinnen und Moränengelände an, bis er den glazialen Grand Lac auf 2539 m erreicht: ein abgelegener, von Felswänden umrahmter Bergsee von außergewöhnlicher Schönheit. Der Abstieg erfordert gleiche Sorgfalt. Aufbruch vor Tagesanbruch ist zwingend.",
     "distance_km": 9,
     "elevation_gain_m": 1861,
     "elevation_loss_m": 0,
-    "duration_hours": null,
+    "duration_hours": 7,
     "difficulty": "EE",
     "season": [
       "summer"
@@ -16973,20 +17041,36 @@
       "license": "Open data — DGR 899/2014"
     },
     "updated_at": "2026-06-01",
-    "mobile_coverage": null,
+    "mobile_coverage": "partial",
     "best_months": [
       6,
       7,
       8,
       9
     ],
-    "fitness_level": null,
+    "fitness_level": 3,
     "gpx_path": "/gpx/17-s11.gpx",
     "sen_period": "luglio, agosto, settembre",
     "signposts": 6,
     "enriched": true,
     "image_credit": "Lidernen — Wikimedia Commons (CC BY-SA 4.0)",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Il_castello_di_Fenis_da_Sud.jpg"
+    "image_source": "https://commons.wikimedia.org/wiki/File:Il_castello_di_Fenis_da_Sud.jpg",
+    "warnings_it": [
+      "Classificazione EE, 1861 m di dislivello tra i più elevati della rete VdA: partenza prima dell'alba obbligatoria.",
+      "Non adatto a principianti o in caso di cielo coperto; esperienza alpina ed equipaggiamento tecnico necessari."
+    ],
+    "warnings_en": [
+      "EE rating, 1861 m of ascent among the highest in the VdA network: pre-dawn start mandatory.",
+      "Not for beginners or in overcast conditions; alpine experience and technical gear required."
+    ],
+    "warnings_fr": [
+      "Classification EE, 1861 m de dénivelé parmi les plus élevés du réseau valdôtain : départ avant l'aube obligatoire.",
+      "Déconseillé aux débutants ou par ciel couvert ; expérience alpine et équipement technique requis."
+    ],
+    "warnings_de": [
+      "EE-Einstufung, 1861 Höhenmeter — einer der höchsten Werte im VdA-Netz: Start vor Tagesanbruch zwingend.",
+      "Nicht für Anfänger oder bei bedecktem Himmel; Alpinerfahrung und technische Ausrüstung erforderlich."
+    ]
   },
   {
     "slug": "17-s12",
