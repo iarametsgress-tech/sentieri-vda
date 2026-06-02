@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-02T08:37:51.282Z",
+  "updatedAt": "2026-06-02T08:53:49.962Z",
   "entries": [
     {
       "slug": "alta-via-1-tappa-1-donnas-perloz",
@@ -435,10 +435,10 @@
       "slug": "03-s3",
       "name": "Via delle Betulle - Pleod  - Arpuilles",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -455,10 +455,10 @@
       "slug": "03-s7",
       "name": "Regione Consolata - Excenex",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -585,20 +585,20 @@
       "slug": "05-s8",
       "name": "Leverogne  - Grand Haury",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
       "slug": "06-s1",
       "name": "Vedun - Echarlod (La Salle)",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -735,10 +735,10 @@
       "slug": "06-s26",
       "name": "Runaz - Milliery - Baulin",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -765,10 +765,10 @@
       "slug": "06-s29",
       "name": "Baulin - Alpage du Glacier",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -925,10 +925,10 @@
       "slug": "07-s2",
       "name": "Lignod -Crépin - Praz Charbon",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -945,10 +945,10 @@
       "slug": "07-s21",
       "name": "Ru Courtaud",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1035,10 +1035,10 @@
       "slug": "07-s30",
       "name": "Blanchard - Passo Superiore Bettolina - Rifugio Sella",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1085,10 +1085,10 @@
       "slug": "07-s36",
       "name": "Saint-Jacques - Rifugio Quintino Sella",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1915,10 +1915,10 @@
       "slug": "12-s27",
       "name": "Graines - Cleva de Moulaz",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2075,10 +2075,10 @@
       "slug": "13-s27",
       "name": "Paysan - Miniere di Bechaz",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2195,10 +2195,10 @@
       "slug": "14-s26",
       "name": "Lago Villa - Castello di Ville - Croce di Saint Gilles",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2335,10 +2335,10 @@
       "slug": "16-s2",
       "name": "Chamois- Cleyva Bella - Col de Nannaz",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2425,10 +2425,10 @@
       "slug": "17-s102",
       "name": "Veulla  - Lago Serva  -  Gran lago",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
