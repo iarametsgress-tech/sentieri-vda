@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-02T08:30:01.565Z",
+  "updatedAt": "2026-06-02T08:37:51.282Z",
   "entries": [
     {
       "slug": "alta-via-1-tappa-1-donnas-perloz",
@@ -1205,10 +1205,10 @@
       "slug": "07-s5",
       "name": "Barmasc - Mont Zerbion",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1405,10 +1405,10 @@
       "slug": "08-s16",
       "name": "Aymavilles - Torlin",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1535,10 +1535,10 @@
       "slug": "09-s1",
       "name": "Bard - Tête de Cou",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1655,10 +1655,10 @@
       "slug": "10-s24",
       "name": "Bionaz (Plan Praz) - Place Moulin",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1775,7 +1775,7 @@
       "slug": "11-s8",
       "name": "Bivacco Menabreaz - Col de Leppe",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": false,
       "map": true,
       "indexable": false,
@@ -1885,10 +1885,10 @@
       "slug": "12-s22",
       "name": "Strada per Estoul - Punta Regina - Col de Garda",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1905,10 +1905,10 @@
       "slug": "12-s26",
       "name": "Graines - Col de Garda",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2035,10 +2035,10 @@
       "slug": "13-s12",
       "name": "Tilly - Mayn",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2065,7 +2065,7 @@
       "slug": "13-s25",
       "name": "Orbeillaz - Col Tzecore",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": false,
       "map": true,
       "indexable": false,
@@ -2165,10 +2165,10 @@
       "slug": "14-s11",
       "name": "Anello delle gole del torrente Roesaz",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2185,10 +2185,10 @@
       "slug": "14-s2",
       "name": "Verval - Pessey",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2305,10 +2305,10 @@
       "slug": "15-s8",
       "name": "Gouilles- Del (Saint-Denis)",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2325,10 +2325,10 @@
       "slug": "16-s1",
       "name": "Chamois-Col Pilaz",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -2405,20 +2405,20 @@
       "slug": "17-s1",
       "name": "Lo Pian - Arvueil (Issogne)",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
       "slug": "17-s10",
       "name": "Rifugio Barbustel - Col de Mézove",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
