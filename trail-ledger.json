@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-02T07:58:14.472Z",
+  "updatedAt": "2026-06-02T08:30:01.565Z",
   "entries": [
     {
       "slug": "alta-via-1-tappa-1-donnas-perloz",
@@ -1175,20 +1175,20 @@
       "slug": "07-s45",
       "name": "Crest - Résy",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
       "slug": "07-s47",
       "name": "Champoluc - Col Palasinaz",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1355,20 +1355,20 @@
       "slug": "07-s9",
       "name": "Amponey -  Becca Trecare",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
       "slug": "08-s1",
       "name": "Aymavilles (Moulin) - Pondel",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1495,10 +1495,10 @@
       "slug": "08-s3",
       "name": "Pondel - Petit Poignon",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1515,10 +1515,10 @@
       "slug": "08-s8",
       "name": "Champsolin - Serignan",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1635,20 +1635,20 @@
       "slug": "10-s21",
       "name": "Ferrère - Alpe Pra de Dieu - Bivacco Chentre Bionaz",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
       "slug": "10-s23",
       "name": "Pouillaye - Colle di Montagnaye",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
@@ -1745,17 +1745,17 @@
       "slug": "11-s2",
       "name": "Bivacco Menabreaz",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": true,
       "map": true,
-      "indexable": false,
+      "indexable": true,
       "claim": null
     },
     {
       "slug": "11-s6",
       "name": "Bivacco Menabreaz - Col des Laures",
       "curated": false,
-      "desc": false,
+      "desc": true,
       "photo": false,
       "map": true,
       "indexable": false,
