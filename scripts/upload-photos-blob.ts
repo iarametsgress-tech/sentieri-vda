@@ -15,6 +15,7 @@
 import { readFile, writeFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { put } from '@vercel/blob';
+import { loadEnvLocal } from './lib/load-env';
 
 const SKELETON = './src/data/trails-skeleton.json';
 const GEO_DIR = 'public/trails/geo';
@@ -31,6 +32,7 @@ async function fileExists(p: string): Promise<boolean> {
 }
 
 async function main() {
+  await loadEnvLocal();
   const dryRun = Boolean(arg('dry-run'));
   const limit = Number(arg('limit') ?? Infinity);
   const token = process.env.BLOB_READ_WRITE_TOKEN;
@@ -71,7 +73,12 @@ async function main() {
       t.hero_image = res.url;
       done++;
     } catch (e: any) {
-      console.error(`  ✗ ${t.slug}:`, e?.message ?? e);
+      const msg = e?.message ?? String(e);
+      if (/private store/i.test(msg)) {
+        console.error(`  ✗ ${t.slug}: lo store Blob è privato. Vercel → Storage → Blob → imposta accesso Public, poi rilancia.`);
+        break;
+      }
+      console.error(`  ✗ ${t.slug}:`, msg);
     }
     processed++;
     if (!dryRun && done % SAVE_EVERY === 0) {

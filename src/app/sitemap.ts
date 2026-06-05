@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getIndexableTrails } from '@/lib/trails';
 import { getAllRefuges } from '@/lib/refuges';
 import { getAllBlogSlugs } from '@/lib/blog';
+import { getAllArticoliSlugs } from '@/lib/articoli';
 import { getMassifGroups } from '@/lib/environment';
 import { TOUR_IDS } from '@/lib/tours';
 import { getAllCultureThemeHubs } from '@/lib/culture-theme-hubs';
@@ -29,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ambiente',
     '/cultura',
     '/avvertenze',
+    '/articoli',
     '/blog',
     '/about',
     '/metodo',
@@ -159,6 +161,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: Object.fromEntries(
             locales.map((l) => [l, `${BASE}/${l}/blog/${slug}`])
+          ),
+        },
+      });
+    }
+
+    for (const slug of getAllArticoliSlugs()) {
+      entries.push({
+        url: `${BASE}/${locale}/articoli/${slug}`,
+        changeFrequency: 'monthly',
+        priority: 0.85,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((l) => [l, `${BASE}/${l}/articoli/${slug}`])
           ),
         },
       });

@@ -12,6 +12,7 @@
     "ambiente": "Ambiente",
     "cultura": "Cultura",
     "sicurezza": "Sicurezza",
+    "articoli": "Articoli",
     "parks": "Parchi",
     "blog": "Diario",
     "progetto": "Il progetto",
@@ -24,6 +25,9 @@
     "heroSubtitle": "Guida editoriale ai sentieri valdostani: mappe interattive, profili altimetrici e schede curate — dalle Alte Vie ai tour intorno a Monte Bianco, Cervino e Gran Paradiso.",
     "heroCtaPrimary": "Esplora i sentieri",
     "heroCtaSecondary": "Le Alte Vie",
+    "alphaBannerProduction": "In produzione",
+    "alphaBannerVersion": "Versione alpha",
+    "alphaBannerContacts": "Contatti",
     "featuredEyebrow": "In evidenza",
     "featuredTitle": "Grandi percorsi",
     "featuredAvTitle": "Le Alte Vie",
@@ -468,6 +472,34 @@
     "newsletterCta": "Iscriviti",
     "newsletterSuccess": "Iscrizione confermata. A presto sul sentiero.",
     "newsletterError": "Qualcosa è andato storto. Riprova tra poco."
+  },
+  "Articoli": {
+    "meta": {
+      "title": "Articoli sui sentieri della Valle d'Aosta",
+      "description": "Guide SEO ai migliori trekking, laghi alpini, rifugi e sentieri panoramici della Valle d'Aosta — con schede verificate e link ai percorsi."
+    },
+    "heroEyebrow": "Guide · Idee · Trekking",
+    "heroTitle": "Articoli sui sentieri valdostani",
+    "heroSubtitle": "Classifiche, itinerari per famiglie, laghi spettacolari e trekking fotografici: ogni articolo collega alle schede sentiero del catalogo Sentieri VdA.",
+    "heroStatsLabel": "guide · itinerari · idee",
+    "heroStatsHint": "Sentieri verificati con link alle schede",
+    "navClassici": "Classici e panorami",
+    "navLaghi": "Laghi alpini",
+    "navFamiglia": "Famiglia",
+    "navRifugi": "Rifugi e parco",
+    "navScoperta": "Percorsi nascosti",
+    "navFoto": "Foto e social",
+    "readArticle": "Leggi la guida",
+    "backToArticles": "Torna agli articoli",
+    "eyebrow": "Guida ai sentieri",
+    "publishedOn": "Pubblicato il {date}",
+    "writtenBy": "Di {name}",
+    "sectionIntroClassici": "I sentieri che definiscono l'immaginario valdostano: balconate sul Monte Bianco, valli glaciali e creste che compaiono in ogni classifica nazionale.",
+    "sectionIntroLaghi": "Specchi d'acqua d'alta quota, colori impossibili e trekking lacustre tra i più fotogenici delle Alpi occidentali.",
+    "sectionIntroFamiglia": "Dislivelli moderati, rifugi accoglienti e percorsi T/E adatti a bambini abituati al cammino — senza rinunciare al paesaggio.",
+    "sectionIntroRifugi": "Capannelli d'alta quota e tappe nel Parco Gran Paradiso: dove dormire (o pranzare) per vivere la montagna a ritmo lento.",
+    "sectionIntroScoperta": "Itinerari fuori dalle classifiche mainstream: valli laterali, tappe AV poco frequentate e anelli che meritano più attenzione.",
+    "sectionIntroFoto": "Albe, riflessi, composizioni verticali e angoli perfetti per fotografia paesaggistica e social — con consigli pratici di luce."
   },
   "Progetto": {
     "meta": {

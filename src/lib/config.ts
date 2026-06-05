@@ -17,3 +17,6 @@ export const SITE_AUTHOR = {
   photo: '/about/author.svg',
   email: 'info@sentierivda.it',
 };
+
+/** Banner homepage «In produzione / versione alpha» — impostare false per rimuoverlo. */
+export const SHOW_ALPHA_BANNER = true;

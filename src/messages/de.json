@@ -16,6 +16,7 @@
     "about": "Über uns",
     "progetto": "Das Projekt",
     "sicurezza": "Sicherheit",
+    "articoli": "Artikel",
     "metodo": "Methodik"
   },
   "Home": {
@@ -24,6 +25,9 @@
     "heroSubtitle": "Editorialer Führer zu den Wegen im Aostatal: interaktive Karten, Höhenprofile und kuratierte Routen — von den Hochrouten bis zu Touren um Mont Blanc, Matterhorn und Gran Paradiso.",
     "heroCtaPrimary": "Wege entdecken",
     "heroCtaSecondary": "Die Hochrouten",
+    "alphaBannerProduction": "In Produktion",
+    "alphaBannerVersion": "Alpha-Version",
+    "alphaBannerContacts": "Kontakt",
     "featuredEyebrow": "Empfohlen",
     "featuredTitle": "Etappen, die man mindestens einmal machen sollte",
     "exploreMapTitle": "Die ganze Region auf einer Karte",
@@ -474,6 +478,34 @@
     "newsletterCta": "Abonnieren",
     "newsletterSuccess": "Anmeldung bestätigt. Bis bald auf dem Weg.",
     "newsletterError": "Etwas ist schiefgelaufen. Bitte versuche es gleich noch einmal."
+  },
+  "Articoli": {
+    "meta": {
+      "title": "Artikel zu Wanderwegen im Aostatal",
+      "description": "Guides zu den besten Trekkingtouren, Alpenseen, Hütten und Panoramawegen im Aostatal — mit verifizierten Wegseiten."
+    },
+    "heroEyebrow": "Guides · Ideen · Trekking",
+    "heroTitle": "Artikel zu valdostanischen Wegen",
+    "heroSubtitle": "Rankings, Familienwanderungen, spektakuläre Seen und Fototrekking — jeder Artikel verlinkt zu den Wegseiten auf Sentieri VdA.",
+    "heroStatsLabel": "guides · routen · ideen",
+    "heroStatsHint": "Verifizierte Wege mit Links zu den Wegseiten",
+    "navClassici": "Klassiker & Panorama",
+    "navLaghi": "Alpenseen",
+    "navFamiglia": "Familie",
+    "navRifugi": "Hütten & Park",
+    "navScoperta": "Geheime Wege",
+    "navFoto": "Foto & Social",
+    "readArticle": "Guide lesen",
+    "backToArticles": "Zurück zu den Artikeln",
+    "eyebrow": "Wegführer",
+    "publishedOn": "Veröffentlicht am {date}",
+    "writtenBy": "Von {name}",
+    "sectionIntroClassici": "Die Wege, die das Aostatal prägen: Mont-Blanc-Balkone, Gletschertäler und Grate auf jeder nationalen Liste.",
+    "sectionIntroLaghi": "Hochgebirgsseen, unmögliche Farben und lakustische Wanderungen in den Westalpen.",
+    "sectionIntroFamiglia": "Moderate Höhenmeter, gemütliche Hütten und T/E-Wege für kinder, die ans Gehen gewöhnt sind.",
+    "sectionIntroRifugi": "Hochgebirgshütten und Etappen im Gran-Paradiso-Nationalpark.",
+    "sectionIntroScoperta": "Routen abseits der Mainstream-Listen: Seitentäler und wenig begangene Schleifen.",
+    "sectionIntroFoto": "Sonnenaufgänge, Spiegelungen und vertikale Kompositionen für Landschaftsfoto und Social Media."
   },
   "Progetto": {
     "meta": {

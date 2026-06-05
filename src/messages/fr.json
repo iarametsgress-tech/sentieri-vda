@@ -16,6 +16,7 @@
     "about": "À propos",
     "progetto": "Le projet",
     "sicurezza": "Sécurité",
+    "articoli": "Articles",
     "metodo": "Méthode"
   },
   "Home": {
@@ -24,6 +25,9 @@
     "heroSubtitle": "Guide éditorial des sentiers valdôtains : cartes interactives, profils altimétriques et fiches détaillées — des Hautes Routes aux tours du Mont-Blanc, Cervin et Grand Paradiso.",
     "heroCtaPrimary": "Explorer les sentiers",
     "heroCtaSecondary": "Les Hautes Routes",
+    "alphaBannerProduction": "En production",
+    "alphaBannerVersion": "Version alpha",
+    "alphaBannerContacts": "Contact",
     "featuredEyebrow": "À la une",
     "featuredTitle": "Étapes à faire au moins une fois",
     "exploreMapTitle": "Toute la région, sur une carte",
@@ -474,6 +478,34 @@
     "newsletterCta": "S'inscrire",
     "newsletterSuccess": "Inscription confirmée. À bientôt sur les sentiers.",
     "newsletterError": "Une erreur s'est produite. Réessayez dans un instant."
+  },
+  "Articoli": {
+    "meta": {
+      "title": "Articles sur les sentiers de la Vallée d'Aoste",
+      "description": "Guides aux meilleurs trekkings, lacs alpins, refuges et sentiers panoramiques de la Vallée d'Aoste — avec fiches vérifiées."
+    },
+    "heroEyebrow": "Guides · Idées · Trekking",
+    "heroTitle": "Articles sur les sentiers valdôtaines",
+    "heroSubtitle": "Classements, randonnées en famille, lacs spectaculaires et trekkings photo — chaque article renvoie aux fiches sentier de Sentieri VdA.",
+    "heroStatsLabel": "guides · itinéraires · idées",
+    "heroStatsHint": "Sentiers vérifiés avec liens vers les fiches",
+    "navClassici": "Classiques et panoramas",
+    "navLaghi": "Lacs alpins",
+    "navFamiglia": "Famille",
+    "navRifugi": "Refuges et parc",
+    "navScoperta": "Sentiers secrets",
+    "navFoto": "Photo et réseaux",
+    "readArticle": "Lire le guide",
+    "backToArticles": "Retour aux articles",
+    "eyebrow": "Guide sentiers",
+    "publishedOn": "Publié le {date}",
+    "writtenBy": "Par {name}",
+    "sectionIntroClassici": "Les sentiers qui définissent la Vallée d'Aoste : balcons sur le Mont-Blanc, vallées glaciaires et crêtes incontournables.",
+    "sectionIntroLaghi": "Miroirs d'altitude, couleurs improbables et randonnées lacustres parmi les plus photogéniques des Alpes occidentales.",
+    "sectionIntroFamiglia": "Dénivelés modérés, refuges accueillants et parcours T/E pour enfants habitués à la marche.",
+    "sectionIntroRifugi": "Refuges d'altitude et étapes au Parc du Gran Paradiso — où dormir ou déjeuner au rythme de la montagne.",
+    "sectionIntroScoperta": "Itinéraires hors des listes mainstream : vallées latérales et boucles méritant plus d'attention.",
+    "sectionIntroFoto": "Aurores, reflets et compositions verticales pour la photo paysage et les réseaux sociaux."
   },
   "Progetto": {
     "meta": {

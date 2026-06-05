@@ -101,12 +101,14 @@ async function main() {
     const signposts = asNumber(props.nuovo_segn);
     const { best_months, season } = parseSenPeriod(senPeriod);
 
+    const distance_km = Math.round((sk.distance_km ?? 0) * 10) / 10;
+
     const desc = buildEditorialDescriptions({
       name_it: sk.name_it,
       sct_code: sk.sct_code,
       slug: sk.slug,
       difficulty: sk.difficulty ?? 'E',
-      distance_km: sk.distance_km,
+      distance_km,
       elevation_gain_m: sk.elevation_gain_m ?? 0,
       elevation_loss_m: sk.elevation_loss_m ?? 0,
       start: sk.start,
@@ -138,6 +140,7 @@ async function main() {
     const enriched = Boolean(gpxOk && hasValley && hasDesc && hasPhoto);
 
     Object.assign(sk, {
+      distance_km,
       municipalities,
       valley: valley_it,
       best_months: desc.best_months.length ? desc.best_months : best_months,

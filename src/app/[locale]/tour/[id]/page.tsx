@@ -117,6 +117,8 @@ export default async function TourDetailPage({
         subtitle={route.description}
         section="tour"
         locale={locale}
+        imageSrc={route.heroImage}
+        imageAlt={route.name}
       />
 
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-24">

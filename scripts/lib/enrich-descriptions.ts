@@ -25,8 +25,13 @@ function minMaxElev(start?: number | null, end?: number | null): { min: number; 
   return { min: Math.min(start, end), max: Math.max(start, end) };
 }
 
+function formatKm(km: number): string {
+  const rounded = Math.round(km * 10) / 10;
+  return Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1);
+}
+
 export function buildEditorialDescriptions(input: EnrichInput) {
-  const km = input.distance_km.toFixed(1);
+  const km = formatKm(input.distance_km);
   const gain = Math.round(input.elevation_gain_m);
   const loss = Math.round(input.elevation_loss_m ?? 0);
   const a = input.start?.name?.trim() || '—';

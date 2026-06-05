@@ -58,6 +58,9 @@ interface SectionPageHeroProps {
   section: SectionHeroId;
   locale: string;
   note?: string;
+  /** Override dell'immagine di sfondo (es. foto specifica del tour, coerente con la card). */
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
 export default function SectionPageHero({
@@ -67,23 +70,26 @@ export default function SectionPageHero({
   section,
   locale,
   note,
+  imageSrc,
+  imageAlt,
 }: SectionPageHeroProps) {
-  const image = SECTION_HERO_IMAGES[section];
-  const alt = pickLocalized(locale, { it: image.altIt, en: image.altEn });
-  const isRemote = image.src.startsWith('http');
+  const fallback = SECTION_HERO_IMAGES[section];
+  const src = imageSrc ?? fallback.src;
+  const alt = imageAlt ?? pickLocalized(locale, { it: fallback.altIt, en: fallback.altEn });
+  const isRemote = src.startsWith('http');
 
   return (
     <section className="relative min-h-[52vh] overflow-hidden lg:min-h-[60vh]">
       <div className="absolute inset-0">
         <Image
-          src={image.src}
+          src={src}
           alt={alt}
           fill
           priority
           className="object-cover"
           sizes="100vw"
           unoptimized={isRemote}
-          {...(!isRemote ? trailImageBlurProps(image.src) : {})}
+          {...(!isRemote ? trailImageBlurProps(src) : {})}
         />
       </div>
 

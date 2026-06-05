@@ -1,5 +1,6 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import Hero from '@/components/Hero';
+import AlphaBanner from '@/components/AlphaBanner';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import AdSlot from '@/components/AdSlot';
@@ -10,6 +11,7 @@ const MapView = dynamic(() => import('@/components/MapView'), {
 import CounterStat from '@/components/CounterStat';
 import ScrollReveal from '@/components/ScrollReveal';
 import { getAllTrails, getTotalTrailKm, getTotalAlteViaStages } from '@/lib/trails';
+import { getAllArticoliPosts } from '@/lib/articoli';
 import { getAlteViaStages } from '@/lib/alte-vie';
 import { mergeTrailsGeoJSON } from '@/lib/gpx';
 import type { RouteHighlight } from '@/components/MapView';
@@ -33,6 +35,27 @@ export default async function HomePage({
   const trailCount = getAllTrails().length;
   const totalKm = getTotalTrailKm();
   const alteViaStages = getTotalAlteViaStages();
+
+  // Articoli più cercati: selezione editoriale dei 3 pezzi a maggior intento di ricerca.
+  const FEATURED_ARTICOLI = [
+    '10-sentieri-piu-belli-valle-aosta',
+    '5-sentieri-panoramici-valle-aosta',
+    '10-laghi-alpini-valle-aosta',
+  ];
+  const allArticoli = getAllArticoliPosts(locale);
+  const featuredArticoli = [
+    ...FEATURED_ARTICOLI.map((s) => allArticoli.find((a) => a.slug === s)).filter(
+      (a): a is NonNullable<typeof a> => Boolean(a)
+    ),
+    ...allArticoli.filter((a) => !FEATURED_ARTICOLI.includes(a.slug)),
+  ].slice(0, 3);
+
+  const articoliCopy = {
+    it: { eyebrow: 'Dal magazine', title: 'Articoli più cercati', cta: 'Tutti gli articoli' },
+    en: { eyebrow: 'From the magazine', title: 'Most-read articles', cta: 'All articles' },
+    fr: { eyebrow: 'Du magazine', title: 'Articles les plus lus', cta: 'Tous les articles' },
+    de: { eyebrow: 'Aus dem Magazin', title: 'Meistgelesene Artikel', cta: 'Alle Artikel' },
+  }[locale] ?? { eyebrow: 'Dal magazine', title: 'Articoli più cercati', cta: 'Tutti gli articoli' };
 
   const paths = [
     {
@@ -104,6 +127,7 @@ export default async function HomePage({
 
   return (
     <>
+      <AlphaBanner />
       <Hero />
 
       <section className="border-y border-white/5 bg-white/[0.01]">
@@ -273,6 +297,65 @@ export default async function HomePage({
       <div className="mx-auto max-w-7xl px-6 pb-24 lg:px-10">
         <AdSlot slot="header-billboard" />
       </div>
+
+      {featuredArticoli.length > 0 && (
+        <section className="mx-auto max-w-7xl px-6 pb-32 lg:px-10">
+          <div className="mb-14 flex items-end justify-between">
+            <div>
+              <ScrollReveal variant="slide-right" delay={0.05}>
+                <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.3em] text-alpenglow">
+                  {articoliCopy.eyebrow}
+                </p>
+              </ScrollReveal>
+              <ScrollReveal variant="fade-up" delay={0.1}>
+                <h2 className="font-display text-display-lg max-w-2xl tracking-tighter">
+                  {articoliCopy.title}
+                </h2>
+              </ScrollReveal>
+            </div>
+            <ScrollReveal variant="fade-in" delay={0.2}>
+              <Link
+                href="/articoli"
+                className="group hidden items-center gap-1.5 text-sm text-snow/50 transition-colors hover:text-snow sm:inline-flex"
+              >
+                {articoliCopy.cta}
+                <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+            </ScrollReveal>
+          </div>
+
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+            {featuredArticoli.map((a, i) => (
+              <ScrollReveal key={a.slug} variant="fade-up" delay={i * 0.07}>
+                <Link
+                  href={`/articoli/${a.slug}`}
+                  className="group block overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] transition-all duration-300 hover:-translate-y-1 hover:border-alpenglow/40 hover:shadow-[0_16px_48px_rgba(0,0,0,0.45)]"
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <Image
+                      src={a.cover}
+                      alt={a.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                      {...(a.cover.startsWith('http') ? { unoptimized: true } : trailImageBlurProps(a.cover))}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent" />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-display text-xl leading-tight tracking-tight text-snow transition-colors group-hover:text-alpenglow">
+                      {a.title}
+                    </h3>
+                    <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-snow/55">
+                      {a.description}
+                    </p>
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="mx-auto max-w-7xl px-6 pb-32 lg:px-10">
         <ScrollReveal variant="fade-up">

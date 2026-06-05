@@ -17,7 +17,12 @@ const SLEEP_MS = 350;
 const VALLEY_FALLBACK: Record<string, { local: string; credit: string; source: string }> = {
   "Valle d'Ayas": {
     local: 'public/trails/tour-monte-rosa-tappa-3-valtournenche-champoluc.webp',
-    credit: 'Wikimedia Commons — Champoluc, Val d\'Ayas',
+    credit: "Wikimedia Commons — Champoluc, Val d'Ayas",
+    source: 'https://commons.wikimedia.org/wiki/Category:Champoluc',
+  },
+  "Val d'Ayas": {
+    local: 'public/trails/tour-monte-rosa-tappa-3-valtournenche-champoluc.webp',
+    credit: "Wikimedia Commons — Champoluc, Val d'Ayas",
     source: 'https://commons.wikimedia.org/wiki/Category:Champoluc',
   },
   'Val Ferret': {
@@ -79,6 +84,16 @@ const VALLEY_FALLBACK: Record<string, { local: string; credit: string; source: s
     local: 'public/trails/alta-via-2-tappa-12-rifugio-dondena-champorcher.webp',
     credit: 'Wikimedia Commons — Champorcher',
     source: 'https://commons.wikimedia.org/wiki/Category:Champorcher',
+  },
+  Valdigne: {
+    local: 'public/trails/courmayeur.webp',
+    credit: 'Wikimedia Commons — Courmayeur, Valdigne',
+    source: 'https://commons.wikimedia.org/wiki/Category:Courmayeur',
+  },
+  'Valle centrale': {
+    local: 'public/trails/monte-rosa.webp',
+    credit: 'Wikimedia Commons — Valle d\'Aosta centrale',
+    source: 'https://commons.wikimedia.org/wiki/Category:Aosta_Valley',
   },
 };
 
@@ -213,9 +228,10 @@ async function main() {
     if (fb && (slugArg || !dryRun)) {
       valleyFallback++;
       const ext = path.extname(fb.local);
-      const dest = path.resolve(`public/trails/${sk.slug}${ext}`);
+      const dest = path.resolve(`public/trails/geo/${sk.slug}${ext}`);
+      await fs.mkdir(path.dirname(dest), { recursive: true });
       await fs.copyFile(path.resolve(fb.local), dest);
-      sk.image = `/trails/${sk.slug}${ext}`;
+      sk.image = `/trails/geo/${sk.slug}${ext}`;
       sk.hero_image = sk.image;
       sk.image_credit = fb.credit;
       sk.image_source = fb.source;

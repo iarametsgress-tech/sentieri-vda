@@ -11,14 +11,15 @@ import path from 'node:path';
 
 const USER_AGENT = 'SentieriVda/1.0 (https://sentieri-vda.vercel.app; editorial mountain guide)';
 const RADIUS_M = 2000;
+const LANDSCAPE_RADIUS_M = 5000;
 const SLEEP_MS = 500;
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-async function fetchImages(lat: number, lng: number): Promise<any[]> {
+async function fetchImages(lat: number, lng: number, radius = RADIUS_M): Promise<any[]> {
   const url =
     `https://commons.wikimedia.org/w/api.php?action=query&generator=geosearch` +
-    `&ggscoord=${lat}|${lng}&ggsradius=${RADIUS_M}&ggslimit=20&ggsnamespace=6` +
+    `&ggscoord=${lat}|${lng}&ggsradius=${radius}&ggslimit=20&ggsnamespace=6` +
     `&prop=imageinfo&iiprop=url|extmetadata&format=json&origin=*`;
 
   const res = await fetch(url, { headers: { 'User-Agent': USER_AGENT } });
@@ -78,12 +79,33 @@ function selectBestImage(hits: any[], name: string) {
 
     // Avoid PDFs or other non-image files if possible
     if (hit.title.toLowerCase().endsWith('.pdf')) score = -1;
+    if (/(map|mappa|carte|diagram|schema|logo|flag|locator)/i.test(title + categories)) score = -1;
 
     return { hit, score };
   });
 
   const best = scores.filter(s => s.score > 0).sort((a, b) => b.score - a.score)[0];
   return best?.hit ?? null;
+}
+
+/** Fallback: paesaggio alpino CC vicino alle coordinate (per bivacchi senza foto dedicata). */
+function selectNearbyLandscape(hits: any[]) {
+  const scores = hits.map((hit) => {
+    const meta = hit.imageinfo?.[0]?.extmetadata || {};
+    const title = normalize(hit.title || '');
+    const license = meta.LicenseShortName?.value || '';
+    const width = hit.imageinfo?.[0]?.width ?? 0;
+    if (!/cc|public domain|pd|ogl/i.test(license)) return { hit, score: -1 };
+    if (hit.title.toLowerCase().endsWith('.pdf')) return { hit, score: -1 };
+    if (/(map|mappa|carte|diagram|schema|logo|flag|locator|coat of arms|stemma)/i.test(title)) {
+      return { hit, score: -1 };
+    }
+    let score = 10;
+    if (width >= 1200) score += 20;
+    if (/(monte|mont|peak|refuge|rifugio|bivacco|alpe|valle|valley|glacier|glaci)/i.test(title)) score += 15;
+    return { hit, score };
+  });
+  return scores.filter((s) => s.score > 0).sort((a, b) => b.score - a.score)[0]?.hit ?? null;
 }
 
 async function downloadImage(url: string, dest: string) {
@@ -98,7 +120,7 @@ async function main() {
   const dryRun = process.argv.includes('--dry-run');
   const slugArg = process.argv.find((a) => a.startsWith('--slug='))?.split('=')[1];
   const limitArg = process.argv.find((a) => a.startsWith('--limit='))?.split('=')[1];
-  const limit = limitArg ? Number(limitArg) : slugArg ? 1 : 10;
+  const limit = limitArg ? Number(limitArg) : slugArg ? 1 : Infinity;
 
   const dataPath = path.resolve('src/data/refuges.json');
   const refuges = JSON.parse(await fs.readFile(dataPath, 'utf8')) as any[];
@@ -120,13 +142,22 @@ async function main() {
     console.log(`Searching for ${refuge.name_it} (${refuge.slug})...`);
     await sleep(SLEEP_MS);
 
-    let hits = await fetchImages(lat, lng);
-    let best = selectBestImage(hits, refuge.name_it);
+    const geoHits = await fetchImages(lat, lng);
+    let best = selectBestImage(geoHits, refuge.name_it);
 
     if (!best) {
       console.log(`  No geolocated match found, trying keyword search...`);
-      hits = await searchImagesByName(refuge.name_it);
-      best = selectBestImage(hits, refuge.name_it);
+      const keywordHits = await searchImagesByName(refuge.name_it);
+      best = selectBestImage(keywordHits, refuge.name_it);
+    }
+
+    if (!best) {
+      best = selectNearbyLandscape(geoHits);
+      if (!best) {
+        const wideHits = await fetchImages(lat, lng, LANDSCAPE_RADIUS_M);
+        best = selectNearbyLandscape(wideHits);
+      }
+      if (best) console.log(`  Using nearby landscape fallback`);
     }
 
     if (best) {

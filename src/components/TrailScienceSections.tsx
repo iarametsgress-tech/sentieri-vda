@@ -93,7 +93,7 @@ export default function TrailScienceSections({ trail, locale, labels }: Props) {
             {labels.geologyEyebrow}
           </p>
           <SectionLabel>{labels.geology}</SectionLabel>
-          <p className="text-snow/75 leading-[1.85] font-light text-[1.05rem]">
+          <p className="leading-[1.85] font-light text-[1.05rem] text-snow/75">
             <LinkedText text={geology} locale={locale} />
           </p>
         </section>
@@ -247,3 +247,4 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
     <p className="font-mono text-xs uppercase tracking-[0.25em] text-snow/55 mb-4">{children}</p>
   );
 }
+

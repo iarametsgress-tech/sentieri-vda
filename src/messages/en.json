@@ -12,6 +12,7 @@
     "ambiente": "Environment",
     "cultura": "Culture",
     "sicurezza": "Safety",
+    "articoli": "Articles",
     "parks": "Parks",
     "blog": "Journal",
     "progetto": "The project",
@@ -24,6 +25,9 @@
     "heroSubtitle": "An editorial guide to Valdostan trails: interactive maps, elevation profiles and curated route pages — from the High Routes to tours around Mont Blanc, the Matterhorn and Gran Paradiso.",
     "heroCtaPrimary": "Explore trails",
     "heroCtaSecondary": "The High Routes",
+    "alphaBannerProduction": "Live site",
+    "alphaBannerVersion": "Alpha version",
+    "alphaBannerContacts": "Contact",
     "featuredEyebrow": "Featured",
     "featuredTitle": "Grand routes",
     "featuredAvTitle": "High Routes",
@@ -468,6 +472,34 @@
     "newsletterCta": "Subscribe",
     "newsletterSuccess": "You're subscribed. See you on the trail.",
     "newsletterError": "Something went wrong. Please try again shortly."
+  },
+  "Articoli": {
+    "meta": {
+      "title": "Aosta Valley hiking articles",
+      "description": "SEO guides to the best treks, alpine lakes, refuges and panoramic trails in Aosta Valley — with verified trail pages and internal links."
+    },
+    "heroEyebrow": "Guides · Ideas · Trekking",
+    "heroTitle": "Aosta Valley trail articles",
+    "heroSubtitle": "Rankings, family hikes, spectacular lakes and photo treks — each article links to verified trail pages on Sentieri VdA.",
+    "heroStatsLabel": "guides · routes · ideas",
+    "heroStatsHint": "Verified trails linked to trail pages",
+    "navClassici": "Classics & views",
+    "navLaghi": "Alpine lakes",
+    "navFamiglia": "Family",
+    "navRifugi": "Refuges & park",
+    "navScoperta": "Hidden trails",
+    "navFoto": "Photo & social",
+    "readArticle": "Read guide",
+    "backToArticles": "Back to articles",
+    "eyebrow": "Trail guide",
+    "publishedOn": "Published {date}",
+    "writtenBy": "By {name}",
+    "sectionIntroClassici": "The trails that define the Aosta Valley: Mont Blanc balconies, glacial valleys and ridges on every national shortlist.",
+    "sectionIntroLaghi": "High-altitude mirrors, impossible colours and lake hikes among the most photogenic in the Western Alps.",
+    "sectionIntroFamiglia": "Moderate elevation gain, welcoming refuges and T/E routes for children used to walking — without sacrificing scenery.",
+    "sectionIntroRifugi": "High mountain huts and stages in Gran Paradiso National Park — where to sleep or lunch and enjoy the mountains slowly.",
+    "sectionIntroScoperta": "Routes off the mainstream lists: side valleys, quiet AV stages and loops that deserve more attention.",
+    "sectionIntroFoto": "Sunrises, reflections, vertical compositions and perfect angles for landscape photography and social — with practical light tips."
   },
   "Progetto": {
     "meta": {

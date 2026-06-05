@@ -38,6 +38,7 @@ export default function Navbar({ locale }: { locale: string }) {
     { href: '/ambiente', label: t('ambiente') },
     { href: '/cultura', label: t('cultura') },
     { href: '/avvertenze', label: t('sicurezza') },
+    { href: '/articoli', label: t('articoli') },
   ];
 
   return (
@@ -62,7 +63,7 @@ export default function Navbar({ locale }: { locale: string }) {
           </motion.span>
         </Link>
 
-        <div className="hidden items-center gap-7 md:flex">
+        <div className="hidden min-w-0 flex-1 items-center justify-end gap-4 overflow-x-auto scrollbar-none md:flex lg:gap-5 xl:gap-7">
           {links.map((l) => {
             const isActive =
               pathname === l.href || pathname.startsWith(l.href + '/');
@@ -72,7 +73,7 @@ export default function Navbar({ locale }: { locale: string }) {
                 href={l.href}
                 onMouseEnter={() => prefetch(l.href)}
                 onFocus={() => prefetch(l.href)}
-                className="relative py-1 text-sm tracking-wide text-snow/65 transition-colors duration-200 hover:text-snow"
+                className="relative shrink-0 py-1 text-sm tracking-wide text-snow/65 transition-colors duration-200 hover:text-snow"
               >
                 {l.label}
                 <AnimatePresence>
@@ -151,8 +152,8 @@ export default function Navbar({ locale }: { locale: string }) {
                   </Link>
                 </motion.div>
               ))}
-              <div className="border-t border-white/5 pt-2">
-                <LocaleSwitch currentLocale={locale} />
+              <div className="relative z-10 border-t border-white/5 pt-2">
+                <LocaleSwitch currentLocale={locale} menuStyle="inline" />
               </div>
             </div>
           </motion.div>

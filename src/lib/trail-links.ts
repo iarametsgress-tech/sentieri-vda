@@ -2,7 +2,6 @@ import { getRefugeBySlug, getRefugeDisplayName } from '@/lib/refuges';
 import { resolvePeakIdFromName, getPeakHref } from '@/lib/environment';
 import {
   getDifficultyHubHref,
-  getSpeciesHubHref,
   getThemeHubHref,
   getValleyHubHref,
   resolveTrailSpeciesId,
@@ -89,7 +88,7 @@ export function resolveSpeciesId(slug: string): string | null {
 }
 
 export function getSpeciesHref(speciesId: string): string {
-  return getSpeciesHubHref(speciesId);
+  return `/ambiente?specie=${speciesId}#flora-fauna`;
 }
 
 export { getValleyHubHref, getDifficultyHubHref, getThemeHubHref };

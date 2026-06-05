@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/5 bg-white/[0.02]">
+      <div id="contatti" className="scroll-mt-20 border-t border-white/5 bg-white/[0.02]">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-10">
           <p className="font-mono text-xs uppercase tracking-widest text-alpenglow mb-2">
             {t('contactsTitle')}

@@ -17,6 +17,8 @@ const PLACEHOLDER = '/trails/_placeholder.svg';
 const RADII_M = [1000, 2000, 3000];
 const DEFAULT_SLEEP_MS = 650;
 const MIN_WIDTH = 1200;
+const MAX_FETCH_ATTEMPTS = 4;
+const FETCH_TIMEOUT_MS = 30000;
 const REJECTED_SOURCES = new Set([
   'https://commons.wikimedia.org/wiki/File:Mont_Glacier_visto_dal_Bec_Raty_orientale.jpg',
 ]);
@@ -62,6 +64,21 @@ type Candidate = {
 };
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function fetchWithRetry(url: string, init: RequestInit): Promise<Response> {
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= MAX_FETCH_ATTEMPTS; attempt++) {
+    try {
+      const response = await fetch(url, { ...init, signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) });
+      if (response.ok || (response.status !== 429 && response.status < 500)) return response;
+      lastError = new Error(`HTTP ${response.status}`);
+    } catch (error) {
+      lastError = error;
+    }
+    if (attempt < MAX_FETCH_ATTEMPTS) await sleep(1000 * attempt);
+  }
+  throw lastError;
+}
 
 function parseNumberArg(name: string, fallback: number): number {
   const raw = process.argv.find((arg) => arg.startsWith(`--${name}=`))?.split('=')[1];
@@ -165,7 +182,7 @@ async function geosearch(lat: number, lng: number, radius: number): Promise<Comm
     format: 'json',
     origin: '*',
   });
-  const response = await fetch(`https://commons.wikimedia.org/w/api.php?${params}`, {
+  const response = await fetchWithRetry(`https://commons.wikimedia.org/w/api.php?${params}`, {
     headers: { 'User-Agent': USER_AGENT },
   });
   if (!response.ok) throw new Error(`Wikimedia API HTTP ${response.status}`);
@@ -220,12 +237,16 @@ function resetToPlaceholder(skeleton: Skeleton) {
 }
 
 async function saveWebp(candidate: Candidate, slug: string) {
-  const response = await fetch(candidate.imageUrl, { headers: { 'User-Agent': USER_AGENT } });
+  const response = await fetchWithRetry(candidate.imageUrl, { headers: { 'User-Agent': USER_AGENT } });
   if (!response.ok) throw new Error(`download HTTP ${response.status}`);
   const input = Buffer.from(await response.arrayBuffer());
   const output = path.resolve(`public/trails/geo/${slug}.webp`);
   await fs.mkdir(path.dirname(output), { recursive: true });
   await sharp(input).rotate().resize({ width: 1600, withoutEnlargement: true }).webp({ quality: 82 }).toFile(output);
+}
+
+async function saveSkeletons(skeletonPath: string, skeletons: Skeleton[]) {
+  await fs.writeFile(skeletonPath, `${JSON.stringify(skeletons, null, 2)}\n`);
 }
 
 async function main() {
@@ -250,12 +271,14 @@ async function main() {
     if (!mid) {
       if (!dryRun) resetToPlaceholder(skeleton);
       report.push({ slug: skeleton.slug, result: 'no-geometry' });
+      if (!dryRun) await saveSkeletons(skeletonPath, skeletons);
       continue;
     }
     const candidate = await findBestPhoto(mid.lat, mid.lng, usedSources, sleepMs);
     if (!candidate) {
       if (!dryRun) resetToPlaceholder(skeleton);
       report.push({ slug: skeleton.slug, result: 'no-match' });
+      if (!dryRun) await saveSkeletons(skeletonPath, skeletons);
       continue;
     }
     report.push({
@@ -271,9 +294,9 @@ async function main() {
     skeleton.image_credit = `${candidate.artist} — Wikimedia Commons (${candidate.license})`;
     skeleton.image_source = candidate.source;
     skeleton.enriched = Boolean(skeleton.gpx_path && skeleton.valley && skeleton.description_it);
+    await saveSkeletons(skeletonPath, skeletons);
   }
 
-  if (!dryRun) await fs.writeFile(skeletonPath, `${JSON.stringify(skeletons, null, 2)}\n`);
   console.table(report);
   console.log(`Processati: ${report.length}`);
   console.log(`Foto accettate: ${report.filter((item) => /^(match|saved)$/.test(item.result)).length}`);
