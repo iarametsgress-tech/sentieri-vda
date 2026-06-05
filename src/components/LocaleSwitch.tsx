@@ -35,26 +35,12 @@ export default function LocaleSwitch({
     const onClick = (e: MouseEvent) => {
       if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
     };
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false);
-    };
     document.addEventListener('mousedown', onClick);
-    document.addEventListener('keydown', onKey);
-    return () => {
-      document.removeEventListener('mousedown', onClick);
-      document.removeEventListener('keydown', onKey);
-    };
+    return () => document.removeEventListener('mousedown', onClick);
   }, []);
 
   const switchTo = (locale: LocaleCode) => {
-    if (locale === currentLocale) {
-      setOpen(false);
-      return;
-    }
-    // Preserva i query param della pagina corrente (es. /ambiente?specie=stambecco)
-    const search = typeof window !== 'undefined' ? window.location.search : '';
-    const query = Object.fromEntries(new URLSearchParams(search));
-    router.replace({ pathname, query }, { locale });
+    router.replace(pathname, { locale });
     setOpen(false);
   };
 

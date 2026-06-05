@@ -63,7 +63,7 @@ export default function Navbar({ locale }: { locale: string }) {
           </motion.span>
         </Link>
 
-        <div className="hidden min-w-0 flex-1 items-center justify-end gap-4 overflow-x-auto scrollbar-none md:flex lg:gap-5 xl:gap-7">
+        <div className="hidden items-center gap-7 md:flex">
           {links.map((l) => {
             const isActive =
               pathname === l.href || pathname.startsWith(l.href + '/');
@@ -73,7 +73,7 @@ export default function Navbar({ locale }: { locale: string }) {
                 href={l.href}
                 onMouseEnter={() => prefetch(l.href)}
                 onFocus={() => prefetch(l.href)}
-                className="relative shrink-0 py-1 text-sm tracking-wide text-snow/65 transition-colors duration-200 hover:text-snow"
+                className="relative py-1 text-sm tracking-wide text-snow/65 transition-colors duration-200 hover:text-snow"
               >
                 {l.label}
                 <AnimatePresence>

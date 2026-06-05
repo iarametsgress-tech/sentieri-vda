@@ -11,6 +11,7 @@ import {
   CulturaBelowFoldSkeleton,
 } from '@/components/SectionExplorerSkeleton';
 import CulturaValliSection from '@/components/sections/CulturaValliSection';
+import CulturaStoriaSection from '@/components/sections/CulturaStoriaSection';
 import CulturaTradizioniSection from '@/components/sections/CulturaTradizioniSection';
 import CulturaCiboSection from '@/components/sections/CulturaCiboSection';
 import { trailImageBlurProps } from '@/lib/blur';
@@ -73,6 +74,7 @@ export default async function CulturaPage({
       <CulturaSectionNav
         labels={{
           valli: t('navValli'),
+          storia: isIT ? 'Storia' : locale === 'fr' ? 'Histoire' : locale === 'de' ? 'Geschichte' : 'History',
           tradizioni: t('navTradizioni'),
           ciboVino: t('navCiboVino'),
         }}
@@ -83,6 +85,10 @@ export default async function CulturaPage({
 
       <Suspense fallback={<CulturaValliSkeleton />}>
         <CulturaValliSection locale={locale} />
+      </Suspense>
+
+      <Suspense fallback={<CulturaBelowFoldSkeleton />}>
+        <CulturaStoriaSection locale={locale} />
       </Suspense>
 
       <Suspense fallback={<CulturaBelowFoldSkeleton />}>

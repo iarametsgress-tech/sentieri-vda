@@ -58,7 +58,7 @@ interface SectionPageHeroProps {
   section: SectionHeroId;
   locale: string;
   note?: string;
-  /** Override dell'immagine di sfondo (es. foto specifica del tour, coerente con la card). */
+  /** Override dell'immagine di default della sezione (es. foto della card del tour). */
   imageSrc?: string;
   imageAlt?: string;
 }
@@ -75,7 +75,8 @@ export default function SectionPageHero({
 }: SectionPageHeroProps) {
   const fallback = SECTION_HERO_IMAGES[section];
   const src = imageSrc ?? fallback.src;
-  const alt = imageAlt ?? pickLocalized(locale, { it: fallback.altIt, en: fallback.altEn });
+  const alt =
+    imageAlt ?? pickLocalized(locale, { it: fallback.altIt, en: fallback.altEn });
   const isRemote = src.startsWith('http');
 
   return (

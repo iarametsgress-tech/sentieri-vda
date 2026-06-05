@@ -1,12 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { MapPin, Landmark, UtensilsCrossed } from 'lucide-react';
+import { MapPin, Landmark, UtensilsCrossed, ScrollText } from 'lucide-react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { cn } from '@/lib/cn';
 
 const SECTIONS = [
   { id: 'valli', icon: MapPin },
+  { id: 'storia', icon: ScrollText },
   { id: 'tradizioni', icon: Landmark },
   { id: 'cibo-vino', icon: UtensilsCrossed },
 ] as const;
@@ -17,11 +18,12 @@ export default function CulturaSectionNav({
   labels,
   ariaLabel,
 }: {
-  labels: { valli: string; tradizioni: string; ciboVino: string };
+  labels: { valli: string; storia: string; tradizioni: string; ciboVino: string };
   ariaLabel: string;
 }) {
   const sectionLabels: Record<SectionId, string> = {
     valli: labels.valli,
+    storia: labels.storia,
     tradizioni: labels.tradizioni,
     'cibo-vino': labels.ciboVino,
   };

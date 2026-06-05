@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'framer-motion';
-import { cn } from '@/lib/cn';
 
 export default function CounterStat({
   value,
@@ -52,12 +51,12 @@ export default function CounterStat({
 
   return (
     <div ref={ref} className="text-center">
-      <p className={cn(valueClassName, 'whitespace-nowrap tabular-nums')}>
+      <p className={valueClassName}>
         {prefix}
         {count.toLocaleString('it-IT')}
         <span className="text-alpenglow">{suffix}</span>
       </p>
-      <p className={`mt-3 min-h-[1.25rem] font-mono text-xs uppercase tracking-[0.25em] ${labelClassName}`}>
+      <p className={`mt-3 font-mono text-xs uppercase tracking-[0.25em] ${labelClassName}`}>
         {label}
       </p>
     </div>
