@@ -9,6 +9,7 @@ import {
   getExploreMassifLinks,
   getSpeciesLocalizedName,
 } from '@/lib/hubs';
+import { getSpeciesById } from '@/data/species';
 
 export default async function TrailHubExploreSection({ locale }: { locale: string }) {
   const t = await getTranslations('TrailHubs');
@@ -19,6 +20,12 @@ export default async function TrailHubExploreSection({ locale }: { locale: strin
   const cultureThemes = getAllCultureThemeHubs();
   const massifs = getExploreMassifLinks(locale);
   const species = getAllSpeciesHubs();
+  const floraSpecies = species.filter(
+    (hub) => getSpeciesById(hub.speciesId)?.kind === 'flora',
+  );
+  const faunaSpecies = species.filter(
+    (hub) => getSpeciesById(hub.speciesId)?.kind === 'fauna',
+  );
 
   return (
     <section className="mb-16 border-t border-white/10 pt-14">
@@ -84,8 +91,20 @@ export default async function TrailHubExploreSection({ locale }: { locale: strin
           ))}
         </HubGroup>
 
-        <HubGroup title={t('bySpecies')} className="lg:col-span-2">
-          {species.map((hub) => (
+        <HubGroup title={t('byFlora')} className="lg:col-span-2">
+          {floraSpecies.map((hub) => (
+            <HubLink
+              key={hub.slug}
+              href={`/sentieri/dove-vedere/${hub.slug}`}
+              label={getSpeciesLocalizedName(hub.speciesId, locale)}
+              count={hub.count}
+              countLabel={t('trailCount', { count: hub.count })}
+            />
+          ))}
+        </HubGroup>
+
+        <HubGroup title={t('byFauna')} className="lg:col-span-2">
+          {faunaSpecies.map((hub) => (
             <HubLink
               key={hub.slug}
               href={`/sentieri/dove-vedere/${hub.slug}`}

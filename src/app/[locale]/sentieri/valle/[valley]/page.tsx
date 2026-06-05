@@ -14,6 +14,15 @@ import {
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
 import type { Difficulty } from '@/lib/types';
 
+/** Override hero per alcune valli con una foto rappresentativa scelta a mano. */
+const VALLEY_HERO_OVERRIDE: Record<string, string> = {
+  'valle-d-ayas': '/trails/valle-d-ayas-hero.webp',
+};
+
+function valleyHeroImage(slug: string, trails: Parameters<typeof getHubHeroImage>[0]) {
+  return VALLEY_HERO_OVERRIDE[slug] ?? getHubHeroImage(trails);
+}
+
 export function generateStaticParams() {
   return getAllValleyHubs().map(({ slug }) => ({ valley: slug }));
 }
@@ -38,7 +47,7 @@ export async function generateMetadata({
       title,
       description,
       type: 'website',
-      images: [{ url: getHubHeroImage(hub.trails) }],
+      images: [{ url: valleyHeroImage(valley, hub.trails) }],
     },
     alternates: {
       canonical: `${SITE_URL}/${locale}${path}`,
@@ -97,7 +106,7 @@ export default async function ValleyHubPage({
       title={title}
       intro={intro}
       trails={hub.trails}
-      heroImage={getHubHeroImage(hub.trails)}
+      heroImage={valleyHeroImage(valley, hub.trails)}
       heroAlt={title}
       breadcrumbs={[
         { label: t('breadcrumbHome'), href: '/' },

@@ -211,7 +211,9 @@
       "intro": "{count, plural, one {Ein dokumentierter Weg im Massiv des {massif}: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.} other {{count} dokumentierte Wege im Massiv des {massif}: Schwierigkeit {diffRange}, Höhenmeter {minGain}–{maxGain} m.}}",
       "metaTitle": "Wege am {massif} ({count})",
       "metaDescription": "{count} Wege im Massiv des {massif}, Aostatal: Karten, GPX und vollständige Steckbriefe."
-    }
+    },
+    "byFlora": "Für die Flora",
+    "byFauna": "Für die Tierwelt"
   },
   "Difficulty": {
     "T": "Touristisch",

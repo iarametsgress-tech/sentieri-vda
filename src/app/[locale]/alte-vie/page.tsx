@@ -15,7 +15,7 @@ const AlteVieHeroMap = dynamic(() => import('@/components/AlteVieHeroMap'), {
   loading: () => <div className="absolute inset-0 bg-ink/80 animate-pulse" aria-hidden />,
 });
 
-const HERO_AV1 = '/trails/alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti.jpg';
+const HERO_AV1 = '/alte-vie/alta-via-1.webp';
 const HERO_AV2 = '/trails/alta-via-2-tappa-10-cogne-rifugio-sogno-berdze.jpg';
 
 const LOVEVDA_AV1 =

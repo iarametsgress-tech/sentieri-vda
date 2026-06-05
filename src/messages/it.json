@@ -211,7 +211,9 @@
       "intro": "{count, plural, one {Un sentiero documentato nel massiccio del {massif}: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.} other {{count} sentieri documentati nel massiccio del {massif}: difficoltà {diffRange}, dislivelli da {minGain} a {maxGain} m.}}",
       "metaTitle": "Sentieri sul {massif} ({count})",
       "metaDescription": "{count} sentieri nel massiccio del {massif}, Valle d'Aosta: mappe, GPX e schede complete."
-    }
+    },
+    "byFlora": "Per la flora",
+    "byFauna": "Per la fauna"
   },
   "Difficulty": {
     "T": "Turistico",

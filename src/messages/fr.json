@@ -211,7 +211,9 @@
       "intro": "{count, plural, one {Un sentier documenté dans le massif du {massif} : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.} other {{count} sentiers documentés dans le massif du {massif} : difficulté {diffRange}, dénivelés {minGain}–{maxGain} m.}}",
       "metaTitle": "Sentieri sur le {massif} ({count})",
       "metaDescription": "{count} sentiers dans le massif du {massif}, Vallée d'Aoste : cartes, GPX et fiches complètes."
-    }
+    },
+    "byFlora": "Pour la flore",
+    "byFauna": "Pour la faune"
   },
   "Difficulty": {
     "T": "Touristique",

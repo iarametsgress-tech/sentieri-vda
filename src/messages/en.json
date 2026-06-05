@@ -211,7 +211,9 @@
       "intro": "{count, plural, one {One documented trail in the {massif} massif: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.} other {{count} documented trails in the {massif} massif: difficulty {diffRange}, elevation gain {minGain}–{maxGain} m.}}",
       "metaTitle": "Trails on {massif} ({count})",
       "metaDescription": "{count} trails in the {massif} massif, Aosta Valley: maps, GPX and full guides."
-    }
+    },
+    "byFlora": "For the flora",
+    "byFauna": "For the wildlife"
   },
   "Difficulty": {
     "T": "Tourist",
