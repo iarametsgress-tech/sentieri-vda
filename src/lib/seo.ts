@@ -94,6 +94,14 @@ export function buildWebSiteJsonLd() {
       name: 'Sentieri VdA',
       url: SITE_URL,
     },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${SITE_URL}/it/sentieri?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
   };
 }
 

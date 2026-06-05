@@ -8,6 +8,7 @@ import { TOUR_IDS } from '@/lib/tours';
 import { getAllCultureThemeHubs } from '@/lib/culture-theme-hubs';
 import {
   getAllDifficultyHubs,
+  getAllMassifHubs,
   getAllSpeciesHubs,
   getAllValleyHubs,
 } from '@/lib/hubs';
@@ -109,6 +110,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${BASE}/${locale}${path}`,
         changeFrequency: 'weekly',
         priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(locales.map((l) => [l, `${BASE}/${l}${path}`])),
+        },
+      });
+    }
+
+    for (const { slug } of getAllMassifHubs()) {
+      const path = `/sentieri/montagna/${slug}`;
+      entries.push({
+        url: `${BASE}/${locale}${path}`,
+        changeFrequency: 'weekly',
+        priority: 0.72,
         alternates: {
           languages: Object.fromEntries(locales.map((l) => [l, `${BASE}/${l}${path}`])),
         },

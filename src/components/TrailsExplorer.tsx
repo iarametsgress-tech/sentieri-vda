@@ -59,7 +59,7 @@ function TrailsExplorerInner({
   const [diff, setDiff] = useState<Difficulty | 'all'>('all');
   const [valley, setValley] = useState<string>('all');
   const [maxHours, setMaxHours] = useState<number>(24);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(searchParams.get('q') ?? '');
   const [visible, setVisible] = useState(PAGE_SIZE);
   const [routeTag, setRouteTag] = useState<RouteTag | 'all'>(
     ROUTE_TAGS.includes(initialTag as RouteTag) ? (initialTag as RouteTag) : 'all',

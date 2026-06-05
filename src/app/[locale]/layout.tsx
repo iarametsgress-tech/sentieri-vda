@@ -47,14 +47,57 @@ export async function generateMetadata({
       template: '%s — Sentieri VdA',
     },
     description: meta.description,
+    applicationName: 'Sentieri VdA',
+    keywords: [
+      "sentieri Valle d'Aosta",
+      'trekking Valle d\'Aosta',
+      'escursioni Valle d\'Aosta',
+      'Alte Vie Valle d\'Aosta',
+      'Gran Paradiso trekking',
+      'Tour del Monte Bianco',
+      'rifugi Valle d\'Aosta',
+      'mappe sentieri GPX',
+    ],
     alternates: {
       canonical: `/${locale}`,
       languages: localeAlternates(''),
     },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+        'max-video-preview': -1,
+      },
+    },
+    icons: {
+      icon: [
+        { url: '/icon.svg', type: 'image/svg+xml' },
+        { url: '/icon.png', type: 'image/png', sizes: '512x512' },
+        { url: '/favicon-48.png', type: 'image/png', sizes: '48x48' },
+      ],
+      apple: [{ url: '/apple-icon.png', sizes: '180x180' }],
+    },
+    manifest: '/manifest.webmanifest',
     openGraph: {
       type: 'website',
       locale: localeOpenGraph(locale),
       siteName: 'Sentieri VdA',
+      title: meta.title,
+      description: meta.description,
+      url: `${SITE_URL}/${locale}`,
+      images: [
+        { url: '/trails/monte-bianco.webp', width: 1600, height: 900, alt: 'Sentieri VdA' },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: meta.title,
+      description: meta.description,
+      images: ['/trails/monte-bianco.webp'],
     },
   };
 }

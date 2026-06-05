@@ -1,12 +1,16 @@
 import { routing } from '@/i18n/routing';
 import { SITE_URL } from '@/lib/config';
 
-/** Build hreflang map for all configured locales (relative paths). */
+/** Build hreflang map for all configured locales (relative paths) + x-default.
+ *  x-default punta alla versione italiana (mercato primario), come raccomandato
+ *  da Google per indicare la pagina di fallback agli utenti di altre lingue. */
 export function localeAlternates(path = ''): Record<string, string> {
   const suffix = path.startsWith('/') ? path : path ? `/${path}` : '';
-  return Object.fromEntries(
+  const map = Object.fromEntries(
     routing.locales.map((locale) => [locale, `/${locale}${suffix}`])
   );
+  map['x-default'] = `/${routing.defaultLocale}${suffix}`;
+  return map;
 }
 
 /** Absolute URLs for sitemap / metadata. */
