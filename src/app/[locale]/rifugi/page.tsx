@@ -5,6 +5,7 @@ import RefugesExplorer from '@/components/RefugesExplorer';
 import { getAllRefuges } from '@/lib/refuges';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
+import { buildCollectionPageJsonLd, buildBreadcrumbJsonLd } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -34,10 +35,30 @@ export default async function RifugiPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Refuges');
+  const tMeta = await getTranslations('Refuges.meta');
   const refuges = getAllRefuges();
+
+  const collectionJsonLd = buildCollectionPageJsonLd({
+    locale,
+    path: '/rifugi',
+    name: tMeta('title'),
+    description: tMeta('description'),
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: 'Home', path: `/${locale}` },
+    { name: t('heroEyebrow'), path: `/${locale}/rifugi` },
+  ]);
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <SectionPageHero
         eyebrow={t('heroEyebrow')}
         title={t('heroTitle')}

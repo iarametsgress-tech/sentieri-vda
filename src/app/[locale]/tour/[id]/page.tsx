@@ -5,6 +5,7 @@ import AdSlot from '@/components/AdSlot';
 import TourRouteExplorer, { type TourRouteData } from '@/components/TourRouteExplorer';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
+import { buildTourJsonLd, buildBreadcrumbJsonLd } from '@/lib/seo';
 import { mergeTrailsGeoJSON } from '@/lib/gpx';
 import {
   TOUR_IDS,
@@ -109,8 +110,30 @@ export default async function TourDetailPage({
   const t = await getTranslations('Tour');
   const route = buildTourRoute(tourId, t, locale);
 
+  const tourJsonLd = buildTourJsonLd({
+    locale,
+    id,
+    name: route.name,
+    description: route.description,
+    image: route.heroImage,
+    stages: route.stages.map((s) => ({ name: s.name, slug: s.slug })),
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: 'Home', path: `/${locale}` },
+    { name: t('heroEyebrow'), path: `/${locale}/tour` },
+    { name: route.name, path: `/${locale}/tour/${id}` },
+  ]);
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(tourJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <SectionPageHero
         eyebrow={t('heroEyebrow')}
         title={route.name}

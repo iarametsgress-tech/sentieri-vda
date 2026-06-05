@@ -6,6 +6,7 @@ import { TourCatalogSkeleton } from '@/components/SectionExplorerSkeleton';
 import TourCatalogSection from '@/components/sections/TourCatalogSection';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
+import { buildCollectionPageJsonLd, buildBreadcrumbJsonLd } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -32,9 +33,29 @@ export default async function TourPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Tour');
+  const tMeta = await getTranslations('Tour.meta');
+
+  const collectionJsonLd = buildCollectionPageJsonLd({
+    locale,
+    path: '/tour',
+    name: tMeta('title'),
+    description: tMeta('description'),
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: 'Home', path: `/${locale}` },
+    { name: t('heroEyebrow'), path: `/${locale}/tour` },
+  ]);
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <SectionPageHero
         eyebrow={t('heroEyebrow')}
         title={t('heroTitle')}

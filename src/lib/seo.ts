@@ -117,6 +117,101 @@ export function buildOrganizationJsonLd() {
   };
 }
 
+export function buildTourJsonLd(args: {
+  locale: string;
+  id: string;
+  name: string;
+  description: string;
+  image?: string;
+  stages: Array<{ name: string; slug: string }>;
+}) {
+  const { locale, id, name, description, image, stages } = args;
+  const url = `${SITE_URL}/${locale}/tour/${id}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'TouristTrip',
+    '@id': url,
+    name,
+    description,
+    url,
+    inLanguage: locale,
+    ...(image ? { image: absoluteAssetUrl(image) } : {}),
+    touristType: ['Hiking', 'Trekking'],
+    isAccessibleForFree: true,
+    itinerary: {
+      '@type': 'ItemList',
+      numberOfItems: stages.length,
+      itemListElement: stages.map((s, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: s.name,
+        item: `${SITE_URL}/${locale}/sentieri/${s.slug}`,
+      })),
+    },
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+  };
+}
+
+export function buildRefugeJsonLd(args: {
+  locale: string;
+  slug: string;
+  name: string;
+  description: string;
+  image?: string;
+  lat: number;
+  lng: number;
+  elevation_m: number;
+  type: string;
+  website?: string;
+  phone?: string;
+}) {
+  const { locale, slug, name, description, image, lat, lng, elevation_m, type, website, phone } = args;
+  const url = `${SITE_URL}/${locale}/rifugi/${slug}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': type === 'bivacco' ? 'Campground' : 'LodgingBusiness',
+    '@id': url,
+    name,
+    description,
+    url,
+    ...(image ? { image: absoluteAssetUrl(image) } : {}),
+    ...(website ? { sameAs: website } : {}),
+    ...(phone ? { telephone: phone } : {}),
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: lat,
+      longitude: lng,
+      elevation: `${elevation_m} m`,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressRegion: "Valle d'Aosta",
+      addressCountry: 'IT',
+    },
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+  };
+}
+
+export function buildCollectionPageJsonLd(args: {
+  locale: string;
+  path: string;
+  name: string;
+  description: string;
+}) {
+  const { locale, path, name, description } = args;
+  const url = `${SITE_URL}/${locale}${path.startsWith('/') ? path : `/${path}`}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': url,
+    name,
+    description,
+    url,
+    inLanguage: locale,
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+  };
+}
+
 export function buildTrailsCatalogJsonLd(locale: string, count: number) {
   return {
     '@context': 'https://schema.org',

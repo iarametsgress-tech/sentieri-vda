@@ -4,6 +4,7 @@ import ArticoliExplorer from '@/components/ArticoliExplorer';
 import { getAllArticoliPosts } from '@/lib/articoli';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
+import { buildCollectionPageJsonLd, buildBreadcrumbJsonLd } from '@/lib/seo';
 import { trailImageBlurProps } from '@/lib/blur';
 
 const HERO_IMAGE = '/articoli/hero-articoli.jpg';
@@ -33,7 +34,19 @@ export default async function ArticoliPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Articoli');
+  const tMeta = await getTranslations('Articoli.meta');
   const posts = getAllArticoliPosts(locale);
+
+  const collectionJsonLd = buildCollectionPageJsonLd({
+    locale,
+    path: '/articoli',
+    name: tMeta('title'),
+    description: tMeta('description'),
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd(locale, [
+    { name: 'Home', path: `/${locale}` },
+    { name: tMeta('title'), path: `/${locale}/articoli` },
+  ]);
 
   const labels = {
     navClassici: t('navClassici'),
@@ -53,6 +66,14 @@ export default async function ArticoliPage({
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section className="relative h-[78vh] min-h-[560px] overflow-hidden lg:min-h-[82vh]">
         <div className="absolute inset-0">
           <Image

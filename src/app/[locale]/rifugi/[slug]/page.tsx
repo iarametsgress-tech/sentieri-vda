@@ -21,6 +21,7 @@ import {
 import { routing } from '@/i18n/routing';
 import { SITE_URL } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
+import { buildRefugeJsonLd, buildBreadcrumbJsonLd } from '@/lib/seo';
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -76,6 +77,7 @@ export default async function RefugeDetailPage({
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('Refuges');
+  const tNav = await getTranslations('Nav');
   const refuge = getRefugeBySlug(slug);
   if (!refuge) notFound();
 
@@ -111,8 +113,35 @@ export default async function RefugeDetailPage({
     noSocial: t('noSocial'),
   };
 
+  const refugeJsonLd = buildRefugeJsonLd({
+    locale,
+    slug,
+    name,
+    description,
+    image: refuge.images[0]?.src,
+    lat: refuge.coords.lat,
+    lng: refuge.coords.lng,
+    elevation_m: refuge.elevation_m,
+    type: refuge.type,
+    website: refuge.website || undefined,
+    phone: refuge.phone || undefined,
+  });
+  const refugeBreadcrumb = buildBreadcrumbJsonLd(locale, [
+    { name: 'Home', path: `/${locale}` },
+    { name: tNav('refuges'), path: `/${locale}/rifugi` },
+    { name, path: `/${locale}/rifugi/${slug}` },
+  ]);
+
   return (
     <div className="pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(refugeJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(refugeBreadcrumb) }}
+      />
       <div className="max-w-4xl mx-auto px-6 lg:px-10 pt-12">
         <Link
           href="/rifugi"
