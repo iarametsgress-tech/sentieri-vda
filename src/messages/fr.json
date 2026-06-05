@@ -21,8 +21,8 @@
   },
   "Home": {
     "heroEyebrow": "Vallée d'Aoste · Alpes occidentales",
-    "heroTitle": "Marcher entre les géants.",
-    "heroSubtitle": "Guide éditorial des sentiers valdôtains : cartes interactives, profils altimétriques et fiches détaillées — des Hautes Routes aux tours du Mont-Blanc, Cervin et Grand Paradiso.",
+    "heroTitle": "Marcher entre les géants",
+    "heroSubtitle": "La Vallée d'Aoste comme jamais : cartes interactives, traces GPX et fiches détaillées pour plus de mille sentiers — des Hautes Routes aux géants du Mont-Blanc, du Cervin et du Grand Paradis.",
     "heroCtaPrimary": "Explorer les sentiers",
     "heroCtaSecondary": "Les Hautes Routes",
     "alphaBannerProduction": "En production",
@@ -212,7 +212,7 @@
       "metaTitle": "Sentieri sur le {massif} ({count})",
       "metaDescription": "{count} sentiers dans le massif du {massif}, Vallée d'Aoste : cartes, GPX et fiches complètes."
     }
-    },
+  },
   "Difficulty": {
     "T": "Touristique",
     "E": "Randonnée",
