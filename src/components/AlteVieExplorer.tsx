@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from '@/i18n/routing';
@@ -90,10 +91,13 @@ export default function AlteVieExplorer({
   initialRouteId = 'av1',
 }: Props) {
   const [activeId, setActiveId] = useState<'av1' | 'av2'>(initialRouteId);
+  const searchParams = useSearchParams();
 
   useEffect(() => {
-    setActiveId(initialRouteId);
-  }, [initialRouteId]);
+    const fromUrl = searchParams.get('route');
+    if (fromUrl === 'av1' || fromUrl === 'av2') setActiveId(fromUrl);
+    else setActiveId(initialRouteId);
+  }, [initialRouteId, searchParams]);
   const active = routes.find((r) => r.id === activeId) ?? routes[0];
   const other = routes.find((r) => r.id !== activeId) ?? routes[1];
   const styles = accentStyles[active.accent];

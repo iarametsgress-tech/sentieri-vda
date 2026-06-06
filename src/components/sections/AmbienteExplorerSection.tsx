@@ -4,6 +4,7 @@ import {
   getAllPeaks,
   getGeologySections,
   getHydrologySections,
+  getParksSections,
   getPeaks4000,
 } from '@/lib/environment';
 import { getTranslations } from 'next-intl/server';
@@ -21,6 +22,7 @@ export default async function AmbienteExplorerSection({ locale }: { locale: stri
       peaks={getAllPeaks()}
       geology={getGeologySections()}
       hydrology={getHydrologySections()}
+      parks={getParksSections()}
       labels={{
         storyEyebrow: t('storyEyebrow'),
         storyTitle: t('storyTitle'),
@@ -33,6 +35,9 @@ export default async function AmbienteExplorerSection({ locale }: { locale: stri
         navMontagne: t('navMontagne'),
         navGeologia: t('navGeologia'),
         navIdrologia: t('navIdrologia'),
+        navParchi: t('navParchi'),
+        parksEyebrow: t('parksEyebrow'),
+        parksTitle: t('parksTitle'),
         peaksEyebrow: t('peaksEyebrow'),
         peaksTitle: t('peaksTitle'),
         peaksSubtitle: t('peaksSubtitle'),

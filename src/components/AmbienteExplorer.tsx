@@ -20,6 +20,8 @@ import {
   Mountain,
   Layers,
   Droplets,
+  Trees,
+  ArrowUpRight,
   ExternalLink,
   ChevronRight,
 } from 'lucide-react';
@@ -53,6 +55,7 @@ const SECTIONS: {
   { id: 'montagne', icon: Mountain },
   { id: 'geologia', icon: Layers },
   { id: 'idrologia', icon: Droplets },
+  { id: 'parchi', icon: Trees },
 ];
 
 type PeakFilter = 'all' | '4000' | 'trails';
@@ -68,6 +71,7 @@ interface AmbienteExplorerProps {
   peaks: Peak[];
   geology: EnvironmentSection[];
   hydrology: EnvironmentSection[];
+  parks: EnvironmentSection[];
   labels: {
     storyEyebrow: string;
     storyTitle: string;
@@ -80,6 +84,9 @@ interface AmbienteExplorerProps {
     navMontagne: string;
     navGeologia: string;
     navIdrologia: string;
+    navParchi: string;
+    parksEyebrow: string;
+    parksTitle: string;
     peaksEyebrow: string;
     peaksTitle: string;
     peaksSubtitle: string;
@@ -211,6 +218,22 @@ function EnvironmentBlock({
             ))}
           </ul>
         ) : null}
+        {section.link_url ? (
+          <a
+            href={section.link_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(
+              'mt-5 inline-flex items-center gap-1.5 text-sm font-medium transition-opacity hover:opacity-80',
+              t.eyebrow,
+            )}
+          >
+            {locale === 'it'
+              ? (section.link_label_it ?? 'Sito ufficiale')
+              : (section.link_label_en ?? 'Official website')}
+            <ArrowUpRight size={14} />
+          </a>
+        ) : null}
       </div>
     </motion.article>
   );
@@ -335,6 +358,7 @@ function AmbienteExplorerInner({
   peaks,
   geology,
   hydrology,
+  parks,
   labels,
 }: AmbienteExplorerProps) {
   const searchParams = useSearchParams();
@@ -352,6 +376,7 @@ function AmbienteExplorerInner({
     montagne: labels.navMontagne,
     geologia: labels.navGeologia,
     idrologia: labels.navIdrologia,
+    parchi: labels.navParchi,
   };
 
   const filteredGroups = useMemo(() => {
@@ -588,6 +613,36 @@ function AmbienteExplorerInner({
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
             {hydrology.map((s, i) => (
               <EnvironmentBlock key={s.id} section={s} locale={locale} index={i} theme="water" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <SceneDivider
+        image="/environment/gran-paradiso-park.webp"
+        title={isIT ? 'Parchi' : 'Parks'}
+        subtitle={isIT
+          ? 'Il Gran Paradiso, il Mont Avic e le riserve naturali — il cuore protetto della Valle d\'Aosta'
+          : 'Gran Paradiso, Mont Avic and the nature reserves — the protected heart of the Aosta Valley'}
+      />
+
+      {/* Parchi e riserve */}
+      <section
+        id="parchi"
+        className={cn('defer-render scroll-mt-36 py-16 lg:py-24', topicClasses('flora').section)}
+      >
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <ScrollReveal className="mb-10 max-w-xl">
+            <p className={cn('mb-3 font-mono text-[11px] uppercase tracking-[0.3em]', topicClasses('flora').eyebrow)}>
+              {labels.parksEyebrow}
+            </p>
+            <h2 className="font-display text-display-md tracking-tighter">
+              {labels.parksTitle}
+            </h2>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
+            {parks.map((s, i) => (
+              <EnvironmentBlock key={s.id} section={s} locale={locale} index={i} theme="flora" />
             ))}
           </div>
         </div>

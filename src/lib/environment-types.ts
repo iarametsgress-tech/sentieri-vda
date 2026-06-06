@@ -76,8 +76,11 @@ export const EnvironmentSectionSchema = z.object({
   image: z.string().optional(),
   image_alt_it: z.string().optional(),
   image_alt_en: z.string().optional(),
+  link_url: z.string().optional(),
+  link_label_it: z.string().optional(),
+  link_label_en: z.string().optional(),
 });
 
 export type EnvironmentSection = z.infer<typeof EnvironmentSectionSchema>;
 
-export type AmbienteSectionId = 'flora-fauna' | 'montagne' | 'geologia' | 'idrologia';
+export type AmbienteSectionId = 'flora-fauna' | 'montagne' | 'geologia' | 'idrologia' | 'parchi';

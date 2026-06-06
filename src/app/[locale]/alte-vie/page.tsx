@@ -106,17 +106,16 @@ function buildRouteData(
 
 export default async function AlteViePage({
   params,
-  searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ route?: string }>;
 }) {
   const { locale } = await params;
-  const { route: routeParam } = await searchParams;
   setRequestLocale(locale);
   const t = await getTranslations('AlteVie');
 
-  const initialRouteId = routeParam === 'av2' ? 'av2' : 'av1';
+  // initialRouteId fisso → la pagina resta statica (SSG, caricamento immediato).
+  // La selezione da ?route= viene letta lato client dentro AlteVieExplorer.
+  const initialRouteId = 'av1' as const;
 
   const av1Stages = getAlteViaStages('alta-via-1');
   const av2Stages = getAlteViaStages('alta-via-2');

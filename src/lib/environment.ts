@@ -2,6 +2,7 @@ import peaksJson from '@/data/environment/peaks.json';
 import massifsJson from '@/data/environment/massifs.json';
 import geologyJson from '@/data/environment/geology.json';
 import hydrologyJson from '@/data/environment/hydrology.json';
+import parksJson from '@/data/environment/parks.json';
 import {
   PeakSchema,
   EnvironmentSectionSchema,
@@ -18,6 +19,7 @@ const peaks = (peaksJson as unknown[]).map((p) => PeakSchema.parse(p));
 const massifOverviews = (massifsJson as unknown[]).map((m) => MassifOverviewSchema.parse(m));
 const geology = (geologyJson as unknown[]).map((s) => EnvironmentSectionSchema.parse(s));
 const hydrology = (hydrologyJson as unknown[]).map((s) => EnvironmentSectionSchema.parse(s));
+const parks = (parksJson as unknown[]).map((s) => EnvironmentSectionSchema.parse(s));
 
 /** Alias nomi vette nelle schede sentiero → id catalogo */
 const PEAK_NAME_ALIASES: Record<string, string> = {
@@ -143,6 +145,24 @@ export function getPeakHref(peakId: string): string {
 
 export function getGeologySections(): EnvironmentSection[] {
   return geology;
+}
+
+export function getParksSections(): EnvironmentSection[] {
+  return parks;
+}
+
+export function getSectionLink(
+  section: EnvironmentSection,
+  locale: string,
+): { url: string; label: string } | undefined {
+  if (!section.link_url) return undefined;
+  return {
+    url: section.link_url,
+    label: pickLocalized(locale, {
+      it: section.link_label_it ?? 'Sito ufficiale',
+      en: section.link_label_en ?? 'Official website',
+    }),
+  };
 }
 
 export function getHydrologySections(): EnvironmentSection[] {

@@ -8,8 +8,8 @@ export default function CounterStat({
   suffix = '',
   prefix = '',
   label,
-  duration = 2000,
-  valueClassName = 'font-display text-5xl tabular tracking-tighter text-snow lg:text-7xl',
+  duration = 1600,
+  valueClassName = 'font-display text-5xl tabular-nums tracking-tighter text-snow lg:text-7xl',
   labelClassName = 'text-snow/55',
 }: {
   value: number;
@@ -22,22 +22,23 @@ export default function CounterStat({
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  // Init col valore finale: l'HTML server-side (e i client senza JS / i crawler)
-  // mostrano il numero reale invece di "0". L'animazione count-up parte solo
-  // dopo il mount, quando la sezione entra in viewport (progressive enhancement).
+  // SSR e primo render mostrano SUBITO il valore reale (niente "0", niente flash).
   const [count, setCount] = useState(value);
+  // Il count-up parte una sola volta, dal valore già mostrato, e solo se l'utente
+  // non preferisce meno animazioni. Non riparte mai da 0 → nessun bug di caricamento.
+  const animatedRef = useRef(false);
 
   useEffect(() => {
-    if (!isInView) return;
-    // Rispetta chi preferisce meno animazioni: nessun count-up, resta sul valore.
+    if (!isInView || animatedRef.current) return;
+    animatedRef.current = true;
     if (
-      typeof window !== 'undefined' &&
+      typeof window === 'undefined' ||
       window.matchMedia?.('(prefers-reduced-motion: reduce)').matches
     ) {
-      setCount(value);
-      return;
+      return; // resta sul valore, nessuna animazione
     }
     const startTime = performance.now();
+    setCount(0);
     const tick = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
@@ -51,12 +52,14 @@ export default function CounterStat({
 
   return (
     <div ref={ref} className="text-center">
-      <p className={valueClassName}>
+      <p className={`${valueClassName} whitespace-nowrap`}>
         {prefix}
         {count.toLocaleString('it-IT')}
         <span className="text-alpenglow">{suffix}</span>
       </p>
-      <p className={`mt-3 font-mono text-xs uppercase tracking-[0.25em] ${labelClassName}`}>
+      <p
+        className={`mt-3 min-h-[1.25rem] font-mono text-xs uppercase tracking-[0.25em] ${labelClassName}`}
+      >
         {label}
       </p>
     </div>

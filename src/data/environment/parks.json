@@ -1,0 +1,89 @@
+[
+  {
+    "id": "gran-paradiso",
+    "eyebrow_it": "Parco Nazionale",
+    "eyebrow_en": "National Park",
+    "title_it": "Parco Nazionale del Gran Paradiso",
+    "title_en": "Gran Paradiso National Park",
+    "image": "/environment/gran-paradiso-park.webp",
+    "image_alt_it": "Stambecco maschio davanti ai ghiacciai del Gran Paradiso",
+    "image_alt_en": "Male ibex in front of the Gran Paradiso glaciers",
+    "body_it": "Istituito nel 1922, è il più antico parco nazionale d'Italia: nacque per salvare lo stambecco alpino dall'estinzione, quando ne sopravvivevano poche centinaia proprio su queste montagne. Si estende sui versanti valdostani di Cogne, Valsavarenche e Val di Rhêmes, fino alla vetta del Gran Paradiso (4061 m), unico quattromila interamente italiano. È il regno della grande fauna alpina: lo stambecco, simbolo del parco, vi pascola indisturbato insieme a camosci, marmotte e aquile reali, e dal 2019 vi è tornato a volare il gipeto. Per tutelare questo ecosistema valgono regole precise — tra cui il divieto di portare cani e di raccogliere fiori e minerali.",
+    "body_en": "Established in 1922, it is Italy's oldest national park: it was created to save the Alpine ibex from extinction, when only a few hundred survived on these very mountains. It spreads over the Valdostan slopes of Cogne, Valsavarenche and Val di Rhêmes, up to the summit of Gran Paradiso (4061 m), the only four-thousander entirely within Italy. It is the realm of large alpine wildlife: the ibex, the park's symbol, grazes undisturbed alongside chamois, marmots and golden eagles, and since 2019 the bearded vulture has returned to its skies. Precise rules protect this ecosystem — including a ban on dogs and on picking flowers and minerals.",
+    "highlights_it": [
+      "Fauna: stambecco alpino, camoscio, marmotta, aquila reale, gipeto",
+      "Flora: genepì, soldanella alpina, genziane e rododendro",
+      "Vetta: Gran Paradiso 4061 m, unico 4000 tutto italiano",
+      "Regole: cani non ammessi, vietato raccogliere fiori e minerali",
+      "Sito ufficiale: www.pngp.it"
+    ],
+    "highlights_en": [
+      "Wildlife: Alpine ibex, chamois, marmot, golden eagle, bearded vulture",
+      "Flora: genepì, alpine snowbell, gentians and rhododendron",
+      "Summit: Gran Paradiso 4061 m, the only fully Italian 4000er",
+      "Rules: no dogs, no picking of flowers or minerals",
+      "Official site: www.pngp.it"
+    ],
+    "link_url": "https://www.pngp.it",
+    "link_label_it": "Sito ufficiale del Parco",
+    "link_label_en": "Official park website"
+  },
+  {
+    "id": "mont-avic",
+    "eyebrow_it": "Parco Naturale Regionale",
+    "eyebrow_en": "Regional Nature Park",
+    "title_it": "Parco Naturale del Mont Avic",
+    "title_en": "Mont Avic Nature Park",
+    "image": "/environment/vette-valdostane.jpg",
+    "image_alt_it": "Conca lacustre e foreste del Parco del Mont Avic",
+    "image_alt_en": "Lake basin and forests of the Mont Avic Park",
+    "body_it": "Primo parco naturale regionale della Valle d'Aosta (1989), si trova in Valle di Champdepraz e Champorcher, sul versante destro della Dora Baltea. È un mondo d'acqua e di foreste: decine di laghi e torbiere d'alta quota — il Lago Bianco è il più esteso — punteggiano un paesaggio dominato dal pino uncinato, conifera rara che qui forma boschi estesi come in pochi altri luoghi delle Alpi. L'ambiente, poco antropizzato, ospita una fauna ricca di anfibi, gallo forcello, pernice bianca e una notevole varietà di libellule legate agli specchi d'acqua. Il Rifugio Barbustel è la base escursionistica del cuore del parco.",
+    "body_en": "The first regional nature park of the Aosta Valley (1989), it lies in the Champdepraz and Champorcher valleys, on the right bank of the Dora Baltea. It is a world of water and forests: dozens of high-altitude lakes and peat bogs — Lago Bianco is the largest — dot a landscape dominated by the mountain pine, a rare conifer that here forms forests as extensive as in few other places in the Alps. The little-disturbed environment hosts a fauna rich in amphibians, black grouse, ptarmigan and a remarkable variety of dragonflies tied to its waters. The Barbustel refuge is the hiking base in the heart of the park.",
+    "highlights_it": [
+      "Decine di laghi e torbiere d'alta quota (Lago Bianco)",
+      "Estese foreste di pino uncinato, rare sulle Alpi",
+      "Fauna: gallo forcello, pernice bianca, anfibi, libellule",
+      "Base escursionistica: Rifugio Barbustel",
+      "Sito ufficiale: www.montavic.it"
+    ],
+    "highlights_en": [
+      "Dozens of high-altitude lakes and peat bogs (Lago Bianco)",
+      "Extensive mountain-pine forests, rare in the Alps",
+      "Wildlife: black grouse, ptarmigan, amphibians, dragonflies",
+      "Hiking base: Barbustel refuge",
+      "Official site: www.montavic.it"
+    ],
+    "link_url": "https://www.montavic.it",
+    "link_label_it": "Sito ufficiale del Parco",
+    "link_label_en": "Official park website"
+  },
+  {
+    "id": "riserve",
+    "eyebrow_it": "Riserve Naturali",
+    "eyebrow_en": "Nature Reserves",
+    "title_it": "Le riserve naturali regionali",
+    "title_en": "The regional nature reserves",
+    "image": "/environment/alpine-spring.jpg",
+    "image_alt_it": "Zona umida di una riserva naturale valdostana",
+    "image_alt_en": "Wetland of a Valdostan nature reserve",
+    "body_it": "Accanto ai due grandi parchi, la Valle d'Aosta tutela una rete di riserve naturali regionali: piccoli scrigni di biodiversità, spesso zone umide o stagni che ospitano specie rare e fragili. Tra le più note il Lago di Villa e il Lac de Lolair, lo Stagno di Loson, il Marais di Morgex-La Salle, il Tsatelet e la steppa del Mont Mars, fino alla curiosa Côte de Gargantua. Sono ambienti preziosi per anfibi, uccelli acquatici, libellule e una flora palustre altrove in regressione: mete ideali per chi cerca natura discreta e osservazione, più che dislivello.",
+    "body_en": "Alongside the two great parks, the Aosta Valley protects a network of regional nature reserves: small treasure chests of biodiversity, often wetlands or ponds hosting rare and fragile species. Among the best known are Lago di Villa and Lac de Lolair, the Loson pond, the Morgex-La Salle marsh, the Tsatelet and the steppe of Mont Mars, down to the curious Côte de Gargantua. They are precious habitats for amphibians, waterbirds, dragonflies and a marsh flora in retreat elsewhere: ideal destinations for those seeking quiet nature and observation rather than height gain.",
+    "highlights_it": [
+      "Zone umide: Lago di Villa, Lac de Lolair, Stagno di Loson, Marais",
+      "Habitat di anfibi, uccelli acquatici e libellule",
+      "Flora palustre rara e protetta",
+      "Mete di osservazione naturalistica, accessibili a tutti",
+      "Gestione: Regione Autonoma Valle d'Aosta"
+    ],
+    "highlights_en": [
+      "Wetlands: Lago di Villa, Lac de Lolair, Loson pond, the Marais",
+      "Habitat for amphibians, waterbirds and dragonflies",
+      "Rare, protected marsh flora",
+      "Nature-watching destinations, accessible to everyone",
+      "Managed by the Autonomous Region of Aosta Valley"
+    ],
+    "link_url": "https://www.regione.vda.it/territorio/territorio/areenaturaliprotette/",
+    "link_label_it": "Aree protette — Regione VdA",
+    "link_label_en": "Protected areas — Aosta Valley Region"
+  }
+]
