@@ -221,7 +221,8 @@
       "metaDescription": "{count} sentiers dans le massif du {massif}, Vallée d'Aoste : cartes, GPX et fiches complètes."
     },
     "byFlora": "Pour la flore",
-    "byFauna": "Pour la faune"
+    "byFauna": "Pour la faune",
+    "deepenPrefix": "Pour approfondir le sujet :"
   },
   "Difficulty": {
     "T": "Touristique",

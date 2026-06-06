@@ -7,6 +7,8 @@ import {
   getAllCultureThemeHubs,
   getCultureThemeHubBySlug,
   getCultureThemeLabel,
+  getCultureThemeImage,
+  getCultureThemeDeepHref,
 } from '@/lib/culture-theme-hubs';
 import {
   computeTrailStats,
@@ -40,7 +42,7 @@ export async function generateMetadata({
       title,
       description,
       type: 'website',
-      images: [{ url: getHubHeroImage(hub.trails) }],
+      images: [{ url: getCultureThemeImage(hub.themeId) ?? getHubHeroImage(hub.trails) }],
     },
     alternates: {
       canonical: `${SITE_URL}/${locale}${path}`,
@@ -99,13 +101,18 @@ export default async function ThemeHubPage({
       title={title}
       intro={intro}
       trails={hub.trails}
-      heroImage={getHubHeroImage(hub.trails)}
+      heroImage={getCultureThemeImage(hub.themeId) ?? getHubHeroImage(hub.trails)}
       heroAlt={title}
       breadcrumbs={[
         { label: t('breadcrumbHome'), href: '/' },
         { label: t('breadcrumbTrails'), href: '/sentieri' },
         { label: themeLabel },
       ]}
+      deepen={{
+        prefix: t('deepenPrefix'),
+        label: themeLabel,
+        href: getCultureThemeDeepHref(hub.themeId),
+      }}
       jsonLd={jsonLd}
     />
   );

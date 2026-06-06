@@ -25,6 +25,7 @@ const VALLEY_ALIASES: Record<string, string> = {
   'valle di gressoney': 'valle-del-lys',
   'valle di gressoney — valle d\'ayas': 'valle-d-ayas',
   'valle d\'ayas': 'valle-d-ayas',
+  'val d\'ayas': 'valle-d-ayas',
   valpelline: 'valpelline',
   'valpelline — conca di by': 'valpelline',
   'val di cogne': 'val-di-cogne',
@@ -37,6 +38,7 @@ const VALLEY_ALIASES: Record<string, string> = {
   'bassa valle — mont mars': 'bassa-valle',
   'valle del gran san bernardo': 'valle-gran-san-bernardo',
   champorcher: 'champorcher',
+  'valle di champorcher': 'champorcher',
 };
 
 /** Comuni → valle di appartenenza */

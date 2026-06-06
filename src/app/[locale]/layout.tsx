@@ -75,7 +75,6 @@ export async function generateMetadata({
     },
     icons: {
       icon: [
-        { url: '/icon.svg', type: 'image/svg+xml' },
         { url: '/icon.png', type: 'image/png', sizes: '512x512' },
         { url: '/favicon-48.png', type: 'image/png', sizes: '48x48' },
       ],

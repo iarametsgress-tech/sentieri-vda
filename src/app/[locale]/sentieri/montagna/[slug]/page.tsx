@@ -40,7 +40,7 @@ export async function generateMetadata({
       title,
       description,
       type: 'website',
-      images: [{ url: getHubHeroImage(hub.trails) }],
+      images: [{ url: group?.primary.image ?? getHubHeroImage(hub.trails) }],
     },
     alternates: {
       canonical: `${SITE_URL}/${locale}${path}`,
@@ -101,13 +101,18 @@ export default async function MassifHubPage({
       title={title}
       intro={intro}
       trails={hub.trails}
-      heroImage={getHubHeroImage(hub.trails)}
+      heroImage={group?.primary.image ?? getHubHeroImage(hub.trails)}
       heroAlt={title}
       breadcrumbs={[
         { label: t('breadcrumbHome'), href: '/' },
         { label: t('breadcrumbTrails'), href: '/sentieri' },
         { label: massifName },
       ]}
+      deepen={{
+        prefix: t('deepenPrefix'),
+        label: massifName,
+        href: `/ambiente/montagne/${hub.massifId}`,
+      }}
       jsonLd={jsonLd}
     />
   );

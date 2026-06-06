@@ -17,6 +17,8 @@ type TrailHubPageProps = {
   heroAlt: string;
   breadcrumbs: Breadcrumb[];
   jsonLd: object[];
+  /** Riga "Per approfondire l'argomento:" con link alla sezione di dettaglio. */
+  deepen?: { prefix: string; label: string; href: string };
 };
 
 export default function TrailHubPage({
@@ -28,6 +30,7 @@ export default function TrailHubPage({
   heroAlt,
   breadcrumbs,
   jsonLd,
+  deepen,
 }: TrailHubPageProps) {
   const stats = computeTrailStats(trails);
 
@@ -78,6 +81,17 @@ export default function TrailHubPage({
           <p className="max-w-3xl text-base leading-relaxed text-snow/75 lg:text-lg">
             {intro}
           </p>
+          {deepen && (
+            <p className="mt-5 text-sm text-snow/70">
+              {deepen.prefix}{' '}
+              <Link
+                href={deepen.href}
+                className="font-medium text-alpenglow underline-offset-4 hover:underline"
+              >
+                {deepen.label}
+              </Link>
+            </p>
+          )}
           {stats.count > 0 && (
             <p className="mt-4 font-mono text-xs uppercase tracking-widest text-snow/50">
               {stats.count} · {stats.minDistance.toFixed(1)}–{stats.maxDistance.toFixed(1)} km · +{stats.minGain}–{stats.maxGain} m

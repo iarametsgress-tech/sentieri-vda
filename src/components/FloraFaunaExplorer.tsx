@@ -216,7 +216,10 @@ function FloraFaunaExplorerInner({ flora, fauna, locale }: FloraFaunaExplorerPro
     initialFromUrl?.id ?? fauna[0]?.id ?? flora[0]?.id ?? ''
   );
 
-  const selected = list.find((s) => s.id === selectedId) ?? list[0];
+  // selected deve restare valido anche se la ricerca filtra via tutto il `list`
+  // (altrimenti l'intero explorer — barra di ricerca inclusa — sparirebbe).
+  const selected =
+    allSpecies.find((s) => s.id === selectedId) ?? list[0] ?? allSpecies[0];
 
   useEffect(() => {
     if (!paramId) return;

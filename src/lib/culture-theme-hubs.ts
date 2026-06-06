@@ -254,3 +254,15 @@ export function getAllCultureThemeHubs(): CultureThemeHub[] {
 export function getCultureThemeHubHref(themeId: string): string {
   return `/sentieri/tema/${themeId}`;
 }
+
+/** Foto rappresentativa dell'argomento (la stessa usata nella scheda Cultura). */
+export function getCultureThemeImage(themeId: string): string | undefined {
+  return getTraditionById(themeId)?.image ?? getFoodWineById(themeId)?.image;
+}
+
+/** Deep-link alla sezione di Cultura dove l'argomento è spiegato nel dettaglio. */
+export function getCultureThemeDeepHref(themeId: string): string {
+  if (getTraditionById(themeId)) return `/cultura?tradizione=${themeId}`;
+  if (getFoodWineById(themeId)) return `/cultura?item=${themeId}`;
+  return '/cultura';
+}

@@ -12,6 +12,7 @@ import {
   getSpeciesLocalizedName,
 } from '@/lib/hubs';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
+import { getSpeciesById } from '@/data/species';
 import type { Difficulty } from '@/lib/types';
 
 export function generateStaticParams() {
@@ -38,7 +39,7 @@ export async function generateMetadata({
       title,
       description,
       type: 'website',
-      images: [{ url: getHubHeroImage(hub.trails) }],
+      images: [{ url: getSpeciesById(hub.speciesId)?.image ?? getHubHeroImage(hub.trails) }],
     },
     alternates: {
       canonical: `${SITE_URL}/${locale}${path}`,
@@ -97,13 +98,18 @@ export default async function SpeciesHubPage({
       title={title}
       intro={intro}
       trails={hub.trails}
-      heroImage={getHubHeroImage(hub.trails)}
+      heroImage={getSpeciesById(hub.speciesId)?.image ?? getHubHeroImage(hub.trails)}
       heroAlt={title}
       breadcrumbs={[
         { label: t('breadcrumbHome'), href: '/' },
         { label: t('breadcrumbTrails'), href: '/sentieri' },
         { label: name },
       ]}
+      deepen={{
+        prefix: t('deepenPrefix'),
+        label: name,
+        href: `/ambiente?specie=${hub.speciesId}#flora-fauna`,
+      }}
       jsonLd={jsonLd}
     />
   );

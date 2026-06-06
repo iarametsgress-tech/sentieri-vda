@@ -191,9 +191,29 @@ export function getTrailsByValleySlug(slug: string): Trail[] {
   return getAllTrails().filter((t) => slugify(t.valley) === slug);
 }
 
+/** Set di chiavi (slug) dei comuni che appartengono a una valle di Cultura. */
+function valleyTownKeys(cultureValleyId: string): Set<string> {
+  const valley = getValleyById(cultureValleyId) as
+    | { towns?: Array<{ id?: string; name_it?: string }> }
+    | undefined;
+  const keys = new Set<string>();
+  for (const town of valley?.towns ?? []) {
+    if (town.id) keys.add(slugify(town.id));
+    if (town.name_it) keys.add(slugify(town.name_it));
+  }
+  return keys;
+}
+
 export function getTrailsByCultureValleyId(cultureValleyId: string): Trail[] {
+  const townKeys = valleyTownKeys(cultureValleyId);
   return getAllTrails()
-    .filter((t) => resolveValleyId(t.valley) === cultureValleyId)
+    .filter(
+      (t) =>
+        // valle "principale" del sentiero
+        resolveValleyId(t.valley) === cultureValleyId ||
+        // oppure anche solo un comune attraversato appartiene alla valle
+        (t.municipalities ?? []).some((m) => townKeys.has(slugify(m))),
+    )
     .sort((a, b) => a.name_it.localeCompare(b.name_it, 'it'));
 }
 
