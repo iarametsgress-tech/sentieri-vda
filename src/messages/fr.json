@@ -132,7 +132,15 @@
       "transferStageNote": "Étape de liaison entre versants opposés : il n'existe pas de sentier pédestre continu. La carte indique les points de départ et d'arrivée et le réseau officiel des sentiers.",
       "relatedTrails": "Sentiers associés",
       "relatedTrailsSubtitle": "Même vallée ou itinéraires similaires — d'autres randonnées à découvrir.",
-      "tags": "Thèmes et caractéristiques"
+      "tags": "Thèmes et caractéristiques",
+      "suitabilityTitle": "Adapté aux",
+      "childrenLabel": "Enfants",
+      "dogsLabel": "Chiens",
+      "suitYes": "Oui",
+      "suitCaution": "Avec prudence",
+      "suitNo": "Déconseillé",
+      "dogPark": "Non admis (Parc du Grand-Paradis)",
+      "suitabilityNote": "Évaluation indicative basée sur la difficulté, le dénivelé et le règlement du parc. Vérifiez toujours les conditions et vos capacités avant de partir."
     },
     "searchPlaceholder": "Rechercher un sentier…",
     "showMore": "Afficher {n} de plus",

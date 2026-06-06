@@ -132,7 +132,15 @@
       "transferStageNote": "Verbindungsetappe zwischen gegenüberliegenden Talseiten: Es gibt keinen durchgehenden Wanderweg. Die Karte zeigt Start- und Zielpunkt sowie das offizielle Wegenetz.",
       "relatedTrails": "Verwandte Wanderwege",
       "relatedTrailsSubtitle": "Gleiches Tal oder ähnliche Routen — weitere Touren zum Entdecken.",
-      "tags": "Themen und Merkmale"
+      "tags": "Themen und Merkmale",
+      "suitabilityTitle": "Geeignet für",
+      "childrenLabel": "Kinder",
+      "dogsLabel": "Hunde",
+      "suitYes": "Ja",
+      "suitCaution": "Mit Vorsicht",
+      "suitNo": "Nicht empfohlen",
+      "dogPark": "Nicht erlaubt (Gran-Paradiso-Park)",
+      "suitabilityNote": "Indikative Einschätzung nach Schwierigkeit, Höhenmetern und Parkregeln. Prüfe stets Bedingungen und eigene Fähigkeiten vor dem Start."
     },
     "searchPlaceholder": "Weg suchen…",
     "showMore": "{n} weitere anzeigen",

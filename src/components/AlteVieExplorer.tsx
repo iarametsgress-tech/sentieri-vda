@@ -203,7 +203,7 @@ export default function AlteVieExplorer({
 
               <div className="flex flex-wrap gap-3 mt-auto pt-2">
                 <Link
-                  href={`/sentieri?tag=${active.tag}`}
+                  href={`/alte-vie/${active.id}`}
                   className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-opacity hover:opacity-90 ${
                     active.accent === 'alpenglow'
                       ? 'bg-alpenglow text-ink'
@@ -238,7 +238,7 @@ export default function AlteVieExplorer({
             <h2 className="font-display text-3xl lg:text-4xl tracking-tight">{labels.stagesTitle}</h2>
           </div>
           <Link
-            href={`/sentieri?tag=${other.tag}`}
+            href={`/alte-vie/${other.id}`}
             className="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono text-snow/55 hover:text-snow/70 transition-colors"
           >
             {other.code}
@@ -302,7 +302,7 @@ export default function AlteVieExplorer({
                   {route.badge}
                 </span>
                 <Link
-                  href={`/sentieri?tag=${route.tag}`}
+                  href={`/alte-vie/${route.id}`}
                   className={`inline-flex items-center gap-2 text-sm font-medium ${rs.text} hover:opacity-80 transition-opacity group`}
                 >
                   {route.cta}

@@ -132,7 +132,15 @@
       "transferStageNote": "Connector stage between opposite flanks: there is no continuous walking trail. The map shows the start and end points and the official trail network.",
       "relatedTrails": "Related trails",
       "relatedTrailsSubtitle": "Same valley or similar routes — more hikes to explore.",
-      "tags": "Themes and features"
+      "tags": "Themes and features",
+      "suitabilityTitle": "Suitable for",
+      "childrenLabel": "Children",
+      "dogsLabel": "Dogs",
+      "suitYes": "Yes",
+      "suitCaution": "With care",
+      "suitNo": "Not advised",
+      "dogPark": "Not allowed (Gran Paradiso Park)",
+      "suitabilityNote": "Indicative assessment based on difficulty, elevation gain and park rules. Always check conditions and your own ability before setting out."
     },
     "searchPlaceholder": "Search a trail…",
     "showMore": "Show {n} more",

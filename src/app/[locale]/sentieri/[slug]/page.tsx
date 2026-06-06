@@ -20,6 +20,8 @@ import DifficultyBadge from '@/components/DifficultyBadge';
 import TrailConditionsBadge from '@/components/TrailConditionsBadge';
 import ElevationProfile from '@/components/ElevationProfile';
 import TrailScienceSections, { TrailFitnessBar } from '@/components/TrailScienceSections';
+import TrailSuitability from '@/components/TrailSuitability';
+import { childrenSuitability, dogSuitability } from '@/lib/trail-suitability';
 import {
   TrailFloraFaunaLinks,
   TrailRefugeLinks,
@@ -320,6 +322,23 @@ export default async function TrailDetail({
               }
             />
           </div>
+
+          {/* Adatto a bambini / cani */}
+          <TrailSuitability
+            childrenStatus={childrenSuitability(trail)}
+            dogStatus={dogSuitability(trail).status}
+            dogPark={dogSuitability(trail).park}
+            labels={{
+              title: t('suitabilityTitle'),
+              children: t('childrenLabel'),
+              dogs: t('dogsLabel'),
+              yes: t('suitYes'),
+              caution: t('suitCaution'),
+              no: t('suitNo'),
+              dogPark: t('dogPark'),
+              note: t('suitabilityNote'),
+            }}
+          />
 
           {/* Elevation profile */}
           <section>

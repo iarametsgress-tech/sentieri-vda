@@ -53,6 +53,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
+    for (const id of ['av1', 'av2']) {
+      entries.push({
+        url: `${BASE}/${locale}/alte-vie/${id}`,
+        changeFrequency: 'monthly',
+        priority: 0.85,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((l) => [l, `${BASE}/${l}/alte-vie/${id}`])
+          ),
+        },
+      });
+    }
+
     for (const id of TOUR_IDS) {
       entries.push({
         url: `${BASE}/${locale}/tour/${id}`,

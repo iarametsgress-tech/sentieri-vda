@@ -16,7 +16,7 @@ const AlteVieHeroMap = dynamic(() => import('@/components/AlteVieHeroMap'), {
 });
 
 const HERO_AV1 = '/alte-vie/alta-via-1.webp';
-const HERO_AV2 = '/trails/alta-via-2-tappa-10-cogne-rifugio-sogno-berdze.jpg';
+const HERO_AV2 = '/alte-vie/alta-via-2.webp';
 
 const LOVEVDA_AV1 =
   'https://www.lovevda.it/it/sport/escursionismo/alte-vie/alta-via-1';

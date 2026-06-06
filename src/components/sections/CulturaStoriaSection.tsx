@@ -120,7 +120,7 @@ export default function CulturaStoriaSection({ locale }: { locale: string }) {
   return (
     <>
       <CulturaStaticDivider
-        image="/cultura/saint-ours.jpg"
+        image="/cultura/storia-aosta.webp"
         title={isIT ? 'Storia' : locale === 'fr' ? 'Histoire' : locale === 'de' ? 'Geschichte' : 'History'}
         subtitle={pickLocalized(locale, {
           it: "Dai Salassi a Roma, dai Savoia all'autonomia — tremila anni ai crocevia delle Alpi",
