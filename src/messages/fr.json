@@ -766,6 +766,22 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "email": "E-mail",
-    "noSocial": "Aucun profil social public vérifié pour cette structure."
+    "noSocial": "Aucun profil social public vérifié pour cette structure.",
+    "whereTitle": "Où il se trouve",
+    "howToReach": "Comment y arriver",
+    "seasonTitle": "Période conseillée",
+    "effortTitle": "Effort pour l'atteindre",
+    "bringTitle": "Quoi emporter",
+    "doTitle": "Que faire sur place",
+    "aboutBivouacTitle": "Qu'est-ce qu'un bivouac",
+    "galleryTitle": "Galerie de la communauté",
+    "gallerySubtitle": "Vous êtes venu ici ? Téléchargez votre photo : elle sera ajoutée tout de suite à cette fiche.",
+    "galleryCta": "Ajouter une photo",
+    "galleryUploading": "Téléchargement…",
+    "galleryEmpty": "Pas encore de photos de la communauté. Soyez le premier à en partager une.",
+    "galleryErrType": "Format non valide : JPG, PNG ou WebP.",
+    "galleryErrLarge": "Image trop lourde (max 6 Mo).",
+    "galleryErrGeneric": "Échec du téléchargement, réessayez.",
+    "galleryDisabled": "Le téléchargement de photos est indisponible pour le moment."
   }
 }

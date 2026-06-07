@@ -766,6 +766,22 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "email": "Email",
-    "noSocial": "No verified public social profile for this structure."
+    "noSocial": "No verified public social profile for this structure.",
+    "whereTitle": "Where it is",
+    "howToReach": "How to get there",
+    "seasonTitle": "Recommended season",
+    "effortTitle": "Effort to reach it",
+    "bringTitle": "What to bring",
+    "doTitle": "What to do there",
+    "aboutBivouacTitle": "What is a bivouac",
+    "galleryTitle": "Community gallery",
+    "gallerySubtitle": "Been here? Upload your photo: it will be added to this page right away.",
+    "galleryCta": "Upload a photo",
+    "galleryUploading": "Uploading…",
+    "galleryEmpty": "No community photos yet. Be the first to share one.",
+    "galleryErrType": "Invalid format: use JPG, PNG or WebP.",
+    "galleryErrLarge": "Image too large (max 6 MB).",
+    "galleryErrGeneric": "Upload failed, please try again.",
+    "galleryDisabled": "Photo upload is currently unavailable."
   }
 }

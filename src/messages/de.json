@@ -766,6 +766,22 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "email": "E-Mail",
-    "noSocial": "Kein verifiziertes öffentliches Social-Media-Profil für diese Hütte."
+    "noSocial": "Kein verifiziertes öffentliches Social-Media-Profil für diese Hütte.",
+    "whereTitle": "Wo es liegt",
+    "howToReach": "Anreise / Zustieg",
+    "seasonTitle": "Empfohlene Zeit",
+    "effortTitle": "Aufwand für den Zustieg",
+    "bringTitle": "Was mitnehmen",
+    "doTitle": "Was man dort tun kann",
+    "aboutBivouacTitle": "Was ist ein Biwak",
+    "galleryTitle": "Community-Galerie",
+    "gallerySubtitle": "Schon hier gewesen? Lade dein Foto hoch: Es wird sofort zu dieser Seite hinzugefügt.",
+    "galleryCta": "Foto hochladen",
+    "galleryUploading": "Wird hochgeladen…",
+    "galleryEmpty": "Noch keine Community-Fotos. Sei der Erste, der eines teilt.",
+    "galleryErrType": "Ungültiges Format: JPG, PNG oder WebP.",
+    "galleryErrLarge": "Bild zu groß (max. 6 MB).",
+    "galleryErrGeneric": "Upload fehlgeschlagen, bitte erneut versuchen.",
+    "galleryDisabled": "Foto-Upload ist derzeit nicht verfügbar."
   }
 }

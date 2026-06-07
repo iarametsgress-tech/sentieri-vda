@@ -766,6 +766,22 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "email": "Email",
-    "noSocial": "Nessun profilo social pubblico verificato per questa struttura."
+    "noSocial": "Nessun profilo social pubblico verificato per questa struttura.",
+    "whereTitle": "Dove si trova",
+    "howToReach": "Come arrivare",
+    "seasonTitle": "Periodo consigliato",
+    "effortTitle": "Sforzo per raggiungerlo",
+    "bringTitle": "Cosa portare",
+    "doTitle": "Cosa fare lì",
+    "aboutBivouacTitle": "Cos'è un bivacco",
+    "galleryTitle": "Galleria della community",
+    "gallerySubtitle": "Sei stato qui? Carica una tua foto: verrà aggiunta subito a questa scheda.",
+    "galleryCta": "Carica una foto",
+    "galleryUploading": "Caricamento…",
+    "galleryEmpty": "Ancora nessuna foto della community. Sii il primo a condividerne una.",
+    "galleryErrType": "Formato non valido: usa JPG, PNG o WebP.",
+    "galleryErrLarge": "Immagine troppo grande (max 6 MB).",
+    "galleryErrGeneric": "Caricamento non riuscito, riprova.",
+    "galleryDisabled": "Caricamento foto non disponibile al momento."
   }
 }

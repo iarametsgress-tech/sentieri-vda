@@ -2,7 +2,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
-import { ArrowLeft, Utensils, History, Wallet, MapPin } from 'lucide-react';
+import { ArrowLeft, Utensils, History, Wallet } from 'lucide-react';
 import AdSlot from '@/components/AdSlot';
 import {
   RefugeBookingBar,
@@ -10,6 +10,10 @@ import {
   RefugeDetailStats,
 } from '@/components/RefugesExplorer';
 import { getRefugeBySlug, getAllRefuges } from '@/lib/refuges';
+import { getTrailBySlug } from '@/lib/trails';
+import { pickLocalized } from '@/lib/locale-content';
+import RefugeGuideExtras, { type ReachTrail } from '@/components/RefugeGuideExtras';
+import RefugeCommunityGallery from '@/components/RefugeCommunityGallery';
 import {
   getRefugeName,
   getRefugeDescription,
@@ -86,6 +90,52 @@ export default async function RefugeDetailPage({
   const history = getRefugeHistory(refuge, locale);
   const food = getRefugeFood(refuge, locale);
   const costs = getRefugeCosts(refuge, locale);
+
+  const openPeriod = pickLocalized(locale, {
+    it: refuge.open_period_it ?? '',
+    en: refuge.open_period_en ?? '',
+    fr: refuge.open_period_fr ?? undefined,
+    de: refuge.open_period_de ?? undefined,
+  });
+
+  // Sentieri di accesso risolti con dati reali (nome localizzato + difficoltà).
+  const reachTrails: ReachTrail[] = refuge.trails
+    .map((slugT) => getTrailBySlug(slugT))
+    .filter((tr): tr is NonNullable<typeof tr> => Boolean(tr))
+    .map((tr) => ({
+      slug: tr.slug,
+      name: pickLocalized(locale, {
+        it: tr.name_it,
+        en: tr.name_en,
+        fr: tr.name_fr,
+        de: tr.name_de,
+      }),
+      difficulty: tr.difficulty,
+      distance_km: tr.distance_km,
+      elevation_gain_m: tr.elevation_gain_m,
+    }));
+
+  const guideLabels = {
+    whereTitle: t('whereTitle'),
+    howToReach: t('howToReach'),
+    seasonTitle: t('seasonTitle'),
+    effortTitle: t('effortTitle'),
+    bringTitle: t('bringTitle'),
+    doTitle: t('doTitle'),
+    aboutBivouacTitle: t('aboutBivouacTitle'),
+  };
+
+  const galleryLabels = {
+    title: t('galleryTitle'),
+    subtitle: t('gallerySubtitle'),
+    cta: t('galleryCta'),
+    uploading: t('galleryUploading'),
+    empty: t('galleryEmpty'),
+    errorType: t('galleryErrType'),
+    errorLarge: t('galleryErrLarge'),
+    errorGeneric: t('galleryErrGeneric'),
+    disabled: t('galleryDisabled'),
+  };
 
   const statLabels = {
     elevation: t('elevation'),
@@ -206,25 +256,21 @@ export default async function RefugeDetailPage({
           <RefugeContactsSection refuge={refuge} labels={contactLabels} />
         </div>
 
-        {refuge.trails.length > 0 ? (
-          <section className="mb-12">
-            <h2 className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-snow/55 mb-4">
-              <MapPin size={14} />
-              {t('onTrails')}
-            </h2>
-            <div className="flex flex-wrap gap-2">
-              {refuge.trails.map((trailSlug) => (
-                <Link
-                  key={trailSlug}
-                  href={`/sentieri/${trailSlug}`}
-                  className="px-3 py-1.5 rounded-full text-sm border border-white/10 text-snow/70 hover:border-alpenglow/40 hover:text-alpenglow transition-colors"
-                >
-                  {trailSlug.replace(/-/g, ' ')}
-                </Link>
-              ))}
-            </div>
-          </section>
-        ) : null}
+        <div className="mb-12">
+          <RefugeGuideExtras
+            type={refuge.type}
+            name={name}
+            lat={refuge.coords.lat}
+            lng={refuge.coords.lng}
+            elevation_m={refuge.elevation_m}
+            openPeriod={openPeriod || undefined}
+            reachTrails={reachTrails}
+            locale={locale}
+            labels={guideLabels}
+          />
+        </div>
+
+        <RefugeCommunityGallery slug={slug} labels={galleryLabels} />
 
         {refuge.source ? (
           <p className="text-snow/50 text-xs font-mono mb-8">
