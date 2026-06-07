@@ -775,13 +775,15 @@
     "doTitle": "What to do there",
     "aboutBivouacTitle": "What is a bivouac",
     "galleryTitle": "Community gallery",
-    "gallerySubtitle": "Been here? Upload your photo: it will be added to this page right away.",
+    "gallerySubtitle": "Been here? Upload your photo: after a quick check it will be published on this page.",
     "galleryCta": "Upload a photo",
     "galleryUploading": "Uploading…",
     "galleryEmpty": "No community photos yet. Be the first to share one.",
     "galleryErrType": "Invalid format: use JPG, PNG or WebP.",
     "galleryErrLarge": "Image too large (max 6 MB).",
     "galleryErrGeneric": "Upload failed, please try again.",
-    "galleryDisabled": "Photo upload is currently unavailable."
+    "galleryDisabled": "Photo upload is currently unavailable.",
+    "gallerySubmitted": "Photo submitted! It will appear once a moderator approves it.",
+    "galleryModerationNote": "Photos are moderated before publication. JPG/PNG/WebP, max 6 MB."
   }
 }

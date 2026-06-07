@@ -775,13 +775,15 @@
     "doTitle": "Was man dort tun kann",
     "aboutBivouacTitle": "Was ist ein Biwak",
     "galleryTitle": "Community-Galerie",
-    "gallerySubtitle": "Schon hier gewesen? Lade dein Foto hoch: Es wird sofort zu dieser Seite hinzugefügt.",
+    "gallerySubtitle": "Schon hier gewesen? Lade dein Foto hoch: Nach einer kurzen Prüfung wird es auf dieser Seite veröffentlicht.",
     "galleryCta": "Foto hochladen",
     "galleryUploading": "Wird hochgeladen…",
     "galleryEmpty": "Noch keine Community-Fotos. Sei der Erste, der eines teilt.",
     "galleryErrType": "Ungültiges Format: JPG, PNG oder WebP.",
     "galleryErrLarge": "Bild zu groß (max. 6 MB).",
     "galleryErrGeneric": "Upload fehlgeschlagen, bitte erneut versuchen.",
-    "galleryDisabled": "Foto-Upload ist derzeit nicht verfügbar."
+    "galleryDisabled": "Foto-Upload ist derzeit nicht verfügbar.",
+    "gallerySubmitted": "Foto gesendet! Es erscheint, sobald ein Moderator es freigibt.",
+    "galleryModerationNote": "Fotos werden vor der Veröffentlichung moderiert. JPG/PNG/WebP, max. 6 MB."
   }
 }

@@ -92,8 +92,10 @@ export default function TrailScienceSections({ trail, locale, labels }: Props) {
           <p className={cn('font-mono text-[10px] uppercase tracking-[0.3em] mb-2', topicClasses('geology').eyebrow)}>
             {labels.geologyEyebrow}
           </p>
-          <SectionLabel>{labels.geology}</SectionLabel>
-          <p className="text-snow/75 leading-[1.85] font-light text-[1.05rem]">
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-stone-500 mb-4">
+            {labels.geology}
+          </p>
+          <p className="text-stone-800 leading-[1.85] font-light text-[1.05rem]">
             <LinkedText text={geology} locale={locale} />
           </p>
         </section>

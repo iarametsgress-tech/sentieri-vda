@@ -13,7 +13,7 @@ import { getRefugeBySlug, getAllRefuges } from '@/lib/refuges';
 import { getTrailBySlug } from '@/lib/trails';
 import { pickLocalized } from '@/lib/locale-content';
 import RefugeGuideExtras, { type ReachTrail } from '@/components/RefugeGuideExtras';
-import RefugeCommunityGallery from '@/components/RefugeCommunityGallery';
+import CommunityGallery from '@/components/CommunityGallery';
 import {
   getRefugeName,
   getRefugeDescription,
@@ -130,6 +130,8 @@ export default async function RefugeDetailPage({
     subtitle: t('gallerySubtitle'),
     cta: t('galleryCta'),
     uploading: t('galleryUploading'),
+    submitted: t('gallerySubmitted'),
+    moderationNote: t('galleryModerationNote'),
     empty: t('galleryEmpty'),
     errorType: t('galleryErrType'),
     errorLarge: t('galleryErrLarge'),
@@ -270,7 +272,7 @@ export default async function RefugeDetailPage({
           />
         </div>
 
-        <RefugeCommunityGallery slug={slug} labels={galleryLabels} />
+        <CommunityGallery entity="refuge" slug={slug} labels={galleryLabels} />
 
         {refuge.source ? (
           <p className="text-snow/50 text-xs font-mono mb-8">

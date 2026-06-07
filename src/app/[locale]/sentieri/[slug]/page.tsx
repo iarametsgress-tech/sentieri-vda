@@ -36,6 +36,7 @@ import TrailGallery from '@/components/TrailGallery';
 import RelatedTrails from '@/components/RelatedTrails';
 import LinkedText from '@/components/LinkedText';
 import AdSlot from '@/components/AdSlot';
+import CommunityGallery from '@/components/CommunityGallery';
 import { SITE_URL, SITE_AUTHOR } from '@/lib/config';
 import { localeAlternatesAbsolute } from '@/lib/metadata-languages';
 import type { Trail } from '@/lib/types';
@@ -124,6 +125,7 @@ export default async function TrailDetail({
   const t = await getTranslations('Trails.details');
   const tTheme = await getTranslations('TrailHubs.theme');
   const tNav = await getTranslations('Nav');
+  const tGal = await getTranslations('Refuges');
   const name = getTrailLocalizedName(trail, locale);
   const description = getTrailLocalizedDescription(trail, locale);
   const refugeSlugs = extractRefugeSlugsFromTrail(trail);
@@ -511,6 +513,24 @@ export default async function TrailDetail({
               </div>
             </section>
           )}
+
+          <CommunityGallery
+            entity="trail"
+            slug={trail.slug}
+            labels={{
+              title: tGal('galleryTitle'),
+              subtitle: tGal('gallerySubtitle'),
+              cta: tGal('galleryCta'),
+              uploading: tGal('galleryUploading'),
+              submitted: tGal('gallerySubmitted'),
+              moderationNote: tGal('galleryModerationNote'),
+              empty: tGal('galleryEmpty'),
+              errorType: tGal('galleryErrType'),
+              errorLarge: tGal('galleryErrLarge'),
+              errorGeneric: tGal('galleryErrGeneric'),
+              disabled: tGal('galleryDisabled'),
+            }}
+          />
 
           {/* Source + last verified + author */}
           <div className="border-t border-white/5 pt-6 space-y-2">

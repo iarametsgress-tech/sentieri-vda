@@ -187,17 +187,17 @@ const BRING_RIFUGIO = {
 };
 
 const DO_BIVACCO = {
-  it: "Se pernotti, concediti il silenzio e il cielo stellato lontano da ogni luce; al mattino presto, con le prime luci, parti per la vetta o il colle vicino quando l'aria è ancora limpida e la neve compatta. L'alba dall'alta quota è la ricompensa di chi sale fin qui.",
-  en: 'If you stay overnight, enjoy the silence and the starry sky far from any light; early in the morning, at first light, set off for the nearby summit or pass while the air is still clear and the snow firm. Dawn from high altitude is the reward for those who climb this far.',
-  fr: "Si vous passez la nuit, savourez le silence et le ciel étoilé loin de toute lumière ; tôt le matin, aux premières lueurs, partez vers le sommet ou le col voisin tant que l'air est limpide et la neige ferme. L'aube en altitude est la récompense de qui monte jusqu'ici.",
-  de: 'Wer übernachtet, genießt die Stille und den Sternenhimmel fernab jeden Lichts; früh am Morgen, im ersten Licht, bricht man zum nahen Gipfel oder Pass auf, solange die Luft klar und der Schnee fest ist. Die Morgendämmerung in der Höhe ist der Lohn für alle, die so weit aufsteigen.',
+  it: "Se pernotti, concediti il silenzio e il cielo stellato lontano da ogni luce. La ricompensa di chi sale fin quassù è l'alba dall'alta quota: svegliati presto, quando l'aria è ancora limpida, e guardala accendersi sulle creste. Le cime e i colli raggiungibili dipendono dalla zona — verifica gli itinerari sulle schede dei sentieri qui sopra.",
+  en: 'If you stay overnight, enjoy the silence and the starry sky far from any light. The reward for climbing this high is dawn from altitude: wake early, while the air is still clear, and watch it set the ridges alight. Which summits and passes you can reach depends on the area — check the routes on the trail pages above.',
+  fr: "Si vous passez la nuit, savourez le silence et le ciel étoilé loin de toute lumière. La récompense de qui monte jusqu'ici, c'est l'aube en altitude : réveillez-vous tôt, tant que l'air est limpide, et regardez-la embraser les crêtes. Les sommets et cols accessibles dépendent de la zone — consultez les itinéraires sur les fiches des sentiers ci-dessus.",
+  de: 'Wer übernachtet, genießt die Stille und den Sternenhimmel fernab jeden Lichts. Der Lohn für den Aufstieg bis hierher ist die Morgendämmerung in der Höhe: früh aufstehen, solange die Luft klar ist, und zusehen, wie sie die Grate erglühen lässt. Welche Gipfel und Pässe erreichbar sind, hängt vom Gebiet ab — prüfe die Routen auf den Wegeseiten oben.',
 };
 
 const DO_RIFUGIO = {
-  it: 'Goditi la cena in compagnia e il tramonto dalla terrazza; molti usano il rifugio come base per partire all\'alba verso la cima o il colle vicino, rientrando in giornata. Chiedi al gestore le condizioni del sentiero e del meteo prima di muoverti.',
-  en: 'Enjoy dinner in good company and the sunset from the terrace; many use the hut as a base to set off at dawn for the nearby summit or pass and return the same day. Ask the keeper about trail and weather conditions before you set out.',
-  fr: "Profitez du dîner en bonne compagnie et du coucher de soleil depuis la terrasse ; beaucoup utilisent le refuge comme base pour partir à l'aube vers le sommet ou le col voisin et rentrer dans la journée. Demandez au gardien l'état du sentier et la météo avant de partir.",
-  de: 'Genieße das Abendessen in Gesellschaft und den Sonnenuntergang von der Terrasse; viele nutzen die Hütte als Basis, um im Morgengrauen zum nahen Gipfel oder Pass aufzubrechen und am selben Tag zurückzukehren. Frag den Hüttenwirt vor dem Aufbruch nach Wege- und Wetterlage.',
+  it: 'Goditi la cena in compagnia e il tramonto dalla terrazza. Molti usano il rifugio come base per una partenza all\'alba: chiedi al gestore le condizioni del sentiero e del meteo prima di muoverti, e parti leggero quando la neve è ancora compatta. Gli itinerari di salita sono nelle schede dei sentieri qui sopra.',
+  en: 'Enjoy dinner in good company and the sunset from the terrace. Many use the hut as a base for a dawn departure: ask the keeper about trail and weather conditions before setting out, and start light while the snow is still firm. The climbing routes are on the trail pages above.',
+  fr: "Profitez du dîner en bonne compagnie et du coucher de soleil depuis la terrasse. Beaucoup utilisent le refuge comme base pour un départ à l'aube : demandez au gardien l'état du sentier et la météo avant de partir, et partez léger tant que la neige est ferme. Les itinéraires de montée figurent sur les fiches des sentiers ci-dessus.",
+  de: 'Genieße das Abendessen in Gesellschaft und den Sonnenuntergang von der Terrasse. Viele nutzen die Hütte als Basis für einen Aufbruch im Morgengrauen: Frag den Wirt vor dem Start nach Wege- und Wetterlage und brich leicht auf, solange der Schnee fest ist. Die Aufstiegsrouten findest du auf den Wegeseiten oben.',
 };
 
 const ABOUT_BIVOUAC = {
