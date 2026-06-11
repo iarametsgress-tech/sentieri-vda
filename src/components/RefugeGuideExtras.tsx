@@ -52,6 +52,7 @@ export default function RefugeGuideExtras({
   elevation_m,
   openPeriod,
   reachTrails,
+  accessGeojson,
   locale,
   labels,
 }: {
@@ -62,6 +63,7 @@ export default function RefugeGuideExtras({
   elevation_m: number;
   openPeriod?: string;
   reachTrails: ReachTrail[];
+  accessGeojson?: GeoJSON.FeatureCollection | null;
   locale: string;
   labels: Labels;
 }) {
@@ -88,7 +90,7 @@ export default function RefugeGuideExtras({
     <div className="space-y-10">
       {/* Dove si trova */}
       <Block icon={<MapPin size={14} className="text-alpenglow" />} title={labels.whereTitle}>
-        <RefugeMiniMap lat={lat} lng={lng} label={name} elevation={elevation_m} />
+        <RefugeMiniMap lat={lat} lng={lng} label={name} elevation={elevation_m} geojson={accessGeojson} />
         <p className="mt-3 font-mono text-xs text-snow/50">
           {lat.toFixed(4)}, {lng.toFixed(4)} · {elevation_m} m
         </p>

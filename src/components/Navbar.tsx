@@ -2,6 +2,7 @@
 
 import { Link, usePathname, useRouter } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -51,15 +52,25 @@ export default function Navbar({ locale }: { locale: string }) {
       )}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/">
+        <Link href="/" aria-label={tSite('name')}>
           <motion.span
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             transition={{ type: 'spring', stiffness: 400, damping: 20 }}
-            className="inline-block cursor-pointer font-display text-2xl tracking-tighter"
+            className="inline-flex cursor-pointer items-center gap-2.5"
           >
-            {tSite('name')}
-            <span className="text-alpenglow">.</span>
+            <Image
+              src="/logo-mark.webp"
+              alt=""
+              width={36}
+              height={36}
+              priority
+              className="h-9 w-auto"
+            />
+            <span className="font-display text-2xl tracking-tighter">
+              {tSite('name')}
+              <span className="text-alpenglow">.</span>
+            </span>
           </motion.span>
         </Link>
 

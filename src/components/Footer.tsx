@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import Image from 'next/image';
 import { Mail, Instagram } from 'lucide-react';
 import NewsletterForm from '@/components/NewsletterForm';
 import { SITE_AUTHOR } from '@/lib/config';
@@ -15,6 +16,13 @@ export default function Footer() {
     <footer className="border-t border-white/5 mt-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
+          <Image
+            src="/logo-full.webp"
+            alt={tSite('name')}
+            width={150}
+            height={150}
+            className="mb-3 h-20 w-auto"
+          />
           <p className="font-display text-3xl tracking-tighter">
             {tSite('name')}
             <span className="text-alpenglow">.</span>

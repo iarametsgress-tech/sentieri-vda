@@ -11,6 +11,7 @@ import {
 } from '@/components/RefugesExplorer';
 import { getRefugeBySlug, getAllRefuges } from '@/lib/refuges';
 import { getTrailBySlug } from '@/lib/trails';
+import { mergeTrailsGeoJSON } from '@/lib/gpx';
 import { pickLocalized } from '@/lib/locale-content';
 import RefugeGuideExtras, { type ReachTrail } from '@/components/RefugeGuideExtras';
 import CommunityGallery from '@/components/CommunityGallery';
@@ -267,6 +268,7 @@ export default async function RefugeDetailPage({
             elevation_m={refuge.elevation_m}
             openPeriod={openPeriod || undefined}
             reachTrails={reachTrails}
+            accessGeojson={mergeTrailsGeoJSON(refuge.trails)}
             locale={locale}
             labels={guideLabels}
           />

@@ -14,19 +14,24 @@ export default function RefugeMiniMap({
   lng,
   label,
   elevation,
+  geojson,
 }: {
   lat: number;
   lng: number;
   label: string;
   elevation: number;
+  /** Tracce GPX dei sentieri di accesso (mergeTrailsGeoJSON dei trail collegati). */
+  geojson?: GeoJSON.FeatureCollection | null;
 }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-white/10">
       <MapView
         className="h-[320px] w-full"
         center={[lng, lat]}
-        zoom={12}
+        zoom={13}
         terrain3D
+        geojson={geojson ?? undefined}
+        lineColor="#D4A574"
         markers={[{ coords: [lng, lat], label, elevation, type: 'end' }]}
       />
     </div>
