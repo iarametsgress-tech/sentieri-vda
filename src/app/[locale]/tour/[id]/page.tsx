@@ -76,7 +76,7 @@ function buildTourRoute(
     accent: TOUR_ACCENTS[tourId],
     lineColor: TOUR_LINE_COLORS[tourId],
     stages: stages.map((s) => toRouteStageSummary(s, tag, locale)),
-    geojson: mergeTrailsGeoJSON(stages.map((s) => s.slug)),
+    geojson: mergeTrailsGeoJSON(stages.map((s) => s.slug), 140),
     markers:
       first && last
         ? [

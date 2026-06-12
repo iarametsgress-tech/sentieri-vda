@@ -2,7 +2,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
-import { ArrowLeft, Utensils, History, Wallet } from 'lucide-react';
+import { ArrowLeft, Utensils, History, Wallet, Mountain } from 'lucide-react';
 import AdSlot from '@/components/AdSlot';
 import {
   RefugeBookingBar,
@@ -11,7 +11,7 @@ import {
 } from '@/components/RefugesExplorer';
 import { getRefugeBySlug, getAllRefuges } from '@/lib/refuges';
 import { getTrailBySlug } from '@/lib/trails';
-import { mergeTrailsGeoJSON } from '@/lib/gpx';
+import { getNearbyPeaksForRefuge } from '@/lib/refuge-peaks';
 import { pickLocalized } from '@/lib/locale-content';
 import RefugeGuideExtras, { type ReachTrail } from '@/components/RefugeGuideExtras';
 import CommunityGallery from '@/components/CommunityGallery';
@@ -69,7 +69,11 @@ function InfoBlock({
         {icon}
         {title}
       </h2>
-      <p className="text-snow/75 leading-relaxed text-[15px]">{text}</p>
+      {text.split('\n').map((p, i) => (
+        <p key={i} className="text-snow/75 leading-relaxed text-[15px]">
+          {p}
+        </p>
+      ))}
     </section>
   );
 }
@@ -115,6 +119,8 @@ export default async function RefugeDetailPage({
       distance_km: tr.distance_km,
       elevation_gain_m: tr.elevation_gain_m,
     }));
+
+  const nearbyPeaks = getNearbyPeaksForRefuge(refuge);
 
   const guideLabels = {
     whereTitle: t('whereTitle'),
@@ -209,7 +215,11 @@ export default async function RefugeDetailPage({
             {refuge.type === 'bivacco' ? t('bivacco') : t('rifugio')} · {refuge.elevation_m} m
           </p>
           <h1 className="font-display text-display-md tracking-tighter mb-4">{name}</h1>
-          <p className="text-snow/65 text-lg leading-relaxed">{description}</p>
+          {description.split('\n').map((p, i) => (
+            <p key={i} className={`text-snow/65 leading-relaxed ${i === 0 ? 'text-lg' : 'mt-3 text-[15px]'}`}>
+              {p}
+            </p>
+          ))}
         </header>
 
         {refuge.images.length > 0 ? (
@@ -268,11 +278,36 @@ export default async function RefugeDetailPage({
             elevation_m={refuge.elevation_m}
             openPeriod={openPeriod || undefined}
             reachTrails={reachTrails}
-            accessGeojson={mergeTrailsGeoJSON(refuge.trails)}
             locale={locale}
             labels={guideLabels}
           />
         </div>
+
+        {nearbyPeaks.length > 0 ? (
+          <section className="mb-12">
+            <h2 className="mb-4 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-snow/55">
+              <Mountain size={14} className="text-alpenglow" />
+              {t('nearbyPeaksTitle')}
+            </h2>
+            <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {nearbyPeaks.map((p) => (
+                <li key={p.id}>
+                  <Link
+                    href={p.href}
+                    className="group flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3 transition-colors hover:border-alpenglow/40 hover:bg-alpenglow/5"
+                  >
+                    <span className="text-sm text-snow group-hover:text-alpenglow">
+                      {locale === 'it' || locale === 'fr' ? p.name_it : p.name_en}
+                    </span>
+                    <span className="shrink-0 font-mono text-[11px] text-snow/55 tabular-nums">
+                      {p.elevation_m.toLocaleString('it-IT')} m{p.is4000 ? ' · 4000' : ''}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
 
         <CommunityGallery entity="refuge" slug={slug} labels={galleryLabels} />
 

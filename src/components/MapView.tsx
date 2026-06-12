@@ -184,7 +184,8 @@ export default function MapView({
       style: styleUrl as any,
       center,
       zoom,
-      maxBounds: [[6.5, 45.3], [8.1, 46.1]],
+      // Arco alpino NW: include le tappe estere dei tour (Chamonix, Vallese, Piemonte)
+      maxBounds: [[6.2, 45.1], [8.4, 46.45]],
       attributionControl: false,
       antialias: true,
     });

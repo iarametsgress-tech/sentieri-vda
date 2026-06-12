@@ -104,10 +104,10 @@
     "booking_url": "https://www.rifugiobertone.com",
     "manager_it": "CAI Courmayeur",
     "manager_en": "CAI Courmayeur",
-    "description_it": "Balcone naturale sulla Val Ferret con vista frontale sulle Grandes Jorasses. Punto di partenza classico per la salita al Bonatti e tappa iniziale del TMB lato italiano.",
-    "description_en": "Natural balcony over Val Ferret with a frontal view of Grandes Jorasses. Classic starting point for the climb to Bonatti and the Italian-side TMB stage.",
-    "history_it": "Rifugio storico del CAI Courmayeur, punto di riferimento escursionistico della Val Ferret dal dopoguerra.",
-    "history_en": "Historic CAI Courmayeur hut, a hiking landmark in Val Ferret since the post-war period.",
+    "description_it": "Balcone naturale sulla Val Ferret con vista frontale sulle Grandes Jorasses. Punto di partenza classico per la salita al Bonatti e tappa iniziale del TMB lato italiano.\nA meno di due ore da Courmayeur, è il balcone più accessibile sul versante sud del Monte Bianco e la prima tappa classica del TMB italiano. La terrazza guarda il Dente del Gigante e le Grandes Jorasses; mezz’ora sopra il rifugio, la cresta erbosa del Mont de la Saxe regala uno dei punti panoramici più celebri delle Alpi, ideale al tramonto.",
+    "description_en": "Natural balcony over Val Ferret with a frontal view of Grandes Jorasses. Classic starting point for the climb to Bonatti and the Italian-side TMB stage.\nLess than two hours from Courmayeur, this is the most accessible balcony on Mont Blanc’s southern side and the classic first stage of the Italian TMB. The terrace faces the Dent du Géant and the Grandes Jorasses; half an hour above the hut, the grassy crest of Mont de la Saxe offers one of the most celebrated viewpoints in the Alps, ideal at sunset.",
+    "history_it": "Ricavato da un alpeggio del Mont de la Saxe, il rifugio è dedicato a Giorgio Bertone, guida alpina di Courmayeur fra le più forti della sua generazione, protagonista di grandi salite sul Bianco negli anni Sessanta e Settanta e scomparso in montagna nel 1977. La gestione familiare ne ha fatto una delle tappe più amate del Tour du Mont Blanc.",
+    "history_en": "Converted from an alp on the Mont de la Saxe, the hut is dedicated to Giorgio Bertone, a Courmayeur mountain guide among the strongest of his generation, protagonist of great climbs on Mont Blanc in the 1960s and 70s, who died in the mountains in 1977. Family management has made it one of the best-loved stops on the Tour du Mont Blanc.",
     "food_it": "Primi piatti valdostani, polenta e formaggi. Colazione early-bird per escursionisti.",
     "food_en": "Aosta Valley pasta dishes, polenta and cheese. Early breakfast for hikers.",
     "costs_it": "Mezza pensione circa 45–65 €; verificare sul sito CAI.",
@@ -142,14 +142,14 @@
     "name_de": "Rifugio Bertone",
     "valley_fr": "Val Ferret",
     "valley_de": "Val Ferret",
-    "description_fr": "Balcon naturel sur le Val Ferret avec vue frontale sur les Grandes Jorasses. Point de départ classique pour la montée vers Bonatti et l'étape TMB côté italien.",
-    "description_de": "Natürlicher Balkon über dem Val Ferret mit frontalem Blick auf Grandes Jorasses. Klassischer Ausgangspunkt für den Aufstieg nach Bonatti und die TMB-Etappe auf italienischer Seite.",
+    "description_fr": "Balcon naturel sur le Val Ferret avec vue frontale sur les Grandes Jorasses. Point de départ classique pour la montée vers Bonatti et l'étape TMB côté italien.\nÀ moins de deux heures de Courmayeur, c’est le balcon le plus accessible du versant sud du Mont-Blanc et la première étape classique du TMB italien. La terrasse fait face à la Dent du Géant et aux Grandes Jorasses ; une demi-heure au-dessus du refuge, la crête herbeuse du Mont de la Saxe offre l’un des belvédères les plus célèbres des Alpes, idéal au couchant.",
+    "description_de": "Natürlicher Balkon über dem Val Ferret mit frontalem Blick auf Grandes Jorasses. Klassischer Ausgangspunkt für den Aufstieg nach Bonatti und die TMB-Etappe auf italienischer Seite.\nWeniger als zwei Stunden von Courmayeur ist dies der zugänglichste Balkon der Südseite des Mont Blanc und die klassische erste Etappe des italienischen TMB. Die Terrasse blickt auf Dent du Géant und Grandes Jorasses; eine halbe Stunde über der Hütte bietet der Grasgrat des Mont de la Saxe einen der berühmtesten Aussichtspunkte der Alpen — ideal bei Sonnenuntergang.",
     "open_period_fr": "Juin – septembre",
     "open_period_de": "Juni – September",
     "manager_fr": "CAI Courmayeur",
     "manager_de": "CAI Courmayeur",
-    "history_fr": "Refuge historique du CAI Courmayeur, haut lieu de la randonnée dans le Val Ferret depuis l'après-guerre.",
-    "history_de": "Historische CAI Courmayeur-Hütte, seit der Nachkriegszeit ein Wanderdenkmal im Val Ferret.",
+    "history_fr": "Aménagé dans un alpage du Mont de la Saxe, le refuge est dédié à Giorgio Bertone, guide de Courmayeur parmi les plus forts de sa génération, auteur de grandes ascensions au Mont-Blanc dans les années 1960-70, disparu en montagne en 1977. Sa gestion familiale en a fait l’une des étapes les plus aimées du Tour du Mont-Blanc.",
+    "history_de": "Aus einer Alp am Mont de la Saxe entstanden, ist die Hütte Giorgio Bertone gewidmet, einem Bergführer aus Courmayeur, der zu den stärksten seiner Generation zählte, großen Touren am Mont Blanc der 1960er und 70er prägte und 1977 in den Bergen blieb. Die familiäre Führung machte sie zu einer der beliebtesten Stationen der Tour du Mont Blanc.",
     "food_fr": "Plats de pâtes valdôtaines, polenta et fromage. Petit-déjeuner matinal pour les randonneurs.",
     "food_de": "Nudelgerichte aus dem Aostatal, Polenta und Käse. Frühes Frühstück für Wanderer.",
     "costs_fr": "Demi-pension environ 45-65 € ; consultez le site Web du CAI.",
@@ -173,8 +173,8 @@
     "phone": "+39 015 2562405",
     "manager_it": "CAI Biella",
     "manager_en": "CAI Biella",
-    "description_it": "Rifugio panoramico sopra Gaby, con vista sul Monte Rosa e sulle valli di Ayas e Gressoney. Tappa dell’Alta Via 1 tra boschi lariceti e alpeggi.",
-    "description_en": "Panoramic hut above Gaby, overlooking Monte Rosa and the Ayas and Gressoney valleys. Alta Via 1 stage through larch forests and alpine pastures.",
+    "description_it": "Rifugio panoramico sopra Gaby, con vista sul Monte Rosa e sulle valli di Ayas e Gressoney. Tappa dell’Alta Via 1 tra boschi lariceti e alpeggi.\nIn bilico sullo spartiacque fra Valle d’Aosta e Biellese, il Coda guarda da una parte la pianura padana — nelle giornate limpide si vedono le risaie e, lontano, gli Appennini — e dall’altra il Monte Rosa. È tappa dell’Alta Via 1 e meta storica delle sezioni biellesi; il tramonto sulla pianura, con il mare di nebbie sotto, è il suo marchio di fabbrica.",
+    "description_en": "Panoramic hut above Gaby, overlooking Monte Rosa and the Ayas and Gressoney valleys. Alta Via 1 stage through larch forests and alpine pastures.\nBalanced on the watershed between the Aosta Valley and the Biella hills, the Coda looks one way over the Po plain — on clear days you can see the rice paddies and, far off, the Apennines — and the other way at Monte Rosa. An Alta Via 1 stage and a historic destination of the Biella CAI; sunset over the plain, with a sea of mists below, is its trademark.",
     "food_it": "Cucina casalinga: polenta, formaggi di alpe e dolci fatti in rifugio.",
     "food_en": "Home-style cooking: polenta, alpine cheeses and hut-made desserts.",
     "costs_it": "Pernottamento indicativo 35–55 € a persona; contattare per tariffe aggiornate.",
@@ -211,8 +211,8 @@
     "name_de": "Rifugio Coda",
     "valley_fr": "Vallée du Lys",
     "valley_de": "Lys-Tal",
-    "description_fr": "Refuge panoramique au-dessus de Gaby, avec vue sur le Mont Rose et les vallées d'Ayas et de Gressoney. Alta Via 1 étape à travers forêts de mélèzes et alpages.",
-    "description_de": "Panoramahütte oberhalb von Gaby mit Blick auf den Monte Rosa und die Täler Ayas und Gressoney. Höhenweg 1 Etappe durch Lärchenwälder und Almen.",
+    "description_fr": "Refuge panoramique au-dessus de Gaby, avec vue sur le Mont Rose et les vallées d'Ayas et de Gressoney. Alta Via 1 étape à travers forêts de mélèzes et alpages.\nEn équilibre sur la ligne de partage entre Vallée d’Aoste et Biellais, le Coda regarde d’un côté la plaine du Pô — par temps clair, on voit les rizières et, au loin, les Apennins — et de l’autre le Mont Rose. Étape de la Haute Route n° 1 et but historique des sections biellaises ; le coucher de soleil sur la plaine, mer de brumes en contrebas, est sa signature.",
+    "description_de": "Panoramahütte oberhalb von Gaby mit Blick auf den Monte Rosa und die Täler Ayas und Gressoney. Höhenweg 1 Etappe durch Lärchenwälder und Almen.\nAuf der Wasserscheide zwischen Aostatal und Biella balancierend, blickt die Coda-Hütte auf der einen Seite über die Poebene — an klaren Tagen sieht man Reisfelder und fern den Apennin — und auf der anderen zum Monte Rosa. Etappe des Höhenwegs 1 und historisches Ziel der Bieller Sektionen; der Sonnenuntergang über der Ebene mit dem Nebelmeer darunter ist ihr Markenzeichen.",
     "open_period_fr": "Mi-juin – mi-septembre",
     "open_period_de": "Mitte Juni – Mitte September",
     "manager_fr": "CAI Biella",
@@ -220,7 +220,11 @@
     "food_fr": "Cuisine familiale : polenta, fromages d'alpage et desserts de cabane.",
     "food_de": "Hausmannskost: Polenta, Almkäse und hausgemachte Desserts.",
     "costs_fr": "Nuitée environ 35 à 55 € par personne ; contact pour les tarifs actuels.",
-    "costs_de": "Übernachtung ca. 35–55 € pro Person; Kontaktieren Sie uns für aktuelle Tarife."
+    "costs_de": "Übernachtung ca. 35–55 € pro Person; Kontaktieren Sie uns für aktuelle Tarife.",
+    "history_it": "Il rifugio della sezione CAI di Biella è dedicato ai fratelli Delfo e Agostino Coda, figure dell’alpinismo biellese di inizio Novecento. Inaugurato negli anni Venti sul crinale del Mont Mars e più volte rinnovato, da un secolo è il punto d’incontro fra gli escursionisti valdostani e quelli piemontesi.",
+    "history_en": "The CAI Biella hut is dedicated to the brothers Delfo and Agostino Coda, figures of early-20th-century Biellese mountaineering. Opened in the 1920s on the Mont Mars crest and renewed several times, for a century it has been the meeting point of Valdostan and Piedmontese hikers.",
+    "history_fr": "Le refuge de la section CAI de Biella est dédié aux frères Delfo et Agostino Coda, figures de l’alpinisme biellais du début du XXe siècle. Inauguré dans les années 1920 sur la crête du Mont Mars et plusieurs fois rénové, il est depuis un siècle le point de rencontre des randonneurs valdôtains et piémontais.",
+    "history_de": "Die Hütte der CAI-Sektion Biella ist den Brüdern Delfo und Agostino Coda gewidmet, Gestalten des Bieller Alpinismus des frühen 20. Jahrhunderts. In den 1920er-Jahren auf dem Grat des Mont Mars eröffnet und mehrfach erneuert, ist sie seit einem Jahrhundert der Treffpunkt der Wanderer aus Aostatal und Piemont."
   },
   {
     "slug": "rifugio-barma",
@@ -596,8 +600,8 @@
     "booking_url": "https://rifugio-champillon.it",
     "manager_it": "Gestione privata",
     "manager_en": "Privately managed",
-    "description_it": "Rifugio accogliente nella Conca di By con yurta e sauna. Vista sulle Alpi della Valpelline e tappa AV1 tra alpeggi ancora attivi.",
-    "description_en": "Welcoming hut in Conca di By with yurt and sauna. Views over Valpelline Alps and AV1 stage among still-active alpine pastures.",
+    "description_it": "Rifugio accogliente nella Conca di By con yurta e sauna. Vista sulle Alpi della Valpelline e tappa AV1 tra alpeggi ancora attivi.\nPoco sotto il Col Champillon, sul tracciato del Tour des Combins, il rifugio domina la conca di By e il solco della Valpelline: la terrazza guarda dritto il Grand Combin. È meta apprezzata anche per gite in giornata da Ollomont e per osservare l’avifauna alpina al tramonto, quando il vallone si svuota.",
+    "description_en": "Welcoming hut in Conca di By with yurt and sauna. Views over Valpelline Alps and AV1 stage among still-active alpine pastures.\nJust below the Col Champillon, on the Tour des Combins route, the hut overlooks the By basin and the trench of the Valpelline: the terrace looks straight at the Grand Combin. It is also a popular day-trip from Ollomont and a fine spot for alpine birdlife at dusk, when the valley empties.",
     "food_it": "Cucina creativa di montagna, formaggi locali e birre artigianali.",
     "food_en": "Creative mountain cuisine, local cheeses and craft beers.",
     "costs_it": "Mezza pensione circa 50–70 €; prenotazione online.",
@@ -626,8 +630,8 @@
     "name_de": "Rifugio Champillon",
     "valley_fr": "Valpelline",
     "valley_de": "Valpelline",
-    "description_fr": "Cabane accueillante à Conca di By avec yourte et sauna. Vues sur les Alpes Valpellines et l'étape AV1 parmi les alpages encore actifs.",
-    "description_de": "Gemütliche Hütte in Conca di By mit Jurte und Sauna. Blick auf die Valpelline-Alpen und die AV1-Etappe zwischen noch aktiven Almen.",
+    "description_fr": "Cabane accueillante à Conca di By avec yourte et sauna. Vues sur les Alpes Valpellines et l'étape AV1 parmi les alpages encore actifs.\nJuste sous le col Champillon, sur le tracé du Tour des Combins, le refuge domine la combe de By et le sillon de la Valpelline : la terrasse regarde droit le Grand Combin. But apprécié aussi à la journée depuis Ollomont, et bel observatoire de l’avifaune alpine au crépuscule, quand le vallon se vide.",
+    "description_de": "Gemütliche Hütte in Conca di By mit Jurte und Sauna. Blick auf die Valpelline-Alpen und die AV1-Etappe zwischen noch aktiven Almen.\nKnapp unter dem Col Champillon, an der Route der Tour des Combins, überblickt die Hütte den By-Kessel und die Furche der Valpelline: Die Terrasse schaut direkt auf den Grand Combin. Beliebt auch als Tagesziel von Ollomont und schöner Beobachtungspunkt für die alpine Vogelwelt in der Dämmerung, wenn sich das Tal leert.",
     "open_period_fr": "Mi-juin – fin septembre",
     "open_period_de": "Mitte Juni – Ende September",
     "manager_fr": "Géré en privé",
@@ -635,7 +639,11 @@
     "food_fr": "Cuisine de montagne créative, fromages locaux et bières artisanales.",
     "food_de": "Kreative Bergküche, lokale Käsesorten und Craft-Biere.",
     "costs_fr": "Demi-pension environ 50-70 € ; réserver en ligne.",
-    "costs_de": "Halbpension ca. 50–70 €; online buchen."
+    "costs_de": "Halbpension ca. 50–70 €; online buchen.",
+    "history_it": "Il rifugio è intitolato ad Adolphe Letey, guida e figura della comunità di Ollomont, e nasce dal recupero degli alpeggi di Champillon: una storia recente che si innesta su secoli di alpicoltura nella conca di By, dove un tempo si lavorava anche il rame delle miniere di Ollomont.",
+    "history_en": "The hut is named after Adolphe Letey, a guide and figure of the Ollomont community, and was created by restoring the Champillon alps: a recent story grafted onto centuries of alpine farming in the By basin, where the copper of the Ollomont mines was once worked too.",
+    "history_fr": "Le refuge porte le nom d’Adolphe Letey, guide et figure de la communauté d’Ollomont, et naît de la réhabilitation des alpages de Champillon : une histoire récente greffée sur des siècles d’alpiculture dans la combe de By, où l’on travaillait jadis aussi le cuivre des mines d’Ollomont.",
+    "history_de": "Die Hütte trägt den Namen von Adolphe Letey, Bergführer und Persönlichkeit der Gemeinde Ollomont, und entstand aus der Sanierung der Almen von Champillon: eine junge Geschichte auf Jahrhunderten von Almwirtschaft im By-Kessel, wo einst auch das Kupfer der Gruben von Ollomont verarbeitet wurde."
   },
   {
     "slug": "rifugio-frassati",
@@ -655,8 +663,8 @@
     "phone": "+39 0165 780014",
     "manager_it": "CAI Aosta",
     "manager_en": "CAI Aosta",
-    "description_it": "Rifugio del Gran San Bernardo con vista sulle Alpi Pennine e sulle vigne terrazzate di Saint-Rhémy. Penultima tappa AV1 prima della Val Ferret.",
-    "description_en": "Great St Bernard refuge with views of Pennine Alps and Saint-Rhémy terraced vineyards. Penultimate AV1 stage before Val Ferret.",
+    "description_it": "Rifugio del Gran San Bernardo con vista sulle Alpi Pennine e sulle vigne terrazzate di Saint-Rhémy. Penultima tappa AV1 prima della Val Ferret.\nModerno e accogliente, presidia l’alto vallone del Gran San Bernardo sul percorso dell’Alta Via 1: è l’appoggio per il Col Malatrà, il passaggio chiave che guarda il massiccio del Monte Bianco, e per le cime di confine della comba di Merdeux. D’estate il rifugio è animato da una vivace attività culturale ispirata alla figura del suo dedicatario.",
+    "description_en": "Great St Bernard refuge with views of Pennine Alps and Saint-Rhémy terraced vineyards. Penultimate AV1 stage before Val Ferret.\nModern and welcoming, it guards the upper Great St Bernard valley on the Alta Via 1: the support point for the Col Malatrà, the key passage facing the Mont Blanc massif, and for the border summits of the Merdeux combe. In summer the hut hosts lively cultural activities inspired by the figure it is named after.",
     "food_it": "Polenta, carbonade e vini del Gran San Bernardo.",
     "food_en": "Polenta, carbonade and Great St Bernard wines.",
     "costs_it": "Mezza pensione circa 45–65 €.",
@@ -693,8 +701,8 @@
     "name_de": "Pier Giorgio Frassati Hütte",
     "valley_fr": "Vallée du Grand-Saint-Bernard",
     "valley_de": "Großer-Sankt-Bernhard-Tal",
-    "description_fr": "Refuge du Grand Saint-Bernard avec vue sur les Alpes Pennines et les vignobles en terrasses de Saint-Rhémy. Avant-dernière étape AV1 avant le Val Ferret.",
-    "description_de": "Schutzhütte auf dem Großen St. Bernhard mit Blick auf die Walliser Alpen und die Weinbergterrassen von Saint-Rhémy. Vorletzte AV1-Etappe vor Val Ferret.",
+    "description_fr": "Refuge du Grand Saint-Bernard avec vue sur les Alpes Pennines et les vignobles en terrasses de Saint-Rhémy. Avant-dernière étape AV1 avant le Val Ferret.\nModerne et accueillant, il garde le haut vallon du Grand-Saint-Bernard sur la Haute Route n° 1 : point d’appui pour le col Malatrà, passage clé face au massif du Mont-Blanc, et pour les sommets frontaliers de la combe de Merdeux. L’été, le refuge vit d’une animation culturelle inspirée de la figure de son dédicataire.",
+    "description_de": "Schutzhütte auf dem Großen St. Bernhard mit Blick auf die Walliser Alpen und die Weinbergterrassen von Saint-Rhémy. Vorletzte AV1-Etappe vor Val Ferret.\nModern und einladend bewacht sie das obere Tal des Grossen Sankt Bernhard am Höhenweg 1: Stützpunkt für den Col Malatrà, die Schlüsselpassage mit Blick auf das Mont-Blanc-Massiv, und für die Grenzgipfel der Merdeux-Mulde. Im Sommer belebt ein kulturelles Programm die Hütte, inspiriert von ihrem Namensgeber.",
     "open_period_fr": "Juin – septembre",
     "open_period_de": "Juni – September",
     "manager_fr": "CAI Aoste",
@@ -702,7 +710,11 @@
     "food_fr": "Polenta, carbonade et vins du Grand Saint-Bernard.",
     "food_de": "Polenta, Carbonade und Weine vom Großen Sankt Bernhard.",
     "costs_fr": "Demi-pension environ 45-65 €.",
-    "costs_de": "Halbpension ca. 45–65 €."
+    "costs_de": "Halbpension ca. 45–65 €.",
+    "history_it": "Il rifugio è dedicato a Pier Giorgio Frassati (1901–1925), il giovane torinese appassionato di montagna proclamato beato nel 1990, simbolo di un alpinismo vissuto come amicizia e fede: sua la frase “verso l’alto” che accompagna il rifugio. Costruito dalle sezioni giovanili e dal CAI, è gestito con spirito di accoglienza che ne riflette l’intitolazione.",
+    "history_en": "The hut is dedicated to Pier Giorgio Frassati (1901–1925), the young Turinese mountain lover beatified in 1990, a symbol of mountaineering lived as friendship and faith: his phrase “verso l’alto” — towards the heights — accompanies the hut. Built with the CAI and its youth sections, it is run with a spirit of welcome reflecting its name.",
+    "history_fr": "Le refuge est dédié à Pier Giorgio Frassati (1901-1925), le jeune Turinois passionné de montagne béatifié en 1990, symbole d’un alpinisme vécu comme amitié et foi : sa devise « verso l’alto » — vers le haut — accompagne le refuge. Construit avec le CAI et ses sections jeunes, il est tenu dans un esprit d’accueil fidèle à son nom.",
+    "history_de": "Die Hütte ist Pier Giorgio Frassati (1901–1925) gewidmet, dem jungen Turiner Bergfreund, 1990 seliggesprochen, Symbol eines als Freundschaft und Glaube gelebten Alpinismus: Sein Wort „verso l’alto“ — empor — begleitet die Hütte. Mit dem CAI und seinen Jugendsektionen erbaut, wird sie in einem Geist der Gastfreundschaft geführt, der dem Namen entspricht."
   },
   {
     "slug": "rifugio-alpenzu-grande",
@@ -781,10 +793,10 @@
     "booking_url": "https://www.rifugioelisabetta.com/contatti.html",
     "manager_it": "CAI Courmayeur",
     "manager_en": "CAI Courmayeur",
-    "description_it": "Rifugio iconico a Lex Blanche, in fondo alla Val Veny, sotto la parete sud del Monte Bianco e di fronte alle Grandes Jorasses. Prima tappa dell’Alta Via 2 e tappa classica del Tour du Mont Blanc — raggiungibile in circa 2 ore da La Visaille.",
-    "description_en": "Iconic hut at Lex Blanche, at the head of Val Veny, below Mont Blanc’s south face and facing Grandes Jorasses. First Alta Via 2 stage and classic Tour du Mont Blanc stop — reachable in about 2 hours from La Visaille.",
-    "history_it": "Intitolato a Elisabetta Soldini Montanaro, figura legata alla montagna valdostana. Punto di riferimento escursionistico da oltre un secolo nel cuore del massiccio del Monte Bianco.",
-    "history_en": "Named after Elisabetta Soldini Montanaro, a figure linked to Aosta Valley mountaineering. A hiking landmark for over a century in the heart of the Mont Blanc massif.",
+    "description_it": "Rifugio iconico a Lex Blanche, in fondo alla Val Veny, sotto la parete sud del Monte Bianco e di fronte alle Grandes Jorasses. Prima tappa dell’Alta Via 2 e tappa classica del Tour du Mont Blanc — raggiungibile in circa 2 ore da La Visaille.\nUltimo avamposto italiano del TMB prima del Col de la Seigne, il rifugio guarda dall’alto la piana del Lac Combal e il fronte morenico del ghiacciaio del Miage. La terrazza al tramonto, quando le Pyramides Calcaires si accendono, è uno dei momenti che i trekker del Tour ricordano più volentieri. Base ideale anche per esplorare la Val Veny e il lago del Miage.",
+    "description_en": "Iconic hut at Lex Blanche, at the head of Val Veny, below Mont Blanc’s south face and facing Grandes Jorasses. First Alta Via 2 stage and classic Tour du Mont Blanc stop — reachable in about 2 hours from La Visaille.\nThe TMB’s last Italian outpost before the Col de la Seigne, the hut looks down on the Lac Combal plain and the moraine front of the Miage glacier. The terrace at sunset, when the Pyramides Calcaires catch fire, is one of the moments TMB trekkers remember most fondly. An ideal base, too, for exploring Val Veny and the Miage lake.",
+    "history_it": "Il rifugio sorge sugli edifici dell’alpe e della caserma della Lex Blanche, riadattati nel secondo dopoguerra: fu inaugurato nel 1949 dal CAI e intitolato a Elisabetta Soldini Montanaro per volontà della famiglia, che ne sostenne la realizzazione. Ampliato negli anni, è oggi gestito dal CAI e rappresenta una delle tappe-simbolo del versante italiano del Tour du Mont Blanc.",
+    "history_en": "The refuge stands on the buildings of the Lex Blanche alp and barracks, adapted after WWII: it was inaugurated in 1949 by the CAI and named after Elisabetta Soldini Montanaro at the wish of her family, who supported its creation. Enlarged over the years, it is now CAI-run and one of the symbolic stages of the Italian side of the Tour du Mont Blanc.",
     "food_it": "Cucina valdostana generosa: pollo al forno, polenta, formaggi locali e primi piatti casalinghi. Prenotazione obbligatoria con caparra confirmatoria.",
     "food_en": "Generous Aosta Valley cooking: oven-roasted chicken, polenta, local cheeses and homemade pasta. Booking mandatory with deposit.",
     "costs_it": "Tariffe sul sito ufficiale; prenotazione obbligatoria con caparra. Pagamento in contanti consigliato. Animali non ammessi.",
@@ -831,14 +843,14 @@
     "name_de": "Elisabetta Soldini Hütte",
     "valley_fr": "Val Veny",
     "valley_de": "Val Veny",
-    "description_fr": "Cabane emblématique à Lex Blanche, à la tête du Val Veny, en contrebas de la face sud du Mont Blanc et face aux Grandes Jorasses. Première étape Alta Via 2 et arrêt classique du Tour du Mont Blanc — accessible en 2 heures environ depuis La Visaille.",
-    "description_de": "Ikonische Hütte in Lex Blanche, am Kopf des Val Veny, unterhalb der Südwand des Mont Blanc und mit Blick auf Grandes Jorasses. Erste Etappe des Höhenwegs 2 und klassische Haltestelle der Tour du Mont Blanc – in etwa 2 Stunden von La Visaille aus erreichbar.",
+    "description_fr": "Cabane emblématique à Lex Blanche, à la tête du Val Veny, en contrebas de la face sud du Mont Blanc et face aux Grandes Jorasses. Première étape Alta Via 2 et arrêt classique du Tour du Mont Blanc — accessible en 2 heures environ depuis La Visaille.\nDernier avant-poste italien du TMB avant le col de la Seigne, le refuge domine la plaine du lac Combal et le front morainique du glacier du Miage. La terrasse au couchant, quand s’embrasent les Pyramides Calcaires, est l’un des moments que les trekkeurs du Tour gardent le plus volontiers en mémoire. Base idéale aussi pour explorer le Val Veny et le lac du Miage.",
+    "description_de": "Ikonische Hütte in Lex Blanche, am Kopf des Val Veny, unterhalb der Südwand des Mont Blanc und mit Blick auf Grandes Jorasses. Erste Etappe des Höhenwegs 2 und klassische Haltestelle der Tour du Mont Blanc – in etwa 2 Stunden von La Visaille aus erreichbar.\nAls letzter italienischer Vorposten des TMB vor dem Col de la Seigne blickt die Hütte auf die Ebene des Lac Combal und die Moränenfront des Miage-Gletschers hinab. Die Terrasse bei Sonnenuntergang, wenn die Pyramides Calcaires Feuer fangen, gehört zu den liebsten Erinnerungen der TMB-Trekker. Auch ideale Basis für Val Veny und den Miage-See.",
     "open_period_fr": "Début juin – 2 octobre (week-ends de mai pour le ski-alpinisme ; chambre d'hiver de 21 lits)",
     "open_period_de": "Anfang Juni – 2. Oktober (Mai-Wochenenden für Skitouren; 21-Betten-Winterzimmer)",
     "manager_fr": "CAI Courmayeur",
     "manager_de": "CAI Courmayeur",
-    "history_fr": "Nommé d'après Elisabetta Soldini Montanaro, figure liée à l'alpinisme valdôtain. Un repère de randonnée depuis plus d'un siècle au cœur du massif du Mont Blanc.",
-    "history_de": "Benannt nach Elisabetta Soldini Montanaro, einer Figur, die mit dem Bergsteigen im Aostatal verbunden ist. Seit über einem Jahrhundert ein Wahrzeichen für Wanderer im Herzen des Mont-Blanc-Massivs.",
+    "history_fr": "Le refuge s’élève sur les bâtiments de l’alpage et de la caserne de la Lex Blanche, réaménagés après la Seconde Guerre : il fut inauguré en 1949 par le CAI et dédié à Elisabetta Soldini Montanaro à la demande de sa famille, qui soutint sa création. Agrandi au fil des ans, il est géré par le CAI et reste l’une des étapes symboles du versant italien du Tour du Mont-Blanc.",
+    "history_de": "Die Hütte steht auf den Gebäuden der Alp und Kaserne von Lex Blanche, nach dem Zweiten Weltkrieg umgebaut: 1949 vom CAI eingeweiht und auf Wunsch der Familie, die den Bau unterstützte, Elisabetta Soldini Montanaro gewidmet. Über die Jahre erweitert, wird sie heute vom CAI geführt und ist eine der Symbol-Etappen der italienischen Seite der Tour du Mont Blanc.",
     "food_fr": "Cuisine valdôtaine généreuse : poulet rôti au four, polenta, fromages locaux et pâtes maison. Réservation obligatoire avec acompte.",
     "food_de": "Großzügige Küche aus dem Aostatal: im Ofen gebratenes Hähnchen, Polenta, lokaler Käse und hausgemachte Pasta. Reservierung obligatorisch mit Anzahlung.",
     "costs_fr": "Tarifs sur le site officiel ; réservation obligatoire avec acompte. Paiement en espèces recommandé. Animaux non admis.",
@@ -1033,10 +1045,10 @@
     "booking_url": "https://www.rifugiovittoriosella.it",
     "manager_it": "CAI Biella",
     "manager_en": "CAI Biella",
-    "description_it": "Rifugio storico del Gran Paradiso con vista sulle vette del parco. Crocevia dell’AV2 e dei tour del Gran Paradiso.",
-    "description_en": "Historic Gran Paradiso hut with views of the park’s summits. Crossroads of AV2 and Gran Paradiso tours.",
-    "history_it": "Intitolato al grande fotografo alpinista Vittorio Sella, punto di partenza classico per il Nivolet.",
-    "history_en": "Named after alpine photographer Vittorio Sella, classic starting point for Nivolet crossings.",
+    "description_it": "Rifugio storico del Gran Paradiso con vista sulle vette del parco. Crocevia dell’AV2 e dei tour del Gran Paradiso.\nLa posizione, al centro dell’anfiteatro pascolivo del Lauson, ne fa il miglior osservatorio di fauna del Parco: stambecchi e camosci pascolano ogni sera a pochi metri dalle finestre, e i sentieri verso il Col Lauson, i laghi del Lauson e l’Herbetet partono dalla porta. È tappa dell’anello del Gran Paradiso e meta classica della gita di giornata da Valnontey per la mulattiera reale.",
+    "description_en": "Historic Gran Paradiso hut with views of the park’s summits. Crossroads of AV2 and Gran Paradiso tours.\nIts position at the centre of the Lauson pasture amphitheatre makes it the Park’s best wildlife observatory: ibex and chamois graze every evening a few metres from the windows, and the trails to the Col Lauson, the Lauson lakes and the Herbetet start at the door. It is a stage on the Gran Paradiso loop and a classic day trip from Valnontey via the royal mule track.",
+    "history_it": "Gli edifici nascono come casotto e scuderie delle cacce reali di Vittorio Emanuele II, costruiti a metà Ottocento lungo la rete di mulattiere volute dal re. Passati al Club Alpino Italiano dopo la nascita del Parco (1922), furono trasformati in rifugio dalla sezione di Biella e intitolati a Vittorio Sella (1859–1943), il biellese che con le sue fotografie di montagna — dal Caucaso al K2 — portò le Alpi e il mondo d’alta quota nelle case di tutti.",
+    "history_en": "The buildings began as a lodge and stables for the royal hunts of Vittorio Emanuele II, built in the mid-1800s along the king’s network of mule tracks. Passed to the Italian Alpine Club after the Park’s creation (1922), they were converted into a refuge by the Biella section and named after Vittorio Sella (1859–1943), the Biellese whose mountain photographs — from the Caucasus to K2 — brought the Alps and the high world into everyone’s homes.",
     "food_it": "Cucina casalinga; famosa la fontina in fonduta.",
     "food_en": "Home-style cooking; famous fontina fondue.",
     "costs_it": "Mezza pensione circa 50–65 €.",
@@ -1074,14 +1086,14 @@
     "name_de": "Vittorio Sella Hütte",
     "valley_fr": "Valsavarenche",
     "valley_de": "Valsavarenche",
-    "description_fr": "Refuge historique du Grand Paradis avec vue sur les sommets du parc. Carrefour des circuits AV2 et Grand Paradis.",
-    "description_de": "Historische Gran Paradiso-Hütte mit Blick auf die Gipfel des Parks. Kreuzung der Touren AV2 und Gran Paradiso.",
+    "description_fr": "Refuge historique du Grand Paradis avec vue sur les sommets du parc. Carrefour des circuits AV2 et Grand Paradis.\nSa position au centre de l’amphithéâtre pastoral du Lauson en fait le meilleur observatoire de faune du Parc : bouquetins et chamois paissent chaque soir à quelques mètres des fenêtres, et les sentiers vers le col Lauson, les lacs du Lauson et l’Herbetet partent de la porte. C’est une étape de la boucle du Grand-Paradis et la classique sortie à la journée depuis Valnontey par la muletière royale.",
+    "description_de": "Historische Gran Paradiso-Hütte mit Blick auf die Gipfel des Parks. Kreuzung der Touren AV2 und Gran Paradiso.\nDie Lage im Zentrum des Weide-Amphitheaters von Lauson macht sie zum besten Wildbeobachtungsposten des Parks: Steinböcke und Gämsen weiden jeden Abend wenige Meter vor den Fenstern, und die Wege zum Col Lauson, zu den Lauson-Seen und zum Herbetet beginnen an der Tür. Etappe der Gran-Paradiso-Runde und klassisches Tagesziel von Valnontey über den königlichen Saumpfad.",
     "open_period_fr": "Mi-juin – mi-septembre",
     "open_period_de": "Mitte Juni – Mitte September",
     "manager_fr": "CAI Biella",
     "manager_de": "CAI Biella",
-    "history_fr": "Nommé d'après le photographe alpin Vittorio Sella, point de départ classique des traversées du Nivolet.",
-    "history_de": "Benannt nach dem Alpenfotografen Vittorio Sella, klassischer Ausgangspunkt für Nivolet-Überquerungen.",
+    "history_fr": "Les bâtiments naquirent comme pavillon et écuries des chasses royales de Victor-Emmanuel II, construits au milieu du XIXe siècle le long du réseau de muletières voulu par le roi. Passés au Club Alpin Italien après la création du Parc (1922), ils furent transformés en refuge par la section de Biella et dédiés à Vittorio Sella (1859-1943), le Biellais dont les photographies de montagne — du Caucase au K2 — firent entrer les Alpes et la haute altitude dans toutes les maisons.",
+    "history_de": "Die Gebäude entstanden Mitte des 19. Jahrhunderts als Jagdhaus und Stallungen der königlichen Jagden Vittorio Emanueles II. entlang des königlichen Saumpfadnetzes. Nach der Gründung des Parks (1922) an den Italienischen Alpenverein übergegangen, wurden sie von der Sektion Biella zur Hütte umgebaut und Vittorio Sella (1859–1943) gewidmet, dessen Bergfotografien — vom Kaukasus bis zum K2 — die Alpen und die Welt der Höhe in alle Häuser brachten.",
     "food_fr": "Cuisine maison; la fameuse fondue fontina.",
     "food_de": "Hausmannskost; berühmtes Fontina-Fondue.",
     "costs_fr": "Demi-pension environ 50-65 €.",
@@ -1222,8 +1234,8 @@
     "phone": "+39 0165 884239",
     "manager_it": "CAI Aosta",
     "manager_en": "CAI Aosta",
-    "description_it": "Rifugio panoramico nel vallone del Rutor, base per escursioni ai laghi glaciali. Tappa del Tour del Rutor.",
-    "description_en": "Panoramic hut in Rutor valley, base for glacier lake hikes. Tour du Rutor stage.",
+    "description_it": "Rifugio panoramico nel vallone del Rutor, base per escursioni ai laghi glaciali. Tappa del Tour del Rutor.\nLa conca che ospita il rifugio è un piccolo mondo glaciale: laghi di scioglimento, rocce levigate e la fronte del ghiacciaio del Rutor a portata di passeggiata. Oltre alla tappa del Tour del Rutor, dal rifugio partono gli itinerari per la Testa del Rutor e il giro dei laghi; le cascate lungo la salita da La Thuile sono fra le più imponenti delle Alpi occidentali.",
+    "description_en": "Panoramic hut in Rutor valley, base for glacier lake hikes. Tour du Rutor stage.\nThe basin holding the hut is a small glacial world: meltwater lakes, polished rock and the snout of the Rutor glacier within strolling distance. Besides the Tour du Rutor stage, routes leave the hut for the Testa del Rutor and the lakes circuit; the waterfalls on the climb from La Thuile are among the mightiest in the western Alps.",
     "food_it": "Cucina di montagna; ideal post-trek meal after the glacier approach.",
     "food_en": "Mountain cooking; ideal post-trek meal after the glacier approach.",
     "costs_it": "Mezza pensione circa 45–55 €.",
@@ -1262,8 +1274,8 @@
     "name_de": "Rifugio Deffeyes",
     "valley_fr": "La Thuile",
     "valley_de": "La Thuile",
-    "description_fr": "Refuge panoramique dans la vallée du Rutor, point de départ de randonnées sur le lac glaciaire. Étape du Tour du Rutor.",
-    "description_de": "Panoramahütte im Rutortal, Ausgangspunkt für Gletscherseewanderungen. Etappe der Tour du Rutor.",
+    "description_fr": "Refuge panoramique dans la vallée du Rutor, point de départ de randonnées sur le lac glaciaire. Étape du Tour du Rutor.\nLa combe qui abrite le refuge est un petit monde glaciaire : lacs de fonte, roches polies et front du glacier du Rutor à portée de promenade. Outre l’étape du Tour du Rutor, du refuge partent les itinéraires de la Testa del Rutor et le tour des lacs ; les cascades de la montée depuis La Thuile comptent parmi les plus imposantes des Alpes occidentales.",
+    "description_de": "Panoramahütte im Rutortal, Ausgangspunkt für Gletscherseewanderungen. Etappe der Tour du Rutor.\nDer Kessel der Hütte ist eine kleine Gletscherwelt: Schmelzseen, geschliffene Felsen und die Zunge des Rutor-Gletschers in Spazierweite. Neben der Etappe der Rutor-Runde starten hier die Routen zur Testa del Rutor und zur Seenrunde; die Wasserfälle des Anstiegs von La Thuile gehören zu den mächtigsten der Westalpen.",
     "open_period_fr": "Mi-juin – mi-septembre",
     "open_period_de": "Mitte Juni – Mitte September",
     "manager_fr": "CAI Aoste",
@@ -1271,7 +1283,11 @@
     "food_fr": "Cuisine de montagne ; repas post-trek idéal après l'approche du glacier.",
     "food_de": "Bergküche; Ideale Mahlzeit nach der Wanderung nach dem Gletscheranstieg.",
     "costs_fr": "Demi-pension environ 45-55 €.",
-    "costs_de": "Halbpension ca. 45–55 €."
+    "costs_de": "Halbpension ca. 45–55 €.",
+    "history_it": "Il rifugio del CAI di Aosta è dedicato ad Albert Deffeyes (1913–1953), alpinista e uomo politico valdostano fra i protagonisti della rinascita autonomista del dopoguerra, scomparso prematuramente. La struttura, più volte ampliata, è da decenni il punto d’appoggio per l’esplorazione del gruppo del Rutor e dei suoi ghiacciai.",
+    "history_en": "The CAI Aosta hut is dedicated to Albert Deffeyes (1913–1953), a Valdostan mountaineer and politician, a protagonist of the post-war autonomist rebirth, who died young. The building, enlarged several times, has for decades been the base for exploring the Rutor group and its glaciers.",
+    "history_fr": "Le refuge du CAI d’Aoste est dédié à Albert Deffeyes (1913-1953), alpiniste et homme politique valdôtain, protagoniste de la renaissance autonomiste d’après-guerre, disparu prématurément. Le bâtiment, plusieurs fois agrandi, est depuis des décennies le point d’appui pour explorer le massif du Rutor et ses glaciers.",
+    "history_de": "Die Hütte des CAI Aosta ist Albert Deffeyes (1913–1953) gewidmet, Bergsteiger und Politiker des Aostatals, Mitgestalter des autonomistischen Wiederaufbruchs der Nachkriegszeit, früh verstorben. Der mehrfach erweiterte Bau ist seit Jahrzehnten der Stützpunkt zur Erkundung der Rutor-Gruppe und ihrer Gletscher."
   },
   {
     "slug": "rifugio-elena",
@@ -1291,8 +1307,8 @@
     "phone": "+39 0165 844688",
     "manager_it": "CAI Courmayeur",
     "manager_en": "CAI Courmayeur",
-    "description_it": "Rifugio storico in fondo alla Val Ferret, sotto il Col Ferret. Tappa del TMB con vista sulle Alpi francesi.",
-    "description_en": "Historic hut at the head of Val Ferret, below Col Ferret. TMB stage with views of the French Alps.",
+    "description_it": "Rifugio storico in fondo alla Val Ferret, sotto il Col Ferret. Tappa del TMB con vista sulle Alpi francesi.\nLa posizione, di fronte alla lingua del ghiacciaio di Pré de Bar, è fra le più scenografiche dell’intera Val Ferret: dal terrazzo si segue con lo sguardo la salita al Gran Col Ferret da una parte e il Mont Dolent — la montagna dei tre confini — dall’altra. È l’ultimo posto tappa italiano del TMB in senso antiorario e base per la gita facile da Arnouva.",
+    "description_en": "Historic hut at the head of Val Ferret, below Col Ferret. TMB stage with views of the French Alps.\nIts position facing the tongue of the Pré de Bar glacier is among the most scenic in the whole Val Ferret: from the terrace your eye follows the climb to the Grand Col Ferret on one side and Mont Dolent — the mountain of three borders — on the other. It is the TMB’s last Italian overnight stop anticlockwise and the base for the easy walk up from Arnouva.",
     "food_it": "Cucina valdostana e torte fatte in casa.",
     "food_en": "Aosta Valley cuisine and homemade cakes.",
     "costs_it": "Mezza pensione circa 45–60 €.",
@@ -1320,8 +1336,8 @@
     "name_de": "Rifugio Elena",
     "valley_fr": "Val Ferret",
     "valley_de": "Val Ferret",
-    "description_fr": "Cabane historique à la tête du Val Ferret, en contrebas du Col Ferret. Scène TMB avec vue sur les Alpes françaises.",
-    "description_de": "Historische Hütte am Kopf des Val Ferret, unterhalb des Col Ferret. TMB-Bühne mit Blick auf die französischen Alpen.",
+    "description_fr": "Cabane historique à la tête du Val Ferret, en contrebas du Col Ferret. Scène TMB avec vue sur les Alpes françaises.\nSa position face à la langue du glacier de Pré de Bar est parmi les plus spectaculaires de tout le Val Ferret : de la terrasse, le regard suit la montée au Grand col Ferret d’un côté et le Mont Dolent — la montagne des trois frontières — de l’autre. C’est la dernière halte italienne du TMB dans le sens antihoraire et la base de la balade facile depuis Arnouva.",
+    "description_de": "Historische Hütte am Kopf des Val Ferret, unterhalb des Col Ferret. TMB-Bühne mit Blick auf die französischen Alpen.\nDie Lage gegenüber der Zunge des Pré-de-Bar-Gletschers gehört zu den szenischsten des ganzen Val Ferret: Von der Terrasse folgt der Blick dem Anstieg zum Grand Col Ferret auf der einen und dem Mont Dolent — dem Berg der drei Grenzen — auf der anderen Seite. Letzte italienische Übernachtungsstation des TMB gegen den Uhrzeigersinn und Basis für den leichten Spaziergang von Arnouva.",
     "open_period_fr": "Mi-juin – mi-septembre",
     "open_period_de": "Mitte Juni – Mitte September",
     "manager_fr": "CAI Courmayeur",
@@ -1329,7 +1345,11 @@
     "food_fr": "Cuisine valdôtaine et gâteaux faits maison.",
     "food_de": "Aostataler Küche und hausgemachte Kuchen.",
     "costs_fr": "Demi-pension environ 45-60 €.",
-    "costs_de": "Halbpension ca. 45–60 €."
+    "costs_de": "Halbpension ca. 45–60 €.",
+    "history_it": "Un ricovero a Pré de Bar esisteva già a inizio Novecento, ma valanghe e guerre ne segnarono più volte la storia: l’edificio attuale, moderno e ampio, è stato ricostruito e inaugurato negli anni Novanta poco sopra il sito storico. Il nome ricorda la tradizione sabauda della famiglia reale, legata a queste montagne di confine.",
+    "history_en": "A shelter at Pré de Bar existed by the early 1900s, but avalanches and wars repeatedly marked its history: the present building, modern and spacious, was rebuilt and inaugurated in the 1990s just above the historic site. The name recalls the Savoy tradition of the royal family, tied to these border mountains.",
+    "history_fr": "Un abri existait à Pré de Bar dès le début du XXe siècle, mais avalanches et guerres en marquèrent plusieurs fois l’histoire : le bâtiment actuel, moderne et spacieux, fut reconstruit et inauguré dans les années 1990 juste au-dessus du site historique. Le nom rappelle la tradition savoyarde de la famille royale, liée à ces montagnes frontalières.",
+    "history_de": "Eine Unterkunft am Pré de Bar gab es schon Anfang des 20. Jahrhunderts, doch Lawinen und Kriege prägten ihre Geschichte mehrfach: Der heutige, moderne und großzügige Bau wurde in den 1990er-Jahren knapp über dem historischen Standort neu errichtet. Der Name erinnert an die savoyische Tradition des Königshauses, das diesen Grenzbergen verbunden war."
   },
   {
     "slug": "rifugio-gabiet",
@@ -1409,10 +1429,10 @@
     "phone": "+39 0166 949136",
     "manager_it": "CAI Cervino",
     "manager_en": "CAI Cervino",
-    "description_it": "Rifugio storico del Club Alpino Italiano sulle sponde del Lago Goillet, base per ascensioni al Cervino.",
-    "description_en": "Historic Italian Alpine Club hut on Lake Goillet shores, base for Matterhorn ascents.",
-    "history_it": "Intitolato al Duca degli Abruzzi, pioniere dell’alpinismo italiano.",
-    "history_en": "Named after the Duke of Abruzzi, pioneer of Italian mountaineering.",
+    "description_it": "Rifugio storico del Club Alpino Italiano sulle sponde del Lago Goillet, base per ascensioni al Cervino.\nAll’Oriondé il Cervino non è più un fondale ma una presenza: la piramide della Gran Becca incombe verticale sopra il rifugio, e in un’ora e mezza si sale alla Croce Carrel, ai piedi della cresta del Leone. È la meta ideale per chi vuole respirare l’alta montagna del Cervino senza essere alpinista, con tramonti che restano impressi.",
+    "description_en": "Historic Italian Alpine Club hut on Lake Goillet shores, base for Matterhorn ascents.\nAt the Oriondé the Matterhorn is no longer a backdrop but a presence: the pyramid of the Gran Becca looms vertical above the hut, and in an hour and a half you can climb to the Carrel Cross at the foot of the Lion ridge. The ideal destination for breathing the Matterhorn’s high mountain world without being a climber, with unforgettable sunsets.",
+    "history_it": "Il rifugio porta il nome di Luigi Amedeo di Savoia, Duca degli Abruzzi (1873–1933), il grande alpinista ed esploratore che dal Breuil partì giovanissimo per le sue prime salite al Cervino prima delle spedizioni al Polo, in Alaska e al K2. La struttura, ai piedi della via italiana alla Gran Becca, è storicamente legata alle guide del Cervino, che vi accompagnano gli aspiranti alla Capanna Carrel.",
+    "history_en": "The refuge bears the name of Luigi Amedeo of Savoy, Duke of the Abruzzi (1873–1933), the great climber and explorer who as a very young man set out from the Breuil for his first Matterhorn climbs before his expeditions to the Pole, Alaska and K2. Standing at the foot of the Italian route up the Gran Becca, it is historically tied to the Matterhorn guides, who accompany aspirants from here to the Carrel hut.",
     "food_it": "Pasti d’alta quota; prenotazione obbligatoria.",
     "food_en": "High-altitude meals; booking required.",
     "costs_it": "Pernottamento indicativo 40–55 €.",
@@ -1437,14 +1457,14 @@
     "name_de": "Duca degli Abruzzi Hütte",
     "valley_fr": "Valtournenche",
     "valley_de": "Valtournenche",
-    "description_fr": "Refuge historique du Club alpin italien au bord du lac Goillet, point de départ des ascensions du Cervin.",
-    "description_de": "Historische Hütte des italienischen Alpenvereins am Ufer des Lake Goillet, Ausgangspunkt für Matterhornbesteigungen.",
+    "description_fr": "Refuge historique du Club alpin italien au bord du lac Goillet, point de départ des ascensions du Cervin.\nÀ l’Oriondé, le Cervin n’est plus un décor mais une présence : la pyramide de la Gran Becca surplombe le refuge à la verticale, et en une heure et demie on monte à la Croix Carrel, au pied de l’arête du Lion. Destination idéale pour respirer la haute montagne du Cervin sans être alpiniste, avec des couchers de soleil inoubliables.",
+    "description_de": "Historische Hütte des italienischen Alpenvereins am Ufer des Lake Goillet, Ausgangspunkt für Matterhornbesteigungen.\nAm Oriondé ist das Matterhorn keine Kulisse mehr, sondern Gegenwart: Die Pyramide der Gran Becca ragt senkrecht über der Hütte auf, und in anderthalb Stunden steigt man zum Carrel-Kreuz am Fuß des Löwengrats. Das ideale Ziel, um die Hochgebirgswelt des Matterhorns zu atmen, ohne Alpinist zu sein — mit unvergesslichen Sonnenuntergängen.",
     "open_period_fr": "Mi-juin – mi-septembre",
     "open_period_de": "Mitte Juni – Mitte September",
     "manager_fr": "CAI Cervin",
     "manager_de": "CAI Cervino",
-    "history_fr": "Nommé d'après le duc des Abruzzes, pionnier de l'alpinisme italien.",
-    "history_de": "Benannt nach dem Herzog der Abruzzen, dem Pionier des italienischen Bergsteigens.",
+    "history_fr": "Le refuge porte le nom de Louis-Amédée de Savoie, duc des Abruzzes (1873-1933), grand alpiniste et explorateur qui, tout jeune, partit du Breuil pour ses premières ascensions du Cervin avant ses expéditions au Pôle, en Alaska et au K2. Au pied de la voie italienne de la Gran Becca, il est historiquement lié aux guides du Cervin, qui y accompagnent les aspirants vers la cabane Carrel.",
+    "history_de": "Die Hütte trägt den Namen von Luigi Amedeo von Savoyen, Herzog der Abruzzen (1873–1933), dem großen Bergsteiger und Forscher, der als junger Mann vom Breuil zu seinen ersten Matterhorn-Besteigungen aufbrach, bevor er zum Pol, nach Alaska und zum K2 zog. Am Fuß des italienischen Wegs auf die Gran Becca ist sie historisch mit den Matterhorn-Führern verbunden, die Aspiranten von hier zur Carrel-Hütte begleiten.",
     "food_fr": "Repas en altitude ; réservation obligatoire.",
     "food_de": "Mahlzeiten in großer Höhe; Reservierung erforderlich.",
     "costs_fr": "Nuitée environ 40 à 55 €.",
@@ -1580,8 +1600,8 @@
     "booking_url": "https://rifugio-prarayer.it",
     "manager_it": "CAI Aosta",
     "manager_en": "CAI Aosta",
-    "description_it": "Rifugio dell’Alta Via del Gran Combin ai margini del ghiacciaio di Arolla. Base per ascensioni al Gran Combin.",
-    "description_en": "Alta Via del Gran Combin hut at the Arolla glacier margins. Base for Gran Combin ascents.",
+    "description_it": "Rifugio dell’Alta Via del Gran Combin ai margini del ghiacciaio di Arolla. Base per ascensioni al Gran Combin.\nSi raggiunge solo a piedi, con la passeggiata pianeggiante lungo il lago di Place Moulin: mezz’ora di camminata sopra acque turchesi che è già parte dell’esperienza. La conca di Prarayer, chiusa dalla Dent d’Hérens e dalle Grandes Murailles, è il cuore escursionistico dell’alta Valpelline: di qui passano l’Alta Via 1, il Tour del Cervino e le salite ai bivacchi e ai colli di confine.",
+    "description_en": "Alta Via del Gran Combin hut at the Arolla glacier margins. Base for Gran Combin ascents.\nIt can be reached only on foot, by the level walk along the Place Moulin reservoir: half an hour above turquoise water that is already part of the experience. The Prarayer basin, closed by the Dent d’Hérens and the Grandes Murailles, is the hiking heart of the upper Valpelline: through here pass the Alta Via 1, the Tour of the Matterhorn and the routes to the border bivouacs and cols.",
     "food_it": "Cucina generosa valdostana; polenta e selvaggina.",
     "food_en": "Generous Aosta Valley cooking; polenta and game.",
     "costs_it": "Mezza pensione circa 50–65 €; prenotazione online.",
@@ -1618,8 +1638,8 @@
     "name_de": "Rifugio Prarayer",
     "valley_fr": "Valpelline",
     "valley_de": "Valpelline",
-    "description_fr": "Refuge Alta Via del Gran Combin aux marges du glacier d'Arolla. Base pour les ascensions du Gran Combin.",
-    "description_de": "Alta Via del Gran Combin-Hütte am Rande des Arolla-Gletschers. Basis für Gran Combin-Aufstiege.",
+    "description_fr": "Refuge Alta Via del Gran Combin aux marges du glacier d'Arolla. Base pour les ascensions du Gran Combin.\nOn n’y accède qu’à pied, par la promenade plate le long du lac de Place Moulin : une demi-heure au-dessus d’eaux turquoise qui fait déjà partie de l’expérience. Le bassin de Prarayer, fermé par la Dent d’Hérens et les Grandes Murailles, est le cœur pédestre de la haute Valpelline : ici passent la Haute Route n° 1, le Tour du Cervin et les montées vers les bivouacs et cols frontaliers.",
+    "description_de": "Alta Via del Gran Combin-Hütte am Rande des Arolla-Gletschers. Basis für Gran Combin-Aufstiege.\nErreichbar nur zu Fuß, über den ebenen Weg am Place-Moulin-Stausee entlang: eine halbe Stunde über türkisfarbenem Wasser, die schon Teil des Erlebnisses ist. Der Kessel von Prarayer, abgeschlossen von Dent d’Hérens und Grandes Murailles, ist das Wanderherz der oberen Valpelline: Hier verlaufen Höhenweg 1, Matterhorn-Tour und die Anstiege zu den Grenzbiwaks und -pässen.",
     "open_period_fr": "Mi-juin – mi-septembre",
     "open_period_de": "Mitte Juni – Mitte September",
     "manager_fr": "CAI Aoste",
@@ -1627,7 +1647,11 @@
     "food_fr": "Cuisine valdôtaine généreuse ; polenta et gibier.",
     "food_de": "Großzügige Küche aus dem Aostatal; Polenta und Wild.",
     "costs_fr": "Demi-pension environ 50-65 € ; réserver en ligne.",
-    "costs_de": "Halbpension ca. 50–65 €; online buchen."
+    "costs_de": "Halbpension ca. 50–65 €; online buchen.",
+    "history_it": "Prarayer era l’ultimo insediamento dell’alta Valpelline sulla storica via del Col Collon verso il Vallese: le sue case ospitavano viandanti e contrabbandieri ben prima che, con la costruzione della diga di Place Moulin negli anni Sessanta, la conca diventasse raggiungibile solo a piedi. Gli edifici dell’antico villaggio sono stati trasformati nell’attuale rifugio, che ne conserva le mura in pietra.",
+    "history_en": "Prarayer was the last settlement of the upper Valpelline on the historic Col Collon route to Valais: its houses sheltered wayfarers and smugglers long before the construction of the Place Moulin dam in the 1960s left the basin reachable only on foot. The buildings of the old village were converted into today’s refuge, which preserves their stone walls.",
+    "history_fr": "Prarayer était le dernier hameau de la haute Valpelline sur l’historique voie du col Collon vers le Valais : ses maisons abritaient voyageurs et contrebandiers bien avant que la construction du barrage de Place Moulin, dans les années 1960, ne rende le bassin accessible qu’à pied. Les bâtiments de l’ancien village ont été transformés en l’actuel refuge, qui en conserve les murs de pierre.",
+    "history_de": "Prarayer war die letzte Siedlung der oberen Valpelline an der historischen Route über den Col Collon ins Wallis: Ihre Häuser beherbergten Reisende und Schmuggler, lange bevor der Bau der Place-Moulin-Staumauer in den 1960er-Jahren den Talkessel nur noch zu Fuß erreichbar machte. Die Gebäude des alten Dorfes wurden zur heutigen Hütte umgebaut, die ihre Steinmauern bewahrt."
   },
   {
     "slug": "bivacco-gastaldi",
@@ -3244,10 +3268,10 @@
     "phone": null,
     "email": null,
     "website": "http://www.sucai.it/bivaccogervasutti/index.html",
-    "description_it": "Bivacco a 2835 m in Val Ferret, Valle d'Aosta. Posti letto: 12. Ricovero non gestito, generalmente sempre aperto. Dati da OpenStreetMap.",
-    "description_en": "Bivouac at 2835 m in Val Ferret, Aosta Valley. Beds: 12. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Bivouac à 2835 m dans Val Ferret, Vallée d'Aoste. Couchages : 12. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Biwak auf 2835 m im Val Ferret, Aostatal. Schlafplätze: 12. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Bivacco a 2835 m in Val Ferret, Valle d'Aosta. Posti letto: 12. Ricovero non gestito, generalmente sempre aperto. Dati da OpenStreetMap.\nIl tubo futuristico incastonato sulla morena del Freboudze è diventato un’icona fotografica delle Alpi: un modulo hi-tech con vetrata panoramica che inquadra le Grandes Jorasses come uno schermo. L’accesso è ripido e per escursionisti esperti; il bivacco, sempre aperto, è base per le vie sul versante orientale delle Jorasses.",
+    "description_en": "Bivouac at 2835 m in Val Ferret, Aosta Valley. Beds: 12. Data from OpenStreetMap; verify opening before setting out.\nThe futuristic tube set on the Freboudze moraine has become a photographic icon of the Alps: a hi-tech module whose panoramic window frames the Grandes Jorasses like a screen. The approach is steep, for experienced hikers; the bivouac, always open, serves the routes on the east side of the Jorasses.",
+    "description_fr": "Bivouac à 2835 m dans Val Ferret, Vallée d'Aoste. Couchages : 12. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nLe tube futuriste posé sur la moraine du Freboudze est devenu une icône photographique des Alpes : un module high-tech dont la baie panoramique cadre les Grandes Jorasses comme un écran. L’accès est raide, pour randonneurs aguerris ; le bivouac, toujours ouvert, dessert les voies du versant est des Jorasses.",
+    "description_de": "Biwak auf 2835 m im Val Ferret, Aostatal. Schlafplätze: 12. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nDie futuristische Röhre auf der Freboudze-Moräne ist zur Foto-Ikone der Alpen geworden: ein Hightech-Modul, dessen Panoramafenster die Grandes Jorasses wie ein Bildschirm rahmt. Der Zustieg ist steil, für erfahrene Berggänger; das stets offene Biwak dient den Routen der Ostseite der Jorasses.",
     "images": [
       {
         "src": "/refuges/bivacco-giusto-gervasutti-al-freboudze.jpg",
@@ -3260,7 +3284,11 @@
       }
     ],
     "trails": [],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "Il modulo attuale, installato nel 2011 su progetto LEAPfactory, ha sostituito il vecchio bivacco in legno e lamiera dedicato a Giusto Gervasutti (1909–1946), il “Fortissimo” dell’alpinismo italiano fra le due guerre, caduto sul Monte Bianco. La sua forma a tubo, costruita per resistere alle valanghe e trasportata in elicottero, ha fatto scuola nell’architettura dei bivacchi alpini.",
+    "history_en": "The current module, installed in 2011 to a LEAPfactory design, replaced the old wood-and-metal bivouac dedicated to Giusto Gervasutti (1909–1946), the “Fortissimo” of interwar Italian climbing, who died on Mont Blanc. Its tube form, built to withstand avalanches and flown in by helicopter, set a precedent in alpine bivouac architecture.",
+    "history_fr": "Le module actuel, installé en 2011 sur un projet LEAPfactory, a remplacé l’ancien bivouac de bois et tôle dédié à Giusto Gervasutti (1909-1946), le « Fortissimo » de l’alpinisme italien de l’entre-deux-guerres, disparu au Mont-Blanc. Sa forme de tube, conçue pour résister aux avalanches et héliportée, a fait école dans l’architecture des bivouacs alpins.",
+    "history_de": "Das heutige Modul, 2011 nach einem Entwurf von LEAPfactory installiert, ersetzte das alte Holz-Blech-Biwak, das Giusto Gervasutti (1909–1946) gewidmet war, dem „Fortissimo“ des italienischen Alpinismus der Zwischenkriegszeit, der am Mont Blanc fiel. Die Röhrenform, lawinensicher gebaut und per Helikopter eingeflogen, wurde stilbildend für die Architektur alpiner Biwaks."
   },
   {
     "slug": "bivacco-beltrando",
@@ -3358,10 +3386,10 @@
     "phone": "+39 0125 366113",
     "email": "info@rifugioquintinosella.com",
     "website": "https://www.rifugioquintinosella.com/index_d.asp",
-    "description_it": "Rifugio alpino a 3585 m in Val d'Ayas, Valle d'Aosta. Posti letto: 140. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.",
-    "description_en": "Alpine refuge at 3585 m in Ayas Valley, Aosta Valley. Beds: 140. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Refuge alpin à 3585 m dans Vallée d'Ayas, Vallée d'Aoste. Couchages : 140. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Berghütte auf 3585 m im Ayas-Tal, Aostatal. Schlafplätze: 140. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Rifugio alpino a 3585 m in Val d'Ayas, Valle d'Aosta. Posti letto: 140. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.\nArroccato sullo sperone roccioso del Felik, è il grande crocevia alpinistico fra Castore, Polluce e la traversata dei Lyskamm: all’alba le cordate si snodano sulla cresta nevosa del Naso del Lyskamm in uno spettacolo che da solo vale la salita. L’accesso escursionistico dal Colle di Bettaforca è lungo ma non difficile fino al rifugio, con tratti attrezzati finali.",
+    "description_en": "Alpine refuge at 3585 m in Ayas Valley, Aosta Valley. Beds: 140. Data from OpenStreetMap; verify opening before setting out.\nPerched on the rocky Felik spur, this is the great mountaineering crossroads between Castor, Pollux and the Lyskamm traverse: at dawn rope parties wind up the snowy crest of the Lyskamm Nose in a spectacle worth the climb in itself. The hiking approach from the Bettaforca pass is long but not difficult, with equipped final sections.",
+    "description_fr": "Refuge alpin à 3585 m dans Vallée d'Ayas, Vallée d'Aoste. Couchages : 140. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nPerché sur l’éperon rocheux du Felik, c’est le grand carrefour alpin entre Castor, Pollux et la traversée des Lyskamm : à l’aube, les cordées serpentent sur la crête neigeuse du Nez du Lyskamm, spectacle qui vaut à lui seul la montée. L’accès pédestre depuis le col de Bettaforca est long mais sans grande difficulté, avec des sections équipées sur la fin.",
+    "description_de": "Berghütte auf 3585 m im Ayas-Tal, Aostatal. Schlafplätze: 140. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nAuf dem Felsporn des Felik thronend, ist sie das große alpinistische Kreuz zwischen Castor, Pollux und der Lyskamm-Überschreitung: Im Morgengrauen ziehen die Seilschaften über den Firngrat der Lyskamm-Nase — ein Schauspiel, das allein den Aufstieg lohnt. Der Wanderzustieg vom Bettaforca-Pass ist lang, aber bis zur Hütte nicht schwierig, mit versicherten Schlusspassagen.",
     "images": [
       {
         "src": "/refuges/rifugio-quintino-sella-al-felik.JPG",
@@ -3378,7 +3406,11 @@
       "07-s36",
       "32-s25"
     ],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "Il primo ricovero fu costruito nel 1885 dalla sezione di Biella del CAI e intitolato a Quintino Sella, statista biellese e fondatore del Club Alpino Italiano nel 1863. Ricostruito e ampliato più volte — l’ultima struttura principale risale alla fine del Novecento — resta di proprietà del CAI Biella ed è uno dei rifugi d’alta quota più frequentati del Rosa.",
+    "history_en": "The first shelter was built in 1885 by the Biella section of the CAI and named after Quintino Sella, the Biellese statesman who founded the Italian Alpine Club in 1863. Rebuilt and enlarged several times — the latest main structure dates from the late 20th century — it remains the property of CAI Biella and is one of the busiest high huts of the Monte Rosa.",
+    "history_fr": "Le premier abri fut construit en 1885 par la section de Biella du CAI et dédié à Quintino Sella, homme d’État biellais et fondateur du Club Alpin Italien en 1863. Reconstruit et agrandi à plusieurs reprises — la dernière structure principale date de la fin du XXe siècle — il appartient toujours au CAI de Biella et compte parmi les refuges d’altitude les plus fréquentés du Rose.",
+    "history_de": "Die erste Schutzhütte wurde 1885 von der CAI-Sektion Biella gebaut und nach Quintino Sella benannt, dem Staatsmann aus Biella, der 1863 den Italienischen Alpenverein gründete. Mehrfach neu gebaut und erweitert — der heutige Hauptbau stammt vom Ende des 20. Jahrhunderts — gehört sie weiter dem CAI Biella und ist eine der meistbesuchten Höhenhütten des Monte Rosa."
   },
   {
     "slug": "refuge-du-gouter",
@@ -3400,10 +3432,10 @@
     "phone": "+33 4 50 54 40 93",
     "email": "refugedugouter@ffcam.fr",
     "website": "https://refugedugouter.ffcam.fr/",
-    "description_it": "Rifugio alpino a 3815 m in Val Veny, Valle d'Aosta. Posti letto: 120. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.",
-    "description_en": "Alpine refuge at 3815 m in Val Veny, Aosta Valley. Beds: 120. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Refuge alpin à 3815 m dans Val Veny, Vallée d'Aoste. Couchages : 120. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Berghütte auf 3815 m im Val Veny, Aostatal. Schlafplätze: 120. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Rifugio alpino a 3815 m in Val Veny, Valle d'Aosta. Posti letto: 120. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.\nSospeso sull’Aiguille du Goûter lungo la via normale francese al Monte Bianco, è il rifugio-chiave per la vetta: si dorme qui per partire nel cuore della notte verso il Dôme du Goûter e la cresta delle Bosses. La salita dal Nid d’Aigle attraversa il famigerato Grand Couloir, esposto alla caduta sassi: passaggio da affrontare presto e senza soste. Prenotazione obbligatoria con largo anticipo.",
+    "description_en": "Alpine refuge at 3815 m in Val Veny, Aosta Valley. Beds: 120. Data from OpenStreetMap; verify opening before setting out.\nSuspended on the Aiguille du Goûter along the French normal route up Mont Blanc, this is the key hut for the summit: you sleep here to set out in the middle of the night for the Dôme du Goûter and the Bosses ridge. The approach from the Nid d’Aigle crosses the notorious Grand Couloir, exposed to rockfall: a passage to take early and without stopping. Booking essential far in advance.",
+    "description_fr": "Refuge alpin à 3815 m dans Val Veny, Vallée d'Aoste. Couchages : 120. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nSuspendu à l’Aiguille du Goûter sur la voie normale française du Mont-Blanc, c’est le refuge clé pour le sommet : on y dort pour partir en pleine nuit vers le Dôme du Goûter et l’arête des Bosses. La montée depuis le Nid d’Aigle traverse le fameux Grand Couloir, exposé aux chutes de pierres : passage à franchir tôt et sans s’arrêter. Réservation indispensable longtemps à l’avance.",
+    "description_de": "Berghütte auf 3815 m im Val Veny, Aostatal. Schlafplätze: 120. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nAn der Aiguille du Goûter über dem französischen Normalweg auf den Mont Blanc schwebend, ist dies die Schlüsselhütte für den Gipfel: Man schläft hier, um mitten in der Nacht zum Dôme du Goûter und zum Bosses-Grat aufzubrechen. Der Zustieg vom Nid d’Aigle quert das berüchtigte Grand Couloir mit Steinschlaggefahr: früh und ohne Halt passieren. Reservierung lange im Voraus zwingend.",
     "images": [
       {
         "src": "/refuges/refuge-du-gouter.jpg",
@@ -3416,7 +3448,11 @@
       }
     ],
     "trails": [],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "L’attuale rifugio, inaugurato nel 2013 dalla Federazione francese dei club alpini (FFCAM), ha sostituito la storica struttura del 1962: un ovoide futuristico in legno e acciaio inox progettato per resistere a venti estremi e funzionare con energia solare e fusione della neve. È fra i rifugi tecnologicamente più avanzati delle Alpi.",
+    "history_en": "The current refuge, inaugurated in 2013 by the French federation of alpine clubs (FFCAM), replaced the historic 1962 structure: a futuristic ovoid of timber and stainless steel designed to withstand extreme winds and to run on solar power and snow-melting. It is among the most technologically advanced huts in the Alps.",
+    "history_fr": "Le refuge actuel, inauguré en 2013 par la FFCAM, a remplacé la structure historique de 1962 : un ovoïde futuriste de bois et d’inox conçu pour résister aux vents extrêmes et fonctionner à l’énergie solaire et à la fonte de neige. C’est l’un des refuges les plus avancés technologiquement des Alpes.",
+    "history_de": "Die heutige Hütte, 2013 vom französischen Alpenclub-Verband (FFCAM) eingeweiht, ersetzte den historischen Bau von 1962: ein futuristisches Ovoid aus Holz und Edelstahl, gebaut für extreme Winde, betrieben mit Solarenergie und Schneeschmelze. Sie zählt zu den technologisch fortschrittlichsten Hütten der Alpen."
   },
   {
     "slug": "monte-rosa-hutte",
@@ -3438,10 +3474,10 @@
     "phone": "+41 27 967 21 15",
     "email": "info@monterosahuette.ch",
     "website": "https://monterosahuette.ch",
-    "description_it": "Rifugio alpino a 2883 m in Valle del Lys, Valle d'Aosta. Posti letto: 120. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.",
-    "description_en": "Alpine refuge at 2883 m in Lys Valley, Aosta Valley. Beds: 120. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Refuge alpin à 2883 m dans Vallée du Lys, Vallée d'Aoste. Couchages : 120. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Berghütte auf 2883 m im Lys-Tal, Aostatal. Schlafplätze: 120. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Rifugio alpino a 2883 m in Valle del Lys, Valle d'Aosta. Posti letto: 120. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.\nIl “cristallo di rocca” ai piedi del versante svizzero del Rosa è una meta in sé: l’involucro sfaccettato in alluminio brilla sopra il ghiacciaio del Gorner ed è visibile perfino dal Gornergrat. L’avvicinamento da Rotenboden attraversa il ghiacciaio su percorso attrezzato e segnalato: da affrontare solo con condizioni buone e passo sicuro.",
+    "description_en": "Alpine refuge at 2883 m in Lys Valley, Aosta Valley. Beds: 120. Data from OpenStreetMap; verify opening before setting out.\nThe “rock crystal” at the foot of Monte Rosa’s Swiss side is a destination in itself: its faceted aluminium shell glitters above the Gorner glacier and can be seen even from the Gornergrat. The approach from Rotenboden crosses the glacier on an equipped, marked route: to be tackled only in good conditions and with a sure step.",
+    "description_fr": "Refuge alpin à 2883 m dans Vallée du Lys, Vallée d'Aoste. Couchages : 120. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nLe « cristal de roche » au pied du versant suisse du Rose est une destination en soi : son enveloppe d’aluminium à facettes scintille au-dessus du glacier du Gorner et se voit jusque du Gornergrat. L’approche depuis Rotenboden traverse le glacier sur un itinéraire équipé et balisé : à entreprendre seulement par bonnes conditions et d’un pas sûr.",
+    "description_de": "Berghütte auf 2883 m im Lys-Tal, Aostatal. Schlafplätze: 120. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nDer „Bergkristall“ am Fuß der Schweizer Seite des Monte Rosa ist ein Ziel für sich: Die facettierte Aluminiumhülle glitzert über dem Gornergletscher und ist selbst vom Gornergrat zu sehen. Der Zustieg von Rotenboden quert den Gletscher auf gesicherter, markierter Route — nur bei guten Verhältnissen und mit sicherem Tritt.",
     "images": [
       {
         "src": "/refuges/monte-rosa-hutte.jpg",
@@ -3454,7 +3490,11 @@
       }
     ],
     "trails": [],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "La prima capanna Bétemps fu costruita nel 1895 dal Club Alpino Svizzero. L’edificio attuale, progettato con il Politecnico federale di Zurigo e inaugurato nel 2009, è un manifesto di architettura alpina sostenibile: la “montagna di cristallo” in alluminio copre con il fotovoltaico circa il 90% del proprio fabbisogno energetico. È gestita dalla sezione Monte Rosa del SAC.",
+    "history_en": "The first Bétemps hut was built in 1895 by the Swiss Alpine Club. The current building, designed with ETH Zurich and inaugurated in 2009, is a manifesto of sustainable alpine architecture: the aluminium “crystal mountain” covers about 90% of its energy needs with photovoltaics. It is run by the Monte Rosa section of the SAC.",
+    "history_fr": "La première cabane Bétemps fut construite en 1895 par le Club Alpin Suisse. Le bâtiment actuel, conçu avec l’École polytechnique de Zurich et inauguré en 2009, est un manifeste d’architecture alpine durable : la « montagne de cristal » en aluminium couvre environ 90 % de ses besoins énergétiques grâce au photovoltaïque. Elle est gérée par la section Monte Rosa du CAS.",
+    "history_de": "Die erste Bétemps-Hütte wurde 1895 vom Schweizer Alpen-Club gebaut. Der heutige Bau, mit der ETH Zürich entworfen und 2009 eingeweiht, ist ein Manifest nachhaltiger Alpinarchitektur: Der „Bergkristall“ aus Aluminium deckt rund 90 % seines Energiebedarfs mit Photovoltaik. Geführt wird er von der Sektion Monte Rosa des SAC."
   },
   {
     "slug": "rifugio-vittorio-emanuele-ii-nuovo",
@@ -3476,10 +3516,10 @@
     "phone": "+39 0165 95920",
     "email": "info@rifugiovittorioemanuele.com",
     "website": "https://www.rifugiovittorioemanuele.com",
-    "description_it": "Rifugio alpino a 2735 m in Valsavarenche, Valle d'Aosta. Posti letto: 120. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.",
-    "description_en": "Alpine refuge at 2735 m in Valsavarenche, Aosta Valley. Beds: 120. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Refuge alpin à 2735 m dans Valsavarenche, Vallée d'Aoste. Couchages : 120. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Berghütte auf 2735 m im Valsavarenche, Aostatal. Schlafplätze: 120. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Rifugio alpino a 2735 m in Valsavarenche, Valle d'Aosta. Posti letto: 120. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.\nÈ la base storica della via normale al Gran Paradiso, l’unico Quattromila interamente italiano: nelle notti d’estate il rifugio si anima alle tre del mattino di cordate in partenza. La sagoma a mezza botte in lamiera, pensata per resistere alle valanghe, è ormai un’icona della Valsavarenche; accanto sopravvive il vecchio rifugio in pietra.",
+    "description_en": "Alpine refuge at 2735 m in Valsavarenche, Aosta Valley. Beds: 120. Data from OpenStreetMap; verify opening before setting out.\nThis is the historic base for the normal route up the Gran Paradiso, the only entirely Italian four-thousander: on summer nights the hut comes alive at three in the morning with departing rope parties. Its half-barrel metal silhouette, designed to shed avalanches, has become an icon of the Valsavarenche; the old stone hut survives alongside.",
+    "description_fr": "Refuge alpin à 2735 m dans Valsavarenche, Vallée d'Aoste. Couchages : 120. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nC’est la base historique de la voie normale du Grand-Paradis, le seul 4000 entièrement italien : les nuits d’été, le refuge s’anime à trois heures du matin au départ des cordées. Sa silhouette en demi-tonneau métallique, conçue pour résister aux avalanches, est devenue une icône de la Valsavarenche ; l’ancien refuge de pierre subsiste à côté.",
+    "description_de": "Berghütte auf 2735 m im Valsavarenche, Aostatal. Schlafplätze: 120. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nDies ist der historische Stützpunkt des Normalwegs auf den Gran Paradiso, den einzigen ganz italienischen Viertausender: In Sommernächten erwacht die Hütte um drei Uhr früh mit aufbrechenden Seilschaften. Die halbtonnenförmige Blechsilhouette, gebaut, um Lawinen standzuhalten, ist längst eine Ikone des Valsavarenche; daneben steht noch die alte Steinhütte.",
     "images": [
       {
         "src": "/refuges/rifugio-vittorio-emanuele-ii-nuovo.jpg",
@@ -3495,7 +3535,11 @@
       "70-s17",
       "70-s22"
     ],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "Il primo rifugio, voluto dal CAI di Torino e intitolato al re Vittorio Emanuele II — che in queste valli aveva le sue riserve di caccia — fu inaugurato nel 1884 ed è tra i più antichi rifugi italiani. L’edificio “nuovo”, la caratteristica mezza botte metallica, venne aperto nel 1961 per far fronte alla crescita dell’alpinismo sul Gran Paradiso. Resta di proprietà del CAI Torino.",
+    "history_en": "The first hut, promoted by the CAI of Turin and named after King Vittorio Emanuele II — who kept his hunting reserves in these valleys — was inaugurated in 1884 and is among Italy’s oldest refuges. The “new” building, the distinctive metal half-barrel, opened in 1961 to cope with the growth of mountaineering on the Gran Paradiso. It remains the property of CAI Turin.",
+    "history_fr": "Le premier refuge, voulu par le CAI de Turin et dédié au roi Victor-Emmanuel II — qui avait ses réserves de chasse dans ces vallées — fut inauguré en 1884 : c’est l’un des plus anciens refuges italiens. Le bâtiment « nouveau », le fameux demi-tonneau métallique, ouvrit en 1961 pour répondre à l’essor de l’alpinisme au Grand-Paradis. Il appartient toujours au CAI de Turin.",
+    "history_de": "Die erste Hütte, vom CAI Turin errichtet und König Vittorio Emanuele II. gewidmet — der in diesen Tälern seine Jagdreviere hatte —, wurde 1884 eingeweiht und gehört zu den ältesten Hütten Italiens. Der „neue“ Bau, die markante Blech-Halbtonne, öffnete 1961, um dem wachsenden Bergsteigerstrom am Gran Paradiso zu begegnen. Sie gehört weiterhin dem CAI Turin."
   },
   {
     "slug": "hospice-du-grand-saint-bernard",
@@ -3517,10 +3561,10 @@
     "phone": "+41 27 787 12 36",
     "email": null,
     "website": "https://gsbernard.com/",
-    "description_it": "Rifugio alpino a 2470 m in Valle del Gran San Bernardo, Valle d'Aosta. Posti letto: 104. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.",
-    "description_en": "Alpine refuge at 2470 m in Great St Bernard Valley, Aosta Valley. Beds: 104. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Refuge alpin à 2470 m dans Vallée du Grand-Saint-Bernard, Vallée d'Aoste. Couchages : 104. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Berghütte auf 2470 m im Grosser-Sankt-Bernhard-Tal, Aostatal. Schlafplätze: 104. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Rifugio alpino a 2470 m in Valle del Gran San Bernardo, Valle d'Aosta. Posti letto: 104. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.\nNon un semplice rifugio ma un luogo dello spirito: da quasi mille anni i canonici accolgono chiunque bussi alla porta dell’ospizio, d’estate come nel lungo inverno a 2.470 metri, quando il colle è raggiungibile solo con sci o racchette. Si visitano la chiesa barocca, la cripta, il museo e il celebre allevamento dei cani San Bernardo, oggi curato dalla Fondation Barry.",
+    "description_en": "Alpine refuge at 2470 m in Great St Bernard Valley, Aosta Valley. Beds: 104. Data from OpenStreetMap; verify opening before setting out.\nNot merely a refuge but a place of the spirit: for nearly a thousand years the canons have welcomed whoever knocks at the hospice door, in summer as in the long winter at 2,470 metres, when the pass can be reached only on skis or snowshoes. You can visit the baroque church, the crypt, the museum and the famous St Bernard dog kennels, today run by the Barry Foundation.",
+    "description_fr": "Refuge alpin à 2470 m dans Vallée du Grand-Saint-Bernard, Vallée d'Aoste. Couchages : 104. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nPlus qu’un refuge, un lieu de l’esprit : depuis près de mille ans, les chanoines accueillent quiconque frappe à la porte de l’hospice, l’été comme durant le long hiver à 2 470 mètres, quand le col n’est accessible qu’à ski ou en raquettes. On y visite l’église baroque, la crypte, le musée et le célèbre élevage des chiens saint-bernard, aujourd’hui confié à la Fondation Barry.",
+    "description_de": "Berghütte auf 2470 m im Grosser-Sankt-Bernhard-Tal, Aostatal. Schlafplätze: 104. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nKein bloßes Refugium, sondern ein Ort des Geistes: Seit fast tausend Jahren empfangen die Chorherren jeden, der an die Tür des Hospizes klopft — im Sommer wie im langen Winter auf 2.470 Metern, wenn der Pass nur mit Ski oder Schneeschuhen erreichbar ist. Zu besichtigen sind Barockkirche, Krypta, Museum und die berühmte Bernhardiner-Zucht, heute von der Fondation Barry betreut.",
     "images": [
       {
         "src": "/refuges/hospice-du-grand-saint-bernard.jpg",
@@ -3539,7 +3583,11 @@
       "pvf-s1",
       "tsb-s1"
     ],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "Fondato attorno al 1050 da San Bernardo di Mentone per proteggere i pellegrini della via Francigena dai pericoli del valico e dai briganti, l’ospizio è abitato ininterrottamente da allora: è una delle istituzioni di accoglienza più antiche d’Europa. Dai suoi corridoi passarono pellegrini, eserciti — Napoleone nel maggio 1800 con quarantamila uomini — e generazioni di viaggiatori salvati dai canonici e dai loro cani, allevati al colle dal Seicento.",
+    "history_en": "Founded around 1050 by St Bernard of Menthon to protect Via Francigena pilgrims from the dangers of the pass and from brigands, the hospice has been inhabited without interruption ever since: one of Europe’s oldest institutions of hospitality. Its corridors have seen pilgrims, armies — Napoleon in May 1800 with forty thousand men — and generations of travellers rescued by the canons and their dogs, bred at the pass since the 17th century.",
+    "history_fr": "Fondé vers 1050 par saint Bernard de Menthon pour protéger les pèlerins de la via Francigena des dangers du col et des brigands, l’hospice est habité sans interruption depuis : l’une des plus anciennes institutions d’accueil d’Europe. Dans ses couloirs passèrent pèlerins, armées — Napoléon en mai 1800 avec quarante mille hommes — et des générations de voyageurs sauvés par les chanoines et leurs chiens, élevés au col depuis le XVIIe siècle.",
+    "history_de": "Um 1050 vom heiligen Bernhard von Menthon gegründet, um die Pilger der Via Francigena vor den Gefahren des Passes und vor Räubern zu schützen, ist das Hospiz seither ununterbrochen bewohnt: eine der ältesten Herbergsinstitutionen Europas. Durch seine Flure zogen Pilger, Armeen — Napoleon im Mai 1800 mit vierzigtausend Mann — und Generationen von Reisenden, gerettet von den Chorherren und ihren seit dem 17. Jahrhundert am Pass gezüchteten Hunden."
   },
   {
     "slug": "rifugio-arp",
@@ -3761,10 +3809,10 @@
     "phone": null,
     "email": null,
     "website": "https://www.rifugiocreteseche.eu/",
-    "description_it": "Rifugio alpino a 2391 m in Valpelline, Valle d'Aosta. Posti letto: 86. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.",
-    "description_en": "Alpine refuge at 2391 m in Valpelline, Aosta Valley. Beds: 86. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Refuge alpin à 2391 m dans Valpelline, Vallée d'Aoste. Couchages : 86. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Berghütte auf 2391 m im Valpelline-Tal, Aostatal. Schlafplätze: 86. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Rifugio alpino a 2391 m in Valpelline, Valle d'Aosta. Posti letto: 86. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.\nIl vallone di Crête Sèche, severo e poco frequentato, è uno degli angoli più autentici della Valpelline: dal rifugio si sale alla Fenêtre de Durand sul Tour des Combins, ai laghi glaciali del vallone e alle cime di confine con il Vallese. Ambiente ideale per chi cerca silenzio e fauna.",
+    "description_en": "Alpine refuge at 2391 m in Valpelline, Aosta Valley. Beds: 86. Data from OpenStreetMap; verify opening before setting out.\nThe stern, little-visited Crête Sèche valley is one of the most authentic corners of the Valpelline: from the hut you climb to the Fenêtre de Durand on the Tour des Combins, to the valley’s glacial lakes and to the border summits with Valais. Ideal country for those seeking silence and wildlife.",
+    "description_fr": "Refuge alpin à 2391 m dans Valpelline, Vallée d'Aoste. Couchages : 86. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nLe vallon de Crête Sèche, sévère et peu fréquenté, est l’un des coins les plus authentiques de la Valpelline : du refuge, on monte à la Fenêtre de Durand sur le Tour des Combins, aux lacs glaciaires du vallon et aux sommets frontaliers du Valais. Cadre idéal pour qui cherche silence et faune.",
+    "description_de": "Berghütte auf 2391 m im Valpelline-Tal, Aostatal. Schlafplätze: 86. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nDas strenge, wenig besuchte Crête-Sèche-Tal ist einer der authentischsten Winkel der Valpelline: Von der Hütte steigt man zur Fenêtre de Durand an der Tour des Combins, zu den Gletscherseen des Tals und zu den Grenzgipfeln des Wallis. Ideal für alle, die Stille und Wildtiere suchen.",
     "images": [
       {
         "src": "/refuges/rifugio-crete-seche.jpeg",
@@ -3777,7 +3825,11 @@
       }
     ],
     "trails": [],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "Nato come ricovero per alpinisti diretti alle cime della testata — Mont Gelé, Becca Crétaz e le punte di confine — il rifugio è stato rinnovato e ampliato nel tempo, mantenendo il carattere di presidio semplice e familiare del vallone. La Fenêtre de Durand, poco sopra, è da secoli passaggio di pastori e contrabbandieri fra Valpelline e Val de Bagnes.",
+    "history_en": "Born as a shelter for climbers bound for the head summits — Mont Gelé, Becca Crétaz and the border points — the hut has been renewed and enlarged over time while keeping its character as the valley’s simple, family-run outpost. The Fenêtre de Durand just above has for centuries been the shepherds’ and smugglers’ passage between the Valpelline and the Val de Bagnes.",
+    "history_fr": "Né comme abri pour les alpinistes des sommets du fond — Mont Gelé, Becca Crétaz et pointes frontalières — le refuge a été rénové et agrandi au fil du temps, en gardant son caractère de poste simple et familial du vallon. La Fenêtre de Durand, juste au-dessus, est depuis des siècles le passage des bergers et contrebandiers entre Valpelline et val de Bagnes.",
+    "history_de": "Als Unterkunft für Bergsteiger zu den Gipfeln des Talschlusses — Mont Gelé, Becca Crétaz und den Grenzspitzen — entstanden, wurde die Hütte über die Zeit erneuert und erweitert und bewahrt ihren Charakter als einfacher, familiärer Stützpunkt des Tals. Die Fenêtre de Durand gleich darüber ist seit Jahrhunderten der Übergang von Hirten und Schmugglern zwischen Valpelline und Val de Bagnes."
   },
   {
     "slug": "rifugio-guide-d-ayas",
@@ -3799,10 +3851,10 @@
     "phone": "+39 0125 308083",
     "email": null,
     "website": "http://guidechampoluc.com/il-rifugio/",
-    "description_it": "Rifugio alpino a 3388 m in Val d'Ayas, Valle d'Aosta. Posti letto: 85. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.",
-    "description_en": "Alpine refuge at 3388 m in Ayas Valley, Aosta Valley. Beds: 85. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Refuge alpin à 3388 m dans Vallée d'Ayas, Vallée d'Aoste. Couchages : 85. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Berghütte auf 3388 m im Ayas-Tal, Aostatal. Schlafplätze: 85. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Rifugio alpino a 3388 m in Val d'Ayas, Valle d'Aosta. Posti letto: 85. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.\nA 3.388 metri sul plateau roccioso di Lambronecca, sopra il ghiacciaio di Verra, è il rifugio d’alta quota del versante di Ayas: base per Castore, Polluce, la traversata dei Lyskamm e il Breithorn. La salita escursionistica termina al Mezzalama; il tratto finale corre su pietraie e nevai ed è consigliato ad alpinisti o escursionisti molto esperti.",
+    "description_en": "Alpine refuge at 3388 m in Ayas Valley, Aosta Valley. Beds: 85. Data from OpenStreetMap; verify opening before setting out.\nAt 3,388 metres on the rocky Lambronecca shoulder above the Verra glacier, this is the high hut of the Ayas side: the base for Castor, Pollux, the Lyskamm traverse and the Breithorn. The hiking approach ends at the Mezzalama; the final stretch runs over scree and snowfields and is best left to mountaineers or very experienced hikers.",
+    "description_fr": "Refuge alpin à 3388 m dans Vallée d'Ayas, Vallée d'Aoste. Couchages : 85. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nÀ 3 388 mètres sur l’épaule rocheuse de Lambronecca, au-dessus du glacier de Verra, c’est le refuge d’altitude du versant d’Ayas : base pour Castor, Pollux, la traversée des Lyskamm et le Breithorn. L’approche pédestre s’arrête au Mezzalama ; la section finale court sur pierriers et névés, réservée aux alpinistes ou randonneurs très aguerris.",
+    "description_de": "Berghütte auf 3388 m im Ayas-Tal, Aostatal. Schlafplätze: 85. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nAuf 3.388 Metern auf der Felsschulter von Lambronecca über dem Verra-Gletscher ist dies die Höhenhütte der Ayas-Seite: Basis für Castor, Pollux, die Lyskamm-Überschreitung und das Breithorn. Der Wanderzustieg endet an der Mezzalama-Hütte; das letzte Stück verläuft über Schutt und Firn und gehört Alpinisten oder sehr erfahrenen Geherinnen.",
     "images": [
       {
         "src": "/refuges/rifugio-guide-d-ayas.jpg",
@@ -3817,7 +3869,11 @@
     "trails": [
       "07-s28"
     ],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "Costruito dalla Società Guide di Ayas e inaugurato alla fine del Novecento per affiancare lo storico rifugio Mezzalama (1936), porta in quota la tradizione delle guide della valle, attive da generazioni sui Quattromila del Rosa. La gestione diretta delle guide ne fa anche una scuola d’alta montagna a cielo aperto.",
+    "history_en": "Built by the Ayas Guides Society and inaugurated at the end of the 20th century to complement the historic Mezzalama hut (1936), it carries the valley guides’ tradition to altitude — guides active for generations on the Monte Rosa four-thousanders. Run directly by the guides, it doubles as an open-air high-mountain school.",
+    "history_fr": "Construit par la Société des Guides d’Ayas et inauguré à la fin du XXe siècle pour épauler l’historique refuge Mezzalama (1936), il porte en altitude la tradition des guides de la vallée, actives depuis des générations sur les 4000 du Rose. Géré directement par les guides, c’est aussi une école de haute montagne à ciel ouvert.",
+    "history_de": "Von der Bergführergesellschaft von Ayas erbaut und Ende des 20. Jahrhunderts eröffnet, um die historische Mezzalama-Hütte (1936) zu ergänzen, trägt sie die Tradition der Talführer in die Höhe — seit Generationen auf den Viertausendern des Monte Rosa aktiv. Direkt von den Führern geführt, ist sie zugleich eine Hochgebirgsschule unter freiem Himmel."
   },
   {
     "slug": "rifugio-federico-chabod",
@@ -3839,10 +3895,10 @@
     "phone": "+39 0165 95574",
     "email": "info@rifugiochabod.com",
     "website": "https://www.rifugiochabod.com/",
-    "description_it": "Rifugio alpino a 2710 m in Valsavarenche, Valle d'Aosta. Posti letto: 85. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.",
-    "description_en": "Alpine refuge at 2710 m in Valsavarenche, Aosta Valley. Beds: 85. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Refuge alpin à 2710 m dans Valsavarenche, Vallée d'Aoste. Couchages : 85. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Berghütte auf 2710 m im Valsavarenche, Aostatal. Schlafplätze: 85. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Rifugio alpino a 2710 m in Valsavarenche, Valle d'Aosta. Posti letto: 85. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.\nPosato sui pascoli alti del vallone di Lavassey, è la partenza della via normale ovest al Gran Paradiso, che si ricongiunge a quella classica sotto la vetta: molte cordate salgono dal Chabod e scendono al Vittorio Emanuele, concatenando i due rifugi in un anello d’alta quota. Dalla terrazza, la parete nord-ovest del Gran Paradiso incombe con i suoi seracchi.",
+    "description_en": "Alpine refuge at 2710 m in Valsavarenche, Aosta Valley. Beds: 85. Data from OpenStreetMap; verify opening before setting out.\nSet on the high pastures of the Lavassey valley, it is the start of the west normal route up the Gran Paradiso, which rejoins the classic route below the summit: many parties climb from the Chabod and descend to the Vittorio Emanuele, linking the two huts in a high-level loop. From the terrace, the north-west face of the Gran Paradiso looms with its seracs.",
+    "description_fr": "Refuge alpin à 2710 m dans Valsavarenche, Vallée d'Aoste. Couchages : 85. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nPosé sur les hauts pâturages du vallon de Lavassey, c’est le départ de la voie normale ouest du Grand-Paradis, qui rejoint la voie classique sous le sommet : beaucoup de cordées montent du Chabod et descendent au Vittorio Emanuele, enchaînant les deux refuges en boucle d’altitude. De la terrasse, la face nord-ouest du Grand-Paradis domine avec ses séracs.",
+    "description_de": "Berghütte auf 2710 m im Valsavarenche, Aostatal. Schlafplätze: 85. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nAuf den Hochweiden des Lavassey-Tals gelegen, ist sie der Ausgangspunkt des westlichen Normalwegs auf den Gran Paradiso, der unter dem Gipfel auf die klassische Route trifft: Viele Seilschaften steigen von der Chabod-Hütte auf und zur Vittorio-Emanuele-Hütte ab und verbinden beide zu einer Höhenrunde. Von der Terrasse drohen die Séracs der Nordwestwand des Gran Paradiso.",
     "images": [
       {
         "src": "/refuges/rifugio-federico-chabod.jpg",
@@ -3860,7 +3916,11 @@
       "70-s22",
       "70-s23"
     ],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "Il rifugio, aperto negli anni Ottanta del Novecento, è dedicato a Federico Chabod (1901–1960), storico di fama europea, partigiano e primo presidente della Valle d’Aosta autonoma: una figura che unisce come poche la cultura e la montagna valdostane. La struttura è stata ampliata e ammodernata negli anni Duemila.",
+    "history_en": "The hut, opened in the 1980s, is dedicated to Federico Chabod (1901–1960), a historian of European stature, partisan and first president of the autonomous Aosta Valley region: few figures so unite Valdostan culture and mountains. The building was enlarged and modernised in the 2000s.",
+    "history_fr": "Le refuge, ouvert dans les années 1980, est dédié à Federico Chabod (1901-1960), historien de stature européenne, partisan et premier président de la Vallée d’Aoste autonome : peu de figures unissent autant la culture et la montagne valdôtaines. Le bâtiment a été agrandi et modernisé dans les années 2000.",
+    "history_de": "Die in den 1980er-Jahren eröffnete Hütte ist Federico Chabod (1901–1960) gewidmet, Historiker von europäischem Rang, Partisan und erster Präsident der autonomen Region Aostatal: Kaum eine Gestalt verbindet Kultur und Berge des Aostatals so sehr. Der Bau wurde in den 2000er-Jahren erweitert und modernisiert."
   },
   {
     "slug": "rifugio-mario-bezzi",
@@ -3882,10 +3942,10 @@
     "phone": "+39 0165 97129",
     "email": "rifugio@rifugiobezzi.com",
     "website": "https://www.rifugiobezzi.com/",
-    "description_it": "Rifugio alpino a 2283 m in Valgrisenche, Valle d'Aosta. Posti letto: 82. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.",
-    "description_en": "Alpine refuge at 2283 m in Valgrisenche, Aosta Valley. Beds: 82. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Refuge alpin à 2283 m dans Valgrisenche, Vallée d'Aoste. Couchages : 82. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Berghütte auf 2283 m im Valgrisenche, Aostatal. Schlafplätze: 82. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Rifugio alpino a 2283 m in Valgrisenche, Valle d'Aosta. Posti letto: 82. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.\nIn fondo alla Valgrisenche, dove la valle si fa stretta e selvaggia, il Bezzi è la porta dei ghiacciai di Gliairetta e dell’Ormelune: meta in sé per la bella mulattiera lungo la Dora, ma anche tappa dell’Alta Via 2 e base per scialpinismo di primavera. La cucina casalinga è rinomata fra i frequentatori della valle.",
+    "description_en": "Alpine refuge at 2283 m in Valgrisenche, Aosta Valley. Beds: 82. Data from OpenStreetMap; verify opening before setting out.\nAt the head of the Valgrisenche, where the valley turns narrow and wild, the Bezzi is the gateway to the Gliairetta and Ormelune glaciers: a destination in itself for the fine mule track along the Dora, but also an Alta Via 2 stage and a spring ski-touring base. Its home cooking is renowned among the valley’s regulars.",
+    "description_fr": "Refuge alpin à 2283 m dans Valgrisenche, Vallée d'Aoste. Couchages : 82. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nAu fond de la Valgrisenche, là où la vallée devient étroite et sauvage, le Bezzi est la porte des glaciers de Gliairetta et de l’Ormelune : but en soi pour la belle muletière le long de la Doire, mais aussi étape de la Haute Route n° 2 et base de ski de randonnée au printemps. Sa cuisine maison est réputée parmi les habitués de la vallée.",
+    "description_de": "Berghütte auf 2283 m im Valgrisenche, Aostatal. Schlafplätze: 82. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nAm Talschluss des Valgrisenche, wo das Tal eng und wild wird, ist die Bezzi-Hütte das Tor zu den Gletschern von Gliairetta und Ormelune: ein Ziel für sich dank des schönen Saumpfads entlang der Dora, zugleich Etappe des Höhenwegs 2 und Frühjahrs-Skitourenbasis. Die Hausmannskost ist unter den Stammgästen des Tals berühmt.",
     "images": [
       {
         "src": "/refuges/rifugio-mario-bezzi.jpg",
@@ -3904,7 +3964,11 @@
       "68-s19",
       "68-s20"
     ],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "Il rifugio, sorto fra le due guerre e più volte ampliato, è intitolato a Mario Bezzi, alpinista milanese legato a queste montagne. La sua posizione all’alpe Vaudet ne ha fatto per generazioni il punto d’appoggio naturale per le traversate verso la Val di Rhêmes e per le cime di confine con la Tarentaise.",
+    "history_en": "The hut, built between the wars and enlarged several times, is named after Mario Bezzi, a Milanese mountaineer devoted to these mountains. Its position at the Vaudet alp has made it for generations the natural support point for crossings to the Rhêmes valley and for the border summits with the Tarentaise.",
+    "history_fr": "Le refuge, né entre les deux guerres et plusieurs fois agrandi, est dédié à Mario Bezzi, alpiniste milanais attaché à ces montagnes. Sa position à l’alpage de Vaudet en a fait, pour des générations, le point d’appui naturel des traversées vers le val de Rhêmes et des sommets frontaliers de la Tarentaise.",
+    "history_de": "Die zwischen den Kriegen erbaute und mehrfach erweiterte Hütte ist Mario Bezzi gewidmet, einem Mailänder Bergsteiger, der diesen Bergen verbunden war. Ihre Lage an der Alp Vaudet machte sie über Generationen zum natürlichen Stützpunkt für Übergänge ins Rhêmes-Tal und zu den Grenzgipfeln der Tarentaise."
   },
   {
     "slug": "rifugio-capanna-regina-margherita",
@@ -3926,10 +3990,10 @@
     "phone": "+39 0163 91039",
     "email": null,
     "website": "https://www.rifugimonterosa.it/",
-    "description_it": "Rifugio alpino a 4554 m in Valle del Lys, Valle d'Aosta. Posti letto: 80. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.",
-    "description_en": "Alpine refuge at 4554 m in Lys Valley, Aosta Valley. Beds: 80. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Refuge alpin à 4554 m dans Vallée du Lys, Vallée d'Aoste. Couchages : 80. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Berghütte auf 4554 m im Lys-Tal, Aostatal. Schlafplätze: 80. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Rifugio alpino a 4554 m in Valle del Lys, Valle d'Aosta. Posti letto: 80. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.\nDormire qui significa passare la notte sul punto abitato più alto d’Europa: la capanna poggia sulla vetta della Punta Gnifetti e ospita, oltre agli alpinisti diretti ai Quattromila del Rosa, laboratori scientifici dove si studiano medicina d’alta quota, clima e fisiologia. L’accesso è riservato ad alpinisti con esperienza di ghiacciaio, in cordata dalla Capanna Gnifetti.",
+    "description_en": "Alpine refuge at 4554 m in Lys Valley, Aosta Valley. Beds: 80. Data from OpenStreetMap; verify opening before setting out.\nSleeping here means spending the night at the highest inhabited point in Europe: the hut sits on the very summit of Punta Gnifetti and hosts, besides climbers bound for the Monte Rosa four-thousanders, scientific laboratories studying high-altitude medicine, climate and physiology. Access is for experienced glacier mountaineers only, roped up from the Gnifetti hut.",
+    "description_fr": "Refuge alpin à 4554 m dans Vallée du Lys, Vallée d'Aoste. Couchages : 80. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nDormir ici, c’est passer la nuit au point habité le plus haut d’Europe : la cabane repose sur le sommet même de la Punta Gnifetti et accueille, outre les alpinistes en route vers les 4000 du Rose, des laboratoires scientifiques où l’on étudie médecine d’altitude, climat et physiologie. Accès réservé aux alpinistes aguerris, encordés depuis la cabane Gnifetti.",
+    "description_de": "Berghütte auf 4554 m im Lys-Tal, Aostatal. Schlafplätze: 80. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nHier zu schlafen heißt, die Nacht am höchsten bewohnten Punkt Europas zu verbringen: Die Hütte steht direkt auf dem Gipfel der Punta Gnifetti und beherbergt neben Alpinisten auf dem Weg zu den Monte-Rosa-Viertausendern auch Labore für Höhenmedizin, Klima- und Physiologieforschung. Der Zustieg ist erfahrenen Gletschergängern vorbehalten, angeseilt von der Gnifetti-Hütte.",
     "images": [
       {
         "src": "/refuges/rifugio-capanna-regina-margherita.jpg",
@@ -3942,7 +4006,11 @@
       }
     ],
     "trails": [],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "Inaugurata il 18 agosto 1893 per volontà del Club Alpino Italiano sulla vetta della Punta Gnifetti (4.554 m), fu battezzata in onore della regina Margherita di Savoia, che salì personalmente alla capanna pochi giorni dopo l’apertura pernottandovi — episodio rimasto celebre nella storia dell’alpinismo. Fin dall’origine fu concepita anche come osservatorio scientifico d’alta quota. L’edificio attuale, completamente ricostruito e inaugurato nel 1980, è gestito dal CAI di Varallo e continua la doppia vocazione alpinistica e scientifica.",
+    "history_en": "Inaugurated on 18 August 1893 by the Italian Alpine Club on the summit of Punta Gnifetti (4,554 m), it was named in honour of Queen Margherita of Savoy, who personally climbed to the hut days after its opening and spent the night — an episode that became famous in mountaineering history. From the start it was also conceived as a high-altitude scientific observatory. The present building, completely rebuilt and inaugurated in 1980, is run by the CAI of Varallo and continues this twin alpine and scientific vocation.",
+    "history_fr": "Inaugurée le 18 août 1893 par le Club Alpin Italien au sommet de la Punta Gnifetti (4 554 m), elle fut baptisée en l’honneur de la reine Marguerite de Savoie, qui monta elle-même à la cabane quelques jours après l’ouverture et y passa la nuit — épisode resté célèbre dans l’histoire de l’alpinisme. Dès l’origine, elle fut aussi conçue comme observatoire scientifique d’altitude. Le bâtiment actuel, entièrement reconstruit et inauguré en 1980, est géré par le CAI de Varallo et poursuit cette double vocation alpine et scientifique.",
+    "history_de": "Am 18. August 1893 vom Italienischen Alpenverein auf dem Gipfel der Punta Gnifetti (4.554 m) eingeweiht, wurde sie zu Ehren von Königin Margherita von Savoyen benannt, die wenige Tage nach der Eröffnung selbst zur Hütte aufstieg und dort übernachtete — eine berühmte Episode der Alpingeschichte. Von Anfang an war sie auch als wissenschaftliches Höhenobservatorium gedacht. Der heutige, 1980 vollständig neu errichtete Bau wird vom CAI Varallo geführt und setzt die doppelte alpine und wissenschaftliche Berufung fort."
   },
   {
     "slug": "rifugio-elisabetta-soldini-montanaro",
@@ -4087,10 +4155,10 @@
     "phone": "+39 0165767971",
     "email": null,
     "website": "https://www.caitorino.it/rifugi/nacamuli/",
-    "description_it": "Rifugio alpino a 2818 m in Valpelline, Valle d'Aosta. Posti letto: 70. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.",
-    "description_en": "Alpine refuge at 2818 m in Valpelline, Aosta Valley. Beds: 70. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Refuge alpin à 2818 m dans Valpelline, Vallée d'Aoste. Couchages : 70. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Berghütte auf 2818 m im Valpelline-Tal, Aostatal. Schlafplätze: 70. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Rifugio alpino a 2818 m in Valpelline, Valle d'Aosta. Posti letto: 70. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.\nAggrappato ai pendii sopra la comba d’Oren, è l’ultimo presidio italiano sulla storica via del Col Collon verso Arolla: base per la traversata glaciale del Tour del Cervino, per le cime della Becca d’Oren e per gli scialpinisti della primavera. La vista sul lago di Place Moulin, mille metri più in basso, è di quelle che non si dimenticano.",
+    "description_en": "Alpine refuge at 2818 m in Valpelline, Aosta Valley. Beds: 70. Data from OpenStreetMap; verify opening before setting out.\nClinging to the slopes above the Oren combe, it is the last Italian outpost on the historic Col Collon route to Arolla: the base for the Tour of the Matterhorn’s glacier crossing, for the Becca d’Oren summits and for spring ski tourers. The view of the Place Moulin reservoir, a thousand metres below, is the unforgettable kind.",
+    "description_fr": "Refuge alpin à 2818 m dans Valpelline, Vallée d'Aoste. Couchages : 70. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nAccroché aux pentes au-dessus de la combe d’Oren, c’est le dernier poste italien sur l’historique voie du col Collon vers Arolla : base de la traversée glaciaire du Tour du Cervin, des sommets de la Becca d’Oren et des skieurs-alpinistes du printemps. La vue sur le lac de Place Moulin, mille mètres plus bas, est de celles qu’on n’oublie pas.",
+    "description_de": "Berghütte auf 2818 m im Valpelline-Tal, Aostatal. Schlafplätze: 70. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nAn die Hänge über der Oren-Mulde geklammert, ist sie der letzte italienische Stützpunkt an der historischen Route über den Col Collon nach Arolla: Basis für die Gletscherquerung der Matterhorn-Tour, die Gipfel der Becca d’Oren und Frühjahrs-Skitourengeher. Der Blick auf den Place-Moulin-See, tausend Meter tiefer, gehört zu den unvergesslichen.",
     "images": [
       {
         "src": "/refuges/rifugio-nacamuli-al-col-collon.jpg",
@@ -4105,7 +4173,11 @@
     "trails": [
       "10-s11"
     ],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "Il rifugio, costruito negli anni Trenta e rinnovato nel tempo, ricorda Aldo Nacamuli, alpinista cui fu dedicato dalla famiglia. Sorge lungo uno dei valichi più antichi delle Alpi occidentali: dal Col Collon passavano già nel Medioevo uomini e merci fra la Valpelline e il Vallese, e i ritrovamenti sul ghiacciaio ne testimoniano la lunghissima frequentazione.",
+    "history_en": "The hut, built in the 1930s and renewed over time, remembers Aldo Nacamuli, a mountaineer to whom it was dedicated by his family. It stands on one of the oldest crossings of the western Alps: people and goods were already moving over the Col Collon between the Valpelline and Valais in the Middle Ages, and finds on the glacier testify to its very long use.",
+    "history_fr": "Le refuge, construit dans les années 1930 et rénové au fil du temps, rappelle Aldo Nacamuli, alpiniste auquel sa famille le dédia. Il s’élève sur l’un des plus anciens passages des Alpes occidentales : dès le Moyen Âge, hommes et marchandises franchissaient le col Collon entre Valpelline et Valais, comme en témoignent les objets retrouvés sur le glacier.",
+    "history_de": "Die in den 1930er-Jahren erbaute und mehrfach erneuerte Hütte erinnert an Aldo Nacamuli, einen Bergsteiger, dem die Familie sie widmete. Sie steht an einem der ältesten Übergänge der Westalpen: Schon im Mittelalter zogen Menschen und Waren über den Col Collon zwischen Valpelline und Wallis, wie Funde auf dem Gletscher belegen."
   },
   {
     "slug": "rifugio-gian-federico-benevolo",
@@ -4131,10 +4203,10 @@
     "phone": "+39 345 4238692",
     "email": "rifugiobenevolo@gmail.com",
     "website": "https://www.rifugiobenevolo.com/",
-    "description_it": "Situato a 2.287 metri alla testata della Val di Rhêmes, il Rifugio Benevolo è un'istituzione del Parco Nazionale del Gran Paradiso. Inaugurato nel 1930 e dedicato all'alpinista Gian Federico Benevolo, offre una vista impareggiabile sulla Granta Parey. Facilmente raggiungibile da Thumel con una camminata adatta alle famiglie, è una meta rinomata sia per l'escursionismo estivo che per lo scialpinismo primaverile. La struttura, ristrutturata nel 2013, conserva il calore dell'accoglienza alpina con ottima cucina locale.",
-    "description_en": "Located at 2,287 meters at the head of the Rhêmes Valley, the Benevolo Refuge is a landmark of the Gran Paradiso National Park. Opened in 1930 and dedicated to mountaineer Gian Federico Benevolo, it offers an unparalleled view of Granta Parey. Easily accessible from Thumel with a family-friendly hike, it is a renowned destination for both summer hiking and spring ski-mountaineering. The building, renovated in 2013, maintains its warm alpine hospitality and serves excellent local cuisine.",
-    "description_fr": "Situé à 2 287 mètres au fond du Val de Rhêmes, le Refuge Benevolo est une référence du Parc National du Grand Paradis. Inauguré en 1930 et dédié à l'alpiniste Gian Federico Benevolo, il offre une vue imprenable sur la Granta Parey. Facilement accessible depuis Thumel par une randonnée adaptée aux familles, c'est une destination prisée aussi bien pour la randonnée estivale que per le ski-alpinisme printanier. La structure, rénovée en 2013, conserve la chaleur de l'accueil alpin et propose une excellente cuisine locale.",
-    "description_de": "Die auf 2.287 Metern am Ende des Rhêmes-Tals gelegene Benevolo-Hütte ist ein Wahrzeichen des Nationalparks Gran Paradiso. Die 1930 eingeweihte und dem Bergsteiger Gian Federico Benevolo gewidmete Hütte bietet einen unvergleichlichen Blick auf die Granta Parey. Von Thumel aus über eine familienfreundliche Wanderung leicht erreichbar, ist sie ein beliebtes Ziel sowohl für Sommerwanderungen als auch für Skitouren im Frühjahr. Das 2013 renovierte Gebäude bewahrt seine herzliche alpine Gastfreundschaft und serviert exzellente lokale Küche.",
+    "description_it": "Situato a 2.287 metri alla testata della Val di Rhêmes, il Rifugio Benevolo è un'istituzione del Parco Nazionale del Gran Paradiso. Inaugurato nel 1930 e dedicato all'alpinista Gian Federico Benevolo, offre una vista impareggiabile sulla Granta Parey. Facilmente raggiungibile da Thumel con una camminata adatta alle famiglie, è una meta rinomata sia per l'escursionismo estivo che per lo scialpinismo primaverile. La struttura, ristrutturata nel 2013, conserva il calore dell'accoglienza alpina con ottima cucina locale.\nL’alta Val di Rhêmes che circonda il rifugio è dominata dalla parete calcarea della Granta Parey, la montagna-simbolo della valle: i sentieri verso i laghi Goletta, il ghiacciaio di Lavassey e i colli di confine con la Francia partono tutti da qui. Tappa amata anche dagli scialpinisti in primavera.",
+    "description_en": "Located at 2,287 meters at the head of the Rhêmes Valley, the Benevolo Refuge is a landmark of the Gran Paradiso National Park. Opened in 1930 and dedicated to mountaineer Gian Federico Benevolo, it offers an unparalleled view of Granta Parey. Easily accessible from Thumel with a family-friendly hike, it is a renowned destination for both summer hiking and spring ski-mountaineering. The building, renovated in 2013, maintains its warm alpine hospitality and serves excellent local cuisine.\nThe upper Rhêmes valley around the hut is dominated by the limestone wall of the Granta Parey, the valley’s symbol mountain: the trails to the Goletta lakes, the Lavassey glacier and the border cols with France all start here. A favourite stop for ski tourers in spring as well.",
+    "description_fr": "Situé à 2 287 mètres au fond du Val de Rhêmes, le Refuge Benevolo est une référence du Parc National du Grand Paradis. Inauguré en 1930 et dédié à l'alpiniste Gian Federico Benevolo, il offre une vue imprenable sur la Granta Parey. Facilement accessible depuis Thumel par une randonnée adaptée aux familles, c'est une destination prisée aussi bien pour la randonnée estivale que per le ski-alpinisme printanier. La structure, rénovée en 2013, conserve la chaleur de l'accueil alpin et propose une excellente cuisine locale.\nLe haut val de Rhêmes qui entoure le refuge est dominé par la paroi calcaire de la Granta Parey, montagne symbole de la vallée : les sentiers vers les lacs de la Goletta, le glacier de Lavassey et les cols frontaliers avec la France partent tous d’ici. Étape aimée aussi des skieurs-alpinistes au printemps.",
+    "description_de": "Die auf 2.287 Metern am Ende des Rhêmes-Tals gelegene Benevolo-Hütte ist ein Wahrzeichen des Nationalparks Gran Paradiso. Die 1930 eingeweihte und dem Bergsteiger Gian Federico Benevolo gewidmete Hütte bietet einen unvergleichlichen Blick auf die Granta Parey. Von Thumel aus über eine familienfreundliche Wanderung leicht erreichbar, ist sie ein beliebtes Ziel sowohl für Sommerwanderungen als auch für Skitouren im Frühjahr. Das 2013 renovierte Gebäude bewahrt seine herzliche alpine Gastfreundschaft und serviert exzellente lokale Küche.\nDas obere Rhêmes-Tal um die Hütte wird von der Kalkwand der Granta Parey beherrscht, dem Symbolberg des Tals: Die Wege zu den Goletta-Seen, zum Lavassey-Gletscher und zu den Grenzpässen nach Frankreich beginnen alle hier. Im Frühjahr auch bei Skitourengehern beliebt.",
     "images": [
       {
         "src": "/refuges/rifugio-gian-federico-benevolo.JPG",
@@ -4152,7 +4224,11 @@
       "55-s18",
       "55-s17"
     ],
-    "source": "lovevda.it · CAI Torino · rifugiobenevolo.com"
+    "source": "lovevda.it · CAI Torino · rifugiobenevolo.com",
+    "history_it": "Il rifugio ricorda Gian Federico Benevolo, giovane alpinista cui la struttura fu dedicata dalla famiglia. Nato come piccolo ricovero e progressivamente ampliato fino all’aspetto attuale, è da decenni il presidio escursionistico e alpinistico dell’alta Val di Rhêmes, dentro i confini del Parco e della sua area protetta.",
+    "history_en": "The hut remembers Gian Federico Benevolo, a young mountaineer to whom it was dedicated by his family. Born as a small shelter and progressively enlarged to its present form, it has for decades been the hiking and climbing outpost of the upper Rhêmes valley, within the Park’s protected area.",
+    "history_fr": "Le refuge rappelle Gian Federico Benevolo, jeune alpiniste auquel la famille dédia la structure. Né comme petit abri puis progressivement agrandi jusqu’à son aspect actuel, il est depuis des décennies le poste pédestre et alpin du haut val de Rhêmes, dans l’aire protégée du Parc.",
+    "history_de": "Die Hütte erinnert an Gian Federico Benevolo, einen jungen Bergsteiger, dem die Familie den Bau widmete. Als kleine Schutzhütte entstanden und schrittweise zur heutigen Gestalt erweitert, ist sie seit Jahrzehnten der Wander- und Bergstützpunkt des oberen Rhêmes-Tals im Schutzgebiet des Parks."
   },
   {
     "slug": "rifugio-pontese",
@@ -4212,10 +4288,10 @@
     "phone": "+33 4 50 53 57 10",
     "email": null,
     "website": "https://refugedesgrandsmulets.ffcam.fr/",
-    "description_it": "Rifugio alpino a 3051 m in Val Veny, Valle d'Aosta. Posti letto: 68. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.",
-    "description_en": "Alpine refuge at 3051 m in Val Veny, Aosta Valley. Beds: 68. Data from OpenStreetMap; verify opening before setting out.",
-    "description_fr": "Refuge alpin à 3051 m dans Val Veny, Vallée d'Aoste. Couchages : 68. Données OpenStreetMap ; vérifier l'ouverture avant le départ.",
-    "description_de": "Berghütte auf 3051 m im Val Veny, Aostatal. Schlafplätze: 68. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.",
+    "description_it": "Rifugio alpino a 3051 m in Val Veny, Valle d'Aosta. Posti letto: 68. Dati da OpenStreetMap; periodo di apertura e servizi da verificare.\nArroccato su un isolotto roccioso che emerge dai ghiacciai dei Bossons e di Taconnaz, è uno dei luoghi più scenografici del massiccio: di notte le luci di Chamonix brillano duemila metri più in basso. Oggi è frequentato soprattutto in primavera dagli scialpinisti diretti al Monte Bianco per l’itinerario storico.",
+    "description_en": "Alpine refuge at 3051 m in Val Veny, Aosta Valley. Beds: 68. Data from OpenStreetMap; verify opening before setting out.\nPerched on a rocky islet rising from the Bossons and Taconnaz glaciers, it is one of the most scenic spots in the massif: at night the lights of Chamonix glitter two thousand metres below. Today it is busiest in spring with ski mountaineers bound for Mont Blanc by the historic route.",
+    "description_fr": "Refuge alpin à 3051 m dans Val Veny, Vallée d'Aoste. Couchages : 68. Données OpenStreetMap ; vérifier l'ouverture avant le départ.\nPerché sur un îlot rocheux émergeant des glaciers des Bossons et de Taconnaz, c’est l’un des sites les plus spectaculaires du massif : la nuit, les lumières de Chamonix scintillent deux mille mètres plus bas. Il vit surtout au printemps, avec les skieurs-alpinistes en route vers le Mont-Blanc par l’itinéraire historique.",
+    "description_de": "Berghütte auf 3051 m im Val Veny, Aostatal. Schlafplätze: 68. Daten aus OpenStreetMap; Öffnung vor dem Aufbruch prüfen.\nAuf einer Felsinsel zwischen den Gletschern von Bossons und Taconnaz gelegen, ist sie einer der spektakulärsten Orte des Massivs: Nachts glitzern die Lichter von Chamonix zweitausend Meter tiefer. Heute ist sie vor allem im Frühjahr belebt, wenn Skibergsteiger auf der historischen Route zum Mont Blanc ziehen.",
     "images": [
       {
         "src": "/refuges/refuge-des-grands-mulets.jpg",
@@ -4228,7 +4304,11 @@
       }
     ],
     "trails": [],
-    "source": "OpenStreetMap contributors"
+    "source": "OpenStreetMap contributors",
+    "history_it": "I Grands Mulets sono legati alla nascita stessa dell’alpinismo: su questa via passò la prima ascensione del Monte Bianco (1786) e qui fu costruito nel 1853 il primo ricovero, fra i più antichi delle Alpi. Il rifugio attuale della FFCAM, su pilastri sopra la roccia, continua una storia di accoglienza lunga oltre un secolo e mezzo.",
+    "history_en": "The Grands Mulets are tied to the very birth of mountaineering: the first ascent of Mont Blanc (1786) passed this way, and the first shelter — among the oldest in the Alps — was built here in 1853. The current FFCAM hut, on pillars above the rock, continues a story of hospitality more than a century and a half long.",
+    "history_fr": "Les Grands Mulets sont liés à la naissance même de l’alpinisme : la première ascension du Mont-Blanc (1786) passa par ici, et le premier abri — parmi les plus anciens des Alpes — y fut construit en 1853. Le refuge actuel de la FFCAM, sur pilotis au-dessus du rocher, poursuit une histoire d’accueil de plus d’un siècle et demi.",
+    "history_de": "Die Grands Mulets sind mit der Geburt des Alpinismus selbst verbunden: Über diesen Weg führte die Erstbesteigung des Mont Blanc (1786), und 1853 entstand hier eine der ältesten Schutzhütten der Alpen. Die heutige FFCAM-Hütte auf Stelzen über dem Fels setzt eine über anderthalb Jahrhunderte lange Geschichte der Gastfreundschaft fort."
   },
   {
     "slug": "refuge-de-l-envers-des-aiguilles",

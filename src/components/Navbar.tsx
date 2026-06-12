@@ -62,7 +62,7 @@ export default function Navbar({ locale }: { locale: string }) {
             <Image
               src="/logo-mark.webp"
               alt=""
-              width={36}
+              width={61}
               height={36}
               priority
               className="h-9 w-auto"

@@ -1,0 +1,25 @@
+feat: foto reali per ogni tappa, contenuti editoriali approfonditi, mappe tour complete, schede rifugi ricche
+
+Tour:
+- 53 foto uniche, reali e geolocalizzate da Wikimedia Commons (una per
+  tappa, legata al percorso, con credito e licenza); filtri anti-foto
+  fuori tema (satellitari, hotel, panorami 360) e dedup tra tappe
+- descrizioni delle 53 tappe ampliate con un paragrafo editoriale in
+  4 lingue (dettagli reali di percorso, storia, acqua, trasporti)
+- mappa del tour: maxBounds estesi all'arco alpino NW (prima le tappe
+  svizzere/francesi venivano tagliate) e traccia piu' densa (140 pt/tappa)
+
+Rifugi:
+- minimappa con SOLO il punto del rifugio (tolte le tracce dei sentieri)
+- nuova sezione "Vette vicine" con link alle pagine montagne
+  (mappatura geografica valle -> vette, dataset Ambiente)
+- 24 schede principali arricchite: descrizione estesa + storia
+  documentata in 4 lingue (Margherita 1893, ospizio GSB ~1050,
+  V.Emanuele II 1884, Monte Rosa Hutte 2009, Gervasutti 2011, ecc.)
+- pagina rifugio: descrizioni e blocchi multi-paragrafo
+
+UI:
+- logo navbar rigenerato: solo emblema montagne (il vecchio mark aveva
+  la scritta tagliata a meta' dentro il file), dimensioni corrette
+
+Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
