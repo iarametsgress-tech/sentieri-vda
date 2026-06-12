@@ -1,0 +1,74 @@
+[
+ {
+  "source": "/:locale/sentieri/tour-mont-blanc-tappa-4-rifugio-elena-col-seigne",
+  "destination": "/:locale/tour/tmb"
+ },
+ {
+  "source": "/:locale/sentieri/tour-monte-rosa-tappa-2-rifugio-gabiet-colle-teodulo",
+  "destination": "/:locale/tour/monte-rosa"
+ },
+ {
+  "source": "/:locale/sentieri/tour-monte-rosa-tappa-3-valtournenche-champoluc",
+  "destination": "/:locale/tour/monte-rosa"
+ },
+ {
+  "source": "/:locale/sentieri/tour-monte-rosa-tappa-4-breuil-gressoney",
+  "destination": "/:locale/tour/monte-rosa"
+ },
+ {
+  "source": "/:locale/sentieri/tour-cervino-tappa-1-breuil-rifugio-duca-abruzzi",
+  "destination": "/:locale/tour/cervino"
+ },
+ {
+  "source": "/:locale/sentieri/tour-cervino-tappa-2-rifugio-duca-orionde",
+  "destination": "/:locale/tour/cervino"
+ },
+ {
+  "source": "/:locale/sentieri/tour-cervino-tappa-3-rifugio-orionde-colle-teodulo",
+  "destination": "/:locale/tour/cervino"
+ },
+ {
+  "source": "/:locale/sentieri/tour-gran-paradiso-tappa-2-valnontey-lago-djouan",
+  "destination": "/:locale/tour/gran-paradiso"
+ },
+ {
+  "source": "/:locale/sentieri/tour-gran-paradiso-tappa-3-lago-djouan-eaux-rousses",
+  "destination": "/:locale/tour/gran-paradiso"
+ },
+ {
+  "source": "/:locale/sentieri/tour-gran-paradiso-tappa-4-eaux-rousses-rifugio-vittorio-sella",
+  "destination": "/:locale/tour/gran-paradiso"
+ },
+ {
+  "source": "/:locale/sentieri/tour-gran-paradiso-tappa-5-rifugio-vittorio-sella-cogne",
+  "destination": "/:locale/tour/gran-paradiso"
+ },
+ {
+  "source": "/:locale/sentieri/tour-rutor-tappa-2-rifugio-deffeyes-lago-rutor",
+  "destination": "/:locale/tour/rutor"
+ },
+ {
+  "source": "/:locale/sentieri/tour-rutor-tappa-3-lago-rutor-rifugio-verney",
+  "destination": "/:locale/tour/rutor"
+ },
+ {
+  "source": "/:locale/sentieri/tour-rutor-tappa-4-rifugio-verney-la-thuile",
+  "destination": "/:locale/tour/rutor"
+ },
+ {
+  "source": "/:locale/sentieri/tour-gran-combin-tappa-1-ollomont-rifugio-prarayer",
+  "destination": "/:locale/tour/gran-combin"
+ },
+ {
+  "source": "/:locale/sentieri/tour-gran-combin-tappa-2-rifugio-prarayer-col-gran-san-bernardo",
+  "destination": "/:locale/tour/gran-combin"
+ },
+ {
+  "source": "/:locale/sentieri/tour-gran-combin-tappa-3-col-gran-san-bernardo-combin-tsessione",
+  "destination": "/:locale/tour/gran-combin"
+ },
+ {
+  "source": "/:locale/sentieri/tour-gran-combin-tappa-4-combin-tsessione-oyace",
+  "destination": "/:locale/tour/gran-combin"
+ }
+]

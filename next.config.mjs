@@ -1,4 +1,5 @@
 import createNextIntlPlugin from 'next-intl/plugin';
+import legacyTourRedirects from './src/data/legacy-tour-redirects.json' with { type: 'json' };
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
@@ -14,6 +15,10 @@ const nextConfig = {
       { protocol: 'https', hostname: 'cdn.sentierivda.it' },
       { protocol: 'https', hostname: '**.public.blob.vercel-storage.com' },
     ],
+  },
+  async redirects() {
+    // Vecchi slug delle tappe tour (itinerari ricostruiti a giugno 2026)
+    return legacyTourRedirects.map((r) => ({ ...r, permanent: true }));
   },
   async headers() {
     return [

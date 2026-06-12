@@ -314,9 +314,9 @@
       "difficulty": "Difficulty",
       "season": "Season"
     },
-    "badgeAvailable": "Italian stages available",
+    "badgeAvailable": "Full loop available",
     "badgeSoon": "Coming soon",
-    "badgeStages": "{count} VdA stages available",
+    "badgeStages": "{count} stages",
     "comingSoonCta": "Profile in preparation",
     "selectTour": "Select a tour",
     "exploreStages": "View stages",
@@ -329,59 +329,59 @@
     "outsideRegion": "Outside region",
     "tmb": {
       "name": "Tour du Mont Blanc (TMB)",
-      "distance": "170 km total (IT + FR + CH)",
-      "vdaSide": "~50 km, 3–4 stages",
-      "places": "Courmayeur, Rif. Bertone (2,011 m), Rif. Bonatti (2,025 m), Rif. Elena (2,062 m), La Fouly (CH)",
+      "distance": "~160 km · 13 stages (IT · CH · FR)",
+      "vdaSide": "Stages 1–4 and 12–13 in the Aosta Valley",
+      "places": "Courmayeur, Bertone, Bonatti and Elena huts, La Fouly (CH), Champex (CH), Chamonix (FR), Elisabetta hut",
       "difficulty": "E",
       "season": "July – September",
-      "description": "The most famous route in the Alps: ten full days, three countries, constant views of the south face of Mont Blanc. The Italian section in Val Ferret — from Courmayeur to Rifugio Bonatti — is considered the most spectacular on the entire loop, with Grandes Jorasses and the Miage glacier.",
-      "cta": "View Italian stages"
+      "description": "The most famous trek in the Alps, here as the full loop: three countries, the Val Ferret balconies, the villages of Valais, the Aiguilles Rouges ladders and the Bonhomme crossing, returning to Val Veny over the Col de la Seigne.",
+      "cta": "See all stages"
     },
     "monteRosa": {
       "name": "Tour of Monte Rosa",
-      "distance": "~170 km (IT Aosta Valley + Piedmont + CH)",
-      "vdaSide": "~40 km",
-      "places": "Gressoney-la-Trinité, Champoluc, Brusson",
+      "distance": "~180 km · 10 stages (Aosta Valley · Piedmont · CH)",
+      "vdaSide": "Gressoney, Ayas and the Cime Bianche valley",
+      "places": "Gressoney, Col d’Olen, Alagna, Macugnaga, Saas-Fee (CH), Zermatt (CH), Cervinia, Champoluc",
       "difficulty": "E / EE",
       "season": "July – September",
-      "description": "A loop around the second highest massif in the Alps, crossing Walser valleys, Lys glaciers and passes above 2,700 m. The Valdostan section links Gressoney, Ayas and Valsesia in a route less crowded than the TMB but equally grand.",
-      "cta": "View VdA stages"
+      "description": "The full loop around the Alps’ second massif: the Walser valleys of Gressoney, Alagna and Macugnaga, the Monte Moro pass, the Europaweg above the Mattertal, returning via the Theodul (a glacier/cable-car transfer stage) and the Cime Bianche.",
+      "cta": "See all stages"
     },
     "cervino": {
       "name": "Tour of the Matterhorn",
-      "distance": "~150 km, 8–10 days",
-      "vdaSide": "Zermatt (CH) ↔ Breuil-Cervinia (IT) loop",
-      "places": "Valtournenche, Breuil-Cervinia, Plateau Rosa",
+      "distance": "~145 km · 8 stages (IT · CH)",
+      "vdaSide": "Breuil-Cervinia, Valcournera, Prarayer",
+      "places": "Breuil-Cervinia, Prarayer, Arolla (CH), Zinal (CH), Gruben (CH), Zermatt (CH)",
       "difficulty": "E / EE",
       "season": "July – September",
-      "description": "Circles the most iconic pyramid in the Alps, alternating Italian and Swiss valleys. The Valdostan side offers Plateau Rosa, huts above Valtournenche and head-on Matterhorn views matched by few other trails.",
-      "cta": "View VdA stages"
+      "description": "The circuit of the Alps’ most iconic pyramid on the Tour du Cervin line: the Valcournera pass to Prarayer, the Valais valleys of Hérens, Moiry and Anniviers, the Augstbordpass and Zermatt. Two stages (Col Collon and Theodul) are alpine glacier transfers, with a guide or by lift.",
+      "cta": "See all stages"
     },
     "granParadiso": {
       "name": "Tour of Gran Paradiso",
-      "distance": "~120 km, 7–9 days",
+      "distance": "~95 km · 9 stages (Aosta Valley · Piedmont)",
       "difficulty": "E",
       "season": "June – September",
-      "description": "A loop entirely within Gran Paradiso National Park: Cogne, Valsavarenche and Valle dell'Orco (Piedmont). Outstanding wildlife — ibex almost guaranteed — and a landscape studied by glaciologists as a laboratory of alpine climate change.",
-      "cta": "View VdA stages"
+      "description": "A loop entirely inside Gran Paradiso National Park: the royal mule track over the Col Lauson, the Nivolet plateau to the Città di Chivasso hut above the Orco valley (Piedmont), and the Rosset and Entrelor passes between Rhêmes and Valsavarenche. Ibex almost guaranteed.",
+      "cta": "See all stages"
     },
     "rutor": {
       "name": "Tour of Rutor",
-      "distance": "~55 km, 4–5 days",
-      "vdaSide": "La Thuile — Arvier — Morgex",
+      "distance": "~90 km · 6 stages (Aosta Valley · France)",
+      "vdaSide": "La Thuile, Rutor, Valgrisenche",
       "difficulty": "E / EE",
       "season": "July – September",
-      "description": "One of the lesser-known tours but among the most accessible for observing an active glacier. The loop around Rutor, above La Thuile, combines quiet summer farms, glacial lakes and views of the western Mont Blanc massif.",
-      "cta": "View VdA stages"
+      "description": "The loop around the Rutor glacier between the Aosta Valley and the Tarentaise: the waterfalls and the Deffeyes hut, the Alta Via 2 passes to Valgrisenche, the Col du Mont to Sainte-Foy and the return over the Little St Bernard pass past Lake Verney.",
+      "cta": "See all stages"
     },
     "granCombin": {
       "name": "Tour of Grand Combin",
-      "distance": "~100 km, 6–8 days",
-      "vdaSide": "Valpelline (IT) + Valais (CH)",
+      "distance": "~100 km · 7 stages (Aosta Valley · CH)",
+      "vdaSide": "Ollomont, the By basin, Col Champillon",
       "difficulty": "EE",
       "season": "July – September",
-      "description": "A massif less known to the general public but glaciologically spectacular: the cross-border loop crosses Valpelline and the Swiss side with passes above 2,700 m and views of Combin de Grafeneire.",
-      "cta": "View VdA stages"
+      "description": "The complete Tour des Combins: from the Col Champillon to the Great St Bernard, the Valais cabanes of Mille, Brunet, Panossière (with the Corbassière footbridge) and Chanrion, returning to the Valpelline over the Fenêtre de Durand.",
+      "cta": "See all stages"
     }
   },
   "FloraFauna": {

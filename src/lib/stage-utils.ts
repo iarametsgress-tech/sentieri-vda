@@ -14,6 +14,22 @@ export const COUNTRY_FLAGS: Record<CountryCode, string> = {
   DE: '🇩🇪',
 };
 
+const CH_WORDS = [
+  'zermatt', 'svizz', 'swiss', 'suisse', 'schweiz', '(ch)', 'fouly', 'champex',
+  'trient', 'saas', 'grächen', 'graechen', 'europahütte', 'europahutte',
+  'st. niklaus', 'niklaus', 'randa', 'täsch', 'tasch', 'gruben', 'zinal',
+  'haudères', 'hauderes', 'arolla', 'vallese', 'valais', 'wallis', 'bagnes',
+  'bourg-saint-pierre', 'cabane', 'mauvoisin', 'entremont', 'hérens', 'anniviers',
+  'turtmann', 'mattertal', 'saastal',
+];
+const FR_WORDS = [
+  'chamonix', 'seigne', 'france', 'francia', '(fr)', 'montroc', 'houches',
+  'contamines', 'chapieux', 'bonhomme', 'balme', 'flégère', 'flegere',
+  'tré-le-champ', 'tre-le-champ', 'rosière', 'rosiere', 'sainte-foy',
+  'monal', 'tarentaise', 'petit-saint-bernard', 'petit saint-bernard',
+  'montvalezan', 'savoie', 'montjoie',
+];
+
 /** Infer countries touched by a stage (for cross-border tours). */
 export function inferStageCountries(trail: Trail): CountryCode[] {
   const text = [
@@ -27,36 +43,19 @@ export function inferStageCountries(trail: Trail): CountryCode[] {
     .join(' ')
     .toLowerCase();
 
+  const flags = new Set<CountryCode>();
+  if (CH_WORDS.some((w) => text.includes(w))) flags.add('CH');
+  if (FR_WORDS.some((w) => text.includes(w))) flags.add('FR');
+
+  // Tratto italiano se tocca la VdA o il Piemonte (testo o geografia)
   const midLat = (trail.start.coords.lat + trail.end.coords.lat) / 2;
   const midLng = (trail.start.coords.lng + trail.end.coords.lng) / 2;
-  const flags = new Set<CountryCode>();
-
-  if (
-    text.includes('zermatt') ||
-    text.includes('svizz') ||
-    text.includes('swiss') ||
-    text.includes('suisse') ||
-    text.includes('fouly') ||
-    text.includes('champoluc') ||
-    midLng < 6.82
-  ) {
-    flags.add('CH');
-  }
-
-  if (
-    text.includes('chamonix') ||
-    text.includes('seigne') ||
-    text.includes('france') ||
-    text.includes('francia') ||
-    text.includes('montroc')
-  ) {
-    flags.add('FR');
-  }
-
   const inVda =
     midLat >= 45.52 && midLat <= 46.08 && midLng >= 6.88 && midLng <= 7.92;
+  const inPiemonte = text.includes('piemonte') || text.includes('(to)') ||
+    text.includes('(vc)') || text.includes('(vb)');
 
-  if (inVda || flags.size === 0) {
+  if (inVda || inPiemonte || flags.size === 0) {
     flags.add('IT');
   }
 

@@ -314,9 +314,9 @@
       "difficulty": "Schwierigkeit",
       "season": "Saison"
     },
-    "badgeAvailable": "Italienische Etappen verfügbar",
+    "badgeAvailable": "Komplette Runde verfügbar",
     "badgeSoon": "Demnächst",
-    "badgeStages": "{count} VdA-Etappen verfügbar",
+    "badgeStages": "{count} Etappen",
     "comingSoonCta": "Profil in Vorbereitung",
     "selectTour": "Tour wählen",
     "exploreStages": "Etappen ansehen",
@@ -329,59 +329,59 @@
     "outsideRegion": "Außerhalb der Region",
     "tmb": {
       "name": "Tour du Mont Blanc (TMB)",
-      "distance": "170 km gesamt (IT + FR + CH)",
-      "vdaSide": "~50 km, 3–4 Etappen",
-      "places": "Courmayeur, Rif. Bertone (2.011 m), Rif. Bonatti (2.025 m), Rif. Elena (2.062 m), La Fouly (CH)",
+      "distance": "~160 km · 13 Etappen (IT · CH · FR)",
+      "vdaSide": "Etappen 1–4 und 12–13 im Aostatal",
+      "places": "Courmayeur, Bertone-, Bonatti- und Elena-Hütte, La Fouly (CH), Champex (CH), Chamonix (FR), Elisabetta-Hütte",
       "difficulty": "E",
       "season": "Juli – September",
-      "description": "Die berühmteste Route der Alpen: zehn volle Tage, drei Länder, ständige Blicke auf die Südwand des Mont Blanc. Der italienische Abschnitt im Val Ferret gilt als spektakulärster der gesamten Schleife.",
-      "cta": "Italienische Etappen ansehen"
+      "description": "Der berühmteste Trek der Alpen, hier als komplette Runde: drei Länder, die Balkone des Val Ferret, die Dörfer des Wallis, die Leitern der Aiguilles Rouges und die Bonhomme-Überschreitung, mit Rückkehr ins Val Veny über den Col de la Seigne.",
+      "cta": "Alle Etappen ansehen"
     },
     "monteRosa": {
       "name": "Monte-Rosa-Tour",
-      "distance": "~170 km (IT Aostatal + Piemont + CH)",
-      "vdaSide": "~40 km",
-      "places": "Gressoney-la-Trinité, Champoluc, Brusson",
+      "distance": "~180 km · 10 Etappen (Aostatal · Piemont · CH)",
+      "vdaSide": "Gressoney, Ayas und das Cime-Bianche-Tal",
+      "places": "Gressoney, Col d’Olen, Alagna, Macugnaga, Saas-Fee (CH), Zermatt (CH), Cervinia, Champoluc",
       "difficulty": "E / EE",
       "season": "Juli – September",
-      "description": "Schleife um das zweithöchste Massiv der Alpen, Walser-Täler, Lys-Gletscher und Pässe über 2.700 m. Weniger überlaufen als die TMB, aber ebenso grandios.",
-      "cta": "VdA-Etappen ansehen"
+      "description": "Die komplette Runde um das zweithöchste Massiv der Alpen: die Walser Täler von Gressoney, Alagna und Macugnaga, der Monte-Moro-Pass, der Europaweg über dem Mattertal und die Rückkehr über den Theodul (Transferetappe über den Gletscher oder per Seilbahn) und die Cime Bianche.",
+      "cta": "Alle Etappen ansehen"
     },
     "cervino": {
       "name": "Matterhorn-Tour",
-      "distance": "~150 km, 8–10 Tage",
-      "vdaSide": "Schleife Zermatt (CH) ↔ Breuil-Cervinia (IT)",
-      "places": "Valtournenche, Breuil-Cervinia, Plateau Rosa",
+      "distance": "~145 km · 8 Etappen (IT · CH)",
+      "vdaSide": "Breuil-Cervinia, Valcournera, Prarayer",
+      "places": "Breuil-Cervinia, Prarayer, Arolla (CH), Zinal (CH), Gruben (CH), Zermatt (CH)",
       "difficulty": "E / EE",
       "season": "Juli – September",
-      "description": "Umkreist die ikonischste Pyramide der Alpen, wechselt italienische und schweizer Täler. Valdostanische Seite: Plateau Rosa und frontale Matterhorn-Blicke.",
-      "cta": "VdA-Etappen ansehen"
+      "description": "Die Runde um die ikonischste Pyramide der Alpen auf der Linie der Tour du Cervin: der Col di Valcournera nach Prarayer, die Walliser Täler Hérens, Moiry und Anniviers, der Augstbordpass und Zermatt. Zwei Etappen (Col Collon und Theodul) sind alpine Gletschertransfers, mit Führer oder per Bahn.",
+      "cta": "Alle Etappen ansehen"
     },
     "granParadiso": {
       "name": "Gran-Paradiso-Tour",
-      "distance": "~120 km, 7–9 Tage",
+      "distance": "~95 km · 9 Etappen (Aostatal · Piemont)",
       "difficulty": "E",
       "season": "Juni – September",
-      "description": "Schleife ganz im Gran-Paradiso-Nationalpark: Cogne, Valsavarenche und Val dell’Orco (Piemont). Außergewöhnliche Fauna — Steinböcke fast garantiert.",
-      "cta": "VdA-Etappen ansehen"
+      "description": "Eine Runde komplett im Nationalpark Gran Paradiso: der königliche Saumpfad über den Col Lauson, die Nivolet-Hochebene bis zur Hütte Città di Chivasso über dem Orco-Tal (Piemont) und die Pässe Rosset und Entrelor zwischen Rhêmes und Valsavarenche. Steinböcke fast garantiert.",
+      "cta": "Alle Etappen ansehen"
     },
     "rutor": {
       "name": "Rutor-Tour",
-      "distance": "~55 km, 4–5 Tage",
-      "vdaSide": "La Thuile — Arvier — Morgex",
+      "distance": "~90 km · 6 Etappen (Aostatal · Frankreich)",
+      "vdaSide": "La Thuile, Rutor, Valgrisenche",
       "difficulty": "E / EE",
       "season": "Juli – September",
-      "description": "Weniger bekannte Tour, ideal um einen aktiven Gletscher zu beobachten. Schleife um den Rutor oberhalb La Thuile: ruhige Almen, Gletscherseen und Blick auf den westlichen Mont Blanc.",
-      "cta": "VdA-Etappen ansehen"
+      "description": "Die Runde um den Rutor-Gletscher zwischen Aostatal und Tarentaise: die Wasserfälle und die Deffeyes-Hütte, die Pässe des Höhenwegs 2 nach Valgrisenche, der Col du Mont nach Sainte-Foy und die Rückkehr über den Kleinen Sankt Bernhard am Verney-See vorbei.",
+      "cta": "Alle Etappen ansehen"
     },
     "granCombin": {
       "name": "Grand-Combin-Tour",
-      "distance": "~100 km, 6–8 Tage",
-      "vdaSide": "Valpelline (IT) + Wallis (CH)",
+      "distance": "~100 km · 7 Etappen (Aostatal · CH)",
+      "vdaSide": "Ollomont, der By-Kessel, der Col Champillon",
       "difficulty": "EE",
       "season": "Juli – September",
-      "description": "Weniger bekanntes, aber glazial spektakuläres Massiv: grenzüberschreitende Schleife mit Pässen über 2.700 m und Blick auf den Combin de Grafeneire.",
-      "cta": "VdA-Etappen ansehen"
+      "description": "Die komplette Tour des Combins: vom Col Champillon zum Grossen Sankt Bernhard, die Walliser Hütten Mille, Brunet, Panossière (mit der Corbassière-Hängebrücke) und Chanrion, und die Rückkehr in die Valpelline über die Fenêtre de Durand.",
+      "cta": "Alle Etappen ansehen"
     }
   },
   "FloraFauna": {

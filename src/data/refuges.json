@@ -5,8 +5,8 @@
     "name_en": "Walter Bonatti Refuge",
     "type": "rifugio",
     "coords": {
-      "lat": 45.8992,
-      "lng": 6.9658
+      "lat": 45.846913,
+      "lng": 7.03364
     },
     "elevation_m": 2025,
     "valley_it": "Val Ferret",
@@ -59,7 +59,12 @@
       "alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti",
       "alta-via-1-tappa-17-rifugio-bonatti-courmayeur",
       "tour-mont-blanc-tappa-2-rifugio-bertone-rifugio-bonatti",
-      "tour-mont-blanc-tappa-3-rifugio-bonatti-rifugio-elena"
+      "tour-mont-blanc-tappa-3-rifugio-bonatti-rifugio-elena",
+      "22-s19",
+      "22-s20",
+      "22-s67",
+      "av1-s16",
+      "av1-s17"
     ],
     "source": "rifugiobonatti.it · lovevda.it",
     "name_fr": "Walter Bonatti Refuge",
@@ -85,8 +90,8 @@
     "name_en": "Rifugio Bertone",
     "type": "rifugio",
     "coords": {
-      "lat": 45.7895,
-      "lng": 6.8752
+      "lat": 45.809242,
+      "lng": 6.978863
     },
     "elevation_m": 1995,
     "valley_it": "Val Ferret",
@@ -128,7 +133,8 @@
     "trails": [
       "tour-mont-blanc-tappa-1-courmayeur-rifugio-bertone",
       "tour-mont-blanc-tappa-2-rifugio-bertone-rifugio-bonatti",
-      "alta-via-1-tappa-17-rifugio-bonatti-courmayeur"
+      "alta-via-1-tappa-17-rifugio-bonatti-courmayeur",
+      "22-s32"
     ],
     "source": "lovevda.it · CAI Courmayeur",
     "email": "info@rifugiobertone.it",
@@ -155,8 +161,8 @@
     "name_en": "Rifugio Coda",
     "type": "rifugio",
     "coords": {
-      "lat": 45.742,
-      "lng": 7.712
+      "lat": 45.62243,
+      "lng": 7.906514
     },
     "elevation_m": 2319,
     "valley_it": "Valle del Lys",
@@ -193,7 +199,11 @@
     ],
     "trails": [
       "alta-via-1-tappa-2-perloz-rifugio-coda",
-      "alta-via-1-tappa-3-rifugio-coda-rifugio-barma"
+      "alta-via-1-tappa-3-rifugio-coda-rifugio-barma",
+      "28-s10",
+      "28-s11",
+      "av1-s2",
+      "av1-s3"
     ],
     "source": "lovevda.it · CAI",
     "website": "https://www.rifugiocoda.it",
@@ -218,8 +228,8 @@
     "name_en": "Rifugio Barma",
     "type": "rifugio",
     "coords": {
-      "lat": 45.758,
-      "lng": 7.735
+      "lat": 45.644266,
+      "lng": 7.929725
     },
     "elevation_m": 2320,
     "valley_it": "Valle del Lys",
@@ -326,7 +336,12 @@
     ],
     "trails": [
       "alta-via-1-tappa-6-gressoney-saint-jean-rifugio-vieux-crest",
-      "alta-via-1-tappa-7-rifugio-vieux-crest-rifugio-grand-tournalin"
+      "alta-via-1-tappa-7-rifugio-vieux-crest-rifugio-grand-tournalin",
+      "07-s44",
+      "07-s45",
+      "av1-s6",
+      "av1-s7",
+      "07-s38"
     ],
     "source": "refugevieuxcrest.com · lovevda.it",
     "name_fr": "Rifugio Vieux Crest",
@@ -390,7 +405,12 @@
     ],
     "trails": [
       "alta-via-1-tappa-7-rifugio-vieux-crest-rifugio-grand-tournalin",
-      "alta-via-1-tappa-8-rifugio-grand-tournalin-valtournenche"
+      "alta-via-1-tappa-8-rifugio-grand-tournalin-valtournenche",
+      "07-s12",
+      "07-s13",
+      "07-s14",
+      "av1-s7",
+      "av1-s8"
     ],
     "source": "lovevda.it · CAI",
     "website": "https://www.lovevda.it/it/banca-dati/16/rifugi/champoluc-ayas-antagnod/rifugio-grand-tournamentin/2548",
@@ -454,7 +474,10 @@
     ],
     "trails": [
       "alta-via-1-tappa-9-valtournenche-rifugio-barmasse",
-      "alta-via-1-tappa-10-rifugio-barmasse-rifugio-cuney"
+      "alta-via-1-tappa-10-rifugio-barmasse-rifugio-cuney",
+      "71-s4",
+      "av1-s10",
+      "av1-s9"
     ],
     "source": "lovevda.it · CAI Cervino",
     "website": "https://www.rifugiobarmasse.it",
@@ -527,7 +550,12 @@
     ],
     "trails": [
       "alta-via-1-tappa-10-rifugio-barmasse-rifugio-cuney",
-      "alta-via-1-tappa-11-rifugio-cuney-oyace"
+      "alta-via-1-tappa-11-rifugio-cuney-oyace",
+      "45-s19",
+      "45-s21",
+      "45-s31",
+      "45-s33",
+      "av1-s10"
     ],
     "source": "lovevda.it · CAI",
     "website": "https://www.rifugiocuney.it",
@@ -586,7 +614,10 @@
     ],
     "trails": [
       "alta-via-1-tappa-13-ollomont-rifugio-champillon",
-      "alta-via-1-tappa-14-rifugio-champillon-saint-rhemy"
+      "alta-via-1-tappa-14-rifugio-champillon-saint-rhemy",
+      "tour-gran-combin-tappa-1-ollomont-saint-rhemy",
+      "av1-s13",
+      "av1-s14"
     ],
     "source": "rifugiochampillon.it · lovevda.it",
     "email": "rifugiochampillon@gmail.com",
@@ -650,7 +681,9 @@
     ],
     "trails": [
       "alta-via-1-tappa-15-saint-rhemy-rifugio-frassati",
-      "alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti"
+      "alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti",
+      "av1-s15",
+      "av1-s16"
     ],
     "source": "lovevda.it · CAI Aosta",
     "website": "https://rifugiofrassati.it",
@@ -704,7 +737,10 @@
         "alt_de": "Schutzhütte Alpenzù Grande in Champoluc"
       }
     ],
-    "trails": [],
+    "trails": [
+      "33-s16",
+      "33-s46"
+    ],
     "source": "lovevda.it",
     "website": "http://www.rifugioalpenzu.it",
     "email": "info@rifugioalpenzu.it",
@@ -730,8 +766,8 @@
     "name_en": "Elisabetta Soldini Refuge",
     "type": "rifugio",
     "coords": {
-      "lat": 45.768,
-      "lng": 6.898
+      "lat": 45.767001,
+      "lng": 6.837437
     },
     "elevation_m": 2195,
     "valley_it": "Val Veny",
@@ -781,7 +817,14 @@
     ],
     "trails": [
       "alta-via-2-tappa-1-courmayeur-rifugio-elisabetta",
-      "alta-via-2-tappa-2-rifugio-elisabetta-la-thuile"
+      "alta-via-2-tappa-2-rifugio-elisabetta-la-thuile",
+      "tour-mont-blanc-tappa-12-les-chapieux-rifugio-elisabetta",
+      "tour-mont-blanc-tappa-13-rifugio-elisabetta-courmayeur",
+      "22-s50",
+      "22-s52",
+      "22-s53",
+      "22-s54",
+      "22-s66"
     ],
     "source": "rifugioelisabetta.com · lovevda.it",
     "name_fr": "Elisabetta Soldini Refuge",
@@ -836,7 +879,10 @@
       }
     ],
     "trails": [
-      "alta-via-2-tappa-2-rifugio-elisabetta-la-thuile"
+      "alta-via-2-tappa-2-rifugio-elisabetta-la-thuile",
+      "tour-mont-blanc-tappa-13-rifugio-elisabetta-courmayeur",
+      "22-s42",
+      "22-s46"
     ],
     "source": "lovevda.it · CAI",
     "website": "https://www.maisonvieille.com",
@@ -889,10 +935,7 @@
         "alt_de": "Pass Col de la Crosatie auf der Alta Via 2 oberhalb des Biwaks Promoud"
       }
     ],
-    "trails": [
-      "alta-via-2-tappa-3-la-thuile-promoud",
-      "alta-via-2-tappa-4-promoud-planaval"
-    ],
+    "trails": [],
     "source": "lovevda.it · CAI Aosta",
     "website": "https://www.lovevda.it/it/banca-dati/7/bivacchi/la-salle/bivacco-cosimo-zappelli/3138",
     "name_fr": "Promoud Bivouac",
@@ -916,8 +959,8 @@
     "name_en": "Chalet de l'Épée Refuge",
     "type": "rifugio",
     "coords": {
-      "lat": 45.618,
-      "lng": 7.098
+      "lat": 45.588818,
+      "lng": 7.060325
     },
     "elevation_m": 2843,
     "valley_it": "Valgrisenche",
@@ -946,7 +989,12 @@
     ],
     "trails": [
       "alta-via-2-tappa-5-planaval-rifugio-chalet-epee",
-      "alta-via-2-tappa-6-rifugio-chalet-epee-rhemes-notre-dame"
+      "alta-via-2-tappa-6-rifugio-chalet-epee-rhemes-notre-dame",
+      "68-s11",
+      "68-s12",
+      "68-s13",
+      "68-s14",
+      "68-s17"
     ],
     "source": "lovevda.it · CAI",
     "website": "https://www.rifugioepee.com",
@@ -1014,9 +1062,12 @@
     "trails": [
       "alta-via-2-tappa-8-eaux-rousses-rifugio-vittorio-sella",
       "alta-via-2-tappa-9-rifugio-vittorio-sella-cogne",
-      "tour-gran-paradiso-tappa-4-eaux-rousses-rifugio-vittorio-sella",
-      "tour-gran-paradiso-tappa-5-rifugio-vittorio-sella-cogne",
-      "lago-djouan-cogne"
+      "lago-djouan-cogne",
+      "tour-gran-paradiso-tappa-2-valnontey-rifugio-vittorio-sella",
+      "tour-gran-paradiso-tappa-3-rifugio-vittorio-sella-eaux-rousses",
+      "tour-gran-paradiso-tappa-8-eaux-rousses-rifugio-vittorio-sella",
+      "tour-gran-paradiso-tappa-9-rifugio-vittorio-sella-cogne",
+      "av2-s8"
     ],
     "source": "rifugiovittoriosella.it · lovevda.it",
     "name_fr": "Vittorio Sella Refuge",
@@ -1042,8 +1093,8 @@
     "name_en": "Sogno di Berdzé Refuge",
     "type": "rifugio",
     "coords": {
-      "lat": 45.612,
-      "lng": 7.358
+      "lat": 45.596143,
+      "lng": 7.487862
     },
     "elevation_m": 2538,
     "valley_it": "Val di Cogne",
@@ -1074,7 +1125,9 @@
     ],
     "trails": [
       "alta-via-2-tappa-10-cogne-rifugio-sogno-berdze",
-      "alta-via-2-tappa-11-rifugio-sogno-berdze-rifugio-dondena"
+      "alta-via-2-tappa-11-rifugio-sogno-berdze-rifugio-dondena",
+      "21-s24",
+      "av2-s11"
     ],
     "source": "rifugioberdze.it · lovevda.it",
     "name_fr": "Sogno di Berdzé Refuge",
@@ -1128,7 +1181,11 @@
     ],
     "trails": [
       "alta-via-2-tappa-11-rifugio-sogno-berdze-rifugio-dondena",
-      "alta-via-2-tappa-12-rifugio-dondena-champorcher"
+      "alta-via-2-tappa-12-rifugio-dondena-champorcher",
+      "18-s38",
+      "18-s41",
+      "av2-s11",
+      "av2-s12"
     ],
     "source": "lovevda.it · CAI",
     "website": "https://www.visitmonterosa.com/accommodation/rifugio-dondena/",
@@ -1153,8 +1210,8 @@
     "name_en": "Rifugio Deffeyes",
     "type": "rifugio",
     "coords": {
-      "lat": 45.718,
-      "lng": 6.978
+      "lat": 45.675399,
+      "lng": 6.985926
     },
     "elevation_m": 2480,
     "valley_it": "La Thuile",
@@ -1191,7 +1248,12 @@
     ],
     "trails": [
       "tour-rutor-tappa-1-la-thuile-rifugio-deffeyes",
-      "tour-rutor-tappa-2-rifugio-deffeyes-lago-rutor"
+      "tour-rutor-tappa-2-rifugio-deffeyes-planaval",
+      "41-s25",
+      "41-s27",
+      "41-s32",
+      "41-s34",
+      "41-s35"
     ],
     "source": "lovevda.it · CAI",
     "website": "https://www.rifugiodeffeyes.it",
@@ -1217,8 +1279,8 @@
     "name_en": "Rifugio Elena",
     "type": "rifugio",
     "coords": {
-      "lat": 45.912,
-      "lng": 6.952
+      "lat": 45.884719,
+      "lng": 7.065638
     },
     "elevation_m": 2061,
     "valley_it": "Val Ferret",
@@ -1247,7 +1309,9 @@
     ],
     "trails": [
       "tour-mont-blanc-tappa-3-rifugio-bonatti-rifugio-elena",
-      "tour-mont-blanc-tappa-4-rifugio-elena-col-seigne"
+      "tour-mont-blanc-tappa-4-rifugio-elena-la-fouly",
+      "22-s12",
+      "22-s15"
     ],
     "source": "lovevda.it · CAI",
     "website": "https://www.rifugioelena.it",
@@ -1303,7 +1367,12 @@
     ],
     "trails": [
       "tour-monte-rosa-tappa-1-gressoney-rifugio-gabiet",
-      "tour-monte-rosa-tappa-2-rifugio-gabiet-colle-teodulo"
+      "tour-monte-rosa-tappa-2-rifugio-gabiet-alagna",
+      "32-s15",
+      "32-s16",
+      "32-s17",
+      "32-s19",
+      "32-s33"
     ],
     "source": "lovevda.it · CAI",
     "website": "https://www.rifugiogabiet.it",
@@ -1328,8 +1397,8 @@
     "name_en": "Duca degli Abruzzi Refuge",
     "type": "rifugio",
     "coords": {
-      "lat": 45.918,
-      "lng": 7.648
+      "lat": 45.959077,
+      "lng": 7.643778
     },
     "elevation_m": 2802,
     "valley_it": "Valtournenche",
@@ -1359,8 +1428,7 @@
       }
     ],
     "trails": [
-      "tour-cervino-tappa-1-breuil-rifugio-duca-abruzzi",
-      "tour-cervino-tappa-2-rifugio-duca-orionde"
+      "71-s12"
     ],
     "source": "lovevda.it · CAI Cervino",
     "website": "http://www.rifugiorionde.it",
@@ -1388,8 +1456,8 @@
     "name_en": "Oriondé Refuge",
     "type": "rifugio",
     "coords": {
-      "lat": 45.928,
-      "lng": 7.612
+      "lat": 45.959077,
+      "lng": 7.643778
     },
     "elevation_m": 2802,
     "valley_it": "Valtournenche",
@@ -1417,8 +1485,7 @@
       }
     ],
     "trails": [
-      "tour-cervino-tappa-2-rifugio-duca-orionde",
-      "tour-cervino-tappa-3-rifugio-orionde-colle-teodulo"
+      "71-s12"
     ],
     "source": "lovevda.it · CAI Cervino",
     "website": "http://www.rifugiorionde.it",
@@ -1473,8 +1540,7 @@
       }
     ],
     "trails": [
-      "tour-rutor-tappa-3-lago-rutor-rifugio-verney",
-      "tour-rutor-tappa-4-rifugio-verney-la-thuile"
+      "41-s25"
     ],
     "source": "lovevda.it · CAI",
     "website": "https://www.rifugiodeffeyes.it",
@@ -1539,8 +1605,12 @@
       }
     ],
     "trails": [
-      "tour-gran-combin-tappa-1-ollomont-rifugio-prarayer",
-      "tour-gran-combin-tappa-2-rifugio-prarayer-col-gran-san-bernardo"
+      "tour-cervino-tappa-1-breuil-cervinia-rifugio-prarayer",
+      "tour-cervino-tappa-2-rifugio-prarayer-arolla",
+      "10-s14",
+      "10-s15",
+      "10-s18",
+      "10-s12"
     ],
     "source": "rifugioprarayer.it · lovevda.it",
     "facebook": "https://www.facebook.com/Rifugio-Prarayer-378401439009510/",
@@ -1594,7 +1664,10 @@
         "alt_de": "Außenansicht der Bivacco Gastaldi"
       }
     ],
-    "trails": [],
+    "trails": [
+      "32-s18",
+      "32-s19"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -1632,7 +1705,10 @@
         "source": "https://commons.wikimedia.org/wiki/File:Mont_Ch%C3%A9tif_@_Val_Sapin.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "22-s35",
+      "22-s39"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -1822,7 +1898,13 @@
         "alt_de": "Außenansicht der Bivacco Ernesto Ménabréaz"
       }
     ],
-    "trails": [],
+    "trails": [
+      "11-s2",
+      "11-s6",
+      "11-s7",
+      "11-s8",
+      "60-s20"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -1860,7 +1942,10 @@
         "source": "https://commons.wikimedia.org/wiki/File:ISS053-E-101548_-_View_of_Earth.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "06-s10",
+      "06-s11"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2012,7 +2097,10 @@
         "alt_de": "Außenansicht der Rifugio Giovanni Bobba"
       }
     ],
-    "trails": [],
+    "trails": [
+      "71-s10",
+      "71-s9"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2050,7 +2138,10 @@
         "alt_de": "Außenansicht der Bivacco Regondi-Gavazzi"
       }
     ],
-    "trails": [],
+    "trails": [
+      "46-s12",
+      "46-s14"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2088,7 +2179,9 @@
         "alt_de": "Außenansicht der Bivacco Tsan"
       }
     ],
-    "trails": [],
+    "trails": [
+      "67-s31"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2164,7 +2257,9 @@
         "alt_de": "Außenansicht der Bivacco Duccio Manenti"
       }
     ],
-    "trails": [],
+    "trails": [
+      "71-s8"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2202,7 +2297,10 @@
         "alt_de": "Außenansicht der Bivacco Rivolta"
       }
     ],
-    "trails": [],
+    "trails": [
+      "71-s4",
+      "67-s5"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2240,7 +2338,11 @@
         "source": "https://commons.wikimedia.org/wiki/File:Mont_Paillasse,_Rhemes_Saint_Georges_-_vista_verso_monte_-_panoramio.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "35-s5",
+      "56-s8",
+      "56-s9"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2278,7 +2380,13 @@
         "alt_de": "Außenansicht der Bivacco Mario Gontier"
       }
     ],
-    "trails": [],
+    "trails": [
+      "08-s18",
+      "08-s19",
+      "08-s20",
+      "08-s26",
+      "21-s60"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2392,7 +2500,10 @@
         "source": "https://commons.wikimedia.org/wiki/File:Monte_Rascias_dal_lago_Miserin_01.png"
       }
     ],
-    "trails": [],
+    "trails": [
+      "27-s5",
+      "27-s22"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2430,7 +2541,10 @@
         "source": "https://commons.wikimedia.org/wiki/File:ValgrisencheValleAug312024_01.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "68-s26",
+      "68-s27"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2468,7 +2582,11 @@
         "alt_de": "Außenansicht der Bivacco Penne Nere"
       }
     ],
-    "trails": [],
+    "trails": [
+      "03-s11",
+      "57-s7",
+      "69-s5"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2506,7 +2624,10 @@
         "source": "https://commons.wikimedia.org/wiki/File:STS132-E-12606_-_View_of_Earth.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "47-s6",
+      "69-s4"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2544,7 +2665,10 @@
         "source": "https://commons.wikimedia.org/wiki/File:Bivacco_Rosazza_e_colle_Valsorey.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "46-s4",
+      "46-s5"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2582,7 +2706,9 @@
         "source": "https://commons.wikimedia.org/wiki/File:PUEBLO_EN_EL_VALLE_DE_AOSTA_-_panoramio.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "01-s3"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2620,7 +2746,9 @@
         "source": "https://commons.wikimedia.org/wiki/File:Lago_tzan_al_tramonto.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "45-s26"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2658,7 +2786,9 @@
         "source": "https://commons.wikimedia.org/wiki/File:Valle_d%27aosta._monte_bianco.JPG"
       }
     ],
-    "trails": [],
+    "trails": [
+      "22-s11"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2696,7 +2826,9 @@
         "source": "https://commons.wikimedia.org/wiki/File:Glacier_de_Triolet_@_Tsa_de_Jean.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "22-s9"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2734,7 +2866,9 @@
         "source": "https://commons.wikimedia.org/wiki/File:Bivacco_Gino_Rainetto,_Bivouac_du_Petit_Mont_Blanc.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "22-s55"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2772,7 +2906,9 @@
         "source": "https://commons.wikimedia.org/wiki/File:Bivacco_Luigi_Pascal.JPG"
       }
     ],
-    "trails": [],
+    "trails": [
+      "44-s2"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2810,7 +2946,9 @@
         "source": "https://commons.wikimedia.org/wiki/File:Veduta_verso_il_Bivacco_Ravelli_-_panoramio.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "68-s15"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -2886,7 +3024,10 @@
         "source": "https://commons.wikimedia.org/wiki/File:Place_Moulin_Dam.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "45-s18",
+      "47-s4"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3038,7 +3179,11 @@
         "source": "https://commons.wikimedia.org/wiki/File:Lateltin_08.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "07-s61",
+      "33-s17",
+      "07-s42"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3228,7 +3373,11 @@
         "source": "https://commons.wikimedia.org/wiki/File:Rifugio_Quintino_Sella_al_Felik.JPG"
       }
     ],
-    "trails": [],
+    "trails": [
+      "07-s30",
+      "07-s36",
+      "32-s25"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3342,7 +3491,10 @@
         "source": "https://commons.wikimedia.org/wiki/File:Vittorio_Emanuele_II_Hut.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "70-s17",
+      "70-s22"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3380,7 +3532,13 @@
         "source": "https://commons.wikimedia.org/wiki/File:Mont_V%C3%A9lan_depuis_le_Grand_Saint-Bernard.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "tour-gran-combin-tappa-2-saint-rhemy-bourg-saint-pierre",
+      "64-s15",
+      "64-s18",
+      "pvf-s1",
+      "tsb-s1"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3418,7 +3576,11 @@
         "source": "https://commons.wikimedia.org/wiki/File:Rifugio_Arp_001.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "12-s13",
+      "12-s14",
+      "12-s16"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3532,7 +3694,13 @@
         "source": "https://commons.wikimedia.org/wiki/File:Refuge_Deffeyes_-_img_03178.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "41-s25",
+      "41-s27",
+      "41-s32",
+      "41-s34",
+      "41-s35"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3646,7 +3814,9 @@
         "source": "https://commons.wikimedia.org/wiki/File:Ingresso_del_rifugio_Guide_d%27Ayas_e_sullo_sfondo_il_Castore.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "07-s28"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3684,7 +3854,12 @@
         "source": "https://commons.wikimedia.org/wiki/File:Refuge_Chabod_-_img_03069.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "70-s20",
+      "70-s21",
+      "70-s22",
+      "70-s23"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3722,7 +3897,13 @@
         "source": "https://commons.wikimedia.org/wiki/File:Sassiere_003.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "68-s16",
+      "68-s17",
+      "68-s18",
+      "68-s19",
+      "68-s20"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3798,7 +3979,13 @@
         "alt_de": "Außenansicht der Rifugio Elisabetta Soldini Montanaro"
       }
     ],
-    "trails": [],
+    "trails": [
+      "22-s50",
+      "22-s52",
+      "22-s53",
+      "22-s54",
+      "22-s66"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3836,7 +4023,10 @@
         "source": "https://commons.wikimedia.org/wiki/File:Rifugio_Sogno_di_berz%C3%A9_P%C3%A9radza.JPG"
       }
     ],
-    "trails": [],
+    "trails": [
+      "21-s24",
+      "av2-s11"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3912,7 +4102,9 @@
         "source": "https://commons.wikimedia.org/wiki/File:Rifugio_Nacamuli_al_Col_Collon.jpg"
       }
     ],
-    "trails": [],
+    "trails": [
+      "10-s11"
+    ],
     "source": "OpenStreetMap contributors"
   },
   {
@@ -3954,7 +4146,12 @@
         "alt_de": "Außenansicht der Gian Federico Benevolo Hütte"
       }
     ],
-    "trails": [],
+    "trails": [
+      "55-s13",
+      "55-s14",
+      "55-s18",
+      "55-s17"
+    ],
     "source": "lovevda.it · CAI Torino · rifugiobenevolo.com"
   },
   {
@@ -4110,7 +4307,13 @@
         "alt_de": "Außenansicht der Arbolle-Hütte"
       }
     ],
-    "trails": [],
+    "trails": [
+      "19-s12",
+      "19-s13",
+      "19-s14",
+      "19-s3",
+      "19-s9"
+    ],
     "source": "lovevda.it · rifugioarbolle.it"
   },
   {

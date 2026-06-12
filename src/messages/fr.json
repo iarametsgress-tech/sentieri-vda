@@ -314,9 +314,9 @@
       "difficulty": "Difficulté",
       "season": "Saison"
     },
-    "badgeAvailable": "Étapes italiennes disponibles",
+    "badgeAvailable": "Boucle complète disponible",
     "badgeSoon": "Bientôt",
-    "badgeStages": "{count} étapes VdA disponibles",
+    "badgeStages": "{count} étapes",
     "comingSoonCta": "Fiche en préparation",
     "selectTour": "Choisir un tour",
     "exploreStages": "Voir les étapes",
@@ -329,59 +329,59 @@
     "outsideRegion": "Hors région",
     "tmb": {
       "name": "Tour du Mont-Blanc (TMB)",
-      "distance": "170 km total (IT + FR + CH)",
-      "vdaSide": "~50 km, 3–4 étapes",
-      "places": "Courmayeur, Rif. Bertone (2 011 m), Rif. Bonatti (2 025 m), Rif. Elena (2 062 m), La Fouly (CH)",
+      "distance": "~160 km · 13 étapes (IT · CH · FR)",
+      "vdaSide": "Étapes 1–4 et 12–13 en Vallée d’Aoste",
+      "places": "Courmayeur, refuges Bertone, Bonatti et Elena, La Fouly (CH), Champex (CH), Chamonix (FR), refuge Elisabetta",
       "difficulty": "E",
       "season": "juillet – septembre",
-      "description": "Itinéraire le plus célèbre des Alpes : dix jours, trois pays, vues constantes sur le versant sud du Mont-Blanc. Le tronçon italien en Val Ferret — de Courmayeur au Rifugio Bonatti — est considéré comme le plus spectaculaire de la boucle.",
-      "cta": "Voir les étapes italiennes"
+      "description": "Le trek le plus célèbre des Alpes, ici en boucle complète : trois pays, les balcons du Val Ferret, les villages du Valais, les échelles des Aiguilles Rouges et la traversée du Bonhomme, avec retour en Val Veny par le col de la Seigne.",
+      "cta": "Voir toutes les étapes"
     },
     "monteRosa": {
       "name": "Tour du Monte Rosa",
-      "distance": "~170 km (IT VdA + Piémont + CH)",
-      "vdaSide": "~40 km",
-      "places": "Gressoney-la-Trinité, Champoluc, Brusson",
+      "distance": "~180 km · 10 étapes (Vallée d’Aoste · Piémont · CH)",
+      "vdaSide": "Gressoney, Ayas et le vallon des Cime Bianche",
+      "places": "Gressoney, col d’Olen, Alagna, Macugnaga, Saas-Fee (CH), Zermatt (CH), Cervinia, Champoluc",
       "difficulty": "E / EE",
       "season": "juillet – septembre",
-      "description": "Boucle autour du second massif alpin par l'altitude, vallées walser, glaciers du Lys et cols au-dessus de 2 700 m. Moins fréquenté que le TMB mais tout aussi grandiose.",
-      "cta": "Voir les étapes VdA"
+      "description": "La boucle complète autour du deuxième massif des Alpes : les vallées walser de Gressoney, Alagna et Macugnaga, le col de Monte Moro, l’Europaweg au-dessus du Mattertal, et le retour par le Théodule (étape de transfert sur glacier ou en téléphérique) et les Cime Bianche.",
+      "cta": "Voir toutes les étapes"
     },
     "cervino": {
       "name": "Tour du Cervin",
-      "distance": "~150 km, 8–10 jours",
-      "vdaSide": "Boucle Zermatt (CH) ↔ Breuil-Cervinia (IT)",
-      "places": "Valtournenche, Breuil-Cervinia, Plateau Rosa",
+      "distance": "~145 km · 8 étapes (IT · CH)",
+      "vdaSide": "Breuil-Cervinia, Valcournera, Prarayer",
+      "places": "Breuil-Cervinia, Prarayer, Arolla (CH), Zinal (CH), Gruben (CH), Zermatt (CH)",
       "difficulty": "E / EE",
       "season": "juillet – septembre",
-      "description": "Tourne autour de la pyramide la plus iconique des Alpes, alternant vallées italiennes et suisses. Côté valdôtain : Plateau Rosa et vues frontales sur le Cervin.",
-      "cta": "Voir les étapes VdA"
+      "description": "Le tour de la pyramide la plus iconique des Alpes sur le tracé du Tour du Cervin : le col de Valcournera vers Prarayer, les vallées valaisannes d’Hérens, de Moiry et d’Anniviers, l’Augstbordpass et Zermatt. Deux étapes (col Collon et Théodule) sont des transferts alpins sur glacier, avec guide ou par les remontées.",
+      "cta": "Voir toutes les étapes"
     },
     "granParadiso": {
       "name": "Tour du Grand Paradiso",
-      "distance": "~120 km, 7–9 jours",
+      "distance": "~95 km · 9 étapes (Vallée d’Aoste · Piémont)",
       "difficulty": "E",
       "season": "juin – septembre",
-      "description": "Boucle entièrement dans le Parc National du Grand Paradiso : Cogne, Valsavarenche et Val d'Orco (Piémont). Faune exceptionnelle — bouquetins quasi garantis.",
-      "cta": "Voir les étapes VdA"
+      "description": "Une boucle entièrement dans le Parc national du Grand-Paradis : la muletière royale du col Lauson, le plateau du Nivolet jusqu’au refuge Città di Chivasso au-dessus de la vallée de l’Orco (Piémont), et les cols Rosset et Entrelor entre Rhêmes et Valsavarenche. Bouquetins presque garantis.",
+      "cta": "Voir toutes les étapes"
     },
     "rutor": {
       "name": "Tour du Rutor",
-      "distance": "~55 km, 4–5 jours",
-      "vdaSide": "La Thuile — Arvier — Morgex",
+      "distance": "~90 km · 6 étapes (Vallée d’Aoste · France)",
+      "vdaSide": "La Thuile, Rutor, Valgrisenche",
       "difficulty": "E / EE",
       "season": "juillet – septembre",
-      "description": "Tour moins connu mais idéal pour observer un glacier actif. Boucle autour du Rutor, au-dessus de La Thuile : alpages tranquilles, lacs glaciaires et vue sur le Mont-Blanc occidental.",
-      "cta": "Voir les étapes VdA"
+      "description": "La boucle du glacier du Rutor entre Vallée d’Aoste et Tarentaise : les cascades et le refuge Deffeyes, les cols de la Haute Route n° 2 vers Valgrisenche, le col du Mont vers Sainte-Foy et le retour par le col du Petit-Saint-Bernard et le lac Verney.",
+      "cta": "Voir toutes les étapes"
     },
     "granCombin": {
       "name": "Tour du Grand Combin",
-      "distance": "~100 km, 6–8 jours",
-      "vdaSide": "Valpelline (IT) + Valais (CH)",
+      "distance": "~100 km · 7 étapes (Vallée d’Aoste · CH)",
+      "vdaSide": "Ollomont, la combe de By, le col Champillon",
       "difficulty": "EE",
       "season": "juillet – septembre",
-      "description": "Massif moins connu du grand public mais glaciologiquement spectaculaire : boucle transfrontalière avec cols au-dessus de 2 700 m et vues sur le Combin de Grafeneire.",
-      "cta": "Voir les étapes VdA"
+      "description": "Le Tour des Combins complet : du col Champillon au Grand-Saint-Bernard, les cabanes valaisannes de Mille, Brunet, Panossière (avec la passerelle de Corbassière) et Chanrion, et le retour en Valpelline par la Fenêtre de Durand.",
+      "cta": "Voir toutes les étapes"
     }
   },
   "FloraFauna": {

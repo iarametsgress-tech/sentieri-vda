@@ -1,0 +1,1042 @@
+{
+ "courmayeur": {
+  "q": "Courmayeur",
+  "cc": "it",
+  "lnglat": [
+   6.9730618,
+   45.7874248
+  ],
+  "elev": 1224,
+  "check": "nominatim 1.08km"
+ },
+ "rifugio-bertone": {
+  "q": "Rifugio Giorgio Bertone",
+  "cc": "it",
+  "lnglat": [
+   6.9788634,
+   45.8092416
+  ],
+  "elev": 1989,
+  "check": "nominatim2 0.58km"
+ },
+ "rifugio-bonatti": {
+  "q": "Rifugio Walter Bonatti",
+  "cc": "it",
+  "lnglat": [
+   7.0336398,
+   45.8469128
+  ],
+  "elev": 2025,
+  "check": "nominatim 0.26km"
+ },
+ "rifugio-elena": {
+  "q": "Rifugio Elena",
+  "cc": "it",
+  "lnglat": [
+   7.0656381,
+   45.8847187
+  ],
+  "elev": 2062,
+  "check": "nominatim 0.35km"
+ },
+ "grand-col-ferret": {
+  "q": "Grand col Ferret",
+  "cc": "it",
+  "lnglat": [
+   7.0778615,
+   45.8890289
+  ],
+  "elev": 2537,
+  "check": "nominatim 0.04km"
+ },
+ "la-fouly": {
+  "q": "La Fouly",
+  "cc": "ch",
+  "lnglat": [
+   7.0989678,
+   45.9331158
+  ],
+  "elev": 1610,
+  "check": "nominatim 0.4km"
+ },
+ "champex-lac": {
+  "q": "Champex-Lac",
+  "cc": "ch",
+  "lnglat": [
+   7.1168165,
+   46.0305776
+  ],
+  "elev": 1466,
+  "check": "nominatim 0.54km"
+ },
+ "alpage-bovine": {
+  "q": "Bovine",
+  "cc": "ch",
+  "lnglat": [
+   7.084,
+   46.048
+  ],
+  "elev": 1987,
+  "check": "prior (no nominatim match <4km)"
+ },
+ "trient": {
+  "q": "Trient",
+  "cc": "ch",
+  "lnglat": [
+   7.0651,
+   46.059
+  ],
+  "elev": 1300,
+  "check": "manual (villaggio Trient)"
+ },
+ "col-de-balme": {
+  "q": "Col de Balme",
+  "cc": "fr",
+  "lnglat": [
+   6.9702886,
+   46.0263673
+  ],
+  "elev": 2191,
+  "check": "nominatim 0.02km"
+ },
+ "tre-le-champ": {
+  "q": "Tré-le-Champ",
+  "cc": "fr",
+  "lnglat": [
+   6.929171,
+   45.9956337
+  ],
+  "elev": 1417,
+  "check": "nominatim 2.66km"
+ },
+ "la-flegere": {
+  "q": "La Flégère",
+  "cc": "fr",
+  "lnglat": [
+   6.8870748,
+   45.9605371
+  ],
+  "elev": 1877,
+  "check": "nominatim 0.15km"
+ },
+ "les-houches": {
+  "q": "Les Houches",
+  "cc": "fr",
+  "lnglat": [
+   6.799138,
+   45.891508
+  ],
+  "elev": 1007,
+  "check": "nominatim 0.11km"
+ },
+ "col-de-voza": {
+  "q": "Col de Voza",
+  "cc": "fr",
+  "lnglat": [
+   6.7613974,
+   45.8768605
+  ],
+  "elev": 1653,
+  "check": "nominatim 0.31km"
+ },
+ "les-contamines": {
+  "q": "Les Contamines-Montjoie",
+  "cc": "fr",
+  "lnglat": [
+   6.72751,
+   45.8210905
+  ],
+  "elev": 1167,
+  "check": "nominatim 0.12km"
+ },
+ "col-du-bonhomme": {
+  "q": "Col du Bonhomme",
+  "cc": "fr",
+  "lnglat": [
+   6.7066048,
+   45.735009
+  ],
+  "elev": 2329,
+  "check": "nominatim 1.62km"
+ },
+ "croix-du-bonhomme": {
+  "q": "Col de la Croix du Bonhomme",
+  "cc": "fr",
+  "lnglat": [
+   6.7187395,
+   45.7221409
+  ],
+  "elev": 2479,
+  "check": "nominatim 1.45km"
+ },
+ "les-chapieux": {
+  "q": "Les Chapieux",
+  "cc": "fr",
+  "lnglat": [
+   6.7335808,
+   45.6966794
+  ],
+  "elev": 1554,
+  "check": "nominatim 2.97km"
+ },
+ "col-de-la-seigne": {
+  "q": "Col de la Seigne",
+  "cc": "fr",
+  "lnglat": [
+   6.8072131,
+   45.7512639
+  ],
+  "elev": 2516,
+  "check": "nominatim 0.07km"
+ },
+ "rifugio-elisabetta": {
+  "q": "Rifugio Elisabetta Soldini",
+  "cc": "it",
+  "lnglat": [
+   6.8374366,
+   45.7670009
+  ],
+  "elev": 2195,
+  "check": "nominatim 1.83km"
+ },
+ "lac-combal": {
+  "q": "Lac Combal",
+  "cc": "it",
+  "lnglat": [
+   6.8602163,
+   45.7744367
+  ],
+  "elev": 1940,
+  "check": "nominatim2 0.92km"
+ },
+ "maison-vieille": {
+  "q": "Rifugio Maison Vieille",
+  "cc": "it",
+  "lnglat": [
+   6.9310687,
+   45.790787
+  ],
+  "elev": 1956,
+  "check": "nominatim 0.76km"
+ },
+ "gressoney-saint-jean": {
+  "q": "Gressoney-Saint-Jean",
+  "cc": "it",
+  "lnglat": [
+   7.8314544,
+   45.7827926
+  ],
+  "elev": 1385,
+  "check": "nominatim 0.82km"
+ },
+ "gressoney-la-trinite": {
+  "q": "Gressoney-La-Trinité",
+  "cc": "it",
+  "lnglat": [
+   7.8241273,
+   45.829612
+  ],
+  "elev": 1637,
+  "check": "nominatim 0.33km"
+ },
+ "rifugio-gabiet": {
+  "q": "Lago Gabiet",
+  "cc": "it",
+  "lnglat": [
+   7.8483662,
+   45.8495699
+  ],
+  "elev": 2375,
+  "check": "nominatim 0.5km"
+ },
+ "col-d-olen": {
+  "q": "Col d'Olen",
+  "cc": "it",
+  "lnglat": [
+   7.8687877,
+   45.8705005
+  ],
+  "elev": 2881,
+  "check": "nominatim 0.46km"
+ },
+ "alagna": {
+  "q": "Alagna Valsesia",
+  "cc": "it",
+  "lnglat": [
+   7.9371767,
+   45.8512107
+  ],
+  "elev": 1191,
+  "check": "nominatim 0.31km"
+ },
+ "colle-del-turlo": {
+  "q": "Colle del Turlo",
+  "cc": "it",
+  "lnglat": [
+   7.9579983,
+   45.9027263
+  ],
+  "elev": 2738,
+  "check": "nominatim 1.59km"
+ },
+ "macugnaga": {
+  "q": "Macugnaga",
+  "cc": "it",
+  "lnglat": [
+   7.9672651,
+   45.9683785
+  ],
+  "elev": 1327,
+  "check": "nominatim 0.09km"
+ },
+ "passo-monte-moro": {
+  "q": "Passo di Monte Moro",
+  "cc": "it",
+  "lnglat": [
+   7.9807466,
+   45.9983456
+  ],
+  "elev": 2853,
+  "check": "nominatim 0.2km"
+ },
+ "mattmark": {
+  "q": "Mattmark",
+  "cc": "ch",
+  "lnglat": [
+   7.9547644,
+   46.0481606
+  ],
+  "elev": 2197,
+  "check": "nominatim 0.96km"
+ },
+ "saas-almagell": {
+  "q": "Saas-Almagell",
+  "cc": "ch",
+  "lnglat": [
+   7.9582333,
+   46.0938913
+  ],
+  "elev": 1673,
+  "check": "nominatim 0.46km"
+ },
+ "saas-fee": {
+  "q": "Saas-Fee",
+  "cc": "ch",
+  "lnglat": [
+   7.9247055,
+   46.107342
+  ],
+  "elev": 1798,
+  "check": "nominatim 0.35km"
+ },
+ "grachen": {
+  "q": "Grächen",
+  "cc": "ch",
+  "lnglat": [
+   7.8421612,
+   46.1960178
+  ],
+  "elev": 1619,
+  "check": "nominatim 0.25km"
+ },
+ "europahutte": {
+  "q": "Europahütte",
+  "cc": "ch",
+  "lnglat": [
+   7.8059531,
+   46.1056548
+  ],
+  "elev": 2220,
+  "check": "nominatim 1.22km"
+ },
+ "zermatt": {
+  "q": "Zermatt",
+  "cc": "ch",
+  "lnglat": [
+   7.749254,
+   46.0212076
+  ],
+  "elev": 1608,
+  "check": "nominatim 0.06km"
+ },
+ "theodulpass": {
+  "q": "Theodulpass",
+  "cc": "ch",
+  "lnglat": [
+   7.7087135,
+   45.9434979
+  ],
+  "elev": 3295,
+  "check": "nominatim 0.56km"
+ },
+ "breuil-cervinia": {
+  "q": "Breuil-Cervinia",
+  "cc": "it",
+  "lnglat": [
+   7.6304397,
+   45.9356034
+  ],
+  "elev": 2006,
+  "check": "nominatim 0.11km"
+ },
+ "cime-bianche": {
+  "q": "Colle Superiore delle Cime Bianche",
+  "cc": "it",
+  "lnglat": [
+   7.6906928,
+   45.9189514
+  ],
+  "elev": 2982,
+  "check": "nominatim 0.73km"
+ },
+ "saint-jacques": {
+  "q": "Saint-Jacques, Ayas",
+  "cc": "it",
+  "lnglat": [
+   7.7308924,
+   45.8627596
+  ],
+  "elev": 1689,
+  "check": "nominatim 1.55km"
+ },
+ "champoluc": {
+  "q": "Champoluc",
+  "cc": "it",
+  "lnglat": [
+   7.7259957,
+   45.8316385
+  ],
+  "elev": 1568,
+  "check": "nominatim 0.35km"
+ },
+ "col-pinter": {
+  "q": "Colle Pinter",
+  "cc": "it",
+  "lnglat": [
+   7.777,
+   45.842
+  ],
+  "elev": 2777,
+  "check": "prior (no nominatim match <4km)"
+ },
+ "orionde": {
+  "q": "Rifugio Duca degli Abruzzi all'Oriondé",
+  "cc": "it",
+  "lnglat": [
+   7.6437783,
+   45.9590769
+  ],
+  "elev": 2802,
+  "check": "nominatim 0.64km"
+ },
+ "plan-maison": {
+  "q": "Plan Maison",
+  "cc": "it",
+  "lnglat": [
+   7.6547981,
+   45.9416023
+  ],
+  "elev": 2548,
+  "check": "nominatim 0.58km"
+ },
+ "tasch": {
+  "q": "Täsch",
+  "cc": "ch",
+  "lnglat": [
+   7.7770173,
+   46.0676751
+  ],
+  "elev": 1438,
+  "check": "nominatim 0.11km"
+ },
+ "randa": {
+  "q": "Randa",
+  "cc": "ch",
+  "lnglat": [
+   7.782412,
+   46.1002792
+  ],
+  "elev": 1406,
+  "check": "nominatim 0.15km"
+ },
+ "st-niklaus": {
+  "q": "St. Niklaus",
+  "cc": "ch",
+  "lnglat": [
+   7.802516,
+   46.177002
+  ],
+  "elev": 1127,
+  "check": "nominatim 0.12km"
+ },
+ "jungen": {
+  "q": "Jungen",
+  "cc": "ch",
+  "lnglat": [
+   7.7993203,
+   46.1954904
+  ],
+  "elev": 1955,
+  "check": "nominatim 1.19km"
+ },
+ "augstbordpass": {
+  "q": "Augstbordpass",
+  "cc": "ch",
+  "lnglat": [
+   7.7531945,
+   46.208754
+  ],
+  "elev": 2894,
+  "check": "nominatim 1.84km"
+ },
+ "gruben": {
+  "q": "Gruben",
+  "cc": "ch",
+  "lnglat": [
+   7.7069255,
+   46.2112722
+  ],
+  "elev": 1822,
+  "check": "overpass 2.78km (Gruben)"
+ },
+ "forcletta": {
+  "q": "Forcletta",
+  "cc": "ch",
+  "lnglat": [
+   7.6575926,
+   46.1807823
+  ],
+  "elev": 2874,
+  "check": "nominatim 2.24km"
+ },
+ "zinal": {
+  "q": "Zinal",
+  "cc": "ch",
+  "lnglat": [
+   7.6267982,
+   46.136287
+  ],
+  "elev": 1675,
+  "check": "nominatim 0.37km"
+ },
+ "col-de-torrent": {
+  "q": "Col de Torrent",
+  "cc": "ch",
+  "lnglat": [
+   7.5326351,
+   46.1299949
+  ],
+  "elev": 2916,
+  "check": "nominatim2 4.56km"
+ },
+ "les-hauderes": {
+  "q": "Les Haudères",
+  "cc": "ch",
+  "lnglat": [
+   7.5075706,
+   46.0827039
+  ],
+  "elev": 1452,
+  "check": "nominatim 0.13km"
+ },
+ "arolla": {
+  "q": "Arolla",
+  "cc": "ch",
+  "lnglat": [
+   7.4810866,
+   46.025975
+  ],
+  "elev": 2006,
+  "check": "nominatim 0.23km"
+ },
+ "col-collon": {
+  "q": "Col Collon",
+  "cc": "ch",
+  "lnglat": [
+   7.5133942,
+   45.9609008
+  ],
+  "elev": 3074,
+  "check": "nominatim 1.52km"
+ },
+ "rifugio-prarayer": {
+  "q": "Rifugio Prarayer",
+  "cc": "it",
+  "lnglat": [
+   7.5329516,
+   45.921088
+  ],
+  "elev": 2005,
+  "check": "nominatim 3.62km"
+ },
+ "col-di-valcournera": {
+  "q": "Col di Valcournera",
+  "cc": "it",
+  "lnglat": [
+   7.5599336,
+   45.9019853
+  ],
+  "elev": 3072,
+  "check": "overpass 2.13km (Colle de Valcournera)"
+ },
+ "lago-place-moulin": {
+  "q": "Lago di Place Moulin",
+  "cc": "it",
+  "lnglat": [
+   7.5118892,
+   45.9077276
+  ],
+  "elev": 1968,
+  "check": "nominatim 3.53km"
+ },
+ "cogne": {
+  "q": "Cogne",
+  "cc": "it",
+  "lnglat": [
+   7.3561,
+   45.6083
+  ],
+  "elev": 1534,
+  "check": "manual (centro Cogne)"
+ },
+ "valnontey": {
+  "q": "Valnontey",
+  "cc": "it",
+  "lnglat": [
+   7.341223,
+   45.5867129
+  ],
+  "elev": 1666,
+  "check": "nominatim 0.95km"
+ },
+ "rifugio-vittorio-sella": {
+  "q": "Rifugio Vittorio Sella",
+  "cc": "it",
+  "lnglat": [
+   7.303272,
+   45.5801976
+  ],
+  "elev": 2588,
+  "check": "nominatim 1.33km"
+ },
+ "col-lauson": {
+  "q": "Col Lauson",
+  "cc": "it",
+  "lnglat": [
+   7.2690802,
+   45.5777005
+  ],
+  "elev": 3296,
+  "check": "nominatim 2.64km"
+ },
+ "eaux-rousses": {
+  "q": "Eaux Rousses",
+  "cc": "it",
+  "lnglat": [
+   7.2086196,
+   45.5671392
+  ],
+  "elev": 1666,
+  "check": "nominatim 0.21km"
+ },
+ "pont-valsavarenche": {
+  "q": "Pont, Valsavarenche",
+  "cc": "it",
+  "lnglat": [
+   7.2023748,
+   45.52746
+  ],
+  "elev": 1960,
+  "check": "nominatim 0.17km"
+ },
+ "col-del-nivolet": {
+  "q": "Colle del Nivolet",
+  "cc": "it",
+  "lnglat": [
+   7.1423209,
+   45.4792099
+  ],
+  "elev": 2612,
+  "check": "nominatim 0.21km"
+ },
+ "rifugio-chivasso": {
+  "q": "Rifugio Città di Chivasso",
+  "cc": "it",
+  "lnglat": [
+   7.142839,
+   45.4797953
+  ],
+  "elev": 2604,
+  "check": "nominatim 0.34km"
+ },
+ "lago-serru": {
+  "q": "Lago Serrù",
+  "cc": "it",
+  "lnglat": [
+   7.1260486,
+   45.4593442
+  ],
+  "elev": 2275,
+  "check": "nominatim 0.92km"
+ },
+ "ceresole-reale": {
+  "q": "Ceresole Reale",
+  "cc": "it",
+  "lnglat": [
+   7.232401,
+   45.4324775
+  ],
+  "elev": 1612,
+  "check": "nominatim 0.21km"
+ },
+ "col-rosset": {
+  "q": "Col Rosset",
+  "cc": "it",
+  "lnglat": [
+   7.1256778,
+   45.5106567
+  ],
+  "elev": 3023,
+  "check": "nominatim 1.41km"
+ },
+ "rhemes-notre-dame": {
+  "q": "Rhêmes-Notre-Dame",
+  "cc": "it",
+  "lnglat": [
+   7.1181711,
+   45.5688827
+  ],
+  "elev": 1725,
+  "check": "nominatim 0.1km"
+ },
+ "col-entrelor": {
+  "q": "Col Entrelor",
+  "cc": "it",
+  "lnglat": [
+   7.157221,
+   45.5476168
+  ],
+  "elev": 3007,
+  "check": "nominatim 0.71km"
+ },
+ "lago-djouan": {
+  "q": "Lago Djouan",
+  "cc": "it",
+  "lnglat": [
+   7.1787938,
+   45.5577104
+  ],
+  "elev": 2515,
+  "check": "nominatim 0.59km"
+ },
+ "la-thuile": {
+  "q": "La Thuile",
+  "cc": "it",
+  "lnglat": [
+   6.9485,
+   45.7152
+  ],
+  "elev": 1441,
+  "check": "manual (centro La Thuile)"
+ },
+ "rifugio-deffeyes": {
+  "q": "Rifugio Albert Deffeyes",
+  "cc": "it",
+  "lnglat": [
+   6.9859261,
+   45.6753995
+  ],
+  "elev": 2494,
+  "check": "nominatim 1.8km"
+ },
+ "passo-alto": {
+  "q": "Passo Alto",
+  "cc": "it",
+  "lnglat": [
+   7.0131089,
+   45.6828335
+  ],
+  "elev": 2857,
+  "check": "nominatim 3.35km"
+ },
+ "promoud": {
+  "q": "Promoud",
+  "cc": "it",
+  "lnglat": [
+   6.98617,
+   45.675339
+  ],
+  "elev": 2485,
+  "check": "da GPX AV2 tappa 3"
+ },
+ "col-crosatie": {
+  "q": "Col de la Crosatie",
+  "cc": "it",
+  "lnglat": [
+   7.052323,
+   45.6872756
+  ],
+  "elev": 2829,
+  "check": "nominatim 3.02km"
+ },
+ "planaval": {
+  "q": "Planaval, Arvier",
+  "cc": "it",
+  "lnglat": [
+   7.0800418,
+   45.6731324
+  ],
+  "elev": 1557,
+  "check": "overpass 4.78km (Planaval)"
+ },
+ "valgrisenche": {
+  "q": "Valgrisenche",
+  "cc": "it",
+  "lnglat": [
+   7.0647408,
+   45.6311691
+  ],
+  "elev": 1664,
+  "check": "nominatim 0.19km"
+ },
+ "col-du-mont": {
+  "q": "Col du Mont",
+  "cc": "it",
+  "lnglat": [
+   6.981788,
+   45.6014792
+  ],
+  "elev": 2639,
+  "check": "nominatim 2.59km"
+ },
+ "le-monal": {
+  "q": "Le Monal, Sainte-Foy-Tarentaise",
+  "cc": "fr",
+  "lnglat": [
+   6.9223094,
+   45.5547289
+  ],
+  "elev": 1874,
+  "check": "nominatim2 5.03km"
+ },
+ "sainte-foy": {
+  "q": "Sainte-Foy-Tarentaise",
+  "cc": "fr",
+  "lnglat": [
+   6.8849094,
+   45.590355
+  ],
+  "elev": 1051,
+  "check": "nominatim 0.56km"
+ },
+ "la-rosiere": {
+  "q": "La Rosière, Montvalezan",
+  "cc": "fr",
+  "lnglat": [
+   6.847838,
+   45.6285962
+  ],
+  "elev": 1850,
+  "check": "nominatim 0.25km"
+ },
+ "petit-saint-bernard": {
+  "q": "Col du Petit Saint-Bernard",
+  "cc": "fr",
+  "lnglat": [
+   6.8829399,
+   45.6792488
+  ],
+  "elev": 2188,
+  "check": "nominatim 0.08km"
+ },
+ "lago-verney": {
+  "q": "Lago Verney",
+  "cc": "it",
+  "lnglat": [
+   6.8825188,
+   45.6882306
+  ],
+  "elev": 2088,
+  "check": "nominatim 0.82km"
+ },
+ "ollomont": {
+  "q": "Ollomont",
+  "cc": "it",
+  "lnglat": [
+   7.3106437,
+   45.8496551
+  ],
+  "elev": 1356,
+  "check": "nominatim 0.1km"
+ },
+ "by": {
+  "q": "By, Ollomont",
+  "cc": "it",
+  "lnglat": [
+   7.305,
+   45.868
+  ],
+  "elev": 2042,
+  "check": "manual (conca di By)"
+ },
+ "col-champillon": {
+  "q": "Col Champillon",
+  "cc": "it",
+  "lnglat": [
+   7.2593959,
+   45.8501587
+  ],
+  "elev": 2709,
+  "check": "nominatim 0.94km"
+ },
+ "saint-rhemy": {
+  "q": "Saint-Rhémy-en-Bosses",
+  "cc": "it",
+  "lnglat": [
+   7.1821889,
+   45.8237439
+  ],
+  "elev": 1632,
+  "check": "nominatim 0.56km"
+ },
+ "gran-san-bernardo": {
+  "q": "Col du Grand Saint-Bernard",
+  "cc": "ch",
+  "lnglat": [
+   7.1704088,
+   45.8690526
+  ],
+  "elev": 2473,
+  "check": "nominatim 0.02km"
+ },
+ "bourg-saint-pierre": {
+  "q": "Bourg-Saint-Pierre",
+  "cc": "ch",
+  "lnglat": [
+   7.2088271,
+   45.9489252
+  ],
+  "elev": 1632,
+  "check": "nominatim 0.17km"
+ },
+ "cabane-de-mille": {
+  "q": "Cabane de Mille",
+  "cc": "ch",
+  "lnglat": [
+   7.2065712,
+   46.0136689
+  ],
+  "elev": 2473,
+  "check": "nominatim 2.83km"
+ },
+ "cabane-brunet": {
+  "q": "Cabane Brunet",
+  "cc": "ch",
+  "lnglat": [
+   7.274198,
+   46.0303392
+  ],
+  "elev": 2103,
+  "check": "nominatim 2.6km"
+ },
+ "col-des-avouillons": {
+  "q": "Col des Avouillons",
+  "cc": "ch",
+  "lnglat": [
+   7.2799363,
+   46.0068889
+  ],
+  "elev": 2647,
+  "check": "nominatim 2.43km"
+ },
+ "cabane-panossiere": {
+  "q": "Cabane FXB Panossière",
+  "cc": "ch",
+  "lnglat": [
+   7.2997576,
+   45.9987224
+  ],
+  "elev": 2641,
+  "check": "nominatim 1.61km"
+ },
+ "col-de-tsofeiret": {
+  "q": "Col de Tsofeiret",
+  "cc": "ch",
+  "lnglat": [
+   7.3800972,
+   45.9515345
+  ],
+  "elev": 2635,
+  "check": "nominatim 1.59km"
+ },
+ "cabane-de-chanrion": {
+  "q": "Cabane de Chanrion",
+  "cc": "ch",
+  "lnglat": [
+   7.3809633,
+   45.939194
+  ],
+  "elev": 2462,
+  "check": "nominatim 0.5km"
+ },
+ "fenetre-de-durand": {
+  "q": "Fenêtre de Durand",
+  "cc": "it",
+  "lnglat": [
+   7.3565068,
+   45.9105498
+  ],
+  "elev": 2797,
+  "check": "nominatim 0.96km"
+ },
+ "col-de-sorebois": {
+  "q": "Col de Sorebois",
+  "cc": "ch",
+  "lnglat": [
+   7.5871594,
+   46.1423168
+  ],
+  "elev": 2835,
+  "check": "nominatim2 2.16km"
+ },
+ "barrage-de-moiry": {
+  "q": "Barrage de Moiry",
+  "cc": "ch",
+  "lnglat": [
+   7.566,
+   46.139
+  ],
+  "elev": 2249,
+  "check": "prior"
+ },
+ "col-des-otanes": {
+  "q": "Col des Otanes",
+  "cc": "ch",
+  "lnglat": [
+   7.3096029,
+   45.9971635
+  ],
+  "elev": 2846,
+  "check": "nominatim2 0.00km"
+ },
+ "mauvoisin": {
+  "q": "Mauvoisin",
+  "cc": "ch",
+  "lnglat": [
+   7.3423019,
+   46.0028406
+  ],
+  "elev": 1841,
+  "check": "nominatim2 3.02km"
+ },
+ "le-peuty": {
+  "q": "Le Peuty, Trient",
+  "cc": "ch",
+  "lnglat": [
+   7.0648,
+   46.0525
+  ],
+  "elev": 1326,
+  "check": "manual"
+ }
+}

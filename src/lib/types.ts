@@ -6,8 +6,10 @@ export type Difficulty = z.infer<typeof DifficultySchema>;
 export const SeasonSchema = z.enum(['spring', 'summer', 'autumn', 'winter', 'all-year']);
 
 export const CoordsSchema = z.object({
-  lat: z.number().min(45).max(46),  // Valle d'Aosta bounds
-  lng: z.number().min(6.5).max(8),
+  // Arco alpino nord-occidentale: include VdA e le tappe estere dei tour
+  // (Alta Savoia, Vallese, Tarentaise, Piemonte).
+  lat: z.number().min(45.2).max(46.4),
+  lng: z.number().min(6.4).max(8.2),
 });
 export type Coords = z.infer<typeof CoordsSchema>;
 

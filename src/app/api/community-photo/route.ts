@@ -35,25 +35,34 @@ export async function GET(request: Request) {
   const entity = url.searchParams.get('entity') ?? '';
   const slug = url.searchParams.get('slug') ?? '';
   const status = url.searchParams.get('status') ?? 'approved';
-  if (!ENTITIES.has(entity) || !SLUG_RE.test(slug)) {
-    return NextResponse.json({ photos: [] });
-  }
-  if (!hasStore()) return NextResponse.json({ photos: [], storage: false });
 
   if (status === 'pending') {
     if (!isAdmin(request)) {
       return NextResponse.json({ error: 'forbidden' }, { status: 403 });
     }
+    if (!hasStore()) return NextResponse.json({ photos: [], storage: false });
+    // Senza entity/slug elenca TUTTE le foto in attesa (vista moderatore).
+    const prefix =
+      ENTITIES.has(entity) && SLUG_RE.test(slug)
+        ? pendingPrefix(entity, slug)
+        : 'community/pending/';
     try {
-      const { blobs } = await list({ prefix: pendingPrefix(entity, slug) });
+      const { blobs } = await list({ prefix });
       return NextResponse.json({
-        photos: blobs.map((b) => ({ url: b.url, pathname: b.pathname, uploadedAt: b.uploadedAt })),
+        photos: blobs
+          .sort((a, b) => +new Date(b.uploadedAt) - +new Date(a.uploadedAt))
+          .map((b) => ({ url: b.url, pathname: b.pathname, uploadedAt: b.uploadedAt })),
         storage: true,
       });
     } catch {
       return NextResponse.json({ photos: [], storage: false });
     }
   }
+
+  if (!ENTITIES.has(entity) || !SLUG_RE.test(slug)) {
+    return NextResponse.json({ photos: [] });
+  }
+  if (!hasStore()) return NextResponse.json({ photos: [], storage: false });
 
   try {
     const { blobs } = await list({ prefix: approvedPrefix(entity, slug) });

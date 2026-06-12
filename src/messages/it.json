@@ -314,9 +314,9 @@
       "difficulty": "Difficoltà",
       "season": "Periodo"
     },
-    "badgeAvailable": "Tappe italiane disponibili",
+    "badgeAvailable": "Anello completo disponibile",
     "badgeSoon": "Prossimamente",
-    "badgeStages": "{count} tappe VdA disponibili",
+    "badgeStages": "{count} tappe",
     "comingSoonCta": "Scheda in preparazione",
     "selectTour": "Seleziona un tour",
     "exploreStages": "Vedi le tappe",
@@ -329,59 +329,59 @@
     "outsideRegion": "Fuori regione",
     "tmb": {
       "name": "Tour del Monte Bianco (TMB)",
-      "distance": "170 km totali (IT + FR + CH)",
-      "vdaSide": "~50 km, 3–4 tappe",
-      "places": "Courmayeur, Rif. Bertone (2.011 m), Rif. Bonatti (2.025 m), Rif. Elena (2.062 m), La Fouly (CH)",
+      "distance": "~160 km · 13 tappe (IT · CH · FR)",
+      "vdaSide": "Tappe 1–4 e 12–13 in Valle d’Aosta",
+      "places": "Courmayeur, Rif. Bertone, Rif. Bonatti, Rif. Elena, La Fouly (CH), Champex (CH), Chamonix (FR), Rif. Elisabetta",
       "difficulty": "E",
       "season": "luglio – settembre",
-      "description": "Il percorso più famoso delle Alpi: dieci giorni completi, tre nazioni, panorami costanti sul versante sud del Monte Bianco. Il tratto italiano in Val Ferret — da Courmayeur al Col de la Seigne — è considerato il più spettacolare dell'intero anello.",
-      "cta": "Vedi le tappe italiane"
+      "description": "Il percorso più famoso delle Alpi, qui nell’anello completo: tre nazioni, i balconi della Val Ferret, i villaggi del Vallese, le scale degli Aiguilles Rouges e la traversata del Bonhomme, fino al ritorno in Val Veny dal Col de la Seigne.",
+      "cta": "Vedi tutte le tappe"
     },
     "monteRosa": {
       "name": "Tour del Monte Rosa",
-      "distance": "~170 km (IT VdA + Piemonte + CH)",
-      "vdaSide": "~40 km",
-      "places": "Gressoney-la-Trinité, Champoluc, Brusson",
+      "distance": "~180 km · 10 tappe (VdA · Piemonte · CH)",
+      "vdaSide": "Gressoney, Ayas e il vallone delle Cime Bianche",
+      "places": "Gressoney, Col d’Olen, Alagna, Macugnaga, Saas-Fee (CH), Zermatt (CH), Cervinia, Champoluc",
       "difficulty": "E / EE",
       "season": "luglio – settembre",
-      "description": "Anello attorno al secondo massiccio alpino per altitudine, attraversando valli walser, ghiacciai del Lys e passi sopra i 2.700 m. Il lato valdostano collega Gressoney, Ayas e Valsesia in un percorso meno affollato del TMB ma altrettanto grandioso.",
-      "cta": "Vedi le tappe VdA"
+      "description": "L’anello completo attorno al secondo massiccio delle Alpi: le valli walser di Gressoney, Alagna e Macugnaga, il Passo di Monte Moro, l’Europaweg sopra il Mattertal e il rientro dal Teodulo (tappa di trasferimento su ghiacciaio o in funivia) e dalle Cime Bianche.",
+      "cta": "Vedi tutte le tappe"
     },
     "cervino": {
       "name": "Tour del Cervino (Tour du Matterhorn)",
-      "distance": "~150 km, 8–10 giorni",
-      "vdaSide": "Anello Zermatt (CH) ↔ Breuil-Cervinia (IT)",
-      "places": "Valtournenche, Breuil-Cervinia, Plateau Rosa",
+      "distance": "~145 km · 8 tappe (IT · CH)",
+      "vdaSide": "Breuil-Cervinia, Valcournera, Prarayer",
+      "places": "Breuil-Cervinia, Prarayer, Arolla (CH), Zinal (CH), Gruben (CH), Zermatt (CH)",
       "difficulty": "E / EE",
       "season": "luglio – settembre",
-      "description": "Gira attorno alla piramide più iconica delle Alpi, alternando valli italiane e svizzere. Il lato valdostano offre il Plateau Rosa, i rifugi sopra Valtournenche e viste frontali sul Cervino che pochi altri sentieri eguagliano.",
-      "cta": "Vedi le tappe VdA"
+      "description": "Il giro della piramide più iconica delle Alpi sul tracciato del Tour du Cervin: il Col di Valcournera verso Prarayer, le valli vallesane di Hérens, Moiry e Anniviers, l’Augstbordpass e Zermatt. Due tappe (Col Collon e Teodulo) sono trasferimenti alpinistici su ghiacciaio, con guida o impianti.",
+      "cta": "Vedi tutte le tappe"
     },
     "granParadiso": {
       "name": "Tour del Gran Paradiso",
-      "distance": "~120 km, 7–9 giorni",
+      "distance": "~95 km · 9 tappe (VdA · Piemonte)",
       "difficulty": "E",
       "season": "giugno – settembre",
-      "description": "Anello interamente nel Parco Nazionale Gran Paradiso: Cogne, Valsavarenche e Valle dell'Orco (Piemonte). Fauna straordinaria — stambecchi quasi certi — e paesaggio studiato da glaciologi e geografi come laboratorio del cambiamento climatico alpino.",
-      "cta": "Vedi le tappe VdA"
+      "description": "Anello interamente nel Parco Nazionale Gran Paradiso: la mulattiera reale del Col Lauson, il piano del Nivolet fino al Rifugio Città di Chivasso in Valle Orco (Piemonte), il Col Rosset e il Col Entrelor fra Rhêmes e Valsavarenche. Stambecchi quasi garantiti.",
+      "cta": "Vedi tutte le tappe"
     },
     "rutor": {
       "name": "Tour del Rutor",
-      "distance": "~55 km, 4–5 giorni",
-      "vdaSide": "La Thuile — Arvier — Morgex",
+      "distance": "~90 km · 6 tappe (VdA · Francia)",
+      "vdaSide": "La Thuile, Rutor, Valgrisenche",
       "difficulty": "E / EE",
       "season": "luglio – settembre",
-      "description": "Uno dei tour meno conosciuti ma tra i più accessibili per osservare un ghiacciaio attivo. L'anello attorno al Rutor, sopra La Thuile, combina alpeggi tranquilli, laghi glaciali e vista sul Monte Bianco occidentale.",
-      "cta": "Vedi le tappe VdA"
+      "description": "L’anello del ghiacciaio del Rutor fra Valle d’Aosta e Tarentaise: le cascate e il Rifugio Deffeyes, i passi dell’Alta Via 2 verso Valgrisenche, il Col du Mont verso Sainte-Foy e il ritorno dal Colle del Piccolo San Bernardo con il lago Verney.",
+      "cta": "Vedi tutte le tappe"
     },
     "granCombin": {
       "name": "Tour del Gran Combin",
-      "distance": "~100 km, 6–8 giorni",
-      "vdaSide": "Valpelline (IT) + Vallese (CH)",
+      "distance": "~100 km · 7 tappe (VdA · CH)",
+      "vdaSide": "Ollomont, conca di By, Col Champillon",
       "difficulty": "EE",
       "season": "luglio – settembre",
-      "description": "Massiccio meno noto al grande pubblico ma glaciologicamente spettacolare: l'anello transfrontaliero attraversa la Valpelline e il versante svizzero con passi sopra i 2.700 m e viste sul Combin de Grafeneire.",
-      "cta": "Vedi le tappe VdA"
+      "description": "Il Tour des Combins completo: dal Col Champillon al Gran San Bernardo, le cabanes vallesane di Mille, Brunet, Panossière (con la passerella di Corbassière) e Chanrion, e il rientro in Valpelline dalla Fenêtre de Durand.",
+      "cta": "Vedi tutte le tappe"
     }
   },
   "FloraFauna": {
