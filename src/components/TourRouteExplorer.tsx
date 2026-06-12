@@ -40,7 +40,10 @@ export type TourRouteData = {
     coords: [number, number];
     label: string;
     elevation: number;
-    type: 'start' | 'end';
+    type: 'start' | 'end' | 'stage';
+    number?: number;
+    href?: string;
+    color?: string;
   }[];
 };
 

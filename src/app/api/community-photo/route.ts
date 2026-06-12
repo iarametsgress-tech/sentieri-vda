@@ -76,8 +76,8 @@ export async function GET(request: Request) {
 }
 
 /**
- * POST (multipart: file, entity, slug) → carica una foto IN MODERAZIONE (pending).
- * Non compare pubblicamente finché un moderatore non la approva.
+ * POST (multipart: file, entity, slug) → pubblica subito la foto (moderazione
+ * disattivata per ora: gli endpoint admin restano per rimuovere abusi a posteriori).
  */
 export async function POST(request: Request) {
   if (!hasStore()) {
@@ -107,13 +107,12 @@ export async function POST(request: Request) {
   const ext = file.type === 'image/png' ? 'png' : file.type === 'image/webp' ? 'webp' : 'jpg';
   const id = `${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
   try {
-    await put(`${pendingPrefix(entity, slug)}${id}.${ext}`, file, {
+    const blob = await put(`${approvedPrefix(entity, slug)}${id}.${ext}`, file, {
       access: 'public',
       contentType: file.type,
       addRandomSuffix: false,
     });
-    // moderato: nessuna URL pubblica restituita finché non approvata
-    return NextResponse.json({ moderated: true });
+    return NextResponse.json({ published: true, url: blob.url });
   } catch {
     return NextResponse.json({ error: 'upload_failed' }, { status: 500 });
   }
@@ -137,7 +136,9 @@ export async function PUT(request: Request) {
     return NextResponse.json({ error: 'bad_request' }, { status: 400 });
   }
   const { action, pathname, url } = body;
-  if (!pathname || !pathname.startsWith('community/pending/')) {
+  // reject può rimuovere anche foto già pubblicate (pulizia abusi)
+  const validPrefix = action === 'reject' ? 'community/' : 'community/pending/';
+  if (!pathname || !pathname.startsWith(validPrefix)) {
     return NextResponse.json({ error: 'invalid_pathname' }, { status: 400 });
   }
   try {

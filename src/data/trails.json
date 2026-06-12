@@ -169,9 +169,9 @@
     "shortDescription_en": "Balcony trail along Val Ferret facing the Mont Blanc massif. Quite possibly Italy's finest panorama.",
     "description_it": "Dal parcheggio di Lavachey si sale al Rifugio Bonatti (2025 m) lungo il sentiero del TMB. Il panorama sulle Grandes Jorasses, il Dente del Gigante e il Mont Dolent toglie il fiato. Discesa per Pra Sec o ritorno per la stessa via. Adatto anche a famiglie con bambini abituati al cammino.",
     "description_en": "From Lavachey car park the trail climbs to Rifugio Bonatti (2025 m) along the Tour du Mont Blanc route. The view onto Grandes Jorasses, Dent du Géant and Mont Dolent is staggering. Descend via Pra Sec or return the same way. Family-friendly for kids used to walking.",
-    "distance_km": 9.2,
-    "elevation_gain_m": 620,
-    "elevation_loss_m": 620,
+    "distance_km": 13.2,
+    "elevation_gain_m": 650,
+    "elevation_loss_m": 650,
     "duration_hours": 4,
     "difficulty": "E",
     "season": [
@@ -181,16 +181,16 @@
     "start": {
       "name": "Lavachey",
       "coords": {
-        "lat": 45.881631,
-        "lng": 7.064373
+        "lat": 45.866477,
+        "lng": 7.036159
       },
       "elevation_m": 1642
     },
     "end": {
       "name": "Lavachey",
       "coords": {
-        "lat": 45.881631,
-        "lng": 7.064373
+        "lat": 45.866477,
+        "lng": 7.036159
       },
       "elevation_m": 1642
     },

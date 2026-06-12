@@ -1,25 +1,19 @@
-feat: foto reali per ogni tappa, contenuti editoriali approfonditi, mappe tour complete, schede rifugi ricche
+feat: gpx valichi su ghiacciaio, anello Bonatti rifatto, marker tappe numerati, foto community immediate
 
-Tour:
-- 53 foto uniche, reali e geolocalizzate da Wikimedia Commons (una per
-  tappa, legata al percorso, con credito e licenza); filtri anti-foto
-  fuori tema (satellitari, hotel, panorami 360) e dedup tra tappe
-- descrizioni delle 53 tappe ampliate con un paragrafo editoriale in
-  4 lingue (dettagli reali di percorso, storia, acqua, trasporti)
-- mappa del tour: maxBounds estesi all'arco alpino NW (prima le tappe
-  svizzere/francesi venivano tagliate) e traccia piu' densa (140 pt/tappa)
-
-Rifugi:
-- minimappa con SOLO il punto del rifugio (tolte le tracce dei sentieri)
-- nuova sezione "Vette vicine" con link alle pagine montagne
-  (mappatura geografica valle -> vette, dataset Ambiente)
-- 24 schede principali arricchite: descrizione estesa + storia
-  documentata in 4 lingue (Margherita 1893, ospizio GSB ~1050,
-  V.Emanuele II 1884, Monte Rosa Hutte 2009, Gervasutti 2011, ecc.)
-- pagina rifugio: descrizioni e blocchi multi-paragrafo
-
-UI:
-- logo navbar rigenerato: solo emblema montagne (il vecchio mark aveva
-  la scritta tagliata a meta' dentro il file), dimensioni corrette
+- GPX per le tratte di valico: Zermatt-Breuil-Cervinia via Teodulo
+  (tappa 8 Monte Rosa e tappa 8 Cervino) e Prarayer-Arolla via Col
+  Collon (tappa 2 Cervino). Tratti instradabili dalla rete OSM
+  (BRouter); sul ghiacciaio corridoio indicativo del passo storico,
+  con avvertenza nel gpx e tappa sempre marcata transfer.
+- Anello del Rifugio Bonatti rigenerato (la vecchia traccia passava
+  a 1 km dal rifugio): Lavachey - Arnouva - Rifugio Bonatti -
+  Lavachey, 13.2 km su sentieri reali; dati e coordinate sincronizzati.
+- Mappe dei tour: tolti i marker A/B; ogni tappa ha un badge numerato
+  sul punto di partenza, con tooltip e click che porta alla scheda
+  della tappa (colore del tour).
+- Foto community: pubblicazione immediata senza moderazione (upload
+  diretto in approved/, la foto compare subito nella griglia);
+  endpoint admin reject esteso anche alle foto pubblicate per
+  eventuale pulizia; testi galleria aggiornati nelle 4 lingue.
 
 Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>

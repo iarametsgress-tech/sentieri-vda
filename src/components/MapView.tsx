@@ -9,7 +9,13 @@ interface MarkerPoint {
   coords: [number, number]; // [lng, lat]
   label: string;
   elevation: number;
-  type: 'start' | 'end';
+  type: 'start' | 'end' | 'stage';
+  /** Numero tappa (per type: 'stage') */
+  number?: number;
+  /** Link alla pagina della tappa (per type: 'stage') */
+  href?: string;
+  /** Colore del badge tappa */
+  color?: string;
 }
 
 export interface RouteHighlight {
@@ -51,6 +57,51 @@ function createMapLabelEl(text: string): HTMLElement {
     backdrop-filter: blur(6px); pointer-events: none;
   `;
   return el;
+}
+
+/** Badge numerato cliccabile per le tappe dei tour. */
+function createStageMarkerEl(m: MarkerPoint): HTMLElement {
+  const color = m.color ?? '#D4A574';
+  const link = document.createElement('a');
+  link.href = m.href ?? '#';
+  link.setAttribute('aria-label', m.label);
+  link.style.cssText = `
+    position: relative; display: flex; align-items: center; justify-content: center;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: #0A0A0A; border: 2px solid ${color};
+    color: ${color}; font-family: monospace; font-size: 12px; font-weight: 700;
+    text-decoration: none; cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.55);
+    transition: transform 0.12s ease, background 0.12s ease;
+  `;
+  link.textContent = String(m.number ?? '');
+
+  const popup = document.createElement('div');
+  popup.style.cssText = `
+    position: absolute; bottom: 34px; left: 50%; transform: translateX(-50%);
+    background: #0A0A0A; border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px; padding: 4px 8px; white-space: nowrap;
+    font-size: 11px; color: #FAFAF7; font-family: monospace;
+    pointer-events: none; opacity: 0; transition: opacity 0.15s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5); z-index: 5;
+  `;
+  popup.textContent = m.label;
+  link.appendChild(popup);
+
+  link.addEventListener('mouseenter', () => {
+    link.style.transform = 'scale(1.18)';
+    link.style.background = color;
+    link.style.color = '#0A0A0A';
+    popup.style.opacity = '1';
+  });
+  link.addEventListener('mouseleave', () => {
+    link.style.transform = 'scale(1)';
+    link.style.background = '#0A0A0A';
+    link.style.color = color;
+    popup.style.opacity = '0';
+  });
+  link.addEventListener('click', (e) => e.stopPropagation());
+  return link;
 }
 
 function createMarkerEl(type: 'start' | 'end', label: string, elevation: number): HTMLElement {
@@ -328,6 +379,12 @@ export default function MapView({
 
       if (markerPoints.length) {
         markerPoints.forEach((m) => {
+          if (m.type === 'stage') {
+            new maplibregl.Marker({ element: createStageMarkerEl(m), anchor: 'center' })
+              .setLngLat(m.coords)
+              .addTo(map);
+            return;
+          }
           const el = createMarkerEl(m.type, m.label, m.elevation);
           new maplibregl.Marker({ element: el, anchor: 'bottom' })
             .setLngLat(m.coords)

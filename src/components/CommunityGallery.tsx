@@ -72,6 +72,9 @@ export default function CommunityGallery({
       fd.append('entity', entity);
       const res = await fetch('/api/community-photo', { method: 'POST', body: fd });
       if (!res.ok) throw new Error('upload');
+      const data = await res.json();
+      // pubblicazione immediata: la foto compare subito in cima alla griglia
+      if (data?.url) setPhotos((prev) => [{ url: data.url }, ...prev]);
       setSubmitted(true);
     } catch {
       setError(labels.errorGeneric);

@@ -775,7 +775,7 @@
     "doTitle": "Que faire sur place",
     "aboutBivouacTitle": "Qu'est-ce qu'un bivouac",
     "galleryTitle": "Galerie de la communauté",
-    "gallerySubtitle": "Vous êtes venu ici ? Téléchargez votre photo : après une vérification rapide, elle sera publiée sur cette fiche.",
+    "gallerySubtitle": "Vous êtes passé par ici ? Téléversez votre photo : elle apparaîtra aussitôt dans la galerie.",
     "galleryCta": "Ajouter une photo",
     "galleryUploading": "Téléchargement…",
     "galleryEmpty": "Pas encore de photos de la communauté. Soyez le premier à en partager une.",
@@ -783,8 +783,8 @@
     "galleryErrLarge": "Image trop lourde (max 6 Mo).",
     "galleryErrGeneric": "Échec du téléchargement, réessayez.",
     "galleryDisabled": "Le téléchargement de photos est indisponible pour le moment.",
-    "gallerySubmitted": "Photo envoyée ! Elle sera publiée après validation par un modérateur.",
-    "galleryModerationNote": "Les photos sont modérées avant publication. JPG/PNG/WebP, max 6 Mo.",
+    "gallerySubmitted": "Photo publiée ! Elle est désormais visible dans la galerie.",
+    "galleryModerationNote": "Les photos sont publiées immédiatement. JPG/PNG/WebP, 6 Mo max.",
     "nearbyPeaksTitle": "Sommets voisins"
   }
 }

@@ -2440,9 +2440,9 @@
     "description_en": "The return to Italy crosses the Theodul pass (3,295 m) over the Theodul glacier: a historic passage since the Middle Ages, today only feasible with a mountain guide and glacier equipment, or comfortably via the Matterhorn Alpine Crossing lifts to Testa Grigia and Breuil-Cervinia (2,006 m). This is therefore marked as a transfer stage, with no hiking track.\nThe Theodul has always been the natural passage between Valais and the Valtournenche: merchants, pilgrims and even cattle crossed here when the glacier was kinder. Today the summer crossing requires rope, crampons and a guide — the Theodul glacier’s crevasses are unforgiving — or you trust the Matterhorn Alpine Crossing: panoramic cable cars from Zermatt to Testa Grigia and Cervinia via the Klein Matterhorn, Europe’s highest cable link. At the pass, the Theodul refuge and the old customs ruins recall that the border ran — and runs — right here.",
     "description_fr": "Le retour en Italie passe par le col du Théodule (3 295 m), en traversant le glacier du Théodule : passage historique depuis le Moyen Âge, aujourd’hui réservé aux cordées avec guide et équipement de glacier, ou accessible par les remontées du Matterhorn Alpine Crossing jusqu’à Testa Grigia et Breuil-Cervinia (2 006 m). L’étape est donc indiquée comme transfert, sans trace de randonnée.\nLe Théodule a toujours été le passage naturel entre Valais et Valtournenche : marchands, pèlerins et même troupeaux y passaient quand le glacier était plus clément. Aujourd’hui, la traversée estivale exige corde, crampons et guide — les crevasses du Theodulgletscher ne pardonnent pas — ou bien l’on s’en remet au Matterhorn Alpine Crossing : téléphériques panoramiques de Zermatt à Testa Grigia et Cervinia via le Klein Matterhorn, la liaison par câble la plus haute d’Europe. Au col, le refuge du Théodule et les ruines des douanes rappellent que la frontière passait — et passe — ici même.",
     "description_de": "Die Rückkehr nach Italien führt über den Theodulpass (3.295 m) und den Theodulgletscher: ein historischer Übergang seit dem Mittelalter, heute nur mit Bergführer und Gletscherausrüstung begehbar — oder bequem mit den Bahnen des Matterhorn Alpine Crossing bis Testa Grigia und Breuil-Cervinia (2.006 m). Die Etappe ist daher als Transfer ohne Wandertrack ausgewiesen.\nDer Theodul war immer der natürliche Übergang zwischen Wallis und Valtournenche: Händler, Pilger und sogar Viehherden zogen hier, als der Gletscher gnädiger war. Heute verlangt die Sommerüberquerung Seil, Steigeisen und Bergführer — die Spalten des Theodulgletschers verzeihen nichts — oder man vertraut dem Matterhorn Alpine Crossing: Panoramabahnen von Zermatt über das Klein Matterhorn nach Testa Grigia und Cervinia, die höchste Seilbahnverbindung Europas. Am Pass erinnern die Theodulhütte und die alten Zollruinen daran, dass hier die Grenze verlief — und verläuft.",
-    "distance_km": 20.7,
-    "elevation_gain_m": 1687,
-    "elevation_loss_m": 1289,
+    "distance_km": 25.3,
+    "elevation_gain_m": 2367,
+    "elevation_loss_m": 1961,
     "duration_hours": 11.5,
     "difficulty": "EEA",
     "season": [
@@ -2451,16 +2451,16 @@
     "start": {
       "name": "Zermatt",
       "coords": {
-        "lat": 46.0212076,
-        "lng": 7.749254
+        "lat": 46.020699,
+        "lng": 7.749099
       },
       "elevation_m": 1608
     },
     "end": {
       "name": "Breuil-Cervinia",
       "coords": {
-        "lat": 45.9356034,
-        "lng": 7.6304397
+        "lat": 45.936527,
+        "lng": 7.629906
       },
       "elevation_m": 2006
     },
@@ -2469,7 +2469,7 @@
       "Zermatt (CH)",
       "Valtournenche"
     ],
-    "gpx_path": null,
+    "gpx_path": "/gpx/tour-monte-rosa-tappa-8-zermatt-breuil-cervinia.gpx",
     "is_transfer_stage": true,
     "hero_image": "/trails/tour-monte-rosa-tappa-8-zermatt-breuil-cervinia.webp",
     "image": "/trails/tour-monte-rosa-tappa-8-zermatt-breuil-cervinia.webp",
@@ -2823,9 +2823,9 @@
     "description_en": "From Prarayer the historic Tour du Cervin crosses the Col Collon (3,074 m) and the Arolla glacier down to Arolla (2,006 m) in the Val d’Hérens. This is a true glacier crossing: only with a mountain guide, rope and crampons. The stage is marked as an alpine transfer, with no hiking track.\nThis is the historic crossing par excellence: by the 16th century the people of Evolène were already using the Col Collon to reach the fairs of Aosta, and finds recovered from the glacier testify to far older traffic. Today the Arolla glacier crossing is a facile alpine route but a glacier route nonetheless: rope, crampons and a mountain guide — or the long bus alternative via the Great St Bernard. From the col you descend among moraines to the Arolla plains, beneath the perfect profile of Mont Collon. The Nacamuli hut, on the Italian side, is the base for dawn starts.",
     "description_fr": "De Prarayer, le Tour du Cervin historique franchit le col Collon (3 074 m) et le glacier d’Arolla pour descendre à Arolla (2 006 m), en val d’Hérens. C’est une vraie traversée de glacier : uniquement avec guide, corde et crampons. L’étape est indiquée comme transfert alpin, sans trace de randonnée.\nC’est le passage historique par excellence : dès le XVIe siècle, les gens d’Evolène franchissaient le col Collon pour gagner les foires d’Aoste, et les objets retrouvés sur le glacier témoignent de trafics bien plus anciens. Aujourd’hui, la traversée du glacier d’Arolla reste une course alpine facile mais glaciaire : encordement, crampons et guide — ou le long détour en bus par le Grand-Saint-Bernard. Du col, on descend parmi les moraines jusqu’aux plans d’Arolla, sous le profil parfait du Mont Collon. Le refuge Nacamuli, côté italien, sert de base pour les départs à l’aube.",
     "description_de": "Von Prarayer überquert die historische Tour du Cervin den Col Collon (3.074 m) und den Arolla-Gletscher hinab nach Arolla (2.006 m) im Val d’Hérens. Eine echte Gletscherüberquerung: nur mit Bergführer, Seil und Steigeisen. Die Etappe ist als alpiner Transfer ohne Wandertrack ausgewiesen.\nDies ist der historische Übergang schlechthin: Schon im 16. Jahrhundert zogen die Leute von Evolène über den Col Collon zu den Messen von Aosta, und Funde vom Gletscher bezeugen weit älteren Verkehr. Heute ist die Überquerung des Arolla-Gletschers eine leichte, aber echte Gletschertour: Seilschaft, Steigeisen und Bergführer — oder die lange Busalternative über den Grossen Sankt Bernhard. Vom Pass steigt man zwischen Moränen zu den Ebenen von Arolla ab, unter dem perfekten Profil des Mont Collon. Die Nacamuli-Hütte auf der italienischen Seite ist der Stützpunkt für Aufbrüche im Morgengrauen.",
-    "distance_km": 16.6,
-    "elevation_gain_m": 1069,
-    "elevation_loss_m": 1068,
+    "distance_km": 16.8,
+    "elevation_gain_m": 1084,
+    "elevation_loss_m": 1139,
     "duration_hours": 8.5,
     "difficulty": "A",
     "season": [
@@ -2834,16 +2834,16 @@
     "start": {
       "name": "Rifugio Prarayer",
       "coords": {
-        "lat": 45.921088,
-        "lng": 7.5329516
+        "lat": 45.892,
+        "lng": 7.512
       },
       "elevation_m": 2005
     },
     "end": {
       "name": "Arolla",
       "coords": {
-        "lat": 46.025975,
-        "lng": 7.4810866
+        "lat": 46.025911,
+        "lng": 7.483664
       },
       "elevation_m": 2006
     },
@@ -2852,7 +2852,7 @@
       "Bionaz",
       "Evolène (CH)"
     ],
-    "gpx_path": null,
+    "gpx_path": "/gpx/tour-cervino-tappa-2-rifugio-prarayer-arolla.gpx",
     "is_transfer_stage": true,
     "hero_image": "/trails/tour-cervino-tappa-2-rifugio-prarayer-arolla.webp",
     "image": "/trails/tour-cervino-tappa-2-rifugio-prarayer-arolla.webp",
@@ -3379,9 +3379,9 @@
     "description_en": "The loop closes back at Breuil-Cervinia via the Theodul pass (3,295 m): crossing the Theodul glacier with a mountain guide and equipment, or riding the Matterhorn Alpine Crossing lifts. Marked as a transfer stage, with no hiking track.\nThe loop closes on the pass that has joined and divided the Matterhorn’s two sides for seven hundred years. The summer crossing of the Theodul glacier remains a glacier route: rope, crampons and a mountain guide are the price of literally walking over history — artefacts of a 17th-century merchant have melted out of this ice. The modern alternative is the Matterhorn Alpine Crossing: panoramic cabins to the Klein Matterhorn (3,883 m, Europe’s highest station) and down via Testa Grigia to Cervinia. Either way, the last look from the col takes in the whole journey just completed.",
     "description_fr": "La boucle se referme à Breuil-Cervinia par le col du Théodule (3 295 m) : traversée du glacier avec guide et équipement, ou par les remontées du Matterhorn Alpine Crossing. Étape indiquée comme transfert, sans trace de randonnée.\nLa boucle se referme sur le col qui unit et sépare depuis sept cents ans les deux versants du Cervin. La traversée estivale du Theodulgletscher reste une course glaciaire : corde, crampons et guide sont le prix pour marcher littéralement sur l’histoire — les glaces ont rendu les effets d’un marchand du XVIIe siècle. L’alternative moderne est le Matterhorn Alpine Crossing : cabines panoramiques jusqu’au Klein Matterhorn (3 883 m, la plus haute gare d’Europe) puis descente par Testa Grigia vers Cervinia. Dans les deux cas, le dernier regard depuis le col embrasse tout le chemin parcouru.",
     "description_de": "Die Runde schließt sich in Breuil-Cervinia über den Theodulpass (3.295 m): Überquerung des Theodulgletschers mit Bergführer und Ausrüstung, oder mit den Bahnen des Matterhorn Alpine Crossing. Als Transferetappe ohne Wandertrack ausgewiesen.\nDie Runde schließt sich am Pass, der die beiden Seiten des Matterhorns seit siebenhundert Jahren verbindet und trennt. Die Sommerüberquerung des Theodulgletschers bleibt eine Gletschertour: Seil, Steigeisen und Bergführer sind der Preis dafür, buchstäblich über Geschichte zu gehen — aus dem Eis sind die Habseligkeiten eines Kaufmanns des 17. Jahrhunderts aufgetaucht. Die moderne Alternative ist das Matterhorn Alpine Crossing: Panoramakabinen zum Klein Matterhorn (3.883 m, Europas höchste Station) und hinab über Testa Grigia nach Cervinia. So oder so: Der letzte Blick vom Pass umfasst die ganze vollendete Runde.",
-    "distance_km": 20.7,
-    "elevation_gain_m": 1687,
-    "elevation_loss_m": 1289,
+    "distance_km": 25.3,
+    "elevation_gain_m": 2367,
+    "elevation_loss_m": 1961,
     "duration_hours": 11.5,
     "difficulty": "EEA",
     "season": [
@@ -3390,16 +3390,16 @@
     "start": {
       "name": "Zermatt",
       "coords": {
-        "lat": 46.0212076,
-        "lng": 7.749254
+        "lat": 46.020699,
+        "lng": 7.749099
       },
       "elevation_m": 1608
     },
     "end": {
       "name": "Breuil-Cervinia",
       "coords": {
-        "lat": 45.9356034,
-        "lng": 7.6304397
+        "lat": 45.936527,
+        "lng": 7.629906
       },
       "elevation_m": 2006
     },
@@ -3408,7 +3408,7 @@
       "Zermatt (CH)",
       "Valtournenche"
     ],
-    "gpx_path": null,
+    "gpx_path": "/gpx/tour-cervino-tappa-8-zermatt-breuil-cervinia.gpx",
     "is_transfer_stage": true,
     "hero_image": "/trails/tour-cervino-tappa-8-zermatt-breuil-cervinia.webp",
     "image": "/trails/tour-cervino-tappa-8-zermatt-breuil-cervinia.webp",

@@ -775,7 +775,7 @@
     "doTitle": "Cosa fare lì",
     "aboutBivouacTitle": "Cos'è un bivacco",
     "galleryTitle": "Galleria della community",
-    "gallerySubtitle": "Sei stato qui? Carica una tua foto: dopo una rapida verifica verrà pubblicata su questa scheda.",
+    "gallerySubtitle": "Sei stato qui? Carica una tua foto: comparirà subito nella galleria di questa scheda.",
     "galleryCta": "Carica una foto",
     "galleryUploading": "Caricamento…",
     "galleryEmpty": "Ancora nessuna foto della community. Sii il primo a condividerne una.",
@@ -783,8 +783,8 @@
     "galleryErrLarge": "Immagine troppo grande (max 6 MB).",
     "galleryErrGeneric": "Caricamento non riuscito, riprova.",
     "galleryDisabled": "Caricamento foto non disponibile al momento.",
-    "gallerySubmitted": "Foto inviata! Sarà pubblicata dopo l'approvazione di un moderatore.",
-    "galleryModerationNote": "Le foto vengono moderate prima della pubblicazione. JPG/PNG/WebP, max 6 MB.",
+    "gallerySubmitted": "Foto pubblicata! Ora è visibile nella galleria.",
+    "galleryModerationNote": "La foto viene pubblicata subito. JPG/PNG/WebP, max 6 MB.",
     "nearbyPeaksTitle": "Vette vicine"
   }
 }

@@ -775,7 +775,7 @@
     "doTitle": "Was man dort tun kann",
     "aboutBivouacTitle": "Was ist ein Biwak",
     "galleryTitle": "Community-Galerie",
-    "gallerySubtitle": "Schon hier gewesen? Lade dein Foto hoch: Nach einer kurzen Prüfung wird es auf dieser Seite veröffentlicht.",
+    "gallerySubtitle": "Waren Sie hier? Laden Sie Ihr Foto hoch: Es erscheint sofort in dieser Galerie.",
     "galleryCta": "Foto hochladen",
     "galleryUploading": "Wird hochgeladen…",
     "galleryEmpty": "Noch keine Community-Fotos. Sei der Erste, der eines teilt.",
@@ -783,8 +783,8 @@
     "galleryErrLarge": "Bild zu groß (max. 6 MB).",
     "galleryErrGeneric": "Upload fehlgeschlagen, bitte erneut versuchen.",
     "galleryDisabled": "Foto-Upload ist derzeit nicht verfügbar.",
-    "gallerySubmitted": "Foto gesendet! Es erscheint, sobald ein Moderator es freigibt.",
-    "galleryModerationNote": "Fotos werden vor der Veröffentlichung moderiert. JPG/PNG/WebP, max. 6 MB.",
+    "gallerySubmitted": "Foto veröffentlicht! Es ist jetzt in der Galerie sichtbar.",
+    "galleryModerationNote": "Fotos werden sofort veröffentlicht. JPG/PNG/WebP, max. 6 MB.",
     "nearbyPeaksTitle": "Nahe Gipfel"
   }
 }

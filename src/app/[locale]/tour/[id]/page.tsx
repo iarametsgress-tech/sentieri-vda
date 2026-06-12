@@ -52,8 +52,6 @@ function buildTourRoute(
   const tag = TOUR_TAGS[tourId];
   const msgKey = TOUR_MESSAGE_KEYS[tourId];
   const stages = getTourStages(tag);
-  const first = stages[0];
-  const last = stages[stages.length - 1];
 
   return {
     id: tourId,
@@ -77,23 +75,16 @@ function buildTourRoute(
     lineColor: TOUR_LINE_COLORS[tourId],
     stages: stages.map((s) => toRouteStageSummary(s, tag, locale)),
     geojson: mergeTrailsGeoJSON(stages.map((s) => s.slug), 140),
-    markers:
-      first && last
-        ? [
-            {
-              coords: [first.start.coords.lng, first.start.coords.lat] as [number, number],
-              label: first.start.name,
-              elevation: first.start.elevation_m,
-              type: 'start' as const,
-            },
-            {
-              coords: [last.end.coords.lng, last.end.coords.lat] as [number, number],
-              label: last.end.name,
-              elevation: last.end.elevation_m,
-              type: 'end' as const,
-            },
-          ]
-        : [],
+    // Un badge numerato sulla partenza di ogni tappa, cliccabile verso la scheda
+    markers: stages.map((s, i) => ({
+      coords: [s.start.coords.lng, s.start.coords.lat] as [number, number],
+      label: `${t('stageLabel')} ${i + 1} · ${s.start.name}`,
+      elevation: s.start.elevation_m,
+      type: 'stage' as const,
+      number: i + 1,
+      href: `/${locale}/sentieri/${s.slug}`,
+      color: TOUR_LINE_COLORS[tourId],
+    })),
   };
 }
 
