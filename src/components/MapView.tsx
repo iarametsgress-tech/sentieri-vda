@@ -72,7 +72,7 @@ function createStageMarkerEl(m: MarkerPoint): HTMLElement {
     color: ${color}; font-family: monospace; font-size: 12px; font-weight: 700;
     text-decoration: none; cursor: pointer;
     box-shadow: 0 3px 10px rgba(0,0,0,0.55);
-    transition: transform 0.12s ease, background 0.12s ease;
+    transition: background 0.12s ease;
   `;
   link.textContent = String(m.number ?? '');
 
@@ -89,13 +89,11 @@ function createStageMarkerEl(m: MarkerPoint): HTMLElement {
   link.appendChild(popup);
 
   link.addEventListener('mouseenter', () => {
-    link.style.transform = 'scale(1.18)';
     link.style.background = color;
     link.style.color = '#0A0A0A';
     popup.style.opacity = '1';
   });
   link.addEventListener('mouseleave', () => {
-    link.style.transform = 'scale(1)';
     link.style.background = '#0A0A0A';
     link.style.color = color;
     popup.style.opacity = '0';

@@ -52,6 +52,37 @@ function buildTourRoute(
   const tag = TOUR_TAGS[tourId];
   const msgKey = TOUR_MESSAGE_KEYS[tourId];
   const stages = getTourStages(tag);
+  const geojson = mergeTrailsGeoJSON(stages.map((s) => s.slug), 140);
+
+  // Ancora il badge tappa ESATTAMENTE sulla traccia disegnata: punto della
+  // linea della tappa più vicino alla partenza reale (le coords del record
+  // potrebbero non coincidere col tratto renderizzato/semplificato).
+  const lineCoordsBySlug = new Map<string, [number, number][]>();
+  for (const f of geojson?.features ?? []) {
+    const slug = (f.properties as { slug?: string } | null)?.slug;
+    if (!slug || f.geometry.type !== 'LineString') continue;
+    const coords = f.geometry.coordinates as [number, number][];
+    const existing = lineCoordsBySlug.get(slug);
+    if (existing) existing.push(...coords);
+    else lineCoordsBySlug.set(slug, [...coords]);
+  }
+  const snapToLine = (
+    slug: string,
+    target: [number, number]
+  ): [number, number] => {
+    const coords = lineCoordsBySlug.get(slug);
+    if (!coords?.length) return target;
+    let best = coords[0];
+    let bestD = Infinity;
+    for (const c of coords) {
+      const d = (c[0] - target[0]) ** 2 + (c[1] - target[1]) ** 2;
+      if (d < bestD) {
+        bestD = d;
+        best = c;
+      }
+    }
+    return [best[0], best[1]];
+  };
 
   return {
     id: tourId,
@@ -74,10 +105,10 @@ function buildTourRoute(
     accent: TOUR_ACCENTS[tourId],
     lineColor: TOUR_LINE_COLORS[tourId],
     stages: stages.map((s) => toRouteStageSummary(s, tag, locale)),
-    geojson: mergeTrailsGeoJSON(stages.map((s) => s.slug), 140),
+    geojson,
     // Un badge numerato sulla partenza di ogni tappa, cliccabile verso la scheda
     markers: stages.map((s, i) => ({
-      coords: [s.start.coords.lng, s.start.coords.lat] as [number, number],
+      coords: snapToLine(s.slug, [s.start.coords.lng, s.start.coords.lat]),
       label: `${t('stageLabel')} ${i + 1} · ${s.start.name}`,
       elevation: s.start.elevation_m,
       type: 'stage' as const,

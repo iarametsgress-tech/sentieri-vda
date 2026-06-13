@@ -1,0 +1,205 @@
+/** Campi di approfondimento — parte 2: Cervino, Gran Paradiso, Rutor, Combins + descrizioni brevi da estendere. */
+export const CULT_2 = {
+  'tour-cervino-tappa-1-breuil-cervinia-rifugio-prarayer': {
+    it: 'Sotto il lago di Cignana, il sito di Valcournera ha restituito uno dei giacimenti minerari di rame più alti d’Europa, sfruttato già nell’età del Bronzo.',
+    en: 'Below Lake Cignana, the Valcournera site yielded one of Europe’s highest copper mining deposits, exploited as early as the Bronze Age.',
+    fr: 'Sous le lac de Cignana, le site de Valcournera a livré l’un des gisements de cuivre les plus hauts d’Europe, exploité dès l’âge du Bronze.',
+    de: 'Unter dem Cignana-See barg die Fundstätte Valcournera eines der höchstgelegenen Kupfervorkommen Europas, schon in der Bronzezeit abgebaut.',
+  },
+  'tour-cervino-tappa-2-rifugio-prarayer-arolla': {
+    it: 'Sul Col Collon il ghiacciaio ha restituito resti e oggetti di viandanti d’ogni epoca, da frecce medievali a monete sabaude: gli abitanti di Evolène lo chiamavano semplicemente “il passaggio”.',
+    en: 'On the Col Collon the glacier has yielded remains and objects of travellers from every age, from medieval arrows to Savoy coins: the people of Evolène simply called it “the crossing”.',
+    fr: 'Au col Collon, le glacier a rendu restes et objets de voyageurs de toutes les époques, des flèches médiévales aux monnaies savoyardes : les gens d’Evolène l’appelaient simplement « le passage ».',
+    de: 'Am Col Collon gab der Gletscher Überreste und Gegenstände von Reisenden aller Epochen frei, von mittelalterlichen Pfeilen bis zu savoyischen Münzen: Die Leute von Evolène nannten ihn schlicht „den Übergang“.',
+  },
+  'tour-cervino-tappa-3-arolla-les-hauderes': {
+    it: 'Evolène e Les Haudères conservano il costume tradizionale ancora indossato nelle feste; la valle è l’ultima del Vallese romando dove il patois franco-provenzale resta lingua viva quotidiana.',
+    en: 'Evolène and Les Haudères keep the traditional costume still worn on feast days; the valley is the last in French-speaking Valais where the Franco-Provençal patois remains an everyday living language.',
+    fr: 'Évolène et Les Haudères conservent le costume traditionnel encore porté aux fêtes ; la vallée est la dernière du Valais romand où le patois franco-provençal reste une langue vivante au quotidien.',
+    de: 'Evolène und Les Haudères bewahren die noch an Festtagen getragene Tracht; das Tal ist das letzte im Welschwallis, wo das frankoprovenzalische Patois lebendige Alltagssprache ist.',
+  },
+  'tour-cervino-tappa-4-les-hauderes-zinal': {
+    it: 'Le mucche della razza Hérens, piccole e combattive, si sfidano ogni estate sugli alpeggi di Moiry e Sorebois: i “combats de reines” eleggono la regina della mandria, tradizione viva in tutto il Vallese.',
+    en: 'The small, combative Hérens cows clash every summer on the Moiry and Sorebois alps: the “combats de reines” elect the herd’s queen, a tradition alive throughout Valais.',
+    fr: 'Les vaches de la race d’Hérens, petites et combatives, s’affrontent chaque été sur les alpages de Moiry et de Sorebois : les combats de reines élisent la reine du troupeau, tradition vivante dans tout le Valais.',
+    de: 'Die kleinen, kampflustigen Eringer Kühe messen sich jeden Sommer auf den Alpen von Moiry und Sorebois: Die „Combats de Reines“ küren die Königin der Herde — eine im ganzen Wallis lebendige Tradition.',
+  },
+  'tour-cervino-tappa-5-zinal-gruben': {
+    it: 'Zinal fu uno dei luoghi natali dell’alpinismo: dalla sua “couronne impériale” di Quattromila partirono le grandi prime degli anni 1860. La Turtmanntal, oltre la Forcletta, è abitata solo d’estate dal Medioevo.',
+    en: 'Zinal was one of mountaineering’s birthplaces: the great first ascents of the 1860s set out for its “imperial crown” of four-thousanders. The Turtmanntal beyond the Forcletta has been summer-only settlement since the Middle Ages.',
+    fr: 'Zinal fut l’un des berceaux de l’alpinisme : les grandes premières des années 1860 partirent vers sa « couronne impériale » de 4000. Le Turtmanntal, au-delà de la Forcletta, n’est habité que l’été depuis le Moyen Âge.',
+    de: 'Zinal war eine der Wiegen des Alpinismus: Zu seiner „Kaiserkrone“ aus Viertausendern brachen die großen Erstbesteigungen der 1860er auf. Das Turtmanntal jenseits der Forcletta ist seit dem Mittelalter nur im Sommer bewohnt.',
+  },
+  'tour-cervino-tappa-6-gruben-st-niklaus': {
+    it: 'St. Niklaus è il paese delle dinastie di guide del Mattertal — Knubel, Lochmatter, Pollinger — che firmarono mezzo secolo di prime salite himalayane e alpine: il museo delle guide ne conserva la memoria.',
+    en: 'St. Niklaus is the village of the Mattertal guide dynasties — Knubel, Lochmatter, Pollinger — who signed half a century of Alpine and Himalayan first ascents: the guides’ museum keeps their memory.',
+    fr: 'St. Niklaus est le village des dynasties de guides du Mattertal — Knubel, Lochmatter, Pollinger — auteurs d’un demi-siècle de premières alpines et himalayennes : le musée des guides en garde la mémoire.',
+    de: 'St. Niklaus ist das Dorf der Bergführerdynastien des Mattertals — Knubel, Lochmatter, Pollinger —, die ein halbes Jahrhundert alpiner und himalajischer Erstbegehungen prägten: Das Bergführermuseum bewahrt ihr Andenken.',
+  },
+  'tour-cervino-tappa-7-st-niklaus-zermatt': {
+    it: 'La ferrovia Visp-Zermatt (1891) trasformò un villaggio di contadini di montagna nella capitale mondiale dell’alpinismo; il cimitero degli alpinisti, accanto alla chiesa, racconta le vittime del Cervino dal 1865.',
+    en: 'The Visp-Zermatt railway (1891) turned a village of mountain farmers into the world capital of mountaineering; the climbers’ cemetery beside the church tells of the Matterhorn’s victims since 1865.',
+    fr: 'Le chemin de fer Viège-Zermatt (1891) transforma un village de paysans de montagne en capitale mondiale de l’alpinisme ; le cimetière des alpinistes, près de l’église, rappelle les victimes du Cervin depuis 1865.',
+    de: 'Die Bahn Visp–Zermatt (1891) machte aus einem Bergbauerndorf die Welthauptstadt des Alpinismus; der Bergsteigerfriedhof neben der Kirche erzählt von den Opfern des Matterhorns seit 1865.',
+  },
+  'tour-cervino-tappa-8-zermatt-breuil-cervinia': {
+    it: 'Il 14 luglio 1865 la cordata di Whymper vinse il Cervino da Zermatt; quattro uomini morirono in discesa. Tre giorni dopo, Jean-Antoine Carrel salì dal versante italiano: le due date fondarono il mito della Gran Becca.',
+    en: 'On 14 July 1865 Whymper’s party won the Matterhorn from Zermatt; four men died on the descent. Three days later Jean-Antoine Carrel climbed it from the Italian side: the two dates founded the myth of the Gran Becca.',
+    fr: 'Le 14 juillet 1865, la cordée de Whymper vainquit le Cervin depuis Zermatt ; quatre hommes périrent à la descente. Trois jours plus tard, Jean-Antoine Carrel montait par le versant italien : ces deux dates fondèrent le mythe de la Gran Becca.',
+    de: 'Am 14. Juli 1865 bezwang Whympers Seilschaft das Matterhorn von Zermatt aus; vier Männer starben im Abstieg. Drei Tage später stieg Jean-Antoine Carrel über die italienische Seite auf: Diese beiden Daten begründeten den Mythos der Gran Becca.',
+  },
+  'tour-gran-paradiso-tappa-1-cogne-valnontey': {
+    it: 'Il prato di Sant’Orso, intatto da secoli per volontà della comunità, è il più vasto prato irriguo delle Alpi italiane; a Valnontey il giardino Paradisia coltiva dal 1955 oltre mille specie di flora alpina.',
+    en: 'The Sant’Orso meadow, kept intact for centuries by the community’s will, is the widest irrigated meadow in the Italian Alps; at Valnontey the Paradisia garden has grown over a thousand alpine species since 1955.',
+    fr: 'Le pré de Saint-Ours, intact depuis des siècles par la volonté de la communauté, est le plus vaste pré irrigué des Alpes italiennes ; à Valnontey, le jardin Paradisia cultive depuis 1955 plus de mille espèces alpines.',
+    de: 'Die Sant’Orso-Wiese, seit Jahrhunderten vom Willen der Gemeinschaft bewahrt, ist die größte bewässerte Wiese der italienischen Alpen; in Valnontey kultiviert der Garten Paradisia seit 1955 über tausend Alpenpflanzenarten.',
+  },
+  'tour-gran-paradiso-tappa-2-valnontey-rifugio-vittorio-sella': {
+    it: 'Il rifugio occupa le scuderie reali di caccia del 1860: da qui Vittorio Emanuele II salvò — per riservarselo — lo stambecco, ridotto allora a un centinaio di capi proprio in queste valli.',
+    en: 'The hut occupies the 1860 royal hunting stables: from here Vittorio Emanuele II saved the ibex — by reserving it for himself — when barely a hundred head survived in these very valleys.',
+    fr: 'Le refuge occupe les écuries royales de chasse de 1860 : c’est d’ici que Victor-Emmanuel II sauva — en se le réservant — le bouquetin, alors réduit à une centaine de têtes dans ces vallées mêmes.',
+    de: 'Die Hütte belegt die königlichen Jagdställe von 1860: Von hier rettete Vittorio Emanuele II. den Steinbock — indem er ihn sich vorbehielt —, als kaum hundert Tiere in eben diesen Tälern überlebten.',
+  },
+  'tour-gran-paradiso-tappa-3-rifugio-vittorio-sella-eaux-rousses': {
+    it: 'Dal nucleo di stambecchi protetto dalle riserve reali — divenute Parco nazionale nel 1922, il primo d’Italia — discendono tutti gli stambecchi oggi viventi sulle Alpi.',
+    en: 'From the ibex nucleus protected by the royal reserves — which became Italy’s first national park in 1922 — descend all the ibex alive in the Alps today.',
+    fr: 'Du noyau de bouquetins protégé par les réserves royales — devenues en 1922 le premier parc national d’Italie — descendent tous les bouquetins vivant aujourd’hui dans les Alpes.',
+    de: 'Vom Steinbockbestand der königlichen Reservate — 1922 Italiens erster Nationalpark — stammen alle heute in den Alpen lebenden Steinböcke ab.',
+  },
+  'tour-gran-paradiso-tappa-4-eaux-rousses-pont-valsavarenche': {
+    it: 'La Valsavarenche è la valle dei guardaparco: qui nacque il corpo di sorveglianza del Parco (1922), erede diretto dei guardacaccia reali, e qui si trova il centro di ricerca sulla fauna alpina.',
+    en: 'Valsavarenche is the rangers’ valley: the Park’s surveillance corps (1922), direct heir to the royal gamekeepers, was born here, and the alpine wildlife research centre is based here.',
+    fr: 'La Valsavarenche est la vallée des gardes du Parc : ici naquit le corps de surveillance (1922), héritier direct des gardes-chasse royaux, et ici se trouve le centre de recherche sur la faune alpine.',
+    de: 'Das Valsavarenche ist das Tal der Parkwächter: Hier entstand 1922 das Überwachungskorps des Parks, direkter Erbe der königlichen Wildhüter, und hier sitzt das Forschungszentrum für Alpenfauna.',
+  },
+  'tour-gran-paradiso-tappa-5-pont-valsavarenche-rifugio-chivasso': {
+    it: 'Sul piano del Nivolet la strada interrotta nel 1963 doveva collegare Torino a Courmayeur: la sua incompiutezza salvò l’altopiano, oggi chiuso al traffico d’estate e laboratorio di turismo dolce.',
+    en: 'The road across the Nivolet plateau, halted in 1963, was meant to link Turin to Courmayeur: its incompleteness saved the plateau, now closed to summer traffic and a laboratory of soft tourism.',
+    fr: 'Sur le plateau du Nivolet, la route interrompue en 1963 devait relier Turin à Courmayeur : son inachèvement sauva le haut plateau, aujourd’hui fermé au trafic l’été et laboratoire de tourisme doux.',
+    de: 'Die 1963 gestoppte Straße über die Nivolet-Hochebene sollte Turin mit Courmayeur verbinden: Ihre Unvollendung rettete das Plateau — heute im Sommer autofrei und ein Labor sanften Tourismus.',
+  },
+  'tour-gran-paradiso-tappa-6-rifugio-chivasso-rhemes-notre-dame': {
+    it: 'Ceresole Reale ottenne il titolo di “Reale” da Vittorio Emanuele II nel 1862: la Valle Orco era il versante piemontese delle cacce reali, collegato alla Valsavarenche dalle mulattiere del Nivolet.',
+    en: 'Ceresole Reale received its “Royal” title from Vittorio Emanuele II in 1862: the Orco valley was the Piedmont side of the royal hunts, linked to Valsavarenche by the Nivolet mule tracks.',
+    fr: 'Ceresole Reale reçut son titre « Royal » de Victor-Emmanuel II en 1862 : la vallée de l’Orco était le versant piémontais des chasses royales, relié à la Valsavarenche par les muletières du Nivolet.',
+    de: 'Ceresole Reale erhielt 1862 von Vittorio Emanuele II. den Titel „Königlich“: Das Orco-Tal war die piemontesische Seite der königlichen Jagden, durch die Nivolet-Saumpfade mit dem Valsavarenche verbunden.',
+  },
+  'tour-gran-paradiso-tappa-7-rhemes-notre-dame-eaux-rousses': {
+    it: 'All’Orvieille restano il casino di caccia reale e il filare di alberi piantato per Vittorio Emanuele II: il “Re Cacciatore” vi soggiornò ogni estate fra il 1850 e il 1875 con corte e battitori.',
+    en: 'At Orvieille remain the royal hunting lodge and the tree avenue planted for Vittorio Emanuele II: the “Hunter King” stayed here every summer between 1850 and 1875 with court and beaters.',
+    fr: 'À l’Orvieille subsistent le pavillon de chasse royal et l’allée d’arbres plantée pour Victor-Emmanuel II : le « Roi chasseur » y séjourna chaque été de 1850 à 1875 avec cour et rabatteurs.',
+    de: 'In Orvieille stehen noch das königliche Jagdhaus und die für Vittorio Emanuele II. gepflanzte Baumreihe: Der „Jägerkönig“ verbrachte hier von 1850 bis 1875 jeden Sommer mit Hof und Treibern.',
+  },
+  'tour-gran-paradiso-tappa-8-eaux-rousses-rifugio-vittorio-sella': {
+    it: 'Il Col Lauson è il valico delle migrazioni di stambecchi e camosci fra Valsavarenche e Cogne: i guardaparco vi conducono da un secolo i censimenti estivi della fauna.',
+    en: 'The Col Lauson is the pass of ibex and chamois migrations between Valsavarenche and Cogne: rangers have run the summer wildlife censuses here for a century.',
+    fr: 'Le col Lauson est le passage des migrations de bouquetins et de chamois entre Valsavarenche et Cogne : les gardes y mènent depuis un siècle les recensements estivaux de la faune.',
+    de: 'Der Col Lauson ist der Pass der Steinbock- und Gämsenwanderungen zwischen Valsavarenche und Cogne: Seit einem Jahrhundert führen die Parkwächter hier die sommerlichen Wildzählungen durch.',
+  },
+  'tour-gran-paradiso-tappa-9-rifugio-vittorio-sella-cogne': {
+    it: 'Cogne è patria del pizzo al tombolo, merletto portato — secondo tradizione — da monache benedettine nel Seicento: le dentellières lavorano ancora nelle vie del centro.',
+    en: 'Cogne is the home of bobbin lace, brought — tradition says — by Benedictine nuns in the 17th century: the dentellières still work in the village streets.',
+    fr: 'Cogne est la patrie de la dentelle aux fuseaux, apportée — selon la tradition — par des moniales bénédictines au XVIIe siècle : les dentellières travaillent encore dans les rues du bourg.',
+    de: 'Cogne ist die Heimat der Klöppelspitze, der Überlieferung nach im 17. Jahrhundert von Benediktinerinnen gebracht: Die Dentellières arbeiten noch heute in den Gassen des Ortes.',
+  },
+  'tour-rutor-tappa-1-la-thuile-rifugio-deffeyes': {
+    it: 'La Thuile fu paese di miniere di antracite, attive fino al 1966 con 400 operai: le gallerie della Croix traforavano la montagna fino al Piccolo San Bernardo.',
+    en: 'La Thuile was an anthracite mining town, active until 1966 with 400 workers: the Croix galleries tunnelled the mountain as far as the Little St Bernard.',
+    fr: 'La Thuile fut un pays de mines d’anthracite, actives jusqu’en 1966 avec 400 ouvriers : les galeries de la Croix perçaient la montagne jusqu’au Petit-Saint-Bernard.',
+    de: 'La Thuile war ein Anthrazit-Bergbauort, bis 1966 mit 400 Arbeitern aktiv: Die Croix-Stollen durchbohrten den Berg bis zum Kleinen Sankt Bernhard.',
+  },
+  'tour-rutor-tappa-2-rifugio-deffeyes-planaval': {
+    it: 'Le piene catastrofiche del lago glaciale del Rutor (1430-1864) inondarono più volte la Dora fino ad Aosta: per placarle si saliva in processione al ghiacciaio. Lo svaso naturale del lago chiuse l’era delle “rotte del Rutor”.',
+    en: 'The catastrophic outbursts of the Rutor glacial lake (1430-1864) repeatedly flooded the Dora as far as Aosta: processions climbed to the glacier to appease them. The lake’s natural drainage ended the era of the “Rutor floods”.',
+    fr: 'Les vidanges catastrophiques du lac glaciaire du Rutor (1430-1864) inondèrent plusieurs fois la Doire jusqu’à Aoste : on montait en procession au glacier pour les apaiser. La vidange naturelle du lac clôt l’ère des « débâcles du Rutor ».',
+    de: 'Die katastrophalen Ausbrüche des Rutor-Gletschersees (1430–1864) überfluteten die Dora mehrfach bis Aosta: Prozessionen stiegen zum Gletscher, um sie zu besänftigen. Die natürliche Entleerung des Sees beendete die Ära der „Rutor-Fluten“.',
+  },
+  'tour-rutor-tappa-3-promoud-valgrisenche': {
+    it: 'Valgrisenche diede i natali a intere generazioni di “sabotiers”, gli intagliatori di sabot in legno; il campanile romanico e il forte di Beauregard raccontano la doppia anima, religiosa e militare, della valle.',
+    en: 'Valgrisenche raised whole generations of “sabotiers”, carvers of wooden clogs; the Romanesque bell tower and Beauregard fort tell of the valley’s twin religious and military souls.',
+    fr: 'Valgrisenche vit naître des générations de sabotiers ; le clocher roman et le fort de Beauregard racontent la double âme, religieuse et militaire, de la vallée.',
+    de: 'Valgrisenche brachte Generationen von „Sabotiers“ hervor, Schnitzern von Holzschuhen; der romanische Glockenturm und das Fort Beauregard erzählen von der doppelten — religiösen und militärischen — Seele des Tals.',
+  },
+  'tour-rutor-tappa-4-valgrisenche-sainte-foy': {
+    it: 'Il Col du Mont vide passare eserciti e contrabbandieri di sale: nel 1794 vi combatterono le truppe sarde contro i rivoluzionari francesi. Le baite del Monal, di fronte al Mont Pourri, sono sito protetto di Francia.',
+    en: 'The Col du Mont saw armies and salt smugglers pass: in 1794 Sardinian troops fought French revolutionaries here. The Monal chalets, facing Mont Pourri, are a protected site of France.',
+    fr: 'Le col du Mont vit passer armées et contrebandiers de sel : en 1794, les troupes sardes y combattirent les révolutionnaires français. Les chalets du Monal, face au Mont Pourri, sont un site protégé de France.',
+    de: 'Über den Col du Mont zogen Heere und Salzschmuggler: 1794 kämpften hier sardische Truppen gegen französische Revolutionäre. Die Hütten von Le Monal gegenüber dem Mont Pourri sind ein geschütztes Kulturgut Frankreichs.',
+  },
+  'tour-rutor-tappa-5-sainte-foy-la-rosiere': {
+    it: 'Sainte-Foy-Tarentaise conserva cappelle barocche e i villaggi-alpeggio del Miroir e del Crot, con i caratteristici tetti in lauze sostenuti da colonne di pietra.',
+    en: 'Sainte-Foy-Tarentaise preserves baroque chapels and the alp-villages of Le Miroir and Le Crot, with their characteristic lauze roofs carried on stone columns.',
+    fr: 'Sainte-Foy-Tarentaise conserve des chapelles baroques et les villages d’alpage du Miroir et du Crot, aux toits de lauzes portés par des colonnes de pierre.',
+    de: 'Sainte-Foy-Tarentaise bewahrt Barockkapellen und die Almdörfer Le Miroir und Le Crot mit ihren typischen Steinplattendächern auf Steinsäulen.',
+  },
+  'tour-rutor-tappa-6-la-rosiere-la-thuile': {
+    it: 'Al Piccolo San Bernardo convivono cromlech preistorico, colonna di Giove, ospizio medievale e il giardino botanico Chanousia, fondato nel 1897 dall’abate Chanoux: un condensato di storia alpina.',
+    en: 'At the Little St Bernard a prehistoric stone circle, Jupiter’s column, the medieval hospice and the Chanousia botanical garden founded in 1897 by abbot Chanoux coexist: Alpine history condensed.',
+    fr: 'Au Petit-Saint-Bernard coexistent cromlech préhistorique, colonne de Jupiter, hospice médiéval et le jardin botanique Chanousia, fondé en 1897 par l’abbé Chanoux : un condensé d’histoire alpine.',
+    de: 'Am Kleinen Sankt Bernhard koexistieren prähistorischer Steinkreis, Jupitersäule, mittelalterliches Hospiz und der 1897 von Abt Chanoux gegründete botanische Garten Chanousia: alpine Geschichte im Konzentrat.',
+  },
+  'tour-gran-combin-tappa-1-ollomont-saint-rhemy': {
+    it: 'Dalle miniere di rame di Ollomont, attive dal Seicento al 1945, il minerale scendeva a valle su teleferiche; la conca di By fu alpeggio modello dei canonici del Gran San Bernardo.',
+    en: 'From the Ollomont copper mines, worked from the 17th century to 1945, ore descended by cableway; the By basin was a model alp of the Great St Bernard canons.',
+    fr: 'Des mines de cuivre d’Ollomont, actives du XVIIe siècle à 1945, le minerai descendait par téléphériques ; la combe de By fut l’alpage modèle des chanoines du Grand-Saint-Bernard.',
+    de: 'Aus den Kupferminen von Ollomont, vom 17. Jahrhundert bis 1945 in Betrieb, fuhr das Erz per Seilbahn zu Tal; der By-Kessel war Musteralp der Chorherren vom Grossen Sankt Bernhard.',
+  },
+  'tour-gran-combin-tappa-2-saint-rhemy-bourg-saint-pierre': {
+    it: 'Sul colle, l’ospizio fondato da San Bernardo di Mentone (~1050) soccorre viandanti da quasi mille anni; di qui passarono Carlo Magno e, nel maggio 1800, Napoleone con 40.000 uomini.',
+    en: 'On the pass, the hospice founded by St Bernard of Menthon (~1050) has rescued travellers for nearly a thousand years; Charlemagne passed this way and, in May 1800, Napoleon with 40,000 men.',
+    fr: 'Au col, l’hospice fondé par saint Bernard de Menthon (~1050) secourt les voyageurs depuis près de mille ans ; par ici passèrent Charlemagne et, en mai 1800, Napoléon avec 40 000 hommes.',
+    de: 'Auf dem Pass hilft das von Bernhard von Menthon (~1050) gegründete Hospiz seit fast tausend Jahren Reisenden; hier zogen Karl der Große und im Mai 1800 Napoleon mit 40.000 Mann vorbei.',
+  },
+  'tour-gran-combin-tappa-3-bourg-saint-pierre-cabane-de-mille': {
+    it: 'Bourg-Saint-Pierre, tappa della via Francigena, conserva una pietra miliare romana e il giardino “La Linnaea” fondato nel 1889; il suo albergo ospitò Napoleone — il conto, narrano, non fu mai saldato.',
+    en: 'Bourg-Saint-Pierre, a stop on the Via Francigena, keeps a Roman milestone and the “La Linnaea” garden founded in 1889; its inn hosted Napoleon — whose bill, the story goes, was never paid.',
+    fr: 'Bourg-Saint-Pierre, étape de la via Francigena, conserve une borne milliaire romaine et le jardin « La Linnaea » fondé en 1889 ; son auberge hébergea Napoléon — dont la note, dit-on, ne fut jamais réglée.',
+    de: 'Bourg-Saint-Pierre, Station der Via Francigena, bewahrt einen römischen Meilenstein und den 1889 gegründeten Garten „La Linnaea“; sein Gasthaus beherbergte Napoleon — dessen Rechnung, so heißt es, nie beglichen wurde.',
+  },
+  'tour-gran-combin-tappa-4-cabane-de-mille-cabane-brunet': {
+    it: 'Il Val de Bagnes è il più vasto comune della Svizzera e patria del formaggio di Bagnes, la raclette originale: gli alpeggi sotto il Six Blanc la producono ancora col latte delle Hérens.',
+    en: 'The Val de Bagnes is Switzerland’s largest municipality and home of Bagnes cheese, the original raclette: the alps below the Six Blanc still make it with Hérens milk.',
+    fr: 'Le val de Bagnes est la plus vaste commune de Suisse et la patrie du fromage de Bagnes, la raclette originelle : les alpages sous le Six Blanc la produisent encore avec le lait des Hérens.',
+    de: 'Das Val de Bagnes ist die größte Gemeinde der Schweiz und Heimat des Bagnes-Käses, des ursprünglichen Raclette: Die Alpen unter dem Six Blanc stellen ihn noch mit Eringer Milch her.',
+  },
+  'tour-gran-combin-tappa-5-cabane-brunet-cabane-panossiere': {
+    it: 'La Cabane FXB Panossière, ricostruita nel 1996 dopo la valanga che distrusse la precedente, porta il nome della fondazione François-Xavier Bagnoud; il ghiacciaio di Corbassière è fra i più studiati delle Alpi.',
+    en: 'The Cabane FXB Panossière, rebuilt in 1996 after an avalanche destroyed its predecessor, bears the name of the François-Xavier Bagnoud foundation; the Corbassière glacier is among the most studied in the Alps.',
+    fr: 'La cabane FXB Panossière, reconstruite en 1996 après l’avalanche qui détruisit la précédente, porte le nom de la fondation François-Xavier Bagnoud ; le glacier de Corbassière est parmi les plus étudiés des Alpes.',
+    de: 'Die Cabane FXB Panossière, 1996 nach der Lawinenzerstörung des Vorgängerbaus neu errichtet, trägt den Namen der Stiftung François-Xavier Bagnoud; der Corbassière-Gletscher zählt zu den bestuntersuchten der Alpen.',
+  },
+  'tour-gran-combin-tappa-6-cabane-panossiere-cabane-de-chanrion': {
+    it: 'La diga di Mauvoisin (1957), 250 metri, è fra le dighe ad arco più alte del mondo: sommerse l’alpe omonima e trasformò l’alto Bagnes; il lago di Crête Sèche e il Giétro ricordano la catastrofe glaciale del 1818.',
+    en: 'The Mauvoisin dam (1957), 250 metres, is among the world’s highest arch dams: it drowned the alp of the same name and transformed upper Bagnes; the Giétro recalls the glacial catastrophe of 1818.',
+    fr: 'Le barrage de Mauvoisin (1957), 250 mètres, est parmi les plus hauts barrages-voûtes du monde : il noya l’alpage homonyme et transforma le haut Bagnes ; le Giétro rappelle la catastrophe glaciaire de 1818.',
+    de: 'Die Mauvoisin-Staumauer (1957), 250 Meter, gehört zu den höchsten Bogenstaumauern der Welt: Sie versenkte die gleichnamige Alp und veränderte das obere Bagnes; der Giétro erinnert an die Gletscherkatastrophe von 1818.',
+  },
+  'tour-gran-combin-tappa-7-cabane-de-chanrion-ollomont': {
+    it: 'Dalla Fenêtre de Durand fuggì in Svizzera, nel 1943, l’economista Luigi Einaudi, futuro Presidente della Repubblica; per secoli il valico portò il vino della Valpelline agli alpeggi di Bagnes.',
+    en: 'Through the Fenêtre de Durand the economist Luigi Einaudi, future President of Italy, fled to Switzerland in 1943; for centuries the pass carried Valpelline wine to the Bagnes alps.',
+    fr: 'Par la Fenêtre de Durand s’enfuit en Suisse, en 1943, l’économiste Luigi Einaudi, futur président de la République italienne ; durant des siècles, le col porta le vin de la Valpelline aux alpages de Bagnes.',
+    de: 'Über die Fenêtre de Durand floh 1943 der Ökonom Luigi Einaudi, späterer Präsident Italiens, in die Schweiz; jahrhundertelang kam über den Pass der Wein der Valpelline zu den Alpen von Bagnes.',
+  },
+};
+
+/** Estensioni per le 3 schede con descrizione breve. */
+export const SHORT_DESC = {
+  'alta-via-1-tappa-1-donnas-perloz': {
+    it: 'La prima tappa dell’Alta Via 1 parte dal borgo romano di Donnas, con l’arco scavato nella roccia e i vigneti eroici del Nebbiolo, e sale subito decisa sul versante sinistro del Lys: castagneti, villaggi in pietra e i ponti medievali sull’orrido di Guillemore. Perloz, balcone sulla bassa valle, conserva il santuario di Notre-Dame de la Garde e la memoria della Resistenza, di cui fu roccaforte: il piccolo museo e i murales la raccontano. Tappa breve ma con dislivello sincero, ideale per rodare gambe e zaino.',
+    en: 'Alta Via 1’s first stage leaves the Roman village of Donnas, with its rock-cut arch and heroic Nebbiolo vineyards, and climbs at once up the Lys’s left flank: chestnut woods, stone hamlets and the medieval bridges over the Guillemore gorge. Perloz, a balcony over the lower valley, keeps the Notre-Dame de la Garde sanctuary and the memory of the Resistance, of which it was a stronghold, told by a small museum and murals. Short but honest climbing, ideal for breaking in legs and pack.',
+    fr: 'La première étape de la Haute Route n° 1 quitte le bourg romain de Donnas, avec son arche taillée dans le roc et ses vignobles héroïques de Nebbiolo, et monte aussitôt sur le flanc gauche du Lys : châtaigneraies, hameaux de pierre et ponts médiévaux sur la gorge de Guillemore. Perloz, balcon sur la basse vallée, conserve le sanctuaire de Notre-Dame de la Garde et la mémoire de la Résistance, dont il fut un bastion. Étape courte mais au dénivelé sincère, idéale pour roder jambes et sac.',
+    de: 'Die erste Etappe des Höhenwegs 1 verlässt das römische Dorf Donnas mit seinem Felsbogen und den heroischen Nebbiolo-Weinbergen und steigt sogleich die linke Flanke des Lys hinauf: Kastanienwälder, Steinweiler und die mittelalterlichen Brücken über die Guillemore-Schlucht. Perloz, ein Balkon über dem unteren Tal, bewahrt das Heiligtum Notre-Dame de la Garde und das Andenken an die Resistenza, deren Hochburg es war. Kurz, aber mit ehrlichen Höhenmetern — ideal zum Einlaufen.',
+  },
+  'tour-rifugio-bonatti': {
+    it: 'L’anello parte da Lavachey, nel cuore della Val Ferret, e sale ad Arnouva prima di guadagnare il balcone del Rifugio Bonatti, una delle terrazze più fotografate delle Alpi: di fronte, in fila, il Dente del Gigante, le Grandes Jorasses e il ghiacciaio di Planpincieux. Il ritorno scende direttamente a Lavachey per il sentiero del vallone di Malatrà basso. Percorso ideale come gita di un giorno per assaggiare il TMB: dislivello onesto, segnaletica perfetta, polenta al rifugio. In stagione il bus della Val Ferret riporta a Courmayeur.',
+    en: 'The loop starts at Lavachey in the heart of Val Ferret and climbs to Arnouva before gaining the balcony of Rifugio Bonatti, one of the most photographed terraces in the Alps: opposite, in a row, the Dent du Géant, the Grandes Jorasses and the Planpincieux glacier. The return drops straight to Lavachey by the lower Malatrà path. An ideal day trip to taste the TMB: honest height gain, perfect waymarking, polenta at the hut. In season the Val Ferret bus runs back to Courmayeur.',
+    fr: 'La boucle part de Lavachey, au cœur du Val Ferret, monte à Arnouva puis gagne le balcon du refuge Bonatti, l’une des terrasses les plus photographiées des Alpes : en face, alignés, la Dent du Géant, les Grandes Jorasses et le glacier de Planpincieux. Le retour descend directement sur Lavachey par le sentier bas de Malatrà. Sortie d’une journée idéale pour goûter au TMB : dénivelé honnête, balisage parfait, polenta au refuge. En saison, le bus du Val Ferret ramène à Courmayeur.',
+    de: 'Die Runde startet in Lavachey im Herzen des Val Ferret, steigt nach Arnouva und gewinnt dann den Balkon der Bonatti-Hütte, eine der meistfotografierten Terrassen der Alpen: gegenüber, aufgereiht, Dent du Géant, Grandes Jorasses und der Planpincieux-Gletscher. Zurück geht es direkt nach Lavachey über den unteren Malatrà-Weg. Ideale Tagestour zum TMB-Schnuppern: ehrliche Höhenmeter, perfekte Markierung, Polenta auf der Hütte. In der Saison fährt der Val-Ferret-Bus zurück nach Courmayeur.',
+  },
+  'lago-djouan-cogne': {
+    it: 'Dal parcheggio di Eaux-Rousses, in Valsavarenche, la mulattiera reale sale con pendenza costante nel bosco di larici fino all’alpeggio dell’Orvieille, dove sostava la corte di Vittorio Emanuele II durante le cacce reali: il filare d’alberi e il casino di caccia sono ancora lì. Più in alto, i laghi Djouan e il lago Nero occupano una conca glaciale frequentatissima da camosci e stambecchi; in autunno i colori del vallone sono fra i più belli del Parco. Acqua alle fontane dell’Orvieille; rientro per lo stesso itinerario.',
+    en: 'From the Eaux-Rousses car park in Valsavarenche, the royal mule track climbs at a steady grade through larch forest to the Orvieille alp, where Vittorio Emanuele II’s court halted during the royal hunts: the avenue of trees and the lodge are still there. Higher up, the Djouan lakes and the Black Lake fill a glacial hollow much frequented by chamois and ibex; in autumn the valley’s colours are among the Park’s finest. Water at the Orvieille fountains; return by the same route.',
+    fr: 'Du parking d’Eaux-Rousses, en Valsavarenche, la muletière royale monte à pente régulière dans le mélézin jusqu’à l’alpage de l’Orvieille, où la cour de Victor-Emmanuel II faisait halte pendant les chasses royales : l’allée d’arbres et le pavillon y sont toujours. Plus haut, les lacs Djouan et le lac Noir occupent une combe glaciaire très fréquentée par chamois et bouquetins ; en automne, les couleurs du vallon sont parmi les plus belles du Parc. Eau aux fontaines de l’Orvieille ; retour par le même itinéraire.',
+    de: 'Vom Parkplatz Eaux-Rousses im Valsavarenche steigt der königliche Saumpfad gleichmäßig durch Lärchenwald zur Alm Orvieille, wo der Hof von Vittorio Emanuele II. während der königlichen Jagden Halt machte: Baumallee und Jagdhaus stehen noch. Weiter oben füllen die Djouan-Seen und der Schwarze See eine Gletschermulde, die Gämsen und Steinböcke lieben; im Herbst gehören die Farben des Tals zu den schönsten des Parks. Wasser an den Brunnen der Orvieille; Rückweg auf derselben Route.',
+  },
+};

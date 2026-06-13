@@ -68,6 +68,9 @@ export default function Hero() {
           <h1 className="text-on-image-title font-display text-display-xl max-w-5xl pb-1 text-snow">
             {t('heroTitle')}
           </h1>
+          <p className="text-on-image-eyebrow mt-3 font-mono text-[11px] uppercase tracking-[0.3em] text-snow/55">
+            By Andrea Rama
+          </p>
         </div>
 
         <motion.div style={{ y: contentY }}>

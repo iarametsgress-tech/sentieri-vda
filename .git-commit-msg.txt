@@ -1,19 +1,24 @@
-feat: gpx valichi su ghiacciaio, anello Bonatti rifatto, marker tappe numerati, foto community immediate
+feat: arricchimento sentieri, marker tappe sulla traccia, byline e bio autore
 
-- GPX per le tratte di valico: Zermatt-Breuil-Cervinia via Teodulo
-  (tappa 8 Monte Rosa e tappa 8 Cervino) e Prarayer-Arolla via Col
-  Collon (tappa 2 Cervino). Tratti instradabili dalla rete OSM
-  (BRouter); sul ghiacciaio corridoio indicativo del passo storico,
-  con avvertenza nel gpx e tappa sempre marcata transfer.
-- Anello del Rifugio Bonatti rigenerato (la vecchia traccia passava
-  a 1 km dal rifugio): Lavachey - Arnouva - Rifugio Bonatti -
-  Lavachey, 13.2 km su sentieri reali; dati e coordinate sincronizzati.
-- Mappe dei tour: tolti i marker A/B; ogni tappa ha un badge numerato
-  sul punto di partenza, con tooltip e click che porta alla scheda
-  della tappa (colore del tour).
-- Foto community: pubblicazione immediata senza moderazione (upload
-  diretto in approved/, la foto compare subito nella griglia);
-  endpoint admin reject esteso anche alle foto pubblicate per
-  eventuale pulizia; testi galleria aggiornati nelle 4 lingue.
+Marker mappe tour:
+- i badge numerati sono agganciati al punto della traccia più vicino alla
+  partenza reale (snapToLine): restano fermi ed esattamente sulla linea,
+  senza scarti; rimossa l'animazione di scala al passaggio del mouse
+
+Autore:
+- "By Andrea Rama" sotto il titolo nella home
+- bio aggiornata (4 lingue): Andrea Rama, maestro di sci e studente di
+  MONTES (Scienze e Tecnologie per la Montagna, UniTO), con missione del
+  sito e contatti; ruolo aggiornato; SITE_AUTHOR.name = "Andrea Rama"
+
+Contenuti sentieri (storia, geologia, punti chiave, acqua, trasporti):
+- geologia per i 6 massicci dei tour, applicata alle 53 tappe
+- nota culturale documentata su ogni tappa tour (es. Whymper 1865 al
+  Cervino, Napoleone al Gran San Bernardo, Einaudi alla Fenêtre de Durand,
+  riserve reali di caccia del Gran Paradiso)
+- Alta Via 2: paragrafo editoriale esteso + nota culturale per le 14 tappe
+- acqua e trasporti fattuali per tutte le tappe tour (no dati inventati)
+- descrizioni estese di Anello Bonatti, AV1 tappa 1, Lago Djouan
+- validato: trails-routes 67/67 e trails 19/19 al livello enriched/schema
 
 Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>

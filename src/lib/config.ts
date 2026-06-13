@@ -11,7 +11,7 @@ export const SITE_URL =
  * ▶︎ CAMBIA `name` con il tuo nome reale. Compare nelle schede sentiero e nel JSON-LD.
  */
 export const SITE_AUTHOR = {
-  name: 'Andrea', // ← metti qui il tuo nome/cognome
+  name: 'Andrea Rama',
   url: `${SITE_URL}/about`,
   /** Foto in /public — sostituire con ritratto reale del curatore */
   photo: '/about/author.svg',
