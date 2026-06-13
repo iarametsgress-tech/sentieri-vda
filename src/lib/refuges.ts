@@ -119,6 +119,58 @@ export function getTrailGalleryImages(
   return out.slice(0, limit);
 }
 
+function haversineM(
+  a: { lat: number; lng: number },
+  b: { lat: number; lng: number }
+): number {
+  const R = 6371000;
+  const dLat = ((b.lat - a.lat) * Math.PI) / 180;
+  const dLng = ((b.lng - a.lng) * Math.PI) / 180;
+  const x =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((a.lat * Math.PI) / 180) *
+      Math.cos((b.lat * Math.PI) / 180) *
+      Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(x));
+}
+
+/**
+ * Rifugi e bivacchi che si trovano SUL percorso: la cui posizione è entro
+ * `maxMeters` da un punto della traccia GPX. Usato per citare i punti
+ * d'appoggio reali (incl. bivacchi) sulle schede sentiero.
+ */
+export function getRefugesNearGeoJSON(
+  geojson: GeoJSON.FeatureCollection | null,
+  maxMeters = 350
+): { refuge: Refuge; distance_m: number }[] {
+  if (!geojson) return [];
+  const pts: { lat: number; lng: number }[] = [];
+  for (const f of geojson.features) {
+    if (f.geometry.type === 'LineString') {
+      for (const c of f.geometry.coordinates as number[][]) pts.push({ lng: c[0], lat: c[1] });
+    } else if (f.geometry.type === 'MultiLineString') {
+      for (const line of f.geometry.coordinates as number[][][])
+        for (const c of line) pts.push({ lng: c[0], lat: c[1] });
+    }
+  }
+  if (pts.length < 2) return [];
+  // downsample per performance
+  const step = Math.max(1, Math.floor(pts.length / 400));
+  const sampled = pts.filter((_, i) => i % step === 0);
+
+  const out: { refuge: Refuge; distance_m: number }[] = [];
+  for (const r of parsed) {
+    let best = Infinity;
+    for (const p of sampled) {
+      const d = haversineM(r.coords, p);
+      if (d < best) best = d;
+      if (best <= maxMeters) break;
+    }
+    if (best <= maxMeters) out.push({ refuge: r, distance_m: Math.round(best) });
+  }
+  return out.sort((a, b) => a.distance_m - b.distance_m);
+}
+
 export function extractRefugeSlugsFromTrail(trail: {
   refuges: string[];
   start: { name: string };

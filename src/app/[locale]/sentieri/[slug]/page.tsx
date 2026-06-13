@@ -46,7 +46,11 @@ import {
   getTrailLocalizedDescription,
   getTrailConditionsNote,
 } from '@/lib/stage-utils';
-import { extractRefugeSlugsFromTrail, getTrailGalleryImages } from '@/lib/refuges';
+import {
+  extractRefugeSlugsFromTrail,
+  getTrailGalleryImages,
+  getRefugesNearGeoJSON,
+} from '@/lib/refuges';
 import { getLinkableThemeTagsForTrail, humanizeThemeTag, getValleyHubHref } from '@/lib/hubs';
 import { trailImageBlurProps } from '@/lib/blur';
 import { loadTrailGeoJSON, getGpxPublicPath, gpxFileExists } from '@/lib/gpx';
@@ -128,7 +132,15 @@ export default async function TrailDetail({
   const tGal = await getTranslations('Refuges');
   const name = getTrailLocalizedName(trail, locale);
   const description = getTrailLocalizedDescription(trail, locale);
-  const refugeSlugs = extractRefugeSlugsFromTrail(trail);
+  const routeGeoJSON = loadTrailGeoJSON(slug);
+  // Punti d'appoggio sul percorso: nominati (start/end/waypoint/refuges) +
+  // rifugi/bivacchi reali entro ~350 m dalla traccia GPX.
+  const refugeSlugs = Array.from(
+    new Set([
+      ...extractRefugeSlugsFromTrail(trail),
+      ...getRefugesNearGeoJSON(routeGeoJSON, 350).map((x) => x.refuge.slug),
+    ])
+  );
   const galleryImages = getTrailGalleryImages(trail, refugeSlugs, locale);
 
   const isAV1 = trail.tags.includes('alta-via-1');
@@ -145,7 +157,7 @@ export default async function TrailDetail({
   const isStageRoute = isAV1 || isAV2 || Boolean(tourTag);
   const iconicImage = trail.image || trail.hero_image;
   const gpxPath = trail.gpx_path ?? (gpxFileExists(slug) ? getGpxPublicPath(slug) : null);
-  const trailGeoJSON = loadTrailGeoJSON(slug);
+  const trailGeoJSON = routeGeoJSON;
   const indexable = shouldIndexTrail(trail);
 
   const jsonLd = indexable ? buildTrailJsonLd(trail, locale) : null;

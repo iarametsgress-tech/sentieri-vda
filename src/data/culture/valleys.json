@@ -46,7 +46,8 @@
     "official_url": "https://www.regione.vda.it/turismo",
     "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
     "image_credit": "Giorgio Galeotti (CC BY 4.0)",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Vallone_del_Malatr%C3%A0_-_Val_Ferret,_Courmayeur,_Aosta,_Italia_05_-_8_Agosto,_2016.jpg"
+    "image_source": "https://commons.wikimedia.org/wiki/File:Vallone_del_Malatr%C3%A0_-_Val_Ferret,_Courmayeur,_Aosta,_Italia_05_-_8_Agosto,_2016.jpg",
+    "macro": "alta"
   },
   {
     "id": "val-veny",
@@ -93,7 +94,8 @@
       "Val Veny"
     ],
     "official_url": "https://www.regione.vda.it/turismo",
-    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
+    "macro": "alta"
   },
   {
     "id": "valtournenche",
@@ -153,7 +155,8 @@
       "Valtournenche — Val Saint-Barthélemy"
     ],
     "official_url": "https://www.regione.vda.it/turismo",
-    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
+    "macro": "bassa"
   },
   {
     "id": "valle-del-lys",
@@ -213,7 +216,8 @@
       "Valle di Gressoney"
     ],
     "official_url": "https://www.regione.vda.it/turismo",
-    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
+    "macro": "bassa"
   },
   {
     "id": "valle-d-ayas",
@@ -273,7 +277,8 @@
       "Valle di Gressoney — Valle d'Ayas"
     ],
     "official_url": "https://www.regione.vda.it/turismo",
-    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
+    "macro": "bassa"
   },
   {
     "id": "valpelline",
@@ -333,7 +338,8 @@
       "Valpelline — Conca di By"
     ],
     "official_url": "https://www.regione.vda.it/turismo",
-    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
+    "macro": "alta"
   },
   {
     "id": "val-di-cogne",
@@ -380,7 +386,8 @@
       "Val di Cogne"
     ],
     "official_url": "https://www.parcogranparadiso.it/",
-    "source": "Parco Nazionale del Gran Paradiso — Ente di gestione"
+    "source": "Parco Nazionale del Gran Paradiso — Ente di gestione",
+    "macro": "alta"
   },
   {
     "id": "valsavarenche",
@@ -427,7 +434,8 @@
       "Valsavarenche"
     ],
     "official_url": "https://www.parcogranparadiso.it/",
-    "source": "Parco Nazionale del Gran Paradiso — Ente di gestione"
+    "source": "Parco Nazionale del Gran Paradiso — Ente di gestione",
+    "macro": "centrale"
   },
   {
     "id": "valgrisenche",
@@ -476,7 +484,8 @@
     "official_url": "https://www.regione.vda.it/turismo",
     "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
     "image_credit": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר (CC BY-SA 4.0)",
-    "image_source": "https://commons.wikimedia.org/wiki/File:ValgrisencheValleAug312024_02.jpg"
+    "image_source": "https://commons.wikimedia.org/wiki/File:ValgrisencheValleAug312024_02.jpg",
+    "macro": "alta"
   },
   {
     "id": "val-di-rhemes",
@@ -525,7 +534,8 @@
     "official_url": "https://www.parcogranparadiso.it/",
     "source": "Parco Nazionale del Gran Paradiso — Ente di gestione",
     "image_credit": "Rinina25 Twice25 (CC BY-SA 2.5)",
-    "image_source": "https://commons.wikimedia.org/wiki/File:Valle_d%27Aosta-Rh%C3%AAmes-Notre-Dame-DSCF6811.JPG"
+    "image_source": "https://commons.wikimedia.org/wiki/File:Valle_d%27Aosta-Rh%C3%AAmes-Notre-Dame-DSCF6811.JPG",
+    "macro": "centrale"
   },
   {
     "id": "la-thuile",
@@ -572,71 +582,90 @@
       "La Thuile"
     ],
     "official_url": "https://www.regione.vda.it/turismo",
-    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
+    "macro": "alta"
   },
   {
     "id": "bassa-valle",
-    "name_it": "Bassa Valle",
-    "name_en": "Lower Valley",
-    "name_fr": "Basse Vallée",
-    "name_de": "Untertal",
-    "eyebrow_it": "Vigneti, castagni e borghi walser",
-    "eyebrow_en": "Vineyards, chestnuts and Walser villages",
-    "eyebrow_fr": "Vignobles, châtaigniers et villages walser",
-    "eyebrow_de": "Weinberge, Kastanien und Walser-Dörfer",
-    "description_it": "La Bassa Valle è il tratto valdostano della Dora Baltea dal confine piemontese fino ad Aosta: vigneti terrazzati, castagneti e borghi walser come Perloz e Donnas. Il clima più mite permette viticoltura e coltivazioni di fondovalle. L'Alta Via 1 e l'Alta Via 2 partono o transitano da qui, collegando la pianura alpina alle valli altre.",
-    "description_en": "The Lower Valley is the Valdostan stretch of the Dora Baltea from the Piedmont border to Aosta: terraced vineyards, chestnut groves and Walser villages like Perloz and Donnas. A milder climate allows viticulture and valley-floor cultivation. Alta Via 1 and Alta Via 2 start or pass through here, linking the alpine plain to the upper valleys.",
-    "description_fr": "La Basse Vallée est le tronçon valdôtain de la Doire Baltée depuis la frontière piémontaise jusqu'à Aoste : vignes en terrasses, châtaigneraies et villages walser comme Perloz et Donnas. Le climat plus doux permet la viticulture et les cultures de fond de vallée. L'Alta Via 1 et l'Alta Via 2 partent ou transitent d'ici, reliant la plaine alpine aux hautes vallées.",
-    "description_de": "Das Untertal ist der Valdostanische Abschnitt der Dora Baltea von der piemontesischen Grenze bis nach Aosta: terrassierte Weinberge, Kastanienwälder und Walser-Dörfer wie Perloz und Donnas. Ein milderes Klima erlaubt Weinbau und Talbodenlandwirtschaft. Die Alta Via 1 und Alta Via 2 beginnen oder verlaufen hier und verbinden die Alpenebene mit den oberen Tälern.",
-    "image": "/trails/donnas.webp",
+    "name_it": "Bassa Valle — la porta della Valle",
+    "name_en": "Lower Valley — the gateway",
+    "name_fr": "Basse Vallée — la porte de la Vallée",
+    "name_de": "Unteres Tal — das Tor zum Aostatal",
+    "eyebrow_it": "Da Pont-Saint-Martin a Châtillon",
+    "eyebrow_en": "From Pont-Saint-Martin to Châtillon",
+    "eyebrow_fr": "De Pont-Saint-Martin à Châtillon",
+    "eyebrow_de": "Von Pont-Saint-Martin bis Châtillon",
+    "description_it": "La Bassa Valle è la soglia della Valle d'Aosta, dove la Dora Baltea esce dalla montagna verso la pianura padana. È la terra dei ponti romani e dei castelli che sorvegliano la strada delle Gallie: il ponte di Pont-Saint-Martin, scavalcato dall'acqua da duemila anni, il Forte di Bard che chiude la valle come un tappo di pietra, i manieri di Verrès e Issogne uno di fronte all'altro. Qui il clima più mite ha fatto fiorire il vigneto eroico: il Nebbiolo di Donnas, i terrazzamenti più alti d'Europa, e a Arnad il lardo DOP stagionato nel sale e nelle erbe di montagna, presidio gastronomico riconosciuto in tutto il mondo.",
+    "description_en": "The Lower Valley is the threshold of the Aosta Valley, where the Dora Baltea leaves the mountains for the Po plain. This is the land of Roman bridges and castles guarding the road of the Gauls: the Pont-Saint-Martin bridge, arched over the torrent for two thousand years, the Bard fortress that plugs the valley like a stone cork, the manors of Verrès and Issogne facing one another. Here the milder climate let heroic vineyards flourish: the Donnas Nebbiolo on Europe's highest terraces, and at Arnad the PDO lardo cured in salt and mountain herbs, a gastronomic landmark known worldwide.",
+    "description_fr": "La Basse Vallée est le seuil de la Vallée d'Aoste, là où la Doire Baltée quitte la montagne pour la plaine du Pô. C'est la terre des ponts romains et des châteaux gardant la voie des Gaules : le pont de Pont-Saint-Martin, enjambant le torrent depuis deux mille ans, le fort de Bard qui ferme la vallée comme un bouchon de pierre, les manoirs de Verrès et d'Issogne face à face. Ici le climat plus doux a fait fleurir le vignoble héroïque : le Nebbiolo de Donnas sur les terrasses les plus hautes d'Europe, et à Arnad le lard AOP affiné au sel et aux herbes de montagne, fleuron gastronomique connu dans le monde entier.",
+    "description_de": "Das Untere Tal ist die Schwelle des Aostatals, wo die Dora Baltea das Gebirge zur Po-Ebene verlässt. Es ist das Land der römischen Brücken und der Burgen, die die Gallierstraße bewachen: die Brücke von Pont-Saint-Martin, die den Bach seit zweitausend Jahren überspannt, das Fort Bard, das das Tal wie ein steinerner Pfropfen verschließt, die Schlösser von Verrès und Issogne einander gegenüber. Hier ließ das mildere Klima den heroischen Weinbau erblühen: den Donnas-Nebbiolo auf Europas höchsten Terrassen und in Arnad den im Salz und in Bergkräutern gereiften Lardo DOP, eine weltweit bekannte gastronomische Spezialität.",
+    "image": "/cultura/forte-di-bard.jpg",
     "towns": [
-      {
-        "id": "donnas",
-        "name_it": "Donnas",
-        "name_en": "Donnas",
-        "name_fr": "Donnas",
-        "name_de": "Donnas",
-        "description_it": "Donnas è famosa per i vigneti terrazzati e il vino Picotendro DOC. Il borgo medievale e la porta d'accesso all'Alta Via 1 ne fanno una tappa culturale e enogastronomica della Bassa Valle.",
-        "description_en": "Donnas is famous for terraced vineyards and Picotendro DOC wine. Its medieval village and gateway to Alta Via 1 make it a cultural and gastronomic stop in the Lower Valley.",
-        "description_fr": "Donnas est célèbre pour ses vignes en terrasses et le vin Picotendro DOC. Le bourg médiéval et la porte d'accès à l'Alta Via 1 en font une étape culturelle et gastronomique de la Basse Vallée.",
-        "description_de": "Donnas ist berühmt für seine Terrassenweinberge und den Picotendro-DOC-Wein. Das mittelalterliche Dorf und das Eingangstor zur Alta Via 1 machen es zu einer kulturellen und kulinarischen Station im Untertal.",
-        "official_url": "https://www.comune.donnas.ao.it/"
-      },
       {
         "id": "pont-saint-martin",
         "name_it": "Pont-Saint-Martin",
         "name_en": "Pont-Saint-Martin",
         "name_fr": "Pont-Saint-Martin",
         "name_de": "Pont-Saint-Martin",
-        "description_it": "Pont-Saint-Martin segna il confine tra Piemonte e Valle d'Aosta con il suo ponte romano. Il comune è porta d'ingresso regionale e base per escursioni verso i terrazzamenti vitati e i castagneti.",
-        "description_en": "Pont-Saint-Martin marks the Piedmont–Valle d'Aosta border with its Roman bridge. The municipality is the regional gateway and a base for walks through terraced vineyards and chestnut woods.",
-        "description_fr": "Pont-Saint-Martin marque la frontière entre le Piémont et la Vallée d'Aoste avec son pont romain. La commune est la porte d'entrée régionale et une base pour les excursions à travers les vignes en terrasses et les châtaigneraies.",
-        "description_de": "Pont-Saint-Martin markiert die Grenze zwischen dem Piemont und dem Aostatal mit seiner römischen Brücke. Die Gemeinde ist das regionale Eingangstor und Ausgangspunkt für Wanderungen durch Terrassenweinberge und Kastanienwälder.",
-        "official_url": "https://www.comune.pont-saint-martin.ao.it/"
+        "description_it": "Porta d'ingresso della valle, prende il nome dal ponte romano a una sola arcata (I sec. a.C.) ancora intatto sul torrente Lys. La leggenda vuole che lo abbia costruito il diavolo in cambio della prima anima di passaggio, ingannato da San Martino con un cane. Il carnevale storico rievoca ogni anno la leggenda con il rogo del Diavolo.",
+        "description_en": "The valley's gateway takes its name from the single-arch Roman bridge (1st c. BC) still intact over the Lys. Legend says the devil built it in exchange for the first soul to cross, tricked by Saint Martin with a dog. The historic carnival re-enacts the legend each year with the burning of the Devil.",
+        "description_fr": "Porte d'entrée de la vallée, elle tient son nom du pont romain à une seule arche (Ier s. av. J.-C.) encore intact sur le Lys. La légende veut que le diable l'ait bâti en échange de la première âme à le franchir, dupé par saint Martin avec un chien. Le carnaval historique rejoue chaque année la légende par le bûcher du Diable.",
+        "description_de": "Das Tor zum Tal verdankt seinen Namen der einbogigen römischen Brücke (1. Jh. v. Chr.), die noch heute über den Lys führt. Der Legende nach baute sie der Teufel gegen die erste hinüberschreitende Seele — vom heiligen Martin mit einem Hund überlistet. Der historische Karneval inszeniert die Legende jährlich mit der Verbrennung des Teufels."
       },
       {
-        "id": "perloz",
-        "name_it": "Perloz",
-        "name_en": "Perloz",
-        "name_fr": "Perloz",
-        "name_de": "Perloz",
-        "description_it": "Perloz è un borgo walser arroccato sui terrazzamenti della Bassa Valle, con forni comunitari e architettura tradizionale. Tappa dell'Alta Via 1, offre panorami sul fondovalle e sui vigneti di Donnas.",
-        "description_en": "Perloz is a Walser village perched on Lower Valley terraces, with communal ovens and traditional architecture. An Alta Via 1 stage, it offers views over the valley floor and Donnas vineyards.",
-        "description_fr": "Perloz est un village walser perché sur les terrasses de la Basse Vallée, avec des fours communautaires et une architecture traditionnelle. Étape de l'Alta Via 1, il offre des panoramas sur le fond de vallée et les vignes de Donnas.",
-        "description_de": "Perloz ist ein Walser-Dorf auf den Terrassen des Untertals, mit Gemeinschaftsöfen und traditioneller Architektur. Eine Etappe der Alta Via 1, bietet es Ausblicke über den Talboden und die Weinberge von Donnas.",
-        "official_url": "https://www.comune.perloz.ao.it/"
+        "id": "donnas",
+        "name_it": "Donnas",
+        "name_en": "Donnas",
+        "name_fr": "Donnas",
+        "name_de": "Donnas",
+        "description_it": "Patria del più antico vino DOC valdostano, il Donnas (Nebbiolo di montagna), Donnas conserva il tratto meglio preservato della strada romana delle Gallie: cento metri scavati nella roccia viva, con l'arco e le tacche dei carri. I suoi vigneti a pergola bassa, sorretti da pilastrini di pietra, disegnano il paesaggio.",
+        "description_en": "Home of the oldest Aosta Valley DOC wine, Donnas (mountain Nebbiolo), the town keeps the best-preserved stretch of the Roman road of the Gauls: a hundred metres cut into living rock, with the arch and cart ruts. Its low-pergola vineyards on little stone pillars shape the landscape.",
+        "description_fr": "Patrie du plus ancien vin DOC valdôtain, le Donnas (Nebbiolo de montagne), elle conserve le tronçon le mieux préservé de la voie romaine des Gaules : cent mètres taillés dans le roc, avec l'arche et les ornières des chars. Ses vignes en pergola basse, soutenues par des piliers de pierre, dessinent le paysage.",
+        "description_de": "Heimat des ältesten DOC-Weins des Aostatals, des Donnas (Berg-Nebbiolo), bewahrt der Ort den besterhaltenen Abschnitt der römischen Gallierstraße: hundert Meter in den Fels gehauen, mit Bogen und Wagenspuren. Seine niedrigen Pergola-Reben auf Steinpfeilern prägen die Landschaft."
       },
       {
-        "id": "aosta",
-        "name_it": "Aosta",
-        "name_en": "Aosta",
-        "name_fr": "Aoste",
-        "name_de": "Aosta",
-        "description_it": "Capoluogo regionale, Aosta conserva mura romane, il Criptoportico e una vita culturale vivace. La città è crocevia verso tutte le valli laterali e sede della Fiera di Sant'Orso.",
-        "description_en": "Regional capital, Aosta preserves Roman walls, the Cryptoporticus and a lively cultural scene. The city is a crossroads to all side valleys and home to the Sant'Orso Fair.",
-        "description_fr": "Capitale régionale, Aoste conserve des remparts romains, le Cryptoportique et une vie culturelle animée. La ville est un carrefour vers toutes les vallées latérales et accueille la Foire de Saint-Ours.",
-        "description_de": "Die Regionshauptstadt bewahrt römische Stadtmauern, den Kryptoportikus und ein lebendiges Kulturleben. Die Stadt ist Kreuzungspunkt zu allen Seitentälern und Heimat der Sankt-Ursus-Messe.",
-        "official_url": "https://www.comune.aosta.it/"
+        "id": "bard",
+        "name_it": "Bard",
+        "name_en": "Bard",
+        "name_fr": "Bard",
+        "name_de": "Bard",
+        "description_it": "Borgo medievale di una sola via, dominato dall'imponente Forte di Bard: la fortezza sabauda dell'Ottocento, costruita dove Napoleone fu bloccato nel 1800, oggi ospita i Musei delle Alpi ed è uno dei poli culturali più visitati del Nord-Ovest. Il borgo ai suoi piedi conserva case quattrocentesche con finestre crociate e stemmi.",
+        "description_en": "A medieval one-street village dominated by the mighty Bard Fortress: the 19th-century Savoy stronghold built where Napoleon was held up in 1800, now home to the Museum of the Alps and one of the most visited cultural hubs in the north-west. The village below keeps 15th-century houses with mullioned windows and coats of arms.",
+        "description_fr": "Bourg médiéval d'une seule rue, dominé par l'imposant fort de Bard : la forteresse savoyarde du XIXe siècle, bâtie là où Napoléon fut bloqué en 1800, abrite aujourd'hui le Musée des Alpes et compte parmi les pôles culturels les plus visités du Nord-Ouest. Le bourg en contrebas conserve des maisons du XVe siècle à fenêtres à meneaux.",
+        "description_de": "Mittelalterliches Dorf mit einer einzigen Gasse, überragt vom mächtigen Fort Bard: der savoyischen Festung des 19. Jahrhunderts, erbaut dort, wo Napoleon 1800 aufgehalten wurde, heute Sitz des Alpenmuseums und einer der meistbesuchten Kulturorte des Nordwestens. Das Dorf darunter bewahrt Häuser des 15. Jahrhunderts mit Kreuzstockfenstern."
+      },
+      {
+        "id": "arnad",
+        "name_it": "Arnad",
+        "name_en": "Arnad",
+        "name_fr": "Arnad",
+        "name_de": "Arnad",
+        "description_it": "Celebre per il Lard d'Arnad DOP, salume di lardo stagionato in recipienti di legno (doils) con sale, erbe e spezie di montagna, primo lardo al mondo a ottenere la denominazione. Domina il paese la chiesa romanica di San Martino (XI sec.), fra le più antiche e meglio conservate della valle. La sagra del lardo, ogni agosto, è una delle feste gastronomiche più amate.",
+        "description_en": "Famous for Lard d'Arnad PDO, lardo cured in wooden vats (doils) with salt, herbs and mountain spices — the first lardo in the world to gain protected status. The town is dominated by the Romanesque church of San Martino (11th c.), among the oldest and best preserved in the valley. The August lardo festival is one of the most beloved food fairs.",
+        "description_fr": "Célèbre pour le Lard d'Arnad AOP, lard affiné dans des récipients de bois (doils) avec sel, herbes et épices de montagne — premier lard au monde à obtenir l'appellation. Le bourg est dominé par l'église romane de San Martino (XIe s.), parmi les plus anciennes et les mieux conservées de la vallée. La fête du lard, chaque août, est l'une des plus appréciées.",
+        "description_de": "Berühmt für den Lard d'Arnad DOP, in Holzgefäßen (Doils) mit Salz, Kräutern und Berggewürzen gereiften Speck — der erste Lardo der Welt mit geschützter Herkunft. Den Ort überragt die romanische Kirche San Martino (11. Jh.), eine der ältesten und besterhaltenen des Tals. Das Speckfest im August ist eines der beliebtesten Genussfeste."
+      },
+      {
+        "id": "verres",
+        "name_it": "Verrès",
+        "name_en": "Verrès",
+        "name_fr": "Verrès",
+        "name_de": "Verrès",
+        "description_it": "Dominata dal massiccio castello quadrato di Ibleto di Challant (XIV sec.), uno dei primi manieri monoblocco delle Alpi, Verrès rievoca ogni primavera il Carnevale storico dedicato a Caterina di Challant. È il bivio per la Valle d'Ayas e conserva la prevostura di Saint-Gilles.",
+        "description_en": "Dominated by the massive square castle of Ibleto di Challant (14th c.), one of the first single-block manors in the Alps, Verrès re-enacts each spring its historic carnival dedicated to Caterina di Challant. It is the junction for the Ayas valley and keeps the Saint-Gilles priory.",
+        "description_fr": "Dominée par le massif château carré d'Ibleto de Challant (XIVe s.), l'un des premiers manoirs monoblocs des Alpes, Verrès rejoue chaque printemps son carnaval historique dédié à Catherine de Challant. C'est le carrefour du val d'Ayas et le siège du prieuré de Saint-Gilles.",
+        "description_de": "Überragt vom mächtigen quadratischen Schloss des Ibleto di Challant (14. Jh.), einer der ersten Einblock-Burgen der Alpen, inszeniert Verrès jedes Frühjahr seinen historischen Karneval zu Ehren der Caterina di Challant. Es ist die Abzweigung ins Ayas-Tal und bewahrt die Propstei Saint-Gilles."
+      },
+      {
+        "id": "chatillon",
+        "name_it": "Châtillon",
+        "name_en": "Châtillon",
+        "name_fr": "Châtillon",
+        "name_de": "Châtillon",
+        "description_it": "Crocevia verso la Valtournenche e il Cervino, Châtillon vive sul ponte sul torrente Marmore e sui castelli di Ussel e Gamba. Antico borgo industriale (qui nacque la prima fabbrica di seta artificiale d'Italia), conserva ville liberty e un fitto tessuto di mulini e fucine lungo il torrente.",
+        "description_en": "A crossroads towards Valtournenche and the Matterhorn, Châtillon lives on the bridge over the Marmore torrent and the Ussel and Gamba castles. An old industrial town (Italy's first artificial-silk factory was born here), it keeps Liberty villas and a dense network of mills and forges along the torrent.",
+        "description_fr": "Carrefour vers la Valtournenche et le Cervin, Châtillon vit sur le pont du torrent Marmore et les châteaux d'Ussel et de Gamba. Ancien bourg industriel (la première usine de soie artificielle d'Italie y naquit), elle conserve des villas Art nouveau et un réseau dense de moulins et de forges le long du torrent.",
+        "description_de": "Knotenpunkt Richtung Valtournenche und Matterhorn, lebt Châtillon auf der Brücke über den Marmore-Bach und den Schlössern Ussel und Gamba. Eine alte Industriestadt (hier entstand Italiens erste Kunstseidenfabrik) mit Jugendstilvillen und einem dichten Netz aus Mühlen und Schmieden entlang des Bachs."
       }
     ],
     "trail_labels": [
@@ -644,7 +673,10 @@
       "Bassa Valle — Mont Mars"
     ],
     "official_url": "https://www.regione.vda.it/turismo",
-    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
+    "macro": "bassa",
+    "image_credit": "Crivellari Giulio · Wikimedia Commons · FORTE DI BARD 4.jpg",
+    "image_source": "https://commons.wikimedia.org/wiki/File:FORTE_DI_BARD_4.jpg"
   },
   {
     "id": "valle-gran-san-bernardo",
@@ -691,7 +723,8 @@
       "Valle del Gran San Bernardo"
     ],
     "official_url": "https://www.regione.vda.it/turismo",
-    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
+    "macro": "alta"
   },
   {
     "id": "champorcher",
@@ -738,6 +771,163 @@
       "Champorcher"
     ],
     "official_url": "https://www.regione.vda.it/turismo",
-    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti"
+    "source": "Regione Autonoma Valle d'Aosta — Dipartimento Turismo, Sport, Commercio e Trasporti",
+    "macro": "bassa"
+  },
+  {
+    "id": "vallata-centrale",
+    "macro": "centrale",
+    "name_it": "Vallata centrale — la conca di Aosta",
+    "name_en": "Central Valley — the Aosta basin",
+    "name_fr": "Vallée centrale — la cuvette d'Aoste",
+    "name_de": "Zentrales Tal — das Becken von Aosta",
+    "eyebrow_it": "Da Saint-Vincent a Introd",
+    "eyebrow_en": "From Saint-Vincent to Introd",
+    "eyebrow_fr": "De Saint-Vincent à Introd",
+    "eyebrow_de": "Von Saint-Vincent bis Introd",
+    "description_it": "La vallata centrale è il cuore storico e amministrativo della regione: la larga conca dove la Dora Baltea rallenta e dove sorge Aosta, la \"Roma delle Alpi\", con il suo arco di Augusto, il teatro romano e la cinta muraria del 25 a.C. ancora leggibile. È la terra dei grandi castelli — Fénis, Sarre, Aymavilles, Saint-Pierre — e dei vigneti che producono i bianchi d'altura più rinomati: il Torrette di Nebbiolo, la Petite Arvine, il Müller-Thurgau di Morgex. Qui passava la via Francigena dei pellegrini diretti a Roma, e qui la cultura franco-provenzale dà ancora il tono a feste, mercati e patois.",
+    "description_en": "The central valley is the historic and administrative heart of the region: the wide basin where the Dora Baltea slows and where Aosta rises, the \"Rome of the Alps\", with its Arch of Augustus, Roman theatre and 25 BC walls still legible. It is the land of the great castles — Fénis, Sarre, Aymavilles, Saint-Pierre — and of the vineyards producing the most renowned high-altitude whites: Nebbiolo-based Torrette, Petite Arvine, the Müller-Thurgau of Morgex. The pilgrims' Via Francigena to Rome passed here, and Franco-Provençal culture still sets the tone for festivals, markets and patois.",
+    "description_fr": "La vallée centrale est le cœur historique et administratif de la région : la large cuvette où la Doire Baltée ralentit et où s'élève Aoste, la « Rome des Alpes », avec son arc d'Auguste, son théâtre romain et son enceinte de 25 av. J.-C. encore lisible. C'est la terre des grands châteaux — Fénis, Sarre, Aymavilles, Saint-Pierre — et des vignobles produisant les blancs d'altitude les plus réputés : le Torrette de Nebbiolo, la Petite Arvine, le Müller-Thurgau de Morgex. La via Francigena des pèlerins vers Rome passait ici, et la culture franco-provençale donne encore le ton aux fêtes, marchés et patois.",
+    "description_de": "Das zentrale Tal ist das historische und administrative Herz der Region: das weite Becken, in dem die Dora Baltea langsamer wird und Aosta liegt, das „Rom der Alpen\", mit Augustusbogen, römischem Theater und der noch lesbaren Stadtmauer von 25 v. Chr. Es ist das Land der großen Schlösser — Fénis, Sarre, Aymavilles, Saint-Pierre — und der Weinberge, die die renommiertesten Höhenweißweine hervorbringen: den Nebbiolo-Torrette, die Petite Arvine, den Müller-Thurgau von Morgex. Hier verlief die Via Francigena der Rompilger, und die frankoprovenzalische Kultur prägt noch Feste, Märkte und Patois.",
+    "image": "/cultura/aosta-arco-augusto.jpg",
+    "towns": [
+      {
+        "id": "aosta",
+        "name_it": "Aosta",
+        "name_en": "Aosta",
+        "name_fr": "Aoste",
+        "name_de": "Aosta",
+        "description_it": "Fondata nel 25 a.C. come Augusta Praetoria, Aosta è la \"Roma delle Alpi\": l'arco di Augusto, la Porta Pretoria, il teatro romano, il criptoportico del foro e le mura quasi integre raccontano duemila anni di storia. Capoluogo bilingue, custodisce la collegiata di Sant'Orso con il chiostro romanico e ospita ogni 30-31 gennaio la Fiera di Sant'Orso, la più antica e grande fiera dell'artigianato alpino.",
+        "description_en": "Founded in 25 BC as Augusta Praetoria, Aosta is the \"Rome of the Alps\": the Arch of Augustus, the Praetorian Gate, the Roman theatre, the forum cryptoporticus and the near-intact walls tell two thousand years of history. The bilingual capital keeps the Sant'Orso collegiate church with its Romanesque cloister and hosts, each 30-31 January, the Sant'Orso Fair, the oldest and largest Alpine craft fair.",
+        "description_fr": "Fondée en 25 av. J.-C. sous le nom d'Augusta Prætoria, Aoste est la « Rome des Alpes » : l'arc d'Auguste, la Porte Prétorienne, le théâtre romain, le cryptoportique du forum et les remparts presque intacts racontent deux mille ans d'histoire. Chef-lieu bilingue, elle conserve la collégiale Saint-Ours et son cloître roman, et accueille chaque 30-31 janvier la Foire de Saint-Ours, la plus ancienne et grande foire de l'artisanat alpin.",
+        "description_de": "25 v. Chr. als Augusta Praetoria gegründet, ist Aosta das „Rom der Alpen\": Augustusbogen, Prätorianertor, römisches Theater, der Kryptoportikus des Forums und die fast intakten Mauern erzählen zweitausend Jahre Geschichte. Die zweisprachige Hauptstadt bewahrt die Stiftskirche Sant'Orso mit romanischem Kreuzgang und veranstaltet jährlich am 30./31. Januar die Sant'Orso-Messe, die älteste und größte alpine Handwerksmesse."
+      },
+      {
+        "id": "saint-vincent",
+        "name_it": "Saint-Vincent",
+        "name_en": "Saint-Vincent",
+        "name_fr": "Saint-Vincent",
+        "name_de": "Saint-Vincent",
+        "description_it": "Soprannominata la \"Riviera delle Alpi\" per il clima mite, Saint-Vincent unisce le terme, il celebre Casino de la Vallée e la fonte di acqua minerale. Il borgo storico sale verso la chiesa parrocchiale con scavi romani sotto il sagrato.",
+        "description_en": "Nicknamed the \"Riviera of the Alps\" for its mild climate, Saint-Vincent combines spa baths, the famous Casino de la Vallée and a mineral spring. The old town climbs to the parish church, with Roman remains beneath its forecourt.",
+        "description_fr": "Surnommée la « Riviera des Alpes » pour son climat doux, Saint-Vincent réunit les thermes, le célèbre Casino de la Vallée et sa source d'eau minérale. Le vieux bourg monte vers l'église paroissiale, avec des vestiges romains sous le parvis.",
+        "description_de": "Wegen ihres milden Klimas „Riviera der Alpen\" genannt, vereint Saint-Vincent Thermen, das berühmte Casino de la Vallée und eine Mineralquelle. Die Altstadt steigt zur Pfarrkirche mit römischen Funden unter dem Vorplatz auf."
+      },
+      {
+        "id": "nus",
+        "name_it": "Nus",
+        "name_en": "Nus",
+        "name_fr": "Nus",
+        "name_de": "Nus",
+        "description_it": "Antico feudo dei signori di Nus, conserva il castello di Pilato e, sopra il paese, il borgo di Fénis con il castello più scenografico della valle, dalle doppie cinte merlate e dagli affreschi quattrocenteschi di Giacomo Jaquerio.",
+        "description_en": "An old fief of the lords of Nus, it keeps the Pilato castle and, above the village, the hamlet of Fénis with the valley's most scenographic castle, its double crenellated walls and 15th-century frescoes by Giacomo Jaquerio.",
+        "description_fr": "Ancien fief des seigneurs de Nus, elle conserve le château de Pilato et, au-dessus du village, le hameau de Fénis avec le château le plus scénographique de la vallée, à double enceinte crénelée et fresques du XVe siècle de Giacomo Jaquerio.",
+        "description_de": "Altes Lehen der Herren von Nus, bewahrt es die Burg Pilato und oberhalb des Dorfes den Weiler Fénis mit dem szenischsten Schloss des Tals, doppelter Zinnenmauer und Fresken des 15. Jahrhunderts von Giacomo Jaquerio."
+      },
+      {
+        "id": "sarre",
+        "name_it": "Sarre",
+        "name_en": "Sarre",
+        "name_fr": "Sarre",
+        "name_de": "Sarre",
+        "description_it": "Il castello reale di Sarre fu residenza di caccia dei Savoia: Vittorio Emanuele II e Umberto I vi soggiornavano per cacciare lo stambecco nel Gran Paradiso. Le sue sale sono decorate con migliaia di corna e palchi, testimonianza unica della passione venatoria reale.",
+        "description_en": "The royal castle of Sarre was a Savoy hunting residence: Vittorio Emanuele II and Umberto I stayed here to hunt ibex in the Gran Paradiso. Its halls are decorated with thousands of horns and antlers, a unique record of the royal hunting passion.",
+        "description_fr": "Le château royal de Sarre fut une résidence de chasse des Savoie : Victor-Emmanuel II et Humbert Ier y séjournaient pour chasser le bouquetin au Grand-Paradis. Ses salles sont ornées de milliers de cornes et de bois, témoignage unique de la passion cynégétique royale.",
+        "description_de": "Das königliche Schloss Sarre war eine Jagdresidenz der Savoyer: Vittorio Emanuele II. und Umberto I. weilten hier zur Steinbockjagd im Gran Paradiso. Seine Säle sind mit Tausenden Hörnern und Geweihen geschmückt — ein einzigartiges Zeugnis der königlichen Jagdleidenschaft."
+      },
+      {
+        "id": "saint-pierre",
+        "name_it": "Saint-Pierre",
+        "name_en": "Saint-Pierre",
+        "name_fr": "Saint-Pierre",
+        "name_de": "Saint-Pierre",
+        "description_it": "Riconoscibile per il castello fiabesco dalle torrette appuntite (oggi museo regionale di scienze naturali), Saint-Pierre custodisce anche il castello Sarriod de la Tour e una delle chiese più antiche, su fondazioni paleocristiane.",
+        "description_en": "Recognisable by its fairytale castle with pointed turrets (now the regional natural-science museum), Saint-Pierre also keeps the Sarriod de la Tour castle and one of the oldest churches, on early-Christian foundations.",
+        "description_fr": "Reconnaissable à son château de conte de fées aux tourelles pointues (aujourd'hui musée régional des sciences naturelles), Saint-Pierre conserve aussi le château Sarriod de la Tour et l'une des plus anciennes églises, sur des fondations paléochrétiennes.",
+        "description_de": "Erkennbar an seinem märchenhaften Schloss mit spitzen Türmchen (heute regionales naturwissenschaftliches Museum), bewahrt Saint-Pierre auch das Schloss Sarriod de la Tour und eine der ältesten Kirchen auf frühchristlichen Fundamenten."
+      },
+      {
+        "id": "villeneuve-introd",
+        "name_it": "Villeneuve e Introd",
+        "name_en": "Villeneuve & Introd",
+        "name_fr": "Villeneuve et Introd",
+        "name_de": "Villeneuve und Introd",
+        "description_it": "Villeneuve, sotto i ruderi del castello di Châtel-Argent, e Introd, con il suo castello poligonale e la casa-forte dei Tour, segnano l'ingresso alle valli del Gran Paradiso (Rhêmes e Valsavarenche). Introd ospitò più volte Giovanni Paolo II in vacanza estiva.",
+        "description_en": "Villeneuve, below the ruins of Châtel-Argent castle, and Introd, with its polygonal castle and the Tour stronghold, mark the entrance to the Gran Paradiso valleys (Rhêmes and Valsavarenche). Introd repeatedly hosted John Paul II on his summer holidays.",
+        "description_fr": "Villeneuve, sous les ruines du château de Châtel-Argent, et Introd, avec son château polygonal et la maison forte des Tour, marquent l'entrée des vallées du Grand-Paradis (Rhêmes et Valsavarenche). Introd accueillit à plusieurs reprises Jean-Paul II en vacances estivales.",
+        "description_de": "Villeneuve unter den Ruinen der Burg Châtel-Argent und Introd mit seinem polygonalen Schloss und dem Wehrhaus der Tour markieren den Eingang zu den Gran-Paradiso-Tälern (Rhêmes und Valsavarenche). Introd beherbergte mehrfach Johannes Paul II. im Sommerurlaub."
+      }
+    ],
+    "trail_labels": [],
+    "source": "Région autonome Vallée d'Aoste · regione.vda.it",
+    "image_credit": "Bellu Liliana Chiara · Wikimedia Commons · Aosta - Arco di Augusto-visione a 360°.jpg",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Aosta_-_Arco_di_Augusto-visione_a_360%C2%B0.jpg"
+  },
+  {
+    "id": "alta-valle-centri",
+    "macro": "alta",
+    "name_it": "Alta Valle — i centri del Monte Bianco",
+    "name_en": "Upper Valley — the Mont Blanc towns",
+    "name_fr": "Haute Vallée — les bourgs du Mont-Blanc",
+    "name_de": "Oberes Tal — die Mont-Blanc-Orte",
+    "eyebrow_it": "Da Arvier a Courmayeur",
+    "eyebrow_en": "From Arvier to Courmayeur",
+    "eyebrow_fr": "D'Arvier à Courmayeur",
+    "eyebrow_de": "Von Arvier bis Courmayeur",
+    "description_it": "L'alta valle sale verso il Monte Bianco fra borghi di pietra, vigneti d'altura e terme. È la patria del vino più alto d'Europa, il Blanc de Morgex et de La Salle, coltivato fino a 1.200 metri su viti a piede franco scampate alla fillossera, e dei boschi di larice che precedono i ghiacciai. Da Arvier — col suo Enfer, rosso vigoroso da uvaggio locale — si risale verso Avise, Morgex e Pré-Saint-Didier con le sue terme storiche, fino a Courmayeur, capitale dell'alpinismo italiano e porta delle valli Ferret e Veny. Tutt'intorno, i grandi massicci del Bianco, del Rutor e della Grivola.",
+    "description_en": "The upper valley climbs towards Mont Blanc among stone villages, high-altitude vineyards and spas. It is the home of Europe's highest wine, Blanc de Morgex et de La Salle, grown up to 1,200 metres on ungrafted vines that escaped phylloxera, and of the larch woods that precede the glaciers. From Arvier — with its Enfer, a vigorous red — you rise through Avise, Morgex and Pré-Saint-Didier with its historic thermal baths, up to Courmayeur, capital of Italian mountaineering and gateway to the Ferret and Veny valleys. All around stand the great massifs of Mont Blanc, the Rutor and the Grivola.",
+    "description_fr": "La haute vallée monte vers le Mont-Blanc entre bourgs de pierre, vignobles d'altitude et thermes. C'est la patrie du vin le plus haut d'Europe, le Blanc de Morgex et de La Salle, cultivé jusqu'à 1 200 mètres sur des vignes franches de pied épargnées par le phylloxéra, et des mélézins qui précèdent les glaciers. D'Arvier — avec son Enfer, rouge vigoureux — on remonte par Avise, Morgex et Pré-Saint-Didier et ses thermes historiques, jusqu'à Courmayeur, capitale de l'alpinisme italien et porte des vals Ferret et Veny. Tout autour, les grands massifs du Mont-Blanc, du Rutor et de la Grivola.",
+    "description_de": "Das obere Tal steigt zum Mont Blanc zwischen Steindörfern, Höhenweinbergen und Thermen. Es ist die Heimat des höchsten Weins Europas, des Blanc de Morgex et de La Salle, bis 1.200 Meter auf wurzelechten, von der Reblaus verschonten Reben angebaut, und der Lärchenwälder vor den Gletschern. Von Arvier — mit seinem kräftigen Rotwein Enfer — steigt man über Avise, Morgex und Pré-Saint-Didier mit seinen historischen Thermen bis Courmayeur, Hauptstadt des italienischen Alpinismus und Tor zu den Tälern Ferret und Veny. Ringsum die großen Massive von Mont Blanc, Rutor und Grivola.",
+    "image": "/cultura/courmayeur-monte-bianco.jpg",
+    "towns": [
+      {
+        "id": "arvier",
+        "name_it": "Arvier",
+        "name_en": "Arvier",
+        "name_fr": "Arvier",
+        "name_de": "Arvier",
+        "description_it": "Borgo vinicolo dominato dal castello de la Mothe, Arvier dà il nome all'Enfer d'Arvier, rosso DOC da vitigni autoctoni coltivato in una conca soleggiata (l'\"inferno\" del nome allude al calore). È la porta della Valgrisenche.",
+        "description_en": "A wine village dominated by the de la Mothe castle, Arvier gives its name to Enfer d'Arvier, a DOC red from native grapes grown in a sun-trap basin (the \"inferno\" of the name alludes to the heat). It is the gateway to Valgrisenche.",
+        "description_fr": "Bourg viticole dominé par le château de la Mothe, Arvier donne son nom à l'Enfer d'Arvier, rouge DOC de cépages autochtones cultivé dans une cuvette ensoleillée (l'« enfer » du nom évoque la chaleur). C'est la porte de la Valgrisenche.",
+        "description_de": "Weindorf, überragt vom Schloss de la Mothe, gibt Arvier dem Enfer d'Arvier seinen Namen, einem DOC-Rotwein aus autochthonen Reben in einem sonnigen Kessel (das „Inferno\" im Namen spielt auf die Hitze an). Es ist das Tor zum Valgrisenche."
+      },
+      {
+        "id": "morgex-la-salle",
+        "name_it": "Morgex e La Salle",
+        "name_en": "Morgex & La Salle",
+        "name_fr": "Morgex et La Salle",
+        "name_de": "Morgex und La Salle",
+        "description_it": "Capitali del Blanc de Morgex et de La Salle, il vigneto più alto d'Europa: viti basse a pergola, a piede franco, coltivate fin oltre i 1.000 metri. Morgex conserva il priorato di Saint-Nicolas e la chiesa con il campanile romanico; La Salle è dominata dal castello di Châtelard.",
+        "description_en": "Capitals of Blanc de Morgex et de La Salle, Europe's highest vineyard: low pergola, ungrafted vines grown above 1,000 metres. Morgex keeps the Saint-Nicolas priory and a Romanesque bell tower; La Salle is dominated by the Châtelard castle.",
+        "description_fr": "Capitales du Blanc de Morgex et de La Salle, le vignoble le plus haut d'Europe : vignes basses en pergola, franches de pied, cultivées au-delà de 1 000 mètres. Morgex conserve le prieuré de Saint-Nicolas et un clocher roman ; La Salle est dominée par le château du Châtelard.",
+        "description_de": "Hauptorte des Blanc de Morgex et de La Salle, des höchsten Weinbergs Europas: niedrige Pergola-Reben, wurzelecht, über 1.000 Meter angebaut. Morgex bewahrt das Priorat Saint-Nicolas und einen romanischen Glockenturm; La Salle überragt das Schloss Châtelard."
+      },
+      {
+        "id": "pre-saint-didier",
+        "name_it": "Pré-Saint-Didier",
+        "name_en": "Pré-Saint-Didier",
+        "name_fr": "Pré-Saint-Didier",
+        "name_de": "Pré-Saint-Didier",
+        "description_it": "Celebre per le terme alimentate da una sorgente termale già nota ai Romani, oggi spa panoramica affacciata sull'orrido della Dora. Punto di partenza per il Monte Bianco e snodo verso La Thuile e il Piccolo San Bernardo.",
+        "description_en": "Famous for thermal baths fed by a hot spring already known to the Romans, today a panoramic spa overlooking the Dora gorge. A starting point for Mont Blanc and a junction towards La Thuile and the Little St Bernard.",
+        "description_fr": "Célèbre pour ses thermes alimentés par une source chaude déjà connue des Romains, aujourd'hui spa panoramique surplombant l'orrido de la Doire. Point de départ vers le Mont-Blanc et carrefour vers La Thuile et le Petit-Saint-Bernard.",
+        "description_de": "Berühmt für seine schon den Römern bekannte Thermalquelle, heute ein Panorama-Spa über der Dora-Schlucht. Ausgangspunkt zum Mont Blanc und Knotenpunkt nach La Thuile und zum Kleinen Sankt Bernhard."
+      },
+      {
+        "id": "courmayeur",
+        "name_it": "Courmayeur",
+        "name_en": "Courmayeur",
+        "name_fr": "Courmayeur",
+        "name_de": "Courmayeur",
+        "description_it": "Capitale alpina ai piedi del Monte Bianco, Courmayeur unisce tradizione montanara e vocazione internazionale. Ospita la più antica Società delle Guide d'Italia (1850), il Skyway Monte Bianco e il museo alpino Duca degli Abruzzi. È la porta delle valli Ferret e Veny e del Tour du Mont Blanc.",
+        "description_en": "Alpine capital at the foot of Mont Blanc, Courmayeur blends mountaineering tradition with an international vocation. It is home to Italy's oldest Guides' Society (1850), the Skyway Mont Blanc cable car and the Duca degli Abruzzi alpine museum. It is the gateway to the Ferret and Veny valleys and the Tour du Mont Blanc.",
+        "description_fr": "Capitale alpine au pied du Mont-Blanc, Courmayeur unit tradition montagnarde et vocation internationale. Elle abrite la plus ancienne Société des Guides d'Italie (1850), le téléphérique Skyway Mont-Blanc et le musée alpin Duca degli Abruzzi. C'est la porte des vals Ferret et Veny et du Tour du Mont-Blanc.",
+        "description_de": "Alpine Hauptstadt am Fuße des Mont Blanc, vereint Courmayeur Bergtradition und internationale Ausstrahlung. Hier sind Italiens älteste Bergführervereinigung (1850), die Skyway-Mont-Blanc-Bahn und das alpine Museum Duca degli Abruzzi. Es ist das Tor zu den Tälern Ferret und Veny und zur Tour du Mont Blanc."
+      }
+    ],
+    "trail_labels": [],
+    "source": "Région autonome Vallée d'Aoste · lovevda.it",
+    "image_credit": "Rémih · Wikimedia Commons · Mont Blanc de Courmayeur @ Pas de l'Ours.jpg",
+    "image_source": "https://commons.wikimedia.org/wiki/File:Mont_Blanc_de_Courmayeur_@_Pas_de_l%27Ours.jpg"
   }
 ]

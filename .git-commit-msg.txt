@@ -1,0 +1,30 @@
+feat: foto bivacchi corrette, valli in 3 macro-aree, bivacchi sul percorso, marker su traccia
+
+Foto rifugi/bivacchi:
+- ricerca per NOME su Wikimedia Commons (titolo file + parola-struttura +
+  keyword del nome) al posto della geosearch che pescava la Capanna
+  Margherita o foto NASA/satellitari su molti bivacchi
+- 57 foto sostituite con scatti realmente raffiguranti la struttura,
+  4 foto palesemente errate rimosse (Promoud=col, 3 immagini NASA)
+
+Sezione Valli (/cultura) — 3 macro-aree come richiesto:
+- Alta Valle (Val Ferret/Veny, Valgrisenche, La Thuile, Cogne, Valpelline,
+  Gran San Bernardo + nuovo blocco "centri" Arvier→Courmayeur)
+- Vallata centrale (nuovo blocco Saint-Vincent→Introd con Aosta romana e i
+  castelli + Rhêmes e Valsavarenche)
+- Bassa Valle (Champorcher, Lys, Ayas, Valtournenche + blocco riformato
+  Pont-Saint-Martin→Châtillon con Bard, Arnad e il lardo DOP)
+- descrizioni approfondite su storia, cultura, tradizioni, cibo e vino;
+  3 nuove foto reali e distinte (Forte di Bard, Arco di Augusto, Courmayeur)
+- intestazioni di macro-area numerate, mappa aggiornata
+
+Sentieri:
+- nuova sezione automatica "punti d'appoggio sul percorso": rileva i
+  rifugi/bivacchi entro ~350 m dalla traccia GPX e li linka (cita il
+  bivacco sul percorso, es. sentieri della Testa Grigia) — dati reali
+
+Mappe tour:
+- i numeri di tappa sono ancorati al punto a metà del segmento di ciascuna
+  tappa: sempre sulla traccia, ben distribuiti, niente più scarti
+
+Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>

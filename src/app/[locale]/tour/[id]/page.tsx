@@ -54,9 +54,9 @@ function buildTourRoute(
   const stages = getTourStages(tag);
   const geojson = mergeTrailsGeoJSON(stages.map((s) => s.slug), 140);
 
-  // Ancora il badge tappa ESATTAMENTE sulla traccia disegnata: punto della
-  // linea della tappa più vicino alla partenza reale (le coords del record
-  // potrebbero non coincidere col tratto renderizzato/semplificato).
+  // Il badge tappa va messo ESATTAMENTE sulla traccia: prendiamo il punto a
+  // metà percorso del segmento di quella tappa (sempre sulla linea disegnata,
+  // ben distribuito lungo l'anello e non ammucchiato agli incroci fra tappe).
   const lineCoordsBySlug = new Map<string, [number, number][]>();
   for (const f of geojson?.features ?? []) {
     const slug = (f.properties as { slug?: string } | null)?.slug;
@@ -66,22 +66,27 @@ function buildTourRoute(
     if (existing) existing.push(...coords);
     else lineCoordsBySlug.set(slug, [...coords]);
   }
-  const snapToLine = (
+  const midpointOf = (
     slug: string,
-    target: [number, number]
+    fallback: [number, number]
   ): [number, number] => {
     const coords = lineCoordsBySlug.get(slug);
-    if (!coords?.length) return target;
-    let best = coords[0];
-    let bestD = Infinity;
-    for (const c of coords) {
-      const d = (c[0] - target[0]) ** 2 + (c[1] - target[1]) ** 2;
-      if (d < bestD) {
-        bestD = d;
-        best = c;
-      }
+    if (!coords?.length) return fallback;
+    // punto a metà lunghezza cumulata della traccia
+    let total = 0;
+    for (let i = 1; i < coords.length; i++) {
+      const dx = coords[i][0] - coords[i - 1][0];
+      const dy = coords[i][1] - coords[i - 1][1];
+      total += Math.hypot(dx, dy);
     }
-    return [best[0], best[1]];
+    let acc = 0;
+    for (let i = 1; i < coords.length; i++) {
+      const dx = coords[i][0] - coords[i - 1][0];
+      const dy = coords[i][1] - coords[i - 1][1];
+      acc += Math.hypot(dx, dy);
+      if (acc >= total / 2) return [coords[i][0], coords[i][1]];
+    }
+    return [coords[coords.length - 1][0], coords[coords.length - 1][1]];
   };
 
   return {
@@ -108,8 +113,8 @@ function buildTourRoute(
     geojson,
     // Un badge numerato sulla partenza di ogni tappa, cliccabile verso la scheda
     markers: stages.map((s, i) => ({
-      coords: snapToLine(s.slug, [s.start.coords.lng, s.start.coords.lat]),
-      label: `${t('stageLabel')} ${i + 1} · ${s.start.name}`,
+      coords: midpointOf(s.slug, [s.start.coords.lng, s.start.coords.lat]),
+      label: `${t('stageLabel')} ${i + 1} · ${s.start.name} → ${s.end.name}`,
       elevation: s.start.elevation_m,
       type: 'stage' as const,
       number: i + 1,

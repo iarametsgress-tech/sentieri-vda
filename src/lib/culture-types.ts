@@ -15,8 +15,13 @@ export const TownSchema = z.object({
 
 export type Town = z.infer<typeof TownSchema>;
 
+export const MacroValleySchema = z.enum(['alta', 'centrale', 'bassa']);
+export type MacroValley = z.infer<typeof MacroValleySchema>;
+
 export const ValleySchema = z.object({
   id: z.string(),
+  /** Macro-area geografica: alta valle, vallata centrale, bassa valle */
+  macro: MacroValleySchema.optional(),
   name_it: z.string(),
   name_en: z.string(),
   name_fr: z.string(),

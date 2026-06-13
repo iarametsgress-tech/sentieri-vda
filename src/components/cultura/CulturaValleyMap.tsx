@@ -26,6 +26,8 @@ const CENTROIDS: Record<string, [number, number]> = {
   'valle-del-lys': [7.84, 45.8],
   champorcher: [7.57, 45.62],
   'bassa-valle': [7.79, 45.62],
+  'vallata-centrale': [7.32, 45.74],
+  'alta-valle-centri': [7.05, 45.7],
 };
 
 export default function CulturaValleyMap({
