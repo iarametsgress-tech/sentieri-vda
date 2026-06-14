@@ -17,6 +17,11 @@ import type { RouteHighlight } from '@/components/MapView';
 import { Link } from '@/i18n/routing';
 import { trailImageBlurProps } from '@/lib/blur';
 import { ArrowUpRight, Mountain, Footprints, Map, Sun } from 'lucide-react';
+import HomeNewsEvents from '@/components/HomeNewsEvents';
+import eventsData from '@/data/events.json';
+import { getAllArticoliPosts } from '@/lib/articoli';
+
+const LK = (locale: string) => (['it', 'en', 'fr', 'de'].includes(locale) ? locale : 'it');
 
 const HOME_AV_IMAGE =
   '/trails/alta-via-1-tappa-16-rifugio-frassati-rifugio-bonatti.webp';
@@ -34,6 +39,36 @@ export default async function HomePage({
   const trailCount = getAllTrails().length;
   const totalKm = getTotalTrailKm();
   const alteViaStages = getTotalAlteViaStages();
+  const lk = LK(locale);
+
+  const events = (eventsData as Record<string, string>[]).map((e) => ({
+    id: e.id,
+    when: e[`when_${lk}`],
+    title: e[`title_${lk}`],
+    body: e[`body_${lk}`],
+    url: e.url,
+  }));
+
+  const eventsLabels = {
+    eyebrow: { it: 'News & eventi', en: 'News & events', fr: 'Actualités & événements', de: 'News & Veranstaltungen' }[lk]!,
+    title: { it: 'Cosa succede in valle', en: "What's on in the valley", fr: 'Que se passe-t-il dans la vallée', de: 'Was im Tal los ist' }[lk]!,
+    subtitle: {
+      it: 'I grandi appuntamenti della Valle d’Aosta lungo l’anno: fiere, feste della tradizione, sport e cultura di montagna.',
+      en: 'The Aosta Valley’s great events through the year: fairs, traditional festivals, mountain sport and culture.',
+      fr: 'Les grands rendez-vous du Val d’Aoste au fil de l’année : foires, fêtes traditionnelles, sport et culture de montagne.',
+      de: 'Die großen Termine des Aostatals im Jahreslauf: Messen, Traditionsfeste, Bergsport und -kultur.',
+    }[lk]!,
+    more: { it: 'Scopri di più', en: 'Find out more', fr: 'En savoir plus', de: 'Mehr erfahren' }[lk]!,
+    prev: { it: 'Precedente', en: 'Previous', fr: 'Précédent', de: 'Zurück' }[lk]!,
+    next: { it: 'Successivo', en: 'Next', fr: 'Suivant', de: 'Weiter' }[lk]!,
+  };
+
+  const articles = getAllArticoliPosts(locale).slice(0, 3);
+  const articlesLabels = {
+    eyebrow: { it: 'Dal magazine', en: 'From the magazine', fr: 'Du magazine', de: 'Aus dem Magazin' }[lk]!,
+    title: { it: 'Guide e ispirazione', en: 'Guides & inspiration', fr: 'Guides & inspiration', de: 'Guides & Inspiration' }[lk]!,
+    all: { it: 'Tutti gli articoli', en: 'All articles', fr: 'Tous les articles', de: 'Alle Artikel' }[lk]!,
+  };
 
   const paths = [
     {
@@ -296,6 +331,58 @@ export default async function HomePage({
           </div>
         </ScrollReveal>
       </section>
+
+      {/* News & eventi — carosello con freccia, prima degli articoli */}
+      <div className="border-t border-white/5 bg-white/[0.01]">
+        <HomeNewsEvents events={events} labels={eventsLabels} />
+      </div>
+
+      {/* 3 articoli principali */}
+      {articles.length > 0 ? (
+        <section className="mx-auto max-w-7xl px-6 pb-28 lg:px-10">
+          <div className="mb-10 flex items-end justify-between gap-6">
+            <div>
+              <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.3em] text-alpenglow">
+                {articlesLabels.eyebrow}
+              </p>
+              <h2 className="font-display text-display-md tracking-tighter">{articlesLabels.title}</h2>
+            </div>
+            <Link
+              href="/articoli"
+              className="group hidden items-center gap-1.5 text-sm text-snow/50 transition-colors hover:text-snow sm:inline-flex"
+            >
+              {articlesLabels.all}
+              <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {articles.map((a, i) => (
+              <ScrollReveal key={a.slug} variant="fade-up" delay={i * 0.08}>
+                <Link href={`/articoli/${a.slug}`} className="group block overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] transition-all hover:-translate-y-1 hover:border-alpenglow/30">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-ink/40">
+                    {a.cover ? (
+                      <Image
+                        src={a.cover}
+                        alt={a.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 400px"
+                        {...trailImageBlurProps(a.cover)}
+                      />
+                    ) : null}
+                  </div>
+                  <div className="p-6">
+                    <h3 className="mb-2 font-display text-xl tracking-tight text-snow group-hover:text-alpenglow">
+                      {a.title}
+                    </h3>
+                    <p className="line-clamp-3 text-sm leading-relaxed text-snow/55">{a.description}</p>
+                  </div>
+                </Link>
+              </ScrollReveal>
+            ))}
+          </div>
+        </section>
+      ) : null}
     </>
   );
 }

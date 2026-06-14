@@ -39,6 +39,9 @@ const VALLEY_ALIASES: Record<string, string> = {
   'valle del gran san bernardo': 'valle-gran-san-bernardo',
   champorcher: 'champorcher',
   'valle di champorcher': 'champorcher',
+  'valle centrale': 'vallata-centrale',
+  'vallata centrale': 'vallata-centrale',
+  'valle centrale di aosta': 'vallata-centrale',
 };
 
 /** Comuni → valle di appartenenza */

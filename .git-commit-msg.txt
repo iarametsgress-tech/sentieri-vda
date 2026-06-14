@@ -1,14 +1,23 @@
-feat: ondata 2 arricchimento — +9 sentieri Gressoney/Lys e +10 rifugi (4 lingue)
+feat: valli dei sentieri corrette, link valle, home News&eventi + articoli, massicci con link
 
-Sentieri Valle del Lys (descrizioni editoriali profonde + geologia + cultura
-walser, al posto del testo auto-generato):
-- Rifugio del Lys, Passo Inferiore della Bettolina, Punta Telcio, Colle Salza,
-  Passo Zube, Col Ranzola, Colle Valdobbia (Ospizio Sottile), Bivacco Lateltin,
-  Orestes Hütte — totale 15 sentieri del Lys ora con prosa professionale
+Valli dei sentieri:
+- riassegnate per COORDINATE di partenza (codice comune/municipalities nei
+  dati erano errati): 896 sentieri corretti — es. tutta la Valle del Lys e i
+  sentieri di Cogne/Valsavarenche ora nella valle giusta
+- nome valle nelle schede sentiero ora linkato alla pagina della valle
+  (alias 'Valle centrale' -> vallata-centrale; TrailValleyLink robusto)
 
-Rifugi (descrizione estesa + storia dove documentata, 4 lingue):
-- Oratorio di Cuney, Alpenzù, Grand Tournalin, Vieux Crest, Arbolle,
-  Crête Sèche, Guide d'Ayas, Coda, Maison Vieille, Dondena
-- totale 47/93 rifugi con contenuto sostanzioso
+Home:
+- nuova sezione "News & eventi" a carosello con freccia in basso a destra
+  (stile CourmayeurMontBlanc), 10 eventi reali annuali della Valle d'Aosta
+  (Fiera di Sant'Orso, Tor des Géants, Désarpa, Bataille des Reines,
+  Gran Paradiso Film Festival, Coumba Freida, ecc.), 4 lingue
+- sezione con i 3 articoli principali del magazine, prima del footer
+
+Massicci (/ambiente/montagne):
+- overview arricchite (Bianco, Rosa, Cervino, Gran Paradiso, Gran Combin,
+  Rutor) con riferimenti a valli/rifugi/fauna
+- LinkedText su overview, geologia, storia, sentieri e schede vette: i nomi
+  di valli, rifugi, vette e specie diventano link alle rispettive pagine
 
 Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>

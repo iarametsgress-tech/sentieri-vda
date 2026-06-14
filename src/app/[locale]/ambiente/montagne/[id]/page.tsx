@@ -20,6 +20,7 @@ import {
 } from '@/lib/environment';
 import { routing } from '@/i18n/routing';
 import TrailGallery, { type GalleryImage } from '@/components/TrailGallery';
+import LinkedText from '@/components/LinkedText';
 
 const MassifTerrainMap = dynamic(() => import('@/components/MassifTerrainMap'), {
   ssr: false,
@@ -147,7 +148,9 @@ export default async function MassifDetailPage({
 
       <div className="mx-auto max-w-4xl px-6 py-14 lg:px-10 lg:py-20 space-y-12">
         <div className="prose-alpine max-w-none">
-          <p className="text-snow/75 text-lg leading-relaxed">{overviewText}</p>
+          <p className="text-snow/75 text-lg leading-relaxed">
+            <LinkedText text={overviewText} locale={locale} />
+          </p>
 
           {highlights.length > 0 ? (
             <div className="mt-8">
@@ -182,17 +185,17 @@ export default async function MassifDetailPage({
         <div className="grid grid-cols-1 gap-6">
           {geology ? (
             <DetailBlock icon={Layers} title={t('geologyTitle')}>
-              <p>{geology}</p>
+              <p><LinkedText text={geology} locale={locale} /></p>
             </DetailBlock>
           ) : null}
           {history ? (
             <DetailBlock icon={History} title={t('historyTitle')}>
-              <p>{history}</p>
+              <p><LinkedText text={history} locale={locale} /></p>
             </DetailBlock>
           ) : null}
           {trails ? (
             <DetailBlock icon={Footprints} title={t('trailsTitle')}>
-              <p>{trails}</p>
+              <p><LinkedText text={trails} locale={locale} /></p>
             </DetailBlock>
           ) : null}
         </div>
@@ -216,7 +219,7 @@ export default async function MassifDetailPage({
                   </p>
                 </div>
                 <p className="text-snow/65 leading-relaxed whitespace-pre-line">
-                  {getPeakDetail(peak, locale)}
+                  <LinkedText text={getPeakDetail(peak, locale)} locale={locale} />
                 </p>
               </section>
             ))}

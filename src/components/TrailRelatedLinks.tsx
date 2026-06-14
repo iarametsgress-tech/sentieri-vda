@@ -208,6 +208,9 @@ export function TrailValleyLink({
   locale?: string;
 }) {
   const href = getValleyHrefFromLabel(label);
+  if (!href) {
+    return <span className="text-snow/80">{label}</span>;
+  }
   return (
     <Link
       href={href}
