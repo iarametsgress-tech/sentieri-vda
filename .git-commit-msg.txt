@@ -1,23 +1,24 @@
-feat: valli dei sentieri corrette, link valle, home News&eventi + articoli, massicci con link
+feat: sentieri per valle puliti, eventi 2026 con date e foto, ondata 3 rifugi+Cogne
 
-Valli dei sentieri:
-- riassegnate per COORDINATE di partenza (codice comune/municipalities nei
-  dati erano errati): 896 sentieri corretti — es. tutta la Valle del Lys e i
-  sentieri di Cogne/Valsavarenche ora nella valle giusta
-- nome valle nelle schede sentiero ora linkato alla pagina della valle
-  (alias 'Valle centrale' -> vallata-centrale; TrailValleyLink robusto)
+Raggruppamento per valle:
+- ogni valle elenca SOLO i propri sentieri: rimossa l'inclusione via
+  `municipalities` (dato Catasto inaffidabile) che faceva sconfinare, es.,
+  sentieri di Cogne nella Valle del Lys
+- "Valle di Gressoney" incorporata nella "Valle del Lys" nei dati curati
 
-Home:
-- nuova sezione "News & eventi" a carosello con freccia in basso a destra
-  (stile CourmayeurMontBlanc), 10 eventi reali annuali della Valle d'Aosta
-  (Fiera di Sant'Orso, Tor des Géants, Désarpa, Bataille des Reines,
-  Gran Paradiso Film Festival, Coumba Freida, ecc.), 4 lingue
-- sezione con i 3 articoli principali del magazine, prima del footer
+Home — News & eventi:
+- 10 eventi reali dal 14 giugno a fine 2026 con DATE PRECISE (es. Tor des
+  Géants 13–20 settembre, Désarpa 19 settembre, Bataille des Reines 18
+  ottobre, Foire d'été 1 agosto, Pellegrinaggio al Miserin 5 agosto…)
+- ogni evento con FOTO reale Wikimedia (Arco di Augusto, Gran Paradiso,
+  Cervino, Forte di Bard, lago Miserin, teatro romano, vacche Hérens…)
+- carosello con cover image e freccia in basso a destra
 
-Massicci (/ambiente/montagne):
-- overview arricchite (Bianco, Rosa, Cervino, Gran Paradiso, Gran Combin,
-  Rutor) con riferimenti a valli/rifugi/fauna
-- LinkedText su overview, geologia, storia, sentieri e schede vette: i nomi
-  di valli, rifugi, vette e specie diventano link alle rispettive pagine
+Ondata 3 contenuti (4 lingue):
+- +10 rifugi: Grands Mulets, Couvercle, Argentière, Conscrits, Envers des
+  Aiguilles, Moëde Anterne, Chalet de l'Épée, Barma, Oriondé, Sogno di Berdzé
+  (52/93 rifugi ora con contenuto sostanzioso)
+- +5 sentieri flagship di Cogne: Cascate di Lillaz, Lac Money, Laghi di
+  Lussert, Lac de Loie, Cogne–Valnontey (geologia + contesto Parco Gran Paradiso)
 
 Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>

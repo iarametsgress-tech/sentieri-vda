@@ -46,6 +46,7 @@ export default async function HomePage({
     when: e[`when_${lk}`],
     title: e[`title_${lk}`],
     body: e[`body_${lk}`],
+    cover: e.cover,
     url: e.url,
   }));
 

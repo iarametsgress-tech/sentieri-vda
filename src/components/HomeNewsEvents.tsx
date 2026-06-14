@@ -8,6 +8,7 @@ export type EventItem = {
   when: string;
   title: string;
   body: string;
+  cover?: string;
   url?: string;
 };
 
@@ -76,20 +77,34 @@ export default function HomeNewsEvents({
                 {...(e.url
                   ? { href: e.url, target: '_blank', rel: 'noopener noreferrer' }
                   : {})}
-                className="group relative flex w-[280px] shrink-0 snap-start flex-col rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition-all hover:-translate-y-1 hover:border-ice/30 sm:w-[320px]"
+                className="group relative flex w-[280px] shrink-0 snap-start flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] transition-all hover:-translate-y-1 hover:border-ice/30 sm:w-[330px]"
               >
-                <span className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-ice/25 bg-ice/10 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ice">
-                  <CalendarDays size={12} />
-                  {e.when}
-                </span>
-                <h3 className="mb-2 font-display text-xl tracking-tight text-snow">{e.title}</h3>
-                <p className="mb-4 flex-1 text-sm leading-relaxed text-snow/60">{e.body}</p>
-                {e.url ? (
-                  <span className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-ice/80 group-hover:text-ice">
-                    {labels.more}
-                    <ExternalLink size={12} />
+                <div className="relative aspect-[16/10] overflow-hidden bg-ink/50">
+                  {e.cover ? (
+                    /* eslint-disable-next-line @next/next/no-img-element */
+                    <img
+                      src={e.cover}
+                      alt={e.title}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : null}
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
+                  <span className="absolute bottom-3 left-3 inline-flex w-fit items-center gap-2 rounded-full border border-ice/30 bg-ink/80 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-ice backdrop-blur">
+                    <CalendarDays size={12} />
+                    {e.when}
                   </span>
-                ) : null}
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="mb-2 font-display text-xl tracking-tight text-snow">{e.title}</h3>
+                  <p className="mb-4 flex-1 text-sm leading-relaxed text-snow/60">{e.body}</p>
+                  {e.url ? (
+                    <span className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-ice/80 group-hover:text-ice">
+                      {labels.more}
+                      <ExternalLink size={12} />
+                    </span>
+                  ) : null}
+                </div>
               </Wrapper>
             );
           })}
