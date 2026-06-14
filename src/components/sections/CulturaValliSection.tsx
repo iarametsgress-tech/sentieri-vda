@@ -20,10 +20,10 @@ const MACRO_LABELS: Record<
       de: 'Oberes Tal',
     },
     sub: {
-      it: 'Le valli del Monte Bianco e del Gran Paradiso occidentale, dai centri di Arvier e Courmayeur ai grandi massicci: Val Ferret e Veny, Valgrisenche, La Thuile, Val di Cogne, Valpelline e Valle del Gran San Bernardo.',
-      en: 'The valleys of Mont Blanc and the western Gran Paradiso, from Arvier and Courmayeur to the great massifs: Val Ferret and Veny, Valgrisenche, La Thuile, Cogne, Valpelline and the Great St Bernard valley.',
-      fr: 'Les vallées du Mont-Blanc et du Grand-Paradis occidental, d’Arvier et Courmayeur aux grands massifs : Val Ferret et Veny, Valgrisenche, La Thuile, Cogne, Valpelline et vallée du Grand-Saint-Bernard.',
-      de: 'Die Täler des Mont Blanc und des westlichen Gran Paradiso, von Arvier und Courmayeur bis zu den großen Massiven: Val Ferret und Veny, Valgrisenche, La Thuile, Cogne, Valpelline und das Tal des Grossen Sankt Bernhard.',
+      it: 'Le valli del Monte Bianco e del Gran Paradiso, dai centri di Arvier e Courmayeur ai grandi massicci: Val Ferret e Veny, Valgrisenche, La Thuile, Val di Cogne, Valsavarenche, Val di Rhêmes, Valpelline e Valle del Gran San Bernardo.',
+      en: 'The valleys of Mont Blanc and the Gran Paradiso, from Arvier and Courmayeur to the great massifs: Val Ferret and Veny, Valgrisenche, La Thuile, Cogne, Valsavarenche, Val di Rhêmes, Valpelline and the Great St Bernard valley.',
+      fr: 'Les vallées du Mont-Blanc et du Grand-Paradis, d’Arvier et Courmayeur aux grands massifs : Val Ferret et Veny, Valgrisenche, La Thuile, Cogne, Valsavarenche, Val di Rhêmes, Valpelline et vallée du Grand-Saint-Bernard.',
+      de: 'Die Täler des Mont Blanc und des Gran Paradiso, von Arvier und Courmayeur bis zu den großen Massiven: Val Ferret und Veny, Valgrisenche, La Thuile, Cogne, Valsavarenche, Val di Rhêmes, Valpelline und das Tal des Grossen Sankt Bernhard.',
     },
   },
   centrale: {
@@ -35,10 +35,10 @@ const MACRO_LABELS: Record<
       de: 'Zentrales Tal',
     },
     sub: {
-      it: 'La conca di Aosta, “Roma delle Alpi”, e i centri da Saint-Vincent a Introd, con i grandi castelli e le valli del Gran Paradiso di Rhêmes e Valsavarenche.',
-      en: 'The Aosta basin, “Rome of the Alps”, and the towns from Saint-Vincent to Introd, with the great castles and the Gran Paradiso valleys of Rhêmes and Valsavarenche.',
-      fr: 'La cuvette d’Aoste, « Rome des Alpes », et les bourgs de Saint-Vincent à Introd, avec les grands châteaux et les vallées du Grand-Paradis de Rhêmes et Valsavarenche.',
-      de: 'Das Becken von Aosta, „Rom der Alpen“, und die Orte von Saint-Vincent bis Introd, mit den großen Schlössern und den Gran-Paradiso-Tälern Rhêmes und Valsavarenche.',
+      it: 'La conca di Aosta, “Roma delle Alpi”, e i centri da Saint-Vincent a Introd, terra dei grandi castelli (Fénis, Sarre, Saint-Pierre) e dei vigneti d’altura.',
+      en: 'The Aosta basin, “Rome of the Alps”, and the towns from Saint-Vincent to Introd, land of the great castles (Fénis, Sarre, Saint-Pierre) and high-altitude vineyards.',
+      fr: 'La cuvette d’Aoste, « Rome des Alpes », et les bourgs de Saint-Vincent à Introd, terre des grands châteaux (Fénis, Sarre, Saint-Pierre) et des vignobles d’altitude.',
+      de: 'Das Becken von Aosta, „Rom der Alpen“, und die Orte von Saint-Vincent bis Introd, Land der großen Schlösser (Fénis, Sarre, Saint-Pierre) und Höhenweinberge.',
     },
   },
   bassa: {
